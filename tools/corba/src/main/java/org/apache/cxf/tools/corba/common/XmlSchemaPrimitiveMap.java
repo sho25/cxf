@@ -109,11 +109,7 @@ name|xmlSchemaPrimitiveMap
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|QName
-argument_list|,
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|initializeMap

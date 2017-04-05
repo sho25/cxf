@@ -173,6 +173,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|TOKEN_REQUEST_PARAMS
+init|=
+literal|"token_request_params"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|ACCESS_TOKEN_ISSUED_AT
 init|=
 literal|"issued_at"

@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  */
+comment|/**  * Formats a log message showing the most important meta data  */
 end_comment
 
 begin_class

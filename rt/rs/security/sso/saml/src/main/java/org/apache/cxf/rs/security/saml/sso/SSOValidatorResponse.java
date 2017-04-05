@@ -25,9 +25,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Date
+name|Instant
 import|;
 end_import
 
@@ -53,11 +53,11 @@ class|class
 name|SSOValidatorResponse
 block|{
 specifier|private
-name|Date
+name|Instant
 name|sessionNotOnOrAfter
 decl_stmt|;
 specifier|private
-name|Date
+name|Instant
 name|created
 decl_stmt|;
 specifier|private
@@ -97,7 +97,7 @@ name|assertion
 expr_stmt|;
 block|}
 specifier|public
-name|Date
+name|Instant
 name|getSessionNotOnOrAfter
 parameter_list|()
 block|{
@@ -109,7 +109,7 @@ specifier|public
 name|void
 name|setSessionNotOnOrAfter
 parameter_list|(
-name|Date
+name|Instant
 name|sessionNotOnOrAfter
 parameter_list|)
 block|{
@@ -169,7 +169,7 @@ name|assertionElement
 expr_stmt|;
 block|}
 specifier|public
-name|Date
+name|Instant
 name|getCreated
 parameter_list|()
 block|{
@@ -181,7 +181,7 @@ specifier|public
 name|void
 name|setCreated
 parameter_list|(
-name|Date
+name|Instant
 name|created
 parameter_list|)
 block|{

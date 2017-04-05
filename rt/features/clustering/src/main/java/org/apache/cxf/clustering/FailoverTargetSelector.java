@@ -1886,6 +1886,17 @@ argument_list|,
 name|endpointAddress
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|REQUEST_URI
+argument_list|,
+name|endpointAddress
+argument_list|)
+expr_stmt|;
 name|Exchange
 name|exchange
 init|=
@@ -1997,6 +2008,22 @@ operator|=
 name|clientBootstrapAddress
 expr_stmt|;
 block|}
+specifier|protected
+name|InvocationKey
+name|getInvocationKey
+parameter_list|(
+name|Exchange
+name|e
+parameter_list|)
+block|{
+return|return
+operator|new
+name|InvocationKey
+argument_list|(
+name|e
+argument_list|)
+return|;
+block|}
 comment|/**      * Used to wrap an Exchange for usage as a Map key. The raw Exchange      * is not a suitable key type, as the hashCode is computed from its      * current contents, which may obviously change over the lifetime of      * an invocation.      */
 specifier|protected
 specifier|static
@@ -2007,6 +2034,7 @@ specifier|private
 name|Exchange
 name|exchange
 decl_stmt|;
+specifier|protected
 name|InvocationKey
 parameter_list|(
 name|Exchange
@@ -2107,6 +2135,7 @@ name|String
 argument_list|>
 name|alternateAddresses
 decl_stmt|;
+specifier|protected
 name|InvocationContext
 parameter_list|(
 name|Endpoint
@@ -2155,6 +2184,7 @@ operator|=
 name|ctx
 expr_stmt|;
 block|}
+specifier|public
 name|Endpoint
 name|retrieveOriginalEndpoint
 parameter_list|(
@@ -2250,6 +2280,7 @@ return|return
 name|originalEndpoint
 return|;
 block|}
+specifier|public
 name|BindingOperationInfo
 name|getBindingOperationInfo
 parameter_list|()
@@ -2258,6 +2289,7 @@ return|return
 name|bindingOperationInfo
 return|;
 block|}
+specifier|public
 name|Object
 index|[]
 name|getParams
@@ -2267,6 +2299,7 @@ return|return
 name|params
 return|;
 block|}
+specifier|public
 name|Map
 argument_list|<
 name|String
@@ -2280,6 +2313,7 @@ return|return
 name|context
 return|;
 block|}
+specifier|public
 name|List
 argument_list|<
 name|Endpoint
@@ -2291,6 +2325,7 @@ return|return
 name|alternateEndpoints
 return|;
 block|}
+specifier|public
 name|List
 argument_list|<
 name|String
@@ -2302,6 +2337,7 @@ return|return
 name|alternateAddresses
 return|;
 block|}
+specifier|protected
 name|void
 name|setAlternateEndpoints
 parameter_list|(
@@ -2317,6 +2353,7 @@ operator|=
 name|alternates
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|setAlternateAddresses
 parameter_list|(
@@ -2332,6 +2369,7 @@ operator|=
 name|alternates
 expr_stmt|;
 block|}
+specifier|public
 name|boolean
 name|hasAlternates
 parameter_list|()

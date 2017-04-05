@@ -1806,7 +1806,7 @@ name|tokenRoles
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|RequestSecurityTokenResponseType
 name|createResponse
 parameter_list|(

@@ -23,16 +23,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Arrays
@@ -594,8 +584,6 @@ catch|catch
 parameter_list|(
 specifier|final
 name|InterruptedException
-decl||
-name|IOException
 name|ex
 parameter_list|)
 block|{

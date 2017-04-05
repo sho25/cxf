@@ -23,9 +23,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Collection
+name|Instant
 import|;
 end_import
 
@@ -35,7 +35,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|Collection
 import|;
 end_import
 
@@ -348,11 +348,12 @@ name|void
 name|processTokenExpiry
 parameter_list|()
 block|{
-name|Date
+name|Instant
 name|current
 init|=
-operator|new
-name|Date
+name|Instant
+operator|.
+name|now
 argument_list|()
 decl_stmt|;
 synchronized|synchronized
@@ -388,7 +389,7 @@ operator|.
 name|getExpiry
 argument_list|()
 operator|.
-name|before
+name|isBefore
 argument_list|(
 name|current
 argument_list|)
@@ -416,34 +417,19 @@ name|SecurityToken
 name|token
 parameter_list|)
 block|{
-name|Date
+name|Instant
 name|expires
 init|=
-operator|new
-name|Date
-argument_list|()
-decl_stmt|;
-name|long
-name|currentTime
-init|=
-name|expires
+name|Instant
 operator|.
-name|getTime
+name|now
 argument_list|()
-decl_stmt|;
-name|expires
 operator|.
-name|setTime
+name|plusSeconds
 argument_list|(
-name|currentTime
-operator|+
-operator|(
 name|ttl
-operator|*
-literal|1000L
-operator|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 return|return
 operator|new
 name|CacheEntry
@@ -466,7 +452,7 @@ name|securityToken
 decl_stmt|;
 specifier|private
 specifier|final
-name|Date
+name|Instant
 name|expires
 decl_stmt|;
 name|CacheEntry
@@ -474,7 +460,7 @@ parameter_list|(
 name|SecurityToken
 name|securityToken
 parameter_list|,
-name|Date
+name|Instant
 name|expires
 parameter_list|)
 block|{
@@ -503,7 +489,7 @@ return|;
 block|}
 comment|/**          * Get when this CacheEntry is to be removed from the cache          * @return when this CacheEntry is to be removed from the cache          */
 specifier|public
-name|Date
+name|Instant
 name|getExpiry
 parameter_list|()
 block|{

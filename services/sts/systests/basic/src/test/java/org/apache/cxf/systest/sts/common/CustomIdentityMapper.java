@@ -39,7 +39,9 @@ name|cxf
 operator|.
 name|sts
 operator|.
-name|IdentityMapper
+name|cache
+operator|.
+name|MemoryIdentityCache
 import|;
 end_import
 
@@ -67,8 +69,8 @@ begin_class
 specifier|public
 class|class
 name|CustomIdentityMapper
-implements|implements
-name|IdentityMapper
+extends|extends
+name|MemoryIdentityCache
 block|{
 comment|/**      * Map a principal in the source realm to the target realm      * @param sourceRealm the source realm of the Principal      * @param sourcePrincipal the principal in the source realm      * @param targetRealm the target realm of the Principal      * @return the principal in the target realm      */
 specifier|public

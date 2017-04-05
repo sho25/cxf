@@ -347,6 +347,11 @@ name|params
 operator|.
 name|getTrustManagers
 argument_list|()
+argument_list|,
+name|params
+operator|.
+name|isEnableRevocation
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;

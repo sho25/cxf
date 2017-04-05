@@ -263,6 +263,7 @@ name|FileUtils
 parameter_list|()
 block|{      }
 specifier|public
+specifier|static
 name|boolean
 name|isValidFileName
 parameter_list|(

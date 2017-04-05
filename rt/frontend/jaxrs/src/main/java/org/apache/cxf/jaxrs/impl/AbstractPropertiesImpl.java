@@ -165,6 +165,15 @@ name|getPropertyNames
 argument_list|()
 return|;
 block|}
+specifier|public
+name|Message
+name|getMessage
+parameter_list|()
+block|{
+return|return
+name|m
+return|;
+block|}
 block|}
 end_class
 

@@ -370,11 +370,7 @@ name|MEDIA_TYPE_TABLE
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|MEDIA_TYPE_TABLE

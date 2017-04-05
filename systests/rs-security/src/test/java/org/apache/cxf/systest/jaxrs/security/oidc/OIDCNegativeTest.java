@@ -35,9 +35,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Collections
+name|Instant
 import|;
 end_import
 
@@ -47,7 +47,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|Collections
 import|;
 end_import
 
@@ -1707,14 +1707,13 @@ name|claims
 operator|.
 name|setIssuedAt
 argument_list|(
-operator|new
-name|Date
+name|Instant
+operator|.
+name|now
 argument_list|()
 operator|.
-name|getTime
+name|getEpochSecond
 argument_list|()
-operator|/
-literal|1000L
 argument_list|)
 expr_stmt|;
 name|claims
@@ -1959,14 +1958,13 @@ name|claims
 operator|.
 name|setIssuedAt
 argument_list|(
-operator|new
-name|Date
+name|Instant
+operator|.
+name|now
 argument_list|()
 operator|.
-name|getTime
+name|getEpochSecond
 argument_list|()
-operator|/
-literal|1000L
 argument_list|)
 expr_stmt|;
 name|claims

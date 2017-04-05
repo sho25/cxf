@@ -568,7 +568,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This function has no effect at this time.      * @param lim      */
+comment|/**      * Set a limit on how much content can be logged      * @param lim      */
 specifier|public
 name|void
 name|setLimit

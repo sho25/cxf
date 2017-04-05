@@ -869,11 +869,7 @@ name|indexedArgs
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Integer
-argument_list|,
-name|ValueHolder
-argument_list|>
+argument_list|<>
 argument_list|(
 name|CastUtils
 operator|.

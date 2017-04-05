@@ -176,11 +176,7 @@ name|init
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**          * Load on startup priority of the Apache CXF servlet.          */

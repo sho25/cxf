@@ -265,11 +265,7 @@ name|implementors
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Greeter
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|implementors
@@ -341,11 +337,7 @@ name|endpoints
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

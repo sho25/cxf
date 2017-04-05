@@ -105,9 +105,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Date
+name|Instant
 import|;
 end_import
 
@@ -1399,11 +1399,7 @@ name|props
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|props
@@ -1603,11 +1599,7 @@ name|props
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|props
@@ -2163,10 +2155,11 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|after
+name|isAfter
 argument_list|(
-operator|new
-name|Date
+name|Instant
+operator|.
+name|now
 argument_list|()
 argument_list|)
 argument_list|)

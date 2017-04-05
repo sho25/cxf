@@ -327,8 +327,6 @@ specifier|public
 name|void
 name|close
 parameter_list|()
-throws|throws
-name|IOException
 block|{
 if|if
 condition|(
@@ -409,11 +407,29 @@ argument_list|(
 literal|"Response is not committed, flushing buffer"
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|response
 operator|.
 name|flushBuffer
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ex
+parameter_list|)
+block|{
+comment|//REVISIT: and throw a runtime exception ?
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Failed to flush AtmosphereResponse buffer"
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 name|response
 operator|.
@@ -423,11 +439,22 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|resource
 operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
 name|broadcaster
 operator|.
 name|destroy
@@ -546,7 +573,7 @@ comment|// Let us wait at least 200 milliseconds before returning to ensure
 comment|// that SSE had the opportunity to be delivered.
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Waiting 200ms to ensure SSE Atmosphere response is delivered"
 argument_list|)
@@ -635,29 +662,9 @@ name|void
 name|onComplete
 parameter_list|()
 block|{
-try|try
-block|{
 name|close
 argument_list|()
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|IOException
-name|ex
-parameter_list|)
-block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"While closing the SSE connection, an exception was raised: "
-operator|+
-name|ex
-argument_list|)
-expr_stmt|;
-block|}
 block|}
 annotation|@
 name|Override

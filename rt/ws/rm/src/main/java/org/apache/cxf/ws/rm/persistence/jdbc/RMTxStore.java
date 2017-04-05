@@ -5567,22 +5567,14 @@ name|statementLocks
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|Statement
-argument_list|,
-name|Lock
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|cachedStatements
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|PreparedStatement
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 comment|// create the statements in advance if the connection is to be kept

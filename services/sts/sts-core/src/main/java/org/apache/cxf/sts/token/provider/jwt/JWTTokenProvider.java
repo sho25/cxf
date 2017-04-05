@@ -35,9 +35,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Collections
+name|Instant
 import|;
 end_import
 
@@ -47,7 +47,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|Collections
 import|;
 end_import
 
@@ -974,8 +974,9 @@ name|response
 operator|.
 name|setCreated
 argument_list|(
-operator|new
-name|Date
+name|Instant
+operator|.
+name|ofEpochMilli
 argument_list|(
 name|claims
 operator|.
@@ -987,7 +988,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-name|Date
+name|Instant
 name|expires
 init|=
 literal|null
@@ -1004,8 +1005,9 @@ condition|)
 block|{
 name|expires
 operator|=
-operator|new
-name|Date
+name|Instant
+operator|.
+name|ofEpochMilli
 argument_list|(
 name|claims
 operator|.

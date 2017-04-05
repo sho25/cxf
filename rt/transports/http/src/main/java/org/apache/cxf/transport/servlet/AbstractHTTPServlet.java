@@ -643,11 +643,7 @@ name|DEFAULT_STATIC_CONTENT_TYPES
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|DEFAULT_STATIC_CONTENT_TYPES
@@ -895,6 +891,8 @@ parameter_list|(
 name|ServletConfig
 name|servletConfig
 parameter_list|)
+throws|throws
+name|ServletException
 block|{
 name|InputStream
 name|is
@@ -1301,11 +1299,7 @@ name|map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String

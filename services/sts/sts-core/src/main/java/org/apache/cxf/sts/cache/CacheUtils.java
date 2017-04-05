@@ -31,9 +31,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Arrays
+name|Instant
 import|;
 end_import
 
@@ -43,7 +43,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|Arrays
 import|;
 end_import
 
@@ -168,7 +168,7 @@ parameter_list|,
 name|String
 name|tokenIdentifier
 parameter_list|,
-name|Date
+name|Instant
 name|expiry
 parameter_list|,
 name|Principal

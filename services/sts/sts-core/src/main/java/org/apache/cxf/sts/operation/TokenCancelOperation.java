@@ -926,7 +926,7 @@ name|ex
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|RequestSecurityTokenResponseType
 name|createResponse
 parameter_list|(

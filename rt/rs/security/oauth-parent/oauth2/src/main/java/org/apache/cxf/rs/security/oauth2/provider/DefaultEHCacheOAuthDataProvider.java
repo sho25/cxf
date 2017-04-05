@@ -502,7 +502,7 @@ annotation|@
 name|Override
 specifier|public
 name|Client
-name|getClient
+name|doGetClient
 parameter_list|(
 name|String
 name|clientId
@@ -623,7 +623,7 @@ block|{
 name|Client
 name|c
 init|=
-name|getClient
+name|doGetClient
 argument_list|(
 name|key
 argument_list|)

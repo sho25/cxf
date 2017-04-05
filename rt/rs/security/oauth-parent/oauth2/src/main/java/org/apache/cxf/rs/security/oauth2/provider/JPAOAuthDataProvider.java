@@ -303,7 +303,7 @@ annotation|@
 name|Override
 specifier|public
 name|Client
-name|getClient
+name|doGetClient
 parameter_list|(
 specifier|final
 name|String
@@ -542,7 +542,7 @@ operator|.
 name|getResourceOwnerSubject
 argument_list|()
 operator|.
-name|getLogin
+name|getId
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1418,6 +1418,16 @@ argument_list|(
 name|perms
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|serverToken
+operator|.
+name|getSubject
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|UserSubject
 name|sub
 init|=
@@ -1434,7 +1444,7 @@ operator|.
 name|getSubject
 argument_list|()
 operator|.
-name|getLogin
+name|getId
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1477,6 +1487,7 @@ argument_list|(
 name|sub
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// ensure we have a managed association
 comment|// (needed for OpenJPA : InvalidStateException: Encountered unmanaged object)

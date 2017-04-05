@@ -81,6 +81,15 @@ operator|!
 name|testInProgress
 condition|)
 block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"org.apache.cxf.JDKBugHacks.defaultUsesCaches"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 comment|// force commons-logging into j.u.l so we can
 comment|// configure it.
 name|System

@@ -174,7 +174,7 @@ name|headers
 operator|.
 name|getJsonWebKey
 argument_list|(
-literal|"epv"
+literal|"epk"
 argument_list|)
 decl_stmt|;
 name|String

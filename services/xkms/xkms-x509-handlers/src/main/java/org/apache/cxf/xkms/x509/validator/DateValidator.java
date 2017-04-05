@@ -59,9 +59,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Calendar
+name|Instant
 import|;
 end_import
 
@@ -232,15 +232,12 @@ name|X509Certificate
 name|certificate
 parameter_list|)
 block|{
-name|Date
-name|date
+name|Instant
+name|now
 init|=
-name|Calendar
+name|Instant
 operator|.
-name|getInstance
-argument_list|()
-operator|.
-name|getTime
+name|now
 argument_list|()
 decl_stmt|;
 try|try
@@ -249,7 +246,12 @@ name|certificate
 operator|.
 name|checkValidity
 argument_list|(
-name|date
+name|Date
+operator|.
+name|from
+argument_list|(
+name|now
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

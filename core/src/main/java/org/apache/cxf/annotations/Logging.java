@@ -107,6 +107,8 @@ end_comment
 
 begin_annotation_defn
 annotation|@
+name|Deprecated
+annotation|@
 name|Documented
 annotation|@
 name|Retention

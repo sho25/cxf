@@ -122,6 +122,15 @@ parameter_list|()
 throws|throws
 name|MojoExecutionException
 block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"org.apache.cxf.JDKBugHacks.defaultUsesCaches"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 name|File
 name|outputDirFile
 init|=

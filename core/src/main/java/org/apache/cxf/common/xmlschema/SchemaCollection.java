@@ -524,14 +524,7 @@ name|xmlTypesCheckedForCrossImportsPerSchema
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|XmlSchema
-argument_list|,
-name|Set
-argument_list|<
-name|XmlSchemaType
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

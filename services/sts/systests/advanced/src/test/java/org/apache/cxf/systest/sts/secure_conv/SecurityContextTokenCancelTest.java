@@ -462,11 +462,7 @@ name|properties
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|properties
@@ -484,7 +480,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"security.callback-handler"
+name|SecurityConstants
+operator|.
+name|CALLBACK_HANDLER
 argument_list|,
 literal|"org.apache.cxf.systest.sts.common.CommonCallbackHandler"
 argument_list|)
@@ -604,11 +602,7 @@ name|properties
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|properties

@@ -2667,7 +2667,6 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|//CHECKSTYLE:OFF
 annotation|@
 name|org
 operator|.
@@ -2908,11 +2907,7 @@ name|properties
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|properties
@@ -3234,6 +3229,7 @@ literal|null
 argument_list|)
 return|;
 block|}
+comment|// CHECKSTYLE:OFF
 specifier|private
 name|SecurityToken
 name|requestSecurityToken
@@ -3379,11 +3375,7 @@ name|properties
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|properties
@@ -3520,6 +3512,7 @@ name|endpointAddress
 argument_list|)
 return|;
 block|}
+comment|// CHECKSTYLE:ON
 specifier|private
 name|Properties
 name|getEncryptionProperties
@@ -3939,11 +3932,7 @@ name|properties
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|properties

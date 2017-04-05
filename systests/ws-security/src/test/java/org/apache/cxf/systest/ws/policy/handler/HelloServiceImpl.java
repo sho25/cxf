@@ -89,6 +89,22 @@ name|EndpointProperty
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|SecurityConstants
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
@@ -112,7 +128,9 @@ name|EndpointProperty
 argument_list|(
 name|key
 operator|=
-literal|"security.callback-handler"
+name|SecurityConstants
+operator|.
+name|CALLBACK_HANDLER
 argument_list|,
 name|value
 operator|=
@@ -136,7 +154,9 @@ name|EndpointProperty
 argument_list|(
 name|key
 operator|=
-literal|"security.signature.properties"
+name|SecurityConstants
+operator|.
+name|SIGNATURE_PROPERTIES
 argument_list|,
 name|value
 operator|=
@@ -148,7 +168,9 @@ name|EndpointProperty
 argument_list|(
 name|key
 operator|=
-literal|"security.signature.username"
+name|SecurityConstants
+operator|.
+name|SIGNATURE_USERNAME
 argument_list|,
 name|value
 operator|=

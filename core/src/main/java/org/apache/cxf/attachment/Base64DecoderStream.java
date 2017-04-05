@@ -431,7 +431,21 @@ throw|throw
 operator|new
 name|IOException
 argument_list|(
-literal|"Base64 encoding error, data truncated"
+literal|"Base64 encoding error, data truncated: "
+operator|+
+name|readCharacters
+operator|+
+literal|" "
+operator|+
+operator|new
+name|String
+argument_list|(
+name|encodedChars
+argument_list|,
+literal|0
+argument_list|,
+name|readCharacters
+argument_list|)
 argument_list|)
 throw|;
 block|}

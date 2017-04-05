@@ -73,11 +73,7 @@ name|chapters
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Long
-argument_list|,
-name|BookChapter
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

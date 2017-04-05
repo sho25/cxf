@@ -1120,11 +1120,7 @@ name|recursionMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|QName
-argument_list|,
-name|CorbaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

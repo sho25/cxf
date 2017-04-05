@@ -89,15 +89,11 @@ end_import
 
 begin_import
 import|import
-name|org
+name|java
 operator|.
-name|apache
+name|util
 operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|Fault
+name|UUID
 import|;
 end_import
 
@@ -111,7 +107,7 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|LoggingMessage
+name|Fault
 import|;
 end_import
 
@@ -408,9 +404,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|LoggingMessage
-operator|.
-name|ID_KEY
+literal|"exchangeId"
 argument_list|)
 decl_stmt|;
 if|if
@@ -422,9 +416,12 @@ condition|)
 block|{
 name|id
 operator|=
-name|LoggingMessage
+name|UUID
 operator|.
-name|nextId
+name|randomUUID
+argument_list|()
+operator|.
+name|toString
 argument_list|()
 expr_stmt|;
 name|this
@@ -436,9 +433,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-name|LoggingMessage
-operator|.
-name|ID_KEY
+literal|"exchangeId"
 argument_list|,
 name|id
 argument_list|)
