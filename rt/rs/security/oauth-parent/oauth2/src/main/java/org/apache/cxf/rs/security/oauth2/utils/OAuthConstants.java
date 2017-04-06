@@ -645,7 +645,22 @@ name|CLIENT_SECRET_CONTENT_ENCRYPTION_ALGORITHM
 init|=
 literal|"client.secret.content.encryption.algorithm"
 decl_stmt|;
-comment|// Client Secret Encrypting Algorithm
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TLS_CLIENT_AUTH_SUBJECT_DN
+init|=
+literal|"tls_client_auth_subject_dn"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TLS_CLIENT_AUTH_ISSUER_DN
+init|=
+literal|"tls_client_auth_issuer_dn"
+decl_stmt|;
 specifier|private
 name|OAuthConstants
 parameter_list|()
