@@ -793,7 +793,9 @@ name|mc
 operator|.
 name|put
 argument_list|(
-literal|"x5t#S256"
+name|JoseConstants
+operator|.
+name|HEADER_X509_THUMBPRINT_SHA256
 argument_list|,
 name|encodedThumbprint
 argument_list|)

@@ -876,7 +876,7 @@ name|extraProperties
 argument_list|)
 expr_stmt|;
 block|}
-comment|// At the moment only a string 'x5#S256' cnf property is recognized
+comment|// At the moment only a string 'x5t#S256' cnf property is recognized
 name|Map
 argument_list|<
 name|String
