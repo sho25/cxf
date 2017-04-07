@@ -400,6 +400,15 @@ name|RSSEC_SIGNATURE_INCLUDE_CERT_SHA1
 init|=
 literal|"rs.security.signature.include.cert.sha1"
 decl_stmt|;
+comment|/**      * Include the X.509 certificate SHA-256 digest for signature in the "x5t#S256" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_INCLUDE_CERT_SHA256
+init|=
+literal|"rs.security.signature.include.cert.sha1"
+decl_stmt|;
 comment|//
 comment|// JWE specific Configuration
 comment|//
@@ -501,6 +510,15 @@ name|String
 name|RSSEC_ENCRYPTION_INCLUDE_CERT_SHA1
 init|=
 literal|"rs.security.encryption.include.cert.sha1"
+decl_stmt|;
+comment|/**      * Include the X.509 certificate SHA-246 digest for encryption in the "x5t#S256" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_INCLUDE_CERT_SHA256
+init|=
+literal|"rs.security.encryption.include.cert.sha256"
 decl_stmt|;
 comment|//
 comment|// JWT specific configuration
