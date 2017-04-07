@@ -511,7 +511,7 @@ name|RSSEC_ENCRYPTION_INCLUDE_CERT_SHA1
 init|=
 literal|"rs.security.encryption.include.cert.sha1"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate SHA-246 digest for encryption in the "x5t#S256" header.      */
+comment|/**      * Include the X.509 certificate SHA-256 digest for encryption in the "x5t#S256" header.      */
 specifier|public
 specifier|static
 specifier|final
