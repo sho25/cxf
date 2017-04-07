@@ -407,7 +407,7 @@ specifier|final
 name|String
 name|RSSEC_SIGNATURE_INCLUDE_CERT_SHA256
 init|=
-literal|"rs.security.signature.include.cert.sha1"
+literal|"rs.security.signature.include.cert.sha256"
 decl_stmt|;
 comment|//
 comment|// JWE specific Configuration
