@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|Continuation
 block|{
-comment|/**      * This method will suspend the request for the timeout or until resume is      * called      *      * @param timeout the suspend timeout, timeout of 0 will suspend the request indefinitely.      * @return true if if suspend was successful.      */
+comment|/**      * This method will suspend the request for the timeout or until resume is      * called      *      * @param timeout the suspend timeout, timeout of 0 will suspend the request indefinitely.      * @return true if suspend was successful.      */
 name|boolean
 name|suspend
 parameter_list|(
@@ -42,17 +42,17 @@ name|void
 name|reset
 parameter_list|()
 function_decl|;
-comment|/**      * Is this a newly created Continuation.      * @return True if the continuation has just been created and has not yet suspended the request.      */
+comment|/**      * Is this a newly created Continuation.      * @return true if the continuation has just been created and has not yet suspended the request.      */
 name|boolean
 name|isNew
 parameter_list|()
 function_decl|;
-comment|/**      * Get the pending status      * @return True if the continuation has been suspended.      */
+comment|/**      * Get the pending status      * @return true if the continuation has been suspended.      */
 name|boolean
 name|isPending
 parameter_list|()
 function_decl|;
-comment|/**      * Get the resumed status      * @return True if the continuation is has been resumed.      */
+comment|/**      * Get the resumed status      * @return true if the continuation is has been resumed.      */
 name|boolean
 name|isResumed
 parameter_list|()
