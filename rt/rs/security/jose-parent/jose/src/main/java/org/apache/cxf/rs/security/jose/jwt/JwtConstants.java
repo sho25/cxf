@@ -87,6 +87,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CLAIM_CONFIRMATION
+init|=
+literal|"cnf"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|JWT_TOKEN
 init|=
 literal|"jwt.token"
