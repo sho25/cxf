@@ -684,6 +684,15 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|fault
+operator|=
+name|DOMUtils
+operator|.
+name|getDomElement
+argument_list|(
+name|fault
+argument_list|)
+expr_stmt|;
 name|Element
 name|el
 init|=

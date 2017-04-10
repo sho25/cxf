@@ -1087,7 +1087,7 @@ name|list
 operator|.
 name|add
 argument_list|(
-literal|"java.activation,java.annotations.common,java.corba,java.transaction,java.xml.bind,java.xml.ws"
+literal|"java.activation,java.xml.ws.annotation,java.corba,java.transaction,java.xml.bind,java.xml.ws"
 argument_list|)
 expr_stmt|;
 block|}
