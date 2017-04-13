@@ -273,6 +273,17 @@ expr_stmt|;
 block|}
 block|}
 specifier|public
+name|ServletContext
+name|getServletContext
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|servletContext
+return|;
+block|}
+specifier|public
 name|void
 name|setName
 parameter_list|(
