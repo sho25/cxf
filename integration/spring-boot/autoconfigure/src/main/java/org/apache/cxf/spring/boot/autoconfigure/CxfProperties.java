@@ -79,6 +79,20 @@ name|ConfigurationProperties
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|springframework
+operator|.
+name|validation
+operator|.
+name|annotation
+operator|.
+name|Validated
+import|;
+end_import
+
 begin_comment
 comment|/**  * {@link ConfigurationProperties} for Apache CXF.  *  * @author Vedran Pavic  */
 end_comment
@@ -89,24 +103,13 @@ name|ConfigurationProperties
 argument_list|(
 literal|"cxf"
 argument_list|)
+annotation|@
+name|Validated
 specifier|public
 class|class
 name|CxfProperties
 block|{
 comment|/**      * Path that serves as the base URI for the services.      */
-annotation|@
-name|NotNull
-annotation|@
-name|Pattern
-argument_list|(
-name|regexp
-operator|=
-literal|"/[^?#]*"
-argument_list|,
-name|message
-operator|=
-literal|"Path must start with /"
-argument_list|)
 specifier|private
 name|String
 name|path
@@ -122,6 +125,19 @@ operator|new
 name|Servlet
 argument_list|()
 decl_stmt|;
+annotation|@
+name|NotNull
+annotation|@
+name|Pattern
+argument_list|(
+name|regexp
+operator|=
+literal|"/[^?#]*"
+argument_list|,
+name|message
+operator|=
+literal|"Path must start with /"
+argument_list|)
 specifier|public
 name|String
 name|getPath
