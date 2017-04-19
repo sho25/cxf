@@ -869,6 +869,11 @@ name|connection
 operator|=
 literal|null
 expr_stmt|;
+name|jmsConfig
+operator|.
+name|resetCachedReplyDestination
+argument_list|()
+expr_stmt|;
 name|this
 operator|.
 name|staticReplyDestination
