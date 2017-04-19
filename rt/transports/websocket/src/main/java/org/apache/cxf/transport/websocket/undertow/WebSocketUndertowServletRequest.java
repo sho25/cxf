@@ -403,6 +403,18 @@ name|io
 operator|.
 name|undertow
 operator|.
+name|server
+operator|.
+name|HttpServerExchange
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|undertow
+operator|.
 name|websockets
 operator|.
 name|core
@@ -491,6 +503,7 @@ specifier|private
 name|InputStream
 name|in
 decl_stmt|;
+comment|//private HttpServerExchange exchange;
 specifier|public
 name|WebSocketUndertowServletRequest
 parameter_list|(
@@ -499,6 +512,9 @@ name|channel
 parameter_list|,
 name|Object
 name|message
+parameter_list|,
+name|HttpServerExchange
+name|exchange
 parameter_list|)
 throws|throws
 name|IOException
