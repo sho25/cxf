@@ -164,7 +164,7 @@ operator|.
 name|getClassResourceInfo
 argument_list|()
 operator|.
-name|getResourceClass
+name|getServiceClass
 argument_list|()
 return|;
 block|}
