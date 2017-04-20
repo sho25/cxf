@@ -3277,7 +3277,7 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|severe
+name|warning
 argument_list|(
 operator|new
 name|org
@@ -3868,7 +3868,7 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|severe
+name|warning
 argument_list|(
 operator|new
 name|org

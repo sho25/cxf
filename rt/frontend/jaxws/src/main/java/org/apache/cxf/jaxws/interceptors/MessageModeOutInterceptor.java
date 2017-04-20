@@ -2376,6 +2376,15 @@ argument_list|(
 name|nd
 argument_list|)
 expr_stmt|;
+name|nd
+operator|=
+name|DOMUtils
+operator|.
+name|getDomElement
+argument_list|(
+name|nd
+argument_list|)
+expr_stmt|;
 name|frag
 operator|.
 name|appendChild

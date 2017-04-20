@@ -517,6 +517,9 @@ name|m
 parameter_list|,
 name|Properties
 name|props
+parameter_list|,
+name|String
+name|digestAlgo
 parameter_list|)
 block|{
 name|X509Certificate
@@ -561,9 +564,7 @@ operator|.
 name|getEncoded
 argument_list|()
 argument_list|,
-name|MessageDigestUtils
-operator|.
-name|ALGO_SHA_1
+name|digestAlgo
 argument_list|)
 decl_stmt|;
 return|return
