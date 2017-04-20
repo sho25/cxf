@@ -862,6 +862,16 @@ name|getDurableSubscriptionName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|container
+operator|.
+name|setPubSubNoLocal
+argument_list|(
+name|jmsConfig
+operator|.
+name|isPubSubNoLocal
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|Object
 name|executor
 init|=
