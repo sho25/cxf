@@ -1627,7 +1627,7 @@ init|)
 block|{
 name|this
 operator|.
-name|replyDestination
+name|replyDestinationDest
 operator|=
 literal|null
 expr_stmt|;
