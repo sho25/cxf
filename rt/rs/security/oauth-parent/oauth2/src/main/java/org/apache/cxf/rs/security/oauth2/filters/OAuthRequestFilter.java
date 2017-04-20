@@ -1213,6 +1213,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|cert
+operator|==
+literal|null
+operator|||
 operator|!
 name|OAuthUtils
 operator|.

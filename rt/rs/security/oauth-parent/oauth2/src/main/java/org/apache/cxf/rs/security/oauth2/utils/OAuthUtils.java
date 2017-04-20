@@ -870,7 +870,7 @@ argument_list|)
 decl_stmt|;
 name|byte
 index|[]
-name|currentThumbrint
+name|currentThumbprint
 init|=
 name|Base64UrlUtility
 operator|.
@@ -886,7 +886,7 @@ name|isEqual
 argument_list|(
 name|thumbprint
 argument_list|,
-name|currentThumbrint
+name|currentThumbprint
 argument_list|)
 return|;
 block|}
