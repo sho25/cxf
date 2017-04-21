@@ -1257,6 +1257,13 @@ name|isGET
 argument_list|(
 name|msg
 argument_list|)
+operator|||
+name|msg
+operator|.
+name|getExchange
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
 return|return;

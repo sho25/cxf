@@ -377,6 +377,7 @@ specifier|static
 name|Connection
 name|createConnection
 parameter_list|(
+specifier|final
 name|JMSConfiguration
 name|jmsConfig
 parameter_list|)
