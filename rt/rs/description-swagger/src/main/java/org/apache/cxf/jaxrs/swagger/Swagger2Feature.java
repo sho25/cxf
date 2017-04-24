@@ -2601,7 +2601,9 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|".*[.]js|/css/.*|/images/.*|/lib/.*|.*ico|/fonts/.*"
+literal|".*js|.*gz|.*map|oauth2*[.]html|.*png|.*css|.*ico|"
+operator|+
+literal|"/css/.*|/images/.*|/lib/.*|/fonts/.*"
 argument_list|)
 decl_stmt|;
 annotation|@
