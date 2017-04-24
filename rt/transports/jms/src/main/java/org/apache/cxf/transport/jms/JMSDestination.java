@@ -1240,7 +1240,7 @@ block|{
 name|SecurityContext
 name|securityContext
 init|=
-name|JMSMessageUtils
+name|SecurityContextFactory
 operator|.
 name|buildSecurityContext
 argument_list|(
