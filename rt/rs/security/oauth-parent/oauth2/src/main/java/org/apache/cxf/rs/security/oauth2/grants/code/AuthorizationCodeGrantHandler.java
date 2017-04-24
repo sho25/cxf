@@ -923,15 +923,6 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|setGrantType
-argument_list|(
-name|OAuthConstants
-operator|.
-name|CODE_RESPONSE_TYPE
-argument_list|)
-expr_stmt|;
-name|reg
-operator|.
 name|getExtraProperties
 argument_list|()
 operator|.
