@@ -328,24 +328,14 @@ name|testProperty
 init|=
 operator|new
 name|JMSPropertyType
-argument_list|()
-decl_stmt|;
-name|testProperty
-operator|.
-name|setName
 argument_list|(
 literal|"Test_Prop"
-argument_list|)
-expr_stmt|;
-name|testProperty
-operator|.
-name|setValue
-argument_list|(
+argument_list|,
 literal|"some return value "
 operator|+
 name|me
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 comment|//System.out.println("found property in request headers at index: "
 comment|//                   + headers.getProperty().indexOf(testProperty));
 name|JMSMessageHeadersType
