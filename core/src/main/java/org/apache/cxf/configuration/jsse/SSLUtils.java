@@ -43,7 +43,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileInputStream
+name|IOException
 import|;
 end_import
 
@@ -53,7 +53,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|IOException
+name|InputStream
 import|;
 end_import
 
@@ -507,8 +507,8 @@ argument_list|,
 name|log
 argument_list|)
 decl_stmt|;
-name|FileInputStream
-name|fis
+name|InputStream
+name|is
 init|=
 literal|null
 decl_stmt|;
@@ -557,19 +557,23 @@ name|getDefaultType
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|fis
+name|is
 operator|=
-operator|new
-name|FileInputStream
+name|Files
+operator|.
+name|newInputStream
 argument_list|(
 name|file
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|ks
 operator|.
 name|load
 argument_list|(
-name|fis
+name|is
 argument_list|,
 operator|(
 name|keyStorePassword
@@ -675,14 +679,14 @@ finally|finally
 block|{
 if|if
 condition|(
-name|fis
+name|is
 operator|!=
 literal|null
 condition|)
 block|{
 try|try
 block|{
-name|fis
+name|is
 operator|.
 name|close
 argument_list|()

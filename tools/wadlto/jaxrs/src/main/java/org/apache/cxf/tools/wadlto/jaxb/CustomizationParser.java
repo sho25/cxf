@@ -33,9 +33,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|net
 operator|.
-name|FileOutputStream
+name|URL
 import|;
 end_import
 
@@ -43,9 +43,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
+name|nio
 operator|.
-name|URL
+name|file
+operator|.
+name|Files
 import|;
 end_import
 
@@ -1071,10 +1073,14 @@ name|writeTo
 argument_list|(
 name|ele
 argument_list|,
-operator|new
-name|FileOutputStream
+name|Files
+operator|.
+name|newOutputStream
 argument_list|(
 name|tmpFile
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
