@@ -992,7 +992,7 @@ name|threadSafe
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates WebClient      * @param baseURI baseURI      * @param providers list of providers      */
+comment|/**      * Creates WebClient      * @param baseAddress baseURI      * @param providers list of providers      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1019,7 +1019,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates WebClient      * @param baseURI baseURI      * @param providers list of providers      */
+comment|/**      * Creates WebClient      * @param baseAddress baseURI      * @param providers list of providers      * @param threadSafe if true ThreadLocalClientState is used      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1079,7 +1079,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates a thread safe WebClient      * @param baseURI baseURI      * @param providers list of providers      * @param timeToKeepState time to keep this thread safe state.      */
+comment|/**      * Creates a thread safe WebClient      * @param baseAddress baseURI      * @param providers list of providers      * @param timeToKeepState time to keep this thread safe state.      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1379,7 +1379,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param client existing client      */
+comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param object existing client object      */
 specifier|public
 specifier|static
 name|WebClient
@@ -2590,7 +2590,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Posts the object and returns a collection of typed objects      * @param body request body      * @param memberClass type of collection member class      * @param responseClass expected type of response object      * @return JAX-RS Response      */
+comment|/**      * Posts the object and returns a collection of typed objects      * @param body request body      * @param responseClass expected type of response object      * @return JAX-RS Response      */
 specifier|public
 parameter_list|<
 name|T
@@ -2693,7 +2693,7 @@ name|memberClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP GET invocation and returns a collection of typed objects      * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
+comment|/**      * Does HTTP GET invocation and returns a collection of typed objects      * @param memberClass expected type of collection member class      * @return typed collection      */
 specifier|public
 parameter_list|<
 name|T
@@ -2726,7 +2726,7 @@ name|memberClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP GET invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP GET invocation and returns typed response object      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -3338,7 +3338,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Replaces the current query with the new value.      * @param queryString the new value, providing a null is      *        equivalent to calling resetQuery().      * @return updated WebClient      */
+comment|/**      * Replaces the current query with the new value.      * @param queryParam query param name      * @param value the new value, providing a null is      *        equivalent to calling resetQuery().      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|replaceQueryParam

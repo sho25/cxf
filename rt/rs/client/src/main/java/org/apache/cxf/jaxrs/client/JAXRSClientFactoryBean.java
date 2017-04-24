@@ -531,7 +531,7 @@ operator|=
 name|threadSafe
 expr_stmt|;
 block|}
-comment|/**      * Sets the time a thread-local client state will be kept.      * This property is ignored for thread-unsafe clients      * @param secondsToKeepState      */
+comment|/**      * Sets the time a thread-local client state will be kept.      * This property is ignored for thread-unsafe clients      * @param time secondsToKeepState      */
 specifier|public
 name|void
 name|setSecondsToKeepState
@@ -631,7 +631,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the resource class, may be called from a Spring handler      * @param cls the resource class      */
+comment|/**      * Sets the service class, may be called from a Spring handler      * @param cls the service class      */
 specifier|public
 name|void
 name|setServiceClass
@@ -657,7 +657,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the service class      * @param cls the service class      */
+comment|/**      * Returns the service class      */
 specifier|public
 name|Class
 argument_list|<

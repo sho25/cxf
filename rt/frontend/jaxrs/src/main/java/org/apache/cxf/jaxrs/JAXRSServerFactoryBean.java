@@ -1333,7 +1333,7 @@ operator|=
 name|lMaps
 expr_stmt|;
 block|}
-comment|/**      * Sets the extension mappings,      * example, 'xml' is the key and 'text/xml' is the value.      *      * @param lMaps the extension mappings      */
+comment|/**      * Sets the extension mappings,      * example, 'xml' is the key and 'text/xml' is the value.      *      * @param extMaps the extension mappings      */
 specifier|public
 name|void
 name|setExtensionMappings
@@ -1850,7 +1850,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set the reference to the document (WADL, etc) describing the endpoint      * @param documentLocation document location      */
+comment|/**      * Set the reference to the document (WADL, etc) describing the endpoint      * @param docLocation document location      */
 specifier|public
 name|void
 name|setDocLocation
