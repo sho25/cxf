@@ -1089,7 +1089,7 @@ argument_list|)
 expr_stmt|;
 name|appendJsonPair
 argument_list|(
-name|sb
+name|cnfObj
 argument_list|,
 name|entry
 operator|.
