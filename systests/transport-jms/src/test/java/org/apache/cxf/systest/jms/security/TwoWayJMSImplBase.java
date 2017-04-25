@@ -310,22 +310,8 @@ name|trim
 argument_list|()
 expr_stmt|;
 block|}
-name|MessageContext
-name|mc
-init|=
-name|wsContext
-operator|.
-name|getMessageContext
-argument_list|()
-decl_stmt|;
-comment|//JMSMessageHeadersType headers =
-comment|//    (JMSMessageHeadersType) mc.get(JMSConstants.JMS_SERVER_REQUEST_HEADERS);
-comment|//System.out.println("get the message headers JMSCorrelationID: " + headers.getJMSCorrelationID());
-comment|//System.out.println("Reached here :" + me);
-comment|// set reply header custom property
-name|JMSPropertyType
-name|testProperty
-init|=
+name|addToReply
+argument_list|(
 operator|new
 name|JMSPropertyType
 argument_list|(
@@ -335,9 +321,30 @@ literal|"some return value "
 operator|+
 name|me
 argument_list|)
+argument_list|)
+expr_stmt|;
+return|return
+literal|"Hello "
+operator|+
+name|me
+return|;
+block|}
+specifier|private
+name|void
+name|addToReply
+parameter_list|(
+name|JMSPropertyType
+name|prop
+parameter_list|)
+block|{
+name|MessageContext
+name|mc
+init|=
+name|wsContext
+operator|.
+name|getMessageContext
+argument_list|()
 decl_stmt|;
-comment|//System.out.println("found property in request headers at index: "
-comment|//                   + headers.getProperty().indexOf(testProperty));
 name|JMSMessageHeadersType
 name|responseHeaders
 init|=
@@ -360,14 +367,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|testProperty
+name|prop
 argument_list|)
 expr_stmt|;
-return|return
-literal|"Hello "
-operator|+
-name|me
-return|;
 block|}
 specifier|public
 name|String
