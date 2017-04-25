@@ -216,6 +216,13 @@ argument_list|(
 name|client1
 argument_list|)
 expr_stmt|;
+name|this
+operator|.
+name|setClient
+argument_list|(
+name|client1
+argument_list|)
+expr_stmt|;
 name|Client
 name|client2
 init|=
