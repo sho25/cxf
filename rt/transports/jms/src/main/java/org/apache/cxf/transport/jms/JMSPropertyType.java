@@ -50,6 +50,12 @@ specifier|private
 name|Object
 name|value
 decl_stmt|;
+annotation|@
+name|Deprecated
+specifier|public
+name|JMSPropertyType
+parameter_list|()
+block|{     }
 specifier|public
 name|JMSPropertyType
 parameter_list|(
