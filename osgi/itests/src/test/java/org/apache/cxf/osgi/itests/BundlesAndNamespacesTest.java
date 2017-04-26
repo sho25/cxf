@@ -19,6 +19,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|File
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|junit
@@ -309,9 +319,10 @@ name|replaceConfigurationFile
 argument_list|(
 literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|,
-name|getConfigFile
+operator|new
+name|File
 argument_list|(
-literal|"/etc/org.ops4j.pax.logging.cfg"
+literal|"src/test/resources/etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 argument_list|)
 block|,
