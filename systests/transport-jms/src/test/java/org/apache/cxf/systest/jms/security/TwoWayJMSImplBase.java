@@ -229,22 +229,6 @@ name|JMSMessageHeadersType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|jms
-operator|.
-name|JMSPropertyType
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -310,6 +294,32 @@ name|trim
 argument_list|()
 expr_stmt|;
 block|}
+name|addToReply
+argument_list|(
+literal|"Test_Prop"
+argument_list|,
+literal|"some return value "
+operator|+
+name|me
+argument_list|)
+expr_stmt|;
+return|return
+literal|"Hello "
+operator|+
+name|me
+return|;
+block|}
+specifier|private
+name|void
+name|addToReply
+parameter_list|(
+name|String
+name|key
+parameter_list|,
+name|String
+name|value
+parameter_list|)
+block|{
 name|MessageContext
 name|mc
 init|=
@@ -318,36 +328,6 @@ operator|.
 name|getMessageContext
 argument_list|()
 decl_stmt|;
-comment|//JMSMessageHeadersType headers =
-comment|//    (JMSMessageHeadersType) mc.get(JMSConstants.JMS_SERVER_REQUEST_HEADERS);
-comment|//System.out.println("get the message headers JMSCorrelationID: " + headers.getJMSCorrelationID());
-comment|//System.out.println("Reached here :" + me);
-comment|// set reply header custom property
-name|JMSPropertyType
-name|testProperty
-init|=
-operator|new
-name|JMSPropertyType
-argument_list|()
-decl_stmt|;
-name|testProperty
-operator|.
-name|setName
-argument_list|(
-literal|"Test_Prop"
-argument_list|)
-expr_stmt|;
-name|testProperty
-operator|.
-name|setValue
-argument_list|(
-literal|"some return value "
-operator|+
-name|me
-argument_list|)
-expr_stmt|;
-comment|//System.out.println("found property in request headers at index: "
-comment|//                   + headers.getProperty().indexOf(testProperty));
 name|JMSMessageHeadersType
 name|responseHeaders
 init|=
@@ -365,19 +345,13 @@ argument_list|)
 decl_stmt|;
 name|responseHeaders
 operator|.
-name|getProperty
-argument_list|()
-operator|.
-name|add
+name|putProperty
 argument_list|(
-name|testProperty
+name|key
+argument_list|,
+name|value
 argument_list|)
 expr_stmt|;
-return|return
-literal|"Hello "
-operator|+
-name|me
-return|;
 block|}
 specifier|public
 name|String

@@ -43,7 +43,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileInputStream
+name|InputStream
 import|;
 end_import
 
@@ -51,9 +51,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|nio
 operator|.
-name|InputStream
+name|file
+operator|.
+name|Files
 import|;
 end_import
 
@@ -233,10 +235,14 @@ init|=
 operator|new
 name|BufferedInputStream
 argument_list|(
-operator|new
-name|FileInputStream
+name|Files
+operator|.
+name|newInputStream
 argument_list|(
 name|source
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 argument_list|)
 init|)
@@ -556,10 +562,14 @@ init|=
 operator|new
 name|BufferedInputStream
 argument_list|(
-operator|new
-name|FileInputStream
+name|Files
+operator|.
+name|newInputStream
 argument_list|(
 name|source
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 argument_list|)
 init|)
@@ -614,10 +624,14 @@ init|=
 operator|new
 name|BufferedInputStream
 argument_list|(
-operator|new
-name|FileInputStream
+name|Files
+operator|.
+name|newInputStream
 argument_list|(
 name|source
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 argument_list|)
 init|)

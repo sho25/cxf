@@ -733,10 +733,9 @@ argument_list|(
 name|jmsConfig
 argument_list|)
 expr_stmt|;
-name|connection
-operator|.
-name|setExceptionListener
-argument_list|(
+name|ExceptionListener
+name|exListener
+init|=
 operator|new
 name|ExceptionListener
 argument_list|()
@@ -774,8 +773,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|session
 operator|=
 name|connection
@@ -810,6 +808,8 @@ argument_list|,
 name|destination
 argument_list|,
 name|this
+argument_list|,
+name|exListener
 argument_list|)
 decl_stmt|;
 name|container
@@ -1240,7 +1240,7 @@ block|{
 name|SecurityContext
 name|securityContext
 init|=
-name|JMSMessageUtils
+name|SecurityContextFactory
 operator|.
 name|buildSecurityContext
 argument_list|(

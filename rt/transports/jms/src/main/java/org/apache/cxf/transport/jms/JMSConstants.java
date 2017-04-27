@@ -23,6 +23,8 @@ specifier|final
 class|class
 name|JMSConstants
 block|{
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -31,6 +33,8 @@ name|JMS_CONTENT_TYPE
 init|=
 literal|"SOAPJMS_contentType"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -39,6 +43,8 @@ name|JMS_QUEUE
 init|=
 literal|"queue"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -71,6 +77,8 @@ name|BYTE_MESSAGE_TYPE
 init|=
 literal|"byte"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -103,6 +111,8 @@ name|JMS_REQUEST_MESSAGE
 init|=
 literal|"org.apache.cxf.jms.request.message"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -127,6 +137,8 @@ name|JMS_CLIENT_RESPONSE_HEADERS
 init|=
 literal|"org.apache.cxf.jms.client.response.headers"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -135,6 +147,8 @@ name|JMS_CLIENT_RECEIVE_TIMEOUT
 init|=
 literal|"org.apache.cxf.jms.client.timeout"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -143,6 +157,8 @@ name|JMS_SERVER_CONFIGURATION_URI
 init|=
 literal|"http://cxf.apache.org/configuration/transport/jms-server"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -151,6 +167,8 @@ name|JMS_CLIENT_CONFIGURATION_URI
 init|=
 literal|"http://cxf.apache.org/configuration/transport/jms-client"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -159,6 +177,8 @@ name|ENDPOINT_CONFIGURATION_URI
 init|=
 literal|"http://cxf.apache.org/jaxws/endpoint-config"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -167,6 +187,8 @@ name|SERVICE_CONFIGURATION_URI
 init|=
 literal|"http://cxf.apache.org/jaxws/service-config"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -175,6 +197,8 @@ name|PORT_CONFIGURATION_URI
 init|=
 literal|"http://cxf.apache.org/jaxws/port-config"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -183,6 +207,8 @@ name|JMS_CLIENT_CONFIG_ID
 init|=
 literal|"jms-client"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -207,6 +233,30 @@ name|String
 name|JMS_SET_REPLY_TO
 init|=
 literal|"org.apache.cxf.jms.client.set.replyto"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_MESSAGE_TYPE
+init|=
+literal|"JMSMessageType"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TARGET_SERVICE_IN_REQUESTURI
+init|=
+literal|"target.service.inrequesturi"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MALFORMED_REQUESTURI
+init|=
+literal|"malformed.requesturi"
 decl_stmt|;
 specifier|private
 name|JMSConstants

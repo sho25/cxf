@@ -35,7 +35,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileOutputStream
+name|IOException
 import|;
 end_import
 
@@ -45,7 +45,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|IOException
+name|OutputStream
 import|;
 end_import
 
@@ -88,6 +88,18 @@ operator|.
 name|net
 operator|.
 name|URISyntaxException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|file
+operator|.
+name|Files
 import|;
 end_import
 
@@ -1060,13 +1072,17 @@ expr_stmt|;
 block|}
 try|try
 init|(
-name|FileOutputStream
+name|OutputStream
 name|file
 init|=
-operator|new
-name|FileOutputStream
+name|Files
+operator|.
+name|newOutputStream
 argument_list|(
 name|f
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 init|;
 name|PrintWriter

@@ -23,7 +23,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileInputStream
+name|InputStream
 import|;
 end_import
 
@@ -36,6 +36,30 @@ operator|.
 name|reflect
 operator|.
 name|Method
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|file
+operator|.
+name|Files
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|file
+operator|.
+name|Paths
 import|;
 end_import
 
@@ -180,15 +204,21 @@ argument_list|()
 expr_stmt|;
 try|try
 init|(
-name|FileInputStream
-name|fis
+name|InputStream
+name|is
 init|=
-operator|new
-name|FileInputStream
+name|Files
+operator|.
+name|newInputStream
+argument_list|(
+name|Paths
+operator|.
+name|get
 argument_list|(
 name|targetFolder
 operator|+
 literal|"/site/apidocs/dumpFile.properties"
+argument_list|)
 argument_list|)
 init|)
 block|{
@@ -196,7 +226,7 @@ name|dumpedDocFile
 operator|.
 name|load
 argument_list|(
-name|fis
+name|is
 argument_list|)
 expr_stmt|;
 block|}
@@ -210,7 +240,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"can't load dumped Docomentation file"
+literal|"can't load dumped Documentation file"
 operator|+
 name|e
 operator|.

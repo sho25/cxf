@@ -33,7 +33,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileOutputStream
+name|OutputStream
 import|;
 end_import
 
@@ -44,6 +44,18 @@ operator|.
 name|io
 operator|.
 name|StringWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|file
+operator|.
+name|Files
 import|;
 end_import
 
@@ -632,13 +644,17 @@ block|}
 block|}
 try|try
 init|(
-name|FileOutputStream
+name|OutputStream
 name|fileOutputStream
 init|=
-operator|new
-name|FileOutputStream
+name|Files
+operator|.
+name|newOutputStream
 argument_list|(
 name|file
+operator|.
+name|toPath
+argument_list|()
 argument_list|)
 init|)
 block|{

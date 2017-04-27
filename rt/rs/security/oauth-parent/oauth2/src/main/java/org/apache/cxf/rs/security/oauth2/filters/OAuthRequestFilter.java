@@ -1158,7 +1158,7 @@ expr_stmt|;
 throw|throw
 name|ExceptionUtils
 operator|.
-name|toForbiddenException
+name|toNotAuthorizedException
 argument_list|(
 literal|null
 argument_list|,
@@ -1231,7 +1231,7 @@ block|{
 throw|throw
 name|ExceptionUtils
 operator|.
-name|toForbiddenException
+name|toNotAuthorizedException
 argument_list|(
 literal|null
 argument_list|,

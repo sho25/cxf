@@ -1380,7 +1380,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the locations of the schemas which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations      * will be injected with this value.      *      * For example, if A.xsd imports B.xsd then both A.xsd and B.xsd need to be referenced.      *      * @param schema the schema locations      */
+comment|/**      * Sets the locations of the schemas which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations      * will be injected with this value.      *      * For example, if A.xsd imports B.xsd then both A.xsd and B.xsd need to be referenced.      *      * @param schemas the schema locations      */
 specifier|public
 name|void
 name|setSchemaLocations
@@ -1412,7 +1412,7 @@ return|return
 name|entityProviders
 return|;
 block|}
-comment|/**      * Add custom JAX-RS providers to the list of providers      *      * @param entityProviders the entityProviders      */
+comment|/**      * Add custom JAX-RS providers to the list of providers      *      * @param providers the entity providers      */
 specifier|public
 name|void
 name|setProviders

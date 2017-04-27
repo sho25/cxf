@@ -445,6 +445,9 @@ operator|==
 literal|null
 condition|)
 block|{
+name|getJwsHeaders
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|JwsUtils
