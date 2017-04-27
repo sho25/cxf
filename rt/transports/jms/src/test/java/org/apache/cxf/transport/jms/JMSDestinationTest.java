@@ -1415,18 +1415,11 @@ argument_list|)
 decl_stmt|;
 name|headers
 operator|.
-name|getProperty
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|JMSPropertyType
+name|putProperty
 argument_list|(
 name|customPropertyName
 argument_list|,
 name|customPropertyName
-argument_list|)
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1605,16 +1598,6 @@ argument_list|(
 literal|"The inHeader should not be null"
 argument_list|,
 name|inHeader
-argument_list|)
-expr_stmt|;
-name|assertNotNull
-argument_list|(
-literal|"The property should not be null "
-operator|+
-name|inHeader
-operator|.
-name|getProperty
-argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// TODO we need to check the SOAP JMS transport properties here

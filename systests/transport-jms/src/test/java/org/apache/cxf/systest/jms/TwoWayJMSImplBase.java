@@ -227,22 +227,6 @@ name|JMSMessageHeadersType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|jms
-operator|.
-name|JMSPropertyType
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -333,20 +317,13 @@ argument_list|)
 decl_stmt|;
 name|responseHeaders
 operator|.
-name|getProperty
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|JMSPropertyType
+name|putProperty
 argument_list|(
 literal|"Test_Prop"
 argument_list|,
 literal|"some return value "
 operator|+
 name|me
-argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
