@@ -90,6 +90,9 @@ name|String
 name|findSwaggerUiRootInternal
 parameter_list|(
 name|String
+name|swaggerUiMavenGroupAndArtifact
+parameter_list|,
+name|String
 name|swaggerUiVersion
 parameter_list|)
 block|{
@@ -274,6 +277,9 @@ name|String
 name|findSwaggerUiRoot
 parameter_list|(
 name|String
+name|swaggerUiMavenGroupAndArtifact
+parameter_list|,
+name|String
 name|swaggerUiVersion
 parameter_list|)
 block|{
@@ -284,6 +290,8 @@ name|HELPER
 operator|.
 name|findSwaggerUiRootInternal
 argument_list|(
+name|swaggerUiMavenGroupAndArtifact
+argument_list|,
 name|swaggerUiVersion
 argument_list|)
 decl_stmt|;
@@ -311,6 +319,8 @@ argument_list|()
 operator|.
 name|findSwaggerUiRootInternal
 argument_list|(
+name|swaggerUiMavenGroupAndArtifact
+argument_list|,
 name|swaggerUiVersion
 argument_list|)
 expr_stmt|;

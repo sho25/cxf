@@ -721,6 +721,10 @@ name|String
 name|swaggerUiVersion
 decl_stmt|;
 specifier|private
+name|String
+name|swaggerUiMavenGroupAndArtifact
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -992,6 +996,8 @@ name|SwaggerUiResolver
 operator|.
 name|findSwaggerUiRoot
 argument_list|(
+name|swaggerUiMavenGroupAndArtifact
+argument_list|,
 name|swaggerUiVersion
 argument_list|)
 decl_stmt|;
@@ -1619,6 +1625,22 @@ name|address
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+comment|/**      * Set SwaggerUI Maven group and artifact using the "groupId/artifactId" format.       * @param swaggerUiMavenGroupAndArtifact      */
+specifier|public
+name|void
+name|setSwaggerUiMavenGroupAndArtifact
+parameter_list|(
+name|String
+name|swaggerUiMavenGroupAndArtifact
+parameter_list|)
+block|{
+name|this
+operator|.
+name|swaggerUiMavenGroupAndArtifact
+operator|=
+name|swaggerUiMavenGroupAndArtifact
+expr_stmt|;
 block|}
 specifier|public
 name|void
