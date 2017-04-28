@@ -19,16 +19,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|io
-operator|.
-name|File
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|junit
@@ -189,26 +179,6 @@ name|logLevel
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
-name|karaf
-operator|.
-name|options
-operator|.
-name|KarafDistributionOption
-operator|.
-name|replaceConfigurationFile
-import|;
-end_import
-
 begin_class
 annotation|@
 name|RunWith
@@ -315,20 +285,11 @@ block|{
 name|cxfBaseConfig
 argument_list|()
 block|,
-name|replaceConfigurationFile
-argument_list|(
-literal|"etc/org.ops4j.pax.logging.cfg"
-argument_list|,
-operator|new
-name|File
-argument_list|(
-literal|"src/test/resources/etc/org.ops4j.pax.logging.cfg"
-argument_list|)
-argument_list|)
-block|,
 name|features
 argument_list|(
 name|cxfUrl
+argument_list|,
+literal|"aries-blueprint"
 argument_list|,
 literal|"cxf-core"
 argument_list|,
