@@ -760,7 +760,7 @@ name|setAuthorizationHeader
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
