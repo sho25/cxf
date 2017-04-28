@@ -166,7 +166,7 @@ index|[]
 block|{
 literal|"mvn:"
 operator|+
-name|DEFAULT_COORDINATES
+name|swaggerUiMavenGroupAndArtifact
 operator|+
 literal|"/"
 block|,
