@@ -277,7 +277,7 @@ argument_list|()
 decl_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -301,7 +301,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -325,7 +325,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -349,7 +349,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -373,7 +373,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -397,7 +397,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -421,7 +421,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(
@@ -445,7 +445,7 @@ argument_list|)
 expr_stmt|;
 name|sink
 operator|.
-name|onNext
+name|send
 argument_list|(
 name|createStatsEvent
 argument_list|(

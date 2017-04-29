@@ -37,20 +37,6 @@ name|ServletInputStream
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|NioInputStream
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class

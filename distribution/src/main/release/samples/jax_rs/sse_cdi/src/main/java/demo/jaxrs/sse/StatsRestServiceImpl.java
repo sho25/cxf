@@ -365,7 +365,7 @@ parameter_list|)
 block|{
 name|broadcaster
 operator|.
-name|subscribe
+name|register
 argument_list|(
 name|sink
 argument_list|)
