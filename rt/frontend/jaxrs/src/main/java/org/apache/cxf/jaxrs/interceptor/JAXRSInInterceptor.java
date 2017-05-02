@@ -1294,6 +1294,8 @@ argument_list|,
 name|acceptContentTypes
 argument_list|,
 literal|true
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|setExchangeProperties
