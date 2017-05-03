@@ -404,6 +404,13 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
+name|rmCaptureIn
+operator|.
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|rmCaptureOut
 operator|.
 name|setBus
