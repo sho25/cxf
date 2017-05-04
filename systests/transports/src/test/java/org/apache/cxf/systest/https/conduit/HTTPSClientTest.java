@@ -984,6 +984,8 @@ operator|.
 name|getTrustManagers
 argument_list|(
 name|tmt
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}
@@ -1151,6 +1153,8 @@ operator|.
 name|getTrustManagers
 argument_list|(
 name|tmt
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}
