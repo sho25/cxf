@@ -3468,6 +3468,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|token
+operator|!=
+literal|null
+operator|&&
+operator|(
 name|c
 operator|==
 literal|null
@@ -3487,6 +3492,7 @@ operator|.
 name|getClientId
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|UserSubject
