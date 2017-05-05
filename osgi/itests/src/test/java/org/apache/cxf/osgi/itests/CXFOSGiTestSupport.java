@@ -958,16 +958,10 @@ name|filter
 argument_list|)
 decl_stmt|;
 name|ServiceTracker
-argument_list|<
-name|?
-argument_list|,
-name|?
-argument_list|>
 name|tracker
 init|=
 operator|new
 name|ServiceTracker
-argument_list|<>
 argument_list|(
 name|bundleContext
 argument_list|,
