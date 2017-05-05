@@ -907,6 +907,9 @@ throws|throws
 name|Exception
 block|{
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 index|[]
 name|svcrefs
 init|=
@@ -1082,6 +1085,9 @@ throws|throws
 name|Exception
 block|{
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 index|[]
 name|svcrefs
 init|=
@@ -1260,6 +1266,9 @@ throws|throws
 name|Exception
 block|{
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 index|[]
 name|svcrefs
 init|=
@@ -1369,6 +1378,9 @@ block|}
 comment|// Creates test service references with the specified symbolic names and the restricted extension properties.
 specifier|private
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 index|[]
 name|createTestServiceReferences
 parameter_list|(
@@ -1381,7 +1393,15 @@ index|[]
 name|restricted
 parameter_list|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 index|[]
 name|refs
 init|=
@@ -1436,6 +1456,9 @@ block|}
 comment|// Creates a test service reference with the specified symbolic name and the restricted extension property.
 specifier|private
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 name|createTestServiceReference
 parameter_list|(
 name|String
@@ -1445,7 +1468,15 @@ name|String
 name|rst
 parameter_list|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|ServiceReference
+argument_list|<
+name|Object
+argument_list|>
 name|ref
 init|=
 name|control

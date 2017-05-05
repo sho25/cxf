@@ -113,9 +113,17 @@ begin_class
 specifier|public
 class|class
 name|CertificateRepoProxyFactory
+parameter_list|<
+name|T
+parameter_list|>
 block|{
 specifier|private
 name|ServiceTracker
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|tracker
 decl_stmt|;
 specifier|private
@@ -127,7 +135,7 @@ name|CertificateRepoProxyFactory
 parameter_list|(
 name|Class
 argument_list|<
-name|?
+name|T
 argument_list|>
 name|serviceInterface
 parameter_list|,
@@ -154,6 +162,7 @@ name|tracker
 operator|=
 operator|new
 name|ServiceTracker
+argument_list|<>
 argument_list|(
 name|context
 argument_list|,

@@ -291,10 +291,16 @@ name|bundleContext
 decl_stmt|;
 specifier|private
 name|ServiceRegistration
+argument_list|<
+name|?
+argument_list|>
 name|serviceReg
 decl_stmt|;
 specifier|private
 name|ServiceRegistration
+argument_list|<
+name|?
+argument_list|>
 name|intentReg
 decl_stmt|;
 specifier|private

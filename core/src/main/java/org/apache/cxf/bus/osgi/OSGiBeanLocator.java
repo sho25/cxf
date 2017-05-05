@@ -342,6 +342,9 @@ decl_stmt|;
 try|try
 block|{
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|refs
 index|[]
 init|=
@@ -367,6 +370,9 @@ block|{
 for|for
 control|(
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|r
 range|:
 name|refs

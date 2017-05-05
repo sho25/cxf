@@ -206,6 +206,9 @@ name|servlet
 decl_stmt|;
 specifier|private
 name|ServiceRegistration
+argument_list|<
+name|?
+argument_list|>
 name|serviceRegistration
 decl_stmt|;
 specifier|private

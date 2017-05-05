@@ -64,6 +64,11 @@ name|InvocationHandler
 block|{
 specifier|private
 name|ServiceTracker
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|tracker
 decl_stmt|;
 specifier|private
@@ -74,6 +79,11 @@ specifier|public
 name|NamedServiceProxy
 parameter_list|(
 name|ServiceTracker
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|tracker
 parameter_list|,
 name|String

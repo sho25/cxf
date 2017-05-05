@@ -1004,6 +1004,9 @@ operator|+
 literal|")(servlet-name=cxf-osgi-transport-servlet))"
 decl_stmt|;
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|ref
 init|=
 name|getBundleContext
@@ -1011,6 +1014,9 @@ argument_list|()
 operator|.
 name|getServiceReferences
 argument_list|(
+operator|(
+name|String
+operator|)
 literal|null
 argument_list|,
 name|filter
@@ -1067,6 +1073,9 @@ operator|+
 literal|"))"
 decl_stmt|;
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|ref
 init|=
 name|getBundleContext
@@ -1074,6 +1083,9 @@ argument_list|()
 operator|.
 name|getServiceReferences
 argument_list|(
+operator|(
+name|String
+operator|)
 literal|null
 argument_list|,
 name|filter

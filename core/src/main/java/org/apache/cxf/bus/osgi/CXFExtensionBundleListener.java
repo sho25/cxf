@@ -919,6 +919,9 @@ literal|null
 condition|)
 block|{
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|ref
 init|=
 name|bundle
