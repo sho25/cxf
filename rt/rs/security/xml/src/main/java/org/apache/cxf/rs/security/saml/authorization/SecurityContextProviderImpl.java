@@ -571,9 +571,7 @@ argument_list|,
 name|nameFormat
 argument_list|)
 decl_stmt|;
-name|SAMLSecurityContext
-name|context
-init|=
+return|return
 operator|new
 name|SAMLSecurityContext
 argument_list|(
@@ -583,9 +581,6 @@ name|roles
 argument_list|,
 name|claims
 argument_list|)
-decl_stmt|;
-return|return
-name|context
 return|;
 block|}
 comment|//TODO: This can be overridden, but consider also introducing dedicated handlers

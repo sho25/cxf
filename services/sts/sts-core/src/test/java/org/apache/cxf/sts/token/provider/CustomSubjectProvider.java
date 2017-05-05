@@ -227,9 +227,7 @@ operator|.
 name|getPrincipal
 argument_list|()
 decl_stmt|;
-name|SubjectBean
-name|subjectBean
-init|=
+return|return
 operator|new
 name|SubjectBean
 argument_list|(
@@ -242,9 +240,6 @@ name|subjectNameQualifier
 argument_list|,
 name|confirmationMethod
 argument_list|)
-decl_stmt|;
-return|return
-name|subjectBean
 return|;
 block|}
 comment|/**      * Get the SubjectConfirmation method given a tokenType and keyType      */

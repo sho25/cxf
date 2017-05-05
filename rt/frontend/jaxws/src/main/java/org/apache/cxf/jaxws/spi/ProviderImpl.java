@@ -1380,9 +1380,7 @@ operator|.
 name|createUnmarshaller
 argument_list|()
 expr_stmt|;
-name|EndpointReferenceType
-name|internal
-init|=
+return|return
 name|um
 operator|.
 name|unmarshal
@@ -1396,9 +1394,6 @@ argument_list|)
 operator|.
 name|getValue
 argument_list|()
-decl_stmt|;
-return|return
-name|internal
 return|;
 block|}
 catch|catch

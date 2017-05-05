@@ -784,9 +784,7 @@ name|Target
 name|getProxyObject
 parameter_list|()
 block|{
-name|Target
-name|t
-init|=
+return|return
 operator|(
 name|Target
 operator|)
@@ -818,9 +816,6 @@ name|SetterTarget
 argument_list|()
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|t
 return|;
 block|}
 specifier|private

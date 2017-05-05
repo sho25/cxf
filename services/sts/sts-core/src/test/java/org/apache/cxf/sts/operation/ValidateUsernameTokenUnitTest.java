@@ -1390,12 +1390,7 @@ argument_list|(
 name|passwordType
 argument_list|)
 expr_stmt|;
-name|JAXBElement
-argument_list|<
-name|UsernameTokenType
-argument_list|>
-name|tokenType
-init|=
+return|return
 operator|new
 name|JAXBElement
 argument_list|<
@@ -1412,9 +1407,6 @@ name|class
 argument_list|,
 name|usernameToken
 argument_list|)
-decl_stmt|;
-return|return
-name|tokenType
 return|;
 block|}
 end_function

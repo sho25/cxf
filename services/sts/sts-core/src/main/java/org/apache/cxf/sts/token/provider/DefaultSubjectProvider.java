@@ -1515,9 +1515,7 @@ operator|.
 name|getSecret
 argument_list|()
 decl_stmt|;
-name|KeyInfoBean
-name|keyInfo
-init|=
+return|return
 name|createEncryptedKeyKeyInfo
 argument_list|(
 name|certs
@@ -1533,9 +1531,6 @@ name|encryptionProperties
 argument_list|,
 name|crypto
 argument_list|)
-decl_stmt|;
-return|return
-name|keyInfo
 return|;
 block|}
 catch|catch

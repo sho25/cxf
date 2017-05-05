@@ -1622,9 +1622,7 @@ name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|NVList
-name|list
-init|=
+return|return
 name|prepareDIIArgsList
 argument_list|(
 name|corbaMsg
@@ -1648,9 +1646,6 @@ argument_list|)
 argument_list|,
 name|service
 argument_list|)
-decl_stmt|;
-return|return
-name|list
 return|;
 block|}
 specifier|protected

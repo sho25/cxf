@@ -100,21 +100,13 @@ block|{
 comment|// Get the list of endpoints, including the current one.
 comment|// This part is required for most FailoverStrategys that provide alternate
 comment|// target endpoints for the LoadDistributorTargetSelector.
-name|List
-argument_list|<
-name|Endpoint
-argument_list|>
-name|alternateEndpoints
-init|=
+return|return
 name|getEndpoints
 argument_list|(
 name|exchange
 argument_list|,
 literal|true
 argument_list|)
-decl_stmt|;
-return|return
-name|alternateEndpoints
 return|;
 block|}
 annotation|@

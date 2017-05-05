@@ -448,9 +448,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|Attachment
-name|respXMLPayloadAttachment
-init|=
+return|return
 operator|new
 name|Attachment
 argument_list|(
@@ -460,9 +458,6 @@ literal|"application/xml"
 argument_list|,
 literal|"<Book><id>888</id></Book>"
 argument_list|)
-decl_stmt|;
-return|return
-name|respXMLPayloadAttachment
 return|;
 block|}
 annotation|@
@@ -484,9 +479,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|Attachment
-name|respXMLPayloadAttachment
-init|=
+return|return
 operator|new
 name|Attachment
 argument_list|(
@@ -499,9 +492,6 @@ operator|.
 name|getBytes
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|respXMLPayloadAttachment
 return|;
 block|}
 annotation|@

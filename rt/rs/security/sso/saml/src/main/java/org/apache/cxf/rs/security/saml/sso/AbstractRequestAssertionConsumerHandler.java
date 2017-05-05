@@ -1069,9 +1069,7 @@ argument_list|,
 name|responseState
 argument_list|)
 expr_stmt|;
-name|String
-name|contextCookie
-init|=
+return|return
 name|createCookie
 argument_list|(
 name|SSOConstants
@@ -1090,9 +1088,6 @@ operator|.
 name|getWebAppDomain
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|contextCookie
 return|;
 block|}
 specifier|protected

@@ -445,10 +445,7 @@ literal|"UserNameOverTransport"
 argument_list|)
 argument_list|)
 decl_stmt|;
-specifier|final
-name|IPingService
-name|port
-init|=
+return|return
 name|svc
 operator|.
 name|getPort
@@ -467,9 +464,6 @@ name|IPingService
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-return|return
-name|port
 return|;
 block|}
 specifier|private

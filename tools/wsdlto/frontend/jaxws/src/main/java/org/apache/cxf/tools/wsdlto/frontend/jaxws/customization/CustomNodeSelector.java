@@ -367,9 +367,7 @@ argument_list|(
 name|context
 argument_list|)
 decl_stmt|;
-name|Node
-name|node
-init|=
+return|return
 operator|(
 name|Node
 operator|)
@@ -385,9 +383,6 @@ name|XPathConstants
 operator|.
 name|NODE
 argument_list|)
-decl_stmt|;
-return|return
-name|node
 return|;
 block|}
 specifier|public
@@ -412,9 +407,7 @@ argument_list|(
 name|context
 argument_list|)
 decl_stmt|;
-name|NodeList
-name|nodeList
-init|=
+return|return
 operator|(
 name|NodeList
 operator|)
@@ -430,9 +423,6 @@ name|XPathConstants
 operator|.
 name|NODESET
 argument_list|)
-decl_stmt|;
-return|return
-name|nodeList
 return|;
 block|}
 block|}

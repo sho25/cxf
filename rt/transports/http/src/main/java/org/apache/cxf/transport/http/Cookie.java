@@ -268,9 +268,7 @@ name|Cookie
 operator|)
 name|o
 decl_stmt|;
-name|boolean
-name|result
-init|=
+return|return
 name|this
 operator|.
 name|name
@@ -316,9 +314,6 @@ name|path
 argument_list|)
 operator|)
 operator|)
-decl_stmt|;
-return|return
-name|result
 return|;
 block|}
 comment|/**      * Convert a list of cookies into a string suitable for sending      * as a "Cookie:" header      * @return Cookie header text      */

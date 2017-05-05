@@ -340,20 +340,12 @@ argument_list|>
 name|getRoles
 parameter_list|()
 block|{
-name|Set
-argument_list|<
-name|URI
-argument_list|>
-name|roles
-init|=
+comment|// TODO
+return|return
 operator|new
 name|HashSet
 argument_list|<>
 argument_list|()
-decl_stmt|;
-comment|// TODO
-return|return
-name|roles
 return|;
 block|}
 specifier|public

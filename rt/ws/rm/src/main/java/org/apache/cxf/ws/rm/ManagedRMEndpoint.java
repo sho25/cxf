@@ -3758,9 +3758,7 @@ name|getWSANamespace
 argument_list|()
 block|}
 decl_stmt|;
-name|CompositeData
-name|ssps
-init|=
+return|return
 operator|new
 name|CompositeDataSupport
 argument_list|(
@@ -3770,9 +3768,6 @@ name|SOURCE_SEQUENCE_NAMES
 argument_list|,
 name|ssv
 argument_list|)
-decl_stmt|;
-return|return
-name|ssps
 return|;
 block|}
 specifier|private
@@ -3851,9 +3846,7 @@ name|getWSANamespace
 argument_list|()
 block|}
 decl_stmt|;
-name|CompositeData
-name|dsps
-init|=
+return|return
 operator|new
 name|CompositeDataSupport
 argument_list|(
@@ -3863,9 +3856,6 @@ name|DESTINATION_SEQUENCE_NAMES
 argument_list|,
 name|dsv
 argument_list|)
-decl_stmt|;
-return|return
-name|dsps
 return|;
 block|}
 specifier|private

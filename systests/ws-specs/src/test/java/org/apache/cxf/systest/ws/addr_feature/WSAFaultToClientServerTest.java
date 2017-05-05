@@ -844,9 +844,7 @@ argument_list|,
 name|service
 argument_list|)
 expr_stmt|;
-name|AddNumbersPortType
-name|port
-init|=
+return|return
 name|service
 operator|.
 name|getAddNumbersPort
@@ -855,10 +853,6 @@ operator|new
 name|AddressingFeature
 argument_list|()
 argument_list|)
-decl_stmt|;
-comment|//updateAddressPort(port, PORT);
-return|return
-name|port
 return|;
 block|}
 block|}

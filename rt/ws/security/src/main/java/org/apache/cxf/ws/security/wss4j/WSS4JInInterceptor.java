@@ -1209,9 +1209,7 @@ operator|.
 name|HTTP_REQUEST_METHOD
 argument_list|)
 decl_stmt|;
-name|boolean
-name|isGet
-init|=
+return|return
 literal|"GET"
 operator|.
 name|equals
@@ -1229,9 +1227,6 @@ name|class
 argument_list|)
 operator|==
 literal|null
-decl_stmt|;
-return|return
-name|isGet
 return|;
 block|}
 specifier|public

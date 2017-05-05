@@ -389,9 +389,7 @@ return|return
 literal|false
 return|;
 block|}
-name|boolean
-name|collision
-init|=
+return|return
 name|collector
 operator|.
 name|containTypesClass
@@ -409,9 +407,6 @@ name|packageName
 argument_list|,
 name|className
 argument_list|)
-decl_stmt|;
-return|return
-name|collision
 return|;
 block|}
 specifier|private

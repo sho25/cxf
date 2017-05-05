@@ -837,9 +837,7 @@ name|UTF_8
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Filter
-name|query
-init|=
+return|return
 operator|new
 name|SingleColumnValueFilter
 argument_list|(
@@ -865,9 +863,6 @@ name|compareOp
 argument_list|,
 name|byteArrayComparable
 argument_list|)
-decl_stmt|;
-return|return
-name|query
 return|;
 block|}
 specifier|private

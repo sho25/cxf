@@ -357,9 +357,7 @@ name|request
 parameter_list|)
 block|{
 comment|// TODO: may need to be 384/8 or 512/8 if not a default HS256 but HS384 or HS512
-name|int
-name|keySizeOctets
-init|=
+return|return
 name|protectIdTokenWithClientSecret
 condition|?
 literal|32
@@ -370,9 +368,6 @@ name|getClientSecretSizeInBytes
 argument_list|(
 name|request
 argument_list|)
-decl_stmt|;
-return|return
-name|keySizeOctets
 return|;
 block|}
 specifier|public

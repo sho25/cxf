@@ -456,9 +456,7 @@ name|SequenceFault
 name|sf
 parameter_list|)
 block|{
-name|SoapFault
-name|fault
-init|=
+return|return
 operator|new
 name|SoapFault
 argument_list|(
@@ -482,9 +480,6 @@ operator|.
 name|getReceiver
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|fault
 return|;
 block|}
 name|Fault

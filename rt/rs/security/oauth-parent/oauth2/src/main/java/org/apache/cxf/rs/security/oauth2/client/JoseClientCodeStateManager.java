@@ -793,6 +793,7 @@ operator|.
 name|getUnsignedEncodedSequence
 argument_list|()
 decl_stmt|;
+comment|//CHECKSTYLE:OFF
 name|Map
 argument_list|<
 name|String
@@ -824,7 +825,6 @@ name|json
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|//CHECKSTYLE:OFF
 return|return
 operator|(
 name|MultivaluedMap
@@ -836,6 +836,7 @@ argument_list|>
 operator|)
 name|map
 return|;
+comment|//NOPMD
 comment|//CHECKSTYLE:ON
 block|}
 specifier|public

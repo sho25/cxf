@@ -1245,9 +1245,7 @@ return|;
 block|}
 try|try
 block|{
-name|ConnectionFactory
-name|cf
-init|=
+return|return
 operator|new
 name|JndiHelper
 argument_list|(
@@ -1264,9 +1262,6 @@ name|ConnectionFactory
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-return|return
-name|cf
 return|;
 block|}
 catch|catch

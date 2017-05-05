@@ -551,9 +551,7 @@ name|String
 name|uri
 parameter_list|)
 block|{
-name|DestinationFactory
-name|factory
-init|=
+return|return
 operator|new
 name|TransportFinder
 argument_list|<
@@ -575,9 +573,6 @@ name|findTransportForURI
 argument_list|(
 name|uri
 argument_list|)
-decl_stmt|;
-return|return
-name|factory
 return|;
 block|}
 block|}

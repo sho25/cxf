@@ -823,13 +823,7 @@ name|SoapMessage
 name|inmsg
 parameter_list|)
 block|{
-specifier|final
-name|List
-argument_list|<
-name|WSHandlerResult
-argument_list|>
-name|handlerResults
-init|=
+return|return
 name|CastUtils
 operator|.
 name|cast
@@ -849,9 +843,6 @@ operator|.
 name|RECV_RESULTS
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|handlerResults
 return|;
 block|}
 comment|// FOR DEBUGGING ONLY

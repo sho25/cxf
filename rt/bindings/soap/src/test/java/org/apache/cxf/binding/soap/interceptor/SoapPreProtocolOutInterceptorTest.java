@@ -685,9 +685,7 @@ name|INPUT
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|BindingOperationInfo
-name|bindingOpInfo
-init|=
+return|return
 operator|new
 name|BindingOperationInfo
 argument_list|(
@@ -695,9 +693,6 @@ literal|null
 argument_list|,
 name|opInfo
 argument_list|)
-decl_stmt|;
-return|return
-name|bindingOpInfo
 return|;
 block|}
 specifier|private

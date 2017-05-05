@@ -552,9 +552,7 @@ operator|new
 name|OperationInfo
 argument_list|()
 decl_stmt|;
-name|BindingOperationInfo
-name|boi
-init|=
+return|return
 operator|new
 name|BindingOperationInfo
 argument_list|(
@@ -573,9 +571,6 @@ literal|false
 return|;
 block|}
 block|}
-decl_stmt|;
-return|return
-name|boi
 return|;
 block|}
 annotation|@

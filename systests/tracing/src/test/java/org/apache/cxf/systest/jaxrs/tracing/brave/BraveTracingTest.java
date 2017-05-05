@@ -2710,10 +2710,7 @@ name|SpanId
 name|fromRandom
 parameter_list|()
 block|{
-specifier|final
-name|SpanId
-name|spanId
-init|=
+return|return
 name|SpanId
 operator|.
 name|builder
@@ -2750,9 +2747,6 @@ argument_list|)
 operator|.
 name|build
 argument_list|()
-decl_stmt|;
-return|return
-name|spanId
 return|;
 block|}
 block|}

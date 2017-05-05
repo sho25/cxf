@@ -1087,10 +1087,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|byte
-index|[]
-name|bs
-init|=
+return|return
 name|obs
 operator|.
 name|getResponseStream
@@ -1098,9 +1095,6 @@ argument_list|()
 operator|.
 name|toByteArray
 argument_list|()
-decl_stmt|;
-return|return
-name|bs
 return|;
 block|}
 specifier|public

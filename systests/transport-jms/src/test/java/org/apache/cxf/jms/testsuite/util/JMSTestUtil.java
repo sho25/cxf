@@ -256,9 +256,7 @@ literal|"&"
 else|:
 literal|"?"
 decl_stmt|;
-name|String
-name|address
-init|=
+return|return
 name|partAddress
 operator|+
 name|separator
@@ -270,9 +268,6 @@ operator|+
 literal|"&jndiURL="
 operator|+
 name|jndiUrl
-decl_stmt|;
-return|return
-name|address
 return|;
 block|}
 specifier|public

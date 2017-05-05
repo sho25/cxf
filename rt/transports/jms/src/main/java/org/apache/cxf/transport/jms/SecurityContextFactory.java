@@ -154,9 +154,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-name|SecurityContext
-name|securityContext
-init|=
+return|return
 operator|new
 name|SecurityContext
 argument_list|()
@@ -183,9 +181,6 @@ literal|false
 return|;
 block|}
 block|}
-decl_stmt|;
-return|return
-name|securityContext
 return|;
 block|}
 block|}

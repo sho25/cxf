@@ -693,9 +693,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|String
-name|interfaceName
-init|=
+return|return
 name|packageName
 operator|+
 literal|"."
@@ -719,9 +717,6 @@ argument_list|()
 operator|-
 literal|4
 argument_list|)
-decl_stmt|;
-return|return
-name|interfaceName
 return|;
 block|}
 specifier|public

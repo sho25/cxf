@@ -1328,9 +1328,7 @@ argument_list|(
 literal|"X.509"
 argument_list|)
 decl_stmt|;
-name|X509Certificate
-name|cert
-init|=
+return|return
 operator|(
 name|X509Certificate
 operator|)
@@ -1347,9 +1345,6 @@ name|getValue
 argument_list|()
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|cert
 return|;
 block|}
 catch|catch

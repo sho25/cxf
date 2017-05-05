@@ -626,9 +626,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|XMLStreamWriter
-name|writer
-init|=
+return|return
 operator|!
 name|writeXsiType
 operator|||
@@ -645,9 +643,6 @@ name|dropRootElement
 argument_list|)
 else|:
 name|xsw
-decl_stmt|;
-return|return
-name|writer
 return|;
 block|}
 specifier|public

@@ -1298,9 +1298,7 @@ operator|.
 name|getQName
 argument_list|()
 decl_stmt|;
-name|JAXBBeanInfo
-name|bi
-init|=
+return|return
 operator|new
 name|JAXBBeanInfo
 argument_list|()
@@ -1368,9 +1366,6 @@ argument_list|()
 return|;
 block|}
 block|}
-decl_stmt|;
-return|return
-name|bi
 return|;
 block|}
 specifier|private

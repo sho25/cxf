@@ -3097,9 +3097,10 @@ condition|)
 block|{
 try|try
 block|{
-name|T
-name|ret
-init|=
+comment|// cannot us pClass.cast as the pClass is something like
+comment|// Boolean.TYPE (representing the boolean primitive) and
+comment|// the object is a Boolean object
+return|return
 operator|(
 name|T
 operator|)
@@ -3111,12 +3112,6 @@ name|value
 argument_list|,
 name|pClass
 argument_list|)
-decl_stmt|;
-comment|// cannot us pClass.cast as the pClass is something like
-comment|// Boolean.TYPE (representing the boolean primitive) and
-comment|// the object is a Boolean object
-return|return
-name|ret
 return|;
 block|}
 catch|catch

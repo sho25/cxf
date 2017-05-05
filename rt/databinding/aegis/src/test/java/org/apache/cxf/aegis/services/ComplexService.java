@@ -45,15 +45,10 @@ name|Complex1
 name|getComplex1
 parameter_list|()
 block|{
-name|Complex1
-name|c1
-init|=
+return|return
 operator|new
 name|Complex1
 argument_list|()
-decl_stmt|;
-return|return
-name|c1
 return|;
 block|}
 block|}

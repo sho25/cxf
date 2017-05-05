@@ -2686,12 +2686,7 @@ argument_list|(
 name|secret
 argument_list|)
 expr_stmt|;
-name|JAXBElement
-argument_list|<
-name|BinarySecretType
-argument_list|>
-name|binarySecret
-init|=
+return|return
 name|QNameConstants
 operator|.
 name|WS_TRUST_FACTORY
@@ -2700,9 +2695,6 @@ name|createBinarySecret
 argument_list|(
 name|binarySecretType
 argument_list|)
-decl_stmt|;
-return|return
-name|binarySecret
 return|;
 block|}
 block|}

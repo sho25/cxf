@@ -1605,12 +1605,7 @@ operator|.
 name|BASE64_NS
 argument_list|)
 expr_stmt|;
-name|JAXBElement
-argument_list|<
-name|BinarySecurityTokenType
-argument_list|>
-name|tokenType
-init|=
+return|return
 operator|new
 name|JAXBElement
 argument_list|<
@@ -1627,9 +1622,6 @@ name|class
 argument_list|,
 name|binarySecurityToken
 argument_list|)
-decl_stmt|;
-return|return
-name|tokenType
 return|;
 block|}
 comment|/**      * Return true if the response has a valid status, false otherwise      */

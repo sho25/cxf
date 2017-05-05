@@ -1216,9 +1216,10 @@ name|T
 name|getSuperBookJson
 parameter_list|()
 block|{
-name|SuperBook
-name|book
-init|=
+return|return
+operator|(
+name|T
+operator|)
 operator|new
 name|SuperBook
 argument_list|(
@@ -1228,12 +1229,6 @@ literal|999L
 argument_list|,
 literal|true
 argument_list|)
-decl_stmt|;
-return|return
-operator|(
-name|T
-operator|)
-name|book
 return|;
 block|}
 annotation|@

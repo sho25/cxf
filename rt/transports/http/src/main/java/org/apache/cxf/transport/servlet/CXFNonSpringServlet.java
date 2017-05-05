@@ -800,9 +800,7 @@ argument_list|,
 name|bus
 argument_list|)
 decl_stmt|;
-name|ServletController
-name|newController
-init|=
+return|return
 operator|new
 name|ServletController
 argument_list|(
@@ -812,9 +810,6 @@ name|servletConfig
 argument_list|,
 name|serviceListGeneratorServlet
 argument_list|)
-decl_stmt|;
-return|return
-name|newController
 return|;
 block|}
 specifier|public

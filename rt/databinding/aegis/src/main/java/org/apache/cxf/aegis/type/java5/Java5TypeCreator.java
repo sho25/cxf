@@ -1233,16 +1233,11 @@ else|:
 literal|null
 argument_list|)
 expr_stmt|;
-name|AegisType
-name|type
-init|=
+return|return
 name|createTypeForClass
 argument_list|(
 name|info
 argument_list|)
-decl_stmt|;
-return|return
-name|type
 return|;
 block|}
 specifier|protected

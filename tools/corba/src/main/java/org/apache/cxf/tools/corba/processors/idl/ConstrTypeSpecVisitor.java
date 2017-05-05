@@ -112,9 +112,7 @@ name|AST
 name|node
 parameter_list|)
 block|{
-name|boolean
-name|result
-init|=
+return|return
 name|StructVisitor
 operator|.
 name|accept
@@ -135,9 +133,6 @@ name|accept
 argument_list|(
 name|node
 argument_list|)
-decl_stmt|;
-return|return
-name|result
 return|;
 block|}
 specifier|public

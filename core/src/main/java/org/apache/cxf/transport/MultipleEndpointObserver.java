@@ -569,9 +569,7 @@ name|PhaseInterceptorChain
 name|createChain
 parameter_list|()
 block|{
-name|PhaseInterceptorChain
-name|chain
-init|=
+return|return
 operator|new
 name|PhaseInterceptorChain
 argument_list|(
@@ -587,9 +585,6 @@ operator|.
 name|getInPhases
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|chain
 return|;
 block|}
 specifier|protected

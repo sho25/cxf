@@ -3261,7 +3261,6 @@ argument_list|()
 operator|)
 return|;
 block|}
-specifier|private
 name|String
 name|dump
 parameter_list|(

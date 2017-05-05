@@ -242,9 +242,7 @@ name|JMSFault
 name|jmsFault
 parameter_list|)
 block|{
-name|SoapFault
-name|fault
-init|=
+return|return
 operator|new
 name|SoapFault
 argument_list|(
@@ -258,9 +256,6 @@ operator|.
 name|getSubCode
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|fault
 return|;
 block|}
 name|Fault

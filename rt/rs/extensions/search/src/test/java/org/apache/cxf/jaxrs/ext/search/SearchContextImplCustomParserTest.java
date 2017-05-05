@@ -223,12 +223,7 @@ argument_list|(
 literal|9
 argument_list|)
 decl_stmt|;
-name|SearchCondition
-argument_list|<
-name|Color
-argument_list|>
-name|color
-init|=
+return|return
 operator|new
 name|PrimitiveSearchCondition
 argument_list|<
@@ -249,9 +244,6 @@ argument_list|(
 name|value
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|color
 return|;
 block|}
 block|}

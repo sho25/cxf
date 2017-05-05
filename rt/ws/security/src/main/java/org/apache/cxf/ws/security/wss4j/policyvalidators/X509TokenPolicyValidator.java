@@ -1228,9 +1228,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Element
-name|kiElement
-init|=
+return|return
 name|XMLUtils
 operator|.
 name|getDirectChildElement
@@ -1243,9 +1241,6 @@ name|WSConstants
 operator|.
 name|WSSE_NS
 argument_list|)
-decl_stmt|;
-return|return
-name|kiElement
 return|;
 block|}
 block|}

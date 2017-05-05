@@ -621,10 +621,7 @@ argument_list|>
 argument_list|()
 argument_list|)
 decl_stmt|;
-specifier|final
-name|IdlPreprocessorReader
-name|preprocessor
-init|=
+return|return
 operator|new
 name|IdlPreprocessorReader
 argument_list|(
@@ -636,9 +633,6 @@ name|includeResolver
 argument_list|,
 name|defineState
 argument_list|)
-decl_stmt|;
-return|return
-name|preprocessor
 return|;
 block|}
 specifier|private

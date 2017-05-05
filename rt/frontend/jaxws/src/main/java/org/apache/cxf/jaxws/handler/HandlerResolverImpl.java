@@ -379,12 +379,7 @@ operator|new
 name|AnnotationHandlerChainBuilder
 argument_list|()
 decl_stmt|;
-name|List
-argument_list|<
-name|Handler
-argument_list|>
-name|chain
-init|=
+return|return
 name|builder
 operator|.
 name|buildHandlerChainFromClass
@@ -424,9 +419,6 @@ argument_list|()
 else|:
 literal|null
 argument_list|)
-decl_stmt|;
-return|return
-name|chain
 return|;
 block|}
 comment|/**      * JAX-WS section 9.3.1: The runtime MUST then carry out any injections      * requested by the handler, typically via the javax .annotation.Resource      * annotation. After all the injections have been carried out, including in      * the case where no injections were requested, the runtime MUST invoke the      * method carrying a javax.annotation .PostConstruct annotation, if present.      */

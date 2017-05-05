@@ -709,9 +709,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|AhcWebSocketWrappedOutputStream
-name|out
-init|=
+return|return
 operator|new
 name|AhcWebSocketWrappedOutputStream
 argument_list|(
@@ -731,9 +729,6 @@ operator|.
 name|getUri
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|out
 return|;
 block|}
 specifier|public

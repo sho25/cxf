@@ -1149,9 +1149,7 @@ argument_list|,
 name|collInfo
 argument_list|)
 decl_stmt|;
-name|Predicate
-name|pred
-init|=
+return|return
 name|collInfo
 operator|==
 literal|null
@@ -1187,9 +1185,6 @@ name|path
 argument_list|,
 name|collInfo
 argument_list|)
-decl_stmt|;
-return|return
-name|pred
 return|;
 block|}
 annotation|@

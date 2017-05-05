@@ -8844,9 +8844,7 @@ name|CD
 name|getCD
 parameter_list|()
 block|{
-name|CD
-name|cd
-init|=
+return|return
 name|cds
 operator|.
 name|get
@@ -8858,9 +8856,6 @@ argument_list|(
 name|currentCdId
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|cd
 return|;
 block|}
 annotation|@
@@ -8894,9 +8889,7 @@ name|String
 name|id
 parameter_list|)
 block|{
-name|CD
-name|cd
-init|=
+return|return
 name|cds
 operator|.
 name|get
@@ -8908,9 +8901,6 @@ argument_list|(
 name|id
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|cd
 return|;
 block|}
 annotation|@

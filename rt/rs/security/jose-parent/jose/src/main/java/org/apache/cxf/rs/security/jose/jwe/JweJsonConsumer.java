@@ -466,9 +466,7 @@ name|INVALID_JSON_JWE
 argument_list|)
 throw|;
 block|}
-name|JweDecryptionInput
-name|input
-init|=
+return|return
 operator|new
 name|JweDecryptionInput
 argument_list|(
@@ -489,9 +487,6 @@ name|protectedHeaderJson
 argument_list|,
 name|unionHeaders
 argument_list|)
-decl_stmt|;
-return|return
-name|input
 return|;
 block|}
 specifier|public

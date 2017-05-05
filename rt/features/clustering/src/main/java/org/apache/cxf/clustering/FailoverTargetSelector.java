@@ -1383,9 +1383,7 @@ operator|.
 name|getOutMessage
 argument_list|()
 decl_stmt|;
-name|Exception
-name|ex
-init|=
+return|return
 name|outMessage
 operator|.
 name|get
@@ -1414,9 +1412,6 @@ name|Exception
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-return|return
-name|ex
 return|;
 block|}
 comment|/**      * Get the failover target endpoint, if a suitable one is available.      *      * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return a failover endpoint if one is available      */

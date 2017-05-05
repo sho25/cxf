@@ -538,9 +538,7 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-name|CatalogResolver
-name|catalogResolver
-init|=
+return|return
 operator|new
 name|CatalogResolver
 argument_list|(
@@ -636,9 +634,6 @@ name|s
 return|;
 block|}
 block|}
-decl_stmt|;
-return|return
-name|catalogResolver
 return|;
 block|}
 catch|catch
