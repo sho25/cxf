@@ -91,6 +91,18 @@ name|BundleContext
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|osgi
+operator|.
+name|framework
+operator|.
+name|BundleException
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -130,31 +142,52 @@ literal|"Bundle "
 operator|+
 name|name
 operator|+
-literal|" should be installed"
+literal|" should be deployed"
 argument_list|,
 name|bundle
 argument_list|)
 expr_stmt|;
-name|Assert
+if|if
+condition|(
+name|bundle
 operator|.
-name|assertEquals
+name|getState
+argument_list|()
+operator|!=
+name|Bundle
+operator|.
+name|ACTIVE
+condition|)
+block|{
+try|try
+block|{
+name|bundle
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|BundleException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
 argument_list|(
 literal|"Bundle "
 operator|+
 name|name
 operator|+
-literal|" should be started"
+literal|" should be started but we get this error"
 argument_list|,
-name|Bundle
-operator|.
-name|ACTIVE
-argument_list|,
-name|bundle
-operator|.
-name|getState
-argument_list|()
+name|e
 argument_list|)
-expr_stmt|;
+throw|;
+block|}
+block|}
 block|}
 specifier|protected
 name|Bundle
