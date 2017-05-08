@@ -519,6 +519,8 @@ argument_list|(
 name|actualOs
 argument_list|,
 name|jwsSignature
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|byte

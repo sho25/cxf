@@ -3354,7 +3354,7 @@ name|book
 operator|=
 name|bs
 operator|.
-name|echoBook2
+name|echoBookXml
 argument_list|(
 name|book
 argument_list|)
