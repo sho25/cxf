@@ -139,7 +139,11 @@ argument_list|)
 annotation|@
 name|Produces
 argument_list|(
+block|{
 literal|"text/plain"
+block|,
+literal|"application/json"
+block|}
 argument_list|)
 annotation|@
 name|Consumes
