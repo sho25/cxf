@@ -1110,11 +1110,14 @@ condition|(
 name|ApiListingResource
 operator|.
 name|class
-operator|==
+operator|.
+name|isAssignableFrom
+argument_list|(
 name|cri
 operator|.
 name|getResourceClass
 argument_list|()
+argument_list|)
 condition|)
 block|{
 name|InjectionUtils
