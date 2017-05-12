@@ -3431,6 +3431,10 @@ name|sourceRealm
 operator|!=
 literal|null
 operator|&&
+name|targetRealm
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|sourceRealm
 operator|.
@@ -3633,7 +3637,7 @@ name|Level
 operator|.
 name|SEVERE
 argument_list|,
-literal|"Unkown federation type: "
+literal|"Unknown federation type: "
 operator|+
 name|relationship
 operator|.
