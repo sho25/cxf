@@ -1901,7 +1901,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|Client
 name|addClient
 parameter_list|(
