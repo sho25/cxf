@@ -201,16 +201,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -399,8 +389,6 @@ parameter_list|()
 block|{     }
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testRefreshAccessTokenConcurrently
@@ -631,10 +619,9 @@ argument_list|(
 name|atl
 argument_list|)
 expr_stmt|;
-comment|// after 3 parallel refreshes we should have 4 AccessTokens
 name|assertEquals
 argument_list|(
-literal|4
+literal|2
 argument_list|,
 name|atl
 operator|.
