@@ -882,7 +882,7 @@ argument_list|)
 name|String
 name|encoding
 decl_stmt|;
-comment|/**      * Merge WsdlOptions that point to the same file by adding the extraargs to the first option and deleting      * the second from the options list      *      * @param options      */
+comment|/**      * Merge WsdlOptions that point to the same file by adding the extraargs to the first option and deleting      * the second from the options list      *      * @param effectiveWsdlOptions      */
 specifier|protected
 name|void
 name|mergeOptions
@@ -1118,7 +1118,7 @@ name|newList
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Determine if code should be generated from the given wsdl      *      * @param wsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
+comment|/**      * Determine if code should be generated from the given wsdl      *      * @param genericWsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
 specifier|protected
 name|boolean
 name|shouldRun

@@ -1035,7 +1035,7 @@ specifier|volatile
 name|boolean
 name|serverPolicyCalced
 decl_stmt|;
-comment|/**      * Constructor      *      * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination      * @param dp true for adding the default port if it is missing      * @throws IOException      */
+comment|/**      * Constructor      *      * @param b the associated Bus      * @param registry the destination registry      * @param ei the endpoint info of the destination      * @param path the path      * @param dp true for adding the default port if it is missing      * @throws IOException      */
 specifier|public
 name|AbstractHTTPDestination
 parameter_list|(

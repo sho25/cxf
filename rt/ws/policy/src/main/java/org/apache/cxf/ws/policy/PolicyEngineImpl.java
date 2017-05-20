@@ -3305,7 +3305,7 @@ return|return
 name|ep
 return|;
 block|}
-comment|/**      * Check if a given list of assertions can potentially be supported by      * interceptors or by an already installed assertor (a conduit or transport      * that implements the Assertor interface).      *      * @param alternative the policy alternative      * @param Assertor the assertor      * @return true iff the alternative can be supported      */
+comment|/**      * Check if a given list of assertions can potentially be supported by      * interceptors or by an already installed assertor (a conduit or transport      * that implements the Assertor interface).      *      * @param alternative the policy alternative      * @param assertor the assertor      * @return true iff the alternative can be supported      */
 specifier|public
 name|boolean
 name|supportsAlternative

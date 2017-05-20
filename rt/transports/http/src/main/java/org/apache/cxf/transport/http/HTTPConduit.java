@@ -1252,7 +1252,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor      *      * @param b the associated Bus.      * @param endpoint the endpoint info of the initiator.      * @param t the endpoint reference of the target.      * @throws IOException      */
+comment|/**      * Constructor      *      * @param b the associated Bus.      * @param ei the endpoint info of the initiator.      * @param t the endpoint reference of the target.      * @throws IOException      */
 specifier|public
 name|HTTPConduit
 parameter_list|(
@@ -2150,7 +2150,7 @@ name|Level
 operator|.
 name|FINE
 argument_list|,
-literal|"Auth Supplier, but no Premeptive User Pass or Digest auth (nonce may be stale)"
+literal|"Auth Supplier, but no Preemptive User Pass or Digest auth (nonce may be stale)"
 operator|+
 literal|" We must cache request."
 argument_list|)
@@ -3278,7 +3278,7 @@ return|return
 name|defaultAddress
 return|;
 block|}
-comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by      * configuration.      *<p>      * An AuthorizationPolicy may also be set on the message. If so, those      * policies are merged. A user name or password set on the messsage      * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *      * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same      * type?      *      * @param message      * @param headers      */
+comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by      * configuration.      *<p>      * An AuthorizationPolicy may also be set on the message. If so, those      * policies are merged. A user name or password set on the messsage      * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *      * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same      * type?      *      * @param message      * @param currentURI      */
 specifier|protected
 name|void
 name|setHeadersByAuthorizationPolicy
@@ -6130,7 +6130,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**          * This method performs a retransmit for authorization information.          *          * @param connection The currently active connection.          * @param message The outbound message.          * @param cachedStream The cached request.          * @return A new connection if retransmitted. If not retransmitted          *         then this method returns the same connection.          * @throws IOException          */
+comment|/**          * This method performs a retransmit for authorization information.          *          * @return true if there was a retransmit          * @throws IOException          */
 specifier|protected
 name|boolean
 name|authorizationRetransmit
@@ -7310,7 +7310,7 @@ name|e
 argument_list|)
 throw|;
 block|}
-comment|/**          * This call must take place before anything is written to the          * URLConnection. The URLConnection.connect() will be called in order          * to get the connection information.          *          * This method is invoked just after setURLRequestHeaders() from the          * WrappedOutputStream before it writes data to the URLConnection.          *          * If trust cannot be established the Trust Decider implemenation          * throws an IOException.          *          * @param message      The message being sent.          * @throws IOException This exception is thrown if trust cannot be          *                     established by the configured MessageTrustDecider.          * @see MessageTrustDecider          */
+comment|/**          * This call must take place before anything is written to the          * URLConnection. The URLConnection.connect() will be called in order          * to get the connection information.          *          * This method is invoked just after setURLRequestHeaders() from the          * WrappedOutputStream before it writes data to the URLConnection.          *          * If trust cannot be established the Trust Decider implemenation          * throws an IOException.          *          * @throws IOException This exception is thrown if trust cannot be          *                     established by the configured MessageTrustDecider.          * @see MessageTrustDecider          */
 specifier|protected
 name|void
 name|makeTrustDecision

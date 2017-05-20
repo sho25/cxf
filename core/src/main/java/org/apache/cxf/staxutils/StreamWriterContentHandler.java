@@ -458,7 +458,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Method getPrefix.      * @param namespaceURI      *      * @param qname      * @return Returns String.      */
+comment|/**      * Method getPrefix.      *      * @param ns      * @param namespaceURI      * @return Returns String.      */
 specifier|private
 name|String
 name|getPrefix

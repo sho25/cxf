@@ -163,7 +163,7 @@ name|AbstractCXFSpringTest
 operator|.
 name|class
 decl_stmt|;
-comment|/**      * Load up all the beans from the XML files returned by the getConfigLocations method.      * @throws Exception      */
+comment|/**      * Load up all the beans from the XML files returned by the getConfigLocations method.      */
 specifier|protected
 name|AbstractCXFSpringTest
 parameter_list|()
