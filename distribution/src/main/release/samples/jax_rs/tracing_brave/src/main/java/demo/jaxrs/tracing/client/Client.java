@@ -55,20 +55,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|github
-operator|.
-name|kristofa
-operator|.
-name|brave
-operator|.
-name|Brave
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -101,6 +87,14 @@ name|BraveClientProvider
 import|;
 end_import
 
+begin_import
+import|import
+name|brave
+operator|.
+name|Tracing
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|final
@@ -125,13 +119,12 @@ throws|throws
 name|Exception
 block|{
 specifier|final
-name|Brave
+name|Tracing
 name|brave
 init|=
-operator|new
-name|Brave
+name|Tracing
 operator|.
-name|Builder
+name|newBuilder
 argument_list|()
 operator|.
 name|build

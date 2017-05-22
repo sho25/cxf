@@ -48,7 +48,7 @@ name|id
 parameter_list|)
 function_decl|;
 name|void
-name|delete
+name|deleteBook
 parameter_list|(
 specifier|final
 name|String

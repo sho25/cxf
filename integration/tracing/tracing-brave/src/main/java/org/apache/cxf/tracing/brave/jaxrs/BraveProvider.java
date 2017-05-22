@@ -155,29 +155,17 @@ end_import
 
 begin_import
 import|import
-name|com
+name|org
 operator|.
-name|github
+name|apache
 operator|.
-name|kristofa
+name|cxf
 operator|.
-name|brave
-operator|.
-name|Brave
-import|;
-end_import
-
-begin_import
-import|import
-name|com
-operator|.
-name|github
-operator|.
-name|kristofa
+name|tracing
 operator|.
 name|brave
 operator|.
-name|ServerSpan
+name|AbstractBraveProvider
 import|;
 end_import
 
@@ -193,7 +181,17 @@ name|tracing
 operator|.
 name|brave
 operator|.
-name|AbstractBraveProvider
+name|TraceScope
+import|;
+end_import
+
+begin_import
+import|import
+name|brave
+operator|.
+name|http
+operator|.
+name|HttpTracing
 import|;
 end_import
 
@@ -220,7 +218,7 @@ specifier|public
 name|BraveProvider
 parameter_list|(
 specifier|final
-name|Brave
+name|HttpTracing
 name|brave
 parameter_list|)
 block|{
@@ -246,7 +244,7 @@ block|{
 specifier|final
 name|TraceScopeHolder
 argument_list|<
-name|ServerSpan
+name|TraceScope
 argument_list|>
 name|holder
 init|=
@@ -335,7 +333,7 @@ argument_list|,
 operator|(
 name|TraceScopeHolder
 argument_list|<
-name|ServerSpan
+name|TraceScope
 argument_list|>
 operator|)
 name|requestContext

@@ -49,34 +49,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|github
-operator|.
-name|kristofa
-operator|.
-name|brave
-operator|.
-name|Brave
-import|;
-end_import
-
-begin_import
-import|import
-name|com
-operator|.
-name|github
-operator|.
-name|kristofa
-operator|.
-name|brave
-operator|.
-name|ServerSpan
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -161,9 +133,15 @@ name|Phase
 import|;
 end_import
 
-begin_comment
-comment|/**  *  */
-end_comment
+begin_import
+import|import
+name|brave
+operator|.
+name|http
+operator|.
+name|HttpTracing
+import|;
+end_import
 
 begin_class
 annotation|@
@@ -178,7 +156,7 @@ specifier|public
 name|BraveStopInterceptor
 parameter_list|(
 specifier|final
-name|Brave
+name|HttpTracing
 name|brave
 parameter_list|)
 block|{
@@ -189,10 +167,6 @@ operator|.
 name|PRE_MARSHAL
 argument_list|,
 name|brave
-argument_list|,
-operator|new
-name|ServerSpanNameProvider
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -339,14 +313,14 @@ argument_list|)
 specifier|final
 name|TraceScopeHolder
 argument_list|<
-name|ServerSpan
+name|TraceScope
 argument_list|>
 name|holder
 init|=
 operator|(
 name|TraceScopeHolder
 argument_list|<
-name|ServerSpan
+name|TraceScope
 argument_list|>
 operator|)
 name|message
