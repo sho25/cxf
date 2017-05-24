@@ -225,7 +225,6 @@ argument_list|()
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|SpanInScope
 name|scope
 init|=

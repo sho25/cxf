@@ -1391,7 +1391,6 @@ try|try
 block|{
 try|try
 init|(
-specifier|final
 name|SpanInScope
 name|scope
 init|=

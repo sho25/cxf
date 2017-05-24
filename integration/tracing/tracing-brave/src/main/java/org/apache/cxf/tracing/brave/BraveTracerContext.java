@@ -357,7 +357,6 @@ lambda|->
 block|{
 try|try
 init|(
-specifier|final
 name|TraceScope
 name|span
 init|=
