@@ -686,6 +686,11 @@ argument_list|,
 literal|45
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Expected failure on a cache retrieval failure"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
