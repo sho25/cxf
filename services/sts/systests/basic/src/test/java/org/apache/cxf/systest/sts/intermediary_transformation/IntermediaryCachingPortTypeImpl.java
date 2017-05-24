@@ -555,12 +555,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Assert.assertTrue("Principal must be alice", pr.getName().contains("alice"));
-comment|// Disable the STSClient after the first invocation
+comment|// Disable the STSClient after the second invocation
 if|if
 condition|(
 name|i
 operator|>
-literal|0
+literal|1
 condition|)
 block|{
 name|BindingProvider

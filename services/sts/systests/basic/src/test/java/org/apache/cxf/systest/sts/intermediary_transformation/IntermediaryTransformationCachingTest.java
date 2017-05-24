@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a STS instance, and  * receives a (HOK) SAML 1.1 Assertion. This is then sent via (1-way) TLS to an Intermediary  * service provider. The intermediary service provider validates the token, and then the  * Intermediary client uses delegation to dispatch the received token (via OnBehalfOf) to another  * STS instance. After this point, the STSClient is disabled, meaning that the Intermediary client must rely  * on its cache to get tokens. The retrieved token is sent to the service provider via (2-way) TLS.  */
+comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a STS instance, and  * receives a (HOK) SAML 1.1 Assertion. This is then sent via (1-way) TLS to an Intermediary  * service provider. The intermediary service provider validates the token, and then the  * Intermediary client uses delegation to dispatch the received token (via OnBehalfOf) to another  * STS instance. The retrieved token is sent to the service provider via (2-way) TLS. The STSClient is disabled  * after two invocations, meaning that the Intermediary client must rely on its cache to get tokens.   */
 end_comment
 
 begin_class
@@ -486,7 +486,7 @@ literal|"DoubleItTransportSAML1EndorsingPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|transportPort
+name|alicePort
 init|=
 name|service
 operator|.
@@ -501,7 +501,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|transportPort
+name|alicePort
 argument_list|,
 name|PORT
 argument_list|)
@@ -513,7 +513,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|transportPort
+name|alicePort
 argument_list|,
 name|STSPORT
 argument_list|)
@@ -522,7 +522,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|transportPort
+name|alicePort
 operator|)
 operator|.
 name|getRequestContext
@@ -540,22 +540,15 @@ expr_stmt|;
 comment|// Make initial successful invocation (for "alice")
 name|doubleIt
 argument_list|(
-name|transportPort
+name|alicePort
 argument_list|,
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// Make another invocation - this should work as the intermediary caches the token
-comment|// even though its STSClient is disabled after the first invocation
-name|doubleIt
-argument_list|(
-name|transportPort
-argument_list|,
-literal|30
-argument_list|)
-expr_stmt|;
-name|transportPort
-operator|=
+comment|// Make another successful invocation for "bob"
+name|DoubleItPortType
+name|bobPort
+init|=
 name|service
 operator|.
 name|getPort
@@ -566,10 +559,10 @@ name|DoubleItPortType
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|transportPort
+name|bobPort
 argument_list|,
 name|PORT
 argument_list|)
@@ -581,7 +574,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|transportPort
+name|bobPort
 argument_list|,
 name|STSPORT
 argument_list|)
@@ -590,7 +583,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|transportPort
+name|bobPort
 operator|)
 operator|.
 name|getRequestContext
@@ -605,14 +598,92 @@ argument_list|,
 literal|"bob"
 argument_list|)
 expr_stmt|;
-comment|// Make invocation for "bob"...this should fail as the intermediary's STS client is disabled
+name|doubleIt
+argument_list|(
+name|bobPort
+argument_list|,
+literal|30
+argument_list|)
+expr_stmt|;
+comment|// Make another invocation for "bob" - this should work as the intermediary caches the token
+comment|// even though its STSClient is disabled after the second invocation
+name|doubleIt
+argument_list|(
+name|bobPort
+argument_list|,
+literal|35
+argument_list|)
+expr_stmt|;
+comment|// Make another invocation for "alice" - this should work as the intermediary caches the token
+comment|// even though its STSClient is disabled after the first invocation
+name|doubleIt
+argument_list|(
+name|alicePort
+argument_list|,
+literal|40
+argument_list|)
+expr_stmt|;
+comment|// Now make an invocation for "myservicekey"
+name|DoubleItPortType
+name|servicePort
+init|=
+name|service
+operator|.
+name|getPort
+argument_list|(
+name|portQName
+argument_list|,
+name|DoubleItPortType
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|servicePort
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+name|TokenTestUtils
+operator|.
+name|updateSTSPort
+argument_list|(
+operator|(
+name|BindingProvider
+operator|)
+name|servicePort
+argument_list|,
+name|STSPORT
+argument_list|)
+expr_stmt|;
+operator|(
+operator|(
+name|BindingProvider
+operator|)
+name|servicePort
+operator|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|SecurityConstants
+operator|.
+name|USERNAME
+argument_list|,
+literal|"myservicekey"
+argument_list|)
+expr_stmt|;
+comment|// Make invocation for "myservicekey"...this should fail as the intermediary's STS client is disabled
 try|try
 block|{
 name|doubleIt
 argument_list|(
-name|transportPort
+name|servicePort
 argument_list|,
-literal|35
+literal|45
 argument_list|)
 expr_stmt|;
 block|}
@@ -632,7 +703,35 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|transportPort
+name|alicePort
+operator|)
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+operator|(
+operator|(
+name|java
+operator|.
+name|io
+operator|.
+name|Closeable
+operator|)
+name|bobPort
+operator|)
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+operator|(
+operator|(
+name|java
+operator|.
+name|io
+operator|.
+name|Closeable
+operator|)
+name|servicePort
 operator|)
 operator|.
 name|close
