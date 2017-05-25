@@ -872,6 +872,11 @@ operator|.
 name|TOKEN
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|resetContextCache
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|securityToken
