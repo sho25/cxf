@@ -4615,6 +4615,22 @@ init|=
 name|verifyConnection
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|con
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Skip creating tables as we have no connection."
+argument_list|)
+expr_stmt|;
+return|return;
+block|}
 name|Statement
 name|stmt
 init|=

@@ -164,7 +164,7 @@ argument_list|(
 name|store
 argument_list|)
 expr_stmt|;
-name|assertNull
+name|assertNotNull
 argument_list|(
 literal|"Connection should be null"
 argument_list|,
@@ -176,7 +176,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"org.apache.derby.jdbc.NoDriver"
+literal|"org.apache.derby.jdbc.EmbeddedDriver"
 argument_list|,
 name|store
 operator|.
@@ -206,7 +206,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"jdbc:derby://localhost:1527/rmdb;create=true"
+literal|"jdbc:derby:target/wsrmdb3;create=true"
 argument_list|,
 name|store
 operator|.
@@ -322,6 +322,15 @@ name|void
 name|testSetCustomTableExistsState2
 parameter_list|()
 block|{
+name|RMTxStore
+operator|.
+name|deleteDatabaseFiles
+argument_list|(
+literal|"target/wsrmdb5"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 name|SpringBusFactory
 name|factory
 init|=
