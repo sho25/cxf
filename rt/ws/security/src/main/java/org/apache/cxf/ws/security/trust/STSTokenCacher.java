@@ -72,12 +72,15 @@ specifier|public
 interface|interface
 name|STSTokenCacher
 block|{
-comment|/**      * Retrieve a cached STS token      */
+comment|/**      * Retrieve a cached STS token. The retrieveTokenFromEndpoint boolean lets us known whether we want to retrieve the      * token from the endpoint or not.      */
 name|SecurityToken
 name|retrieveToken
 parameter_list|(
 name|Message
 name|message
+parameter_list|,
+name|boolean
+name|retrieveTokenFromEndpoint
 parameter_list|)
 function_decl|;
 comment|/**      * Retrieve a cached STS token for a given delegation token Element      */
@@ -94,7 +97,7 @@ name|String
 name|cacheKey
 parameter_list|)
 function_decl|;
-comment|/**      * Store a token in the cache      */
+comment|/**      * Store a token in the cache. The storeTokenInEndpoint boolean lets us know whether we want to store the token      * in the endpoint or not.      */
 name|void
 name|storeToken
 parameter_list|(
@@ -103,6 +106,9 @@ name|message
 parameter_list|,
 name|SecurityToken
 name|securityToken
+parameter_list|,
+name|boolean
+name|storeTokenInEndpoint
 parameter_list|)
 function_decl|;
 comment|/**      * Store a given delegation token in the cache (or update it if it's already there), with a reference to the      * security token obtained from the STS.      */
