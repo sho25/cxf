@@ -1275,12 +1275,12 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|DELETE_METHOD_SPEC
+name|GET_BY_ID_METHOD_SPEC
 argument_list|)
 operator|.
 name|add
 argument_list|(
-name|GET_BY_ID_METHOD_SPEC
+name|DELETE_METHOD_SPEC
 argument_list|)
 argument_list|)
 argument_list|)
