@@ -649,7 +649,7 @@ specifier|final
 name|String
 name|TLS_CLIENT_AUTH_ISSUER_DN
 init|=
-literal|"tls_client_auth_issuer_dn"
+literal|"tls_client_auth_root_dn"
 decl_stmt|;
 comment|// Authorization scheme constants, used internally by AccessTokenValidation client and service
 specifier|public
