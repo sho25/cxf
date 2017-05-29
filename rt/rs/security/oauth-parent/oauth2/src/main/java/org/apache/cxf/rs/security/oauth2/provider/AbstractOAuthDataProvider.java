@@ -1422,7 +1422,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|updateRefreshToken
+name|updateExistingRefreshToken
 argument_list|(
 name|currentRefreshToken
 argument_list|,
