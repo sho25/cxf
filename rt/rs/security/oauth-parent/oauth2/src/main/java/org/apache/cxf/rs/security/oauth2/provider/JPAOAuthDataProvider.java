@@ -605,10 +605,6 @@ name|getSingleResult
 argument_list|()
 operator|>
 literal|0
-condition|?
-literal|true
-else|:
-literal|false
 decl_stmt|;
 if|if
 condition|(

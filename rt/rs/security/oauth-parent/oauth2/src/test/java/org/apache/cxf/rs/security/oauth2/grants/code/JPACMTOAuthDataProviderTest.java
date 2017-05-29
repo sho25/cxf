@@ -386,7 +386,11 @@ specifier|public
 name|void
 name|tearDown
 parameter_list|()
-block|{     }
+block|{
+name|tearDownClients
+argument_list|()
+expr_stmt|;
+block|}
 annotation|@
 name|Test
 specifier|public

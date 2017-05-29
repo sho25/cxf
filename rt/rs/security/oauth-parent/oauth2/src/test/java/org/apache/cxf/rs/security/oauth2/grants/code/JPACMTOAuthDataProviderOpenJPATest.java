@@ -27,26 +27,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|provider
-operator|.
-name|JPAOAuthDataProviderTest
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|junit
 operator|.
 name|runner
@@ -132,6 +112,15 @@ literal|"JPACMTCodeDataProvider.xml"
 argument_list|)
 annotation|@
 name|DirtiesContext
+argument_list|(
+name|classMode
+operator|=
+name|DirtiesContext
+operator|.
+name|ClassMode
+operator|.
+name|AFTER_EACH_TEST_METHOD
+argument_list|)
 annotation|@
 name|ActiveProfiles
 argument_list|(
@@ -147,7 +136,7 @@ specifier|public
 class|class
 name|JPACMTOAuthDataProviderOpenJPATest
 extends|extends
-name|JPAOAuthDataProviderTest
+name|JPACMTOAuthDataProviderTest
 block|{ }
 end_class
 
