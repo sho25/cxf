@@ -397,11 +397,31 @@ argument_list|,
 name|request
 argument_list|)
 decl_stmt|;
+comment|// If the service resource is using asynchronous processing mode, the trace
+comment|// scope will be closed in another thread and as such should be detached.
 name|SpanInScope
 name|scope
 init|=
 literal|null
 decl_stmt|;
+if|if
+condition|(
+name|isAsyncResponse
+argument_list|()
+operator|&&
+name|span
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// Do not modify the current context span
+name|propagateContinuationSpan
+argument_list|(
+name|span
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
 if|if
 condition|(
 name|span
@@ -431,29 +451,6 @@ name|span
 argument_list|)
 expr_stmt|;
 block|}
-comment|// If the service resource is using asynchronous processing mode, the trace
-comment|// scope will be closed in another thread and as such should be detached.
-name|boolean
-name|detached
-init|=
-literal|false
-decl_stmt|;
-if|if
-condition|(
-name|isAsyncResponse
-argument_list|()
-condition|)
-block|{
-name|propagateContinuationSpan
-argument_list|(
-name|span
-argument_list|)
-expr_stmt|;
-name|detached
-operator|=
-literal|true
-expr_stmt|;
-block|}
 return|return
 operator|new
 name|TraceScopeHolder
@@ -469,7 +466,10 @@ argument_list|,
 name|scope
 argument_list|)
 argument_list|,
-name|detached
+name|scope
+operator|==
+literal|null
+comment|/* detached */
 argument_list|)
 return|;
 block|}

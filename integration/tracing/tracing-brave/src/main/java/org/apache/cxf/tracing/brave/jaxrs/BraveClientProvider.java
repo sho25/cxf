@@ -133,9 +133,17 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|tracing
+operator|.
 name|brave
 operator|.
-name|Span
+name|TraceScope
 import|;
 end_import
 
@@ -229,7 +237,7 @@ block|{
 specifier|final
 name|TraceScopeHolder
 argument_list|<
-name|Span
+name|TraceScope
 argument_list|>
 name|holder
 init|=
@@ -296,14 +304,14 @@ block|{
 specifier|final
 name|TraceScopeHolder
 argument_list|<
-name|Span
+name|TraceScope
 argument_list|>
 name|holder
 init|=
 operator|(
 name|TraceScopeHolder
 argument_list|<
-name|Span
+name|TraceScope
 argument_list|>
 operator|)
 name|requestContext

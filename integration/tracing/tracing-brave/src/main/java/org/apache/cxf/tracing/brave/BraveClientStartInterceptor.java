@@ -81,14 +81,6 @@ begin_import
 import|import
 name|brave
 operator|.
-name|Span
-import|;
-end_import
-
-begin_import
-import|import
-name|brave
-operator|.
 name|http
 operator|.
 name|HttpTracing
@@ -165,7 +157,7 @@ decl_stmt|;
 specifier|final
 name|TraceScopeHolder
 argument_list|<
-name|Span
+name|TraceScope
 argument_list|>
 name|holder
 init|=
