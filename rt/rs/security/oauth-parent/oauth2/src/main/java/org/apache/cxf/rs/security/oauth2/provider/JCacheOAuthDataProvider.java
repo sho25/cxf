@@ -1336,7 +1336,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|!
 name|isExpired
 argument_list|(
 name|token
@@ -1509,7 +1508,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|!
 name|isExpired
 argument_list|(
 name|token
