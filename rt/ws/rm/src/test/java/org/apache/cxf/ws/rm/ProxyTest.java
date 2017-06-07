@@ -51,6 +51,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -1237,6 +1249,10 @@ operator|.
 expr|class
 block|,
 name|Map
+operator|.
+name|class
+block|,
+name|Level
 operator|.
 name|class
 block|}
@@ -3989,6 +4005,15 @@ argument_list|(
 name|Map
 operator|.
 name|class
+argument_list|)
+argument_list|,
+name|EasyMock
+operator|.
+name|same
+argument_list|(
+name|Level
+operator|.
+name|FINER
 argument_list|)
 argument_list|)
 argument_list|)
