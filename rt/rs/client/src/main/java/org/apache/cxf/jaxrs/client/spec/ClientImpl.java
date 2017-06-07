@@ -402,7 +402,6 @@ name|ClientImpl
 implements|implements
 name|Client
 block|{
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -410,7 +409,6 @@ name|HTTP_CONNECTION_TIMEOUT_PROP
 init|=
 literal|"http.connection.timeout"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
