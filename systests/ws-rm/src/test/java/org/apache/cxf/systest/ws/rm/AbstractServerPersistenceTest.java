@@ -1625,7 +1625,7 @@ name|awaitMessages
 argument_list|(
 literal|2
 argument_list|,
-literal|3
+literal|2
 argument_list|,
 literal|60000
 argument_list|)

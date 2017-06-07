@@ -3715,6 +3715,19 @@ name|ss
 argument_list|)
 expr_stmt|;
 block|}
+comment|//make sure this is associated with the offering id
+name|s
+operator|.
+name|setCurrent
+argument_list|(
+name|ss
+operator|.
+name|getOfferingSequenceIdentifier
+argument_list|()
+argument_list|,
+name|ss
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|RMMessage
