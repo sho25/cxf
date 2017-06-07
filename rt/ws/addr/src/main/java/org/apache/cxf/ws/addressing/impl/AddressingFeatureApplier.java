@@ -127,9 +127,12 @@ block|{
 name|MAPCodec
 name|mapCodec
 init|=
-operator|new
 name|MAPCodec
-argument_list|()
+operator|.
+name|getInstance
+argument_list|(
+name|bus
+argument_list|)
 decl_stmt|;
 name|MAPAggregatorImpl
 name|mapAggregator

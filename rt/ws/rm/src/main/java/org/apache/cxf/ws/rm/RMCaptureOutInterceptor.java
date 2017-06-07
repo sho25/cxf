@@ -922,6 +922,14 @@ name|getValue
 argument_list|()
 expr_stmt|;
 block|}
+comment|//make sure we use the appropriate namespace
+name|maps
+operator|.
+name|exposeAs
+argument_list|(
+name|wsaNamespace
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|LOG
