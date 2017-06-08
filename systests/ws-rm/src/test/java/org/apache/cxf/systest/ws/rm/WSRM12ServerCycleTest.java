@@ -866,12 +866,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testNonPersistentSequenceNoTransformer
