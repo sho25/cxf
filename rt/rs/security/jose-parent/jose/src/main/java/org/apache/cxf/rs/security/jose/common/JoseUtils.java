@@ -1350,6 +1350,25 @@ name|bus
 argument_list|)
 init|)
 block|{
+if|if
+condition|(
+name|is
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|JoseException
+argument_list|(
+literal|"The properties file "
+operator|+
+name|propertiesLocation
+operator|+
+literal|" could not be read"
+argument_list|)
+throw|;
+block|}
 name|props
 operator|.
 name|load
