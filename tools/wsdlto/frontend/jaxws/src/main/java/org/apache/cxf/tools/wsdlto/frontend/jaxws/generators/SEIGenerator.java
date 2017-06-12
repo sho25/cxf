@@ -63,7 +63,7 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|lang
+name|lang3
 operator|.
 name|StringUtils
 import|;
@@ -823,7 +823,7 @@ expr_stmt|;
 block|}
 name|setAttributes
 argument_list|(
-literal|"sei-superinterface-string"
+literal|"seiSuperinterfaceString"
 argument_list|,
 name|seiSc
 argument_list|)

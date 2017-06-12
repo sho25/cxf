@@ -1070,7 +1070,7 @@ argument_list|)
 decl_stmt|;
 name|setAttributes
 argument_list|(
-literal|"service-target"
+literal|"serviceTarget"
 argument_list|,
 name|target
 argument_list|)

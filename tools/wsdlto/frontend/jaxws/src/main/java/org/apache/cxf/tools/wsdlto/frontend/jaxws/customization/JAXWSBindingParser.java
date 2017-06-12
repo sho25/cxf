@@ -183,7 +183,7 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|lang
+name|lang3
 operator|.
 name|StringEscapeUtils
 import|;
@@ -614,7 +614,7 @@ name|setPackageJavaDoc
 argument_list|(
 name|StringEscapeUtils
 operator|.
-name|escapeHtml
+name|escapeHtml4
 argument_list|(
 name|DOMUtils
 operator|.
@@ -680,7 +680,7 @@ name|setMethodJavaDoc
 argument_list|(
 name|StringEscapeUtils
 operator|.
-name|escapeHtml
+name|escapeHtml4
 argument_list|(
 name|DOMUtils
 operator|.
@@ -997,7 +997,7 @@ name|javadoc
 operator|=
 name|StringEscapeUtils
 operator|.
-name|escapeHtml
+name|escapeHtml4
 argument_list|(
 name|DOMUtils
 operator|.

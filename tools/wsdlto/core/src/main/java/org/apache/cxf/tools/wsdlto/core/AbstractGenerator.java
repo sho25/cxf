@@ -762,7 +762,7 @@ argument_list|)
 expr_stmt|;
 name|setAttributes
 argument_list|(
-literal|"mark-generated"
+literal|"markGenerated"
 argument_list|,
 name|env
 operator|.

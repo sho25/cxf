@@ -225,20 +225,6 @@ name|Velocity
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|velocity
-operator|.
-name|runtime
-operator|.
-name|RuntimeConstants
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final
@@ -427,24 +413,10 @@ literal|"velocity.log"
 argument_list|)
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-name|log
-condition|)
-block|{
-name|props
-operator|.
-name|put
-argument_list|(
-name|RuntimeConstants
-operator|.
-name|RUNTIME_LOG_LOGSYSTEM_CLASS
-argument_list|,
-literal|"org.apache.velocity.runtime.log.NullLogSystem"
-argument_list|)
-expr_stmt|;
-block|}
+comment|//            if (!log) {
+comment|//                props.put(VelocityEngine.RUNTIME_LOG_INSTANCE,
+comment|//                          "org.apache.velocity.runtime.log.NullLogSystem");
+comment|//            }
 name|Velocity
 operator|.
 name|init
