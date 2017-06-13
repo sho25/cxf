@@ -87,6 +87,17 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+name|status
+operator|!=
+literal|null
+condition|?
+name|status
+operator|.
+name|toString
+argument_list|()
+else|:
+literal|null
+argument_list|,
 name|cause
 argument_list|)
 expr_stmt|;
