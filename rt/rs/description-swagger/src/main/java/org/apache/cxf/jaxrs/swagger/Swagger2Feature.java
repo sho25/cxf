@@ -2699,7 +2699,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|".*js|.*gz|.*map|oauth2*[.]html|.*png|.*css|.*ico|"
+literal|".*[.]js|.*[.]gz|.*[.]map|oauth2*[.]html|.*[.]png|.*[.]css|.*[.]ico|"
 operator|+
 literal|"/css/.*|/images/.*|/lib/.*|/fonts/.*"
 argument_list|)
