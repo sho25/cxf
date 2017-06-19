@@ -2126,7 +2126,7 @@ name|void
 name|wakeupAll
 parameter_list|()
 block|{
-while|while
+if|if
 condition|(
 operator|!
 name|continuations
@@ -2135,17 +2135,12 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|Continuation
-name|c
-init|=
 name|continuations
 operator|.
 name|remove
 argument_list|(
 literal|0
 argument_list|)
-decl_stmt|;
-name|c
 operator|.
 name|resume
 argument_list|()
