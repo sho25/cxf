@@ -4991,7 +4991,8 @@ comment|// As per http://www.secg.org/sec1-v2.pdf section 3.2.2:
 comment|// "In Step 4, it may not be necessary to compute the point nQ. For example, if h = 1, then nQ = O is implied
 comment|// by the checks in Steps 2 and 3, because this property holds for all points Q ∈ E"
 comment|// All the NIST curves used here define h = 1.
-assert|assert
+if|if
+condition|(
 name|peerPublicKey
 operator|.
 name|getParams
@@ -4999,9 +5000,22 @@ argument_list|()
 operator|.
 name|getCofactor
 argument_list|()
-operator|==
+operator|!=
 literal|1
-assert|;
+condition|)
+block|{
+throw|throw
+operator|new
+name|JweException
+argument_list|(
+name|JweException
+operator|.
+name|Error
+operator|.
+name|KEY_ENCRYPTION_FAILURE
+argument_list|)
+throw|;
+block|}
 comment|// Finally calculate the derived key
 name|byte
 index|[]
