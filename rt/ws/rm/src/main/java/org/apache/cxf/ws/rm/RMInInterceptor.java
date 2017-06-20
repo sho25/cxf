@@ -1209,6 +1209,11 @@ argument_list|(
 name|message
 argument_list|)
 decl_stmt|;
+name|assertReliability
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|isApplicationMessage
@@ -1447,11 +1452,6 @@ expr_stmt|;
 return|return;
 block|}
 block|}
-name|assertReliability
-argument_list|(
-name|message
-argument_list|)
-expr_stmt|;
 block|}
 name|void
 name|processAcknowledgments
