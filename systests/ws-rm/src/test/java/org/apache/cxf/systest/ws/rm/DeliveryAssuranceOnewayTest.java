@@ -1644,6 +1644,7 @@ name|c
 operator|++
 control|)
 block|{
+specifier|final
 name|int
 name|currentNum
 init|=
