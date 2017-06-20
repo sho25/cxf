@@ -2175,35 +2175,7 @@ argument_list|()
 expr_stmt|;
 return|return;
 block|}
-comment|//next wasn't found, just resume whatever is first...
-for|for
-control|(
-name|Map
-operator|.
-name|Entry
-argument_list|<
-name|Long
-argument_list|,
-name|Continuation
-argument_list|>
-name|entry
-range|:
-name|continuations
-operator|.
-name|entrySet
-argument_list|()
-control|)
-block|{
-name|entry
-operator|.
-name|getValue
-argument_list|()
-operator|.
-name|resume
-argument_list|()
-expr_stmt|;
-return|return;
-block|}
+comment|//next wasn't found, nothing to resume, assume it will come in later...
 block|}
 finally|finally
 block|{
