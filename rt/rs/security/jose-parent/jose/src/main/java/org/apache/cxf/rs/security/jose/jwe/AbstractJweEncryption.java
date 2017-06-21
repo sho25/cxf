@@ -471,11 +471,11 @@ argument_list|,
 name|encryptedContent
 argument_list|)
 decl_stmt|;
-name|JweCompactProducer
+name|JweCompactProducerBuilder
 name|producer
 init|=
 operator|new
-name|JweCompactProducer
+name|JweCompactProducerBuilder
 argument_list|(
 name|state
 operator|.
