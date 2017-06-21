@@ -3803,6 +3803,10 @@ operator|.
 name|isOpaque
 argument_list|()
 operator|&&
+name|schemeSpecificPart
+operator|==
+literal|null
+operator|&&
 operator|(
 name|theScheme
 operator|!=
@@ -3811,13 +3815,6 @@ operator|||
 name|rawPath
 operator|!=
 literal|null
-operator|&&
-name|rawPath
-operator|.
-name|startsWith
-argument_list|(
-literal|"/"
-argument_list|)
 operator|)
 condition|)
 block|{
