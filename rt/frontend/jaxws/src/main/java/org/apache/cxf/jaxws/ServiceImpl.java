@@ -4046,10 +4046,7 @@ literal|"COULD_NOT_LOAD_CLASS"
 argument_list|,
 name|BUNDLE
 argument_list|,
-name|seiClass
-operator|.
-name|getCanonicalName
-argument_list|()
+name|epi
 argument_list|)
 decl_stmt|;
 throw|throw
