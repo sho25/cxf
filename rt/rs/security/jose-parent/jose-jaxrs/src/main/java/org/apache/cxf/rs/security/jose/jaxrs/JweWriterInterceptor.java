@@ -281,7 +281,7 @@ name|jose
 operator|.
 name|jwe
 operator|.
-name|JweCompactProducerBuilder
+name|JweCompactBuilder
 import|;
 end_import
 
@@ -642,7 +642,7 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|JweCompactProducerBuilder
+name|JweCompactBuilder
 operator|.
 name|startJweContent
 argument_list|(
