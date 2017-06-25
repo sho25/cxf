@@ -376,6 +376,15 @@ name|isStrict
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+operator|!
+name|books
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|assertThat
 argument_list|(
 name|books
@@ -428,6 +437,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
