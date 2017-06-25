@@ -336,7 +336,7 @@ expr_stmt|;
 comment|// Give the SSE stream some time to collect all events
 name|awaitEvents
 argument_list|(
-literal|3000
+literal|5000
 argument_list|,
 name|books
 argument_list|,
@@ -457,7 +457,7 @@ expr_stmt|;
 comment|// Give the SSE stream some time to collect all events
 name|awaitEvents
 argument_list|(
-literal|3000
+literal|5000
 argument_list|,
 name|books
 argument_list|,
