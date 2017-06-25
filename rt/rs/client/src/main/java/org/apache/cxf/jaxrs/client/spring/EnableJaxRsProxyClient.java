@@ -81,6 +81,10 @@ name|Import
 import|;
 end_import
 
+begin_comment
+comment|/**  * Allows autowiring of proxy clients  *  * It creates a proxy from the auto-discovered service class interface.  * JAX-RS providers (annotated with @Provider) and marked as Spring Components are added to proxy clients.  * The providers which are not marked as Spring Components can also be optionally auto-discovered.  * Proxy can also be configured with optional headers such as Accept and Content-Type  * (if JAX-RS @Produces and/or @Consumes are missing or need to be overridden) and made thread-safe.  */
+end_comment
+
 begin_annotation_defn
 annotation|@
 name|Retention
