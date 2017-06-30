@@ -2054,7 +2054,7 @@ name|configProps
 operator|.
 name|get
 argument_list|(
-name|THREAD_SAFE_CLIENT_PROP
+name|THREAD_SAFE_CLIENT_STATE_CLEANUP_PROP
 argument_list|)
 argument_list|)
 decl_stmt|;
