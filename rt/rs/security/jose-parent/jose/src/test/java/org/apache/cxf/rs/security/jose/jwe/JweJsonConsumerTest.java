@@ -819,7 +819,7 @@ name|List
 argument_list|<
 name|JweHeaders
 argument_list|>
-name|perRecipientHeades
+name|perRecipientHeaders
 init|=
 operator|new
 name|LinkedList
@@ -828,7 +828,7 @@ name|JweHeaders
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|perRecipientHeades
+name|perRecipientHeaders
 operator|.
 name|add
 argument_list|(
@@ -839,7 +839,7 @@ literal|"key1"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|perRecipientHeades
+name|perRecipientHeaders
 operator|.
 name|add
 argument_list|(
@@ -888,7 +888,7 @@ name|encryptWith
 argument_list|(
 name|jweProviders
 argument_list|,
-name|perRecipientHeades
+name|perRecipientHeaders
 argument_list|)
 decl_stmt|;
 name|doTestMultipleRecipients

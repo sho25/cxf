@@ -223,6 +223,15 @@ condition|(
 name|unprotectedHeader
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|unprotectedHeader
+operator|.
+name|asMap
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|recipientsEntry

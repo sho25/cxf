@@ -201,7 +201,9 @@ name|getAlgorithm
 parameter_list|()
 block|{
 return|return
-literal|null
+name|KeyAlgorithm
+operator|.
+name|DIRECT
 return|;
 block|}
 specifier|protected

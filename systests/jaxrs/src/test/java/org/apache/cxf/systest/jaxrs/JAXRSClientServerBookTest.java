@@ -1056,7 +1056,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testBlockAndTrowException
+name|testBlockAndThrowException
 parameter_list|()
 throws|throws
 name|Exception

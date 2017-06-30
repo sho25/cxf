@@ -767,8 +767,6 @@ argument_list|,
 name|props
 argument_list|,
 name|headers
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 block|}

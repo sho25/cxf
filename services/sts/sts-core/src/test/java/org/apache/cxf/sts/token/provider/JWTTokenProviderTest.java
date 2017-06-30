@@ -1962,8 +1962,6 @@ name|jwtConsumer
 operator|.
 name|getHeaders
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|JweDecryptionOutput
@@ -2337,8 +2335,6 @@ name|jwtConsumer
 operator|.
 name|getHeaders
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|JweDecryptionOutput
@@ -2671,8 +2667,6 @@ name|jwtConsumer
 operator|.
 name|getHeaders
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|JweDecryptionOutput

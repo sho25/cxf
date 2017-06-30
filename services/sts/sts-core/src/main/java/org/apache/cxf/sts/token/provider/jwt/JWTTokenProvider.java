@@ -1946,8 +1946,6 @@ argument_list|(
 name|encProperties
 argument_list|,
 name|jweHeaders
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 comment|// token.getJwsHeaders().setSignatureAlgorithm(sigProvider.getAlgorithm());

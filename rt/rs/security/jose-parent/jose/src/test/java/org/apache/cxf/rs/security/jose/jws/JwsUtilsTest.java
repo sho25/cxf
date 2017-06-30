@@ -390,8 +390,6 @@ argument_list|,
 operator|new
 name|JwsHeaders
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|assertNotNull
