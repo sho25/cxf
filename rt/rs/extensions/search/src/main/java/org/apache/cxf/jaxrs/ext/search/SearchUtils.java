@@ -956,13 +956,6 @@ name|tableAlias
 argument_list|)
 expr_stmt|;
 block|}
-name|sb
-operator|.
-name|append
-argument_list|(
-literal|" WHERE "
-argument_list|)
-expr_stmt|;
 block|}
 specifier|public
 specifier|static
