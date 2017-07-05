@@ -1616,6 +1616,13 @@ operator|.
 name|getMessage
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|msg
+operator|!=
+literal|null
+condition|)
+block|{
 try|try
 block|{
 name|List
@@ -1820,6 +1827,7 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 return|return
 name|sm
