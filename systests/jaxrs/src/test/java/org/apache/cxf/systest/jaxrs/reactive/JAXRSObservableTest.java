@@ -254,7 +254,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JAXRSReactiveTest
+name|JAXRSObservableTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
