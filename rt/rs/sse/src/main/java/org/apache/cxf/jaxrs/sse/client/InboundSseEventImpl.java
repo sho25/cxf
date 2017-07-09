@@ -457,7 +457,7 @@ name|reconnectDelay
 operator|.
 name|orElse
 argument_list|(
-literal|0
+name|RECONNECT_NOT_SET
 argument_list|)
 argument_list|,
 name|reconnectDelay
