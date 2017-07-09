@@ -447,7 +447,7 @@ expr_stmt|;
 if|if
 condition|(
 name|delay
-operator|>
+operator|>=
 literal|0
 operator|&&
 name|unit
@@ -485,7 +485,7 @@ expr_stmt|;
 if|if
 condition|(
 name|delay
-operator|>
+operator|>=
 literal|0
 operator|&&
 name|unit
@@ -1293,7 +1293,7 @@ comment|// If delay == RECONNECT_NOT_SET, no reconnection attempt should be perf
 if|if
 condition|(
 name|delay
-operator|<=
+operator|<
 literal|0
 operator|||
 name|executor
