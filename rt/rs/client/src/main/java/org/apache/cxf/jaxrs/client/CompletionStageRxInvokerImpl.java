@@ -836,7 +836,6 @@ name|ex
 argument_list|)
 return|;
 block|}
-comment|//return wc.doInvokeAsyncStage(name, entity, responseType, responseType, ex);
 block|}
 annotation|@
 name|Override
@@ -923,7 +922,6 @@ name|ex
 argument_list|)
 return|;
 block|}
-comment|//return wc.doInvokeAsyncStage(name, entity, responseType.getRawType(), responseType.getType(), ex);
 block|}
 annotation|@
 name|Override
@@ -1000,7 +998,6 @@ name|ex
 argument_list|)
 return|;
 block|}
-comment|//return wc.doInvokeAsyncStage(name, null, responseType, responseType, ex);
 block|}
 annotation|@
 name|Override
@@ -1077,7 +1074,6 @@ name|ex
 argument_list|)
 return|;
 block|}
-comment|//return wc.doInvokeAsyncStage(name, null, responseType.getRawType(), responseType.getType(), ex);
 block|}
 block|}
 end_class
