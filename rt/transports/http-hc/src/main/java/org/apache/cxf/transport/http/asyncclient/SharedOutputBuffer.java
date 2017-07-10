@@ -148,7 +148,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Content buffer that can be shared by multiple threads, usually the I/O dispatch of  * an I/O reactor and a worker thread.  *<p/>  * The I/O dispatch thread is expected to transfer data from the buffer to  *   {@link ContentEncoder} by calling {@link #produceContent(ContentEncoder)}.  *<p/>  * The worker thread is expected to write data to the buffer by calling  * {@link #write(int)}, {@link #write(byte[], int, int)} or {@link #writeCompleted()}  *<p/>  * In case of an abnormal situation or when no longer needed the buffer must be  * shut down using {@link #shutdown()} method.  */
+comment|/**  * Content buffer that can be shared by multiple threads, usually the I/O dispatch of  * an I/O reactor and a worker thread.  *<p/>  * The I/O dispatch thread is expected to transfer data from the buffer to  *   {@link ContentEncoder} by calling {@link #produceContent(ContentEncoder, IOControl)}.  *<p/>  * The worker thread is expected to write data to the buffer by calling  * {@link #write(int)}, {@link #write(byte[], int, int)} or {@link #writeCompleted()}  *<p/>  * In case of an abnormal situation or when no longer needed the buffer must be  * shut down using {@link #shutdown()} method.  */
 end_comment
 
 begin_class
