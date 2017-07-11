@@ -187,6 +187,9 @@ argument_list|>
 name|build
 parameter_list|()
 block|{
+name|addVariants
+argument_list|()
+expr_stmt|;
 name|List
 argument_list|<
 name|Variant
