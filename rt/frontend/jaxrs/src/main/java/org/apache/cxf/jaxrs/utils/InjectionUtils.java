@@ -3443,6 +3443,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+try|try
+block|{
 return|return
 name|pClass
 operator|.
@@ -3451,6 +3453,27 @@ argument_list|(
 name|result
 argument_list|)
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassCastException
+name|ex
+parameter_list|)
+block|{
+name|reportServerError
+argument_list|(
+literal|"WRONG_PARAMETER_TYPE"
+argument_list|,
+name|pClass
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+expr_stmt|;
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
