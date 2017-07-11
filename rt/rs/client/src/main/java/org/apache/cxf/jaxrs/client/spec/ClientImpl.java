@@ -1739,7 +1739,8 @@ argument_list|(
 name|targetClient
 argument_list|)
 argument_list|,
-name|configImpl
+name|getConfiguration
+argument_list|()
 argument_list|)
 return|;
 block|}

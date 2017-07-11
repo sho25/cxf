@@ -217,20 +217,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
-operator|.
-name|WebTarget
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|core
 operator|.
 name|CacheControl
@@ -247,7 +233,7 @@ name|rs
 operator|.
 name|core
 operator|.
-name|Configurable
+name|Configuration
 import|;
 end_import
 
@@ -437,10 +423,7 @@ name|SyncInvoker
 name|sync
 decl_stmt|;
 specifier|private
-name|Configurable
-argument_list|<
-name|WebTarget
-argument_list|>
+name|Configuration
 name|config
 decl_stmt|;
 specifier|public
@@ -449,10 +432,7 @@ parameter_list|(
 name|WebClient
 name|webClient
 parameter_list|,
-name|Configurable
-argument_list|<
-name|WebTarget
-argument_list|>
+name|Configuration
 name|config
 parameter_list|)
 block|{
@@ -2101,9 +2081,6 @@ operator|(
 name|ExecutorService
 operator|)
 name|config
-operator|.
-name|getConfiguration
-argument_list|()
 operator|.
 name|getProperty
 argument_list|(
