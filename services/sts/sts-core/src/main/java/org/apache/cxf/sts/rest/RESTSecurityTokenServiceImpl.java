@@ -742,6 +742,17 @@ name|DEFAULT_CLAIM_TYPE_MAP
 operator|.
 name|put
 argument_list|(
+literal|"roles"
+argument_list|,
+name|CLAIM_TYPE_NS
+operator|+
+literal|"/claims/role"
+argument_list|)
+expr_stmt|;
+name|DEFAULT_CLAIM_TYPE_MAP
+operator|.
+name|put
+argument_list|(
 literal|"surname"
 argument_list|,
 name|CLAIM_TYPE_NS

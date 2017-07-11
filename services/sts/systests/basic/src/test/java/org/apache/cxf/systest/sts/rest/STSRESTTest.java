@@ -6144,18 +6144,13 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|String
-name|role
-init|=
-literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|jwt
 operator|.
 name|getClaim
 argument_list|(
-name|role
+literal|"roles"
 argument_list|)
 operator|==
 literal|null
@@ -6168,7 +6163,7 @@ name|query
 argument_list|(
 literal|"claim"
 argument_list|,
-name|role
+literal|"roles"
 argument_list|)
 expr_stmt|;
 name|response
@@ -6225,7 +6220,7 @@ name|jwt
 operator|.
 name|getClaim
 argument_list|(
-name|role
+literal|"roles"
 argument_list|)
 argument_list|)
 expr_stmt|;
