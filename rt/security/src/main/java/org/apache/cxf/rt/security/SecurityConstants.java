@@ -219,7 +219,7 @@ name|SC_FROM_JAAS_SUBJECT
 init|=
 literal|"security.sc.jaas-subject"
 decl_stmt|;
-comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match either the      * request URL or the Service QName. The default is "true".      */
+comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match one of the values of the      * AUDIENCE_RESTRICTIONS property. The default is "true".      */
 specifier|public
 specifier|static
 specifier|final
@@ -396,6 +396,15 @@ name|STS_TOKEN_CACHER_IMPL
 init|=
 literal|"security.sts.token.cacher.impl"
 decl_stmt|;
+comment|/**      * This property contains a comma separated String corresponding to a list of audience restriction URIs.      * The default value for this property contains the request URL and the Service QName. If the      * AUDIENCE_RESTRICTION_VALIDATION property is "true", and if a received SAML Token contains audience      * restriction URIs, then one of them must match one of the values specified in this property.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUDIENCE_RESTRICTIONS
+init|=
+literal|"security.audience-restrictions"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -492,6 +501,8 @@ block|,
 name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 block|,
 name|STS_TOKEN_CACHER_IMPL
+block|,
+name|AUDIENCE_RESTRICTIONS
 block|}
 argument_list|)
 argument_list|)
