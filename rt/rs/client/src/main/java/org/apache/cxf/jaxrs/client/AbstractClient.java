@@ -6498,7 +6498,10 @@ name|contains
 argument_list|(
 name|httpMethod
 argument_list|)
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 operator|!
 name|m
 operator|.
@@ -6521,9 +6524,30 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO: consider setting "use.httpurlconnection.method.reflection" here too -
+if|if
+condition|(
+operator|!
+name|m
+operator|.
+name|containsKey
+argument_list|(
+literal|"use.httpurlconnection.method.reflection"
+argument_list|)
+condition|)
+block|{
 comment|// if the async conduit is not loaded then the only way for the custom HTTP verb
 comment|// to be supported is to attempt to reflectively modify HTTPUrlConnection
+name|m
+operator|.
+name|put
+argument_list|(
+literal|"use.httpurlconnection.method.reflection"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 block|}
 specifier|protected
 name|void
