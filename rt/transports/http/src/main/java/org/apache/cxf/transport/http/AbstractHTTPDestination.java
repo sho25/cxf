@@ -1242,6 +1242,25 @@ argument_list|(
 name|authEncoded
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|authBytes
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|Base64Exception
+argument_list|(
+operator|new
+name|Throwable
+argument_list|(
+literal|"Invalid Base64 data."
+argument_list|)
+argument_list|)
+throw|;
+block|}
 name|String
 name|authDecoded
 init|=
