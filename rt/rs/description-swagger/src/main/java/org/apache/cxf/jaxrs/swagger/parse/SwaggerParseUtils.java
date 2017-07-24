@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|swagger
+operator|.
+name|parse
 package|;
 end_package
 
@@ -337,7 +339,7 @@ begin_class
 specifier|public
 specifier|final
 class|class
-name|SwaggerUtils
+name|SwaggerParseUtils
 block|{
 specifier|private
 specifier|static
@@ -527,7 +529,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-name|SwaggerUtils
+name|SwaggerParseUtils
 parameter_list|()
 block|{      }
 specifier|public
@@ -563,6 +565,28 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
+return|return
+name|getUserApplication
+argument_list|(
+operator|new
+name|ParseConfiguration
+argument_list|(
+name|loc
+argument_list|,
+name|bus
+argument_list|)
+argument_list|)
+return|;
+block|}
+specifier|public
+specifier|static
+name|UserApplication
+name|getUserApplication
+parameter_list|(
+name|ParseConfiguration
+name|cfg
+parameter_list|)
+block|{
 try|try
 block|{
 name|InputStream
@@ -572,9 +596,15 @@ name|ResourceUtils
 operator|.
 name|getResourceStream
 argument_list|(
-name|loc
+name|cfg
+operator|.
+name|getDocLocation
+argument_list|()
 argument_list|,
-name|bus
+name|cfg
+operator|.
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -607,7 +637,10 @@ name|warning
 argument_list|(
 literal|"Problem with processing a user model at "
 operator|+
-name|loc
+name|cfg
+operator|.
+name|getDocLocation
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1453,7 +1486,7 @@ name|loadClass
 argument_list|(
 name|typeName
 argument_list|,
-name|SwaggerUtils
+name|SwaggerParseUtils
 operator|.
 name|class
 argument_list|)

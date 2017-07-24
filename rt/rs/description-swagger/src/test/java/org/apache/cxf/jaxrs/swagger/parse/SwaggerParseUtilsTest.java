@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|swagger
+operator|.
+name|parse
 package|;
 end_package
 
@@ -140,7 +142,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|SwaggerUtilsTest
+name|SwaggerParseUtilsTest
 extends|extends
 name|Assert
 block|{
@@ -154,7 +156,7 @@ block|{
 name|UserApplication
 name|ap
 init|=
-name|SwaggerUtils
+name|SwaggerParseUtils
 operator|.
 name|getUserApplication
 argument_list|(
@@ -2969,7 +2971,7 @@ block|{
 name|UserApplication
 name|ap
 init|=
-name|SwaggerUtils
+name|SwaggerParseUtils
 operator|.
 name|getUserApplication
 argument_list|(

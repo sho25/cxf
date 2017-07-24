@@ -365,7 +365,9 @@ name|jaxrs
 operator|.
 name|swagger
 operator|.
-name|SwaggerUtils
+name|parse
+operator|.
+name|SwaggerParseUtils
 import|;
 end_import
 
@@ -802,7 +804,7 @@ decl_stmt|;
 name|UserApplication
 name|ap
 init|=
-name|SwaggerUtils
+name|SwaggerParseUtils
 operator|.
 name|getUserApplicationFromJson
 argument_list|(
