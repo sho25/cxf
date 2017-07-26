@@ -6401,7 +6401,27 @@ argument_list|,
 name|catalog
 argument_list|)
 decl_stmt|;
-comment|//System.out.println(namespaceURI + " " + systemId + " " + baseURI + " " + s);
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"validating: "
+operator|+
+name|namespaceURI
+operator|+
+literal|" "
+operator|+
+name|systemId
+operator|+
+literal|" "
+operator|+
+name|baseURI
+operator|+
+literal|" "
+operator|+
+name|s
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|s
@@ -6419,6 +6439,13 @@ argument_list|(
 name|namespaceURI
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|sc
+operator|!=
+literal|null
+condition|)
+block|{
 name|StringWriter
 name|writer
 init|=
@@ -6466,6 +6493,19 @@ argument_list|(
 name|src
 argument_list|)
 return|;
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|ToolException
+argument_list|(
+literal|"Schema not found for namespace: "
+operator|+
+name|namespaceURI
+argument_list|)
+throw|;
+block|}
 block|}
 return|return
 operator|new
