@@ -547,11 +547,11 @@ name|e
 argument_list|,
 name|ex
 lambda|->
-block|{}
+block|{ }
 argument_list|,
 parameter_list|()
 lambda|->
-block|{}
+block|{ }
 argument_list|)
 expr_stmt|;
 block|}
@@ -578,7 +578,7 @@ name|t
 argument_list|,
 parameter_list|()
 lambda|->
-block|{}
+block|{ }
 argument_list|)
 expr_stmt|;
 block|}
@@ -1186,7 +1186,7 @@ name|long
 name|timeout
 parameter_list|,
 name|TimeUnit
-name|unit
+name|tunit
 parameter_list|)
 block|{
 if|if
@@ -1294,7 +1294,7 @@ name|close
 argument_list|(
 name|timeout
 argument_list|,
-name|unit
+name|tunit
 argument_list|)
 return|;
 block|}
@@ -1303,10 +1303,10 @@ name|void
 name|scheduleReconnect
 parameter_list|(
 name|long
-name|delay
+name|tdelay
 parameter_list|,
 name|TimeUnit
-name|unit
+name|tunit
 parameter_list|,
 name|String
 name|lastEventId
@@ -1315,7 +1315,7 @@ block|{
 comment|// If delay == RECONNECT_NOT_SET, no reconnection attempt should be performed
 if|if
 condition|(
-name|delay
+name|tdelay
 operator|<
 literal|0
 operator|||
@@ -1423,9 +1423,9 @@ expr_stmt|;
 block|}
 block|}
 argument_list|,
-name|delay
+name|tdelay
 argument_list|,
-name|unit
+name|tunit
 argument_list|)
 expr_stmt|;
 name|LOG
@@ -1441,11 +1441,11 @@ argument_list|()
 operator|+
 literal|" is scheduled in "
 operator|+
-name|unit
+name|tunit
 operator|.
 name|toMillis
 argument_list|(
-name|delay
+name|tdelay
 argument_list|)
 operator|+
 literal|"ms"

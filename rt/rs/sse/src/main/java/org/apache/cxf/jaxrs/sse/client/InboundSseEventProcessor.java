@@ -312,8 +312,6 @@ specifier|private
 specifier|volatile
 name|boolean
 name|closed
-init|=
-literal|false
 decl_stmt|;
 specifier|protected
 name|InboundSseEventProcessor
@@ -460,7 +458,6 @@ lambda|->
 block|{
 try|try
 init|(
-specifier|final
 name|BufferedReader
 name|reader
 init|=
@@ -482,7 +479,10 @@ block|{
 name|String
 name|line
 init|=
-literal|null
+name|reader
+operator|.
+name|readLine
+argument_list|()
 decl_stmt|;
 name|InboundSseEventImpl
 operator|.
@@ -493,14 +493,7 @@ literal|null
 decl_stmt|;
 while|while
 condition|(
-operator|(
 name|line
-operator|=
-name|reader
-operator|.
-name|readLine
-argument_list|()
-operator|)
 operator|!=
 literal|null
 operator|&&
@@ -716,6 +709,13 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+name|line
+operator|=
+name|reader
+operator|.
+name|readLine
+argument_list|()
+expr_stmt|;
 block|}
 if|if
 condition|(
