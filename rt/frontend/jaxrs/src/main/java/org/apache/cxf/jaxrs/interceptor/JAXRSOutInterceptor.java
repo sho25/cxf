@@ -743,6 +743,12 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// Response shouldn't be closed here
 specifier|private
 name|void
 name|processResponse

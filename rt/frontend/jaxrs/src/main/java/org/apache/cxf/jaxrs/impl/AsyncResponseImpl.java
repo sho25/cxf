@@ -1492,6 +1492,12 @@ block|}
 end_function
 
 begin_function
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// Response that is built here shouldn't be closed here
 specifier|public
 name|Object
 name|getResponseObject

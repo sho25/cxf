@@ -558,6 +558,12 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// Responses built in this test don't need to be closed
 specifier|public
 class|class
 name|ResponseImplTest
@@ -2843,6 +2849,8 @@ name|void
 name|testGetLinksNoRel
 parameter_list|()
 block|{
+try|try
+init|(
 name|ResponseImpl
 name|ri
 init|=
@@ -2851,7 +2859,8 @@ name|ResponseImpl
 argument_list|(
 literal|200
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|MetadataMap
 argument_list|<
 name|String
@@ -3010,6 +3019,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|static
