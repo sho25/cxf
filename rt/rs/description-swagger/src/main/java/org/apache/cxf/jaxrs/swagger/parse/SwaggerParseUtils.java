@@ -1088,6 +1088,10 @@ decl_stmt|;
 name|String
 name|opTag
 init|=
+name|tagsProp
+operator|==
+literal|null
+operator|||
 name|opTags
 operator|==
 literal|null
@@ -1115,6 +1119,10 @@ argument_list|)
 condition|?
 literal|"/"
 else|:
+name|tagsProp
+operator|!=
+literal|null
+condition|?
 name|operPath
 operator|.
 name|substring
@@ -1126,6 +1134,8 @@ argument_list|()
 operator|+
 literal|1
 argument_list|)
+else|:
+name|operPath
 decl_stmt|;
 name|userOp
 operator|.
