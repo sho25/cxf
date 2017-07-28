@@ -337,7 +337,6 @@ argument_list|()
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|SseEventSource
 name|eventSource
 init|=
@@ -531,7 +530,6 @@ argument_list|()
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|SseEventSource
 name|eventSource
 init|=
@@ -745,7 +743,6 @@ argument_list|)
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|SseEventSource
 name|eventSource
 init|=
