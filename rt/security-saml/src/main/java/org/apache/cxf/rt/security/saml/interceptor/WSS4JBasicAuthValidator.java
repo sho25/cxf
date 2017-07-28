@@ -390,7 +390,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An abstract class containing some functionality to validate a username + password received  * via HTTP Basic Authentication via a WSS4J Validator (and hence JAAS, the STS, etc.). It can  * be subclasses and used as a CXF interceptor or else via a JAX-RS ContainerRequestFilter.  */
+comment|/**  * An abstract class containing some functionality to validate a username + password received  * via HTTP Basic Authentication via a WSS4J Validator (and hence JAAS, the STS, etc.). It can  * be subclassed and used as a CXF interceptor or else via a JAX-RS ContainerRequestFilter.  */
 end_comment
 
 begin_class

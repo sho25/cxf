@@ -1483,6 +1483,18 @@ expr_stmt|;
 block|}
 block|}
 comment|// Get the password
+name|String
+name|password
+init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+name|callbackHandler
+operator|!=
+literal|null
+condition|)
+block|{
 name|WSPasswordCallback
 index|[]
 name|cb
@@ -1506,9 +1518,8 @@ argument_list|(
 name|cb
 argument_list|)
 expr_stmt|;
-name|String
 name|password
-init|=
+operator|=
 name|cb
 index|[
 literal|0
@@ -1516,7 +1527,8 @@ index|]
 operator|.
 name|getPassword
 argument_list|()
-decl_stmt|;
+expr_stmt|;
+block|}
 name|Properties
 name|signingProperties
 init|=
