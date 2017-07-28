@@ -11672,7 +11672,6 @@ expr_stmt|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_0
@@ -11714,7 +11713,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_1
@@ -11788,7 +11786,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_2
@@ -11862,7 +11859,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_3
@@ -11936,7 +11932,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_4
@@ -12010,7 +12005,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_5
@@ -12092,7 +12086,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_6
@@ -12141,7 +12134,6 @@ argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|long
 index|[]
 name|mk_tokenSet_7
