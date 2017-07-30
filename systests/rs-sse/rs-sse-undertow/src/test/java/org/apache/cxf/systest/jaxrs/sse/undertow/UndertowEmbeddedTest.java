@@ -17,7 +17,7 @@ name|jaxrs
 operator|.
 name|sse
 operator|.
-name|jetty
+name|undertow
 package|;
 end_package
 
@@ -78,7 +78,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JettyEmbeddedTest
+name|UndertowEmbeddedTest
 extends|extends
 name|AbstractSseTest
 block|{
@@ -87,9 +87,9 @@ name|Ignore
 specifier|public
 specifier|static
 class|class
-name|EmbeddedJettyServer
+name|EmbeddedTomcatServer
 extends|extends
-name|AbstractJettyServer
+name|AbstractUndertowServer
 block|{
 specifier|public
 specifier|static
@@ -99,13 +99,13 @@ name|PORT
 init|=
 name|allocatePortAsInt
 argument_list|(
-name|EmbeddedJettyServer
+name|EmbeddedTomcatServer
 operator|.
 name|class
 argument_list|)
 decl_stmt|;
 specifier|public
-name|EmbeddedJettyServer
+name|EmbeddedTomcatServer
 parameter_list|()
 block|{
 name|super
@@ -132,14 +132,13 @@ operator|.
 name|clearAllMaps
 argument_list|()
 expr_stmt|;
-comment|//keep out of process due to stack traces testing failures
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|EmbeddedJettyServer
+name|EmbeddedTomcatServer
 operator|.
 name|class
 argument_list|,
@@ -159,7 +158,7 @@ name|getPort
 parameter_list|()
 block|{
 return|return
-name|EmbeddedJettyServer
+name|EmbeddedTomcatServer
 operator|.
 name|PORT
 return|;

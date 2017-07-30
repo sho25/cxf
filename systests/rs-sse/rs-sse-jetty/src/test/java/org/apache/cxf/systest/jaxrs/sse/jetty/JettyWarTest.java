@@ -165,17 +165,6 @@ operator|.
 name|PORT
 return|;
 block|}
-annotation|@
-name|Override
-specifier|protected
-name|boolean
-name|isStrict
-parameter_list|()
-block|{
-return|return
-literal|false
-return|;
-block|}
 block|}
 end_class
 
