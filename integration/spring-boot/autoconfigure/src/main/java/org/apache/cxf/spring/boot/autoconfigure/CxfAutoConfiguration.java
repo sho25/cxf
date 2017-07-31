@@ -209,22 +209,6 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|autoconfigure
-operator|.
-name|web
-operator|.
-name|EmbeddedServletContainerAutoConfiguration
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|boot
-operator|.
 name|context
 operator|.
 name|properties
@@ -337,9 +321,15 @@ argument_list|)
 annotation|@
 name|AutoConfigureAfter
 argument_list|(
-name|EmbeddedServletContainerAutoConfiguration
-operator|.
-name|class
+name|name
+operator|=
+block|{
+literal|"org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration"
+block|,
+comment|// Spring Boot 1.x
+literal|"org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration"
+comment|// Spring Boot 2.x
+block|}
 argument_list|)
 specifier|public
 class|class
