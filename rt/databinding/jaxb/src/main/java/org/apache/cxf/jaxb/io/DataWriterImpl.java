@@ -656,7 +656,8 @@ name|ValidationEvent
 name|event
 parameter_list|)
 block|{
-comment|// CXF-1194 this hack is specific to MTOM, so pretty safe to leave in here before calling the origHandler.
+comment|// CXF-1194/CXF-7438 this hack is specific to MTOM, so pretty safe to leave in
+comment|// here before calling the origHandler.
 name|String
 name|msg
 init|=
@@ -667,12 +668,21 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|(
 name|msg
 operator|.
 name|startsWith
 argument_list|(
 literal|"cvc-type.3.1.2"
 argument_list|)
+operator|||
+name|msg
+operator|.
+name|startsWith
+argument_list|(
+literal|"cvc-complex-type.2.2"
+argument_list|)
+operator|)
 operator|&&
 name|msg
 operator|.
