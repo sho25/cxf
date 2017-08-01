@@ -1012,7 +1012,7 @@ name|assertValid
 argument_list|(
 literal|"//soap12env:Fault/soap12env:Code/soap12env:Subcode/"
 operator|+
-literal|"soap12env:Value[text()='ns2:invalidsoap']"
+literal|"soap12env:Value[text()='cxffaultcode:invalidsoap']"
 argument_list|,
 name|faultDoc
 argument_list|)
@@ -1186,8 +1186,6 @@ argument_list|(
 literal|"http://cxf.apache.org/soap/fault"
 argument_list|,
 literal|"invalidsoap"
-argument_list|,
-literal|"cxffaultcode"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1339,7 +1337,7 @@ name|assertValid
 argument_list|(
 literal|"//soap12env:Fault/soap12env:Code/soap12env:Subcode/soap12env:Subcode/"
 operator|+
-literal|"soap12env:Value[text()='ns2:invalidsoap2']"
+literal|"soap12env:Value[text()='cxffaultcode2:invalidsoap2']"
 argument_list|,
 name|faultDoc
 argument_list|)
