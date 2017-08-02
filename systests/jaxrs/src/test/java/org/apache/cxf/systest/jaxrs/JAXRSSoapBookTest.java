@@ -1700,6 +1700,11 @@ name|book
 init|=
 name|client
 operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
+operator|.
 name|accept
 argument_list|(
 literal|"text/xml"
@@ -1759,6 +1764,11 @@ name|Book
 name|book
 init|=
 name|client
+operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
 operator|.
 name|accept
 argument_list|(

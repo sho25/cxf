@@ -710,6 +710,11 @@ name|r
 init|=
 name|client
 operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
+operator|.
 name|put
 argument_list|(
 operator|new

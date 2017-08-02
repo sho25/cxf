@@ -854,6 +854,11 @@ name|r
 init|=
 name|wc
 operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
+operator|.
 name|post
 argument_list|(
 operator|new
