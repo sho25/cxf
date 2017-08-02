@@ -456,6 +456,11 @@ name|response
 init|=
 name|client
 operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
+operator|.
 name|post
 argument_list|(
 operator|new
@@ -1010,6 +1015,11 @@ name|Response
 name|response
 init|=
 name|client
+operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
 operator|.
 name|post
 argument_list|(
@@ -1798,6 +1808,11 @@ name|response
 init|=
 name|client
 operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
+operator|.
 name|post
 argument_list|(
 operator|new
@@ -2086,6 +2101,11 @@ name|Response
 name|response
 init|=
 name|client
+operator|.
+name|type
+argument_list|(
+literal|"application/xml"
+argument_list|)
 operator|.
 name|post
 argument_list|(
