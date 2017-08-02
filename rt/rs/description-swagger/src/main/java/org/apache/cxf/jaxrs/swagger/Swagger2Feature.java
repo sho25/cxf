@@ -1004,6 +1004,8 @@ name|appInfo
 operator|.
 name|getProvider
 argument_list|()
+argument_list|,
+name|customizer
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1905,7 +1907,7 @@ specifier|static
 class|class
 name|SwaggerContainerRequestFilter
 extends|extends
-name|ApiListingResource
+name|Swagger2ApiListingResource
 implements|implements
 name|ContainerRequestFilter
 block|{
@@ -1940,8 +1942,16 @@ name|SwaggerContainerRequestFilter
 parameter_list|(
 name|Application
 name|app
+parameter_list|,
+name|Swagger2Customizer
+name|customizer
 parameter_list|)
 block|{
+name|super
+argument_list|(
+name|customizer
+argument_list|)
+expr_stmt|;
 name|this
 operator|.
 name|app
