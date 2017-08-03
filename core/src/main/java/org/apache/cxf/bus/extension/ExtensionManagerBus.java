@@ -1304,8 +1304,6 @@ name|obj
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|//record that it couldn't be found to avoid expensive searches again in the future
 name|missingExtensions
 operator|.
@@ -1314,7 +1312,6 @@ argument_list|(
 name|extensionType
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 literal|null
 return|;

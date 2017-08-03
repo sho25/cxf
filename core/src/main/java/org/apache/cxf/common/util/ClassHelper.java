@@ -357,8 +357,6 @@ name|o
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|HELPER
 operator|.
@@ -367,7 +365,6 @@ argument_list|(
 name|o
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

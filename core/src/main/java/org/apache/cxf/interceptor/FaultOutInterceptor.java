@@ -765,12 +765,6 @@ operator|.
 name|getMethod
 argument_list|(
 literal|"getFaultInfo"
-argument_list|,
-operator|new
-name|Class
-index|[
-literal|0
-index|]
 argument_list|)
 decl_stmt|;
 return|return
@@ -779,12 +773,6 @@ operator|.
 name|invoke
 argument_list|(
 name|cause
-argument_list|,
-operator|new
-name|Object
-index|[
-literal|0
-index|]
 argument_list|)
 return|;
 block|}

@@ -986,15 +986,12 @@ name|getLocalName
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|streamReader
 operator|.
 name|getLocalName
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|Attributes

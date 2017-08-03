@@ -211,14 +211,11 @@ return|return
 name|mode
 return|;
 block|}
-else|else
-block|{
 return|return
 name|FaultMode
 operator|.
 name|RUNTIME_FAULT
 return|;
-block|}
 block|}
 return|return
 literal|null

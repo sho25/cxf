@@ -468,12 +468,9 @@ return|return
 literal|""
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 return|;
-block|}
 block|}
 block|}
 block|}

@@ -896,8 +896,6 @@ operator|)
 name|e
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SecurityException
@@ -905,7 +903,6 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|public
@@ -999,8 +996,6 @@ operator|)
 name|e
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SecurityException
@@ -1008,7 +1003,6 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|public
@@ -1215,18 +1209,13 @@ name|getMethod
 argument_list|(
 literal|"getPropertyDescriptor"
 argument_list|,
-operator|new
-name|Class
-index|[]
-block|{
 name|Class
 operator|.
 name|class
-block|,
+argument_list|,
 name|String
 operator|.
 name|class
-block|}
 argument_list|)
 expr_stmt|;
 block|}
@@ -1396,15 +1385,12 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|beanInfo
 operator|.
 name|getPropertyDescriptors
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * Look for a specified annotation on a method. If there, return it. If not, search it's containing class.      * Assume that the annotation is marked @Inherited.      *      * @param m method to examine      * @param annotationType the annotation type to look for.      */
 specifier|public

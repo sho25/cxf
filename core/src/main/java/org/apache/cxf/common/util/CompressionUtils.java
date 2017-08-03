@@ -220,10 +220,7 @@ literal|"Inflater can not inflate all the token bytes"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 break|break;
-block|}
 block|}
 name|inflatedToken
 operator|.

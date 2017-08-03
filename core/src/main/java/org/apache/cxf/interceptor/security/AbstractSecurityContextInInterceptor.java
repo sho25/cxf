@@ -425,12 +425,9 @@ literal|0
 index|]
 return|;
 block|}
-else|else
-block|{
 return|return
 name|originalPrincipal
 return|;
-block|}
 block|}
 specifier|protected
 name|SecurityContext

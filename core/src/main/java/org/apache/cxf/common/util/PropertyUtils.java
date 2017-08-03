@@ -87,8 +87,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isTrue
 argument_list|(
@@ -100,7 +98,6 @@ name|key
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it      * is required sometimes.      *      * @param props      * @param key      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
 specifier|public
@@ -135,8 +132,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isFalse
 argument_list|(
@@ -148,7 +143,6 @@ name|key
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param property      * @return true if value is either the String "true" or Boolean.TRUE.  Otherwise returns false.      */
 specifier|public

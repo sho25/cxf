@@ -1755,15 +1755,12 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|normalize
 argument_list|(
 name|arg
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

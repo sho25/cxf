@@ -422,11 +422,6 @@ operator|.
 name|getInputStream
 argument_list|()
 decl_stmt|;
-name|out
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 return|return
 operator|new
 name|StreamSource

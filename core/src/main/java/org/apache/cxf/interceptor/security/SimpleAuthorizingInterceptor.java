@@ -297,13 +297,10 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|!
 name|checkConfiguredRolesOnly
 return|;
-block|}
 block|}
 specifier|protected
 name|String

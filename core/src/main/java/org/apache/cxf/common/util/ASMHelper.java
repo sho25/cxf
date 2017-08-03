@@ -1690,8 +1690,6 @@ index|]
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IllegalArgumentException
@@ -1701,7 +1699,6 @@ operator|+
 name|tv
 argument_list|)
 throw|;
-block|}
 block|}
 elseif|else
 if|if

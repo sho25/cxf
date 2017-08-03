@@ -965,8 +965,6 @@ operator|==
 literal|null
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|a2
@@ -1025,13 +1023,9 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
-block|}
 block|}
 block|}
 end_class

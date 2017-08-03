@@ -1884,8 +1884,6 @@ return|return
 name|o
 return|;
 block|}
-else|else
-block|{
 name|Document
 name|document
 init|=
@@ -1918,7 +1916,6 @@ argument_list|(
 name|document
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

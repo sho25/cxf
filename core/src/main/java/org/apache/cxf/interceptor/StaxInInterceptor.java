@@ -615,10 +615,6 @@ name|LOG
 argument_list|,
 operator|(
 name|htmlMessage
-operator|==
-literal|null
-operator|||
-name|htmlMessage
 operator|.
 name|length
 argument_list|()

@@ -1276,8 +1276,6 @@ name|toCharArray
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IOException
@@ -1286,9 +1284,6 @@ literal|"Unknown format of currentStream"
 argument_list|)
 throw|;
 block|}
-block|}
-else|else
-block|{
 comment|// read the file
 try|try
 init|(
@@ -1371,7 +1366,6 @@ operator|.
 name|toCharArray
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 specifier|public
@@ -2185,15 +2179,10 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
 block|}
-block|}
-else|else
-block|{
 try|try
 block|{
 name|InputStream
@@ -2326,7 +2315,6 @@ name|toString
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|private

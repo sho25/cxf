@@ -164,13 +164,6 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|is
-operator|!=
-literal|null
-condition|)
-block|{
 name|barray
 operator|=
 operator|new
@@ -194,7 +187,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
 name|uriResolver
 operator|.
 name|resolve
@@ -219,13 +211,6 @@ argument_list|(
 name|is2
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|is2
-operator|!=
-literal|null
-condition|)
-block|{
 name|barray2
 operator|=
 operator|new
@@ -249,7 +234,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
 name|assertEquals
 argument_list|(
 name|IOUtils

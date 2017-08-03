@@ -1630,9 +1630,6 @@ try|try
 block|{
 name|f
 operator|=
-operator|(
-name|Factory
-operator|)
 name|scope
 operator|.
 name|factoryClass

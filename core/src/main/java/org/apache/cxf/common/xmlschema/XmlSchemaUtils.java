@@ -1225,8 +1225,6 @@ return|return
 name|results
 return|;
 block|}
-else|else
-block|{
 comment|// no base type, the simple case.
 name|List
 argument_list|<
@@ -1249,7 +1247,6 @@ expr_stmt|;
 return|return
 name|results
 return|;
-block|}
 block|}
 comment|/**      * By convention, an element that is named in its schema's TNS can have a 'name' but      * no QName. This can get inconvenient for consumers who want to think about qualified names.      * Unfortunately, XmlSchema elements, unlike types, don't store a reference to their containing      * schema.      * @param element      * @param schema      */
 specifier|public
@@ -1487,8 +1484,6 @@ operator|)
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isAttributeNameQualified
 argument_list|(
@@ -1497,7 +1492,6 @@ argument_list|,
 name|attributeSchema
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1675,8 +1669,6 @@ operator|)
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isElementNameQualified
 argument_list|(
@@ -1685,7 +1677,6 @@ argument_list|,
 name|elementSchema
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

@@ -296,8 +296,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|b
@@ -332,7 +330,6 @@ argument_list|(
 name|b
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|BindingOperationInfo

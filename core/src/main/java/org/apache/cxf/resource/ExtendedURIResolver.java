@@ -352,12 +352,9 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|lastestImportUri
 return|;
-block|}
 block|}
 block|}
 end_class

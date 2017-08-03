@@ -1325,8 +1325,6 @@ name|ln
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|QName
@@ -1338,7 +1336,6 @@ argument_list|,
 name|prefix
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String

@@ -442,12 +442,9 @@ name|obj
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -523,10 +520,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|validationType
-operator|==
-literal|null
-operator|&&
 name|opInfo
 operator|!=
 literal|null
@@ -604,12 +597,9 @@ name|obj
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

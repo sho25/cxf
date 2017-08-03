@@ -1094,12 +1094,9 @@ name|origExc
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|ee
 throw|;
-block|}
 block|}
 block|}
 return|return

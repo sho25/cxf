@@ -1246,8 +1246,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|loader
 operator|.
@@ -1256,7 +1254,6 @@ argument_list|(
 name|className
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

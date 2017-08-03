@@ -777,8 +777,6 @@ name|getCause
 argument_list|()
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -789,7 +787,6 @@ name|getCause
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

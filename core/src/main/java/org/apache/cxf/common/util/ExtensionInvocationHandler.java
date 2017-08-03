@@ -108,8 +108,6 @@ name|args
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|//in case obj has the required method with exact signature despite its class
 comment|//not being assignable from the class declaring the specified method
 name|Method
@@ -143,7 +141,6 @@ argument_list|,
 name|args
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -740,9 +740,12 @@ name|refs
 operator|=
 operator|new
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 index|[]
 block|{}
-expr_stmt|;
+empty_stmt|;
 block|}
 return|return
 name|refs

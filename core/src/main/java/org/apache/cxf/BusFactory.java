@@ -314,12 +314,9 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|defaultBus
 return|;
-block|}
 block|}
 specifier|private
 specifier|static

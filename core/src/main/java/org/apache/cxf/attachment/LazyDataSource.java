@@ -281,8 +281,6 @@ literal|null
 expr_stmt|;
 break|break;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IllegalStateException
@@ -294,7 +292,6 @@ operator|+
 name|id
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 if|if

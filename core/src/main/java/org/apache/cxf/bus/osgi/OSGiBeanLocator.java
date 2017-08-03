@@ -304,12 +304,9 @@ name|type
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|ret
 return|;
-block|}
 block|}
 specifier|private
 parameter_list|<

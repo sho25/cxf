@@ -568,14 +568,9 @@ name|getDeclaredMethod
 argument_list|(
 literal|"requestLatency"
 argument_list|,
-operator|new
-name|Class
-index|[]
-block|{
 name|Long
 operator|.
 name|TYPE
-block|}
 argument_list|)
 expr_stmt|;
 name|method

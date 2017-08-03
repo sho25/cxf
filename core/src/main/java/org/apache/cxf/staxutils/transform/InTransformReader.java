@@ -633,8 +633,6 @@ name|getEvent
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|doDebug
@@ -647,7 +645,6 @@ argument_list|(
 literal|"no pushed event"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|int
 name|event
@@ -1792,15 +1789,12 @@ name|getLocalPart
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
 name|getLocalName
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 name|NamespaceContext
@@ -1994,12 +1988,9 @@ name|index
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|""
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -2071,8 +2062,6 @@ return|return
 name|actualNs
 return|;
 block|}
-else|else
-block|{
 return|return
 name|ns
 operator|!=
@@ -2087,7 +2076,6 @@ argument_list|(
 name|prefix
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -2111,15 +2099,12 @@ name|getNamespaceURI
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
 name|getNamespaceURI
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|QName
@@ -2432,8 +2417,6 @@ return|return
 literal|""
 return|;
 block|}
-else|else
-block|{
 name|String
 name|actualNs
 init|=
@@ -2463,8 +2446,6 @@ name|actualNs
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|namespaceContext
 operator|.
@@ -2476,8 +2457,6 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 return|;
-block|}
-block|}
 block|}
 specifier|public
 name|String

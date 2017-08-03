@@ -928,8 +928,6 @@ name|ex
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|message
 init|=
@@ -983,7 +981,6 @@ argument_list|,
 name|ex
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|Object

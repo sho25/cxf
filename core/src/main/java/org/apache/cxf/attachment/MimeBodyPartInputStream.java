@@ -692,9 +692,6 @@ condition|)
 block|{
 continue|continue;
 block|}
-else|else
-block|{
-comment|//if it comes here then 13, 10 are values and will try to match boundaries
 if|if
 condition|(
 operator|!
@@ -747,9 +744,6 @@ operator|++
 expr_stmt|;
 continue|continue;
 block|}
-else|else
-block|{
-comment|//13, 10, boundaries first value matched
 name|needUnread0d0a
 operator|=
 literal|true
@@ -759,8 +753,6 @@ operator|+=
 literal|2
 expr_stmt|;
 comment|//i after this points to boundary[0] element
-block|}
-block|}
 block|}
 elseif|else
 if|if
@@ -1108,8 +1100,6 @@ return|return
 literal|13
 return|;
 block|}
-else|else
-block|{
 name|value
 operator|=
 name|inStream
@@ -1148,14 +1138,10 @@ return|return
 literal|13
 return|;
 block|}
-else|else
-block|{
 name|needUnread0d0a
 operator|=
 literal|true
 expr_stmt|;
-block|}
-block|}
 block|}
 elseif|else
 if|if

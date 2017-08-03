@@ -271,6 +271,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|theInterfaces
 operator|.
@@ -331,8 +334,6 @@ name|create
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -345,7 +346,6 @@ argument_list|,
 name|h
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

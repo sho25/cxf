@@ -460,9 +460,6 @@ decl_stmt|;
 name|ConfigurationAdmin
 name|configurationAdmin
 init|=
-operator|(
-name|ConfigurationAdmin
-operator|)
 name|configAdminTracker
 operator|.
 name|getService

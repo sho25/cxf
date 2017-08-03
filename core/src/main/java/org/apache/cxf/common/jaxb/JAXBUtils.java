@@ -3016,8 +3016,6 @@ condition|)
 block|{
 break|break;
 block|}
-else|else
-block|{
 name|first
 operator|=
 name|i
@@ -3031,7 +3029,6 @@ argument_list|(
 name|first
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -4334,6 +4331,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|clses
 operator|.

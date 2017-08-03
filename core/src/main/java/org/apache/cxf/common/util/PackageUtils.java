@@ -120,12 +120,9 @@ name|pos
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|""
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

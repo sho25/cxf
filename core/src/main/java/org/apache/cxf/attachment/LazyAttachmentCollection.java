@@ -368,8 +368,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|attachments
 operator|.
 name|add
@@ -380,7 +378,6 @@ expr_stmt|;
 return|return
 literal|true
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1269,14 +1266,11 @@ return|return
 name|h
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|UnsupportedOperationException
 argument_list|()
 throw|;
-block|}
 block|}
 block|}
 return|;

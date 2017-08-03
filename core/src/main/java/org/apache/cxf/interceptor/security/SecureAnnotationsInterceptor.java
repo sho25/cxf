@@ -669,11 +669,6 @@ operator|.
 name|getMethod
 argument_list|(
 literal|"value"
-argument_list|,
-operator|new
-name|Class
-index|[]
-block|{}
 argument_list|)
 decl_stmt|;
 name|String
@@ -689,11 +684,6 @@ operator|.
 name|invoke
 argument_list|(
 name|ann
-argument_list|,
-operator|new
-name|Object
-index|[]
-block|{}
 argument_list|)
 decl_stmt|;
 name|StringBuilder

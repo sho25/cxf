@@ -98,8 +98,6 @@ name|exists
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|sm
 operator|.
 name|checkPermission
@@ -134,7 +132,6 @@ block|}
 block|}
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

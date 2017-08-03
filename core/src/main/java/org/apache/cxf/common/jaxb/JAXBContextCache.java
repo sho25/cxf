@@ -1394,6 +1394,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|classes
 operator|.
@@ -1765,6 +1768,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|classes
 operator|.
@@ -1941,6 +1947,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|classes
 operator|.
@@ -2037,6 +2046,9 @@ name|toArray
 argument_list|(
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 name|classes
 operator|.

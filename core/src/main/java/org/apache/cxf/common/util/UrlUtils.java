@@ -438,9 +438,6 @@ name|u
 init|=
 name|digit16
 argument_list|(
-operator|(
-name|byte
-operator|)
 name|in
 operator|.
 name|get
@@ -453,9 +450,6 @@ name|l
 init|=
 name|digit16
 argument_list|(
-operator|(
-name|byte
-operator|)
 name|in
 operator|.
 name|get
@@ -533,12 +527,9 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|value
 return|;
-block|}
 block|}
 specifier|private
 specifier|static

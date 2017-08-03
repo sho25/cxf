@@ -123,6 +123,9 @@ index|[]
 init|=
 operator|new
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[
 literal|0
 index|]

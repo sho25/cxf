@@ -891,8 +891,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 name|String
 name|error
 init|=
@@ -912,7 +910,6 @@ argument_list|(
 name|error
 argument_list|)
 throw|;
-block|}
 block|}
 return|return
 literal|false

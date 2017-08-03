@@ -966,12 +966,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 block|}
 specifier|public

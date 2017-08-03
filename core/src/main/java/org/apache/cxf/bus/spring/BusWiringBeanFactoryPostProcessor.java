@@ -401,9 +401,6 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-operator|(
-name|Bus
-operator|)
 name|context
 operator|.
 name|getBean

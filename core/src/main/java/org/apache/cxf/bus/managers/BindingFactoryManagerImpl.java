@@ -664,12 +664,6 @@ operator|.
 name|getMethod
 argument_list|(
 literal|"getActivationNamespace"
-argument_list|,
-operator|new
-name|Class
-index|[
-literal|0
-index|]
 argument_list|)
 decl_stmt|;
 name|Collection

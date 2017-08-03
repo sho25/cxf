@@ -255,8 +255,6 @@ name|DepthExceededStaxException
 argument_list|()
 throw|;
 block|}
-else|else
-block|{
 name|stack
 operator|.
 name|push
@@ -264,7 +262,6 @@ argument_list|(
 name|currentCount
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|stack
 operator|.

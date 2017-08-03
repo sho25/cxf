@@ -1315,8 +1315,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 return|return
 name|cbg
 operator|.
@@ -1333,9 +1331,6 @@ name|actualAddress
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|cbg
 operator|.
@@ -1351,7 +1346,6 @@ argument_list|,
 name|actualAddress
 argument_list|)
 return|;
-block|}
 block|}
 comment|//smart address substring comparison that tries to avoid building and comparing substrings unless strictly required
 specifier|private
@@ -1429,13 +1423,10 @@ name|actualAddress
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|//no possible match as for sure the substrings before idx will be different
 return|return
 literal|false
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
