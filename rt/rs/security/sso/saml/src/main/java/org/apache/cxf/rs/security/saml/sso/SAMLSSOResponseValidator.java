@@ -834,6 +834,13 @@ name|clonedAssertionElement
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|validatorResponse
+operator|.
+name|setOpensamlAssertion
+argument_list|(
+name|validAssertion
+argument_list|)
+expr_stmt|;
 return|return
 name|validatorResponse
 return|;
