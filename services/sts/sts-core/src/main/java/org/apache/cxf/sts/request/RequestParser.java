@@ -1276,7 +1276,7 @@ condition|)
 block|{
 name|tokenRequirements
 operator|.
-name|addCustomContentJAXB
+name|addCustomContent
 argument_list|(
 name|jaxbElement
 argument_list|)
