@@ -1273,8 +1273,6 @@ name|serviceBean
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getServiceFactory
 argument_list|()
@@ -1282,7 +1280,6 @@ operator|.
 name|getServiceClass
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * Sets the bean implementing the service. If this is set a      *<code>BeanInvoker</code> is created for the provided bean.      *      * @param serviceBean an instantiated implementation object      */
 specifier|public

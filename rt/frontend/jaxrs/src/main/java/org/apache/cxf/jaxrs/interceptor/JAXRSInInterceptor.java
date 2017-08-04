@@ -1367,12 +1367,9 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 if|if
 condition|(

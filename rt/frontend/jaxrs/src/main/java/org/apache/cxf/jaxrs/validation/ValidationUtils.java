@@ -213,8 +213,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|resourceProvider
 operator|.
@@ -223,7 +221,6 @@ argument_list|(
 name|message
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -892,8 +892,6 @@ return|return
 name|ep
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WebServiceException
@@ -910,7 +908,6 @@ name|toString
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 comment|//new in 2.2
 specifier|public
@@ -968,8 +965,6 @@ return|return
 name|ep
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WebServiceException
@@ -986,7 +981,6 @@ name|toString
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1211,8 +1205,6 @@ return|return
 name|ep
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WebServiceException
@@ -1229,7 +1221,6 @@ name|toString
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 name|W3CEndpointReference
@@ -1422,10 +1413,6 @@ block|}
 return|return
 literal|null
 return|;
-block|}
-else|else
-block|{
-comment|//TODO: 200408
 block|}
 return|return
 literal|null
@@ -2370,8 +2357,6 @@ operator|)
 name|e
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SecurityException
@@ -2379,7 +2364,6 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 catch|catch
@@ -2594,8 +2578,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SecurityException
@@ -2603,7 +2585,6 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|private

@@ -1817,8 +1817,6 @@ return|return
 name|ann
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|ifAnnotationLoadedByOtherClassLoader
@@ -1849,7 +1847,6 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 for|for
 control|(
@@ -1890,8 +1887,6 @@ name|class
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|ifAnnotationLoadedByOtherClassLoader
@@ -1922,7 +1917,6 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
@@ -2122,15 +2116,12 @@ index|]
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|doGetProviderParameterType
 argument_list|(
 name|clazz
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 name|c

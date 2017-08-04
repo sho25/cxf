@@ -724,8 +724,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WebServiceException
@@ -747,7 +745,6 @@ name|toString
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 comment|/**      * Sets reference to the specified MessageContext and returns the previous reference, if any.      *      * @param ctx       The MessageContext to set      * @return          The former MessageContext reference, if any.      */
 specifier|public

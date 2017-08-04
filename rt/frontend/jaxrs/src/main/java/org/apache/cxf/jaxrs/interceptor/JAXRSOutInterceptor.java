@@ -2177,12 +2177,9 @@ else|:
 literal|200
 return|;
 block|}
-else|else
-block|{
 return|return
 name|status
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -2676,8 +2673,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|serializeMessage
 argument_list|(
 name|pf
@@ -2691,7 +2686,6 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|private
 name|void

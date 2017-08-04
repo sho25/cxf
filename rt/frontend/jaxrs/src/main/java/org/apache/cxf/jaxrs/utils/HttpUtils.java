@@ -1957,8 +1957,6 @@ name|language
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|Locale
@@ -1968,7 +1966,6 @@ argument_list|,
 name|locale
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2049,8 +2046,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|StringBuilder
 name|sb
 init|=
@@ -2132,7 +2127,6 @@ operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

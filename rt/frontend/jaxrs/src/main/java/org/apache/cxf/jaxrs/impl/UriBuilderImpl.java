@@ -5305,15 +5305,12 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|uriAsTemplate
 argument_list|(
 name|uriTemplate
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 specifier|public

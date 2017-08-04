@@ -687,12 +687,9 @@ name|paramIndex
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1552,15 +1549,12 @@ condition|)
 block|{
 break|break;
 block|}
-else|else
-block|{
 name|codeIndex
 operator|=
 name|next
 operator|+
 literal|1
 expr_stmt|;
-block|}
 name|codeIndex
 operator|=
 name|paramString
@@ -1728,12 +1722,9 @@ return|return
 literal|"<P>"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"<div class=\"block\">"
 return|;
-block|}
 block|}
 specifier|protected
 name|String
@@ -1751,12 +1742,9 @@ return|return
 literal|"<DD>"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"<div class=\"block\">"
 return|;
-block|}
 block|}
 specifier|protected
 name|String

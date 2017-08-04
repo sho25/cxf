@@ -1057,12 +1057,9 @@ name|mt
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|supportJaxbOnly
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1154,12 +1151,9 @@ name|mt
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|supportJaxbOnly
 return|;
-block|}
 block|}
 specifier|protected
 name|boolean
@@ -2890,8 +2884,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|severe
@@ -2909,7 +2901,6 @@ argument_list|,
 literal|null
 argument_list|)
 throw|;
-block|}
 block|}
 name|TemplatesImpl
 name|templ

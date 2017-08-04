@@ -885,12 +885,9 @@ return|return
 name|resourceName
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|boolean
@@ -1105,8 +1102,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|classResources
 operator|.
@@ -1115,7 +1110,6 @@ argument_list|(
 name|typeName
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|void

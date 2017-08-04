@@ -1187,8 +1187,6 @@ name|emptyMap
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Map
 argument_list|<
 name|String
@@ -1239,7 +1237,6 @@ block|}
 return|return
 name|cookies
 return|;
-block|}
 block|}
 specifier|public
 name|Date
@@ -1743,8 +1740,6 @@ name|emptySet
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Set
 argument_list|<
 name|Link
@@ -1849,7 +1844,6 @@ block|}
 return|return
 name|links
 return|;
-block|}
 block|}
 specifier|public
 parameter_list|<
@@ -2454,12 +2448,9 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -2509,14 +2500,11 @@ literal|null
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|entity
 operator|instanceof
 name|InputStream
 return|;
-block|}
 block|}
 specifier|private
 name|Message
@@ -2857,8 +2845,6 @@ return|return
 name|reasonPhrase
 return|;
 block|}
-else|else
-block|{
 name|Response
 operator|.
 name|Status
@@ -2885,7 +2871,6 @@ argument_list|()
 else|:
 literal|""
 return|;
-block|}
 block|}
 specifier|public
 name|int

@@ -344,12 +344,9 @@ operator|.
 name|class
 return|;
 block|}
-else|else
-block|{
 return|return
 name|javaType
 return|;
-block|}
 block|}
 block|}
 end_class

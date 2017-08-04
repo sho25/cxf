@@ -2276,8 +2276,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 return|return
 name|pattern
 operator|.
@@ -2289,7 +2287,6 @@ operator|.
 name|matches
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -2317,8 +2314,6 @@ operator|+
 literal|"}"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"{"
 operator|+
@@ -2326,7 +2321,6 @@ name|name
 operator|+
 literal|"}"
 return|;
-block|}
 block|}
 block|}
 comment|/**      * Splits string into parts inside and outside curly braces. Nested curly braces are ignored and treated      * as part inside top-level curly braces. Example: string "foo{bar{baz}}blah" is split into three tokens,      * "foo","{bar{baz}}" and "blah". When closed bracket is missing, whole unclosed part is returned as one      * token, e.g.: "foo{bar" is split into "foo" and "{bar". When opening bracket is missing, closing      * bracket is ignored and taken as part of current token e.g.: "foo{bar}baz}blah" is split into "foo",      * "{bar}" and "baz}blah".      *<p>      * This is helper class for {@link URITemplate} that enables recurring literals appearing next to regular      * expressions e.g. "/foo/{zipcode:[0-9]{5}}/". Nested expressions with closed sections, like open-closed      * brackets causes expression to be out of regular grammar (is context-free grammar) which are not      * supported by Java regexp version.      */
@@ -2604,12 +2598,9 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|token
 return|;
-block|}
 block|}
 specifier|public
 name|boolean
@@ -2646,8 +2637,6 @@ operator|++
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IllegalStateException
@@ -2655,7 +2644,6 @@ argument_list|(
 literal|"no more elements"
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

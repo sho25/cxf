@@ -3197,8 +3197,6 @@ name|StringBeanHeaderDelegate
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|original
 operator|.
@@ -3207,7 +3205,6 @@ argument_list|(
 name|arg0
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

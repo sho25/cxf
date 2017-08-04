@@ -2212,8 +2212,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|JAXRSUtils
 operator|.
@@ -2222,7 +2220,6 @@ argument_list|(
 name|values
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2274,8 +2271,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|JAXRSUtils
 operator|.
@@ -2284,7 +2279,6 @@ argument_list|(
 name|values
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -6860,8 +6854,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|String
@@ -6899,7 +6891,6 @@ argument_list|,
 name|m
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null
@@ -7223,8 +7214,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|String
@@ -7262,7 +7251,6 @@ argument_list|,
 name|m
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -8522,8 +8510,6 @@ name|decoded
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|String
@@ -8561,7 +8547,6 @@ argument_list|,
 name|m
 argument_list|)
 return|;
-block|}
 block|}
 comment|//TODO : multiple query string parsing, do it once
 specifier|private
@@ -8647,8 +8632,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|InjectionUtils
 operator|.
@@ -8678,7 +8661,6 @@ argument_list|,
 name|m
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Retrieve map of query parameters from the passed in message      * @param message      * @return a Map of query parameters.      */
 specifier|public
@@ -9247,12 +9229,9 @@ literal|null
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|e
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -9393,8 +9372,6 @@ name|context
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|MessageBodyReader
 argument_list|<
 name|?
@@ -9451,7 +9428,6 @@ argument_list|,
 name|is
 argument_list|)
 return|;
-block|}
 block|}
 comment|//CHECKSTYLE:OFF
 specifier|public
@@ -11689,8 +11665,6 @@ return|return
 name|ALL_TYPES
 return|;
 block|}
-else|else
-block|{
 return|return
 name|MediaTypeHeaderProvider
 operator|.
@@ -11699,7 +11673,6 @@ argument_list|(
 name|value
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -12000,12 +11973,9 @@ return|return
 name|r
 return|;
 block|}
-else|else
-block|{
 return|return
 name|response
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

@@ -238,13 +238,10 @@ operator|!=
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isProviderKeyNotSet
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|MessageBodyReader

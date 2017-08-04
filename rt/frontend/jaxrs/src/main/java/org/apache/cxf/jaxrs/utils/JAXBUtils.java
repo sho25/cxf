@@ -733,8 +733,6 @@ name|obj
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|xmlAdapter
 operator|.
@@ -743,7 +741,6 @@ argument_list|(
 name|obj
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

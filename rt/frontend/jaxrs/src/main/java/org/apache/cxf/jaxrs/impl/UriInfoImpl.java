@@ -599,12 +599,9 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|value
 return|;
-block|}
 block|}
 specifier|public
 name|List

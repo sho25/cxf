@@ -968,8 +968,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|ProviderInfo
@@ -987,7 +985,6 @@ argument_list|,
 literal|true
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2233,8 +2230,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isWadlGenerator
 argument_list|(
@@ -2244,7 +2239,6 @@ name|getSuperclass
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|RequestPreprocessor

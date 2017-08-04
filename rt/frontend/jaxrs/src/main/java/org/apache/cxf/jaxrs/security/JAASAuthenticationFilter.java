@@ -826,8 +826,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|ResponseBuilder
 name|builder
 init|=
@@ -972,7 +970,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|Response

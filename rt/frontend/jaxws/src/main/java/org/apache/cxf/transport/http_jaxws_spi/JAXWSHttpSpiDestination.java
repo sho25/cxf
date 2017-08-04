@@ -546,12 +546,9 @@ operator|)
 name|cause
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(

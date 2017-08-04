@@ -389,12 +389,9 @@ return|return
 name|jaxrsServerAddress
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"/"
 return|;
-block|}
 block|}
 specifier|protected
 name|String

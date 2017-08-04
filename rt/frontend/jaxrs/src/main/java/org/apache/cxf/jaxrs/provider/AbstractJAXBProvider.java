@@ -4333,8 +4333,6 @@ return|return
 name|schema
 return|;
 block|}
-else|else
-block|{
 name|SchemaHandler
 name|handler
 init|=
@@ -4360,7 +4358,6 @@ argument_list|()
 else|:
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|void
@@ -5159,12 +5156,9 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 return|return
 name|reader
 return|;
-block|}
 block|}
 specifier|protected
 name|DocumentDepthProperties
@@ -5800,8 +5794,6 @@ return|return
 name|values
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 operator|!
@@ -5886,13 +5878,9 @@ name|theList
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|theList
 return|;
-block|}
-block|}
 block|}
 block|}
 specifier|protected

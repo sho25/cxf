@@ -496,8 +496,6 @@ return|return
 name|singletonInstance
 return|;
 block|}
-else|else
-block|{
 name|ProviderInfo
 argument_list|<
 name|?
@@ -624,7 +622,6 @@ expr_stmt|;
 return|return
 name|instance
 return|;
-block|}
 block|}
 specifier|protected
 name|void

@@ -918,8 +918,6 @@ operator|)
 name|proxy
 return|;
 block|}
-else|else
-block|{
 return|return
 name|InjectionUtils
 operator|.
@@ -931,7 +929,6 @@ name|getType
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -1042,8 +1039,6 @@ operator|)
 name|proxy
 return|;
 block|}
-else|else
-block|{
 return|return
 name|InjectionUtils
 operator|.
@@ -1058,7 +1053,6 @@ literal|0
 index|]
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings
@@ -1235,12 +1229,9 @@ name|serviceClass
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings

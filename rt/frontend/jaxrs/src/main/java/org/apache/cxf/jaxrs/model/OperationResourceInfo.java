@@ -808,8 +808,6 @@ return|return
 name|nameBindings
 return|;
 block|}
-else|else
-block|{
 name|Set
 argument_list|<
 name|String
@@ -835,7 +833,6 @@ expr_stmt|;
 return|return
 name|all
 return|;
-block|}
 block|}
 specifier|private
 name|void

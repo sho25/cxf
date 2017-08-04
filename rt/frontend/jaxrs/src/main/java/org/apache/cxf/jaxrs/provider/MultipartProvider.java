@@ -1408,8 +1408,6 @@ name|anns
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|fromAttachment
 argument_list|(
@@ -1422,7 +1420,6 @@ argument_list|,
 name|anns
 argument_list|)
 return|;
-block|}
 block|}
 if|if
 condition|(
@@ -2280,8 +2277,6 @@ return|return
 name|handlers
 return|;
 block|}
-else|else
-block|{
 name|String
 name|rootMediaType
 init|=
@@ -2322,8 +2317,6 @@ name|rootMediaType
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|MultipartBody
@@ -2391,8 +2384,6 @@ argument_list|(
 name|handler
 argument_list|)
 return|;
-block|}
-block|}
 block|}
 specifier|private
 name|List

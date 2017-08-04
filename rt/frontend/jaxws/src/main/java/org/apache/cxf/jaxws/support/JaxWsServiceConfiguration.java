@@ -932,8 +932,6 @@ name|name
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|QName
@@ -952,7 +950,6 @@ name|getName
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Boolean
@@ -2296,8 +2293,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|int
@@ -2352,7 +2347,6 @@ block|}
 return|return
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -2793,8 +2787,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|WebResult
 name|webResult
 init|=
@@ -2995,7 +2987,6 @@ name|local
 argument_list|)
 return|;
 block|}
-block|}
 annotation|@
 name|Override
 specifier|public
@@ -3046,8 +3037,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|WebResult
 name|webResult
 init|=
@@ -3210,7 +3199,6 @@ argument_list|,
 name|local
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -4846,8 +4834,6 @@ name|header
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|WebResult
 name|webResult
 init|=
@@ -4866,7 +4852,6 @@ operator|.
 name|header
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|Override

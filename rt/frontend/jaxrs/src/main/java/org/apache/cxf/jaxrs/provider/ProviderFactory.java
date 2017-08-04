@@ -2150,14 +2150,11 @@ return|return
 name|converter
 return|;
 block|}
-else|else
-block|{
 name|pi
 operator|.
 name|clearThreadLocalProxies
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 return|return
 literal|null
@@ -2757,12 +2754,9 @@ return|return
 name|interceptors
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 parameter_list|<
@@ -2956,12 +2950,9 @@ return|return
 name|interceptors
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings
@@ -7562,8 +7553,6 @@ name|theBus
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|ProviderInfo
@@ -7582,7 +7571,6 @@ argument_list|,
 name|custom
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 specifier|static

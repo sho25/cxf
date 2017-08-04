@@ -4525,8 +4525,6 @@ name|toURL
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|ServiceConstructionException
@@ -4542,7 +4540,6 @@ name|s
 argument_list|)
 argument_list|)
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -4889,8 +4886,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|InputSource
@@ -4898,7 +4893,6 @@ argument_list|(
 name|systemId
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null

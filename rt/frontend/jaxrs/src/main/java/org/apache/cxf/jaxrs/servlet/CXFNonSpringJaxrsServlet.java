@@ -1159,12 +1159,9 @@ return|return
 literal|" "
 return|;
 block|}
-else|else
-block|{
 return|return
 name|DEFAULT_PARAMETER_SPLIT_CHAR
 return|;
-block|}
 block|}
 specifier|protected
 name|boolean
@@ -1203,12 +1200,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 specifier|protected
 name|void
@@ -2712,15 +2706,12 @@ return|return
 name|map
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Collections
 operator|.
 name|emptyMap
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|Map

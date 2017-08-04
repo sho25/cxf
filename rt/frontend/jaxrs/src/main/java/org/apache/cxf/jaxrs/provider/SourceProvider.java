@@ -883,8 +883,6 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|ExceptionUtils
 operator|.
@@ -895,7 +893,6 @@ argument_list|,
 literal|null
 argument_list|)
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1186,12 +1183,9 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 return|return
 name|reader
 return|;
-block|}
 block|}
 specifier|protected
 name|InputStream
@@ -1307,12 +1301,9 @@ name|class
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|void

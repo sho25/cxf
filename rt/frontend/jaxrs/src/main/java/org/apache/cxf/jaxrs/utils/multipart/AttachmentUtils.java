@@ -1257,12 +1257,9 @@ literal|null
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 return|return
 operator|!

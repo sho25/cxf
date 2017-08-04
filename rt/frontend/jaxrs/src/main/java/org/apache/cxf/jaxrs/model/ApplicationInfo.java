@@ -209,8 +209,6 @@ return|return
 name|appProps
 return|;
 block|}
-else|else
-block|{
 name|Map
 argument_list|<
 name|String
@@ -236,7 +234,6 @@ expr_stmt|;
 return|return
 name|props
 return|;
-block|}
 block|}
 specifier|public
 name|void

@@ -1495,8 +1495,6 @@ return|return
 name|type
 return|;
 block|}
-else|else
-block|{
 name|scope
 operator|=
 name|type
@@ -1504,7 +1502,6 @@ operator|.
 name|getRawType
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -3930,12 +3927,9 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|result
 return|;
-block|}
 block|}
 end_function
 
@@ -5281,8 +5275,6 @@ return|return
 name|theValues
 return|;
 block|}
-else|else
-block|{
 name|Map
 argument_list|<
 name|Object
@@ -5404,7 +5396,6 @@ block|}
 return|return
 name|theValues
 return|;
-block|}
 block|}
 end_function
 
@@ -9454,8 +9445,6 @@ name|value
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|HttpUtils
 operator|.
@@ -9464,7 +9453,6 @@ argument_list|(
 name|value
 argument_list|)
 return|;
-block|}
 block|}
 end_function
 
@@ -9986,12 +9974,9 @@ name|targetClass
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 end_function
 

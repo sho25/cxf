@@ -3341,8 +3341,6 @@ expr_stmt|;
 break|break;
 comment|// only update the first port since we don't target any specific port
 block|}
-else|else
-block|{
 for|for
 control|(
 name|Port
@@ -3374,7 +3372,6 @@ argument_list|,
 name|publishingUrl
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
