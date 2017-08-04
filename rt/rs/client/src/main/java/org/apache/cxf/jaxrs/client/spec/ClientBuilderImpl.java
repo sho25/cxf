@@ -203,6 +203,22 @@ name|Configuration
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|client
+operator|.
+name|WebClient
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -790,7 +806,9 @@ name|configImpl
 operator|.
 name|property
 argument_list|(
-literal|"executorService"
+name|WebClient
+operator|.
+name|EXECUTOR_SERVICE_PROPERTY
 argument_list|,
 name|executorService
 argument_list|)

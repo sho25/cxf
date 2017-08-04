@@ -2084,7 +2084,9 @@ name|config
 operator|.
 name|getProperty
 argument_list|(
-literal|"executorService"
+name|WebClient
+operator|.
+name|EXECUTOR_SERVICE_PROPERTY
 argument_list|)
 return|;
 block|}

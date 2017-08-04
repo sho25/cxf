@@ -6252,6 +6252,14 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
+name|setAsyncMessageObserverIfNeeded
+argument_list|(
+name|outMessage
+operator|.
+name|getExchange
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|JaxrsClientCallback
 argument_list|<
 name|?
