@@ -196,8 +196,6 @@ name|getActualMessage
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getActualMessage
 argument_list|()
@@ -221,7 +219,6 @@ operator|.
 name|getMessage
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 name|String

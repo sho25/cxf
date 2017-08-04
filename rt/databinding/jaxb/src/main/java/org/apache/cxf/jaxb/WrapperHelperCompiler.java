@@ -1298,12 +1298,9 @@ block|{
 comment|// null placeholder
 continue|continue;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 name|Class
 argument_list|<

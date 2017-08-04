@@ -882,8 +882,6 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|methodName
 operator|.
@@ -893,9 +891,6 @@ literal|3
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|Character
 operator|.
@@ -918,7 +913,6 @@ operator|+
 literal|1
 argument_list|)
 return|;
-block|}
 block|}
 end_function
 

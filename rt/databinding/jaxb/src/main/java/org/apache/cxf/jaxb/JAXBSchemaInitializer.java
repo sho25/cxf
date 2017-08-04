@@ -868,8 +868,6 @@ name|getComponentType
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 name|Class
@@ -879,7 +877,6 @@ argument_list|>
 operator|)
 name|cls
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -1013,8 +1010,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getBeanInfo
 argument_list|(
@@ -1027,7 +1022,6 @@ operator|)
 name|cls
 argument_list|)
 return|;
-block|}
 block|}
 elseif|else
 if|if

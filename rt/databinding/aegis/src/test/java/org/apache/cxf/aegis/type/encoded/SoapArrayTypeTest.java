@@ -1193,7 +1193,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|StructTypeTest
+name|AbstractEncodedTest
 operator|.
 name|validateShippingAddress
 argument_list|(
@@ -1203,7 +1203,7 @@ literal|0
 index|]
 argument_list|)
 expr_stmt|;
-name|StructTypeTest
+name|AbstractEncodedTest
 operator|.
 name|validateBillingAddress
 argument_list|(
@@ -1226,7 +1226,7 @@ operator|.
 expr|class
 argument_list|)
 expr_stmt|;
-name|StructTypeTest
+name|AbstractEncodedTest
 operator|.
 name|validateShippingAddress
 argument_list|(
@@ -1236,7 +1236,7 @@ literal|0
 index|]
 argument_list|)
 expr_stmt|;
-name|StructTypeTest
+name|AbstractEncodedTest
 operator|.
 name|validateBillingAddress
 argument_list|(

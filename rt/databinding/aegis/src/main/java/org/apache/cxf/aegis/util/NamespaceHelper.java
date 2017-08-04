@@ -1341,8 +1341,6 @@ literal|""
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|prefix
 init|=
@@ -1388,7 +1386,6 @@ argument_list|,
 name|prefix
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

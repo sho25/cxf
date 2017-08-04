@@ -1955,8 +1955,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -1977,7 +1975,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 annotation|@
@@ -2313,8 +2310,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -2335,7 +2330,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 comment|//  TODO: cache the JAXBRIContext
@@ -2550,8 +2544,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -2572,7 +2564,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|public
@@ -3924,7 +3915,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -4545,7 +4536,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 operator|&&
@@ -6715,8 +6706,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -6737,7 +6726,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 throw|throw
 operator|new
@@ -7882,8 +7870,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -7904,7 +7890,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

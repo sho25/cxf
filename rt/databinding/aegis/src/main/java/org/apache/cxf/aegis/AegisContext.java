@@ -844,12 +844,9 @@ name|clazz
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|/**      * If a class was provided as part of the root list, retrieve it's AegisType by schema type QName.      *      * @param schemaTypeName      * @return      */
 specifier|public
@@ -879,12 +876,9 @@ name|schemaTypeName
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|Set

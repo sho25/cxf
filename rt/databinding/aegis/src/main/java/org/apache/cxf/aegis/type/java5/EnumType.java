@@ -273,12 +273,6 @@ name|writeValue
 argument_list|(
 name|getValue
 argument_list|(
-operator|(
-name|Enum
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|object
 argument_list|)
 argument_list|)

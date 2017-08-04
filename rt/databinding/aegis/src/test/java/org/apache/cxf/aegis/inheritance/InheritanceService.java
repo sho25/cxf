@@ -21,6 +21,16 @@ name|inheritance
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -71,7 +81,7 @@ name|AbstractUser
 name|user
 parameter_list|)
 block|{
-name|InheritancePOJOTest
+name|Assert
 operator|.
 name|assertTrue
 argument_list|(

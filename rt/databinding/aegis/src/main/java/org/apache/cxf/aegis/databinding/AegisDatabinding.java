@@ -2861,12 +2861,9 @@ condition|)
 block|{
 continue|continue;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 block|}
 if|if

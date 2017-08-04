@@ -1313,8 +1313,6 @@ name|javaType
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|nextCreator
 operator|.
@@ -1323,7 +1321,6 @@ argument_list|(
 name|javaType
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1362,8 +1359,6 @@ name|info
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|nextCreator
 operator|.
@@ -1372,7 +1367,6 @@ argument_list|(
 name|info
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -2207,8 +2201,6 @@ return|return
 name|type
 return|;
 block|}
-else|else
-block|{
 return|return
 name|nextCreator
 operator|.
@@ -2217,7 +2209,6 @@ argument_list|(
 name|info
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -3460,15 +3451,12 @@ name|className
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|loadComponentClass
 argument_list|(
 name|componentType
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|Class

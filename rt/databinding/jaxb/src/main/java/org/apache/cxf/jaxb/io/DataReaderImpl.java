@@ -464,8 +464,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 comment|// hack for CXF-3453
 name|String
 name|msg
@@ -517,7 +515,6 @@ literal|"cvc-complex-type.3.2.2"
 argument_list|)
 operator|)
 return|;
-block|}
 block|}
 block|}
 specifier|public
@@ -933,8 +930,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -955,7 +950,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|public
@@ -1229,8 +1223,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -1251,7 +1243,6 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
