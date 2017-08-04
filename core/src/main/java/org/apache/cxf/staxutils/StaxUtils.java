@@ -2695,7 +2695,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 condition|)
@@ -2741,7 +2741,7 @@ if|if
 condition|(
 name|event
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 operator|&&
@@ -2812,13 +2812,13 @@ while|while
 condition|(
 name|x
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 operator|&&
 name|x
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 operator|&&
@@ -2906,7 +2906,7 @@ if|if
 condition|(
 name|event
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 operator|&&
@@ -3112,7 +3112,7 @@ argument_list|()
 init|;
 name|code
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 condition|;
@@ -3128,7 +3128,7 @@ if|if
 condition|(
 name|code
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -3158,7 +3158,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -3174,7 +3174,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 condition|)
@@ -3227,7 +3227,7 @@ if|if
 condition|(
 name|event
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 operator|&&
@@ -3250,7 +3250,7 @@ if|if
 condition|(
 name|event
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 condition|)
@@ -3304,7 +3304,7 @@ argument_list|()
 init|;
 name|code
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 condition|;
@@ -3320,7 +3320,7 @@ if|if
 condition|(
 name|code
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -11069,7 +11069,7 @@ argument_list|()
 condition|)
 block|{
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 case|:
@@ -11082,7 +11082,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 case|:
@@ -11093,7 +11093,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|ATTRIBUTE
 case|:
@@ -11106,7 +11106,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|ENTITY_REFERENCE
 case|:
@@ -11135,7 +11135,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|DTD
 case|:
@@ -11156,7 +11156,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|PROCESSING_INSTRUCTION
 case|:
@@ -11253,7 +11253,7 @@ expr_stmt|;
 block|}
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|NAMESPACE
 case|:
@@ -11356,7 +11356,7 @@ expr_stmt|;
 block|}
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|COMMENT
 case|:
@@ -11385,12 +11385,12 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 case|:
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|SPACE
 case|:
@@ -11409,7 +11409,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|CDATA
 case|:
@@ -11428,7 +11428,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 case|:
@@ -11491,7 +11491,7 @@ expr_stmt|;
 block|}
 break|break;
 case|case
-name|XMLEvent
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 case|:

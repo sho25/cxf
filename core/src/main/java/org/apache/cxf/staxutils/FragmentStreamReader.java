@@ -23,6 +23,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamException
 import|;
 end_import
@@ -78,7 +90,7 @@ specifier|private
 name|int
 name|current
 init|=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 decl_stmt|;
@@ -150,7 +162,7 @@ if|if
 condition|(
 name|current
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 condition|)
@@ -179,7 +191,7 @@ block|{
 return|return
 name|current
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 return|;
@@ -192,7 +204,7 @@ block|{
 return|return
 name|current
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 return|;
@@ -205,7 +217,7 @@ block|{
 return|return
 name|current
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 return|;
@@ -218,7 +230,7 @@ block|{
 return|return
 name|current
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 operator|&&

@@ -321,7 +321,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 condition|)
