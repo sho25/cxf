@@ -403,12 +403,9 @@ operator|+
 name|query
 return|;
 block|}
-else|else
-block|{
 return|return
 name|uri
 return|;
-block|}
 block|}
 name|URI
 name|getUri
@@ -503,8 +500,6 @@ name|getOutMessage
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isOutbound
 condition|?
@@ -518,7 +513,6 @@ argument_list|()
 else|:
 name|message
 return|;
-block|}
 block|}
 name|Map
 argument_list|<
