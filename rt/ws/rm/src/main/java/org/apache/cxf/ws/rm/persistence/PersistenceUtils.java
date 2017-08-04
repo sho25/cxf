@@ -639,9 +639,6 @@ name|Message
 operator|.
 name|CONTENT_TYPE
 argument_list|,
-operator|(
-name|String
-operator|)
 name|msg
 operator|.
 name|get

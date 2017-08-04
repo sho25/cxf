@@ -181,9 +181,6 @@ name|FALSE
 operator|.
 name|equals
 argument_list|(
-operator|(
-name|Boolean
-operator|)
 name|ex
 operator|.
 name|get

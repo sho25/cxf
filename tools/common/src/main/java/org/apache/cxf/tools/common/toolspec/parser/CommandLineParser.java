@@ -785,8 +785,6 @@ argument_list|)
 expr_stmt|;
 break|break;
 block|}
-else|else
-block|{
 comment|// if no more left then return null;
 name|tokens
 operator|.
@@ -830,7 +828,6 @@ argument_list|(
 name|errors
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/*             for (int i = 0; i< usageForms.getLength(); i++) {                 Form form = new Form((Element)usageForms.item(i));                  int pos = tokens.getPosition();                  if (form.accept(tokens, commandEl, errors)) {                     commandEl.setAttribute("form", form.getName());                     break;                 } else {                     // if no more left then return null;                     tokens.setPosition(pos);                     if (i == usageForms.getLength() - 1) {                         if (LOG.isLoggable(Level.INFO)) {                             LOG.info("No more forms left to try, returning null");                         }                         throwUsage(errors);                     }                 }             } */

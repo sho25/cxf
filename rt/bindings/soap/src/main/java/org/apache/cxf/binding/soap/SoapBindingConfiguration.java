@@ -256,12 +256,9 @@ return|return
 name|defaultSoapAction
 return|;
 block|}
-else|else
-block|{
 return|return
 name|action
 return|;
-block|}
 block|}
 specifier|public
 name|String

@@ -753,9 +753,6 @@ expr_stmt|;
 return|return
 name|deliverOOBResponse
 argument_list|(
-operator|(
-name|OOBAuthorizationResponse
-operator|)
 name|bean
 argument_list|)
 return|;

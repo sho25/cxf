@@ -46,16 +46,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-block|{
-literal|"unchecked"
-block|,
-literal|"rawtypes"
-block|}
-argument_list|)
-comment|//CHECKSTYLE:OFF
 specifier|public
 class|class
 name|ParamJAXBElement
@@ -65,14 +55,6 @@ argument_list|<
 name|ParamType
 argument_list|>
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|4994571526736505284L
-decl_stmt|;
 specifier|protected
 specifier|static
 specifier|final
@@ -87,6 +69,14 @@ argument_list|,
 literal|"param"
 argument_list|)
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4994571526736505284L
+decl_stmt|;
 specifier|public
 name|ParamJAXBElement
 parameter_list|(
@@ -98,14 +88,9 @@ name|super
 argument_list|(
 name|NAME
 argument_list|,
-operator|(
-operator|(
-name|Class
-operator|)
 name|ParamType
 operator|.
 name|class
-operator|)
 argument_list|,
 literal|null
 argument_list|,
@@ -121,14 +106,9 @@ name|super
 argument_list|(
 name|NAME
 argument_list|,
-operator|(
-operator|(
-name|Class
-operator|)
 name|ParamType
 operator|.
 name|class
-operator|)
 argument_list|,
 literal|null
 argument_list|,
@@ -138,10 +118,6 @@ expr_stmt|;
 block|}
 block|}
 end_class
-
-begin_comment
-comment|//CHECKSTYLE:ON
-end_comment
 
 end_unit
 

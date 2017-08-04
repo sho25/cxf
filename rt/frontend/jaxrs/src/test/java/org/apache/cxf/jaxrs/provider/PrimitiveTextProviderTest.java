@@ -1315,9 +1315,6 @@ decl_stmt|;
 name|String
 name|value
 init|=
-operator|(
-name|String
-operator|)
 name|p
 operator|.
 name|readFrom

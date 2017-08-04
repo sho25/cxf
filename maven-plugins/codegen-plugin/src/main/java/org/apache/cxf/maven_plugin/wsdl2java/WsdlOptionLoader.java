@@ -318,12 +318,9 @@ return|return
 name|option
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|/**      * Scan files in a directory and generate one wsdlOption per file found. Extra args for code generation      * can be defined in a file that is named like the wsdl file and ends in -options. Binding files can be      * defined in files named like the wsdl file and end in -binding-*.xml      *      * @param wsdlBasedir      * @param includes file name patterns to include      * @param excludes file name patterns to exclude      * @param defaultOutputDir output directory that should be used if no special file is given      * @return list of one WsdlOption object for each wsdl found      * @throws MojoExecutionException      */
 specifier|public

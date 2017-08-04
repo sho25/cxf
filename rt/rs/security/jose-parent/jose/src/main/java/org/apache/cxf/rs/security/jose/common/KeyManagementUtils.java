@@ -2482,9 +2482,6 @@ name|certSelect
 operator|.
 name|setCertificate
 argument_list|(
-operator|(
-name|X509Certificate
-operator|)
 name|inCerts
 operator|.
 name|get

@@ -407,8 +407,6 @@ name|reqInfo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|connectionManager
 operator|.
@@ -419,7 +417,6 @@ argument_list|,
 name|reqInfo
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

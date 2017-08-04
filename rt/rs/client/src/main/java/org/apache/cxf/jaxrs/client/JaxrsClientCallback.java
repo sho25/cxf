@@ -537,9 +537,6 @@ name|handler
 operator|.
 name|failed
 argument_list|(
-operator|(
-name|InterruptedException
-operator|)
 name|ex
 argument_list|)
 expr_stmt|;
@@ -606,9 +603,6 @@ name|handler
 operator|.
 name|failed
 argument_list|(
-operator|(
-name|InterruptedException
-operator|)
 name|ex
 argument_list|)
 expr_stmt|;

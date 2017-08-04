@@ -399,9 +399,6 @@ comment|// 1st signature
 name|String
 name|firstKid
 init|=
-operator|(
-name|String
-operator|)
 name|sigEntries
 operator|.
 name|get
@@ -453,9 +450,6 @@ comment|// 2nd signature
 name|String
 name|secondKid
 init|=
-operator|(
-name|String
-operator|)
 name|sigEntries
 operator|.
 name|get
@@ -555,9 +549,6 @@ comment|// 1st signature
 name|String
 name|firstKid
 init|=
-operator|(
-name|String
-operator|)
 name|sigEntries
 operator|.
 name|get

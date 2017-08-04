@@ -845,8 +845,6 @@ index|]
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|separator
 init|=
@@ -863,7 +861,6 @@ argument_list|,
 name|separator
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -1340,8 +1337,6 @@ condition|)
 block|{
 return|return;
 block|}
-else|else
-block|{
 name|f
 operator|=
 name|f
@@ -1408,7 +1403,6 @@ name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

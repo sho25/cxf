@@ -95,6 +95,18 @@ name|xml
 operator|.
 name|ws
 operator|.
+name|BindingProvider
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
 name|Dispatch
 import|;
 end_import
@@ -732,7 +744,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-name|Dispatch
+name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
@@ -1241,7 +1253,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-name|Dispatch
+name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,

@@ -853,12 +853,6 @@ name|expression
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Collection
-argument_list|<
-name|ScoreDoc
-argument_list|>
-operator|)
 name|createWebClient
 argument_list|(
 literal|"/catalog"

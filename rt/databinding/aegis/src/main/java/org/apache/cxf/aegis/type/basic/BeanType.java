@@ -3046,12 +3046,9 @@ return|return
 name|superType
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|/**      * Return the type info.      * @return      */
 specifier|public

@@ -2070,7 +2070,7 @@ operator|.
 name|getNodeType
 argument_list|()
 operator|==
-name|Document
+name|Node
 operator|.
 name|PROCESSING_INSTRUCTION_NODE
 condition|)

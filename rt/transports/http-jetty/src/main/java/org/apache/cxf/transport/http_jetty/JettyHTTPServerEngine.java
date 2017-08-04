@@ -3846,9 +3846,6 @@ block|{
 name|ThreadPool
 name|pool
 init|=
-operator|(
-name|ThreadPool
-operator|)
 name|server
 operator|.
 name|getThreadPool

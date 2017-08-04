@@ -647,12 +647,9 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|opName
 return|;
-block|}
 block|}
 block|}
 end_class

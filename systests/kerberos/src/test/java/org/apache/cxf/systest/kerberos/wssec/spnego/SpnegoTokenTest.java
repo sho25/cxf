@@ -85,6 +85,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|bus
 operator|.
 name|spring
@@ -123,7 +135,7 @@ name|testutil
 operator|.
 name|common
 operator|.
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 import|;
 end_import
 
@@ -519,7 +531,7 @@ literal|"Server failed to launch"
 argument_list|,
 comment|// run the server in the same process
 comment|// set this to false to fork
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 operator|.
 name|launchServer
 argument_list|(
@@ -543,7 +555,7 @@ literal|"Server failed to launch"
 argument_list|,
 comment|// run the server in the same process
 comment|// set this to false to fork
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 operator|.
 name|launchServer
 argument_list|(
@@ -575,7 +587,7 @@ operator|.
 name|cleanup
 argument_list|()
 expr_stmt|;
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 operator|.
 name|stopAllServers
 argument_list|()
@@ -1041,14 +1053,14 @@ name|toString
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setThreadDefaultBus
 argument_list|(

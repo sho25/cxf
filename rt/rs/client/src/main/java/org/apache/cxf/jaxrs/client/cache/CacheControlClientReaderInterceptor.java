@@ -577,9 +577,6 @@ name|IOUtils
 operator|.
 name|readBytesFromStream
 argument_list|(
-operator|(
-name|InputStream
-operator|)
 name|context
 operator|.
 name|getInputStream

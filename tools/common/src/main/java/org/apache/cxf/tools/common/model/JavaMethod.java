@@ -956,8 +956,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|Message
 name|message
 init|=
@@ -994,7 +992,6 @@ argument_list|(
 name|message
 argument_list|)
 throw|;
-block|}
 block|}
 if|if
 condition|(

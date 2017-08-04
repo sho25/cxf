@@ -1126,13 +1126,10 @@ return|return
 name|address
 return|;
 block|}
-else|else
-block|{
 comment|// the consumer may use the original target URI to figure out absolute URI
 return|return
 literal|"/"
 return|;
-block|}
 block|}
 specifier|private
 name|ClassLoader

@@ -1272,7 +1272,7 @@ name|pmc
 operator|.
 name|get
 argument_list|(
-name|SOAPMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -1287,7 +1287,7 @@ name|lmc
 operator|.
 name|get
 argument_list|(
-name|LogicalMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -1901,7 +1901,7 @@ name|pmc
 operator|.
 name|get
 argument_list|(
-name|SOAPMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -1916,7 +1916,7 @@ name|lmc
 operator|.
 name|get
 argument_list|(
-name|LogicalMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -2518,7 +2518,7 @@ name|pmc
 operator|.
 name|get
 argument_list|(
-name|SOAPMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -2533,7 +2533,7 @@ name|lmc
 operator|.
 name|get
 argument_list|(
-name|LogicalMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -3351,7 +3351,7 @@ name|lmc
 operator|.
 name|get
 argument_list|(
-name|LogicalMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)
@@ -4020,7 +4020,7 @@ name|lmc
 operator|.
 name|get
 argument_list|(
-name|LogicalMessageContext
+name|MessageContext
 operator|.
 name|MESSAGE_OUTBOUND_PROPERTY
 argument_list|)

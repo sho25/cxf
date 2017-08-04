@@ -848,14 +848,6 @@ name|providerBeans
 operator|.
 name|add
 argument_list|(
-operator|(
-name|Bean
-argument_list|<
-name|?
-extends|extends
-name|Feature
-argument_list|>
-operator|)
 name|event
 operator|.
 name|getBean

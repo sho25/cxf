@@ -1260,15 +1260,12 @@ operator|)
 name|files
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|String
 index|[]
 block|{}
 return|;
-block|}
 block|}
 specifier|public
 name|List

@@ -197,9 +197,6 @@ decl_stmt|;
 name|DataHandler
 name|ds
 init|=
-operator|(
-name|DataHandler
-operator|)
 name|p
 operator|.
 name|readFrom
@@ -385,9 +382,6 @@ decl_stmt|;
 name|DataSource
 name|ds
 init|=
-operator|(
-name|DataSource
-operator|)
 name|p
 operator|.
 name|readFrom

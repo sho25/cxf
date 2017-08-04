@@ -797,8 +797,6 @@ return|return
 name|boi
 return|;
 block|}
-else|else
-block|{
 name|Collection
 argument_list|<
 name|MessagePartInfo
@@ -847,7 +845,6 @@ block|{
 return|return
 name|boi
 return|;
-block|}
 block|}
 block|}
 block|}

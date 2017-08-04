@@ -979,8 +979,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|names
 operator|.
 name|put
@@ -993,7 +991,6 @@ name|getSchemaTypeName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
@@ -1119,8 +1116,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|names
 operator|.
 name|put
@@ -1133,7 +1128,6 @@ name|getSchemaTypeName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

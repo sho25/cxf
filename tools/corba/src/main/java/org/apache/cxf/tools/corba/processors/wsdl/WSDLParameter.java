@@ -2760,8 +2760,6 @@ return|return
 name|schemaElement
 return|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|XmlSchemaExternal
@@ -2805,7 +2803,6 @@ block|{
 return|return
 name|schemaElement
 return|;
-block|}
 block|}
 block|}
 block|}
@@ -3167,8 +3164,6 @@ name|typeName
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|nill
@@ -3209,7 +3204,6 @@ operator|.
 name|getQName
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 return|return
 name|idltype

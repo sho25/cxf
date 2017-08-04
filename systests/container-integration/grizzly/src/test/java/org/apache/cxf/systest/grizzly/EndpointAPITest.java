@@ -930,9 +930,6 @@ block|{
 name|EndpointInterface
 name|port
 init|=
-operator|(
-name|EndpointInterface
-operator|)
 name|service
 operator|.
 name|getPort
@@ -1102,9 +1099,6 @@ decl_stmt|;
 name|EndpointInterface
 name|port
 init|=
-operator|(
-name|EndpointInterface
-operator|)
 name|service
 operator|.
 name|getPort

@@ -117,6 +117,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamReader
 import|;
 end_import
@@ -2694,7 +2706,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 argument_list|,
@@ -2706,7 +2718,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 argument_list|,
@@ -2731,7 +2743,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 argument_list|,
@@ -2756,7 +2768,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 argument_list|,

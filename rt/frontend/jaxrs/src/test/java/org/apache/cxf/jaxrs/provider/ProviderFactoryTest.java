@@ -3952,7 +3952,7 @@ name|m
 operator|.
 name|put
 argument_list|(
-name|ServerProviderFactory
+name|ProviderFactory
 operator|.
 name|IGNORE_TYPE_VARIABLES
 argument_list|,

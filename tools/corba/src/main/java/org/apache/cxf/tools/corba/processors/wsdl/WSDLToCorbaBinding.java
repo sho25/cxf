@@ -1291,8 +1291,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|PortType
 name|portType
 init|=
@@ -1425,7 +1423,6 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
@@ -4122,8 +4119,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 comment|// Set the repository ID for Exception
 comment|// add to CorbaTypeMapping
 name|String
@@ -4222,7 +4217,6 @@ argument_list|(
 name|corbaTypeImpl
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
@@ -4722,12 +4716,9 @@ name|idx
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 return|;
-block|}
 block|}
 specifier|public
 name|QName

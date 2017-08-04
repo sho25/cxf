@@ -71,7 +71,7 @@ name|xml
 operator|.
 name|stream
 operator|.
-name|XMLStreamReader
+name|XMLStreamConstants
 import|;
 end_import
 
@@ -559,12 +559,9 @@ return|return
 name|attributes
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|List
@@ -841,7 +838,7 @@ index|[]
 name|states
 init|=
 block|{
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 block|}

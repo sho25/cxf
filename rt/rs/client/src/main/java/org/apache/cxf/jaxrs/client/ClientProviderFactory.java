@@ -449,10 +449,6 @@ name|custom
 argument_list|,
 name|busGlobal
 argument_list|,
-operator|(
-name|Object
-index|[]
-operator|)
 name|providers
 argument_list|,
 literal|null

@@ -493,8 +493,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|requestUriString
 operator|=
 name|requestUriString
@@ -529,7 +527,6 @@ argument_list|(
 name|requestUriString
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|doSetRequestUri
 argument_list|(

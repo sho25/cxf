@@ -193,9 +193,6 @@ name|assertEquals
 argument_list|(
 name|TEST_VALUE
 argument_list|,
-operator|(
-name|String
-operator|)
 name|messageHeaders
 operator|.
 name|getProperty

@@ -418,8 +418,6 @@ return|return
 name|baseType
 return|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|warning
@@ -435,9 +433,6 @@ return|return
 literal|null
 return|;
 block|}
-block|}
-else|else
-block|{
 if|if
 condition|(
 name|baseType
@@ -461,7 +456,6 @@ block|}
 return|return
 name|baseType
 return|;
-block|}
 block|}
 comment|/**      * getReadType cannot just look up the xsi:type in the mapping. This function must be      * called instead at the root where there is no initial mapping to start from, as from      * a part or an element of some containing item.      * @param xsr      * @param context      * @return      */
 specifier|public
@@ -805,8 +799,6 @@ literal|null
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|globalContext
 operator|.
@@ -821,7 +813,6 @@ argument_list|(
 name|reflectType
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

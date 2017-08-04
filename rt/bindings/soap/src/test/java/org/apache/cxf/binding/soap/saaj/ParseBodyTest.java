@@ -129,6 +129,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamReader
 import|;
 end_import
@@ -358,7 +370,7 @@ expr_stmt|;
 comment|//reader should be on the start element for the
 name|assertEquals
 argument_list|(
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 argument_list|,

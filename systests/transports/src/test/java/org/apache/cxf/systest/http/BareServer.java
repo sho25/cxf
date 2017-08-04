@@ -49,6 +49,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|bus
 operator|.
 name|spring
@@ -113,7 +125,7 @@ operator|.
 name|createBus
 argument_list|()
 decl_stmt|;
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(

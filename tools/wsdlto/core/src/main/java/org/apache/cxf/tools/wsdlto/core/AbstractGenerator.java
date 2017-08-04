@@ -527,9 +527,6 @@ argument_list|(
 name|getOutputDir
 argument_list|()
 argument_list|,
-operator|(
-name|OutputStreamCreator
-operator|)
 name|env
 operator|.
 name|get

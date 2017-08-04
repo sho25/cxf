@@ -535,9 +535,6 @@ decl_stmt|;
 name|JettyHTTPServerEngineFactoryConfigType
 name|config
 init|=
-operator|(
-name|JettyHTTPServerEngineFactoryConfigType
-operator|)
 name|getJaxbObject
 argument_list|(
 name|element

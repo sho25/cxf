@@ -141,7 +141,7 @@ name|testutil
 operator|.
 name|common
 operator|.
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 import|;
 end_import
 
@@ -470,7 +470,7 @@ literal|"Server failed to launch"
 argument_list|,
 comment|// run the server in the same process
 comment|// set this to false to fork
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 operator|.
 name|launchServer
 argument_list|(
@@ -502,7 +502,7 @@ operator|.
 name|cleanup
 argument_list|()
 expr_stmt|;
-name|AbstractBusClientServerTestBase
+name|AbstractClientServerTestBase
 operator|.
 name|stopAllServers
 argument_list|()

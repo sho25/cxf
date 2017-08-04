@@ -2142,9 +2142,6 @@ operator|.
 name|getId
 argument_list|()
 operator|!=
-operator|(
-name|long
-operator|)
 name|id
 condition|)
 block|{

@@ -351,9 +351,9 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|soap
-operator|.
 name|VersionTransformer
+operator|.
+name|Names200408
 import|;
 end_import
 
@@ -821,8 +821,6 @@ name|headers
 argument_list|,
 name|wsaHeaders
 argument_list|,
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_NAMESPACE_NAME
@@ -857,7 +855,7 @@ name|verificationCache
 operator|.
 name|put
 argument_list|(
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|verifyHeaders
 argument_list|(
@@ -1339,6 +1337,16 @@ block|{
 name|JAXBContext
 name|jaxbContext
 init|=
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
 name|VersionTransformer
 operator|.
 name|getExposedJAXBContext
@@ -1452,8 +1460,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_NAMESPACE_NAME
@@ -1467,8 +1473,6 @@ block|{
 name|AttributedURI
 name|value
 init|=
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_OBJECT_FACTORY
@@ -1489,8 +1493,6 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_NAMESPACE_NAME

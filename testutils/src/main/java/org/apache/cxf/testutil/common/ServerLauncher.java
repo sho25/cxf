@@ -766,8 +766,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|process
@@ -804,7 +802,6 @@ operator|.
 name|destroy
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 return|return
 name|serverPassed

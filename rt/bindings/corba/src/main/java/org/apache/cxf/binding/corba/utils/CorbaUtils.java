@@ -2428,8 +2428,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|seenTypes
 operator|.
 name|push
@@ -3005,7 +3003,6 @@ index|]
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

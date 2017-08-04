@@ -291,9 +291,6 @@ block|{
 name|Class
 name|entityCls
 init|=
-operator|(
-name|Class
-operator|)
 name|c
 operator|.
 name|getType

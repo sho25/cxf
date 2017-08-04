@@ -607,15 +607,12 @@ operator|+
 literal|"[]"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|clz
 operator|.
 name|getName
 argument_list|()
 return|;
-block|}
 block|}
 elseif|else
 if|if

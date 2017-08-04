@@ -429,9 +429,6 @@ argument_list|()
 decl_stmt|;
 name|setBus
 argument_list|(
-operator|(
-name|Bus
-operator|)
 name|wac
 operator|.
 name|getBean

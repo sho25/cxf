@@ -589,7 +589,7 @@ name|getChild
 argument_list|(
 name|child
 argument_list|,
-name|Element
+name|Node
 operator|.
 name|ELEMENT_NODE
 argument_list|)
@@ -655,7 +655,7 @@ name|getChild
 argument_list|(
 name|child
 argument_list|,
-name|Element
+name|Node
 operator|.
 name|ELEMENT_NODE
 argument_list|)
@@ -974,7 +974,7 @@ name|getChild
 argument_list|(
 name|child
 argument_list|,
-name|Element
+name|Node
 operator|.
 name|ELEMENT_NODE
 argument_list|)

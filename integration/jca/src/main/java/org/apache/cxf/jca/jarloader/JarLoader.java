@@ -685,12 +685,9 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 return|;
-block|}
 block|}
 specifier|private
 specifier|static

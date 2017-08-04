@@ -586,8 +586,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WS1Exception
@@ -597,7 +595,6 @@ argument_list|,
 literal|10
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 name|Map

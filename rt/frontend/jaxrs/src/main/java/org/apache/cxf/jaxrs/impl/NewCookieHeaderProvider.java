@@ -37,6 +37,20 @@ name|rs
 operator|.
 name|core
 operator|.
+name|Cookie
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
 name|NewCookie
 import|;
 end_import
@@ -263,7 +277,7 @@ decl_stmt|;
 name|int
 name|version
 init|=
-name|NewCookie
+name|Cookie
 operator|.
 name|DEFAULT_VERSION
 decl_stmt|;
@@ -967,8 +981,6 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|value
 operator|==
@@ -978,7 +990,6 @@ literal|""
 else|:
 name|value
 return|;
-block|}
 block|}
 specifier|static
 name|String

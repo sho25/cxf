@@ -51,6 +51,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamException
 import|;
 end_import
@@ -360,7 +372,7 @@ operator|.
 name|nextTag
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)

@@ -470,8 +470,6 @@ name|fd
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|fine
@@ -479,7 +477,6 @@ argument_list|(
 literal|"Executing operation pingMe"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|public
 name|Response

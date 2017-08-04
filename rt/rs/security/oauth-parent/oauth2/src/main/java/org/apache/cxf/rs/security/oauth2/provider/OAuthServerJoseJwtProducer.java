@@ -35,18 +35,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|security
-operator|.
-name|interfaces
-operator|.
-name|RSAPublicKey
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -300,9 +288,6 @@ name|JweUtils
 operator|.
 name|createJweEncryptionProvider
 argument_list|(
-operator|(
-name|RSAPublicKey
-operator|)
 name|cert
 operator|.
 name|getPublicKey

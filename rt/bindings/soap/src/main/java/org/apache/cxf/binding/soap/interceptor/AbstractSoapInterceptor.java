@@ -882,15 +882,12 @@ name|getMessage
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|fault
 operator|.
 name|getMessage
 argument_list|()
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -928,8 +925,6 @@ name|getMessage
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|fault
 operator|.
@@ -939,7 +934,6 @@ operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 else|else
 block|{

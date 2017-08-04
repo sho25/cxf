@@ -316,9 +316,6 @@ else|else
 block|{
 name|cc
 operator|=
-operator|(
-name|CacheConfiguration
-operator|)
 name|cc
 operator|.
 name|clone

@@ -618,8 +618,6 @@ name|cls
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|readNode
 argument_list|(
@@ -628,7 +626,6 @@ argument_list|,
 name|cls
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 name|cls
@@ -1610,8 +1607,6 @@ name|node
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|cls
 operator|.
@@ -1623,7 +1618,6 @@ name|getNodeValue
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 name|InjectionUtils
@@ -1790,8 +1784,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|u
 operator|.
@@ -1805,7 +1797,6 @@ operator|.
 name|getValue
 argument_list|()
 return|;
-block|}
 block|}
 finally|finally
 block|{

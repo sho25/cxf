@@ -703,7 +703,7 @@ operator|.
 name|next
 argument_list|()
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 condition|)
@@ -2977,8 +2977,6 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Collections
 operator|.
@@ -2987,7 +2985,6 @@ argument_list|(
 name|bodyEvents
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|List
@@ -3011,8 +3008,6 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Collections
 operator|.
@@ -3021,7 +3016,6 @@ argument_list|(
 name|envEvents
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String

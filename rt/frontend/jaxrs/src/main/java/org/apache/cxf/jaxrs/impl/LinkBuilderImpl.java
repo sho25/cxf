@@ -400,12 +400,9 @@ name|uri
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|uri
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1034,8 +1031,6 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|String
 index|[]
 name|values
@@ -1084,7 +1079,6 @@ block|}
 return|return
 name|rels
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1455,12 +1449,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 annotation|@

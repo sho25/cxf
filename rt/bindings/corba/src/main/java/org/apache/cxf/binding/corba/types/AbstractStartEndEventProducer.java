@@ -59,7 +59,7 @@ name|xml
 operator|.
 name|stream
 operator|.
-name|XMLStreamReader
+name|XMLStreamConstants
 import|;
 end_import
 
@@ -138,13 +138,13 @@ index|[]
 name|states
 init|=
 block|{
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 block|,
 literal|0
 block|,
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 block|}

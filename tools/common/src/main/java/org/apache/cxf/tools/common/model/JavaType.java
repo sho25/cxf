@@ -727,8 +727,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|int
@@ -764,7 +762,6 @@ block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 block|}
 return|return

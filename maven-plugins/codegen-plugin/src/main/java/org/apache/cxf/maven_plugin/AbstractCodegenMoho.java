@@ -2294,8 +2294,6 @@ literal|"Proxy in settings.xml has no host"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|proxy
@@ -2465,7 +2463,6 @@ argument_list|,
 name|authPassword
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

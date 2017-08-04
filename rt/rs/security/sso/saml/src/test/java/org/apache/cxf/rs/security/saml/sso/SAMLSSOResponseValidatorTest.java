@@ -4016,9 +4016,6 @@ comment|// add the signature to the assertion
 name|SignableSAMLObject
 name|signableObject
 init|=
-operator|(
-name|SignableSAMLObject
-operator|)
 name|response
 decl_stmt|;
 name|signableObject

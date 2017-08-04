@@ -447,9 +447,6 @@ block|}
 try|try
 block|{
 return|return
-operator|(
-name|String
-operator|)
 name|xPath
 operator|.
 name|evaluate

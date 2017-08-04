@@ -1542,14 +1542,11 @@ operator|.
 name|NS_SOAP12
 return|;
 block|}
-else|else
-block|{
 return|return
 name|WSDLConstants
 operator|.
 name|NS_SOAP11
 return|;
-block|}
 block|}
 specifier|protected
 name|boolean

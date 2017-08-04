@@ -284,12 +284,7 @@ block|{
 name|Object
 name|entity
 init|=
-operator|(
-operator|(
-name|MessageContentsList
-operator|)
 name|list
-operator|)
 operator|.
 name|get
 argument_list|(

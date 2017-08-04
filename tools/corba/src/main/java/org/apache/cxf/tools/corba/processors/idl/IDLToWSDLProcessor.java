@@ -2341,8 +2341,6 @@ name|ifile
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|File
@@ -2351,9 +2349,6 @@ name|ifile
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 operator|new
 name|File
@@ -2361,7 +2356,6 @@ argument_list|(
 name|ifile
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Writer
@@ -2422,8 +2416,6 @@ name|encoding
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|FileWriterUtil
 name|fw
 init|=
@@ -2445,7 +2437,6 @@ argument_list|,
 name|filename
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Writer
@@ -2497,8 +2488,6 @@ name|encoding
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|FileWriterUtil
@@ -2516,7 +2505,6 @@ name|name
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String

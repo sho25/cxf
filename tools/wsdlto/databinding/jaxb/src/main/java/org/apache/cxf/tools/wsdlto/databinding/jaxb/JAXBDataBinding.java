@@ -271,6 +271,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamException
 import|;
 end_import
@@ -1630,7 +1642,7 @@ if|if
 condition|(
 name|i
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -1718,7 +1730,7 @@ if|if
 condition|(
 name|i
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -3056,8 +3068,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|msg
 operator|.
 name|append
@@ -3065,7 +3075,6 @@ argument_list|(
 name|pluginUsage
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 throw|throw
 operator|new
@@ -5064,11 +5073,11 @@ decl_stmt|;
 return|return
 name|i
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CDATA
 condition|?
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 else|:
@@ -6494,8 +6503,6 @@ name|src
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|ToolException
@@ -6505,7 +6512,6 @@ operator|+
 name|namespaceURI
 argument_list|)
 throw|;
-block|}
 block|}
 return|return
 operator|new

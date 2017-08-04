@@ -249,8 +249,6 @@ name|getValue
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|method
 operator|.
@@ -259,7 +257,6 @@ argument_list|(
 name|in
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

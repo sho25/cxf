@@ -74,14 +74,11 @@ return|return
 literal|"in=null"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"in="
 operator|+
 name|in
 return|;
-block|}
 block|}
 block|}
 end_class

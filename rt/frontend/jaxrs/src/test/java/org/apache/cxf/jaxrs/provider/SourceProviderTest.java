@@ -1150,9 +1150,6 @@ operator|)
 name|type
 decl_stmt|;
 return|return
-operator|(
-name|T
-operator|)
 name|p
 operator|.
 name|readFrom

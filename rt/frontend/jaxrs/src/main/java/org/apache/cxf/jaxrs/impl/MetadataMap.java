@@ -955,8 +955,6 @@ name|keySet
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Set
 argument_list|<
 name|K
@@ -990,7 +988,6 @@ expr_stmt|;
 return|return
 name|set
 return|;
-block|}
 block|}
 specifier|public
 name|List
@@ -1161,8 +1158,6 @@ name|realKey
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|m
 operator|.
@@ -1171,7 +1166,6 @@ argument_list|(
 name|key
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|int

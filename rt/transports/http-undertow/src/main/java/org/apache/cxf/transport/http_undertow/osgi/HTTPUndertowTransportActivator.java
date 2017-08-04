@@ -535,9 +535,6 @@ name|getMBeanServer
 parameter_list|()
 block|{
 return|return
-operator|(
-name|MBeanServer
-operator|)
 name|mbeanServerTracker
 operator|.
 name|getService

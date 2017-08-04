@@ -119,20 +119,6 @@ name|cxf
 operator|.
 name|bus
 operator|.
-name|CXFBusFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|bus
-operator|.
 name|spring
 operator|.
 name|SpringBusFactory
@@ -581,7 +567,7 @@ argument_list|)
 decl_stmt|;
 comment|//bus.getInInterceptors().add(new LoggingInInterceptor());
 comment|//bus.getOutInterceptors().add(new LoggingOutInterceptor());
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(
@@ -1191,7 +1177,7 @@ block|{
 name|BusFactory
 name|bf
 init|=
-name|CXFBusFactory
+name|BusFactory
 operator|.
 name|newInstance
 argument_list|()

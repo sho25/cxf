@@ -39,6 +39,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|bus
 operator|.
 name|CXFBusFactory
@@ -166,7 +178,7 @@ block|{
 name|Bus
 name|bus
 init|=
-name|CXFBusFactory
+name|BusFactory
 operator|.
 name|getThreadDefaultBus
 argument_list|()

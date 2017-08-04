@@ -194,6 +194,11 @@ parameter_list|()
 block|{      }
 annotation|@
 name|Test
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"cast"
+argument_list|)
 specifier|public
 name|void
 name|testConstructorWithoutProperties
@@ -247,6 +252,11 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"cast"
+argument_list|)
 specifier|public
 name|void
 name|testConstructorWithProperties

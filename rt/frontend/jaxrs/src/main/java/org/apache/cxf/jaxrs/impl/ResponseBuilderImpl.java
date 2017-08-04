@@ -1493,8 +1493,6 @@ name|allow
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|allow
 argument_list|(
@@ -1513,7 +1511,6 @@ index|]
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

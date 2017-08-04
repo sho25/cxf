@@ -984,12 +984,9 @@ name|key
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|value
 return|;
-block|}
 block|}
 specifier|public
 parameter_list|<

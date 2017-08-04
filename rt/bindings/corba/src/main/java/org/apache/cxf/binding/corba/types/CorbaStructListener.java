@@ -385,8 +385,6 @@ condition|)
 block|{
 break|break;
 block|}
-else|else
-block|{
 name|currentTypeListener
 operator|=
 name|CorbaHandlerUtils
@@ -429,7 +427,6 @@ name|getCorbaObject
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|boolean
 name|anonType

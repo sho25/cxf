@@ -99,9 +99,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|bus
-operator|.
-name|CXFBusFactory
+name|BusFactory
 import|;
 end_import
 
@@ -267,7 +265,7 @@ argument_list|(
 name|ctx
 argument_list|)
 decl_stmt|;
-name|CXFBusFactory
+name|BusFactory
 operator|.
 name|possiblySetDefaultBus
 argument_list|(

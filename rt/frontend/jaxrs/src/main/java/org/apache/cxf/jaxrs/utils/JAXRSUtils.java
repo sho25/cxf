@@ -9424,9 +9424,6 @@ argument_list|)
 name|Class
 name|cls
 init|=
-operator|(
-name|Class
-operator|)
 name|targetTypeClass
 decl_stmt|;
 return|return

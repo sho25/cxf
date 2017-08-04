@@ -838,8 +838,6 @@ name|protectionDomain
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|config
@@ -879,13 +877,9 @@ name|name
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|result
 return|;
-block|}
-block|}
 block|}
 specifier|protected
 name|URL

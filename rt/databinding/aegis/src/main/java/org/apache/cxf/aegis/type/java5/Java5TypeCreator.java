@@ -412,8 +412,6 @@ name|class
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|DatabindingException
@@ -423,7 +421,6 @@ operator|+
 name|c
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -588,8 +585,6 @@ return|return
 name|info
 return|;
 block|}
-else|else
-block|{
 name|Type
 name|genericReturnType
 init|=
@@ -743,7 +738,6 @@ return|return
 name|info
 return|;
 block|}
-block|}
 comment|/*      * Apparently, this callers must notice collection types and not call this.      */
 annotation|@
 name|Override
@@ -880,8 +874,6 @@ name|info
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|nextCreator
 operator|.
@@ -890,7 +882,6 @@ argument_list|(
 name|info
 argument_list|)
 return|;
-block|}
 block|}
 comment|// should be called 'collection'
 specifier|protected
@@ -1304,20 +1295,14 @@ literal|0
 index|]
 return|;
 block|}
-else|else
-block|{
 return|return
 name|paramType
 return|;
 comment|// take our chances.
 block|}
-block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|protected
 name|Type
@@ -1569,12 +1554,6 @@ block|}
 return|return
 name|findMapGenericTypes
 argument_list|(
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|pt
 operator|.
 name|getRawType

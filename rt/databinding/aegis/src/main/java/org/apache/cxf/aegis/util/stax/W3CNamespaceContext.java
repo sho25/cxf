@@ -361,8 +361,6 @@ return|return
 literal|""
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 operator|.
@@ -371,7 +369,6 @@ argument_list|(
 literal|6
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 block|}

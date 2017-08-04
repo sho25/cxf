@@ -3960,8 +3960,6 @@ return|return
 literal|"javax.activation.DataHandler"
 return|;
 block|}
-else|else
-block|{
 name|ExtensibilityElement
 name|extElement
 init|=
@@ -4053,7 +4051,6 @@ block|{
 return|return
 literal|"javax.activation.DataHandler"
 return|;
-block|}
 block|}
 block|}
 return|return
@@ -5232,15 +5229,12 @@ name|getInput
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|operation
 operator|.
 name|getOutput
 argument_list|()
 return|;
-block|}
 block|}
 return|return
 literal|null

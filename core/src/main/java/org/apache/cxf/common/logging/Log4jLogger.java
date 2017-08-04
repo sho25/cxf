@@ -763,7 +763,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|ALL_INT
 case|:
@@ -781,7 +781,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|FATAL_INT
 case|:
@@ -799,7 +799,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|ERROR_INT
 case|:
@@ -817,7 +817,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|WARN_INT
 case|:
@@ -835,7 +835,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|INFO_INT
 case|:
@@ -853,7 +853,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|DEBUG_INT
 case|:
@@ -871,7 +871,7 @@ name|apache
 operator|.
 name|log4j
 operator|.
-name|Level
+name|Priority
 operator|.
 name|OFF_INT
 case|:

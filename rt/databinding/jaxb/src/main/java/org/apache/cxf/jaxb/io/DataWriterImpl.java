@@ -1217,8 +1217,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -1239,7 +1237,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 for|for
 control|(
@@ -2046,8 +2043,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -2068,7 +2063,6 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

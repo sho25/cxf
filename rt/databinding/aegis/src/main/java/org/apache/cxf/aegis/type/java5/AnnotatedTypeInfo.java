@@ -469,12 +469,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 return|;
-block|}
 block|}
 specifier|protected
 name|QName
@@ -754,8 +751,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -764,7 +759,6 @@ argument_list|(
 name|name
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|int

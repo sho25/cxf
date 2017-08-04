@@ -986,8 +986,6 @@ name|asyncObj
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|setResponseContentTypeIfNeeded
 argument_list|(
 name|exchange
@@ -1005,7 +1003,6 @@ argument_list|(
 name|asyncObj
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|Object
@@ -2317,12 +2314,9 @@ name|r
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|void
@@ -2737,15 +2731,12 @@ name|getResourceProvider
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 name|ResourceProvider
 operator|)
 name|provider
 return|;
-block|}
 block|}
 specifier|public
 name|Object

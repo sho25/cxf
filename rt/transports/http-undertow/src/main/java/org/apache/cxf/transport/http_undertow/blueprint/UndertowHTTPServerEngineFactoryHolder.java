@@ -514,9 +514,6 @@ decl_stmt|;
 name|UndertowHTTPServerEngineFactoryConfigType
 name|config
 init|=
-operator|(
-name|UndertowHTTPServerEngineFactoryConfigType
-operator|)
 name|getJaxbObject
 argument_list|(
 name|element

@@ -441,12 +441,9 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|""
 return|;
-block|}
 block|}
 specifier|public
 name|Scope
@@ -641,12 +638,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 specifier|public
 name|int
@@ -704,8 +698,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|ClassCastException
@@ -721,7 +713,6 @@ name|getName
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 name|void
