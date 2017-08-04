@@ -297,9 +297,6 @@ condition|)
 block|{
 name|close
 argument_list|(
-operator|(
-name|Closeable
-operator|)
 name|rc
 argument_list|)
 expr_stmt|;
@@ -327,9 +324,6 @@ condition|)
 block|{
 name|close
 argument_list|(
-operator|(
-name|Closeable
-operator|)
 name|rc
 argument_list|)
 expr_stmt|;

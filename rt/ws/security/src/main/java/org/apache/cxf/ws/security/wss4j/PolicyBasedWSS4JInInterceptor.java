@@ -1080,9 +1080,6 @@ name|put
 argument_list|(
 name|encCryptoRefId
 argument_list|,
-operator|(
-name|Crypto
-operator|)
 name|encrCrypto
 argument_list|)
 expr_stmt|;
@@ -1112,9 +1109,6 @@ name|put
 argument_list|(
 name|signCryptoRefId
 argument_list|,
-operator|(
-name|Crypto
-operator|)
 name|signCrypto
 argument_list|)
 expr_stmt|;
@@ -1364,9 +1358,6 @@ name|put
 argument_list|(
 name|encCryptoRefId
 argument_list|,
-operator|(
-name|Crypto
-operator|)
 name|encrCrypto
 argument_list|)
 expr_stmt|;
@@ -1396,9 +1387,6 @@ name|put
 argument_list|(
 name|signCryptoRefId
 argument_list|,
-operator|(
-name|Crypto
-operator|)
 name|signCrypto
 argument_list|)
 expr_stmt|;

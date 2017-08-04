@@ -698,9 +698,6 @@ argument_list|()
 condition|)
 block|{
 return|return
-operator|(
-name|String
-operator|)
 name|attrEnum
 operator|.
 name|next

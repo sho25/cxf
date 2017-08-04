@@ -1294,9 +1294,6 @@ name|SAMLUtils
 operator|.
 name|getClaims
 argument_list|(
-operator|(
-name|SamlAssertionWrapper
-operator|)
 name|samlAssertion
 argument_list|)
 decl_stmt|;

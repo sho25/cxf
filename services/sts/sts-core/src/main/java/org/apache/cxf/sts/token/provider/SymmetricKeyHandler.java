@@ -709,9 +709,6 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-operator|(
-name|long
-operator|)
 name|secretValue
 operator|.
 name|length
@@ -725,9 +722,6 @@ name|getMinimumKeySize
 argument_list|()
 operator|||
 operator|(
-operator|(
-name|long
-operator|)
 name|secretValue
 operator|.
 name|length
@@ -831,9 +825,6 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-operator|(
-name|long
-operator|)
 name|secretValue
 operator|.
 name|length
@@ -847,9 +838,6 @@ name|getMinimumKeySize
 argument_list|()
 operator|||
 operator|(
-operator|(
-name|long
-operator|)
 name|secretValue
 operator|.
 name|length

@@ -930,9 +930,6 @@ return|return;
 block|}
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|token
 operator|.
 name|getToken
@@ -1570,9 +1567,6 @@ condition|)
 block|{
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|token
 argument_list|,
 name|getSecurityToken

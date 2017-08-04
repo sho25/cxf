@@ -1381,12 +1381,6 @@ name|?
 argument_list|>
 name|list
 init|=
-operator|(
-name|NamingEnumeration
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|attr
 operator|.
 name|getAll

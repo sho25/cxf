@@ -4054,9 +4054,6 @@ name|securePart
 init|=
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|token
 argument_list|,
 name|sigTok

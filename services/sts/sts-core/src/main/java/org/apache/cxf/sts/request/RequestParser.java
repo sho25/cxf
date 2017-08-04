@@ -1480,9 +1480,6 @@ name|tokenRequirements
 operator|.
 name|addCustomContent
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|requestObject
 argument_list|)
 expr_stmt|;

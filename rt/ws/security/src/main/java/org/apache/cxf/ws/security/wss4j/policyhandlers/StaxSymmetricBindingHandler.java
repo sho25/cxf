@@ -1285,9 +1285,6 @@ argument_list|()
 expr_stmt|;
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|encryptionToken
 argument_list|,
 name|tok
@@ -1993,9 +1990,6 @@ argument_list|()
 expr_stmt|;
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|sigToken
 argument_list|,
 name|sigTok

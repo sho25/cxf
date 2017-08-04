@@ -293,9 +293,6 @@ name|DOMUtils
 operator|.
 name|getFirstChildWithName
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|header
 argument_list|,
 name|qName

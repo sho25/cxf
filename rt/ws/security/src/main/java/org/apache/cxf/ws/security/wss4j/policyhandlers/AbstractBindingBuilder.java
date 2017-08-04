@@ -6517,9 +6517,6 @@ block|{
 name|Element
 name|tokenElement
 init|=
-operator|(
-name|Element
-operator|)
 name|securityToken
 operator|.
 name|getToken

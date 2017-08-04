@@ -600,9 +600,6 @@ operator|.
 name|getSeconds
 argument_list|()
 operator|!=
-operator|(
-name|long
-operator|)
 name|parsedTTL
 operator|||
 name|parsedTTL
@@ -622,9 +619,6 @@ if|if
 condition|(
 name|ttl
 operator|!=
-operator|(
-name|long
-operator|)
 name|parsedTTL
 condition|)
 block|{
@@ -650,9 +644,6 @@ if|if
 condition|(
 name|ttl
 operator|!=
-operator|(
-name|long
-operator|)
 name|parsedTTL
 condition|)
 block|{

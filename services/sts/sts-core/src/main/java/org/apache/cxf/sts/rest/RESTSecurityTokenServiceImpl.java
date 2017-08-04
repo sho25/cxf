@@ -2368,9 +2368,6 @@ block|{
 name|TLSSessionInfo
 name|tlsInfo
 init|=
-operator|(
-name|TLSSessionInfo
-operator|)
 name|PhaseInterceptorChain
 operator|.
 name|getCurrentMessage

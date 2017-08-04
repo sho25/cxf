@@ -1666,14 +1666,14 @@ name|toString
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
-name|SpringBusFactory
+name|BusFactory
 operator|.
 name|setThreadDefaultBus
 argument_list|(
@@ -2112,9 +2112,6 @@ name|SAMLUtils
 operator|.
 name|getClaims
 argument_list|(
-operator|(
-name|SamlAssertionWrapper
-operator|)
 name|samlAssertion
 argument_list|)
 decl_stmt|;

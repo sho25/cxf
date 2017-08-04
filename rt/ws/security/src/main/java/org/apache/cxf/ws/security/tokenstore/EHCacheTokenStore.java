@@ -752,9 +752,6 @@ if|if
 condition|(
 name|ttl
 operator|!=
-operator|(
-name|long
-operator|)
 name|parsedTTL
 condition|)
 block|{

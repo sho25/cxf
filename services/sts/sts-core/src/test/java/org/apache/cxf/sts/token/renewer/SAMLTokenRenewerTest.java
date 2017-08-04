@@ -958,9 +958,6 @@ init|=
 operator|new
 name|SamlAssertionWrapper
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|renewerResponse
 operator|.
 name|getToken
@@ -1788,9 +1785,6 @@ init|=
 operator|new
 name|SamlAssertionWrapper
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|renewerResponse
 operator|.
 name|getToken
@@ -2246,9 +2240,6 @@ init|=
 operator|new
 name|SamlAssertionWrapper
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|renewerResponse
 operator|.
 name|getToken

@@ -3742,9 +3742,6 @@ name|DOMUtils
 operator|.
 name|getFirstElement
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|child
 argument_list|)
 decl_stmt|;

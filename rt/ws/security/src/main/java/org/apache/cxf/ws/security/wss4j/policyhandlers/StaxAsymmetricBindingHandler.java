@@ -994,9 +994,6 @@ argument_list|()
 decl_stmt|;
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|initiatorToken
 argument_list|,
 name|sigTok
@@ -1635,9 +1632,6 @@ argument_list|()
 decl_stmt|;
 name|addIssuedToken
 argument_list|(
-operator|(
-name|IssuedToken
-operator|)
 name|initiatorToken
 argument_list|,
 name|sigTok

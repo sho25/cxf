@@ -2894,9 +2894,6 @@ block|{
 name|Node
 name|node
 init|=
-operator|(
-name|Node
-operator|)
 name|digestMethodNodes
 operator|.
 name|item
@@ -3071,9 +3068,6 @@ block|{
 name|Node
 name|keyIdNode
 init|=
-operator|(
-name|Node
-operator|)
 name|strKeyIdNodes
 operator|.
 name|item
@@ -3102,9 +3096,6 @@ block|{
 name|Node
 name|strNode
 init|=
-operator|(
-name|Node
-operator|)
 name|keyIdNode
 operator|.
 name|getParentNode
@@ -3202,9 +3193,6 @@ block|{
 name|Node
 name|sigRefNode
 init|=
-operator|(
-name|Node
-operator|)
 name|sigReferenceNodes
 operator|.
 name|item
