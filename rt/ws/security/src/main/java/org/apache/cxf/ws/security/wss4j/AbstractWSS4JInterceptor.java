@@ -325,22 +325,6 @@ name|WSHandler
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|abstract
@@ -861,7 +845,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|IS_BSP_COMPLIANT
 argument_list|,
@@ -895,7 +879,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_FUTURE_TIMESTAMP
 argument_list|,
@@ -929,7 +913,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_TIMESTAMP
 argument_list|,
@@ -963,7 +947,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_FUTURE_USERNAMETOKEN
 argument_list|,
@@ -997,7 +981,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_USERNAMETOKEN
 argument_list|,
@@ -1033,7 +1017,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_SUBJECT_CERT_CONSTRAINTS
 argument_list|,
@@ -1085,7 +1069,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|VALIDATE_SAML_SUBJECT_CONFIRMATION
 argument_list|,

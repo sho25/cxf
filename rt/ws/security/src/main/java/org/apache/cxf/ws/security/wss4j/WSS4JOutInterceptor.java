@@ -305,6 +305,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|ConfigurationConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|ThreadLocalSecurityProvider
@@ -941,7 +955,7 @@ name|action
 init|=
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1024,7 +1038,7 @@ if|if
 condition|(
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|EXPAND_XOP_INCLUDE
 argument_list|,
@@ -1051,7 +1065,7 @@ if|if
 condition|(
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|STORE_BYTES_IN_ATTACHMENT
 argument_list|,
@@ -1084,7 +1098,7 @@ name|String
 operator|)
 name|getOption
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USER
 argument_list|)
@@ -1123,7 +1137,7 @@ operator|.
 name|getMsgContext
 argument_list|()
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USER
 argument_list|)
@@ -1253,7 +1267,7 @@ name|String
 operator|)
 name|getOption
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE_USER
 argument_list|)

@@ -211,9 +211,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|crypto
-operator|.
-name|CryptoFactory
+name|ConfigurationConstants
 import|;
 end_import
 
@@ -225,11 +223,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|handler
+name|crypto
 operator|.
-name|WSHandlerConstants
+name|CryptoFactory
 import|;
 end_import
 
@@ -335,11 +333,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -348,7 +346,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -361,7 +359,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -583,11 +581,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -596,7 +594,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -609,7 +607,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -831,11 +829,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -844,7 +842,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -857,7 +855,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -1079,11 +1077,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -1092,7 +1090,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -1105,7 +1103,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -1116,7 +1114,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|IS_BSP_COMPLIANT
 argument_list|,
@@ -1338,11 +1336,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -1351,7 +1349,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -1364,7 +1362,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -1375,7 +1373,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|IS_BSP_COMPLIANT
 argument_list|,

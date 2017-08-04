@@ -329,6 +329,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|ConfigurationConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -424,22 +438,6 @@ operator|.
 name|handler
 operator|.
 name|RequestData
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
 import|;
 end_import
 
@@ -688,7 +686,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENABLE_SIGNATURE_CONFIRMATION
 argument_list|,
@@ -752,7 +750,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENABLE_SIGNATURE_CONFIRMATION
 argument_list|,
@@ -1028,7 +1026,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_REF_ID
 argument_list|,
@@ -1067,7 +1065,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -1096,7 +1094,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -1306,7 +1304,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_REF_ID
 argument_list|,
@@ -1345,7 +1343,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -1374,7 +1372,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -1667,7 +1665,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ALLOW_USERNAMETOKEN_NOPASSWORD
 argument_list|,
@@ -1911,7 +1909,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -1966,7 +1964,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_REF_ID
 argument_list|,
@@ -2025,7 +2023,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_REF_ID
 argument_list|,
@@ -2080,7 +2078,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_REF_ID
 argument_list|,
@@ -2407,7 +2405,7 @@ name|action
 init|=
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -3022,7 +3020,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,

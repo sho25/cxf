@@ -255,9 +255,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|ConfigurationConstants
 import|;
 end_import
 
@@ -271,9 +271,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
+name|WSConstants
 import|;
 end_import
 
@@ -483,11 +481,11 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 argument_list|)
@@ -496,7 +494,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
@@ -507,7 +505,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -642,11 +640,11 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 argument_list|)
@@ -655,7 +653,7 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_TIMESTAMP
 argument_list|,
@@ -831,11 +829,11 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 argument_list|)
@@ -844,7 +842,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TTL_TIMESTAMP
 argument_list|,
@@ -984,11 +982,11 @@ name|msg
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 argument_list|)
@@ -1162,17 +1160,17 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 argument_list|)
@@ -1181,7 +1179,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -1453,17 +1451,17 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 argument_list|)
@@ -1472,7 +1470,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
@@ -1483,7 +1481,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -1494,7 +1492,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -1510,7 +1508,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,

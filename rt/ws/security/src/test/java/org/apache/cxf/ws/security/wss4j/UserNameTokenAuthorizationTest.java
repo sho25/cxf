@@ -249,9 +249,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|ConfigurationConstants
 import|;
 end_import
 
@@ -265,9 +265,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
+name|WSConstants
 import|;
 end_import
 
@@ -436,7 +434,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_PROP_FILE
 argument_list|,
@@ -447,7 +445,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
@@ -458,7 +456,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -521,7 +519,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_PROP_FILE
 argument_list|,
@@ -532,7 +530,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENC_PROP_FILE
 argument_list|,
@@ -543,7 +541,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USER
 argument_list|,
@@ -571,7 +569,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
@@ -590,7 +588,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPTION_USER
 argument_list|,
@@ -601,7 +599,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPTION_PARTS
 argument_list|,
@@ -619,7 +617,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -807,25 +805,25 @@ expr_stmt|;
 name|String
 name|actions
 init|=
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 decl_stmt|;
@@ -833,7 +831,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -844,7 +842,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -885,25 +883,25 @@ expr_stmt|;
 name|String
 name|actions
 init|=
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|TIMESTAMP
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 decl_stmt|;
@@ -911,7 +909,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -922,7 +920,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -983,13 +981,13 @@ expr_stmt|;
 name|String
 name|actions
 init|=
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 decl_stmt|;
@@ -997,7 +995,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1008,7 +1006,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1049,7 +1047,7 @@ expr_stmt|;
 name|String
 name|actions
 init|=
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 decl_stmt|;
@@ -1057,7 +1055,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1068,7 +1066,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1109,13 +1107,13 @@ expr_stmt|;
 name|String
 name|actions
 init|=
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 operator|+
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 decl_stmt|;
@@ -1123,7 +1121,7 @@ name|wsIn
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -1134,7 +1132,7 @@ name|wsOut
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,

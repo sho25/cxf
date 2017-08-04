@@ -607,6 +607,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|ConfigurationConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|cache
 operator|.
 name|ReplayCache
@@ -1628,7 +1642,7 @@ name|String
 operator|)
 name|getOption
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTOR
 argument_list|)
@@ -1722,7 +1736,7 @@ if|if
 condition|(
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|EXPAND_XOP_INCLUDE_FOR_SIGNATURE
 argument_list|,
@@ -1733,7 +1747,7 @@ literal|null
 operator|&&
 name|getString
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|EXPAND_XOP_INCLUDE
 argument_list|,
@@ -2849,7 +2863,7 @@ name|getProperty
 argument_list|(
 name|msg
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE_PARTS
 argument_list|)
@@ -3433,7 +3447,7 @@ name|String
 operator|)
 name|getOption
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|)
@@ -3454,7 +3468,7 @@ name|msg
 operator|.
 name|get
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|)

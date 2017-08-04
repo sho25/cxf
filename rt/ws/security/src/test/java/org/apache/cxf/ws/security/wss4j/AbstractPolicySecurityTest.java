@@ -613,6 +613,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|ConfigurationConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -2176,7 +2190,7 @@ name|action
 operator|+=
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIGNATURE
 expr_stmt|;
@@ -2188,7 +2202,7 @@ name|action
 operator|+=
 literal|" "
 operator|+
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ENCRYPT
 expr_stmt|;
@@ -2205,7 +2219,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
@@ -2216,7 +2230,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,
@@ -2227,7 +2241,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
@@ -2238,7 +2252,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
@@ -2254,7 +2268,7 @@ name|inHandler
 operator|.
 name|setProperty
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|IS_BSP_COMPLIANT
 argument_list|,
