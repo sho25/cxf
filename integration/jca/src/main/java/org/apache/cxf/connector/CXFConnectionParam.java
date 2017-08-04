@@ -371,8 +371,6 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getInterface
 argument_list|()
@@ -395,7 +393,6 @@ else|:
 literal|1
 operator|)
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -502,8 +499,6 @@ operator|==
 name|obj2
 return|;
 block|}
-else|else
-block|{
 return|return
 name|obj1
 operator|.
@@ -512,7 +507,6 @@ argument_list|(
 name|obj2
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

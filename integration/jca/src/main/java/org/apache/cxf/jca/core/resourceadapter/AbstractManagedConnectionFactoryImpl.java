@@ -440,8 +440,6 @@ return|return
 name|conn
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|isMatch
@@ -470,7 +468,6 @@ expr_stmt|;
 return|return
 name|conn
 return|;
-block|}
 block|}
 block|}
 return|return

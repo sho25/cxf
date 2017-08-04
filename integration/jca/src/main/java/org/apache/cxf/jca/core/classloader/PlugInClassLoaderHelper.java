@@ -267,8 +267,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 comment|// something with !/
 comment|// check for a nested directory reference
 if|if
@@ -287,8 +285,6 @@ literal|"Accessing contents of directories within jars is currently not supporte
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|String
 name|enclosingJar
 init|=
@@ -404,8 +400,6 @@ block|}
 return|return
 name|bytes
 return|;
-block|}
-block|}
 block|}
 comment|// failed to locate the resource
 return|return

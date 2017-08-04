@@ -148,8 +148,6 @@ name|bytes
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|java
@@ -166,7 +164,6 @@ operator|+
 literal|" not found"
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

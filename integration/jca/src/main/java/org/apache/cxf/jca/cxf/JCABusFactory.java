@@ -495,8 +495,6 @@ operator|)
 name|ex
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|ResourceAdapterInternalException
@@ -515,7 +513,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 finally|finally
 block|{
@@ -1290,9 +1287,6 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-operator|(
-name|long
-operator|)
 name|pollIntervalSeconds
 operator|*
 literal|1000L
