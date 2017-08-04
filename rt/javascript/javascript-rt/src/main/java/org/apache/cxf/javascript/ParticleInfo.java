@@ -2121,12 +2121,9 @@ return|return
 literal|"null"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|defaultValue
 return|;
-block|}
 block|}
 comment|/**      * @param defaultValue The defaultValue to set.      */
 specifier|public

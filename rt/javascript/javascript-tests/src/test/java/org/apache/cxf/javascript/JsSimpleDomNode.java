@@ -314,6 +314,7 @@ operator|.
 name|isEmpty
 argument_list|()
 condition|)
+block|{
 return|return
 name|children
 operator|.
@@ -322,7 +323,7 @@ argument_list|(
 literal|0
 argument_list|)
 return|;
-else|else
+block|}
 return|return
 literal|null
 return|;
@@ -420,8 +421,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|establishChildren
 argument_list|()
 expr_stmt|;
@@ -434,7 +433,6 @@ literal|0
 argument_list|)
 return|;
 comment|// it is, after all, just a convenience feature.
-block|}
 block|}
 specifier|public
 name|Object
@@ -506,8 +504,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|Attr
 name|attribute
 init|=
@@ -522,7 +518,6 @@ operator|.
 name|getValue
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -561,8 +556,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|Attr
 name|attribute
 init|=
@@ -577,7 +570,6 @@ operator|.
 name|getValue
 argument_list|()
 return|;
-block|}
 block|}
 comment|// CHECKSTYLE:ON
 specifier|public

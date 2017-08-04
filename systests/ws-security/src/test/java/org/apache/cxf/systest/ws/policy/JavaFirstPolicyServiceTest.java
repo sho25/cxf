@@ -371,9 +371,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|ConfigurationConstants
 import|;
 end_import
 
@@ -387,9 +387,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
+name|WSConstants
 import|;
 end_import
 
@@ -1823,11 +1821,11 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 argument_list|)
@@ -1836,7 +1834,7 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
@@ -1849,7 +1847,7 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -1860,7 +1858,7 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USER
 argument_list|,
@@ -1901,11 +1899,11 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USERNAME_TOKEN
 argument_list|)
@@ -1914,7 +1912,7 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
@@ -1927,7 +1925,7 @@ name|outProps
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|USER
 argument_list|,

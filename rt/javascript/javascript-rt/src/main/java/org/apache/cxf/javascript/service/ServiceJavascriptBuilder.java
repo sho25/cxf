@@ -3012,8 +3012,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"type "
 operator|+
@@ -3024,13 +3022,9 @@ argument_list|()
 return|;
 comment|// could it be anonymous?
 block|}
-block|}
-else|else
-block|{
 return|return
 literal|"empty element?"
 return|;
-block|}
 block|}
 specifier|private
 name|void
@@ -5206,8 +5200,6 @@ return|return
 literal|""
 return|;
 block|}
-else|else
-block|{
 return|return
 name|subject
 operator|.
@@ -5221,7 +5213,6 @@ operator|.
 name|getLineNumber
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -441,8 +441,6 @@ operator|==
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|beanTwoNotRequiredItem
 operator|.
@@ -453,7 +451,6 @@ operator|.
 name|beanTwoNotRequiredItem
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

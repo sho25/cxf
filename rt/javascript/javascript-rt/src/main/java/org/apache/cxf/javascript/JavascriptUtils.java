@@ -928,12 +928,9 @@ return|return
 literal|"''"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|val
 return|;
-block|}
 block|}
 specifier|public
 name|boolean
@@ -3409,8 +3406,6 @@ return|return
 name|results
 return|;
 block|}
-else|else
-block|{
 comment|// no base type, the simple case.
 name|XmlSchemaSequence
 name|sequence
@@ -3445,7 +3440,6 @@ block|}
 return|return
 name|results
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -3685,8 +3679,6 @@ return|return
 literal|""
 return|;
 block|}
-else|else
-block|{
 return|return
 name|subject
 operator|.
@@ -3700,7 +3692,6 @@ operator|.
 name|getLineNumber
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class
