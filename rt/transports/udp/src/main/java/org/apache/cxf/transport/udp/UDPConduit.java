@@ -967,9 +967,6 @@ name|ins
 operator|.
 name|setBuffer
 argument_list|(
-operator|(
-name|IoBuffer
-operator|)
 name|buf
 argument_list|)
 expr_stmt|;

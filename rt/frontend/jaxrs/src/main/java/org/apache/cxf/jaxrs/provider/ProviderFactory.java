@@ -4612,13 +4612,6 @@ condition|)
 block|{
 name|theProviderComparator
 operator|=
-call|(
-name|Comparator
-argument_list|<
-name|?
-argument_list|>
-call|)
-argument_list|(
 operator|new
 name|ProviderInfoClassComparator
 argument_list|(
@@ -4629,7 +4622,6 @@ name|Object
 argument_list|>
 operator|)
 name|theProviderComparator
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -4669,12 +4661,6 @@ name|Collections
 operator|.
 name|sort
 argument_list|(
-operator|(
-name|List
-argument_list|<
-name|T
-argument_list|>
-operator|)
 name|theProviders
 argument_list|,
 name|theComparator

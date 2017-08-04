@@ -652,7 +652,7 @@ name|verificationCache
 operator|.
 name|put
 argument_list|(
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|verifyMAPs
 argument_list|(

@@ -506,9 +506,6 @@ name|initialise
 argument_list|(
 name|endpi
 argument_list|,
-operator|(
-name|PolicyEngineImpl
-operator|)
 name|pe
 argument_list|,
 literal|false

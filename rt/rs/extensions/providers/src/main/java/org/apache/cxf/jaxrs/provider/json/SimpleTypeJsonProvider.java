@@ -797,12 +797,6 @@ name|T
 argument_list|>
 name|next
 init|=
-operator|(
-name|MessageBodyReader
-argument_list|<
-name|T
-argument_list|>
-operator|)
 name|providers
 operator|.
 name|getMessageBodyReader

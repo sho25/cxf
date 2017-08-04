@@ -383,11 +383,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|saml
-operator|.
-name|builder
-operator|.
-name|SAML2Constants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -399,9 +395,13 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|saml
+operator|.
+name|builder
+operator|.
+name|SAML2Constants
 import|;
 end_import
 
@@ -925,7 +925,7 @@ name|callbackHandler
 operator|.
 name|setDigestAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SHA256
 argument_list|)

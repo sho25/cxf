@@ -2105,8 +2105,6 @@ return|return
 name|cls
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getJaxbElementClass
 argument_list|(
@@ -2116,7 +2114,6 @@ name|getSuperclass
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|void

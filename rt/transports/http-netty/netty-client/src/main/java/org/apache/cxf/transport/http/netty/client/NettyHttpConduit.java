@@ -1251,9 +1251,6 @@ name|Message
 operator|.
 name|CONTENT_TYPE
 argument_list|,
-operator|(
-name|String
-operator|)
 name|message
 operator|.
 name|get
@@ -2041,9 +2038,6 @@ else|else
 block|{
 name|setException
 argument_list|(
-operator|(
-name|Exception
-operator|)
 name|future
 operator|.
 name|cause

@@ -1004,8 +1004,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|String
@@ -1079,7 +1077,6 @@ return|return
 name|stringValues
 return|;
 block|}
-block|}
 specifier|public
 name|Set
 argument_list|<
@@ -1117,8 +1114,6 @@ name|emptySet
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Set
 argument_list|<
 name|String
@@ -1152,7 +1147,6 @@ block|}
 return|return
 name|methods
 return|;
-block|}
 block|}
 specifier|public
 name|Map

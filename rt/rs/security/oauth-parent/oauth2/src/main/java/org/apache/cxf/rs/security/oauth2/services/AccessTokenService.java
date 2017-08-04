@@ -1019,9 +1019,6 @@ name|handler
 operator|.
 name|setDataProvider
 argument_list|(
-operator|(
-name|AuthorizationCodeDataProvider
-operator|)
 name|super
 operator|.
 name|getDataProvider

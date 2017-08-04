@@ -47,7 +47,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserInfo
+name|AbstractUserInfo
 import|;
 end_import
 
@@ -151,7 +151,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|UserInfo
+name|AbstractUserInfo
 operator|.
 name|PHONE_CLAIM
 argument_list|,

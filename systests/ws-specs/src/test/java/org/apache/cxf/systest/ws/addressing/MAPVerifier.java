@@ -244,7 +244,7 @@ name|mapProperties
 operator|.
 name|put
 argument_list|(
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|INBOUND_KEY
 argument_list|,
@@ -255,7 +255,7 @@ name|mapProperties
 operator|.
 name|put
 argument_list|(
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|OUTBOUND_KEY
 argument_list|,
@@ -321,11 +321,11 @@ name|get
 argument_list|(
 name|isOutbound
 condition|?
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|OUTBOUND_KEY
 else|:
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|INBOUND_KEY
 argument_list|)
@@ -453,7 +453,7 @@ name|verificationCache
 operator|.
 name|put
 argument_list|(
-name|MAPTest
+name|MAPTestBase
 operator|.
 name|verifyMAPs
 argument_list|(

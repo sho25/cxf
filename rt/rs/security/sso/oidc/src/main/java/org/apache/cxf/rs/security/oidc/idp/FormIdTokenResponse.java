@@ -74,9 +74,6 @@ name|getIdToken
 parameter_list|()
 block|{
 return|return
-operator|(
-name|String
-operator|)
 name|getParameters
 argument_list|()
 operator|.

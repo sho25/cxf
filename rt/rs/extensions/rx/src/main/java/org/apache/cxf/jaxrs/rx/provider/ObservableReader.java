@@ -305,12 +305,6 @@ name|T
 argument_list|>
 name|mbr
 init|=
-operator|(
-name|MessageBodyReader
-argument_list|<
-name|T
-argument_list|>
-operator|)
 name|providers
 operator|.
 name|getMessageBodyReader

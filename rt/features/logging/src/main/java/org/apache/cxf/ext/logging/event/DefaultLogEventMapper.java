@@ -1175,12 +1175,9 @@ operator|+
 name|query
 return|;
 block|}
-else|else
-block|{
 return|return
 name|uri
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -1443,8 +1440,6 @@ name|getOutMessage
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isOutbound
 condition|?
@@ -1458,7 +1453,6 @@ argument_list|()
 else|:
 name|message
 return|;
-block|}
 block|}
 specifier|private
 name|String
@@ -1745,8 +1739,6 @@ operator|.
 name|FAULT_OUT
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isRequestor
 condition|?
@@ -1759,9 +1751,6 @@ operator|.
 name|RESP_OUT
 return|;
 block|}
-block|}
-else|else
-block|{
 if|if
 condition|(
 name|isFault
@@ -1773,8 +1762,6 @@ operator|.
 name|FAULT_IN
 return|;
 block|}
-else|else
-block|{
 return|return
 name|isRequestor
 condition|?
@@ -1786,8 +1773,6 @@ name|EventType
 operator|.
 name|REQ_IN
 return|;
-block|}
-block|}
 block|}
 comment|/**      * For REST we also consider a response to be a fault if the operation is not found or the response code      * is an error      *      * @param message      * @return      */
 specifier|private
@@ -1822,8 +1807,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 name|Integer
 name|responseCode
 init|=
@@ -1852,7 +1835,6 @@ operator|>=
 literal|400
 operator|)
 return|;
-block|}
 block|}
 specifier|public
 name|void

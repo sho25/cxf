@@ -843,8 +843,6 @@ return|return
 name|separator
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|value
@@ -885,7 +883,6 @@ block|}
 return|return
 name|DEFAULT_COOKIE_SEPARATOR
 return|;
-block|}
 block|}
 specifier|private
 name|String
@@ -959,12 +956,9 @@ return|return
 name|separator
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|Locale
@@ -1168,8 +1162,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|MetadataMap
@@ -1189,7 +1181,6 @@ argument_list|,
 literal|false
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|List
@@ -1742,8 +1733,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|String
@@ -1777,7 +1766,6 @@ block|}
 return|return
 name|newValues
 return|;
-block|}
 block|}
 if|if
 condition|(

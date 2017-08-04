@@ -444,9 +444,6 @@ expr_stmt|;
 name|Book
 name|book
 init|=
-operator|(
-name|Book
-operator|)
 name|provider
 operator|.
 name|readFrom

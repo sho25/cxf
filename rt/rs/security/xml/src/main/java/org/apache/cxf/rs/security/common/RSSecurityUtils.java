@@ -408,9 +408,6 @@ literal|"POST"
 operator|.
 name|equals
 argument_list|(
-operator|(
-name|String
-operator|)
 name|requestMessage
 operator|.
 name|get

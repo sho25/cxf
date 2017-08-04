@@ -1033,9 +1033,6 @@ block|}
 name|SignableSAMLObject
 name|signableObject
 init|=
-operator|(
-name|SignableSAMLObject
-operator|)
 name|authnRequest
 decl_stmt|;
 name|signableObject

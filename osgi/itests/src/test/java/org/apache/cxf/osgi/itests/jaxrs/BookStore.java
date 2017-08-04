@@ -531,8 +531,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|b
 operator|.
 name|setName
@@ -552,7 +550,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|POST
@@ -791,8 +788,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|books
 operator|.
 name|put
@@ -845,7 +840,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|DELETE
@@ -901,8 +895,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -912,7 +904,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|void

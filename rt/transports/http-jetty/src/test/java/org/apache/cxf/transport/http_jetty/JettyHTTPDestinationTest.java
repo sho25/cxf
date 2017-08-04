@@ -4737,7 +4737,7 @@ name|inMessage
 operator|.
 name|get
 argument_list|(
-name|JettyHTTPDestination
+name|AbstractHTTPDestination
 operator|.
 name|HTTP_REQUEST
 argument_list|)
@@ -4753,7 +4753,7 @@ name|inMessage
 operator|.
 name|get
 argument_list|(
-name|JettyHTTPDestination
+name|AbstractHTTPDestination
 operator|.
 name|HTTP_RESPONSE
 argument_list|)
@@ -5242,7 +5242,7 @@ name|outMsg
 operator|.
 name|get
 argument_list|(
-name|JettyHTTPDestination
+name|AbstractHTTPDestination
 operator|.
 name|HTTP_RESPONSE
 argument_list|)
@@ -5259,7 +5259,7 @@ name|outMsg
 operator|.
 name|get
 argument_list|(
-name|JettyHTTPDestination
+name|AbstractHTTPDestination
 operator|.
 name|HTTP_RESPONSE
 argument_list|)

@@ -212,12 +212,7 @@ condition|)
 block|{
 name|is
 operator|=
-operator|(
-operator|(
-name|ResponseImpl
-operator|)
 name|r
-operator|)
 operator|.
 name|convertEntityToStreamIfPossible
 argument_list|()

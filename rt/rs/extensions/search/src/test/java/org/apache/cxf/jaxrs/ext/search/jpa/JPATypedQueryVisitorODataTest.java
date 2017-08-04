@@ -1028,9 +1028,6 @@ name|assertEquals
 argument_list|(
 literal|"num10"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|info
 index|[
 literal|1

@@ -133,11 +133,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|handler
-operator|.
-name|WSHandlerConstants
+name|ConfigurationConstants
 import|;
 end_import
 
@@ -211,11 +209,11 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|ACTION
 argument_list|,
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SAML_TOKEN_SIGNED
 argument_list|)
@@ -224,7 +222,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|PW_CALLBACK_REF
 argument_list|,
@@ -237,7 +235,7 @@ name|inProperties
 operator|.
 name|put
 argument_list|(
-name|WSHandlerConstants
+name|ConfigurationConstants
 operator|.
 name|SIG_VER_PROP_FILE
 argument_list|,

@@ -253,8 +253,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|path
 operator|.
@@ -263,7 +261,6 @@ argument_list|(
 name|index
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String

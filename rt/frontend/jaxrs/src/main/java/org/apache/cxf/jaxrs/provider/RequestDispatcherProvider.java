@@ -1754,9 +1754,6 @@ block|{
 name|Object
 name|resourcePathProp
 init|=
-operator|(
-name|String
-operator|)
 name|mc
 operator|.
 name|get

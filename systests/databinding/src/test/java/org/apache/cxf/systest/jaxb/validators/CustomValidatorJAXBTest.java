@@ -129,9 +129,6 @@ block|{
 name|HelloWorld
 name|client
 init|=
-operator|(
-name|HelloWorld
-operator|)
 name|applicationContext
 operator|.
 name|getBean
@@ -192,9 +189,6 @@ block|{
 name|HelloWorld
 name|client
 init|=
-operator|(
-name|HelloWorld
-operator|)
 name|applicationContext
 operator|.
 name|getBean
@@ -253,9 +247,6 @@ block|{
 name|HelloWorld
 name|client
 init|=
-operator|(
-name|HelloWorld
-operator|)
 name|applicationContext
 operator|.
 name|getBean

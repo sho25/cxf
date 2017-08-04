@@ -152,9 +152,6 @@ name|getHelloPort
 parameter_list|()
 block|{
 return|return
-operator|(
-name|Hello
-operator|)
 name|super
 operator|.
 name|getPort

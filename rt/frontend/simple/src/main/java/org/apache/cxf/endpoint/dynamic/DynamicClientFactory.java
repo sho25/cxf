@@ -337,6 +337,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamException
 import|;
 end_import
@@ -580,6 +592,18 @@ operator|.
 name|cxf
 operator|.
 name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|BusFactory
 import|;
 end_import
 
@@ -1302,7 +1326,7 @@ block|{
 name|Bus
 name|bus
 init|=
-name|CXFBusFactory
+name|BusFactory
 operator|.
 name|getThreadDefaultBus
 argument_list|()
@@ -6138,7 +6162,7 @@ if|if
 condition|(
 name|i
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)
@@ -6226,7 +6250,7 @@ if|if
 condition|(
 name|i
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_ELEMENT
 condition|)

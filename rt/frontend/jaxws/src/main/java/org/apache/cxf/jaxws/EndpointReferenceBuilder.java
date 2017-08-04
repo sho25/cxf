@@ -450,7 +450,7 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-name|W3CEndpointReference
+name|EndpointReference
 operator|.
 name|readFrom
 argument_list|(

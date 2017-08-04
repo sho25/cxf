@@ -9781,9 +9781,6 @@ name|setParameter
 argument_list|(
 literal|"base.path"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|m
 operator|.
 name|get

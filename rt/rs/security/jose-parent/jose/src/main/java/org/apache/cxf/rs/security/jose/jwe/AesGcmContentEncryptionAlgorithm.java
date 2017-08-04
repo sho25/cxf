@@ -155,10 +155,6 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-operator|(
-name|byte
-index|[]
-operator|)
 name|CryptoUtils
 operator|.
 name|decodeSequence
@@ -189,10 +185,6 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-operator|(
-name|byte
-index|[]
-operator|)
 name|CryptoUtils
 operator|.
 name|decodeSequence

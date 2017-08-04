@@ -367,9 +367,9 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|soap
-operator|.
 name|VersionTransformer
+operator|.
+name|Names200408
 import|;
 end_import
 
@@ -1551,8 +1551,6 @@ name|expectedExposedAs
 operator|.
 name|add
 argument_list|(
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_NAMESPACE_NAME
@@ -1564,8 +1562,6 @@ name|expectedExposedAs
 operator|.
 name|add
 argument_list|(
-name|VersionTransformer
-operator|.
 name|Names200408
 operator|.
 name|WSA_NAMESPACE_NAME

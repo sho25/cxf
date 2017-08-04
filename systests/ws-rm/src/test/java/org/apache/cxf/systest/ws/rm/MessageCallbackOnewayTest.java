@@ -2173,9 +2173,6 @@ name|callbacks
 operator|.
 name|wait
 argument_list|(
-operator|(
-name|long
-operator|)
 name|delay
 argument_list|)
 expr_stmt|;

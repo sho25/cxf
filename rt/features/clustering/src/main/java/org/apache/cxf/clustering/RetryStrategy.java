@@ -159,8 +159,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 name|counter
 operator|=
 literal|0
@@ -168,7 +166,6 @@ expr_stmt|;
 return|return
 literal|false
 return|;
-block|}
 block|}
 specifier|public
 name|void

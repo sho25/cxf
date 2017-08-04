@@ -1125,14 +1125,11 @@ name|parameters
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|MediaType
 operator|.
 name|WILDCARD_TYPE
 return|;
-block|}
 block|}
 block|}
 name|Message
@@ -1244,8 +1241,6 @@ return|return
 name|mt
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IllegalArgumentException
@@ -1253,7 +1248,6 @@ argument_list|(
 literal|"Media type separator is missing"
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 end_class
