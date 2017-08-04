@@ -822,10 +822,7 @@ name|i
 index|]
 return|;
 block|}
-else|else
-block|{
 continue|continue;
-block|}
 block|}
 return|return
 literal|null

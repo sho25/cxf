@@ -625,8 +625,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|ObjectName
 name|serviceCountername
 init|=
@@ -667,7 +665,6 @@ argument_list|,
 name|mhtr
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|protected
 name|ObjectName

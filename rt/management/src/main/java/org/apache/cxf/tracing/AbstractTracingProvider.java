@@ -286,8 +286,6 @@ return|return
 name|path
 return|;
 block|}
-else|else
-block|{
 return|return
 name|method
 operator|+
@@ -295,7 +293,6 @@ literal|" "
 operator|+
 name|path
 return|;
-block|}
 block|}
 block|}
 end_class
