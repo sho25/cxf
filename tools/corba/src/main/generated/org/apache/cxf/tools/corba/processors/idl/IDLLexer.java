@@ -2728,8 +2728,6 @@ name|io
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|TokenStreamException
@@ -2740,7 +2738,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
@@ -5920,8 +5917,6 @@ break|break
 name|_loop332
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -5941,7 +5936,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt332
 operator|++
@@ -8817,8 +8811,6 @@ break|break
 name|_loop361
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -8838,7 +8830,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt361
 operator|++
@@ -9262,8 +9253,6 @@ break|break
 name|_loop373
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -9283,7 +9272,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt373
 operator|++
@@ -9581,8 +9569,6 @@ break|break
 name|_loop378
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -9602,7 +9588,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt378
 operator|++
@@ -9876,8 +9861,6 @@ break|break
 name|_loop383
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -9897,7 +9880,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt383
 operator|++
@@ -10147,8 +10129,6 @@ break|break
 name|_loop387
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -10168,7 +10148,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt387
 operator|++
@@ -10389,8 +10368,6 @@ break|break
 name|_loop392
 break|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NoViableAltForCharException
@@ -10410,7 +10387,6 @@ name|getColumn
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 name|_cnt392
 operator|++

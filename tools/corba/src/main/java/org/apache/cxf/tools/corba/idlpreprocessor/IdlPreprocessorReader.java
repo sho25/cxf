@@ -389,8 +389,6 @@ operator|-
 literal|1
 return|;
 block|}
-else|else
-block|{
 return|return
 name|buf
 operator|.
@@ -400,7 +398,6 @@ name|readPos
 operator|++
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|void

@@ -891,15 +891,12 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|resolvePartType
 argument_list|(
 name|part
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -969,15 +966,12 @@ return|return
 name|primitiveType
 return|;
 block|}
-else|else
-block|{
 return|return
 name|resolvePartType
 argument_list|(
 name|part
 argument_list|)
 return|;
-block|}
 block|}
 name|String
 name|name
@@ -1158,12 +1152,9 @@ operator|+
 name|result
 return|;
 block|}
-else|else
-block|{
 return|return
 name|result
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1246,8 +1237,6 @@ return|return
 name|location
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|File
@@ -1265,7 +1254,6 @@ argument_list|,
 literal|'/'
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1296,8 +1284,6 @@ name|location
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|File
@@ -1314,7 +1300,6 @@ operator|.
 name|toURL
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1344,8 +1329,6 @@ return|return
 name|className
 return|;
 block|}
-else|else
-block|{
 name|str
 operator|=
 name|className
@@ -1357,7 +1340,6 @@ argument_list|,
 literal|"/"
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|str
 return|;

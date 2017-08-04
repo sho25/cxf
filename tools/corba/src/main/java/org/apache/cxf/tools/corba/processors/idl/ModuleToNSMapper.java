@@ -342,8 +342,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|String
 name|uri
 init|=
@@ -509,7 +507,6 @@ return|return
 name|uri
 return|;
 block|}
-block|}
 specifier|public
 name|String
 name|mapToQName
@@ -530,15 +527,12 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|scope
 operator|.
 name|tail
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 name|String

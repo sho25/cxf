@@ -1505,15 +1505,12 @@ return|return
 name|methods
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Collections
 operator|.
 name|emptySet
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -1549,8 +1546,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"first"
 operator|.
@@ -1565,7 +1560,6 @@ name|trim
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 comment|//TODO: this belongs to JAXB Databinding, should we just reuse
 comment|// org.apache.cxf.tools.wsdlto.databinding.jaxb ?

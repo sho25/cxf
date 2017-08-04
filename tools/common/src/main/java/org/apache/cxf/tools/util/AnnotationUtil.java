@@ -745,15 +745,12 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 name|WebResult
 operator|)
 name|ann
 return|;
-block|}
 block|}
 block|}
 end_class

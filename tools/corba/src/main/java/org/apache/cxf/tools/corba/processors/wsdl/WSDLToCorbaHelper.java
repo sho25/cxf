@@ -4688,8 +4688,6 @@ literal|false
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|// if the type of the simpleContent is a list with another simple type.
 name|XmlSchemaType
 name|base
@@ -4751,7 +4749,6 @@ argument_list|,
 literal|false
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 elseif|else
@@ -5590,8 +5587,6 @@ return|return
 name|schemaType
 return|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|XmlSchemaExternal
@@ -5635,7 +5630,6 @@ block|{
 return|return
 name|schemaType
 return|;
-block|}
 block|}
 block|}
 block|}
@@ -6030,8 +6024,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|WSDLTypes
 operator|.
@@ -6054,9 +6046,6 @@ name|anonymous
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|WSDLTypes
 operator|.
@@ -6079,9 +6068,6 @@ name|anonymous
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|WSDLTypes
 operator|.
@@ -6103,7 +6089,6 @@ argument_list|,
 name|anonymous
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|CorbaType
@@ -9987,12 +9972,9 @@ name|prefix
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 return|return
 name|name

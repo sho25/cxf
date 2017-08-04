@@ -1921,8 +1921,6 @@ block|{
 comment|// nothing to do here, move along
 return|return;
 block|}
-else|else
-block|{
 name|ParamTypeSpecVisitor
 name|visitor
 init|=
@@ -1990,7 +1988,6 @@ argument_list|,
 name|RETURN_PARAMETER
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|private
 name|void

@@ -1458,8 +1458,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|QName
@@ -1525,8 +1523,6 @@ condition|)
 block|{
 continue|continue;
 block|}
-else|else
-block|{
 name|portTypes
 operator|.
 name|add
@@ -1540,7 +1536,6 @@ name|getQName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 name|generateIDL
 argument_list|(
 name|def
@@ -1555,7 +1550,6 @@ operator|.
 name|create
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 name|printWriter
@@ -2808,8 +2802,6 @@ operator|)
 name|defn
 return|;
 block|}
-else|else
-block|{
 name|String
 name|msgStr
 init|=
@@ -2859,9 +2851,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-block|}
-else|else
-block|{
 try|try
 block|{
 name|idlType
@@ -2887,7 +2876,6 @@ operator|.
 name|printStackTrace
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return

@@ -1091,8 +1091,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 name|operationMap
 operator|.
 name|add
@@ -1100,7 +1098,6 @@ argument_list|(
 name|operationName
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 literal|false
 return|;

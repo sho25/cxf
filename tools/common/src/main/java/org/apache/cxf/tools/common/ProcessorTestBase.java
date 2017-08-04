@@ -1177,8 +1177,6 @@ condition|)
 block|{
 break|break;
 block|}
-else|else
-block|{
 name|unmatched
 operator|.
 name|add
@@ -1186,7 +1184,6 @@ argument_list|(
 name|tok2
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|assertEquals
 argument_list|(

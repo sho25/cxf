@@ -1103,8 +1103,6 @@ condition|)
 block|{
 continue|continue;
 block|}
-else|else
-block|{
 if|if
 condition|(
 operator|!
@@ -1124,7 +1122,6 @@ block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 return|return
@@ -1158,8 +1155,6 @@ name|value
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|packageName
 init|=
@@ -1188,7 +1183,6 @@ argument_list|(
 name|packageName
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|boolean

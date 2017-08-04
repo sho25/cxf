@@ -243,12 +243,9 @@ operator|.
 name|DEFAULT_PACKAGE_NAME
 return|;
 block|}
-else|else
-block|{
 return|return
 name|pkg
 return|;
-block|}
 block|}
 specifier|protected
 name|Collection

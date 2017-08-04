@@ -2241,15 +2241,12 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|b
 operator|.
 name|getQName
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 block|}

@@ -1014,12 +1014,9 @@ literal|"value"
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"default"
 return|;
-block|}
 block|}
 specifier|public
 name|String

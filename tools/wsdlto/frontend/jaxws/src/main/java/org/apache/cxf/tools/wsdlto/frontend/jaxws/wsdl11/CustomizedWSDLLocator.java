@@ -324,8 +324,6 @@ name|base
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|resolvedMap
 operator|.
 name|put
@@ -347,7 +345,6 @@ argument_list|,
 name|base
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

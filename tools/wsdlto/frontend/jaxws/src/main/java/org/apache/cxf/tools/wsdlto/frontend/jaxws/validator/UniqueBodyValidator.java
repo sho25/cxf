@@ -608,8 +608,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|uniqueNames
 operator|.
 name|put
@@ -660,7 +658,6 @@ argument_list|(
 name|action
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 for|for

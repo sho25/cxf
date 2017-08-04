@@ -537,8 +537,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|partName
@@ -578,7 +576,6 @@ expr_stmt|;
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 block|}

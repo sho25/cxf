@@ -576,15 +576,12 @@ return|return
 name|defaultValue
 return|;
 block|}
-else|else
-block|{
 return|return
 name|get
 argument_list|(
 name|key
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * avoid need to suppress warnings on string->object cases.      * @param<T>      * @param key      * @param clazz      * @return      */
 specifier|public
@@ -852,8 +849,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|ToolConstants
 operator|.
@@ -871,7 +866,6 @@ argument_list|(
 name|verboseProperty
 argument_list|)
 return|;
-block|}
 block|}
 comment|// REVIST: Prefer using optionSet, to keep the context clean
 specifier|public
@@ -1239,8 +1233,6 @@ name|ns
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|getPackageName
@@ -1264,7 +1256,6 @@ argument_list|,
 literal|null
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -1460,8 +1451,6 @@ name|localname
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|QName
@@ -1471,7 +1460,6 @@ argument_list|,
 name|localname
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null

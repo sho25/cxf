@@ -254,8 +254,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WSDLException
@@ -269,7 +267,6 @@ operator|+
 literal|"implementation."
 argument_list|)
 throw|;
-block|}
 block|}
 comment|/**      * Create a new instance of a WSDLWriter.      */
 specifier|public
