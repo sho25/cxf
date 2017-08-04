@@ -107,14 +107,11 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"Hello "
 operator|+
 name|me
 return|;
-block|}
 block|}
 specifier|public
 name|String

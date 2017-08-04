@@ -591,8 +591,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|o
 operator|=
 name|createXPath
@@ -627,14 +625,10 @@ name|assertEquals
 argument_list|(
 name|value
 argument_list|,
-operator|(
-name|String
-operator|)
 name|o
 argument_list|)
 expr_stmt|;
 return|return;
-block|}
 block|}
 throw|throw
 operator|new
@@ -749,8 +743,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|o
 operator|=
 name|createXPath
@@ -804,7 +796,6 @@ name|q2
 argument_list|)
 expr_stmt|;
 return|return;
-block|}
 block|}
 throw|throw
 operator|new

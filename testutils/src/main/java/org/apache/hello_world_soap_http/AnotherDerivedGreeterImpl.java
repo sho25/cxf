@@ -324,8 +324,6 @@ name|intValue
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|System
 operator|.
 name|out
@@ -340,7 +338,6 @@ expr_stmt|;
 return|return
 literal|0
 return|;
-block|}
 block|}
 comment|/**      * overloaded method - present for test purposes      */
 specifier|public
