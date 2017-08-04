@@ -264,7 +264,7 @@ specifier|final
 name|String
 name|PORT
 init|=
-name|ReactiveServer
+name|ObservableServer
 operator|.
 name|PORT
 decl_stmt|;
@@ -289,7 +289,7 @@ literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|ReactiveServer
+name|ObservableServer
 operator|.
 name|class
 argument_list|,
@@ -317,7 +317,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/text"
+literal|"/observable/text"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -370,7 +370,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textAsync"
+literal|"/observable/textAsync"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -423,7 +423,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/text"
+literal|"/observable/text"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -530,7 +530,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textJson"
+literal|"/observable/textJson"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -605,7 +605,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textJsonList"
+literal|"/observable/textJsonList"
 decl_stmt|;
 name|doTestGetHelloWorldJsonList
 argument_list|(
@@ -629,7 +629,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textJsonImplicitList"
+literal|"/observable/textJsonImplicitList"
 decl_stmt|;
 name|doTestGetHelloWorldJsonList
 argument_list|(
@@ -653,7 +653,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textJsonImplicitListAsync"
+literal|"/observable/textJsonImplicitListAsync"
 decl_stmt|;
 name|doTestGetHelloWorldJsonList
 argument_list|(
@@ -677,7 +677,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textJsonImplicitListAsyncStream"
+literal|"/observable/textJsonImplicitListAsyncStream"
 decl_stmt|;
 name|doTestGetHelloWorldJsonList
 argument_list|(
@@ -857,7 +857,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textAsync"
+literal|"/observable/textAsync"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -956,7 +956,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/reactive/textAsync404"
+literal|"/observable/textAsync404"
 decl_stmt|;
 name|Invocation
 operator|.
