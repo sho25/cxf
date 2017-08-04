@@ -590,13 +590,10 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|foundTagOption
 operator|=
 literal|true
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
