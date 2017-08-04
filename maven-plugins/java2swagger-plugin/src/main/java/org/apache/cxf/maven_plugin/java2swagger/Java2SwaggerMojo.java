@@ -396,7 +396,7 @@ name|String
 argument_list|>
 name|resourcePackages
 decl_stmt|;
-comment|/**      * @parameter default-value="1.0.0"      */
+comment|/**      * @parameter default-value="${project.version}"      */
 specifier|private
 name|String
 name|version
@@ -406,12 +406,12 @@ specifier|private
 name|String
 name|basePath
 decl_stmt|;
-comment|/**      * @parameter default-value="Sample REST Application"      */
+comment|/**      * @parameter default-value="${project.name}"      */
 specifier|private
 name|String
 name|title
 decl_stmt|;
-comment|/**      * @parameter default-value="The Application"      */
+comment|/**      * @parameter default-value="${project.description}"      */
 specifier|private
 name|String
 name|description
