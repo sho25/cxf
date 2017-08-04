@@ -1417,8 +1417,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SoapFault
@@ -1447,7 +1445,6 @@ name|getSender
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

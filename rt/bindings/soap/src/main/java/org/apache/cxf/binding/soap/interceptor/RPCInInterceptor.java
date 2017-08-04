@@ -91,6 +91,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamException
 import|;
 end_import
@@ -792,8 +804,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|setMessage
 argument_list|(
 name|message
@@ -801,7 +811,6 @@ argument_list|,
 name|operation
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
@@ -975,7 +984,7 @@ operator|.
 name|getEventType
 argument_list|()
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_ELEMENT
 condition|)

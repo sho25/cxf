@@ -175,7 +175,7 @@ name|evProducer
 expr_stmt|;
 name|currentState
 operator|=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 expr_stmt|;
@@ -254,7 +254,7 @@ if|if
 condition|(
 name|currentState
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 condition|)
@@ -278,14 +278,14 @@ name|hasNextEvent
 operator|&&
 name|currentState
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 condition|)
 block|{
 name|currentState
 operator|=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 expr_stmt|;
@@ -309,7 +309,7 @@ if|if
 condition|(
 name|currentState
 operator|==
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 condition|)
@@ -319,7 +319,7 @@ operator|=
 literal|0
 expr_stmt|;
 return|return
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|START_DOCUMENT
 return|;
@@ -332,7 +332,7 @@ if|if
 condition|(
 name|currentState
 operator|!=
-name|XMLStreamReader
+name|XMLStreamConstants
 operator|.
 name|END_DOCUMENT
 condition|)

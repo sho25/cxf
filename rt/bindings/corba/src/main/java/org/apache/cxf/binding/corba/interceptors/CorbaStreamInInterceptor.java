@@ -2315,8 +2315,6 @@ name|getNamespaceURI
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|part
 operator|.
@@ -2326,7 +2324,6 @@ operator|.
 name|getNamespaceURI
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

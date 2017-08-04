@@ -2115,15 +2115,12 @@ name|getOutput
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|oi
 operator|.
 name|getInput
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -371,12 +371,9 @@ name|getStyle
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|style
 return|;
-block|}
 block|}
 specifier|public
 name|OperationInfo

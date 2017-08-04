@@ -339,9 +339,6 @@ expr_stmt|;
 name|BindingOperationInfo
 name|operation
 init|=
-operator|(
-name|BindingOperationInfo
-operator|)
 name|message
 operator|.
 name|getExchange

@@ -487,13 +487,10 @@ name|next
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|nd
 operator|=
 literal|null
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
@@ -1386,9 +1383,6 @@ argument_list|)
 expr_stmt|;
 name|adjustPrefix
 argument_list|(
-operator|(
-name|SOAPElement
-operator|)
 name|el
 argument_list|,
 name|pfx

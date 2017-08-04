@@ -1147,8 +1147,6 @@ literal|0x000000ff
 operator|)
 return|;
 block|}
-else|else
-block|{
 name|int
 name|partial
 init|=
@@ -1211,7 +1209,6 @@ operator|&
 literal|0xff000000
 operator|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
