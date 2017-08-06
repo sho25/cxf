@@ -197,6 +197,22 @@ specifier|private
 specifier|static
 specifier|final
 name|int
+name|CONSTANT_METHOD_HANDLE
+init|=
+literal|15
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|CONSTANT_METHOD_TYPE
+init|=
+literal|16
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
 name|CONSTANT_STRING
 init|=
 literal|8
@@ -248,6 +264,14 @@ name|int
 name|CONSTANT_UTF_8
 init|=
 literal|1
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|CONSTANT_INVOKE_DYNAMIC
+init|=
+literal|18
 decl_stmt|;
 comment|/**      * the constant pool. constant pool indices in the class file directly index      * into this array. The value stored in this array is the position in the      * class file where that constant begins.      */
 specifier|private
@@ -1779,6 +1803,10 @@ case|:
 case|case
 name|CONSTANT_NAME_AND_TYPE
 case|:
+case|case
+name|CONSTANT_INVOKE_DYNAMIC
+case|:
+comment|// 2x short: (bootstrap-method, name-and-type)
 name|readShort
 argument_list|()
 expr_stmt|;
@@ -1789,15 +1817,30 @@ expr_stmt|;
 comment|// string index or class index
 break|break;
 case|case
+name|CONSTANT_METHOD_HANDLE
+case|:
+name|read
+argument_list|()
+expr_stmt|;
+comment|// reference kind
+name|readShort
+argument_list|()
+expr_stmt|;
+comment|// reference index
+break|break;
+case|case
 name|CONSTANT_CLASS
 case|:
 case|case
 name|CONSTANT_STRING
 case|:
+case|case
+name|CONSTANT_METHOD_TYPE
+case|:
 name|readShort
 argument_list|()
 expr_stmt|;
-comment|// string index or class index
+comment|// string-, class- or method-index
 break|break;
 case|case
 name|CONSTANT_LONG
@@ -1850,7 +1893,13 @@ comment|// corrupt class file
 throw|throw
 operator|new
 name|IllegalStateException
-argument_list|()
+argument_list|(
+literal|"unhandled constant \""
+operator|+
+name|c
+operator|+
+literal|"\""
+argument_list|)
 throw|;
 block|}
 block|}
