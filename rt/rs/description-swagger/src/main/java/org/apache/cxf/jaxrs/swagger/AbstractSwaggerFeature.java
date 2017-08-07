@@ -180,8 +180,6 @@ decl_stmt|;
 specifier|private
 name|String
 name|version
-init|=
-literal|"1.0.0"
 decl_stmt|;
 comment|// depending on swagger version basePath is set differently
 specifier|private
@@ -191,20 +189,14 @@ decl_stmt|;
 specifier|private
 name|String
 name|title
-init|=
-literal|"Sample REST Application"
 decl_stmt|;
 specifier|private
 name|String
 name|description
-init|=
-literal|"The Application"
 decl_stmt|;
 specifier|private
 name|String
 name|contact
-init|=
-literal|"users@cxf.apache.org"
 decl_stmt|;
 specifier|private
 name|String

@@ -95,16 +95,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|LinkedHashSet
 import|;
 end_import
@@ -416,7 +406,7 @@ specifier|private
 name|String
 name|description
 decl_stmt|;
-comment|/**      * @parameter default-value="users@cxf.apache.org"      */
+comment|/**      * @parameter      */
 specifier|private
 name|String
 name|contact
@@ -431,7 +421,7 @@ specifier|private
 name|String
 name|licenseUrl
 decl_stmt|;
-comment|/**      * @parameter default-value="example.cxf.apache.org:8181"      */
+comment|/**      * @parameter      */
 specifier|private
 name|String
 name|host
@@ -1228,21 +1218,11 @@ argument_list|)
 expr_stmt|;
 name|swaggerContact
 operator|.
-name|email
+name|name
 argument_list|(
 name|this
 operator|.
 name|contact
-argument_list|)
-operator|.
-name|name
-argument_list|(
-literal|"Apache CXF"
-argument_list|)
-operator|.
-name|url
-argument_list|(
-literal|"http://cxf.apache.org/"
 argument_list|)
 expr_stmt|;
 name|info
@@ -1290,49 +1270,10 @@ condition|(
 name|this
 operator|.
 name|schemes
-operator|==
+operator|!=
 literal|null
-operator|||
-name|this
-operator|.
-name|schemes
-operator|.
-name|size
-argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
-name|this
-operator|.
-name|schemes
-operator|=
-operator|new
-name|ArrayList
-argument_list|<
-name|String
-argument_list|>
-argument_list|()
-expr_stmt|;
-name|this
-operator|.
-name|schemes
-operator|.
-name|add
-argument_list|(
-literal|"http"
-argument_list|)
-expr_stmt|;
-name|this
-operator|.
-name|schemes
-operator|.
-name|add
-argument_list|(
-literal|"https"
-argument_list|)
-expr_stmt|;
-block|}
 for|for
 control|(
 name|String
@@ -1355,6 +1296,7 @@ name|scheme
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|swagger
 operator|.
