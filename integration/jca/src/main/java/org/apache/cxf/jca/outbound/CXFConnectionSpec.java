@@ -29,6 +29,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|resource
@@ -48,20 +58,6 @@ operator|.
 name|namespace
 operator|.
 name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|lang3
-operator|.
-name|ObjectUtils
 import|;
 end_import
 
@@ -324,7 +320,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -344,7 +340,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -364,7 +360,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -384,7 +380,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -404,7 +400,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -422,7 +418,7 @@ literal|false
 return|;
 block|}
 return|return
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(

@@ -1548,8 +1548,6 @@ name|supportProtocols
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|Sequence
 argument_list|<
 name|String
@@ -1579,7 +1577,6 @@ argument_list|,
 name|supportProtocols
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Undertow

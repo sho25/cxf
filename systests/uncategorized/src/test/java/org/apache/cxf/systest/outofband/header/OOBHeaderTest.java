@@ -739,10 +739,6 @@ condition|(
 name|oobHdr
 operator|!=
 literal|null
-operator|&
-name|oobHdr
-operator|instanceof
-name|List
 condition|)
 block|{
 name|Iterator

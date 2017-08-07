@@ -87,18 +87,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|soap
-operator|.
-name|Node
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -558,6 +546,12 @@ operator|.
 name|getNodeType
 argument_list|()
 operator|==
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
 name|Node
 operator|.
 name|TEXT_NODE

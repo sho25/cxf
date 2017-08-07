@@ -415,8 +415,6 @@ condition|)
 block|{
 return|return;
 block|}
-else|else
-block|{
 name|nurl
 operator|=
 operator|new
@@ -428,7 +426,6 @@ name|endpointInfo
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 name|engine
 operator|=
 name|serverEngineFactory

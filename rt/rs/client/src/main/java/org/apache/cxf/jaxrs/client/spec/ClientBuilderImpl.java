@@ -215,7 +215,7 @@ name|jaxrs
 operator|.
 name|client
 operator|.
-name|WebClient
+name|AbstractClient
 import|;
 end_import
 
@@ -806,7 +806,7 @@ name|configImpl
 operator|.
 name|property
 argument_list|(
-name|WebClient
+name|AbstractClient
 operator|.
 name|EXECUTOR_SERVICE_PROPERTY
 argument_list|,

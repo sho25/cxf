@@ -822,7 +822,15 @@ name|message
 operator|.
 name|get
 argument_list|(
-name|SoapMessage
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
 operator|.
 name|HTTP_REQUEST_METHOD
 argument_list|)

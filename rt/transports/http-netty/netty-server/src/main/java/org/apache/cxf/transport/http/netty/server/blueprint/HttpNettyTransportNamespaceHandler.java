@@ -255,8 +255,6 @@ literal|"schemas/configuration/http-netty-server.xsd"
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -265,7 +263,6 @@ argument_list|(
 name|s
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings

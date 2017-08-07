@@ -43,6 +43,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Set
 import|;
 end_import
@@ -176,20 +186,6 @@ operator|.
 name|auth
 operator|.
 name|Subject
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|lang3
-operator|.
-name|ObjectUtils
 import|;
 end_import
 
@@ -554,7 +550,7 @@ operator|)
 name|o
 decl_stmt|;
 return|return
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -720,7 +716,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(
@@ -741,7 +737,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|ObjectUtils
+name|Objects
 operator|.
 name|equals
 argument_list|(

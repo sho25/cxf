@@ -3017,8 +3017,6 @@ name|result
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|result
 operator|.
@@ -3038,7 +3036,6 @@ argument_list|(
 name|result
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Close the conduit      */
 specifier|public
@@ -4022,12 +4019,9 @@ return|return
 name|location
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 block|}
@@ -5264,12 +5258,9 @@ literal|"configuration property \"disableCNCheck\" to true."
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|e
 throw|;
-block|}
 block|}
 block|}
 specifier|protected
@@ -7812,8 +7803,6 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|String
 name|msg
 init|=
@@ -7846,13 +7835,9 @@ name|msg
 argument_list|)
 throw|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|newURL
 return|;
-block|}
 block|}
 specifier|private
 specifier|static

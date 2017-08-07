@@ -468,8 +468,6 @@ return|return
 name|totalRead
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|this
@@ -482,13 +480,9 @@ operator|-
 literal|1
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|0
 return|;
-block|}
-block|}
 block|}
 finally|finally
 block|{

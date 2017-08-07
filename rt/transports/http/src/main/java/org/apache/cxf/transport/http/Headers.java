@@ -2694,12 +2694,9 @@ operator|+
 name|enc
 return|;
 block|}
-else|else
-block|{
 return|return
 name|ct
 return|;
-block|}
 block|}
 comment|// Assumes that response body is not available only
 comment|// if Content-Length is available and set to 0
@@ -3054,12 +3051,6 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
-comment|// We may consider introducing CXF HeaderDelegate interface
-comment|// so that the below code may be pushed back to the JAX-RS
-comment|// front-end where non String header objects are more likely
-comment|// to be set. Though the below code may be generally useful
 name|String
 name|headerString
 decl_stmt|;
@@ -3113,7 +3104,6 @@ block|}
 return|return
 name|headerString
 return|;
-block|}
 block|}
 name|void
 name|removeContentType

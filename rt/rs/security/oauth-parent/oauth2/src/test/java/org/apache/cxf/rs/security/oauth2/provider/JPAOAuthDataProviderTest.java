@@ -1397,6 +1397,11 @@ expr_stmt|;
 block|}
 comment|/**      * Checks that having multiple token each with its own      * userSubject (but having same login) works.      */
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"cast"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void

@@ -6834,15 +6834,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|Assert
-operator|.
-name|assertTrue
-argument_list|(
-name|element
-operator|instanceof
-name|JAXBElement
-argument_list|)
-expr_stmt|;
 return|return
 name|element
 return|;

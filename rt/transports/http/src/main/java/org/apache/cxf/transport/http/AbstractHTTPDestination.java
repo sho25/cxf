@@ -1758,12 +1758,9 @@ operator|)
 name|cause
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -3892,8 +3889,6 @@ name|intValue
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|int
 name|code
 init|=
@@ -3925,7 +3920,6 @@ expr_stmt|;
 return|return
 name|code
 return|;
-block|}
 block|}
 comment|/**      * Determines if the current message has no response content.      * The message has no response content if either:      *  - the request is oneway and the current message is no partial      *    response or an empty partial response.      *  - the request is not oneway but the current message is an empty partial      *    response.      * @param message      * @return      */
 specifier|private

@@ -369,8 +369,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|// There is a policy but no Proxy configuration,
 comment|// fallback on the system proxy configuration
 return|return
@@ -383,9 +381,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 comment|// Use system proxy configuration
 return|return
 name|getSystemProxy
@@ -396,7 +391,6 @@ name|getHost
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Get the system proxy (if any) for the given URL's host.      */
 specifier|private

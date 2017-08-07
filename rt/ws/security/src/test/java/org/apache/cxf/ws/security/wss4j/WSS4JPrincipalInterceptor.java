@@ -184,7 +184,7 @@ name|SoapFault
 argument_list|(
 literal|"No Security Context"
 argument_list|,
-name|SoapFault
+name|Fault
 operator|.
 name|FAULT_CODE_SERVER
 argument_list|)
@@ -211,7 +211,7 @@ name|SoapFault
 argument_list|(
 literal|"No Security Principal"
 argument_list|,
-name|SoapFault
+name|Fault
 operator|.
 name|FAULT_CODE_SERVER
 argument_list|)
@@ -241,7 +241,7 @@ name|SoapFault
 argument_list|(
 literal|"Security Principal does not match"
 argument_list|,
-name|SoapFault
+name|Fault
 operator|.
 name|FAULT_CODE_SERVER
 argument_list|)
