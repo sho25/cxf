@@ -180,8 +180,6 @@ name|TOKEN_REJECTED
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|Long
 name|issuedAt
 init|=
@@ -239,7 +237,6 @@ operator|.
 name|TOKEN_EXPIRED
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

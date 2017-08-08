@@ -371,8 +371,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|Integer
 name|responseCode
 init|=
@@ -402,7 +400,6 @@ block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 name|Document
 name|doc

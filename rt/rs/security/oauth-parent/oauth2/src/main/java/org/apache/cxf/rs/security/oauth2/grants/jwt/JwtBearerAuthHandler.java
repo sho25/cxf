@@ -586,8 +586,6 @@ literal|null
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|message
 operator|.
 name|put
@@ -599,7 +597,6 @@ argument_list|,
 name|client
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|JwtToken
 name|token

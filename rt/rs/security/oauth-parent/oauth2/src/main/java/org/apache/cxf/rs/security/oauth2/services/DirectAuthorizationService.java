@@ -643,8 +643,6 @@ return|return
 name|subject
 return|;
 block|}
-else|else
-block|{
 return|return
 name|OAuthUtils
 operator|.
@@ -653,7 +651,6 @@ argument_list|(
 name|securityContext
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|SubjectCreator

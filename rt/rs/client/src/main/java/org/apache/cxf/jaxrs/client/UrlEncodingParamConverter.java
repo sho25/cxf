@@ -208,8 +208,6 @@ name|s
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|StringBuilder
 name|sb
 init|=
@@ -288,7 +286,6 @@ operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

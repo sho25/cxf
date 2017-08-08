@@ -468,15 +468,12 @@ name|NO_INIT_PROPERTIES
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|Collections
 operator|.
 name|emptyList
 argument_list|()
 return|;
-block|}
 block|}
 name|List
 argument_list|<

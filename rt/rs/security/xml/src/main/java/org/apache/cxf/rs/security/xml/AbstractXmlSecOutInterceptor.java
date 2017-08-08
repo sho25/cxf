@@ -558,8 +558,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|objs
 operator|.
@@ -568,7 +566,6 @@ argument_list|(
 literal|0
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings

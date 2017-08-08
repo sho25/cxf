@@ -2100,8 +2100,6 @@ operator|!=
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Boolean
 operator|.
@@ -2113,7 +2111,6 @@ name|toString
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -928,8 +928,6 @@ literal|"More than one service class (@Path) has been discovered"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|AutowireCapableBeanFactory
 name|beanFactory
 init|=
@@ -1026,7 +1024,6 @@ argument_list|(
 name|serviceClass
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

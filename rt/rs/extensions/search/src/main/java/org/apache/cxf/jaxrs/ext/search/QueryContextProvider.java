@@ -396,8 +396,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 comment|//TODO: consider introducing SearchConditionVisitor.getBeanClass&&
 comment|//      SearchConditionVisitor.getQueryClass to avoid such casts
 return|return
@@ -411,7 +409,6 @@ argument_list|>
 operator|)
 name|visitor
 return|;
-block|}
 block|}
 block|}
 block|}

@@ -273,8 +273,6 @@ operator|)
 name|image
 return|;
 block|}
-else|else
-block|{
 comment|/*not sure how this is used*/
 name|MediaTracker
 name|tracker
@@ -368,7 +366,6 @@ expr_stmt|;
 return|return
 name|bufImage
 return|;
-block|}
 block|}
 block|}
 end_class

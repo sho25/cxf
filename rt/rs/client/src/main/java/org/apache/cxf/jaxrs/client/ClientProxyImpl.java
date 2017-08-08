@@ -6215,12 +6215,9 @@ return|return
 name|callback
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 end_function
 

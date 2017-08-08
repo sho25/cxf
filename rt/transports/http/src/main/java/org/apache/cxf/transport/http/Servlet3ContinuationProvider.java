@@ -1002,12 +1002,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 annotation|@
 name|Override

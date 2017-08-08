@@ -94,12 +94,9 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|""
 return|;
-block|}
 block|}
 block|}
 end_class

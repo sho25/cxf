@@ -692,8 +692,6 @@ else|:
 name|value
 return|;
 block|}
-else|else
-block|{
 name|value
 operator|=
 name|value
@@ -705,7 +703,6 @@ argument_list|,
 literal|"%"
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|value
 return|;

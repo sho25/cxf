@@ -2063,14 +2063,11 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|assertPolicy
 argument_list|(
 name|sigAbstractTokenWrapper
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|sigTok
@@ -3306,8 +3303,6 @@ name|atEnd
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|WSSecEncrypt
@@ -3942,7 +3937,6 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
@@ -4942,8 +4936,6 @@ name|included
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|WSSecSignature
 name|sig
 init|=
@@ -5699,7 +5691,6 @@ block|}
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|String

@@ -3006,8 +3006,6 @@ return|return
 name|utBuilder
 return|;
 block|}
-else|else
-block|{
 name|policyNotAsserted
 argument_list|(
 name|token
@@ -3017,7 +3015,6 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{

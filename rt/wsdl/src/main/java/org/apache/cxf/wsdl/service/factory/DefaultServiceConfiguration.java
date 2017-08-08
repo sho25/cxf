@@ -356,12 +356,9 @@ return|return
 name|name
 return|;
 block|}
-else|else
-block|{
 name|i
 operator|++
 expr_stmt|;
-block|}
 block|}
 block|}
 annotation|@
@@ -1622,8 +1619,6 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Long
 operator|.
@@ -1634,7 +1629,6 @@ argument_list|,
 literal|10
 argument_list|)
 return|;
-block|}
 block|}
 comment|// If no explicit spec and an array of bytes, default to unbounded.
 if|if

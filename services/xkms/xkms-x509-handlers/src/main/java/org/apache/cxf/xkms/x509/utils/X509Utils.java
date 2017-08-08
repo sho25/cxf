@@ -650,8 +650,6 @@ operator|)
 name|certificate
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|CertificateException
@@ -684,7 +682,6 @@ literal|"Null"
 operator|)
 argument_list|)
 throw|;
-block|}
 block|}
 end_function
 

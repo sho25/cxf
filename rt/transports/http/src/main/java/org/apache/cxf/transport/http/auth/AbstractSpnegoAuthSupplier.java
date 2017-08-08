@@ -1175,8 +1175,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|NamePasswordCallbackHandler
@@ -1186,7 +1184,6 @@ argument_list|,
 name|password
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|void

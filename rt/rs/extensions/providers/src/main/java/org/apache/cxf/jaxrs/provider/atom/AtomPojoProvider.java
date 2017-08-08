@@ -1874,8 +1874,6 @@ return|return
 name|method
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getCollectionMethod
 argument_list|(
@@ -1887,7 +1885,6 @@ name|getSuperclass
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings
@@ -2284,8 +2281,6 @@ return|return
 name|handler
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getAtomElementHandlerSuperClass
 argument_list|(
@@ -2297,7 +2292,6 @@ name|getSuperclass
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 comment|//CHECKSTYLE:OFF
 specifier|protected
@@ -3999,8 +3993,6 @@ name|is
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|AtomEntryProvider
 name|p
 init|=
@@ -4050,7 +4042,6 @@ argument_list|,
 name|cls
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings

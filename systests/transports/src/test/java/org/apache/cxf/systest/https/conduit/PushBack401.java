@@ -507,8 +507,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|String
@@ -585,12 +583,9 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 comment|// Password is good and no realm
 comment|// We just return for successful fall thru.
 return|return;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -620,7 +615,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 return|return;
-block|}
 block|}
 comment|/**      * This function issues a 401 response back down the conduit.      * If the realm is not null, a WWW-Authenticate: Basic realm=      * header is sent. The interceptor chain is aborted stopping      * the Message from going to the servant.      */
 specifier|private

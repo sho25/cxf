@@ -1813,12 +1813,9 @@ name|subject
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|protected
 name|OAuthRedirectionState
@@ -2009,12 +2006,9 @@ return|return
 name|requestedScope
 return|;
 block|}
-else|else
-block|{
 return|return
 name|approvedScope
 return|;
-block|}
 block|}
 comment|/**      * Completes the authorization process      */
 specifier|protected
@@ -2942,8 +2936,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|requestToken
 operator|.
@@ -2952,7 +2944,6 @@ argument_list|(
 name|sessionToken
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Get the {@link Client} reference      * @param params request parameters      * @return Client the client reference      * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found,      *         the error is returned directly to the end user without      *         following the redirect URI if any      */
 specifier|protected

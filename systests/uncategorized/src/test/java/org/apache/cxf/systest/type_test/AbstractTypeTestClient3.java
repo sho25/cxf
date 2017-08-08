@@ -3685,6 +3685,11 @@ block|}
 block|}
 comment|//org.apache.type_test.types1.DerivedEmptyBaseEmptyAll
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"cast"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -3851,6 +3856,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//org.apache.type_test.types1.DerivedEmptyBaseEmptyChoice
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"cast"
+argument_list|)
 annotation|@
 name|Test
 specifier|public
@@ -4063,8 +4073,6 @@ operator|==
 literal|0
 return|;
 block|}
-else|else
-block|{
 return|return
 name|x
 operator|.
@@ -4095,7 +4103,6 @@ argument_list|)
 operator|==
 literal|0
 return|;
-block|}
 block|}
 annotation|@
 name|Test
@@ -9323,8 +9330,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|x
 operator|.
@@ -9355,7 +9360,6 @@ name|getHex
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Test
@@ -10418,8 +10422,6 @@ operator|==
 literal|0
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|x
@@ -10523,7 +10525,6 @@ block|}
 return|return
 literal|false
 return|;
-block|}
 block|}
 comment|// XXX - Generated code flattens nested structs
 annotation|@

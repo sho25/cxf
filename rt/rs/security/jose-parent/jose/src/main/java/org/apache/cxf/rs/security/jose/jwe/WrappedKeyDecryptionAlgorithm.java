@@ -308,8 +308,6 @@ name|keyProps
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|CryptoUtils
 operator|.
@@ -334,7 +332,6 @@ operator|.
 name|getEncoded
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|Key

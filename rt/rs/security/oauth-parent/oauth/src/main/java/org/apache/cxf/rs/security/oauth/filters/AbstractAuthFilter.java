@@ -983,8 +983,6 @@ name|CONSUMER_KEY_UNKNOWN
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|OAuthUtils
 operator|.
 name|validateMessage
@@ -1000,7 +998,6 @@ argument_list|,
 name|validator
 argument_list|)
 expr_stmt|;
-block|}
 name|accessToken
 operator|=
 name|client

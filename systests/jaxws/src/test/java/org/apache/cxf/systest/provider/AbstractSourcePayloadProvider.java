@@ -626,8 +626,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|doneStax
 operator|=
 literal|true
@@ -644,7 +642,6 @@ name|greetMeInputStream
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 elseif|else
 if|if

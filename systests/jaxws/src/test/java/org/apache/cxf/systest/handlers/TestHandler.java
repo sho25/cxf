@@ -1113,13 +1113,10 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getHandleMessageRet
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|void

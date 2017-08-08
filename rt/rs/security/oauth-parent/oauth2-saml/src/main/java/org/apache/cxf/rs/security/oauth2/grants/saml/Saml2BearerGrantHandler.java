@@ -1164,8 +1164,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|UserSubject
@@ -1179,7 +1177,6 @@ name|getName
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|InputStream

@@ -795,8 +795,6 @@ name|countUnacknowledged
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|endpoint
 operator|.
@@ -809,7 +807,6 @@ operator|.
 name|countUndelivered
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|ManagedOperation
@@ -906,8 +903,6 @@ name|ss
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|DestinationSequence
 name|ds
 init|=
@@ -942,7 +937,6 @@ argument_list|(
 name|ds
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|ManagedOperation

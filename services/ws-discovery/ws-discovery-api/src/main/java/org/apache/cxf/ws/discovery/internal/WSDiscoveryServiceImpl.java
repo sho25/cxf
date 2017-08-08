@@ -2002,8 +2002,6 @@ throw|throw
 name|ex
 throw|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|log
@@ -2017,7 +2015,6 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 finally|finally
 block|{
@@ -2313,8 +2310,6 @@ name|scope
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|uri
@@ -2365,7 +2360,6 @@ name|getSchemeSpecificPart
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null

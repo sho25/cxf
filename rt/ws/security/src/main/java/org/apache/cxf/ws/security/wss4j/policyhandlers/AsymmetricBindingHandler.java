@@ -2858,8 +2858,6 @@ name|algorithmSuite
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|WSSecEncrypt
@@ -3497,7 +3495,6 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return

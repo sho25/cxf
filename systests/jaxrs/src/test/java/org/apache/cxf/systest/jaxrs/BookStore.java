@@ -1674,8 +1674,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -1717,7 +1715,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|GET
@@ -1778,8 +1775,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -1799,9 +1794,6 @@ name|build
 argument_list|()
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -1821,7 +1813,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|GET
@@ -2058,8 +2049,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -2071,7 +2060,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|DELETE
@@ -3061,8 +3049,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|WebApplicationException
@@ -3085,7 +3071,6 @@ name|build
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|GET
@@ -7449,8 +7434,6 @@ return|return
 name|book
 return|;
 block|}
-else|else
-block|{
 name|BookNotFoundDetails
 name|details
 init|=
@@ -7477,7 +7460,6 @@ argument_list|(
 name|details
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|Path
@@ -7525,8 +7507,6 @@ return|return
 name|book
 return|;
 block|}
-else|else
-block|{
 name|BookNotFoundDetails
 name|details
 init|=
@@ -7553,7 +7533,6 @@ argument_list|(
 name|details
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|Path
@@ -7711,8 +7690,6 @@ name|getName
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|BookNotFoundDetails
 name|details
 init|=
@@ -7734,7 +7711,6 @@ argument_list|(
 name|details
 argument_list|)
 throw|;
-block|}
 block|}
 annotation|@
 name|POST
@@ -9629,8 +9605,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|output
 operator|.
 name|write
@@ -9648,7 +9622,6 @@ argument_list|(
 literal|410
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|private

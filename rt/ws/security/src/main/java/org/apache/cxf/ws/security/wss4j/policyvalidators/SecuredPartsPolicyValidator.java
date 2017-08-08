@@ -393,8 +393,6 @@ argument_list|)
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|assertionInfo
 operator|.
@@ -435,7 +433,6 @@ argument_list|()
 argument_list|)
 operator|)
 return|;
-block|}
 block|}
 comment|/**      * Validate policies.      */
 specifier|public

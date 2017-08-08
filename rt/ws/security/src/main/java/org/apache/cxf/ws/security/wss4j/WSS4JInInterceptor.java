@@ -3563,15 +3563,12 @@ name|pwdCallback
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getCallback
 argument_list|(
 name|reqData
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|CallbackHandler

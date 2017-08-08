@@ -1895,8 +1895,6 @@ name|collSize
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getNextPath
 argument_list|(
@@ -1911,7 +1909,6 @@ argument_list|,
 name|collSize
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|Path
@@ -2016,8 +2013,6 @@ return|return
 name|path
 return|;
 block|}
-else|else
-block|{
 return|return
 name|element
 operator|==
@@ -2048,9 +2043,6 @@ name|name
 argument_list|)
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|element
 operator|.
@@ -2059,7 +2051,6 @@ argument_list|(
 name|name
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|boolean

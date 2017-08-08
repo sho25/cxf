@@ -716,8 +716,6 @@ name|pubSubNoLocal
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|session
 operator|.
@@ -728,7 +726,6 @@ argument_list|,
 name|messageSelector
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|void

@@ -1333,12 +1333,9 @@ name|SERVER_ERROR
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|token
 return|;
-block|}
 block|}
 elseif|else
 if|if

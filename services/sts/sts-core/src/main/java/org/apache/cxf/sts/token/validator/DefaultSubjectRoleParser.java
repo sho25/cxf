@@ -171,8 +171,6 @@ name|getUserRoles
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|DefaultSecurityContext
@@ -185,7 +183,6 @@ operator|.
 name|getUserRoles
 argument_list|()
 return|;
-block|}
 block|}
 return|return
 name|Collections

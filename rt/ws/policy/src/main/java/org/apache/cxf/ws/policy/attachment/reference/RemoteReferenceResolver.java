@@ -324,8 +324,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|id
 init|=
@@ -384,7 +382,6 @@ argument_list|(
 name|elem
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 return|return

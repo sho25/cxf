@@ -241,8 +241,6 @@ operator|==
 name|id2
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 operator|!=
@@ -261,7 +259,6 @@ name|getValue
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|synchronized

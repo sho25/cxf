@@ -2306,8 +2306,6 @@ name|getQueueName
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 operator|(
@@ -2319,7 +2317,6 @@ operator|.
 name|getTopicName
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|void

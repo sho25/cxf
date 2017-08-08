@@ -2199,8 +2199,6 @@ literal|true
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createResponse
 argument_list|(
@@ -2211,7 +2209,6 @@ argument_list|,
 literal|false
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

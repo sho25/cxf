@@ -1074,15 +1074,12 @@ return|return
 name|audiences
 return|;
 block|}
-else|else
-block|{
 return|return
 name|client
 operator|.
 name|getRegisteredAudiences
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -1335,13 +1335,10 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
-else|else
-block|{
 name|first
 operator|=
 literal|false
 expr_stmt|;
-block|}
 name|int
 name|del
 init|=

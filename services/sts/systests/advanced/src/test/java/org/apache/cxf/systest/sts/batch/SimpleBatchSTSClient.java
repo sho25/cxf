@@ -2716,8 +2716,6 @@ name|el
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|ad
 init|=
@@ -2736,7 +2734,6 @@ block|{
 return|return
 name|ad
 return|;
-block|}
 block|}
 name|el
 operator|=
@@ -6017,8 +6014,6 @@ return|return
 name|cipherValue
 return|;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|EncryptedKeyProcessor
@@ -6134,7 +6129,6 @@ argument_list|,
 name|LOG
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|protected

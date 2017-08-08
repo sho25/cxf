@@ -6247,8 +6247,6 @@ return|return
 name|utBuilder
 return|;
 block|}
-else|else
-block|{
 name|unassertPolicy
 argument_list|(
 name|token
@@ -6259,7 +6257,6 @@ expr_stmt|;
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|protected
 name|WSSecUsernameToken
@@ -6446,8 +6443,6 @@ return|return
 name|utBuilder
 return|;
 block|}
-else|else
-block|{
 name|unassertPolicy
 argument_list|(
 name|token
@@ -6458,7 +6453,6 @@ expr_stmt|;
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|protected
 name|SamlAssertionWrapper

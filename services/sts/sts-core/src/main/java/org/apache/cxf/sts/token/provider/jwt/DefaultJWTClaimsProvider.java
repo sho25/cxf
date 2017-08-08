@@ -1283,8 +1283,6 @@ name|INVALID_TIME
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|expirationTime
 operator|=
 name|creationTime
@@ -1295,7 +1293,6 @@ name|getMaxLifetime
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|long
 name|creationTimeInSeconds

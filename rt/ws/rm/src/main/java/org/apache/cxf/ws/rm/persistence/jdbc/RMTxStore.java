@@ -4681,8 +4681,6 @@ throw|throw
 name|ex
 throw|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|fine
@@ -4699,7 +4697,6 @@ argument_list|,
 name|SRC_SEQUENCES_TABLE_COLS
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 finally|finally
 block|{
@@ -4745,8 +4742,6 @@ throw|throw
 name|ex
 throw|;
 block|}
-else|else
-block|{
 name|LOG
 operator|.
 name|fine
@@ -4763,7 +4758,6 @@ argument_list|,
 name|DEST_SEQUENCES_TABLE_COLS
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 finally|finally
 block|{
@@ -4831,8 +4825,6 @@ throw|throw
 name|ex
 throw|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|LOG
@@ -4866,7 +4858,6 @@ argument_list|,
 name|MESSAGES_TABLE_COLS
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 finally|finally
 block|{
@@ -5423,8 +5414,6 @@ return|return
 name|stmt
 return|;
 block|}
-else|else
-block|{
 return|return
 name|con
 operator|.
@@ -5433,7 +5422,6 @@ argument_list|(
 name|sql
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Releases the statement and any result set.      *      * @param stmt      * @param rs      */
 specifier|protected

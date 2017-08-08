@@ -899,8 +899,6 @@ name|providedClientSecret
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|client
 operator|.
@@ -923,7 +921,6 @@ argument_list|(
 name|providedClientSecret
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|boolean
@@ -1431,8 +1428,6 @@ name|customError
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createErrorResponseFromBean
 argument_list|(
@@ -1443,7 +1438,6 @@ name|error
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|Response

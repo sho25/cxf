@@ -610,8 +610,6 @@ name|XMLPrimitiveAssertionBuilder
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Message
 name|m
 init|=
@@ -635,7 +633,6 @@ argument_list|(
 name|m
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 end_class

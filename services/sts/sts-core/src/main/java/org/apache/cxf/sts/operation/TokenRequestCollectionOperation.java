@@ -619,13 +619,10 @@ name|REQUEST_FAILED
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|requestType
 operator|=
 name|val
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

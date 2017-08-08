@@ -873,8 +873,6 @@ name|next
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 specifier|final
 name|String
 name|error
@@ -892,7 +890,6 @@ argument_list|(
 name|error
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|private
 name|boolean

@@ -4330,8 +4330,6 @@ literal|"Endorsing UsernameTokens are not supported in the streaming code"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|SecurePart
 name|securePart
 init|=
@@ -4384,7 +4382,6 @@ argument_list|(
 name|securePart
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

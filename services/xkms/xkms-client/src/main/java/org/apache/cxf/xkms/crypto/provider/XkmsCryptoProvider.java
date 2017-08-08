@@ -1464,12 +1464,9 @@ argument_list|()
 block|}
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|X509Certificate
@@ -1509,8 +1506,6 @@ name|cert
 block|}
 return|;
 block|}
-else|else
-block|{
 comment|// Certificate was not found: return empty list
 return|return
 operator|new
@@ -1519,7 +1514,6 @@ index|[
 literal|0
 index|]
 return|;
-block|}
 block|}
 comment|/**      * Try to get certificate locally. First try using the supplied CryptoType. If this      * does not work, and if the supplied CryptoType is a ALIAS, then try again with SUBJECT_DN      * in case the supplied Alias is actually a Certificate's Subject DN      *      * @param cryptoType      * @return if found certificate otherwise null returned      */
 specifier|private

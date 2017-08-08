@@ -652,8 +652,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|JETTY_AVAILABLE
@@ -725,9 +723,6 @@ return|return
 literal|null
 return|;
 block|}
-block|}
-else|else
-block|{
 comment|// REVISIT other way of getting the registry of http so that the plain cxf servlet finds the
 comment|// destination?
 name|registry
@@ -764,8 +759,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|// use jetty-websocket
 return|return
 name|createJettyHTTPDestination
@@ -781,8 +774,6 @@ argument_list|,
 literal|null
 argument_list|)
 return|;
-block|}
-block|}
 block|}
 specifier|private
 specifier|static

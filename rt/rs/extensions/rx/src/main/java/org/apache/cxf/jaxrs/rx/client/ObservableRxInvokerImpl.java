@@ -825,8 +825,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Observable
 operator|.
@@ -849,7 +847,6 @@ argument_list|,
 name|sc
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -907,8 +904,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Observable
 operator|.
@@ -931,7 +926,6 @@ argument_list|,
 name|sc
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -981,8 +975,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Observable
 operator|.
@@ -1003,7 +995,6 @@ argument_list|,
 name|sc
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1053,8 +1044,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Observable
 operator|.
@@ -1075,7 +1064,6 @@ argument_list|,
 name|sc
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -469,8 +469,6 @@ name|resourceReference
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createRemotely
 argument_list|(
@@ -479,7 +477,6 @@ argument_list|,
 name|resourceReference
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|ResourceResolver

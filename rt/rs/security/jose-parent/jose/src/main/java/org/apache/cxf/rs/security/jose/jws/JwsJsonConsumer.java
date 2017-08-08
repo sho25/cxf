@@ -707,12 +707,9 @@ name|jwsPayload
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|jwsPayload
 return|;
-block|}
 block|}
 specifier|public
 name|byte
@@ -1448,12 +1445,9 @@ name|getJwsJsonSignedDocument
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 end_class

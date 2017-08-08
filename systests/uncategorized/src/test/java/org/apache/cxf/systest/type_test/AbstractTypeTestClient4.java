@@ -4646,15 +4646,10 @@ operator|==
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
 block|}
-block|}
-else|else
-block|{
 if|if
 condition|(
 name|x
@@ -4682,7 +4677,6 @@ block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 return|return
 name|x
@@ -6766,12 +6760,9 @@ name|yo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 return|return

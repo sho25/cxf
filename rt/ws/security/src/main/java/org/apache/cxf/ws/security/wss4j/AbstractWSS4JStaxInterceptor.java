@@ -811,8 +811,6 @@ name|userSecurityProperties
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|WSSSecurityProperties
 name|securityProperties
 init|=
@@ -868,7 +866,6 @@ expr_stmt|;
 return|return
 name|securityProperties
 return|;
-block|}
 block|}
 specifier|protected
 name|void

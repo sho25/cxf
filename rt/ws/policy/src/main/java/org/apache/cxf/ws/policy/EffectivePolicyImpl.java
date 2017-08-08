@@ -1324,14 +1324,11 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|setChosenAlternative
 argument_list|(
 name|alternative
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|void
 name|initialiseInterceptors

@@ -5975,15 +5975,12 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|newClient
 operator|.
 name|getState
 argument_list|()
 return|;
-block|}
 block|}
 specifier|static
 name|URI
@@ -6036,12 +6033,9 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 block|}
 comment|// Link to JAX-RS 2.0 AsyncInvoker

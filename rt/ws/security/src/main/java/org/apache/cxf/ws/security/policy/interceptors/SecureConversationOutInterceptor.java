@@ -1116,12 +1116,9 @@ name|itok
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1175,8 +1172,6 @@ name|itok
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -1184,7 +1179,6 @@ argument_list|(
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 finally|finally
 block|{

@@ -1013,14 +1013,11 @@ name|CachingXmlEventWriter
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|RuntimeException
 argument_list|()
 throw|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -1107,8 +1104,6 @@ name|IOException
 argument_list|()
 throw|;
 block|}
-else|else
-block|{
 name|super
 operator|.
 name|writeTo
@@ -1128,7 +1123,6 @@ argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

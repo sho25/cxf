@@ -384,8 +384,6 @@ condition|)
 block|{
 return|return;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|SamlRequestInfo
@@ -572,7 +570,6 @@ argument_list|,
 literal|null
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 specifier|protected

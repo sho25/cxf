@@ -347,13 +347,10 @@ name|authorize
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|reportInvalidResponseType
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|GET
@@ -399,13 +396,10 @@ name|authorizeDecision
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|reportInvalidResponseType
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * Processes the end user decision      * @return The grant value, authorization code or the token      */
 annotation|@
@@ -469,13 +463,10 @@ name|params
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|reportInvalidResponseType
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|RedirectionBasedGrantService

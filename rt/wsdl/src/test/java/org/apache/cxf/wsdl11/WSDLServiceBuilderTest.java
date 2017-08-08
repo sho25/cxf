@@ -962,12 +962,9 @@ condition|)
 block|{
 break|break;
 block|}
-else|else
-block|{
 name|seq
 operator|++
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

@@ -347,12 +347,9 @@ return|return
 name|found
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|Map

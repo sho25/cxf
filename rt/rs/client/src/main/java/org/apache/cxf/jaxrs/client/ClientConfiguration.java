@@ -494,12 +494,9 @@ name|getReceiveTimeout
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|synchronousTimeout
 return|;
-block|}
 block|}
 comment|/**      * Sets the synchronous timeout      * @param synchronousTimeout      */
 specifier|public

@@ -863,8 +863,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
 name|String
 name|data
 init|=
@@ -963,7 +961,6 @@ argument_list|)
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

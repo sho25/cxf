@@ -1743,8 +1743,6 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|OAuthPermission
@@ -1786,7 +1784,6 @@ block|{
 return|return
 name|list
 return|;
-block|}
 block|}
 throw|throw
 operator|new
@@ -2176,12 +2173,9 @@ return|return
 name|params
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|protected
 name|RefreshToken

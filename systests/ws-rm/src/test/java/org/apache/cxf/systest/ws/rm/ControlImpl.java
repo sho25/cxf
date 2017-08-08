@@ -709,8 +709,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 comment|//System.out.println("greetMe arg: " + s);
 name|String
 name|resp
@@ -741,7 +739,6 @@ name|resp
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 block|}

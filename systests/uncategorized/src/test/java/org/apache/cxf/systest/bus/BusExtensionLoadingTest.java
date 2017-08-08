@@ -458,8 +458,6 @@ name|className
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -468,7 +466,6 @@ argument_list|(
 name|className
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

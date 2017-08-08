@@ -2586,8 +2586,6 @@ name|keyContent
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|JsonWebKey
 name|jwk
 init|=
@@ -2605,7 +2603,6 @@ argument_list|(
 name|jwk
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -3650,8 +3647,6 @@ name|encodedPrivateExponent
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|encodedPublicExponent
 init|=
@@ -3764,7 +3759,6 @@ argument_list|,
 name|encodedCrtCoefficient
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

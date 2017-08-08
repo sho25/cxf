@@ -1578,8 +1578,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NotAllowedException
@@ -1587,7 +1585,6 @@ argument_list|(
 literal|"GET"
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 name|Book

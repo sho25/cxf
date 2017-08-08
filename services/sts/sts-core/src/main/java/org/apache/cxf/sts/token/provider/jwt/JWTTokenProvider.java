@@ -1686,8 +1686,6 @@ name|sigProvider
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|JwsHeaders
 name|jwsHeaders
 init|=
@@ -1716,7 +1714,6 @@ operator|.
 name|getSignedEncodedJws
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|String

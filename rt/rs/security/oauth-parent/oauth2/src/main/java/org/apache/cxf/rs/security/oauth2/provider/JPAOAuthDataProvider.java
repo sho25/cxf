@@ -1669,8 +1669,6 @@ name|class
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|entityManager
 operator|.
@@ -1695,7 +1693,6 @@ name|getLogin
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|TypedQuery

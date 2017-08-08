@@ -926,10 +926,7 @@ name|msg
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return;
-block|}
 block|}
 name|String
 name|action

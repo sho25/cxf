@@ -2922,8 +2922,6 @@ return|return
 name|oldId
 return|;
 block|}
-else|else
-block|{
 name|org
 operator|.
 name|opensaml
@@ -2965,7 +2963,6 @@ expr_stmt|;
 return|return
 name|oldId
 return|;
-block|}
 block|}
 specifier|private
 name|void
@@ -3106,8 +3103,6 @@ name|getNotOnOrAfter
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|assertion
 operator|.
@@ -3120,7 +3115,6 @@ operator|.
 name|getNotOnOrAfter
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 specifier|static

@@ -609,8 +609,6 @@ name|parameters
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|// If the dialects don't match then just return all Claims
 name|ProcessedClaimCollection
 name|claims
@@ -672,7 +670,6 @@ block|}
 return|return
 name|returnedClaims
 return|;
-block|}
 block|}
 specifier|public
 name|ProcessedClaimCollection
@@ -781,8 +778,6 @@ return|return
 name|returnCollection
 return|;
 block|}
-else|else
-block|{
 comment|// Federate claims
 name|ClaimsMapper
 name|claimsMapper
@@ -942,7 +937,6 @@ expr_stmt|;
 return|return
 name|targetClaims
 return|;
-block|}
 block|}
 specifier|private
 name|ProcessedClaimCollection

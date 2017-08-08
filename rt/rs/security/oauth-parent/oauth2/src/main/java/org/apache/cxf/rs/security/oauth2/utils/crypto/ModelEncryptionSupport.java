@@ -2980,8 +2980,6 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Arrays
 operator|.
@@ -2995,7 +2993,6 @@ literal|","
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

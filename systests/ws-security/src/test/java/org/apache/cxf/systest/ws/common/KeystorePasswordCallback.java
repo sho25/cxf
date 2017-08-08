@@ -324,8 +324,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|pc
 operator|.
 name|setPassword
@@ -333,7 +331,6 @@ argument_list|(
 literal|"password"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

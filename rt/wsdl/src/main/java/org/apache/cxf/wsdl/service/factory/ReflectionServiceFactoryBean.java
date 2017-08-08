@@ -8228,8 +8228,6 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
-else|else
-block|{
 if|if
 condition|(
 literal|null
@@ -8353,7 +8351,6 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|mpi
 operator|.

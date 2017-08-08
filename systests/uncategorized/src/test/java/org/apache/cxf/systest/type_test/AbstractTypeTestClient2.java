@@ -11857,8 +11857,6 @@ argument_list|)
 return|;
 block|}
 block|}
-else|else
-block|{
 return|return
 name|y
 operator|.
@@ -11867,7 +11865,6 @@ argument_list|()
 operator|==
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|Test
@@ -12184,12 +12181,9 @@ name|yTypeC
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -12231,12 +12225,9 @@ name|yTypeB
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 return|return
 literal|true

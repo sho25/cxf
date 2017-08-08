@@ -159,14 +159,11 @@ literal|123L
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|NotFoundException
 argument_list|()
 throw|;
-block|}
 block|}
 annotation|@
 name|GET

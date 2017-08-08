@@ -1922,8 +1922,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 synchronized|synchronized
 init|(
 name|CALL_ARGS
@@ -1966,7 +1964,6 @@ name|resp
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 specifier|private

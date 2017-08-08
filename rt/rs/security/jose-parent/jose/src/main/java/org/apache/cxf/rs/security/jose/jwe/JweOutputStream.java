@@ -336,8 +336,6 @@ condition|)
 block|{
 return|return;
 block|}
-else|else
-block|{
 name|encryptAndWrite
 argument_list|(
 name|lastRawDataChunk
@@ -353,7 +351,6 @@ name|lastRawDataChunk
 operator|=
 literal|null
 expr_stmt|;
-block|}
 block|}
 name|int
 name|offset

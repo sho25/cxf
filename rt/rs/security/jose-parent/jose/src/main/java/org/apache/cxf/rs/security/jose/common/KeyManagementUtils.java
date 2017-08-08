@@ -747,8 +747,6 @@ expr|class
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|X509Certificate
@@ -767,7 +765,6 @@ name|alias
 argument_list|)
 block|}
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2404,12 +2401,9 @@ return|return
 name|certs
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|//TODO: enhance the certificate validation code
 specifier|public

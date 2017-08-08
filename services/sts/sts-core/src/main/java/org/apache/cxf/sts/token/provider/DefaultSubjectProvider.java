@@ -1206,17 +1206,12 @@ operator|.
 name|CONF_HOLDER_KEY
 return|;
 block|}
-else|else
-block|{
 return|return
 name|SAML1Constants
 operator|.
 name|CONF_BEARER
 return|;
 block|}
-block|}
-else|else
-block|{
 if|if
 condition|(
 name|STSConstants
@@ -1244,15 +1239,11 @@ operator|.
 name|CONF_HOLDER_KEY
 return|;
 block|}
-else|else
-block|{
 return|return
 name|SAML2Constants
 operator|.
 name|CONF_BEARER
 return|;
-block|}
-block|}
 block|}
 comment|/**      * Create and return the KeyInfoBean to be inserted into the SubjectBean      */
 specifier|protected

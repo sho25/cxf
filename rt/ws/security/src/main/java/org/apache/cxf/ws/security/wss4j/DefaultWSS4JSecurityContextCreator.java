@@ -915,8 +915,6 @@ name|roleClassifierType
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|DefaultSecurityContext
@@ -926,7 +924,6 @@ argument_list|,
 name|subject
 argument_list|)
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -1148,15 +1145,12 @@ return|return
 name|context
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createSecurityContext
 argument_list|(
 name|p
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null

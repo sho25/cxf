@@ -306,12 +306,9 @@ name|prefix
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -417,15 +414,10 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|result
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 name|result
 operator|.
@@ -434,7 +426,6 @@ argument_list|(
 literal|0
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -514,14 +505,11 @@ literal|0
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|InvalidExpression
 argument_list|()
 throw|;
-block|}
 block|}
 comment|/**      * Check if result from evaluation of XPath expression fullfils constraints      * defined in the specification.      * See http://www.w3.org/TR/ws-fragment/#IdResSubset      * @param result      * @return If the result is true, the server should return all sequence of elements,      *         otherwise it should return only the first element.      */
 specifier|private

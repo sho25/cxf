@@ -766,12 +766,9 @@ name|getAttributes
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|Attribute

@@ -200,8 +200,6 @@ literal|"No server certificates were found"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|X509Certificate
 index|[]
 name|certs
@@ -236,7 +234,6 @@ argument_list|(
 literal|"The server certificate(s) do not match the defined cert constraints"
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

@@ -898,10 +898,7 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 continue|continue;
-block|}
 block|}
 name|List
 argument_list|<
@@ -945,8 +942,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|boolean
 name|matched
 init|=
@@ -986,7 +981,6 @@ block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 return|return

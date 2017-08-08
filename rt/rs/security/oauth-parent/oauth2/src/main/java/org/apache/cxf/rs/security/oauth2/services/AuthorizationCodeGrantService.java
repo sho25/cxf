@@ -1155,15 +1155,12 @@ name|response
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createHtmlResponse
 argument_list|(
 name|response
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|Response
@@ -1203,8 +1200,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|UriBuilder
 name|ub
 init|=
@@ -1240,7 +1235,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|UriBuilder

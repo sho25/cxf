@@ -1656,8 +1656,6 @@ name|maxInclusive
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|TermRangeQuery
 operator|.
@@ -1685,7 +1683,6 @@ argument_list|,
 name|maxInclusive
 argument_list|)
 return|;
-block|}
 block|}
 else|else
 block|{

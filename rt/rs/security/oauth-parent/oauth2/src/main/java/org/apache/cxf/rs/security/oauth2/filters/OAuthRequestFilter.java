@@ -1540,12 +1540,9 @@ name|scope
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 specifier|public
 name|void
@@ -1872,8 +1869,6 @@ name|supportedSchemes
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|String
@@ -1889,7 +1884,6 @@ name|m
 argument_list|)
 block|}
 return|;
-block|}
 block|}
 specifier|protected
 name|String

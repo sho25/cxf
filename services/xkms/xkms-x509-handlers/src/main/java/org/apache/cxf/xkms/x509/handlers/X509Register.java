@@ -556,13 +556,10 @@ name|HTTP_WWW_W_3_ORG_2002_03_XKMS_X_509_CERT
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|// Default handler
 return|return
 literal|true
 return|;
-block|}
 block|}
 annotation|@
 name|Override

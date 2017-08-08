@@ -1020,8 +1020,6 @@ name|fault
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|session
@@ -1067,7 +1065,6 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-block|}
 annotation|@
 name|Override
 specifier|protected
@@ -1101,8 +1098,6 @@ name|fault
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 try|try
 block|{
 name|session
@@ -1164,7 +1159,6 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 annotation|@

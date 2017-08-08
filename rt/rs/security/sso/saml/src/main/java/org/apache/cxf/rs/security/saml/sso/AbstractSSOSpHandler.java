@@ -969,12 +969,9 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|issuerId
 return|;
-block|}
 block|}
 specifier|public
 name|boolean

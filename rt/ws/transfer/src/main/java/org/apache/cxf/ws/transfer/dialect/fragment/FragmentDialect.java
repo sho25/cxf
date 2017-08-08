@@ -816,14 +816,11 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|UnsupportedLanguage
 argument_list|()
 throw|;
-block|}
 block|}
 block|}
 throw|throw
@@ -1062,14 +1059,11 @@ name|value
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|UnsupportedLanguage
 argument_list|()
 throw|;
-block|}
 block|}
 block|}
 throw|throw
@@ -1766,14 +1760,11 @@ return|return
 name|expression
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|InvalidExpression
 argument_list|()
 throw|;
-block|}
 block|}
 end_function
 

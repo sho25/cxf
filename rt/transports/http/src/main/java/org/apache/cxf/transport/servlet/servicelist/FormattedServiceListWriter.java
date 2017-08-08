@@ -781,15 +781,10 @@ return|return
 name|endpointAddress
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
 block|}
-block|}
-else|else
-block|{
 name|String
 name|address
 init|=
@@ -834,7 +829,6 @@ name|address
 operator|+
 name|endpointAddress
 return|;
-block|}
 block|}
 specifier|private
 name|void

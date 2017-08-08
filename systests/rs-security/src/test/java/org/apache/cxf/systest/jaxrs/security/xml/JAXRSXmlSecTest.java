@@ -4441,8 +4441,6 @@ throw|throw
 name|ex
 throw|;
 block|}
-else|else
-block|{
 name|fail
 argument_list|(
 name|ex
@@ -4451,7 +4449,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(

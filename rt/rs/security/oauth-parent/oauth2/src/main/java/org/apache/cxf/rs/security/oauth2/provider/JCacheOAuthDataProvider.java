@@ -824,8 +824,6 @@ name|sub
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getTokens
 argument_list|(
@@ -836,7 +834,6 @@ argument_list|,
 name|sub
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -893,8 +890,6 @@ name|accessTokenKey
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getToken
 argument_list|(
@@ -903,7 +898,6 @@ argument_list|,
 name|accessTokenKey
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

@@ -1245,8 +1245,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 comment|// Base-64 encode the token + return it
 try|try
 block|{
@@ -1312,7 +1310,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 specifier|private

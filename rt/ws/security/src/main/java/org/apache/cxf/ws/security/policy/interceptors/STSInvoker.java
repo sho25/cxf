@@ -1060,8 +1060,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|Fault
@@ -1076,7 +1074,6 @@ argument_list|,
 name|LOG
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|abstract
 name|void

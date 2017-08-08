@@ -583,8 +583,6 @@ return|return
 name|book
 return|;
 block|}
-else|else
-block|{
 name|BookNotFoundDetails
 name|details
 init|=
@@ -611,7 +609,6 @@ argument_list|(
 name|details
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|final
 name|void

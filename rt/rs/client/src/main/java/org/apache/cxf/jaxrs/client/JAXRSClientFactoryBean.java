@@ -1070,12 +1070,9 @@ else|:
 name|initialState
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|/**      * Creates a proxy      * @param cls the proxy class      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      * @return the proxy      */
 specifier|public
@@ -1128,13 +1125,10 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createWithValues
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      *      * @return the client      */
 specifier|public
@@ -1920,12 +1914,9 @@ name|encodeClientParametersList
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 argument_list|)

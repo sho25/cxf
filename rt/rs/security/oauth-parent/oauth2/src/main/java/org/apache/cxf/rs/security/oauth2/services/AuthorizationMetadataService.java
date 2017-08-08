@@ -478,8 +478,6 @@ return|return
 name|endpointAddress
 return|;
 block|}
-else|else
-block|{
 return|return
 name|UriBuilder
 operator|.
@@ -499,7 +497,6 @@ operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|String

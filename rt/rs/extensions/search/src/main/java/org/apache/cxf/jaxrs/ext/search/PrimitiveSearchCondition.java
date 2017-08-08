@@ -407,8 +407,6 @@ name|propertyValue
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|Object
 name|lValue
 init|=
@@ -445,7 +443,6 @@ argument_list|,
 name|rValue
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|Object
@@ -1011,8 +1008,6 @@ argument_list|)
 return|;
 block|}
 block|}
-else|else
-block|{
 return|return
 name|lval
 operator|.
@@ -1021,7 +1016,6 @@ argument_list|(
 name|rval
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 specifier|static

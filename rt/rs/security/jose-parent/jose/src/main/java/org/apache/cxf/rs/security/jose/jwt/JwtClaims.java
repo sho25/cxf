@@ -260,12 +260,9 @@ literal|0
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 comment|/**      * Set an array of audiences      * @param audiences the audiences array      */
 specifier|public

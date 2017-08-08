@@ -1386,12 +1386,9 @@ literal|0
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|ors
 return|;
-block|}
 block|}
 specifier|protected
 name|ASTNode
@@ -1532,15 +1529,10 @@ name|castedValue
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
 block|}
-block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|SearchParseException
@@ -1550,7 +1542,6 @@ operator|+
 name|expr
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|protected
 name|TypeInfoObject
@@ -1685,12 +1676,9 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|setter
 return|;
-block|}
 block|}
 comment|// node of abstract syntax tree
 specifier|protected
@@ -1961,8 +1949,6 @@ name|scNodes
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|AndSearchCondition
@@ -1971,7 +1957,6 @@ argument_list|(
 name|scNodes
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 specifier|private
@@ -2123,8 +2108,6 @@ name|cond
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|String
 name|templateNameLCase
 init|=
@@ -2171,7 +2154,6 @@ argument_list|,
 name|cond
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -2242,8 +2224,6 @@ name|getBean
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|SearchBean
 name|bean
 init|=
@@ -2276,7 +2256,6 @@ name|T
 operator|)
 name|bean
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

@@ -497,8 +497,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|Subject
 name|subject
 init|=
@@ -533,7 +531,6 @@ name|endpoint
 argument_list|)
 expr_stmt|;
 return|return;
-block|}
 block|}
 block|}
 block|}

@@ -1563,8 +1563,6 @@ return|return
 name|subject
 return|;
 block|}
-else|else
-block|{
 return|return
 name|OAuthUtils
 operator|.
@@ -1573,7 +1571,6 @@ argument_list|(
 name|sc
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2457,8 +2454,6 @@ name|requestScopes
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|String
@@ -2506,7 +2501,6 @@ block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 block|}
@@ -2952,12 +2946,9 @@ name|SERVER_ERROR
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|sigAlgo
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

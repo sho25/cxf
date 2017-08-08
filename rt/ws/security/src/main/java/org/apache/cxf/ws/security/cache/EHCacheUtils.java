@@ -200,12 +200,9 @@ name|GLOBAL_EHCACHE_MANAGER_NAME
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 end_class

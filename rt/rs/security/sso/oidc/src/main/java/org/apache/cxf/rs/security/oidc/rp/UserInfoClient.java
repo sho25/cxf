@@ -267,8 +267,6 @@ name|client
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|UserInfo
 name|profile
 init|=
@@ -294,9 +292,6 @@ return|return
 name|profile
 return|;
 block|}
-block|}
-else|else
-block|{
 name|Form
 name|form
 init|=
@@ -347,8 +342,6 @@ name|client
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|UserInfo
 name|profile
 init|=
@@ -378,8 +371,6 @@ expr_stmt|;
 return|return
 name|profile
 return|;
-block|}
-block|}
 block|}
 specifier|public
 name|UserInfo

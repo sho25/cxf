@@ -653,8 +653,6 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 comment|//@@TODO  - this isn't good, need to return all the services
 name|serviceName
 operator|=
@@ -710,7 +708,6 @@ operator|.
 name|remove
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

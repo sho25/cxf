@@ -290,8 +290,6 @@ name|map
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -306,7 +304,6 @@ argument_list|,
 name|extraProps
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|AccessTokenValidation

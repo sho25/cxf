@@ -3558,14 +3558,11 @@ name|getException
 argument_list|()
 throw|;
 block|}
-else|else
-block|{
 name|fail
 argument_list|(
 literal|"The decoupled one-way reply was sent"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 catch|catch

@@ -248,12 +248,9 @@ name|url
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|Crypto
@@ -628,12 +625,9 @@ name|o
 return|;
 block|}
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 end_class

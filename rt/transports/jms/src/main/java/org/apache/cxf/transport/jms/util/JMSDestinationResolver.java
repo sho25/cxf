@@ -141,8 +141,6 @@ name|destinationName
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|session
 operator|.
@@ -151,7 +149,6 @@ argument_list|(
 name|destinationName
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|void

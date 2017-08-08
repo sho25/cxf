@@ -467,8 +467,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 name|expectedType
 operator|==
@@ -481,7 +479,6 @@ argument_list|(
 name|expectedType
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|boolean

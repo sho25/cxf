@@ -582,12 +582,9 @@ return|return
 name|book
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 end_class

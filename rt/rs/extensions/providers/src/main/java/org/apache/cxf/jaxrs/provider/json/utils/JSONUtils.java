@@ -1162,8 +1162,6 @@ return|return
 name|XSI_PREFIX
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -1172,7 +1170,6 @@ argument_list|(
 name|n
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

@@ -587,8 +587,6 @@ literal|true
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|metadataWriter
 operator|.
@@ -610,7 +608,6 @@ argument_list|,
 literal|true
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(

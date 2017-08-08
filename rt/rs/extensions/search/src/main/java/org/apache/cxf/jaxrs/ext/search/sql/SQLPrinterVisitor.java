@@ -428,13 +428,10 @@ literal|"SQL Visitor has already created JOIN"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|joinDone
 operator|=
 literal|true
 expr_stmt|;
-block|}
 name|String
 name|joinTable
 init|=

@@ -568,8 +568,6 @@ name|apuString
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|CryptoUtils
 operator|.
@@ -580,7 +578,6 @@ operator|/
 literal|8
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|byte

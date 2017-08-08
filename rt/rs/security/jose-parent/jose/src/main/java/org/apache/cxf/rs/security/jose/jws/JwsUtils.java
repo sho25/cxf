@@ -3643,8 +3643,6 @@ name|props
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|X509Certificate
 index|[]
 name|certs
@@ -3762,7 +3760,6 @@ argument_list|(
 name|jwk
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

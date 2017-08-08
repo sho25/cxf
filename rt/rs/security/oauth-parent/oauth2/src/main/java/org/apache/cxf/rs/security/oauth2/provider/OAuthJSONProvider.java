@@ -1805,8 +1805,6 @@ return|return
 name|params
 return|;
 block|}
-else|else
-block|{
 name|ClientAccessToken
 name|token
 init|=
@@ -1832,13 +1830,9 @@ literal|500
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 return|return
 name|token
 return|;
-block|}
-block|}
 block|}
 specifier|private
 name|Object

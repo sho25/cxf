@@ -442,8 +442,6 @@ return|;
 comment|// TODO Check if null or an exception would be more
 comment|// appropriate
 block|}
-else|else
-block|{
 return|return
 operator|(
 name|ProcessedClaimCollection
@@ -455,7 +453,6 @@ argument_list|(
 name|context
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Script

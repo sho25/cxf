@@ -134,8 +134,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -144,7 +142,6 @@ argument_list|(
 name|exception
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

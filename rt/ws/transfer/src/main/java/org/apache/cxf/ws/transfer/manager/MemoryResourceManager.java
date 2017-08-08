@@ -441,8 +441,6 @@ name|Representation
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|Document
 name|doc
 init|=
@@ -519,7 +517,6 @@ expr_stmt|;
 return|return
 name|representation
 return|;
-block|}
 block|}
 annotation|@
 name|Override

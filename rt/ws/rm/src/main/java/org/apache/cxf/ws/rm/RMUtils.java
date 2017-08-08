@@ -1115,14 +1115,11 @@ name|bval
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 operator|==
 name|bval
 return|;
-block|}
 block|}
 comment|/**      * Utility method to compare two (possibly-null) Long values.      *      * @param aval      * @param bval      * @return<code>true</code> if equal,<code>false</code> if not      */
 specifier|public
@@ -1153,14 +1150,11 @@ name|bval
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 operator|==
 name|bval
 return|;
-block|}
 block|}
 block|}
 end_class

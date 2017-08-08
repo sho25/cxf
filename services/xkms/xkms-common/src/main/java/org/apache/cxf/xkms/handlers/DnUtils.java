@@ -224,15 +224,12 @@ name|trim
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|attr
 operator|.
 name|trim
 argument_list|()
 return|;
-block|}
 block|}
 return|return
 name|attr

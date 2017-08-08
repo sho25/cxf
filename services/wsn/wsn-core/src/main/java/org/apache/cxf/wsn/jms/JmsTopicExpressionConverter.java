@@ -360,8 +360,6 @@ name|topic
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|InvalidTopicException
@@ -373,7 +371,6 @@ operator|+
 literal|" not supported"
 argument_list|)
 throw|;
-block|}
 block|}
 comment|// Implementation methods
 comment|// -------------------------------------------------------------------------

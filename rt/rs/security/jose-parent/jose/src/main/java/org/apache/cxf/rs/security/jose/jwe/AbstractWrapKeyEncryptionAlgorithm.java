@@ -409,8 +409,6 @@ name|secretKeyProperties
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|CryptoUtils
 operator|.
@@ -428,7 +426,6 @@ argument_list|,
 name|secretKeyProperties
 argument_list|)
 return|;
-block|}
 block|}
 specifier|protected
 name|String

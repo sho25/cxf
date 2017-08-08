@@ -1403,12 +1403,9 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 name|reportEmptyContentLength
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 name|XMLStreamReader
 name|reader
@@ -1772,8 +1769,6 @@ literal|413
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|handleXMLStreamException
 argument_list|(
 name|e
@@ -1781,7 +1776,6 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2114,12 +2108,9 @@ name|list
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|is
 return|;
-block|}
 block|}
 specifier|protected
 name|String

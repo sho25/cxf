@@ -1223,8 +1223,6 @@ name|getName
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|RSSecurityUtils
 operator|.
@@ -1235,7 +1233,6 @@ argument_list|,
 literal|null
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 name|Element
@@ -1825,12 +1822,9 @@ literal|true
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|root
 return|;
-block|}
 block|}
 specifier|public
 name|void

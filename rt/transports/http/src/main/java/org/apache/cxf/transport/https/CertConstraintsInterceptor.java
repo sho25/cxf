@@ -404,8 +404,6 @@ literal|"No client certificates were found"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|X509Certificate
 index|[]
 name|x509Certs
@@ -437,7 +435,6 @@ argument_list|(
 literal|"The client certificate does not match the defined cert constraints"
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 catch|catch

@@ -575,8 +575,6 @@ return|return
 name|joiningType
 return|;
 block|}
-else|else
-block|{
 return|return
 name|scts
 operator|.
@@ -591,7 +589,6 @@ operator|.
 name|getCondition
 argument_list|()
 return|;
-block|}
 block|}
 annotation|@
 name|Override
@@ -625,12 +622,9 @@ name|scts
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|List
@@ -706,8 +700,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|List
 argument_list|<
 name|SearchCondition
@@ -969,7 +961,6 @@ return|return
 name|list
 return|;
 block|}
-block|}
 comment|/**      * Compares given object against template condition object.      *<p>      * For built-in type T like String, Number (precisely, from type T located in subpackage of "java.lang.*")      * given object is directly compared with template object. Comparison for {@link ConditionType#EQUALS}      * requires correct implementation of {@link Object#equals(Object)}, using inequalities requires type T      * implementing {@link Comparable}.      *<p>      * For other types the comparison of given object against template object is done using its      *<b>getters</b>; Value returned by {@linkplain #isMet(Object)} operation is<b>conjunction ('and'      * operator)</b> of comparisons of each getter accessible in object of type T. Getters of template object      * that return null or throw exception are not used in comparison. Finally, if all getters      * return nulls (are excluded) it is interpreted as no filter (match every pojo).      *<p>      * If {@link #SimpleSearchCondition(ConditionType, Object) constructor with shared operator} was used,      * then getters are compared using the same operator. If {@link #SimpleSearchCondition(Map, Object)      * constructor with map of operators} was used then for every getter specified operator is used (getters      * for missing mapping are ignored). The way that comparison per-getter is done depending on operator type      * per getter - comparison for {@link ConditionType#EQUALS} requires correct implementation of      * {@link Object#equals(Object)}, using inequalities requires that getter type implements      * {@link Comparable}.      *<p>      * For equality comparison and String type in template object (either being built-in or getter from client      * provided type) it is allowed to used asterisk at the beginning or at the end of text as wild card (zero      * or more of any characters) e.g. "foo*", "*foo" or "*foo*". Inner asterisks are not interpreted as wild      * cards.      *<p>      *<b>Example:</b>      *      *<pre>      * SimpleSearchCondition&lt;Integer&gt; ssc = new SimpleSearchCondition&lt;Integer&gt;(      *   ConditionType.GREATER_THAN, 10);      * ssc.isMet(20);      * // true since 20&gt;10      *      * class Entity {      *   public String getName() {...      *   public int getLevel() {...      *   public String getMessage() {...      * }      *      * Entity template = new Entity("bbb", 10, null);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);      *      * ssc.isMet(new Entity("aaa", 20, "some mesage"));      * // false: is not met, expression '"aaa"&gt;"bbb" and 20&gt;10' is not true      * // since "aaa" is not greater than "bbb"; not that message is null in template hence ingored      *      * ssc.isMet(new Entity("ccc", 30, "other message"));      * // true: is met, expression '"ccc"&gt;"bbb" and 30&gt;10' is true      *      * Map&lt;String, ConditionType&gt; map;      * map.put("name", ConditionType.EQUALS);      * map.put("level", ConditionType.GREATER_THAN);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);      *      * ssc.isMet(new Entity("ccc", 30, "other message"));      * // false due to expression '"aaa"=="ccc" and 30&gt;10"' (note different operators)      *      *</pre>      *      * @throws IllegalAccessException when security manager disallows reflective call of getters.      */
 annotation|@
 name|Override
@@ -1113,12 +1104,9 @@ return|return
 name|getters2values
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|private
 name|Object
@@ -1297,12 +1285,9 @@ name|getStatement
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 annotation|@
 name|Override

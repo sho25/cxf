@@ -707,20 +707,14 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 throw|throw
 name|ex
 throw|;
 block|}
 block|}
-block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 name|String
@@ -866,8 +860,6 @@ name|SHORT_SEARCH_QUERY
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|params
 operator|.
@@ -876,7 +868,6 @@ argument_list|(
 name|SEARCH_QUERY
 argument_list|)
 return|;
-block|}
 block|}
 elseif|else
 if|if

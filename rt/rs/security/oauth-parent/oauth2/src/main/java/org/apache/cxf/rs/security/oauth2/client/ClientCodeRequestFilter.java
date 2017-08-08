@@ -795,8 +795,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 comment|// complete the code flow if possible
 name|MultivaluedMap
 argument_list|<
@@ -852,7 +850,6 @@ argument_list|)
 expr_stmt|;
 comment|// let the request continue
 return|return;
-block|}
 block|}
 comment|// neither the start nor the end of the flow
 name|rc
@@ -1715,8 +1712,6 @@ name|absoluteRedirectUri
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|JwtRequestCodeGrant
 name|grant
 init|=
@@ -1753,7 +1748,6 @@ expr_stmt|;
 return|return
 name|grant
 return|;
-block|}
 block|}
 specifier|protected
 name|ClientTokenContext

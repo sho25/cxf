@@ -166,8 +166,6 @@ name|property
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|map
 operator|.
 name|put
@@ -183,7 +181,6 @@ expr_stmt|;
 return|return
 literal|null
 return|;
-block|}
 block|}
 block|}
 end_class

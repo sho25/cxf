@@ -3810,8 +3810,6 @@ operator|)
 name|actualEx
 throw|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|ProcessingException
@@ -3819,7 +3817,6 @@ argument_list|(
 name|actualEx
 argument_list|)
 throw|;
-block|}
 block|}
 elseif|else
 if|if

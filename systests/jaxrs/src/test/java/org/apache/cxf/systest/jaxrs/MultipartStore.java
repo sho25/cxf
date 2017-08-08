@@ -1131,12 +1131,9 @@ return|return
 name|value
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"nobody home"
 return|;
-block|}
 block|}
 annotation|@
 name|POST
@@ -1197,12 +1194,9 @@ operator|+
 name|value2
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"nobody home2"
 return|;
-block|}
 block|}
 annotation|@
 name|POST

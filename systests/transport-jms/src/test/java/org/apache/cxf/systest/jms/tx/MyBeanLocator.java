@@ -166,8 +166,6 @@ name|name
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|cbl
 operator|.
@@ -178,7 +176,6 @@ argument_list|,
 name|type
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|SuppressWarnings

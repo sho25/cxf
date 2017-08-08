@@ -682,8 +682,6 @@ block|,             }
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Arrays
 operator|.
@@ -833,10 +831,9 @@ argument_list|,
 literal|false
 argument_list|)
 block|}
-block|,             }
+block|,         }
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|org

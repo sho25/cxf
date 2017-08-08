@@ -2436,8 +2436,6 @@ else|:
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -2446,7 +2444,6 @@ argument_list|(
 name|name
 argument_list|)
 return|;
-block|}
 block|}
 annotation|@
 name|Override

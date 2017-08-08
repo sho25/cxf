@@ -892,8 +892,6 @@ return|return
 name|context
 return|;
 block|}
-else|else
-block|{
 return|return
 name|createSecurityContext
 argument_list|(
@@ -903,7 +901,6 @@ name|getPrincipal
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|Validator

@@ -759,8 +759,6 @@ name|ct
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|encryptDirect
 argument_list|(
@@ -773,7 +771,6 @@ argument_list|,
 name|ct
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1012,8 +1009,6 @@ name|content
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|decryptDirect
 argument_list|(
@@ -1024,7 +1019,6 @@ argument_list|,
 name|content
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -1984,12 +1978,9 @@ name|ctAlgo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2283,8 +2274,6 @@ name|A128GCM
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getDirectKeyJweEncryption
 argument_list|(
@@ -2304,7 +2293,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2379,8 +2367,6 @@ name|ctAlgo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|JweException
@@ -2392,7 +2378,6 @@ operator|.
 name|INVALID_KEY_ALGORITHM
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2460,8 +2445,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|JweEncryption
@@ -2478,7 +2461,6 @@ name|algo
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2513,8 +2495,6 @@ name|A128GCM
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getDirectKeyJweDecryption
 argument_list|(
@@ -2534,7 +2514,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2600,8 +2579,6 @@ name|algorithm
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|JweDecryption
@@ -2618,7 +2595,6 @@ name|algorithm
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -2691,8 +2667,6 @@ name|ctAlgo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|JweException
@@ -2704,7 +2678,6 @@ operator|.
 name|INVALID_KEY_ALGORITHM
 argument_list|)
 throw|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -4460,8 +4433,6 @@ name|generateCekOnce
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|JweEncryption
@@ -4476,7 +4447,6 @@ name|generateCekOnce
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -4595,8 +4565,6 @@ name|contentDecryptionAlgo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|JweDecryption
@@ -4609,7 +4577,6 @@ name|contentDecryptionAlgo
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -5094,12 +5061,9 @@ return|return
 name|newAAD
 return|;
 block|}
-else|else
-block|{
 return|return
 name|headersAAD
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -5805,8 +5769,6 @@ name|headers
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|JweEncryption
@@ -5816,7 +5778,6 @@ argument_list|,
 name|ctEncryptionProvider
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -5879,8 +5840,6 @@ name|contentDecryptionAlgo
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getDirectKeyJweDecryption
 argument_list|(
@@ -5889,7 +5848,6 @@ argument_list|,
 name|contentDecryptionAlgo
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static
@@ -6575,8 +6533,6 @@ name|props
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 comment|//TODO: consider loading all the public keys in the store
 name|PublicKey
 name|key
@@ -6613,7 +6569,6 @@ argument_list|(
 name|jwk
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 specifier|static

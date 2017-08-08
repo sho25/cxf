@@ -1753,12 +1753,9 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|assertionConsumerServiceAddress
 return|;
-block|}
 block|}
 specifier|protected
 name|void
@@ -1905,8 +1902,6 @@ name|getRawPath
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|String
 name|httpBasePath
 init|=
@@ -1932,13 +1927,9 @@ name|getRawPath
 argument_list|()
 return|;
 block|}
-block|}
-else|else
-block|{
 return|return
 literal|"/"
 return|;
-block|}
 block|}
 specifier|public
 name|String

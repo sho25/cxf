@@ -819,12 +819,9 @@ return|return
 name|newParams
 return|;
 block|}
-else|else
-block|{
 return|return
 name|params
 return|;
-block|}
 block|}
 specifier|private
 name|boolean

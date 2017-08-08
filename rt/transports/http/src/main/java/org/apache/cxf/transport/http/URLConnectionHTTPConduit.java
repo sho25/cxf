@@ -2087,15 +2087,12 @@ return|return
 literal|"no reason phrase in the response"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|connection
 operator|.
 name|getResponseMessage
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|InputStream

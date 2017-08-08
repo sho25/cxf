@@ -164,8 +164,6 @@ return|return
 literal|"true"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|delegate
 operator|.
@@ -174,7 +172,6 @@ argument_list|(
 name|name
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

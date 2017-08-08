@@ -824,12 +824,9 @@ argument_list|)
 throw|;
 block|}
 block|}
-else|else
-block|{
 return|return
 name|p
 return|;
-block|}
 block|}
 annotation|@
 name|Override

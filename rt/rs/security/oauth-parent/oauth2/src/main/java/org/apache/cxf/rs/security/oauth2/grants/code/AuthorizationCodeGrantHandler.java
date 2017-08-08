@@ -750,8 +750,6 @@ return|return
 name|token
 return|;
 block|}
-else|else
-block|{
 comment|// the grant was issued based on the authorization time check confirming the
 comment|// token was available but it has expired by now or been removed then
 comment|// creating a completely new token can be wrong - though this needs to be reviewed
@@ -764,7 +762,6 @@ operator|.
 name|INVALID_GRANT
 argument_list|)
 throw|;
-block|}
 block|}
 comment|// Make sure the client supports the authorization code in cases where
 comment|// the implicit/hybrid service was initiating the code grant processing flow

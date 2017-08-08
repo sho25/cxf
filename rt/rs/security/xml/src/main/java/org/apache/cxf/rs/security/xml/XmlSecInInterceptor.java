@@ -1198,8 +1198,6 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 name|Integer
 name|responseCode
 init|=
@@ -1229,7 +1227,6 @@ block|{
 return|return
 literal|false
 return|;
-block|}
 block|}
 return|return
 literal|true
@@ -3104,8 +3101,6 @@ name|proceed
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 name|prepareMessage
 argument_list|(
 name|message
@@ -3135,7 +3130,6 @@ expr_stmt|;
 return|return
 name|object
 return|;
-block|}
 block|}
 comment|/**      * This interceptor handles parsing the StaX results (events) + checks to see whether the      * required (if any) Actions (signature or encryption) were fulfilled.      */
 specifier|private

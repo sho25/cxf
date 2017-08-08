@@ -486,8 +486,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|StringBuilder
 name|sb
 init|=
@@ -525,7 +523,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 specifier|protected
 name|StringBuilder

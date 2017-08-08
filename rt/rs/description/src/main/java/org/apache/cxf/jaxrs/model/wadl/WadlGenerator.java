@@ -2942,12 +2942,9 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|entity
 return|;
-block|}
 block|}
 return|return
 name|StaxUtils
@@ -3035,12 +3032,9 @@ name|toString
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|publishedEndpointUrl
 return|;
-block|}
 block|}
 specifier|protected
 name|void
@@ -5309,12 +5303,9 @@ operator|==
 name|ori2MatrixParams
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 specifier|private
 name|boolean
@@ -6215,15 +6206,12 @@ index|[]
 block|{}
 return|;
 block|}
-else|else
-block|{
 return|return
 name|opMethod
 operator|.
 name|getDeclaredAnnotations
 argument_list|()
 return|;
-block|}
 block|}
 specifier|private
 name|void
@@ -11801,12 +11789,9 @@ name|clsMap
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 end_function
 
@@ -13956,12 +13941,9 @@ name|proxy
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|null
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -15253,8 +15235,6 @@ return|return
 name|qname
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getQNameFromParts
 argument_list|(
@@ -15273,7 +15253,6 @@ argument_list|,
 name|clsMap
 argument_list|)
 return|;
-block|}
 block|}
 return|return
 literal|null

@@ -147,15 +147,12 @@ name|getTokenKey
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

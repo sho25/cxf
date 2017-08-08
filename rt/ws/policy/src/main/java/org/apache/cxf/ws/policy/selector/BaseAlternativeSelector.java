@@ -256,8 +256,6 @@ argument_list|)
 expr_stmt|;
 break|break;
 block|}
-else|else
-block|{
 comment|// Workaround until Neethi assertions implementations do not override equals():
 comment|// objects in lists can be different instances
 if|if
@@ -298,7 +296,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 break|break;
-block|}
 block|}
 block|}
 block|}

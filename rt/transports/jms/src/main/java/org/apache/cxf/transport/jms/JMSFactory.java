@@ -536,8 +536,6 @@ block|}
 block|}
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Executors
 operator|.
@@ -546,7 +544,6 @@ argument_list|(
 literal|20
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

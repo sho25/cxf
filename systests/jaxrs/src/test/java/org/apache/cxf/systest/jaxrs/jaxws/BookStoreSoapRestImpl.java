@@ -868,8 +868,6 @@ name|build
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 name|Response
 operator|.
@@ -879,7 +877,6 @@ operator|.
 name|build
 argument_list|()
 return|;
-block|}
 block|}
 block|}
 end_class

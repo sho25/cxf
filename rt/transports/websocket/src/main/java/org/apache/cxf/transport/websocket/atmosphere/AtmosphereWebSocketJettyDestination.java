@@ -812,8 +812,6 @@ throw|;
 block|}
 return|return;
 block|}
-else|else
-block|{
 name|super
 operator|.
 name|handle
@@ -827,7 +825,6 @@ argument_list|,
 name|response
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|private
