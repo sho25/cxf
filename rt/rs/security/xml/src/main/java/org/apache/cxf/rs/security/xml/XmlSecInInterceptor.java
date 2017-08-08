@@ -1213,8 +1213,9 @@ operator|.
 name|RESPONSE_CODE
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|responseCode
 operator|!=
 literal|null
@@ -1222,14 +1223,7 @@ operator|&&
 name|responseCode
 operator|!=
 literal|200
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|private

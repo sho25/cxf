@@ -103,6 +103,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -337,20 +351,6 @@ name|SAML2Constants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * A CallbackHandler instance that is used by the STS to mock up a SAML Attribute Assertion.  */
 end_comment
@@ -414,7 +414,7 @@ specifier|private
 name|String
 name|signatureAlgorithm
 init|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|RSA_SHA1
 decl_stmt|;
@@ -422,7 +422,7 @@ specifier|private
 name|String
 name|digestAlgorithm
 init|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SHA1
 decl_stmt|;

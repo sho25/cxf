@@ -614,7 +614,6 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
 comment|/**      * This function issues a 401 response back down the conduit.      * If the realm is not null, a WWW-Authenticate: Basic realm=      * header is sent. The interceptor chain is aborted stopping      * the Message from going to the servant.      */
 specifier|private

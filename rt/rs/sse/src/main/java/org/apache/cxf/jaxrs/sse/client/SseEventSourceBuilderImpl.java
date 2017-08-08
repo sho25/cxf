@@ -55,7 +55,7 @@ name|rs
 operator|.
 name|sse
 operator|.
-name|InboundSseEvent
+name|SseEvent
 import|;
 end_import
 
@@ -102,7 +102,7 @@ specifier|private
 name|long
 name|delay
 init|=
-name|InboundSseEvent
+name|SseEvent
 operator|.
 name|RECONNECT_NOT_SET
 decl_stmt|;
