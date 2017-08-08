@@ -121,7 +121,7 @@ name|entity
 decl_stmt|;
 specifier|private
 specifier|final
-name|DelegatingNioInputStream
+name|NioInputStream
 name|in
 decl_stmt|;
 specifier|public
@@ -145,7 +145,7 @@ operator|.
 name|in
 operator|=
 operator|new
-name|DelegatingNioInputStream
+name|NioInputStream
 argument_list|(
 name|in
 argument_list|)

@@ -92,12 +92,12 @@ name|NioReadEntity
 block|{
 specifier|private
 specifier|final
-name|NioReaderHandler
+name|NioReadHandler
 name|reader
 decl_stmt|;
 specifier|private
 specifier|final
-name|NioCompletionHandler
+name|NioReadCompletionHandler
 name|completion
 decl_stmt|;
 specifier|private
@@ -108,10 +108,10 @@ decl_stmt|;
 specifier|public
 name|NioReadEntity
 parameter_list|(
-name|NioReaderHandler
+name|NioReadHandler
 name|reader
 parameter_list|,
-name|NioCompletionHandler
+name|NioReadCompletionHandler
 name|completion
 parameter_list|,
 name|NioErrorHandler
@@ -218,7 +218,7 @@ throw|;
 block|}
 block|}
 specifier|public
-name|NioReaderHandler
+name|NioReadHandler
 name|getReader
 parameter_list|()
 block|{
@@ -227,7 +227,7 @@ name|reader
 return|;
 block|}
 specifier|public
-name|NioCompletionHandler
+name|NioReadCompletionHandler
 name|getCompletion
 parameter_list|()
 block|{

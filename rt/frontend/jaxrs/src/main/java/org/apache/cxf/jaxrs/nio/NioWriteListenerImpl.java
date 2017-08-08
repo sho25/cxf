@@ -139,7 +139,7 @@ name|entity
 decl_stmt|;
 specifier|private
 specifier|final
-name|DelegatingNioOutputStream
+name|NioOutputStream
 name|out
 decl_stmt|;
 specifier|public
@@ -172,7 +172,7 @@ operator|.
 name|out
 operator|=
 operator|new
-name|DelegatingNioOutputStream
+name|NioOutputStream
 argument_list|(
 name|out
 argument_list|)

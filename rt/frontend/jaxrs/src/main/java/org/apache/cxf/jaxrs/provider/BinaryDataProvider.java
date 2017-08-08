@@ -433,22 +433,6 @@ name|jaxrs
 operator|.
 name|nio
 operator|.
-name|DelegatingNioOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|nio
-operator|.
 name|NioOutputStream
 import|;
 end_import
@@ -481,7 +465,7 @@ name|jaxrs
 operator|.
 name|nio
 operator|.
-name|NioWriteListenerImpl
+name|NioWriteHandler
 import|;
 end_import
 
@@ -497,7 +481,7 @@ name|jaxrs
 operator|.
 name|nio
 operator|.
-name|NioWriterHandler
+name|NioWriteListenerImpl
 import|;
 end_import
 
@@ -1656,7 +1640,7 @@ literal|null
 argument_list|)
 argument_list|,
 operator|new
-name|DelegatingNioOutputStream
+name|NioOutputStream
 argument_list|(
 name|os
 argument_list|)
@@ -1865,7 +1849,7 @@ name|bufferSize
 expr_stmt|;
 block|}
 specifier|protected
-name|NioWriterHandler
+name|NioWriteHandler
 name|getNioHandler
 parameter_list|(
 specifier|final
@@ -1875,7 +1859,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|NioWriterHandler
+name|NioWriteHandler
 argument_list|()
 block|{
 specifier|final

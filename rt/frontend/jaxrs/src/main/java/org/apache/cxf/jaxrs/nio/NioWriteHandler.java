@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Class NioReader.  */
+comment|/**  * Class NioWriterHandler.  */
 end_comment
 
 begin_interface
@@ -26,14 +26,14 @@ annotation|@
 name|FunctionalInterface
 specifier|public
 interface|interface
-name|NioReaderHandler
+name|NioWriteHandler
 block|{
-comment|/**      * Called every time it is possible to read from the input stream without blocking. The last      * time this method is called, the value of {@code in.isFinished()} must be {@code true} to      * indicate that all the stream has been read.      *      * @param in input stream.      */
-name|void
-name|read
+comment|/**      * Method called when it is possible to write some data without blocking.      *      * @param out output stream.      * @return {@code true} if there is more data to write, {@code false} otherwise.      */
+name|boolean
+name|write
 parameter_list|(
-name|NioInputStream
-name|in
+name|NioOutputStream
+name|out
 parameter_list|)
 function_decl|;
 block|}

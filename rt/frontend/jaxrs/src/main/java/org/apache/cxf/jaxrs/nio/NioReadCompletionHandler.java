@@ -22,7 +22,7 @@ annotation|@
 name|FunctionalInterface
 specifier|public
 interface|interface
-name|NioCompletionHandler
+name|NioReadCompletionHandler
 block|{
 name|void
 name|complete

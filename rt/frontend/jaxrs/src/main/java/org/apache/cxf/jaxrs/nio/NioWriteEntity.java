@@ -25,7 +25,7 @@ name|NioWriteEntity
 block|{
 specifier|private
 specifier|final
-name|NioWriterHandler
+name|NioWriteHandler
 name|writer
 decl_stmt|;
 specifier|private
@@ -37,7 +37,7 @@ specifier|public
 name|NioWriteEntity
 parameter_list|(
 specifier|final
-name|NioWriterHandler
+name|NioWriteHandler
 name|writer
 parameter_list|,
 specifier|final
@@ -59,7 +59,7 @@ name|error
 expr_stmt|;
 block|}
 specifier|public
-name|NioWriterHandler
+name|NioWriteHandler
 name|getWriter
 parameter_list|()
 block|{
