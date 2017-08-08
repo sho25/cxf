@@ -143,9 +143,9 @@ name|jaxrs
 operator|.
 name|rx
 operator|.
-name|provider
+name|server
 operator|.
-name|ObservableWriter
+name|ObservableInvoker
 import|;
 end_import
 
@@ -232,13 +232,10 @@ argument_list|()
 decl_stmt|;
 name|sf
 operator|.
-name|setProvider
+name|setInvoker
 argument_list|(
 operator|new
-name|ObservableWriter
-argument_list|<
-name|Object
-argument_list|>
+name|ObservableInvoker
 argument_list|()
 argument_list|)
 expr_stmt|;
