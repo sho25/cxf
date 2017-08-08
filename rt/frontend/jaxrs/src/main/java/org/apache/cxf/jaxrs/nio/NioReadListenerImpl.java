@@ -165,11 +165,13 @@ try|try
 block|{
 name|entity
 operator|.
-name|getError
+name|getCompletion
 argument_list|()
 operator|.
-name|error
+name|complete
 argument_list|(
+literal|null
+argument_list|,
 name|t
 argument_list|)
 expr_stmt|;
@@ -249,6 +251,8 @@ operator|.
 name|complete
 argument_list|(
 name|in
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}

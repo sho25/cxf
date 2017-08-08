@@ -29,6 +29,9 @@ name|complete
 parameter_list|(
 name|NioInputStream
 name|in
+parameter_list|,
+name|Throwable
+name|t
 parameter_list|)
 function_decl|;
 block|}
