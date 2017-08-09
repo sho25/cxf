@@ -597,6 +597,24 @@ name|Modifier
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -1021,7 +1039,7 @@ name|outboundSecurityContext
 operator|.
 name|remove
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_ENCRYPTION
 argument_list|)
@@ -1278,7 +1296,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_DSIG
 argument_list|,
@@ -1659,7 +1677,7 @@ name|outboundSecurityContext
 operator|.
 name|remove
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_ENCRYPTION
 argument_list|)
@@ -1822,7 +1840,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_DSIG
 argument_list|,
@@ -2138,7 +2156,7 @@ operator|.
 name|Action
 name|actionToPerform
 init|=
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|ENCRYPT
 decl_stmt|;
@@ -2457,7 +2475,7 @@ operator|.
 name|Action
 name|actionToPerform
 init|=
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 decl_stmt|;

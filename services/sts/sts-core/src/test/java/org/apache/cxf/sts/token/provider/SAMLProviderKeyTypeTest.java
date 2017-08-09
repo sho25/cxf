@@ -317,6 +317,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -449,20 +463,6 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|WSConstants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
 name|util
 operator|.
 name|WSSecurityUtil
@@ -510,7 +510,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -525,7 +525,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -680,7 +680,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -695,7 +695,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -850,7 +850,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 argument_list|,
@@ -865,7 +865,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 argument_list|)
@@ -1113,7 +1113,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|,
@@ -1128,7 +1128,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|)
@@ -1376,7 +1376,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -1391,7 +1391,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -1743,7 +1743,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -1758,7 +1758,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -1974,7 +1974,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -1989,7 +1989,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -2341,7 +2341,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -2354,7 +2354,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -2393,7 +2393,7 @@ name|providerParameters
 operator|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -2406,7 +2406,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -2462,7 +2462,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -2490,7 +2490,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -2655,7 +2655,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -2670,7 +2670,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -2868,7 +2868,7 @@ name|providerParameters
 init|=
 name|createProviderParametersPKCS12
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -2883,7 +2883,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -3038,7 +3038,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -3059,7 +3059,7 @@ name|keyRequirements
 operator|.
 name|setC14nAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -3126,7 +3126,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -3138,7 +3138,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_OMIT_COMMENTS
 argument_list|)
@@ -3174,7 +3174,7 @@ name|acceptedC14nAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_OMIT_COMMENTS
 argument_list|)
@@ -3183,7 +3183,7 @@ name|acceptedC14nAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -3261,7 +3261,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -3305,7 +3305,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -3392,7 +3392,7 @@ comment|// Try with unsupported alternative
 name|String
 name|signatureAlgorithm
 init|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|DSA
 decl_stmt|;
@@ -3479,7 +3479,7 @@ expr_stmt|;
 comment|// Supported alternative
 name|signatureAlgorithm
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|RSA_SHA1
 expr_stmt|;
@@ -3580,7 +3580,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -3651,7 +3651,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SHA256
 argument_list|)
@@ -3673,7 +3673,7 @@ name|signatureProperties
 operator|.
 name|setDigestAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SHA1
 argument_list|)
@@ -3736,7 +3736,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SHA1
 argument_list|)
@@ -3769,7 +3769,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -3790,7 +3790,7 @@ name|keyRequirements
 operator|.
 name|setEncryptWith
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128
 argument_list|)
@@ -3847,7 +3847,7 @@ name|keyRequirements
 operator|.
 name|setEncryptWith
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_256
 argument_list|)

@@ -581,6 +581,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -680,20 +694,6 @@ operator|.
 name|saml
 operator|.
 name|SamlAssertionWrapper
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -2762,7 +2762,7 @@ name|samlToken
 init|=
 name|createSAMLAssertion
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -2803,7 +2803,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 argument_list|,
@@ -2843,7 +2843,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|,
@@ -2886,7 +2886,7 @@ name|samlToken
 operator|.
 name|getAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|,

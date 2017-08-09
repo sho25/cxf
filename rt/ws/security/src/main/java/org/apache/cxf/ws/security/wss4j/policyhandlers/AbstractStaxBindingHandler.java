@@ -365,6 +365,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSPasswordCallback
@@ -470,20 +484,6 @@ operator|.
 name|util
 operator|.
 name|KeyUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -1112,6 +1112,24 @@ operator|.
 name|SecurePart
 operator|.
 name|Modifier
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
 import|;
 end_import
 
@@ -1926,7 +1944,7 @@ name|outboundSecurityContext
 operator|.
 name|put
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_ENCRYPTION
 argument_list|,
@@ -1946,7 +1964,7 @@ name|outboundSecurityContext
 operator|.
 name|put
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_SIGNATURE
 argument_list|,
@@ -2430,7 +2448,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -2486,7 +2504,7 @@ name|TAG_SAML2_ASSERTION
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -2965,7 +2983,7 @@ name|outboundSecurityContext
 operator|.
 name|put
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_ENCRYPTION
 argument_list|,
@@ -2979,7 +2997,7 @@ name|outboundSecurityContext
 operator|.
 name|put
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|PROP_USE_THIS_TOKEN_ID_FOR_SIGNATURE
 argument_list|,
@@ -4220,7 +4238,7 @@ argument_list|,
 operator|new
 name|SecurePart
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|TAG_dsig_Signature
 argument_list|,
@@ -6059,7 +6077,7 @@ name|actionList
 operator|.
 name|contains
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6069,7 +6087,7 @@ name|actionList
 operator|.
 name|remove
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6126,7 +6144,7 @@ name|actionList
 operator|.
 name|contains
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6149,7 +6167,7 @@ name|actionList
 operator|.
 name|indexOf
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6308,7 +6326,7 @@ name|actionList
 operator|.
 name|contains
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)

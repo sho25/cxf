@@ -543,9 +543,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|spnego
-operator|.
-name|SpnegoTokenContext
+name|WSS4JConstants
 import|;
 end_import
 
@@ -557,9 +555,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|spnego
+operator|.
+name|SpnegoTokenContext
 import|;
 end_import
 
@@ -1715,7 +1715,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|BASE64_ENCODING
 operator|.
@@ -1906,13 +1906,13 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_PREFIX
 argument_list|,
 literal|"EncryptedKey"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -1921,13 +1921,13 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_PREFIX
 argument_list|,
 literal|"EncryptionMethod"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -1952,13 +1952,13 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_PREFIX
 argument_list|,
 literal|"CipherData"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -1967,13 +1967,13 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_PREFIX
 argument_list|,
 literal|"CipherValue"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)

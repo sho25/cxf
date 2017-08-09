@@ -177,6 +177,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|bsp
 operator|.
 name|BSPEnforcer
@@ -1193,7 +1207,7 @@ name|signatureElement
 argument_list|,
 literal|"KeyInfo"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|)
@@ -1216,7 +1230,7 @@ name|keyInfoElement
 argument_list|,
 literal|"SecurityTokenReference"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 argument_list|)
@@ -1237,7 +1251,7 @@ name|strElement
 argument_list|,
 literal|"KeyIdentifier"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 argument_list|)

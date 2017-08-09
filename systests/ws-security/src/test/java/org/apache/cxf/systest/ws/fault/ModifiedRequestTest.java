@@ -235,6 +235,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSSecurityException
@@ -270,20 +284,6 @@ operator|.
 name|util
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -1767,7 +1767,7 @@ name|securityHeader
 argument_list|,
 literal|"Timestamp"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -1783,7 +1783,7 @@ name|timestampElement
 argument_list|,
 literal|"Created"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -1872,7 +1872,7 @@ name|securityHeader
 argument_list|,
 literal|"Signature"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|)
@@ -1971,7 +1971,7 @@ name|securityHeader
 argument_list|,
 literal|"EncryptedKey"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -1987,7 +1987,7 @@ name|encryptedKey
 argument_list|,
 literal|"CipherValue"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -2125,7 +2125,7 @@ name|soapBody
 argument_list|,
 literal|"CipherValue"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)

@@ -167,6 +167,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|principal
 operator|.
 name|WSDerivedKeyTokenPrincipal
@@ -943,7 +957,7 @@ argument_list|(
 name|transformAlgorithm
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_OMIT_COMMENTS
 operator|.
@@ -970,7 +984,7 @@ argument_list|(
 name|transformAlgorithm
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_CONTENT_SIG_TRANS
 operator|.
@@ -979,7 +993,7 @@ argument_list|(
 name|transformAlgorithm
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_COMPLETE_SIG_TRANS
 operator|.

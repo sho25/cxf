@@ -211,9 +211,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -485,7 +485,7 @@ literal|"Basic128RsaSha512"
 argument_list|,
 literal|"http://www.w3.org/2001/04/xmlenc#sha512"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128
 argument_list|,

@@ -389,9 +389,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -414,7 +414,7 @@ name|addNamespace
 argument_list|(
 literal|"wsse"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 argument_list|)
@@ -423,7 +423,7 @@ name|addNamespace
 argument_list|(
 literal|"wsse11"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE11_NS
 argument_list|)
@@ -432,7 +432,7 @@ name|addNamespace
 argument_list|(
 literal|"ds"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|)
@@ -454,7 +454,7 @@ name|addNamespace
 argument_list|(
 literal|"xenc"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -463,7 +463,7 @@ name|addNamespace
 argument_list|(
 literal|"wsu"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -472,7 +472,7 @@ name|addNamespace
 argument_list|(
 literal|"saml1"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 argument_list|)
@@ -481,7 +481,7 @@ name|addNamespace
 argument_list|(
 literal|"saml2"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|)

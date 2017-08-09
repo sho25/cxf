@@ -179,6 +179,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|derivedKey
 operator|.
 name|P_SHA1
@@ -198,20 +212,6 @@ operator|.
 name|ext
 operator|.
 name|WSSecurityException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -344,7 +344,7 @@ block|{
 if|if
 condition|(
 operator|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128
 operator|.
@@ -353,7 +353,7 @@ argument_list|(
 name|encryptWith
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128_GCM
 operator|.
@@ -377,7 +377,7 @@ elseif|else
 if|if
 condition|(
 operator|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_192
 operator|.
@@ -386,7 +386,7 @@ argument_list|(
 name|encryptWith
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_192_GCM
 operator|.
@@ -410,7 +410,7 @@ elseif|else
 if|if
 condition|(
 operator|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_256
 operator|.
@@ -419,7 +419,7 @@ argument_list|(
 name|encryptWith
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_256_GCM
 operator|.
@@ -442,7 +442,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|TRIPLE_DES
 operator|.

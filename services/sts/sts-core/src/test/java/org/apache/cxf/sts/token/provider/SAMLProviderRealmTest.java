@@ -211,6 +211,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -281,20 +295,6 @@ name|DOM2Writer
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * Some unit tests for creating SAML Tokens via the SAMLTokenProvider in different realms  */
 end_comment
@@ -336,7 +336,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -430,7 +430,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -550,7 +550,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -667,7 +667,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -801,7 +801,7 @@ name|providerParameters
 init|=
 name|createProviderParameters
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -959,7 +959,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -1079,7 +1079,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -1196,7 +1196,7 @@ name|samlTokenProvider
 operator|.
 name|canHandleToken
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,

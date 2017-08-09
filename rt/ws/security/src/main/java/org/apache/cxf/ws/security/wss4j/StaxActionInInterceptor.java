@@ -557,7 +557,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 operator|.
@@ -656,7 +656,7 @@ throw|;
 block|}
 if|if
 condition|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|ENCRYPT
 operator|.

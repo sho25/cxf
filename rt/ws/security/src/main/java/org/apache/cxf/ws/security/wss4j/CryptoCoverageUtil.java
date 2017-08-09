@@ -179,9 +179,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|ext
-operator|.
-name|WSSecurityException
+name|WSS4JConstants
 import|;
 end_import
 
@@ -193,9 +191,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|ext
+operator|.
+name|WSSecurityException
 import|;
 end_import
 
@@ -294,7 +294,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 operator|.
@@ -306,7 +306,7 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENCRYPTED_HEADER
 operator|.
@@ -318,7 +318,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE11_NS
 operator|.
@@ -330,7 +330,7 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENCRYPED_ASSERTION_LN
 operator|.
@@ -342,7 +342,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -579,7 +579,7 @@ condition|)
 block|{
 name|requiredTransform
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_CONTENT_SIG_TRANS
 expr_stmt|;
@@ -596,7 +596,7 @@ condition|)
 block|{
 name|requiredTransform
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_COMPLETE_SIG_TRANS
 expr_stmt|;

@@ -1844,7 +1844,7 @@ name|SP12Constants
 operator|.
 name|SP_NS
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|ALGO_SUITE_BASIC128
 argument_list|)

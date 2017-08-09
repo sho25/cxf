@@ -145,7 +145,7 @@ name|wss4j
 operator|.
 name|policy
 operator|.
-name|SP13Constants
+name|SP12Constants
 import|;
 end_import
 
@@ -441,7 +441,7 @@ operator|new
 name|QName
 index|[]
 block|{
-name|SP13Constants
+name|SP12Constants
 operator|.
 name|ALGORITHM_SUITE
 block|,

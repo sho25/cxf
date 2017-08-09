@@ -241,9 +241,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|crypto
-operator|.
-name|CryptoFactory
+name|WSS4JConstants
 import|;
 end_import
 
@@ -255,9 +253,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|crypto
+operator|.
+name|CryptoFactory
 import|;
 end_import
 
@@ -290,6 +290,24 @@ operator|.
 name|ext
 operator|.
 name|WSSSecurityProperties
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
 import|;
 end_import
 
@@ -451,7 +469,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_TEXT
 argument_list|)
@@ -749,7 +767,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_DIGEST
 argument_list|)
@@ -1306,7 +1324,7 @@ name|ConfigurationConstants
 operator|.
 name|ENC_KEY_TRANSPORT
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSA15
 argument_list|)
@@ -1319,7 +1337,7 @@ name|ConfigurationConstants
 operator|.
 name|ENC_SYM_ALGO
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|TRIPLE_DES
 argument_list|)
@@ -3287,7 +3305,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)

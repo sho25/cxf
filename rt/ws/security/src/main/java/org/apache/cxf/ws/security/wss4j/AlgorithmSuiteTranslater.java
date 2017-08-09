@@ -109,6 +109,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|AlgorithmSuite
@@ -128,20 +142,6 @@ operator|.
 name|ext
 operator|.
 name|WSSecurityException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -754,7 +754,7 @@ name|algorithmSuite
 operator|.
 name|addTransformAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_OMIT_COMMENTS
 argument_list|)
@@ -763,7 +763,7 @@ name|algorithmSuite
 operator|.
 name|addTransformAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|NS_XMLDSIG_ENVELOPED_SIGNATURE
 argument_list|)
@@ -772,7 +772,7 @@ name|algorithmSuite
 operator|.
 name|addTransformAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_CONTENT_SIG_TRANS
 argument_list|)
@@ -781,7 +781,7 @@ name|algorithmSuite
 operator|.
 name|addTransformAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SWA_ATTACHMENT_COMPLETE_SIG_TRANS
 argument_list|)

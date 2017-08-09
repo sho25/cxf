@@ -45,6 +45,20 @@ name|apache
 operator|.
 name|wss4j
 operator|.
+name|common
+operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
 name|dom
 operator|.
 name|WSConstants
@@ -121,7 +135,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|TRIPLE_DES
 argument_list|)
@@ -130,7 +144,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128
 argument_list|)
@@ -139,7 +153,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_192
 argument_list|)
@@ -148,7 +162,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_256
 argument_list|)
@@ -157,7 +171,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128_GCM
 argument_list|)
@@ -166,7 +180,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_192_GCM
 argument_list|)
@@ -175,7 +189,7 @@ name|acceptedEncryptionAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_256_GCM
 argument_list|)
@@ -185,7 +199,7 @@ name|acceptedKeyWrapAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSA15
 argument_list|)
@@ -194,7 +208,7 @@ name|acceptedKeyWrapAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSAOAEP
 argument_list|)

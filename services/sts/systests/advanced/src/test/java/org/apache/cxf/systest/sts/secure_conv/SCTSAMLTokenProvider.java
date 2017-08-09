@@ -423,6 +423,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSPasswordCallback
@@ -531,20 +545,6 @@ name|SubjectBean
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * A TokenProvider implementation that provides a SAML Token that contains a Symmetric Key that is obtained  * from the TokenProviderParameter properties.  */
 end_comment
@@ -610,7 +610,7 @@ name|tokenType
 parameter_list|)
 block|{
 return|return
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -619,7 +619,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -628,7 +628,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -637,7 +637,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -812,7 +812,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -821,7 +821,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.

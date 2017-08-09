@@ -231,9 +231,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -542,7 +542,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -714,7 +714,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -886,7 +886,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -1025,7 +1025,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
@@ -1202,7 +1202,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
@@ -1348,7 +1348,7 @@ name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,

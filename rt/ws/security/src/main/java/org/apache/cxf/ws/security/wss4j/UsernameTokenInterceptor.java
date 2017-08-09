@@ -423,6 +423,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|bsp
 operator|.
 name|BSPEnforcer
@@ -877,7 +891,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 operator|.
@@ -2947,7 +2961,7 @@ name|utBuilder
 operator|.
 name|setPasswordType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PASSWORD_DIGEST
 argument_list|)
@@ -2959,7 +2973,7 @@ name|utBuilder
 operator|.
 name|setPasswordType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PASSWORD_TEXT
 argument_list|)

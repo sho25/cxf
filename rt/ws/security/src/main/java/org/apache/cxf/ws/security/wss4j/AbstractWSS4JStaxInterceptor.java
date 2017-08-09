@@ -553,6 +553,24 @@ name|ConfigurationConverter
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -619,7 +637,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XMLENC
 argument_list|,

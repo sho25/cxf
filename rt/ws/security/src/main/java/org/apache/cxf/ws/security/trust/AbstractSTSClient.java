@@ -1305,6 +1305,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -1436,20 +1450,6 @@ operator|.
 name|util
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -6110,7 +6110,7 @@ name|writeAttribute
 argument_list|(
 literal|"EncodingType"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|BASE64_ENCODING
 argument_list|)
@@ -8321,7 +8321,7 @@ name|writeNamespace
 argument_list|(
 literal|"wsu"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -8334,7 +8334,7 @@ literal|"wsu"
 argument_list|,
 literal|"Created"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -8376,7 +8376,7 @@ literal|"wsu"
 argument_list|,
 literal|"Expires"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|)
@@ -9200,11 +9200,11 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_KEY_LN
 argument_list|)
@@ -9285,11 +9285,11 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_KEY_LN
 argument_list|)
@@ -9543,7 +9543,7 @@ name|child
 argument_list|,
 literal|"CipherData"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -9571,7 +9571,7 @@ name|tmpE
 argument_list|,
 literal|"CipherValue"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|)
@@ -10167,7 +10167,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 argument_list|,
@@ -10207,7 +10207,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|,
@@ -10348,7 +10348,7 @@ name|rst
 operator|.
 name|getAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|,
@@ -10388,7 +10388,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 argument_list|,
@@ -10420,7 +10420,7 @@ name|child
 operator|.
 name|getAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSU_NS
 argument_list|,
@@ -10483,7 +10483,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|,
@@ -10498,7 +10498,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 argument_list|,

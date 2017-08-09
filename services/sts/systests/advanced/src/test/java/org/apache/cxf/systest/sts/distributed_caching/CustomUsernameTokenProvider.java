@@ -145,9 +145,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -252,7 +252,7 @@ literal|true
 argument_list|,
 name|doc
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PASSWORD_TEXT
 argument_list|)

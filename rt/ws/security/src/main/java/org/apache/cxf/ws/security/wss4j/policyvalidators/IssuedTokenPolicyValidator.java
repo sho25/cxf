@@ -213,6 +213,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|saml
 operator|.
 name|SAMLKeyInfo
@@ -1160,7 +1174,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -1186,7 +1200,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -1589,7 +1603,7 @@ name|token
 operator|.
 name|setTokenType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -1610,7 +1624,7 @@ name|token
 operator|.
 name|setTokenType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)

@@ -397,6 +397,24 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Test
@@ -2871,7 +2889,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|ENCRYPT
 argument_list|)
@@ -2887,7 +2905,7 @@ name|properties
 operator|.
 name|setEncryptionSymAlgorithm
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -3123,7 +3141,7 @@ name|ConfigurationConstants
 operator|.
 name|ENC_SYM_ALGO
 argument_list|,
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -3338,7 +3356,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|ENCRYPT
 argument_list|)
@@ -3393,7 +3411,7 @@ name|properties
 operator|.
 name|setEncryptionSymAlgorithm
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -3680,7 +3698,7 @@ name|ConfigurationConstants
 operator|.
 name|ENC_SYM_ALGO
 argument_list|,
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -3886,7 +3904,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -4358,7 +4376,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -5207,7 +5225,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -5748,7 +5766,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6253,7 +6271,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|ENCRYPT
 argument_list|)
@@ -6262,7 +6280,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6292,7 +6310,7 @@ name|properties
 operator|.
 name|setEncryptionSymAlgorithm
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -6591,7 +6609,7 @@ name|ConfigurationConstants
 operator|.
 name|ENC_SYM_ALGO
 argument_list|,
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128
 argument_list|)
@@ -6732,7 +6750,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -6876,7 +6894,7 @@ name|actions
 operator|.
 name|add
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)

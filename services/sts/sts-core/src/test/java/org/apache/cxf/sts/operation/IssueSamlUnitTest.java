@@ -653,6 +653,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -1163,7 +1177,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -1578,7 +1592,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -1993,7 +2007,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -2416,7 +2430,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -2481,7 +2495,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -2943,7 +2957,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionAlgorithm
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|AES_128
 argument_list|)
@@ -3066,7 +3080,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -3479,7 +3493,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -4012,7 +4026,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -4612,7 +4626,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -5176,7 +5190,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -5320,7 +5334,7 @@ name|builder
 operator|.
 name|setKeyEncAlgo
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSAOAEP
 argument_list|)
@@ -5903,7 +5917,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -6258,7 +6272,7 @@ name|acceptedC14nAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_OMIT_COMMENTS
 argument_list|)
@@ -6267,7 +6281,7 @@ name|acceptedC14nAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -6321,7 +6335,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -6369,7 +6383,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -6597,7 +6611,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|C14N_EXCL_WITH_COMMENTS
 argument_list|)
@@ -6793,7 +6807,7 @@ name|acceptedSignatureAlgorithms
 operator|.
 name|add
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|RSA_SHA1
 argument_list|)
@@ -6847,7 +6861,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -7305,7 +7319,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -7944,7 +7958,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -8492,7 +8506,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -8936,7 +8950,7 @@ name|appliesTo
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -8997,7 +9011,7 @@ name|appliesTo
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -9069,7 +9083,7 @@ name|endpointRef
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -9098,7 +9112,7 @@ name|address
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -9187,7 +9201,7 @@ name|doc
 operator|.
 name|createElementNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|,
@@ -9198,13 +9212,13 @@ name|x509Data
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
 literal|"xmlns:ds"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|)
@@ -9216,7 +9230,7 @@ name|doc
 operator|.
 name|createElementNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|,

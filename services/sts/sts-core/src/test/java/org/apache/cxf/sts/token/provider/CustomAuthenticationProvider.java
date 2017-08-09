@@ -29,6 +29,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|saml
 operator|.
 name|bean
@@ -91,20 +105,6 @@ name|SAML2Constants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * A custom AuthenticationStatementProvider implementation for use in the tests.  */
 end_comment
@@ -155,7 +155,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.

@@ -417,9 +417,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|util
-operator|.
-name|DateUtil
+name|WSS4JConstants
 import|;
 end_import
 
@@ -431,9 +429,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|util
+operator|.
+name|DateUtil
 import|;
 end_import
 
@@ -2368,7 +2368,7 @@ name|appliesTo
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -2397,7 +2397,7 @@ name|endpointRef
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
@@ -2426,7 +2426,7 @@ name|address
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,

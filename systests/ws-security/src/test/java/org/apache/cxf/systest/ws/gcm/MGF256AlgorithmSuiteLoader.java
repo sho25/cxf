@@ -211,9 +211,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -493,7 +493,7 @@ name|SPConstants
 operator|.
 name|KW_AES256
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSAOAEP_XENC11
 argument_list|,
@@ -540,7 +540,7 @@ name|SPConstants
 operator|.
 name|KW_AES256
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|KEYTRANSPORT_RSAOAEP_XENC11
 argument_list|,
@@ -575,7 +575,7 @@ argument_list|)
 operator|.
 name|setMGFAlgo
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|MGF_SHA256
 argument_list|)
@@ -589,7 +589,7 @@ argument_list|)
 operator|.
 name|setMGFAlgo
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|MGF_SHA256
 argument_list|)

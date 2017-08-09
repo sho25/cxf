@@ -189,6 +189,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSSecurityException
@@ -224,20 +238,6 @@ operator|.
 name|util
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -936,7 +936,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -1040,7 +1040,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -1077,7 +1077,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -1104,7 +1104,7 @@ block|}
 comment|// For UsernameTokens get the username
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|USERNAME_TOKEN_LN
 operator|.
@@ -1116,7 +1116,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 operator|.
@@ -1138,11 +1138,11 @@ name|getDirectChildElement
 argument_list|(
 name|token
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|USERNAME_LN
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 argument_list|)
@@ -1167,7 +1167,7 @@ block|}
 comment|// For BinarySecurityTokens take the hash of the value
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|BINARY_TOKEN_LN
 operator|.
@@ -1179,7 +1179,7 @@ name|getLocalName
 argument_list|()
 argument_list|)
 operator|&&
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSSE_NS
 operator|.

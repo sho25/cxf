@@ -229,6 +229,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSSecurityException
@@ -316,20 +330,6 @@ operator|.
 name|bean
 operator|.
 name|AttributeStatementBean
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -622,7 +622,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -631,7 +631,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -719,7 +719,7 @@ literal|"CustomOnBehalfOf"
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -728,7 +728,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -865,7 +865,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -874,7 +874,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.

@@ -693,6 +693,24 @@ name|Modifier
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|XMLSecurityConstants
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -2361,7 +2379,7 @@ name|properties
 operator|.
 name|addAction
 argument_list|(
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 argument_list|)
@@ -2490,7 +2508,7 @@ operator|.
 name|Action
 name|actionToPerform
 init|=
-name|WSSConstants
+name|XMLSecurityConstants
 operator|.
 name|SIGNATURE
 decl_stmt|;

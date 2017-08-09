@@ -351,9 +351,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -1375,7 +1375,7 @@ name|tok
 operator|.
 name|setTokenType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSC_SCT
 argument_list|)

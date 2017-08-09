@@ -385,6 +385,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|bsp
 operator|.
 name|BSPEnforcer
@@ -2720,7 +2734,7 @@ name|tokenRef
 operator|.
 name|setKeyIdentifier
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_KRB_KI_VALUE_TYPE
 argument_list|,
@@ -2741,7 +2755,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_GSS_KRB_V5_AP_REQ
 expr_stmt|;
@@ -2768,7 +2782,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_ENC_KEY_VALUE_TYPE
 expr_stmt|;
@@ -2946,7 +2960,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_ENC_KEY_VALUE_TYPE
 expr_stmt|;
@@ -2971,7 +2985,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -2980,7 +2994,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -3003,7 +3017,7 @@ name|dkEncr
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
 argument_list|)
@@ -3012,7 +3026,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -3021,7 +3035,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -3044,7 +3058,7 @@ name|dkEncr
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_KI_VALUE_TYPE
 argument_list|)
@@ -3062,7 +3076,7 @@ name|dkEncr
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_USERNAME_TOKEN_VALUE_TYPE
 argument_list|)
@@ -3665,7 +3679,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -3674,7 +3688,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -3688,7 +3702,7 @@ name|encr
 operator|.
 name|setCustomReferenceValue
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
 argument_list|)
@@ -3706,7 +3720,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -3715,7 +3729,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -3729,7 +3743,7 @@ name|encr
 operator|.
 name|setCustomReferenceValue
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_KI_VALUE_TYPE
 argument_list|)
@@ -3776,7 +3790,7 @@ name|encr
 operator|.
 name|setCustomReferenceValue
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_USERNAME_TOKEN_VALUE_TYPE
 argument_list|)
@@ -3798,7 +3812,7 @@ name|encr
 operator|.
 name|setCustomReferenceValue
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_KRB_KI_VALUE_TYPE
 argument_list|)
@@ -4305,7 +4319,7 @@ name|tokenRef
 operator|.
 name|setKeyIdentifier
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_KRB_KI_VALUE_TYPE
 argument_list|,
@@ -4326,7 +4340,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_GSS_KRB_V5_AP_REQ
 expr_stmt|;
@@ -4353,7 +4367,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_ENC_KEY_VALUE_TYPE
 expr_stmt|;
@@ -4543,7 +4557,7 @@ condition|)
 block|{
 name|tokenType
 operator|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_ENC_KEY_VALUE_TYPE
 expr_stmt|;
@@ -4568,7 +4582,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -4577,7 +4591,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -4600,7 +4614,7 @@ name|dkSign
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
 argument_list|)
@@ -4609,7 +4623,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -4618,7 +4632,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -4641,7 +4655,7 @@ name|dkSign
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_KI_VALUE_TYPE
 argument_list|)
@@ -4659,7 +4673,7 @@ name|dkSign
 operator|.
 name|setCustomValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_USERNAME_TOKEN_VALUE_TYPE
 argument_list|)
@@ -5035,13 +5049,13 @@ name|sig
 operator|.
 name|setCustomTokenValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SOAPMESSAGE_NS11
 operator|+
 literal|"#"
 operator|+
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_KEY_VALUE_TYPE
 argument_list|)
@@ -5090,7 +5104,7 @@ name|sig
 operator|.
 name|setCustomTokenValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_USERNAME_TOKEN_VALUE_TYPE
 argument_list|)
@@ -5141,7 +5155,7 @@ name|sig
 operator|.
 name|setCustomTokenValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_KRB_KI_VALUE_TYPE
 argument_list|)
@@ -5245,7 +5259,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -5254,7 +5268,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -5268,7 +5282,7 @@ name|sig
 operator|.
 name|setCustomTokenValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
 argument_list|)
@@ -5286,7 +5300,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -5295,7 +5309,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -5309,7 +5323,7 @@ name|sig
 operator|.
 name|setCustomTokenValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_KI_VALUE_TYPE
 argument_list|)

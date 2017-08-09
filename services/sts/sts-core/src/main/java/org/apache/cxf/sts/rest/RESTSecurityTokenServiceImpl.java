@@ -575,9 +575,7 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|util
-operator|.
-name|DOM2Writer
+name|WSS4JConstants
 import|;
 end_import
 
@@ -589,9 +587,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|util
+operator|.
+name|DOM2Writer
 import|;
 end_import
 
@@ -817,7 +817,7 @@ name|put
 argument_list|(
 literal|"saml"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -828,7 +828,7 @@ name|put
 argument_list|(
 literal|"saml2.0"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -839,7 +839,7 @@ name|put
 argument_list|(
 literal|"saml1.1"
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)

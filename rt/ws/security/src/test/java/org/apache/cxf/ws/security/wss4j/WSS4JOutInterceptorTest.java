@@ -147,6 +147,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSSecurityException
@@ -327,7 +341,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_TEXT
 argument_list|)
@@ -478,7 +492,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_DIGEST
 argument_list|)
@@ -1042,7 +1056,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_TEXT
 argument_list|)
@@ -1323,7 +1337,7 @@ name|ConfigurationConstants
 operator|.
 name|PASSWORD_TYPE
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_TEXT
 argument_list|)
@@ -1438,7 +1452,7 @@ name|reqData
 operator|.
 name|setPwType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|PW_TEXT
 argument_list|)

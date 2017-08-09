@@ -863,6 +863,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|ext
 operator|.
 name|WSSecurityException
@@ -1797,7 +1811,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 operator|.
@@ -1806,7 +1820,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML_NS
 operator|.
@@ -1820,7 +1834,7 @@ name|tokenReference
 operator|.
 name|setWsse11TokenType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|)
@@ -1836,7 +1850,7 @@ name|tokenReference
 operator|.
 name|setWsseValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
 argument_list|)
@@ -1845,7 +1859,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 operator|.
@@ -1854,7 +1868,7 @@ argument_list|(
 name|tokenType
 argument_list|)
 operator|||
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SAML2_NS
 operator|.
@@ -1868,7 +1882,7 @@ name|tokenReference
 operator|.
 name|setWsse11TokenType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
@@ -1884,7 +1898,7 @@ name|tokenReference
 operator|.
 name|setWsseValueType
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|WSS_SAML2_KI_VALUE_TYPE
 argument_list|)

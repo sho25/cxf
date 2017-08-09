@@ -421,9 +421,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -2188,7 +2188,7 @@ name|root
 operator|.
 name|setAttributeNS
 argument_list|(
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|XMLNS_NS
 argument_list|,
