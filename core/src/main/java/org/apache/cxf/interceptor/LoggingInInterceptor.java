@@ -1345,6 +1345,11 @@ literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
+name|boolean
+name|truncated
+init|=
+literal|false
+decl_stmt|;
 if|if
 condition|(
 name|bos
@@ -1374,6 +1379,10 @@ operator|+
 literal|" bytes)\n"
 argument_list|)
 expr_stmt|;
+name|truncated
+operator|=
+literal|true
+expr_stmt|;
 block|}
 name|writePayload
 argument_list|(
@@ -1387,6 +1396,8 @@ argument_list|,
 name|encoding
 argument_list|,
 name|ct
+argument_list|,
+name|truncated
 argument_list|)
 expr_stmt|;
 name|bos

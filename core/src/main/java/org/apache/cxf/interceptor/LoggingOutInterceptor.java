@@ -1420,6 +1420,11 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+name|boolean
+name|truncated
+init|=
+literal|false
+decl_stmt|;
 if|if
 condition|(
 name|cos
@@ -1454,6 +1459,10 @@ name|lim
 operator|+
 literal|" bytes)\n"
 argument_list|)
+expr_stmt|;
+name|truncated
+operator|=
+literal|true
 expr_stmt|;
 block|}
 block|}
@@ -1513,6 +1522,10 @@ operator|+
 literal|" bytes)\n"
 argument_list|)
 expr_stmt|;
+name|truncated
+operator|=
+literal|true
+expr_stmt|;
 block|}
 block|}
 try|try
@@ -1544,6 +1557,8 @@ argument_list|,
 name|encoding
 argument_list|,
 name|ct
+argument_list|,
+name|truncated
 argument_list|)
 expr_stmt|;
 block|}

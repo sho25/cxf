@@ -997,6 +997,9 @@ name|encoding
 parameter_list|,
 name|String
 name|contentType
+parameter_list|,
+name|boolean
+name|truncated
 parameter_list|)
 throws|throws
 name|Exception
@@ -1004,6 +1007,9 @@ block|{
 comment|// Just transform the XML message when the cos has content
 if|if
 condition|(
+operator|!
+name|truncated
+operator|&&
 name|isPrettyLogging
 argument_list|()
 operator|&&
