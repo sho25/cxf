@@ -22,7 +22,7 @@ annotation|@
 name|FunctionalInterface
 specifier|public
 interface|interface
-name|NioWriteErrorHandler
+name|NioErrorHandler
 block|{
 comment|/**      * Method called when an exception or error occurred.      *      * @param throwable the error or exception encountered.      */
 name|void

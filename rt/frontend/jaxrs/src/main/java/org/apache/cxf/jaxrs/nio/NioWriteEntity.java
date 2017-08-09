@@ -30,7 +30,7 @@ name|writer
 decl_stmt|;
 specifier|private
 specifier|final
-name|NioWriteErrorHandler
+name|NioErrorHandler
 name|error
 decl_stmt|;
 specifier|public
@@ -41,7 +41,7 @@ name|NioWriteHandler
 name|writer
 parameter_list|,
 specifier|final
-name|NioWriteErrorHandler
+name|NioErrorHandler
 name|error
 parameter_list|)
 block|{
@@ -68,7 +68,7 @@ name|writer
 return|;
 block|}
 specifier|public
-name|NioWriteErrorHandler
+name|NioErrorHandler
 name|getError
 parameter_list|()
 block|{
