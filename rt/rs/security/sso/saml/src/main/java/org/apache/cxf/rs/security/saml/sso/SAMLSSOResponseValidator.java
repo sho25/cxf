@@ -880,6 +880,14 @@ if|if
 condition|(
 name|enforceKnownIssuer
 operator|&&
+operator|(
+name|issuer
+operator|.
+name|getValue
+argument_list|()
+operator|==
+literal|null
+operator|||
 operator|!
 name|issuerIDP
 operator|.
@@ -890,6 +898,7 @@ operator|.
 name|getValue
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|LOG
