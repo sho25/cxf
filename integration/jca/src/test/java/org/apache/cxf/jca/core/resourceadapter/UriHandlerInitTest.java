@@ -198,13 +198,6 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
-if|if
-condition|(
-name|origVal
-operator|!=
-literal|null
-condition|)
-block|{
 name|properties
 operator|.
 name|put
@@ -214,7 +207,6 @@ argument_list|,
 name|origVal
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

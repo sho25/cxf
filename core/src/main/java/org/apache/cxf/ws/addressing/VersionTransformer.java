@@ -811,6 +811,10 @@ condition|(
 name|portLocalName
 operator|!=
 literal|null
+operator|&&
+name|serviceQName
+operator|!=
+literal|null
 condition|)
 block|{
 name|String
@@ -1025,6 +1029,10 @@ decl_stmt|;
 if|if
 condition|(
 name|portLocalName
+operator|!=
+literal|null
+operator|&&
+name|serviceQName
 operator|!=
 literal|null
 condition|)

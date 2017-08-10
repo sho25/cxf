@@ -1563,6 +1563,10 @@ block|}
 elseif|else
 if|if
 condition|(
+literal|null
+operator|!=
+name|appendProp
+operator|&&
 name|replaceContent
 condition|)
 block|{
