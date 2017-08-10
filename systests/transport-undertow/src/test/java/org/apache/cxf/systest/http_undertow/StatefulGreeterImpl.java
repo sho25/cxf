@@ -206,7 +206,6 @@ argument_list|>
 name|asyncHandler
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -222,7 +221,6 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -234,9 +232,7 @@ parameter_list|(
 name|String
 name|requestType
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|Future
 argument_list|<
@@ -251,7 +247,6 @@ argument_list|>
 name|asyncHandler
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -264,7 +259,6 @@ argument_list|>
 name|pingMeAsync
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -283,7 +277,6 @@ argument_list|>
 name|asyncHandler
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -296,7 +289,6 @@ argument_list|>
 name|sayHiAsync
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

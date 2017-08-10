@@ -67,9 +67,7 @@ name|pingMe
 parameter_list|()
 throws|throws
 name|PingMeFault
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 specifier|public
 name|String
 name|greetMe
@@ -78,7 +76,6 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

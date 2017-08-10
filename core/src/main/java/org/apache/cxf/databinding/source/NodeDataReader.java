@@ -510,9 +510,7 @@ parameter_list|(
 name|Schema
 name|s
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 specifier|public
 name|void
 name|setAttachments
@@ -523,9 +521,7 @@ name|Attachment
 argument_list|>
 name|attachments
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 specifier|public
 name|void
 name|setProperty
@@ -536,9 +532,7 @@ parameter_list|,
 name|Object
 name|value
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 block|}
 end_class
 

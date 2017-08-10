@@ -107,7 +107,6 @@ name|DOMSource
 name|theRequest
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -122,9 +121,7 @@ name|DOMSource
 argument_list|>
 name|body
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|void
 name|putLastTradedPrice
@@ -132,15 +129,12 @@ parameter_list|(
 name|DOMSource
 name|body
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|DOMSource
 name|bareNoParam
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

@@ -1142,7 +1142,6 @@ name|boolean
 name|standaloneSet
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -1152,7 +1151,6 @@ name|String
 name|getCharacterEncodingScheme
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

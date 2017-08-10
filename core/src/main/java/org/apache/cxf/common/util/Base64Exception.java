@@ -77,7 +77,6 @@ argument_list|(
 name|msg
 argument_list|)
 expr_stmt|;
-comment|// TODO Auto-generated constructor stub
 block|}
 specifier|public
 name|Base64Exception
@@ -96,7 +95,6 @@ argument_list|,
 name|t
 argument_list|)
 expr_stmt|;
-comment|// TODO Auto-generated constructor stub
 block|}
 specifier|public
 name|Base64Exception
@@ -110,7 +108,6 @@ argument_list|(
 name|cause
 argument_list|)
 expr_stmt|;
-comment|// TODO Auto-generated constructor stub
 block|}
 block|}
 end_class

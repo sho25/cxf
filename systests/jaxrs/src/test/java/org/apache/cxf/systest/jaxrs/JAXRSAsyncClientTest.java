@@ -2779,7 +2779,6 @@ name|MediaType
 name|arg4
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -2967,9 +2966,7 @@ name|responseContext
 parameter_list|)
 throws|throws
 name|IOException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 specifier|private
 specifier|static

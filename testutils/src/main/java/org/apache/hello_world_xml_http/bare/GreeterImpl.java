@@ -82,7 +82,6 @@ name|String
 name|me
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|"Hello "
 operator|+
@@ -94,7 +93,6 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|"Bonjour"
 return|;
@@ -107,7 +105,6 @@ name|MyComplexStructType
 name|in
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 name|in
 return|;
@@ -123,7 +120,6 @@ name|String
 name|in1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|in2
 operator|.
 name|setElem1
@@ -149,7 +145,6 @@ name|String
 name|in2
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -168,7 +163,6 @@ name|String
 name|in2
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

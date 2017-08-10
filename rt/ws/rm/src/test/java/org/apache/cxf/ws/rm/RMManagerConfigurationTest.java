@@ -544,9 +544,7 @@ parameter_list|(
 name|DestinationSequence
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|void
 name|createSourceSequence
@@ -554,9 +552,7 @@ parameter_list|(
 name|SourceSequence
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|Collection
 argument_list|<
@@ -568,7 +564,6 @@ name|String
 name|endpointIdentifier
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -587,7 +582,6 @@ name|boolean
 name|outbound
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -603,7 +597,6 @@ name|String
 name|endpointIdentifier
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -618,9 +611,7 @@ parameter_list|,
 name|RMMessage
 name|msg
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|void
 name|persistOutgoing
@@ -631,9 +622,7 @@ parameter_list|,
 name|RMMessage
 name|msg
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|void
 name|removeDestinationSequence
@@ -641,9 +630,7 @@ parameter_list|(
 name|Identifier
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|void
 name|removeMessages
@@ -660,9 +647,7 @@ parameter_list|,
 name|boolean
 name|outbound
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|void
 name|removeSourceSequence
@@ -670,9 +655,7 @@ parameter_list|(
 name|Identifier
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{              }
 specifier|public
 name|SourceSequence
 name|getSourceSequence
@@ -681,7 +664,6 @@ name|Identifier
 name|seq
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -694,7 +676,6 @@ name|Identifier
 name|seq
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

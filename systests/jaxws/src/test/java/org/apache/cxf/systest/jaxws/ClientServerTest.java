@@ -5527,7 +5527,6 @@ parameter_list|)
 throws|throws
 name|Throwable
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

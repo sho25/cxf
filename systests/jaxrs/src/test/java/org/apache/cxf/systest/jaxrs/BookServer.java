@@ -1948,9 +1948,7 @@ name|responseContext
 parameter_list|)
 throws|throws
 name|IOException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 block|}
 specifier|public
 specifier|static

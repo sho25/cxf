@@ -174,7 +174,6 @@ name|SOAPHeaderData
 name|headerInfo
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|InHeaderResponse
 name|resp
 init|=
@@ -226,7 +225,6 @@ argument_list|>
 name|headerInfo
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|InoutHeaderResponse
 name|resp
 init|=

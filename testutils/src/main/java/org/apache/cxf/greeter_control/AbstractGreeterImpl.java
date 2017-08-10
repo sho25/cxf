@@ -354,7 +354,6 @@ argument_list|>
 name|arg1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -370,7 +369,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -486,7 +484,6 @@ argument_list|>
 name|pingMeAsync
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -505,7 +502,6 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -515,7 +511,6 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -528,7 +523,6 @@ argument_list|>
 name|sayHiAsync
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -547,7 +541,6 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

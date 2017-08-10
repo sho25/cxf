@@ -3983,9 +3983,7 @@ parameter_list|(
 name|Throwable
 name|arg0
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 specifier|private
 specifier|static
@@ -4049,9 +4047,7 @@ parameter_list|(
 name|Throwable
 name|arg0
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 specifier|private
 name|void

@@ -7031,16 +7031,12 @@ name|Object
 argument_list|>
 name|arg0
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|void
 name|destroy
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|int
 name|getHandleMessageCount

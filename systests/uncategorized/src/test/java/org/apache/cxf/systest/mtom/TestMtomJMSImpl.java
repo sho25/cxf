@@ -126,7 +126,6 @@ argument_list|>
 name|attachinfo
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|name
 operator|.
 name|value

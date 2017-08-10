@@ -351,7 +351,6 @@ name|String
 name|getId
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -376,7 +375,6 @@ argument_list|>
 name|type
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -386,9 +384,7 @@ specifier|public
 name|void
 name|run
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 specifier|static
 name|boolean
@@ -489,7 +485,6 @@ argument_list|>
 name|getFeatures
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -510,9 +505,7 @@ parameter_list|(
 name|String
 name|i
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|void
 name|setProperties
@@ -525,9 +518,7 @@ name|Object
 argument_list|>
 name|properties
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|void
 name|setFeatures
@@ -540,9 +531,7 @@ name|Feature
 argument_list|>
 name|features
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 block|}
 end_class
 

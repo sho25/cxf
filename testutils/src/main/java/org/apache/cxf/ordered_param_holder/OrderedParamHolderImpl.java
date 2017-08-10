@@ -90,7 +90,6 @@ argument_list|>
 name|part1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|part2
 operator|.
 name|value

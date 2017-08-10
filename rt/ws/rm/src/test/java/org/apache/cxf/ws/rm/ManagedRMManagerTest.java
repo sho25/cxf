@@ -3448,9 +3448,7 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|void
 name|purgeAcknowledged
@@ -3458,9 +3456,7 @@ parameter_list|(
 name|SourceSequence
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|void
 name|purgeAll
@@ -3619,7 +3615,6 @@ name|SourceSequence
 name|seq
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -3628,9 +3623,7 @@ specifier|public
 name|void
 name|start
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|void
 name|stop
@@ -3638,9 +3631,7 @@ parameter_list|(
 name|SourceSequence
 name|seq
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 specifier|public
 name|void
 name|suspend

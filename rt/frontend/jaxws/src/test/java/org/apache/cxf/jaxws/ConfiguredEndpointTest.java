@@ -2466,9 +2466,7 @@ name|message
 parameter_list|)
 throws|throws
 name|Fault
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 block|}
 block|}
 end_class

@@ -2091,7 +2091,6 @@ parameter_list|)
 throws|throws
 name|WSDLException
 block|{
-comment|// TODO Auto-generated method stub
 try|try
 block|{
 name|Marshaller

@@ -47,9 +47,7 @@ comment|/**      *      */
 specifier|public
 name|SOAPHeaderServiceImpl
 parameter_list|()
-block|{
-comment|// TODO Auto-generated constructor stub
-block|}
+block|{     }
 specifier|public
 name|String
 name|test

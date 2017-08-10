@@ -4137,7 +4137,6 @@ name|ClassNotFoundException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
 name|cls
 operator|=
 name|Class
@@ -4978,7 +4977,6 @@ name|ClassNotFoundException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
 name|cls
 operator|=
 name|Class

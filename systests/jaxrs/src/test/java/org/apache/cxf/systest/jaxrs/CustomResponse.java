@@ -235,9 +235,7 @@ specifier|public
 name|void
 name|close
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 annotation|@
 name|Override
 specifier|public
@@ -248,7 +246,6 @@ argument_list|>
 name|getAllowedMethods
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -265,7 +262,6 @@ argument_list|>
 name|getCookies
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -277,7 +273,6 @@ name|Date
 name|getDate
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -303,7 +298,6 @@ name|EntityTag
 name|getEntityTag
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -318,7 +312,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -330,7 +323,6 @@ name|Locale
 name|getLanguage
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -342,7 +334,6 @@ name|Date
 name|getLastModified
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -354,7 +345,6 @@ name|int
 name|getLength
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -369,7 +359,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -384,7 +373,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -399,7 +387,6 @@ argument_list|>
 name|getLinks
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -411,7 +398,6 @@ name|URI
 name|getLocation
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -423,7 +409,6 @@ name|MediaType
 name|getMediaType
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -468,7 +453,6 @@ name|StatusType
 name|getStatusInfo
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -485,7 +469,6 @@ argument_list|>
 name|getStringHeaders
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -497,7 +480,6 @@ name|boolean
 name|hasEntity
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -512,7 +494,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -533,7 +514,6 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -554,7 +534,6 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -579,7 +558,6 @@ index|[]
 name|arg1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -604,7 +582,6 @@ index|[]
 name|arg1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

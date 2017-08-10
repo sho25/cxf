@@ -160,9 +160,7 @@ parameter_list|(
 name|DOMSource
 name|in
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|DOMSource
 name|sayHi
@@ -450,9 +448,7 @@ name|pingMe
 parameter_list|()
 throws|throws
 name|PingMeFault
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 block|}
 end_class
 

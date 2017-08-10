@@ -81,9 +81,7 @@ name|arg0
 parameter_list|)
 throws|throws
 name|TransactionException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|TransactionStatus
 name|getTransaction
@@ -94,7 +92,6 @@ parameter_list|)
 throws|throws
 name|TransactionException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -108,9 +105,7 @@ name|arg0
 parameter_list|)
 throws|throws
 name|TransactionException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 block|}
 end_class
 

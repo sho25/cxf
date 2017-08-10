@@ -350,7 +350,7 @@ name|baseUri
 argument_list|)
 expr_stmt|;
 block|}
-comment|// XXX: If we return null, a NPE is raised in SchemaBuilder.
+comment|// If we return null, a NPE is raised in SchemaBuilder.
 comment|// If we return new InputSource(), a XmlSchemaException is raised
 comment|// but without any nice error message. So let's just throw a nice error here.
 if|if

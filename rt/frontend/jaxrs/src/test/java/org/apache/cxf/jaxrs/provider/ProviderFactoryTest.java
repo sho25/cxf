@@ -5716,7 +5716,6 @@ name|RuntimeException
 name|exception
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -5808,7 +5807,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -5837,7 +5835,6 @@ name|MediaType
 name|mediaType
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -5905,9 +5902,7 @@ throws|throws
 name|IOException
 throws|,
 name|WebApplicationException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 annotation|@
 name|Produces
@@ -5995,7 +5990,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6024,7 +6018,6 @@ name|MediaType
 name|mediaType
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -6092,9 +6085,7 @@ throws|throws
 name|IOException
 throws|,
 name|WebApplicationException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 annotation|@
 name|Produces
@@ -6185,7 +6176,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6214,7 +6204,6 @@ name|MediaType
 name|mediaType
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -6282,9 +6271,7 @@ throws|throws
 name|IOException
 throws|,
 name|WebApplicationException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{         }
 block|}
 annotation|@
 name|Produces
@@ -6367,7 +6354,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6454,7 +6440,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6503,7 +6488,6 @@ name|T
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6603,7 +6587,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -6634,7 +6617,6 @@ name|MediaType
 name|arg4
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -6662,7 +6644,6 @@ name|MediaType
 name|arg3
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -6707,9 +6688,7 @@ throws|throws
 name|IOException
 throws|,
 name|WebApplicationException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 block|}
 specifier|public
 specifier|static

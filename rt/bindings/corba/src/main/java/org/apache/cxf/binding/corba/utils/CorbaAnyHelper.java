@@ -2687,7 +2687,6 @@ name|ClassWriter
 name|cw
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|MethodVisitor
 name|mv
 init|=

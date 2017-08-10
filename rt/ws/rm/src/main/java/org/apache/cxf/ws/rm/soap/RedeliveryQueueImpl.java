@@ -1412,9 +1412,7 @@ specifier|public
 name|void
 name|start
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 specifier|public
 name|void
 name|stop

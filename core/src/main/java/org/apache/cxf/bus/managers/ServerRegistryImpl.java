@@ -327,9 +327,7 @@ specifier|public
 name|void
 name|initComplete
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 annotation|@
 name|PreDestroy
 specifier|public

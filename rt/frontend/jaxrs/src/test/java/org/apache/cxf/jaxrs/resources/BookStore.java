@@ -207,7 +207,6 @@ name|String
 name|getDescription
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -217,7 +216,6 @@ name|String
 name|getAuthor
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

@@ -87,7 +87,6 @@ name|Destination
 name|getDestination
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -97,7 +96,6 @@ name|Endpoint
 name|getEndpoint
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

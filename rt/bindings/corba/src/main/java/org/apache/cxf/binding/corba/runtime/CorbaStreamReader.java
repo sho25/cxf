@@ -409,9 +409,7 @@ name|close
 parameter_list|()
 throws|throws
 name|XMLStreamException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 specifier|public
 name|int
 name|getAttributeCount
@@ -740,7 +738,6 @@ name|String
 name|getCharacterEncodingScheme
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -761,7 +758,6 @@ name|String
 name|getEncoding
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -771,7 +767,6 @@ name|Location
 name|getLocation
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 operator|new
 name|Location
@@ -782,7 +777,6 @@ name|int
 name|getCharacterOffset
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 operator|-
 literal|1
@@ -793,7 +787,6 @@ name|int
 name|getColumnNumber
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 operator|-
 literal|1
@@ -804,7 +797,6 @@ name|int
 name|getLineNumber
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 operator|-
 literal|1
@@ -815,7 +807,6 @@ name|String
 name|getPublicId
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -825,7 +816,6 @@ name|String
 name|getSystemId
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -838,7 +828,6 @@ name|NamespaceContext
 name|getNamespaceContext
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -943,7 +932,6 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1011,7 +999,6 @@ name|String
 name|getPIData
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1021,7 +1008,6 @@ name|String
 name|getPITarget
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1031,7 +1017,6 @@ name|String
 name|getPrefix
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1046,7 +1031,6 @@ parameter_list|)
 throws|throws
 name|IllegalArgumentException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1083,7 +1067,6 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
-comment|// TODO Auto-generated method stub
 throw|throw
 operator|new
 name|RuntimeException
@@ -1097,7 +1080,6 @@ name|int
 name|getTextStart
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|0
 return|;
@@ -1107,7 +1089,6 @@ name|String
 name|getVersion
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -1130,7 +1111,6 @@ name|boolean
 name|hasText
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 throw|throw
 operator|new
 name|RuntimeException
@@ -1147,7 +1127,6 @@ name|int
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -1157,7 +1136,6 @@ name|boolean
 name|isStandalone
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -1167,7 +1145,6 @@ name|boolean
 name|isWhiteSpace
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;
@@ -1202,15 +1179,12 @@ name|arg2
 parameter_list|)
 throws|throws
 name|XMLStreamException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 specifier|public
 name|boolean
 name|standaloneSet
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|false
 return|;

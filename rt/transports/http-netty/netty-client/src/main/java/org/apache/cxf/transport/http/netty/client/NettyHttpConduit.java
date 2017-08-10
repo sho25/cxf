@@ -3443,9 +3443,7 @@ specifier|public
 name|void
 name|initComplete
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 annotation|@
 name|Override
 specifier|public
@@ -3466,9 +3464,7 @@ specifier|public
 name|void
 name|preShutdown
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 block|}
 end_class
 

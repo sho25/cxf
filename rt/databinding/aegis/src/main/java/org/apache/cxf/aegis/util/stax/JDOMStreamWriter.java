@@ -866,7 +866,6 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
-comment|// TODO Auto-generated method stub
 name|currentNode
 operator|.
 name|addContent

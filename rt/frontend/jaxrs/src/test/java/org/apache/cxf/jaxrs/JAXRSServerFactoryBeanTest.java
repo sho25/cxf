@@ -350,7 +350,6 @@ name|Exception
 name|exception
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -374,7 +373,6 @@ name|RuntimeException
 name|exception
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

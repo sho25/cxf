@@ -2518,7 +2518,6 @@ parameter_list|)
 throws|throws
 name|IllegalArgumentException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

@@ -283,7 +283,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -312,7 +311,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -338,7 +336,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -362,7 +359,6 @@ argument_list|>
 name|requestedScope
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -384,9 +380,7 @@ name|tokenTypeHint
 parameter_list|)
 throws|throws
 name|OAuthServiceException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{      }
 annotation|@
 name|Override
 specifier|public
@@ -405,7 +399,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -428,7 +421,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

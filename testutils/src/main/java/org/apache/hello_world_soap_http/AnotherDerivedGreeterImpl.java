@@ -810,7 +810,6 @@ name|int
 name|intElem
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

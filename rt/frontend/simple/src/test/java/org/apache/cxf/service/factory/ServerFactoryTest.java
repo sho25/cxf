@@ -715,7 +715,6 @@ name|EndpointReferenceType
 name|getAddress
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -730,7 +729,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -739,9 +737,7 @@ specifier|public
 name|void
 name|shutdown
 parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 specifier|public
 name|void
 name|setMessageObserver
@@ -749,15 +745,12 @@ parameter_list|(
 name|MessageObserver
 name|observer
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{          }
 specifier|public
 name|MessageObserver
 name|getMessageObserver
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;

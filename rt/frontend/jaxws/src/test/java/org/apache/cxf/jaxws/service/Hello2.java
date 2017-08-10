@@ -135,7 +135,6 @@ index|[]
 name|strs
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -154,7 +153,6 @@ argument_list|>
 name|list
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
@@ -176,7 +174,6 @@ parameter_list|)
 throws|throws
 name|AddNumbersException
 block|{
-comment|// TODO Auto-generated method stub
 return|return
 literal|null
 return|;
