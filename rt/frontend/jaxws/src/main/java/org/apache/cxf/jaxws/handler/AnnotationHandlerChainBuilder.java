@@ -1740,12 +1740,15 @@ name|JAXBException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Could not unmarshal handler chain"
+argument_list|,
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|private

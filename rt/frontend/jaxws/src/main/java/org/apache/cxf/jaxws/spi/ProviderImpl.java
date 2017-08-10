@@ -1393,12 +1393,15 @@ name|JAXBException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Could not unmarshal EndpointReference"
+argument_list|,
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 finally|finally
 block|{
@@ -1410,9 +1413,6 @@ name|um
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-literal|null
-return|;
 block|}
 return|return
 literal|null

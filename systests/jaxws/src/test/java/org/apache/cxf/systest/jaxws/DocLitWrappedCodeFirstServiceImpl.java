@@ -1170,7 +1170,6 @@ name|InterruptedException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
 name|e
 operator|.
 name|printStackTrace

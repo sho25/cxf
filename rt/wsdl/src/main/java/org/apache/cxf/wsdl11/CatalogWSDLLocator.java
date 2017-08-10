@@ -517,7 +517,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|// XXX: If we return null (as per javadoc), a NPE is raised in WSDL4J code.
+comment|// If we return null (as per javadoc), a NPE is raised in WSDL4J code.
 comment|// So let's return new InputSource() and let WSDL4J fail. Optionally,
 comment|// we can throw a similar exception as in CatalogXmlSchemaURIResolver.
 if|if
