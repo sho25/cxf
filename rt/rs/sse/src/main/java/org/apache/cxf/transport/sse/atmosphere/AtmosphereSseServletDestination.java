@@ -517,6 +517,30 @@ argument_list|,
 literal|"true"
 argument_list|)
 expr_stmt|;
+comment|// Atmosphere does not limit amount of threads and application can crash in no time
+comment|// https://github.com/Atmosphere/atmosphere/wiki/Configuring-Atmosphere-for-Performance
+name|framework
+operator|.
+name|addInitParameter
+argument_list|(
+name|ApplicationConfig
+operator|.
+name|BROADCASTER_MESSAGE_PROCESSING_THREADPOOL_MAXSIZE
+argument_list|,
+literal|"20"
+argument_list|)
+expr_stmt|;
+name|framework
+operator|.
+name|addInitParameter
+argument_list|(
+name|ApplicationConfig
+operator|.
+name|BROADCASTER_ASYNC_WRITE_THREADPOOL_MAXSIZE
+argument_list|,
+literal|"20"
+argument_list|)
+expr_stmt|;
 name|framework
 operator|.
 name|setBroadcasterCacheClassName

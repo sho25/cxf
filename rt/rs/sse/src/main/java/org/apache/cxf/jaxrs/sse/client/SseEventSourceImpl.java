@@ -139,6 +139,20 @@ name|rs
 operator|.
 name|core
 operator|.
+name|Configuration
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
 name|HttpHeaders
 import|;
 end_import
@@ -339,6 +353,13 @@ specifier|private
 specifier|volatile
 name|ScheduledExecutorService
 name|executor
+decl_stmt|;
+specifier|private
+specifier|volatile
+name|boolean
+name|managedExecutor
+init|=
+literal|true
 decl_stmt|;
 specifier|private
 specifier|volatile
@@ -847,15 +868,28 @@ argument_list|)
 throw|;
 block|}
 comment|// Create the executor for scheduling the reconnect tasks
+specifier|final
+name|Configuration
+name|configuration
+init|=
+name|target
+operator|.
+name|getConfiguration
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|executor
+operator|==
+literal|null
+condition|)
+block|{
 name|executor
 operator|=
 operator|(
 name|ScheduledExecutorService
 operator|)
-name|target
-operator|.
-name|getConfiguration
-argument_list|()
+name|configuration
 operator|.
 name|getProperty
 argument_list|(
@@ -876,15 +910,18 @@ operator|.
 name|newSingleThreadScheduledExecutor
 argument_list|()
 expr_stmt|;
+name|managedExecutor
+operator|=
+literal|false
+expr_stmt|;
+comment|/* we manage lifecycle */
+block|}
 block|}
 specifier|final
 name|Object
 name|lastEventId
 init|=
-name|target
-operator|.
-name|getConfiguration
-argument_list|()
+name|configuration
 operator|.
 name|getProperty
 argument_list|(
@@ -984,7 +1021,7 @@ name|get
 argument_list|()
 expr_stmt|;
 comment|// A client can be told to stop reconnecting using the HTTP 204 No Content
-comment|// response code. In this case, we should stop here.
+comment|// response code. In this case, we should give up.
 if|if
 condition|(
 name|response
@@ -1043,6 +1080,26 @@ operator|.
 name|getEndpoint
 argument_list|()
 decl_stmt|;
+comment|// Create new processor if this is the first time or the old one has been closed
+if|if
+condition|(
+name|processor
+operator|==
+literal|null
+operator|||
+name|processor
+operator|.
+name|isClosed
+argument_list|()
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Creating new instance of SSE event processor ..."
+argument_list|)
+expr_stmt|;
 name|processor
 operator|=
 operator|new
@@ -1053,11 +1110,20 @@ argument_list|,
 name|delegate
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Start consuming events
 name|processor
 operator|.
 name|run
 argument_list|(
 name|response
+argument_list|)
+expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SSE event processor has been started ..."
 argument_list|)
 expr_stmt|;
 name|state
@@ -1077,7 +1143,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Opened SSE connection to "
+literal|"Successfuly opened SSE connection to "
 operator|+
 name|target
 operator|.
@@ -1267,12 +1333,23 @@ condition|(
 name|executor
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|managedExecutor
 condition|)
 block|{
 name|executor
 operator|.
 name|shutdown
 argument_list|()
+expr_stmt|;
+name|executor
+operator|=
+literal|null
+expr_stmt|;
+name|managedExecutor
+operator|=
+literal|true
 expr_stmt|;
 block|}
 comment|// Should never happen
