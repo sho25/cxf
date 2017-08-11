@@ -403,7 +403,7 @@ name|type
 argument_list|(
 name|MediaType
 operator|.
-name|APPLICATION_OCTET_STREAM
+name|TEXT_PLAIN
 argument_list|)
 operator|.
 name|post
