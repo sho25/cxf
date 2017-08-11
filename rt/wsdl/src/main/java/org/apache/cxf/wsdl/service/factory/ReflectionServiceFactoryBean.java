@@ -13082,8 +13082,7 @@ name|String
 name|methodNameInWsdl
 parameter_list|)
 block|{
-comment|// TODO: This seems wrong and not sure who put it here. Will revisit -
-comment|// DBD
+comment|// checks to make sure the operation names match ignoring the case of the first character
 name|boolean
 name|ret
 init|=

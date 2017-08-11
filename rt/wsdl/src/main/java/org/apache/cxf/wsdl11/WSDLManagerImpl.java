@@ -850,7 +850,6 @@ return|return
 name|bus
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *      * XXX - getExtensionRegistry()      *      * @see org.apache.cxf.wsdl.WSDLManager#getExtenstionRegistry()      */
 specifier|public
 name|ExtensionRegistry
 name|getExtensionRegistry
@@ -860,7 +859,6 @@ return|return
 name|registry
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.wsdl.WSDLManager#getDefinition(java.lang.String)      */
 specifier|public
 name|Definition
 name|getDefinition

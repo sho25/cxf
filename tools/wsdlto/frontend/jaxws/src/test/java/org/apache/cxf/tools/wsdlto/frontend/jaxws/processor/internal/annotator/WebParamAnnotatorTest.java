@@ -375,10 +375,6 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// XXX - order that attributes are appended to the string
-comment|//       differs with the ibmjdk...
-comment|//assertEquals("@WebParam(targetNamespace = \"http://apache.org/cxf\", name = \"x\")",
-comment|//             annotation.toString());
 block|}
 annotation|@
 name|Test
@@ -456,11 +452,6 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// XXX - order that attributes are appended to the string
-comment|//       differs with the ibmjdk...
-comment|//assertEquals(
-comment|//"@WebParam(targetNamespace = \"http://apache.org/cxf\", partName = \"y\", name = \"x\")",
-comment|//             annotation.toString());
 block|}
 annotation|@
 name|Test
