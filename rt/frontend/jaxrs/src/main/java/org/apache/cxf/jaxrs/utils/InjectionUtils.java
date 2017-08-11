@@ -6299,6 +6299,10 @@ decl_stmt|;
 if|if
 condition|(
 name|types
+operator|==
+literal|null
+operator|||
+name|types
 operator|.
 name|length
 operator|==
@@ -6341,15 +6345,6 @@ argument_list|)
 expr_stmt|;
 name|realGenericType
 operator|=
-name|types
-index|[
-literal|0
-index|]
-operator|==
-name|realType
-condition|?
-name|realType
-else|:
 name|types
 index|[
 literal|0

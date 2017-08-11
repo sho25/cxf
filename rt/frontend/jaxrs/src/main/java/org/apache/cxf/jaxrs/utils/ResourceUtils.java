@@ -6553,6 +6553,10 @@ decl_stmt|;
 if|if
 condition|(
 name|c
+operator|!=
+literal|null
+operator|&&
+name|c
 operator|.
 name|getParameterTypes
 argument_list|()

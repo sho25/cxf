@@ -1637,6 +1637,10 @@ operator|&&
 name|schema
 operator|!=
 literal|null
+operator|&&
+name|sv
+operator|!=
+literal|null
 condition|)
 block|{
 name|SchemaValidation

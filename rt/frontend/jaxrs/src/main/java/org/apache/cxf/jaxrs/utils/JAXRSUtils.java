@@ -3105,6 +3105,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|firstCri
+operator|!=
+literal|null
+operator|&&
 name|URITemplate
 operator|.
 name|compareTemplates
@@ -10677,6 +10681,10 @@ operator|==
 literal|null
 operator|&&
 name|subTypeBeforePlus2
+operator|!=
+literal|null
+operator|&&
+name|subTypeBeforePlus2
 operator|.
 name|equals
 argument_list|(
@@ -10685,6 +10693,10 @@ argument_list|)
 operator|||
 name|subTypeBeforePlus2
 operator|==
+literal|null
+operator|&&
+name|subTypeBeforePlus1
+operator|!=
 literal|null
 operator|&&
 name|subTypeBeforePlus1
@@ -10816,6 +10828,10 @@ argument_list|)
 decl_stmt|;
 name|isCompatible
 operator|=
+name|subTypeBeforePlus1
+operator|!=
+literal|null
+operator|&&
 name|subTypeBeforePlus1
 operator|.
 name|equalsIgnoreCase
