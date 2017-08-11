@@ -536,7 +536,7 @@ name|element
 argument_list|)
 expr_stmt|;
 block|}
-comment|// XXX A problem can occur with the ibm jdk when the XmlSchema
+comment|// A problem can occur with the ibm jdk when the XmlSchema
 comment|// object is serialized. The xmlns declaration gets incorrectly
 comment|// set to the same value as the targetNamespace attribute.
 comment|// The aegis databinding tests demonstrate this particularly.
