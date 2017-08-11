@@ -1813,7 +1813,7 @@ expr_stmt|;
 block|}
 block|}
 comment|//org.apache.type_test.types1.AnonymousStruct
-comment|// XXX - generated code flattens nested struct into top-level class.
+comment|//generated code flattens nested struct into top-level class.
 specifier|protected
 name|boolean
 name|equals

@@ -7664,7 +7664,6 @@ expr_stmt|;
 block|}
 block|}
 comment|// StructWithInvalidAny
-comment|// XXX - no exception thrown
 annotation|@
 name|Test
 specifier|public
@@ -8273,7 +8272,6 @@ expr_stmt|;
 block|}
 block|}
 comment|// StructWithInvalidAnyArray
-comment|// XXX - no exception thrown
 annotation|@
 name|Test
 specifier|public
@@ -9765,7 +9763,6 @@ return|return
 literal|false
 return|;
 block|}
-comment|// XXX - Generated code flattens nested choice
 annotation|@
 name|Test
 specifier|public
@@ -10130,7 +10127,6 @@ return|return
 literal|false
 return|;
 block|}
-comment|// XXX - Generated code flattens nested structs
 annotation|@
 name|Test
 specifier|public
@@ -10526,7 +10522,6 @@ return|return
 literal|false
 return|;
 block|}
-comment|// XXX - Generated code flattens nested structs
 annotation|@
 name|Test
 specifier|public
