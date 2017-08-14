@@ -4070,7 +4070,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually. TODO: if the namespace on the reader      * has been declared previously to where we are in the stream, this probably      * won't work.      *      * @param reader      * @param writer      * @throws XMLStreamException      */
+comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually.       *      * @param reader      * @param writer      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void

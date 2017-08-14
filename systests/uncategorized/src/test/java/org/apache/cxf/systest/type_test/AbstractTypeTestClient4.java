@@ -7114,8 +7114,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/* XXX - The DerivedChoiceBaseAll, DerivedStructBaseAll, DerivedAll* types      *  result in an error creating the Schema object:      *  cos-all-limited.1.2: An 'all' model group must appear in a particle with      *  {min occurs} = {max occurs} = 1, and that particle must be part of a      *  pair which constitutes the {content type} of a complex type definition.      * */
-comment|//org.apache.type_test.types1.ComplexArray
+comment|/*  The DerivedChoiceBaseAll, DerivedStructBaseAll, DerivedAll* types      *  result in an error creating the Schema object:      *  cos-all-limited.1.2: An 'all' model group must appear in a particle with      *  {min occurs} = {max occurs} = 1, and that particle must be part of a      *  pair which constitutes the {content type} of a complex type definition.      */
 specifier|protected
 name|boolean
 name|equals

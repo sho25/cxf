@@ -1595,7 +1595,6 @@ literal|8
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO: Allow overridden methods.
 name|BindingOperationInfo
 name|bop
 init|=

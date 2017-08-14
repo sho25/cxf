@@ -601,12 +601,10 @@ argument_list|,
 name|tns
 argument_list|)
 expr_stmt|;
-comment|//
 comment|// Couldn't find schema... check if it's relative to wsdl.
-comment|// XXX - Using setBaseUri() on the XmlSchemaCollection,
+comment|// Using setBaseUri() on the XmlSchemaCollection,
 comment|// only seems to work for the first imported xsd... so pass
 comment|// in the baseURI here.
-comment|//
 try|try
 block|{
 name|schemaCol

@@ -396,7 +396,15 @@ literal|"StructWithAny"
 block|,
 literal|"StructWithAnyArray"
 block|,
+literal|"StructWithAnyArrayLax"
+block|,
+literal|"StructWithAnyArrayLaxComplex"
+block|,
 literal|"StructWithAnyAttribute"
+block|,
+literal|"StructWithAnyStrict"
+block|,
+literal|"StructWithAnyStrictComplex"
 block|,
 literal|"StructWithAnyXsi"
 block|,

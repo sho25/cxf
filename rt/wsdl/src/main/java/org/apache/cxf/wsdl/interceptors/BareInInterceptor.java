@@ -528,9 +528,6 @@ operator|.
 name|getService
 argument_list|()
 decl_stmt|;
-comment|// XXX - Should the BindingMessageInfo.class be put on
-comment|// the message?
-comment|//MessageInfo msgInfo = message.get(MessageInfo.class);
 name|BindingMessageInfo
 name|msgInfo
 init|=
@@ -665,11 +662,6 @@ block|}
 block|}
 else|else
 block|{
-comment|// XXX - Is the call to
-comment|// AbstractInDatabindingInterceptor.getMessageInfo()
-comment|// necessary?  Should we put the BindingMessageInfo on
-comment|// the message instead of the MessageInfo?
-comment|// msgInfo = getMessageInfo(message, bop, exchange);
 name|getMessageInfo
 argument_list|(
 name|message
