@@ -161,16 +161,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -338,11 +328,6 @@ operator|=
 name|HelloException
 operator|.
 name|class
-argument_list|)
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Not working yet due to namespace things"
 argument_list|)
 specifier|public
 name|void

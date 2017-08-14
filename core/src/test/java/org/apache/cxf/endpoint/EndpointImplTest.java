@@ -310,7 +310,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO add other tests
 block|}
 end_class
 

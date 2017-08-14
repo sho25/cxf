@@ -1780,8 +1780,6 @@ name|void
 name|testSpringConfiguredServerEndpoint
 parameter_list|()
 block|{
-comment|// FIXME - duplicating the config file just for one value is ugly, must be a better
-comment|// way.
 name|doTestConfiguredServerEndpoint
 argument_list|(
 literal|"true"

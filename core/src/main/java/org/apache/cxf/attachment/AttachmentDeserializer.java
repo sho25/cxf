@@ -303,8 +303,6 @@ argument_list|(
 literal|"boundary=\"?([^\";]*)"
 argument_list|)
 decl_stmt|;
-comment|// TODO: Is there a better way to detect boundaries in the message content?
-comment|// It seems constricting to assume the boundary will start with ----=_Part_
 specifier|private
 specifier|static
 specifier|final
