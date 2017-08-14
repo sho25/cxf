@@ -221,6 +221,9 @@ name|filters
 operator|.
 name|containsKey
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|e
 operator|.
 name|getValue

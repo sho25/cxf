@@ -379,6 +379,9 @@ name|c
 operator|.
 name|getClaimType
 argument_list|()
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 condition|)
 block|{

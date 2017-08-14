@@ -3060,6 +3060,9 @@ name|dynamicFeatures
 operator|.
 name|contains
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|f
 argument_list|)
 return|;

@@ -4438,6 +4438,9 @@ name|outputPartsMap
 operator|.
 name|remove
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|outputUnlistedParts
 operator|.
 name|get

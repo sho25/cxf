@@ -175,11 +175,6 @@ argument_list|()
 decl_stmt|;
 annotation|@
 name|Test
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"cast"
-argument_list|)
 specifier|public
 name|void
 name|testManagedConnectionFactoryImplInstanceOfResourceBean

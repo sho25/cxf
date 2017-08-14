@@ -230,11 +230,6 @@ name|portName
 decl_stmt|;
 annotation|@
 name|Test
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"cast"
-argument_list|)
 specifier|public
 name|void
 name|testInstanceOfConnection
@@ -311,31 +306,6 @@ argument_list|(
 name|o
 operator|instanceof
 name|Foo
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Need to check the classloader"
-argument_list|)
-specifier|public
-name|void
-name|testThreadContextClassLoaderIsSet
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-comment|//set the threadContextClassLoader for Bus
-comment|//TODO njiang classloader things
-comment|//check the threadContextClassLoader
-name|mci
-operator|.
-name|getConnection
-argument_list|(
-name|subj
-argument_list|,
-name|cri
 argument_list|)
 expr_stmt|;
 block|}

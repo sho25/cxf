@@ -812,11 +812,6 @@ name|doc
 return|;
 block|}
 comment|/**      * This takes a<code>XMLStreamReader</code> and builds up a JDOM tree.      * Recursion has been eliminated by using local stack of open elements; this      * improves performance somewhat (classic      * recursion-by-iteration-and-explicit stack transformation)      *      * @param node<code>Code</node> to examine.      * @param doc JDOM<code>Document</code> being built.      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"fallthrough"
-argument_list|)
 specifier|private
 name|void
 name|buildTree

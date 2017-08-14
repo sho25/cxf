@@ -550,6 +550,9 @@ name|respondWithList
 operator|.
 name|contains
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|RespondWithEnum
 operator|.
 name|HTTP_WWW_W_3_ORG_2002_03_XKMS_X_509_CERT

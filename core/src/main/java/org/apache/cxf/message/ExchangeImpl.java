@@ -847,6 +847,9 @@ name|super
 operator|.
 name|remove
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|key
 argument_list|)
 expr_stmt|;

@@ -793,17 +793,6 @@ name|hashCode
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-operator|!
-name|seq
-operator|.
-name|equals
-argument_list|(
-name|this
-argument_list|)
-argument_list|)
-expr_stmt|;
 block|}
 annotation|@
 name|Test

@@ -1131,6 +1131,9 @@ name|this
 operator|.
 name|remove
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|data
 index|[
 name|idx

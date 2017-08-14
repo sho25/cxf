@@ -802,19 +802,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-literal|"not equal with another thing"
-argument_list|,
-operator|!
-name|mci
-operator|.
-name|equals
-argument_list|(
-name|this
-argument_list|)
-argument_list|)
-expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -1186,11 +1173,6 @@ name|initCalledCount
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"cast"
-argument_list|)
 annotation|@
 name|Test
 specifier|public

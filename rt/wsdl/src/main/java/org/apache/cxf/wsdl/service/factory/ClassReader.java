@@ -1700,11 +1700,6 @@ name|oldPos
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"fallthrough"
-argument_list|)
 specifier|protected
 specifier|final
 name|void

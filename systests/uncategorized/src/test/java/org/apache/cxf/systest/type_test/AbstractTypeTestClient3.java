@@ -3685,11 +3685,6 @@ block|}
 block|}
 comment|//org.apache.type_test.types1.DerivedEmptyBaseEmptyAll
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"cast"
-argument_list|)
-annotation|@
 name|Test
 specifier|public
 name|void
@@ -3856,11 +3851,6 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//org.apache.type_test.types1.DerivedEmptyBaseEmptyChoice
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"cast"
-argument_list|)
 annotation|@
 name|Test
 specifier|public
