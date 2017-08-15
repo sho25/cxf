@@ -123,9 +123,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|common
 operator|.
-name|MessageUtils
+name|util
+operator|.
+name|PropertyUtils
 import|;
 end_import
 
@@ -249,7 +251,7 @@ block|}
 name|boolean
 name|springProxy
 init|=
-name|MessageUtils
+name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(
