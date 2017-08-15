@@ -318,12 +318,6 @@ name|String
 name|swaggerUiVersion
 parameter_list|)
 block|{
-specifier|final
-name|String
-name|resourcesRootStart
-init|=
-literal|"META-INF/resources/webjars/swagger-ui/"
-decl_stmt|;
 name|URL
 name|entry
 init|=
@@ -331,7 +325,9 @@ name|b
 operator|.
 name|getEntry
 argument_list|(
-name|resourcesRootStart
+name|SwaggerUiResolver
+operator|.
+name|UI_RESOURCES_ROOT_START
 operator|+
 name|swaggerUiVersion
 argument_list|)
