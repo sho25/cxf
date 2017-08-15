@@ -3323,33 +3323,6 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
-name|Message
-name|outMessage
-init|=
-name|exchange
-operator|.
-name|getOutMessage
-argument_list|()
-decl_stmt|;
-if|if
-condition|(
-name|outMessage
-operator|!=
-literal|null
-operator|&&
-name|outMessage
-operator|.
-name|get
-argument_list|(
-literal|"transport.retransmit.url"
-argument_list|)
-operator|!=
-literal|null
-condition|)
-block|{
-comment|//FIXME: target address has been updated at the transport level,
-comment|//       update the the current client accordingly
-block|}
 block|}
 comment|/**      * TODO This is SOAP specific code and should not be in cxf core      * @param fault      */
 specifier|private

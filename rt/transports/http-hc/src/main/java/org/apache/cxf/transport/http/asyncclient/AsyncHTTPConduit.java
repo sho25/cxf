@@ -3946,9 +3946,18 @@ name|boolean
 name|usingProxy
 parameter_list|()
 block|{
-comment|//FIXME - need to get the Proxy stuff from the connection
 return|return
-literal|false
+name|this
+operator|.
+name|entity
+operator|.
+name|getConfig
+argument_list|()
+operator|.
+name|getProxy
+argument_list|()
+operator|!=
+literal|null
 return|;
 block|}
 specifier|protected

@@ -208,8 +208,6 @@ name|Mode
 operator|.
 name|MESSAGE
 argument_list|)
-comment|//FIXME: When using "PAYLOAD" mode, it works; but when using "MESSAGE" mode, it breaks
-comment|//@ServiceMode(value = Service.Mode.PAYLOAD)
 specifier|public
 class|class
 name|MessageProviderWithAddressingPolicy

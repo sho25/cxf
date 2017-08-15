@@ -1228,10 +1228,13 @@ name|type
 argument_list|)
 return|;
 block|}
-comment|// TODO error?
-return|return
-literal|null
-return|;
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Could not create KeyStore based on information in CertStoreType"
+argument_list|)
+throw|;
 block|}
 specifier|private
 specifier|static

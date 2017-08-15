@@ -830,7 +830,6 @@ name|length
 argument_list|)
 return|;
 block|}
-comment|//FIXME (consolidate the response building code)
 specifier|public
 specifier|static
 name|byte

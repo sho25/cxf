@@ -1708,12 +1708,11 @@ argument_list|(
 literal|3
 argument_list|)
 expr_stmt|;
-comment|// FIXME had to change this
 name|requestHeader
 operator|.
 name|setJMSReplyTo
 argument_list|(
-literal|"dynamicQueues/replyqueue00091"
+literal|"dynamicQueues/replyqueue00093"
 argument_list|)
 expr_stmt|;
 name|twoWayTestWithRequestHeader

@@ -620,22 +620,6 @@ return|return
 literal|null
 return|;
 block|}
-specifier|public
-name|ServiceInfo
-name|getTestService
-parameter_list|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|clz
-parameter_list|)
-block|{
-comment|// FIXME?!?!?!?? There should NOT be JAX-WS stuff here
-return|return
-literal|null
-return|;
-block|}
 specifier|protected
 name|BindingInfo
 name|getTestService

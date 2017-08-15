@@ -346,7 +346,6 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-comment|// FIXME - surely there is a better way to create a stubbed message and exchange
 name|Message
 name|message
 init|=
