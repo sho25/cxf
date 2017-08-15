@@ -1048,15 +1048,46 @@ argument_list|)
 expr_stmt|;
 name|state
 operator|.
-name|compareAndSet
+name|set
 argument_list|(
 name|SseSourceState
 operator|.
-name|CONNECTING
-argument_list|,
+name|CLOSED
+argument_list|)
+expr_stmt|;
+name|response
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+return|return;
+block|}
+comment|// Should not happen but if close() was called from another thread, we could
+comment|// end up there.
+if|if
+condition|(
+name|state
+operator|.
+name|get
+argument_list|()
+operator|==
 name|SseSourceState
 operator|.
 name|CLOSED
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SSE connection to "
+operator|+
+name|target
+operator|.
+name|getUri
+argument_list|()
+operator|+
+literal|" has been closed already"
 argument_list|)
 expr_stmt|;
 name|response
@@ -1126,6 +1157,9 @@ argument_list|(
 literal|"SSE event processor has been started ..."
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
 name|state
 operator|.
 name|compareAndSet
@@ -1138,7 +1172,23 @@ name|SseSourceState
 operator|.
 name|OPEN
 argument_list|)
-expr_stmt|;
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"The SseEventSource is already in "
+operator|+
+name|state
+operator|.
+name|get
+argument_list|()
+operator|+
+literal|" state"
+argument_list|)
+throw|;
+block|}
 name|LOG
 operator|.
 name|fine
@@ -1429,7 +1479,17 @@ operator|!=
 name|SseSourceState
 operator|.
 name|CONNECTING
-operator|&&
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"The SseEventSource is still opened, moving it to connecting state"
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
 operator|!
 name|state
 operator|.
@@ -1459,6 +1519,7 @@ operator|+
 literal|" state, unable to reconnect"
 argument_list|)
 throw|;
+block|}
 block|}
 name|executor
 operator|.

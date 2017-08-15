@@ -229,6 +229,7 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|InboundSseEventImpl
 implements|implements
@@ -654,7 +655,7 @@ name|type
 argument_list|,
 name|MediaType
 operator|.
-name|WILDCARD_TYPE
+name|TEXT_PLAIN_TYPE
 argument_list|)
 return|;
 block|}
@@ -700,7 +701,7 @@ argument_list|()
 argument_list|,
 name|MediaType
 operator|.
-name|WILDCARD_TYPE
+name|TEXT_PLAIN_TYPE
 argument_list|)
 return|;
 block|}

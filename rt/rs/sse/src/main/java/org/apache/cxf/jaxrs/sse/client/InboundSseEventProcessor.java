@@ -341,7 +341,7 @@ name|executor
 operator|=
 name|Executors
 operator|.
-name|newSingleThreadExecutor
+name|newSingleThreadScheduledExecutor
 argument_list|()
 expr_stmt|;
 block|}
@@ -640,7 +640,7 @@ condition|)
 block|{
 name|builder
 operator|.
-name|id
+name|comment
 argument_list|(
 name|line
 operator|.
