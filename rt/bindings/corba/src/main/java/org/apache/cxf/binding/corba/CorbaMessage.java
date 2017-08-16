@@ -559,7 +559,6 @@ name|CorbaObjectHandler
 name|data
 parameter_list|)
 block|{
-comment|// TODO: Handle case of the return parameter has not yet been initialized.
 name|returnParam
 operator|.
 name|setObject
@@ -589,7 +588,6 @@ name|CorbaObjectHandler
 name|exData
 parameter_list|)
 block|{
-comment|// TODO: Handle case of the return parameter has not yet been initialized.
 name|except
 operator|.
 name|setObject

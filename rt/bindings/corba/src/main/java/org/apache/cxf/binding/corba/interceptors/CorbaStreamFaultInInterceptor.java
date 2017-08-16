@@ -561,8 +561,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// TODO: Do we need anything else to handle system exceptions here...i.e. do
-comment|// we want to add a wrapper around this so that we can add some more information?
 name|message
 operator|.
 name|setContent

@@ -1739,7 +1739,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-comment|// TODO: REVISIT: for some reason, some ORBs do not like to
+comment|// for some reason, some ORBs do not like to
 comment|// have a null NamedValue return value. Create this 'empty'
 comment|// one if a void return type is used.
 name|ret

@@ -1635,7 +1635,6 @@ name|Exception
 operator|)
 name|obj
 decl_stmt|;
-comment|// TODO: check to see if this is a recursive type.
 name|List
 argument_list|<
 name|MemberType
@@ -1952,7 +1951,6 @@ name|Struct
 operator|)
 name|obj
 decl_stmt|;
-comment|// TODO: check to see if this is a recursive type.
 if|if
 condition|(
 name|seenTypes

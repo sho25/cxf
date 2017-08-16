@@ -318,7 +318,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|// TODO: Can we add the features that exist in the main package here?
 block|}
 end_class
 
