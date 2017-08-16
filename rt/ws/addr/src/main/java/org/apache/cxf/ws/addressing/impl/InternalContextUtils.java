@@ -2024,14 +2024,11 @@ condition|(
 operator|!
 name|MessageUtils
 operator|.
-name|isTrue
+name|getContextualBoolean
 argument_list|(
 name|inMessage
-operator|.
-name|getContextualProperty
-argument_list|(
+argument_list|,
 literal|"org.apache.cxf.oneway.rejected_execution_exception"
-argument_list|)
 argument_list|)
 condition|)
 block|{

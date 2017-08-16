@@ -307,20 +307,6 @@ name|Message
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
-name|MessageUtils
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|abstract
@@ -677,7 +663,7 @@ operator|==
 literal|null
 operator|&&
 operator|!
-name|MessageUtils
+name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(

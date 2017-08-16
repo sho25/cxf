@@ -167,9 +167,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|common
 operator|.
-name|MessageUtils
+name|util
+operator|.
+name|PropertyUtils
 import|;
 end_import
 
@@ -298,7 +300,7 @@ name|super
 operator|.
 name|setUseUserSubject
 argument_list|(
-name|MessageUtils
+name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(
