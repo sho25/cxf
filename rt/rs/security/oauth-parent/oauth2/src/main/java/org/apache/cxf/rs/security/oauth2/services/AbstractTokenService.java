@@ -511,6 +511,38 @@ name|TOKEN_ENDPOINT_AUTH_TLS
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
+if|if
+condition|(
+name|canSupportPublicClients
+condition|)
+block|{
+name|client
+operator|=
+name|getValidClient
+argument_list|(
+name|clientId
+argument_list|,
+name|params
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+operator|!
+name|isValidPublicClient
+argument_list|(
+name|client
+argument_list|,
+name|clientId
+argument_list|)
+condition|)
+block|{
+name|client
+operator|=
+literal|null
+expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 else|else
@@ -831,22 +863,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|isValidPublicClient
-argument_list|(
-name|client
-argument_list|,
-name|clientId
-argument_list|,
-name|providedClientSecret
-argument_list|)
-condition|)
-block|{
-return|return
-name|client
-return|;
-block|}
-if|if
-condition|(
 operator|!
 name|client
 operator|.
@@ -931,9 +947,6 @@ name|client
 parameter_list|,
 name|String
 name|clientId
-parameter_list|,
-name|String
-name|clientSecret
 parameter_list|)
 block|{
 return|return
@@ -949,10 +962,6 @@ name|client
 operator|.
 name|getClientSecret
 argument_list|()
-operator|==
-literal|null
-operator|&&
-name|clientSecret
 operator|==
 literal|null
 return|;
@@ -1083,7 +1092,7 @@ operator|.
 name|getClientId
 argument_list|()
 operator|+
-literal|"\" can not be bound to the TLS cerificate"
+literal|"\" can not be bound to the TLS certificate"
 argument_list|)
 expr_stmt|;
 name|reportInvalidClient
@@ -1131,7 +1140,7 @@ operator|.
 name|getClientId
 argument_list|()
 operator|+
-literal|"\" can not be bound to the TLS cerificate"
+literal|"\" can not be bound to the TLS certificate"
 argument_list|)
 expr_stmt|;
 name|reportInvalidClient
@@ -1184,7 +1193,7 @@ operator|.
 name|getClientId
 argument_list|()
 operator|+
-literal|"\" can not be bound to the TLS cerificate"
+literal|"\" can not be bound to the TLS certificate"
 argument_list|)
 expr_stmt|;
 name|reportInvalidClient
