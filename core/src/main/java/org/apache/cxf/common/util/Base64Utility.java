@@ -744,16 +744,15 @@ condition|(
 name|urlSafe
 condition|)
 block|{
-comment|//TODO: optimize further
 name|id
 operator|=
 name|id
 operator|.
 name|replace
 argument_list|(
-literal|"-"
+literal|'-'
 argument_list|,
-literal|"+"
+literal|'+'
 argument_list|)
 operator|.
 name|replace

@@ -149,11 +149,14 @@ init|=
 literal|"org/apache/cxf/tools/wsdlto/frontend/jaxws/template"
 decl_stmt|;
 specifier|public
-specifier|abstract
 name|boolean
 name|passthrough
 parameter_list|()
-function_decl|;
+block|{
+return|return
+literal|false
+return|;
+block|}
 specifier|public
 specifier|abstract
 name|void

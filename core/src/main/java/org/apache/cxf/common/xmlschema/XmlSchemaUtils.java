@@ -1119,7 +1119,6 @@ return|return
 literal|null
 return|;
 block|}
-comment|//TODO: the anyAttribute case.
 name|XmlSchemaComplexContentExtension
 name|ext
 init|=

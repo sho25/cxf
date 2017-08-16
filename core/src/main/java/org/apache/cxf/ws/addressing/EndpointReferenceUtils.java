@@ -3262,9 +3262,6 @@ return|return
 literal|null
 return|;
 block|}
-comment|//TODO The wsdlLocation inserted should be a valid URI
-comment|//before doing a split. So temporarily return the string
-comment|//return wsdlLocation.split(" ");
 return|return
 name|wsdlLocation
 return|;
@@ -4435,7 +4432,6 @@ argument_list|,
 name|portName
 argument_list|)
 expr_stmt|;
-comment|//TODO To Ensure it is a valid URI syntax.
 name|setWSDLLocation
 argument_list|(
 name|reference

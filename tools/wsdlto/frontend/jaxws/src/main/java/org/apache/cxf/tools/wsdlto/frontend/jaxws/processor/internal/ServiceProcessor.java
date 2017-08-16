@@ -1232,7 +1232,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|//TODO : Handle service customized class
+comment|//Handle service customized class
 if|if
 condition|(
 name|serviceBinding
