@@ -330,6 +330,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param value      * @return true if value is either the String "true" or Boolean.TRUE      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 name|boolean
@@ -339,13 +341,35 @@ name|Object
 name|value
 parameter_list|)
 block|{
-comment|// TODO - consider deprecation as this really belongs in PropertyUtils
 return|return
 name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(
 name|value
+argument_list|)
+return|;
+block|}
+specifier|public
+specifier|static
+name|boolean
+name|getContextualBoolean
+parameter_list|(
+name|Message
+name|m
+parameter_list|,
+name|String
+name|key
+parameter_list|)
+block|{
+return|return
+name|getContextualBoolean
+argument_list|(
+name|m
+argument_list|,
+name|key
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}

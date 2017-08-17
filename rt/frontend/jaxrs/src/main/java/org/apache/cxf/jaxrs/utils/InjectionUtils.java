@@ -2941,14 +2941,11 @@ condition|(
 operator|!
 name|MessageUtils
 operator|.
-name|isTrue
+name|getContextualBoolean
 argument_list|(
 name|message
-operator|.
-name|getContextualProperty
-argument_list|(
+argument_list|,
 name|IGNORE_MATRIX_PARAMETERS
-argument_list|)
 argument_list|)
 condition|)
 block|{

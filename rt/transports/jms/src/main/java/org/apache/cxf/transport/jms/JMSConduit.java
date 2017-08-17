@@ -1688,12 +1688,10 @@ name|isTextPayload
 operator|&&
 name|MessageUtils
 operator|.
-name|isTrue
+name|getContextualBoolean
 argument_list|(
 name|outMessage
-operator|.
-name|getContextualProperty
-argument_list|(
+argument_list|,
 name|org
 operator|.
 name|apache
@@ -1705,7 +1703,6 @@ operator|.
 name|Message
 operator|.
 name|MTOM_ENABLED
-argument_list|)
 argument_list|)
 operator|&&
 name|outMessage

@@ -2580,7 +2580,6 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
-comment|//TODO need reverse lookup
 return|return
 name|super
 operator|.

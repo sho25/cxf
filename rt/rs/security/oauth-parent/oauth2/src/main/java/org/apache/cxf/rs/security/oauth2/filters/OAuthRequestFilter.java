@@ -273,6 +273,22 @@ name|common
 operator|.
 name|util
 operator|.
+name|PropertyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
 name|StringUtils
 import|;
 end_import
@@ -352,20 +368,6 @@ operator|.
 name|message
 operator|.
 name|Message
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
-name|MessageUtils
 import|;
 end_import
 
@@ -1676,7 +1678,7 @@ comment|//used to handle preflights but local preflights (to be handled by the s
 comment|// will be blocked by this filter unless CORS filter has done the initial validation
 comment|// and set a message "local_preflight" property to true
 return|return
-name|MessageUtils
+name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(

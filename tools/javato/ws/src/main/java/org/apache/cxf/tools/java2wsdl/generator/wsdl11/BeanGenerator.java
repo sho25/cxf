@@ -490,9 +490,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-operator|!
 name|compiler
 operator|.
 name|compileFiles
@@ -511,10 +508,7 @@ argument_list|()
 index|]
 argument_list|)
 argument_list|)
-condition|)
-block|{
-comment|// TODO - compile issue
-block|}
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

@@ -2622,14 +2622,11 @@ name|exception
 operator|||
 name|MessageUtils
 operator|.
-name|isTrue
+name|getContextualBoolean
 argument_list|(
 name|outMessage
-operator|.
-name|getContextualProperty
-argument_list|(
+argument_list|,
 literal|"response.stream.auto.close"
-argument_list|)
 argument_list|)
 operator|)
 condition|)

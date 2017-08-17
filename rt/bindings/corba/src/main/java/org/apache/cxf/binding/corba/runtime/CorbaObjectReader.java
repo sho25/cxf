@@ -1050,7 +1050,24 @@ argument_list|)
 expr_stmt|;
 break|break;
 default|default:
-comment|// TODO: Provide Implementation. Do we throw an exception.
+throw|throw
+operator|new
+name|CorbaBindingException
+argument_list|(
+literal|"CorbaObjectReader: unhandled TypeCode.Kind: "
+operator|+
+name|obj
+operator|.
+name|getTypeCode
+argument_list|()
+operator|.
+name|kind
+argument_list|()
+operator|.
+name|value
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|// -- primitive types --

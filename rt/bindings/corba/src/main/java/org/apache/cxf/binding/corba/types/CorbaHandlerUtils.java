@@ -1163,7 +1163,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 default|default:
-comment|// TODO: Should we raise an exception or log?
+comment|//nothing to do, the Read/Write routines will throw exceptions
 block|}
 block|}
 return|return

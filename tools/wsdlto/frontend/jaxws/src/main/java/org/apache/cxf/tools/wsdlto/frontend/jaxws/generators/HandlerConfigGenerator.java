@@ -265,17 +265,6 @@ name|handlerChainAnnotation
 return|;
 block|}
 specifier|public
-name|boolean
-name|passthrough
-parameter_list|()
-block|{
-comment|//TODO: enable the handler chain
-comment|/* if (this.intf.getHandlerChains() == null) {             return true;         }*/
-return|return
-literal|false
-return|;
-block|}
-specifier|public
 name|void
 name|setJavaInterface
 parameter_list|(

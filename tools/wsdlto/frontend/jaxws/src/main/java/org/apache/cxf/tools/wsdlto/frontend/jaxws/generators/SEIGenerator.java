@@ -420,7 +420,6 @@ name|JavaInterface
 name|intf
 parameter_list|)
 block|{
-comment|// TODO : enbale handler chain
 return|return
 name|intf
 operator|.

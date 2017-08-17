@@ -1374,9 +1374,6 @@ name|void
 name|processWsdl
 parameter_list|()
 block|{
-comment|// TODO: After runtime support w3c EPR mapping ,this will be removed
-comment|//context.put(ToolConstants.CFG_NO_ADDRESS_BINDING,
-comment|//            ToolConstants.CFG_NO_ADDRESS_BINDING);
 name|validate
 argument_list|(
 name|context

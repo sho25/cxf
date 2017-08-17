@@ -1027,7 +1027,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-comment|// TODO the generated wsdl has two faultDetail elements
 specifier|public
 name|void
 name|testSOAP12
@@ -3242,7 +3241,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-comment|//  TODO: should suppor the XmlMimeType annotation in the SEI
 specifier|public
 name|void
 name|testMimeTypeInSEI

@@ -1156,8 +1156,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO: if it is simple frontend, and the impl class implements
-comment|// multiple interfaces
 name|context
 operator|.
 name|put

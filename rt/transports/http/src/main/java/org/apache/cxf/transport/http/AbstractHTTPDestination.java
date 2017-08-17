@@ -3465,7 +3465,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|MessageUtils
+name|PropertyUtils
 operator|.
 name|isTrue
 argument_list|(
