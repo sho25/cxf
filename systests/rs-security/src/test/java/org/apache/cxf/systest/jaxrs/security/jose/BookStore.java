@@ -470,7 +470,7 @@ name|POST
 annotation|@
 name|Path
 argument_list|(
-literal|"/books"
+literal|"/booksModified"
 argument_list|)
 annotation|@
 name|Produces
