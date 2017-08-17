@@ -361,16 +361,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -902,91 +892,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-specifier|public
-name|void
-name|testCXFConfiguredClientEndpoint
-parameter_list|()
-block|{
-name|CXFBusFactory
-name|cf
-init|=
-operator|new
-name|CXFBusFactory
-argument_list|()
-decl_stmt|;
-name|factory
-operator|=
-name|cf
-expr_stmt|;
-name|BusFactory
-operator|.
-name|setDefaultBus
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-name|properties
-init|=
-operator|new
-name|HashMap
-argument_list|<>
-argument_list|()
-decl_stmt|;
-name|properties
-operator|.
-name|put
-argument_list|(
-name|Configurer
-operator|.
-name|USER_CFG_FILE_PROPERTY_NAME
-argument_list|,
-literal|"org/apache/cxf/jaxws/configured-endpoints.xml"
-argument_list|)
-expr_stmt|;
-name|BusFactory
-operator|.
-name|setDefaultBus
-argument_list|(
-name|cf
-operator|.
-name|createBus
-argument_list|(
-literal|null
-argument_list|,
-name|properties
-argument_list|)
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|setProperty
-argument_list|(
-name|BusFactory
-operator|.
-name|BUS_FACTORY_PROPERTY_NAME
-argument_list|,
-name|CXFBusFactory
-operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|doTestConfiguredClientEndpoint
-argument_list|()
-expr_stmt|;
-block|}
-annotation|@
-name|Test
 specifier|public
 name|void
 name|testSpringConfiguredClientEndpoint
@@ -1106,25 +1011,6 @@ operator|.
 name|getEndpoint
 argument_list|()
 decl_stmt|;
-comment|//      The service shouldn't pick up the<jaxws:endpoint>...
-comment|//        assertEquals("Unexpected bean name", PORT_NAME.toString() + ".endpoint", endpoint.getBeanName());
-comment|//        // assertTrue("Unexpected value for property validating", endpoint.getValidating());
-comment|//        List<Interceptor> interceptors = endpoint.getInInterceptors();
-comment|//        assertEquals("Unexpected number of interceptors.", 1, interceptors.size());
-comment|//        assertEquals("Unexpected interceptor id.", "endpoint-in",
-comment|//                     findTestInterceptor(interceptors).getId());
-comment|//        interceptors = endpoint.getOutInterceptors();
-comment|//        assertEquals("Unexpected number of interceptors.", 1, interceptors.size());
-comment|//        assertEquals("Unexpected interceptor id.", "endpoint-out",
-comment|//                     findTestInterceptor(interceptors).getId());
-comment|//        interceptors = endpoint.getInFaultInterceptors();
-comment|//        assertEquals("Unexpected number of interceptors.", 1, interceptors.size());
-comment|//        assertEquals("Unexpected interceptor id.", "endpoint-in-fault",
-comment|//                     findTestInterceptor(interceptors).getId());
-comment|//        interceptors = endpoint.getOutFaultInterceptors();
-comment|//        assertEquals("Unexpected number of interceptors.", 1, interceptors.size());
-comment|//        assertEquals("Unexpected interceptor id.", "endpoint-out-fault",
-comment|//                     findTestInterceptor(interceptors).getId());
 name|org
 operator|.
 name|apache
@@ -1185,7 +1071,9 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Unexpected number of interceptors."
+literal|"Unexpected number of interceptors: "
+operator|+
+name|interceptors
 argument_list|,
 literal|1
 argument_list|,
@@ -1219,7 +1107,9 @@ argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Unexpected number of interceptors."
+literal|"Unexpected number of interceptors: "
+operator|+
+name|interceptors
 argument_list|,
 literal|1
 argument_list|,
@@ -1253,7 +1143,9 @@ argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Unexpected number of interceptors."
+literal|"Unexpected number of interceptors: "
+operator|+
+name|interceptors
 argument_list|,
 literal|1
 argument_list|,
@@ -1287,7 +1179,9 @@ argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Unexpected number of interceptors."
+literal|"Unexpected number of interceptors: "
+operator|+
+name|interceptors
 argument_list|,
 literal|1
 argument_list|,
@@ -1689,8 +1583,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|xtestCXFConfiguredServerEndpoint

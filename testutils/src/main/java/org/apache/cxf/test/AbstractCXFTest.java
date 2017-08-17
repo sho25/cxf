@@ -224,13 +224,8 @@ comment|/**  * A basic test case meant for helping users unit test their service
 end_comment
 
 begin_class
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
+specifier|abstract
 class|class
 name|AbstractCXFTest
 extends|extends

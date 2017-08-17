@@ -3284,15 +3284,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// @Ignore'd due to continually failing on Jenkins
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testHelloWorldExternalBindingFile
@@ -3309,6 +3302,8 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 name|ResourceHandler
 name|reshandler
 init|=
@@ -3340,6 +3335,14 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|250
+argument_list|)
+expr_stmt|;
+comment|//give network connector a little time to spin up
 name|int
 name|port
 init|=
@@ -3401,8 +3404,6 @@ operator|.
 name|execute
 argument_list|()
 expr_stmt|;
-try|try
-block|{
 name|reshandler
 operator|.
 name|stop

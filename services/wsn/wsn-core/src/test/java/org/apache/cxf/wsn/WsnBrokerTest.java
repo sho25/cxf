@@ -920,8 +920,8 @@ operator|+
 literal|"/test/consumer"
 argument_list|)
 decl_stmt|;
-comment|//create subscription with InitialTerminationTime 20 sec, so that the
-comment|//subscription would be expired after 20 sec
+comment|//create subscription with InitialTerminationTime 2 sec, so that the
+comment|//subscription would be expired after 2 sec
 name|Subscription
 name|subscription
 init|=
@@ -937,14 +937,14 @@ literal|null
 argument_list|,
 literal|false
 argument_list|,
-literal|"PT20S"
+literal|"PT02S"
 argument_list|)
 decl_stmt|;
 name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|30000
+literal|5000
 argument_list|)
 expr_stmt|;
 synchronized|synchronized
@@ -954,6 +954,15 @@ operator|.
 name|notifications
 init|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"send notify"
+argument_list|)
+expr_stmt|;
 name|notificationBroker
 operator|.
 name|notify
@@ -988,7 +997,7 @@ name|notifications
 operator|.
 name|wait
 argument_list|(
-literal|10000
+literal|2000
 argument_list|)
 expr_stmt|;
 block|}

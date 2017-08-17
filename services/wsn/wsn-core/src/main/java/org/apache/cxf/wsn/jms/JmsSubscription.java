@@ -1799,10 +1799,10 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|10000
+literal|2000
 argument_list|)
 expr_stmt|;
-comment|// check if should terminate every 10 sec
+comment|// check if should terminate every 2 sec
 block|}
 catch|catch
 parameter_list|(
