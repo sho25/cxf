@@ -724,7 +724,6 @@ argument_list|>
 name|getRoles
 parameter_list|()
 block|{
-comment|//TODO
 return|return
 operator|new
 name|HashSet

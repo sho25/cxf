@@ -2211,7 +2211,6 @@ operator|.
 name|getActualTypeArguments
 argument_list|()
 decl_stmt|;
-comment|// TODO: more complex Parameterized type
 if|if
 condition|(
 name|types

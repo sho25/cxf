@@ -3904,7 +3904,17 @@ name|QName
 name|portName
 parameter_list|)
 block|{
-comment|// TODO if the portName null ?
+if|if
+condition|(
+name|portName
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 return|return
 name|portInfos
 operator|.

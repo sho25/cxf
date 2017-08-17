@@ -1221,7 +1221,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO: remove duplicate code in setUpUsingHelloWorld and setUpUsingDocLit
 specifier|private
 name|void
 name|setUpUsingHelloWorld

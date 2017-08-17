@@ -361,6 +361,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|interceptor
+operator|.
+name|Fault
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|provider
@@ -468,12 +482,13 @@ name|XMLStreamException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|Fault
+argument_list|(
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *      * @param expression XPath expression      * @param cls class of the node      * @return the instance representing the matching node      */

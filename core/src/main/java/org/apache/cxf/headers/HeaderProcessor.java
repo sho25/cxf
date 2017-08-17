@@ -29,20 +29,6 @@ name|DataBinding
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|InterceptorProvider
-import|;
-end_import
-
 begin_interface
 specifier|public
 interface|interface
@@ -54,10 +40,6 @@ parameter_list|()
 function_decl|;
 name|DataBinding
 name|getDataBinding
-parameter_list|()
-function_decl|;
-name|InterceptorProvider
-name|getInterceptorProvider
 parameter_list|()
 function_decl|;
 block|}

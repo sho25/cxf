@@ -2193,7 +2193,6 @@ name|elem
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO - add the interceptors
 name|SoapHeader
 name|shead
 init|=

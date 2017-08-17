@@ -340,7 +340,6 @@ argument_list|>
 name|getRoles
 parameter_list|()
 block|{
-comment|// TODO
 return|return
 operator|new
 name|HashSet
@@ -780,14 +779,6 @@ return|return
 name|xmlReader
 return|;
 block|}
-specifier|public
-name|void
-name|handleFault
-parameter_list|(
-name|SoapMessage
-name|message
-parameter_list|)
-block|{     }
 block|}
 end_class
 

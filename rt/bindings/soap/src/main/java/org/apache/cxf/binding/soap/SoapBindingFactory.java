@@ -2699,7 +2699,6 @@ name|BindingInfo
 name|binding
 parameter_list|)
 block|{
-comment|// TODO what about the mix style/use?
 comment|// The default style should be doc-lit wrapped.
 name|String
 name|parameterStyle
