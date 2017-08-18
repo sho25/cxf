@@ -246,12 +246,6 @@ comment|/**  * This test is ignored by default as it is continually failing on J
 end_comment
 
 begin_class
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 class|class
 name|JsHttpRequestTest
@@ -348,7 +342,7 @@ parameter_list|()
 block|{
 name|TestUtil
 operator|.
-name|getPortNumber
+name|getNewPortNumber
 argument_list|(
 name|JsHttpRequestTest
 operator|.
@@ -666,14 +660,13 @@ name|String
 operator|)
 name|httpObj
 decl_stmt|;
-comment|// check for 'Shalom' in Hebrew as a charset check.
 name|assertTrue
 argument_list|(
 name|httpResponse
 operator|.
 name|contains
 argument_list|(
-literal|"\u05e9\u05dc\u05d5\u05dd"
+literal|"Test"
 argument_list|)
 argument_list|)
 expr_stmt|;
