@@ -295,10 +295,10 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
-specifier|final
 name|String
 name|name
 decl_stmt|;
+comment|/* the default event type would be "message" */
 specifier|private
 name|String
 name|id
@@ -321,18 +321,8 @@ name|String
 name|data
 decl_stmt|;
 name|Builder
-parameter_list|(
-name|String
-name|name
-parameter_list|)
-block|{
-name|this
-operator|.
-name|name
-operator|=
-name|name
-expr_stmt|;
-block|}
+parameter_list|()
+block|{         }
 name|Builder
 name|id
 parameter_list|(
@@ -345,6 +335,23 @@ operator|.
 name|id
 operator|=
 name|i
+expr_stmt|;
+return|return
+name|this
+return|;
+block|}
+name|Builder
+name|name
+parameter_list|(
+name|String
+name|n
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name
+operator|=
+name|n
 expr_stmt|;
 return|return
 name|this

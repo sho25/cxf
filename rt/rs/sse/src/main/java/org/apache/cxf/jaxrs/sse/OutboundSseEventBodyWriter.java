@@ -281,7 +281,7 @@ name|byte
 index|[]
 name|EVENT
 init|=
-literal|"    "
+literal|"event: "
 operator|.
 name|getBytes
 argument_list|(
