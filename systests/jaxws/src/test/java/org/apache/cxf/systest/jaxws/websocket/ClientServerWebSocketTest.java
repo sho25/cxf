@@ -415,6 +415,7 @@ throws|throws
 name|Exception
 block|{
 comment|// set up configuration to enable schema validation
+comment|//System.setProperty("org.apache.cxf.transport.websocket.atmosphere.disabled", "true");
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"

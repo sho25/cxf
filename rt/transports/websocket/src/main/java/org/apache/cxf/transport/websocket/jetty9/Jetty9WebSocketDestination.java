@@ -1195,6 +1195,8 @@ argument_list|,
 name|length
 argument_list|,
 name|holder
+argument_list|,
+name|session
 argument_list|)
 expr_stmt|;
 name|String
@@ -1380,6 +1382,9 @@ name|length
 parameter_list|,
 name|WebSocketServletHolder
 name|holder
+parameter_list|,
+name|Session
+name|session
 parameter_list|)
 throws|throws
 name|IOException
@@ -1399,6 +1404,8 @@ name|offset
 argument_list|,
 name|length
 argument_list|)
+argument_list|,
+name|session
 argument_list|)
 return|;
 block|}
