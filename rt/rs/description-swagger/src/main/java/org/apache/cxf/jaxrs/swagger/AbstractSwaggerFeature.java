@@ -201,14 +201,10 @@ decl_stmt|;
 specifier|private
 name|String
 name|license
-init|=
-literal|"Apache 2.0 License"
 decl_stmt|;
 specifier|private
 name|String
 name|licenseUrl
-init|=
-literal|"http://www.apache.org/licenses/LICENSE-2.0.html"
 decl_stmt|;
 specifier|private
 name|String
