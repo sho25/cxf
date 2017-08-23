@@ -257,6 +257,31 @@ argument_list|(
 literal|"/"
 argument_list|)
 expr_stmt|;
+name|endpoint
+operator|.
+name|setFeatures
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
+name|createSwaggerFeature
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+return|return
+name|endpoint
+operator|.
+name|create
+argument_list|()
+return|;
+block|}
+specifier|public
+name|Swagger2Feature
+name|createSwaggerFeature
+parameter_list|()
+block|{
 name|Swagger2Feature
 name|swagger2Feature
 init|=
@@ -266,35 +291,45 @@ argument_list|()
 decl_stmt|;
 name|swagger2Feature
 operator|.
+name|setPrettyPrint
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|swagger2Feature
+operator|.
 name|setTitle
 argument_list|(
-literal|"Sample REST Application"
+literal|"Spring Boot CXF REST Application"
+argument_list|)
+expr_stmt|;
+name|swagger2Feature
+operator|.
+name|setContact
+argument_list|(
+literal|"The Apache CXF team"
 argument_list|)
 expr_stmt|;
 name|swagger2Feature
 operator|.
 name|setDescription
 argument_list|(
-literal|"The Application"
+literal|"This sample project demonstrates how to use CXF JAX-RS services"
+operator|+
+literal|" with Spring Boot. This demo has two JAX-RS class resources being"
+operator|+
+literal|" deployed in a single JAX-RS endpoint."
 argument_list|)
 expr_stmt|;
-name|endpoint
-operator|.
-name|setFeatures
-argument_list|(
-name|Collections
-operator|.
-name|singletonList
-argument_list|(
 name|swagger2Feature
-argument_list|)
+operator|.
+name|setVersion
+argument_list|(
+literal|"1.0.0"
 argument_list|)
 expr_stmt|;
 return|return
-name|endpoint
-operator|.
-name|create
-argument_list|()
+name|swagger2Feature
 return|;
 block|}
 block|}
