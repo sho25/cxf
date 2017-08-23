@@ -963,11 +963,6 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
-annotation|@
 name|Override
 specifier|protected
 name|void
@@ -1001,18 +996,6 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|ApplicationInfo
-name|appInfo
-init|=
-literal|null
-decl_stmt|;
-if|if
-condition|(
-operator|!
-name|isScan
-argument_list|()
-condition|)
-block|{
 name|ServerProviderFactory
 name|factory
 init|=
@@ -1034,13 +1017,14 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|ApplicationInfo
 name|appInfo
-operator|=
+init|=
 name|factory
 operator|.
 name|getApplicationProvider
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|appInfo
@@ -1115,7 +1099,6 @@ argument_list|,
 name|appInfo
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|List
 argument_list|<
@@ -1467,11 +1450,6 @@ name|providers
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|protected
 name|void
 name|initBeanConfig
@@ -2076,14 +2054,11 @@ argument_list|(
 name|theFilterClass
 argument_list|)
 expr_stmt|;
-comment|// scan
-comment|//TODO: has no effect on Swagger which always scans and needs to be removed
 name|beanConfig
 operator|.
 name|setScan
 argument_list|(
-name|isScan
-argument_list|()
+literal|false
 argument_list|)
 expr_stmt|;
 comment|// base path is calculated dynamically
