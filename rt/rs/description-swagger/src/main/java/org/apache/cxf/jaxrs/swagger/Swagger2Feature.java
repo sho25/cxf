@@ -1424,25 +1424,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-operator|(
-operator|(
-name|ServerProviderFactory
-operator|)
-name|server
-operator|.
-name|getEndpoint
-argument_list|()
-operator|.
-name|get
-argument_list|(
-name|ServerProviderFactory
-operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-operator|)
+name|factory
 operator|.
 name|setUserProviders
 argument_list|(
@@ -2054,6 +2036,7 @@ argument_list|(
 name|theFilterClass
 argument_list|)
 expr_stmt|;
+comment|// Without this call Swagger generator loses the JSON 'info'
 name|beanConfig
 operator|.
 name|setScan
