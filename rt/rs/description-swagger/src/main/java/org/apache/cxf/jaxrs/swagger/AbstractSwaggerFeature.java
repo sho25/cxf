@@ -159,13 +159,13 @@ name|isSwaggerJaxRsAvailable
 argument_list|()
 expr_stmt|;
 block|}
-specifier|protected
+specifier|private
 name|boolean
 name|scan
 init|=
 literal|true
 decl_stmt|;
-specifier|protected
+specifier|private
 name|boolean
 name|runAsFilter
 decl_stmt|;
@@ -743,6 +743,8 @@ operator|=
 name|termsOfServiceUrl
 expr_stmt|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|boolean
 name|isScan
@@ -752,6 +754,8 @@ return|return
 name|scan
 return|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setScan
