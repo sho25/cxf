@@ -236,7 +236,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JAXRSObservableTest
+name|JAXRSRxJavaTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -246,7 +246,7 @@ specifier|final
 name|String
 name|PORT
 init|=
-name|ObservableServer
+name|RxJavaServer
 operator|.
 name|PORT
 decl_stmt|;
@@ -271,7 +271,7 @@ literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|ObservableServer
+name|RxJavaServer
 operator|.
 name|class
 argument_list|,

@@ -183,7 +183,7 @@ literal|"/observable"
 argument_list|)
 specifier|public
 class|class
-name|ObservableService
+name|RxJavaObservableService
 block|{
 annotation|@
 name|GET

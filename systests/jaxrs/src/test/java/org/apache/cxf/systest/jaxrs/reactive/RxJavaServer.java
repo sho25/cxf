@@ -168,7 +168,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ObservableServer
+name|RxJavaServer
 extends|extends
 name|AbstractBusTestServerBase
 block|{
@@ -180,7 +180,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|ObservableServer
+name|RxJavaServer
 operator|.
 name|class
 argument_list|)
@@ -197,7 +197,7 @@ name|Server
 name|server
 decl_stmt|;
 specifier|public
-name|ObservableServer
+name|RxJavaServer
 parameter_list|()
 block|{     }
 specifier|protected
@@ -296,7 +296,7 @@ name|sf
 operator|.
 name|setResourceClasses
 argument_list|(
-name|ObservableService
+name|RxJavaObservableService
 operator|.
 name|class
 argument_list|)
@@ -305,7 +305,7 @@ name|sf
 operator|.
 name|setResourceProvider
 argument_list|(
-name|ObservableService
+name|RxJavaObservableService
 operator|.
 name|class
 argument_list|,
@@ -313,7 +313,7 @@ operator|new
 name|SingletonResourceProvider
 argument_list|(
 operator|new
-name|ObservableService
+name|RxJavaObservableService
 argument_list|()
 argument_list|,
 literal|true
@@ -373,11 +373,11 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|ObservableServer
+name|RxJavaServer
 name|s
 init|=
 operator|new
-name|ObservableServer
+name|RxJavaServer
 argument_list|()
 decl_stmt|;
 name|s
