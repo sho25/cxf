@@ -990,6 +990,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|useReflection
 condition|)
 block|{
@@ -1007,7 +1008,7 @@ name|put
 argument_list|(
 literal|"use.httpurlconnection.method.reflection"
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
