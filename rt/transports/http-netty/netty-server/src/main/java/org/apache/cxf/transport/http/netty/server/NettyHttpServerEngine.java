@@ -467,6 +467,25 @@ name|tlsServerParameters
 operator|=
 name|params
 expr_stmt|;
+if|if
+condition|(
+name|tlsServerParameters
+operator|!=
+literal|null
+condition|)
+block|{
+name|protocol
+operator|=
+literal|"https"
+expr_stmt|;
+block|}
+else|else
+block|{
+name|protocol
+operator|=
+literal|"http"
+expr_stmt|;
+block|}
 block|}
 comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used      * in SpringConfiguration.      */
 specifier|public
