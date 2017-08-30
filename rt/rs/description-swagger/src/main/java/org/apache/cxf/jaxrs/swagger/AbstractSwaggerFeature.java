@@ -159,6 +159,10 @@ name|isSwaggerJaxRsAvailable
 argument_list|()
 expr_stmt|;
 block|}
+specifier|protected
+name|boolean
+name|licenseWasSet
+decl_stmt|;
 specifier|private
 name|boolean
 name|runAsFilter
@@ -681,6 +685,12 @@ name|String
 name|license
 parameter_list|)
 block|{
+name|this
+operator|.
+name|licenseWasSet
+operator|=
+literal|true
+expr_stmt|;
 name|this
 operator|.
 name|license
