@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|rx
+name|rx2
 operator|.
 name|server
 package|;
@@ -368,6 +368,11 @@ name|resumeAsyncResponse
 argument_list|()
 expr_stmt|;
 block|}
+name|super
+operator|.
+name|onStart
+argument_list|()
+expr_stmt|;
 block|}
 specifier|private
 name|void
@@ -388,7 +393,7 @@ annotation|@
 name|Override
 specifier|public
 name|void
-name|onCompleted
+name|onComplete
 parameter_list|()
 block|{
 name|completed
@@ -429,6 +434,11 @@ name|add
 argument_list|(
 name|bean
 argument_list|)
+expr_stmt|;
+name|super
+operator|.
+name|requestNext
+argument_list|()
 expr_stmt|;
 block|}
 specifier|private

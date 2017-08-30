@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|rx
+name|rx2
 operator|.
 name|server
 package|;

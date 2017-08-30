@@ -69,7 +69,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/observable2"
+literal|"/rx2/observable"
 argument_list|)
 specifier|public
 class|class
