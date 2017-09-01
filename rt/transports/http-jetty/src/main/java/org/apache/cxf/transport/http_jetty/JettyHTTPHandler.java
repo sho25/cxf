@@ -198,6 +198,15 @@ name|bus
 expr_stmt|;
 block|}
 specifier|public
+name|ServletContext
+name|getServletContext
+parameter_list|()
+block|{
+return|return
+name|servletContext
+return|;
+block|}
+specifier|public
 name|void
 name|setServletContext
 parameter_list|(
