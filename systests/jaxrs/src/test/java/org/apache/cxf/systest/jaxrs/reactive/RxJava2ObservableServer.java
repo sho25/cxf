@@ -119,7 +119,7 @@ name|rx2
 operator|.
 name|server
 operator|.
-name|ObservableInvoker
+name|ReactiveIOInvoker
 import|;
 end_import
 
@@ -209,7 +209,7 @@ operator|.
 name|setInvoker
 argument_list|(
 operator|new
-name|ObservableInvoker
+name|ReactiveIOInvoker
 argument_list|()
 argument_list|)
 expr_stmt|;

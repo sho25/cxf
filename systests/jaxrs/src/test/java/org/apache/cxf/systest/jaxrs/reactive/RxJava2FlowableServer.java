@@ -145,7 +145,7 @@ name|rx2
 operator|.
 name|server
 operator|.
-name|FlowableInvoker
+name|ReactiveIOInvoker
 import|;
 end_import
 
@@ -235,7 +235,7 @@ operator|.
 name|setInvoker
 argument_list|(
 operator|new
-name|FlowableInvoker
+name|ReactiveIOInvoker
 argument_list|()
 argument_list|)
 expr_stmt|;
