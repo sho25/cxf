@@ -3054,6 +3054,8 @@ block|{
 name|String
 name|doneFileName
 init|=
+name|mojo
+operator|+
 name|wsdlURI
 operator|.
 name|toString
