@@ -211,6 +211,8 @@ name|cxf
 operator|.
 name|systest
 operator|.
+name|htrace
+operator|.
 name|TestSpanReceiver
 import|;
 end_import

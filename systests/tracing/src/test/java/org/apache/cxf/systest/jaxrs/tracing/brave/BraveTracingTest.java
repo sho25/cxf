@@ -265,7 +265,11 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|TestSpanReporter
+name|brave
+operator|.
+name|BraveTestSupport
+operator|.
+name|SpanId
 import|;
 end_import
 
@@ -281,9 +285,7 @@ name|systest
 operator|.
 name|brave
 operator|.
-name|BraveTestSupport
-operator|.
-name|SpanId
+name|TestSpanReporter
 import|;
 end_import
 
