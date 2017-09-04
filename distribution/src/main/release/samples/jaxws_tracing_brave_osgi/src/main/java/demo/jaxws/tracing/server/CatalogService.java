@@ -42,7 +42,6 @@ function_decl|;
 name|Book
 name|getBook
 parameter_list|(
-specifier|final
 name|String
 name|id
 parameter_list|)
@@ -50,7 +49,6 @@ function_decl|;
 name|void
 name|deleteBook
 parameter_list|(
-specifier|final
 name|String
 name|id
 parameter_list|)

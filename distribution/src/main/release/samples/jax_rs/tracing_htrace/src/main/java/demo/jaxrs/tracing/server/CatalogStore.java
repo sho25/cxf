@@ -378,7 +378,6 @@ name|IOException
 block|{
 try|try
 init|(
-specifier|final
 name|Table
 name|table
 init|=
@@ -449,7 +448,6 @@ name|IOException
 block|{
 try|try
 init|(
-specifier|final
 name|Table
 name|table
 init|=
@@ -590,7 +588,6 @@ name|IOException
 block|{
 try|try
 init|(
-specifier|final
 name|Table
 name|table
 init|=
@@ -675,7 +672,6 @@ argument_list|()
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|Table
 name|table
 init|=

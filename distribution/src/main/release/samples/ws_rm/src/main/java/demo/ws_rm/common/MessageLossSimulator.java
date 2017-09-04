@@ -283,6 +283,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:OFF: ReturnCount
 specifier|public
 name|void
 name|handleMessage
@@ -534,6 +535,7 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:ON: ReturnCount
 specifier|private
 class|class
 name|WrappedOutputStream

@@ -1014,6 +1014,7 @@ name|initIndex
 argument_list|()
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:OFF: ReturnCount
 annotation|@
 name|POST
 annotation|@
@@ -1291,6 +1292,7 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:ON: ReturnCount
 annotation|@
 name|GET
 annotation|@
