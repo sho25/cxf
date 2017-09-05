@@ -212,6 +212,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_NAME_PASSWORD
+init|=
+literal|"namePassword"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_NO_TYPES
 init|=
 name|ToolConstants
