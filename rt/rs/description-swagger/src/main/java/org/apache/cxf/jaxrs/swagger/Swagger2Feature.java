@@ -1938,6 +1938,10 @@ expr_stmt|;
 if|if
 condition|(
 name|theLicense
+operator|!=
+literal|null
+operator|&&
+name|theLicense
 operator|.
 name|isEmpty
 argument_list|()
