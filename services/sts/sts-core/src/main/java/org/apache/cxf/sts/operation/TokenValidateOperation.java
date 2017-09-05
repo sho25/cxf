@@ -1450,6 +1450,11 @@ name|requestedToken
 argument_list|)
 expr_stmt|;
 comment|// Lifetime
+if|if
+condition|(
+name|includeLifetimeElement
+condition|)
+block|{
 name|LifetimeType
 name|lifetime
 init|=
@@ -1491,6 +1496,7 @@ argument_list|(
 name|lifetimeType
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|returnReferences

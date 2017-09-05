@@ -2331,6 +2331,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// Lifetime
+if|if
+condition|(
+name|includeLifetimeElement
+condition|)
+block|{
 name|LifetimeType
 name|lifetime
 init|=
@@ -2372,6 +2377,7 @@ argument_list|(
 name|lifetimeType
 argument_list|)
 expr_stmt|;
+block|}
 comment|// KeySize
 name|long
 name|keySize
