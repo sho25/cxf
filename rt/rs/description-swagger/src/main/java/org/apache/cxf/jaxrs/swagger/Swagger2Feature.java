@@ -2040,7 +2040,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|theContact
+name|theTermsUrl
 operator|=
 name|props
 operator|.
