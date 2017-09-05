@@ -212,9 +212,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CFG_NAME_PASSWORD
+name|CFG_AUTHORIZATION
 init|=
-literal|"namePassword"
+literal|"authorization"
 decl_stmt|;
 specifier|public
 specifier|static

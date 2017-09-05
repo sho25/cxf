@@ -771,7 +771,7 @@ argument_list|)
 expr_stmt|;
 name|sg
 operator|.
-name|setNamePassword
+name|setAuthorization
 argument_list|(
 operator|(
 name|String
@@ -782,7 +782,7 @@ name|get
 argument_list|(
 name|WadlToolConstants
 operator|.
-name|CFG_NAME_PASSWORD
+name|CFG_AUTHORIZATION
 argument_list|)
 argument_list|)
 expr_stmt|;
