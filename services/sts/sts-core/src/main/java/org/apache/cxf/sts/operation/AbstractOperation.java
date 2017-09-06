@@ -1428,12 +1428,10 @@ expr_stmt|;
 block|}
 specifier|public
 name|boolean
-name|getIncludeLifetimeElement
+name|isIncludeLifetimeElement
 parameter_list|()
 block|{
 return|return
-name|this
-operator|.
 name|includeLifetimeElement
 return|;
 block|}
