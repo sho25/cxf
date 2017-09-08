@@ -785,6 +785,11 @@ name|length
 argument_list|)
 return|;
 block|}
+name|decorateSubject
+argument_list|(
+name|subject
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 return|return
@@ -848,6 +853,15 @@ literal|null
 return|;
 block|}
 block|}
+comment|// Allow subclasses to decorate the Subject if required.
+specifier|protected
+name|void
+name|decorateSubject
+parameter_list|(
+name|Subject
+name|subject
+parameter_list|)
+block|{      }
 specifier|protected
 name|boolean
 name|isCredDelegationRequired
