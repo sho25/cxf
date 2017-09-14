@@ -183,6 +183,18 @@ name|TextMapExtractAdapter
 import|;
 end_import
 
+begin_import
+import|import
+name|io
+operator|.
+name|opentracing
+operator|.
+name|tag
+operator|.
+name|Tags
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -213,14 +225,6 @@ name|String
 name|TRACE_SPAN
 init|=
 literal|"org.apache.cxf.tracing.opentracing.span"
-decl_stmt|;
-specifier|protected
-specifier|static
-specifier|final
-name|String
-name|HTTP_STATUS_TAG
-init|=
-literal|"http.status"
 decl_stmt|;
 specifier|protected
 specifier|final
@@ -371,6 +375,38 @@ name|startActive
 argument_list|()
 expr_stmt|;
 block|}
+comment|// Set additional tags
+name|scope
+operator|.
+name|setTag
+argument_list|(
+name|Tags
+operator|.
+name|HTTP_METHOD
+operator|.
+name|getKey
+argument_list|()
+argument_list|,
+name|method
+argument_list|)
+expr_stmt|;
+name|scope
+operator|.
+name|setTag
+argument_list|(
+name|Tags
+operator|.
+name|HTTP_URL
+operator|.
+name|getKey
+argument_list|()
+argument_list|,
+name|uri
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// If the service resource is using asynchronous processing mode, the trace
 comment|// scope will be closed in another thread and as such should be detached.
 name|Continuation
@@ -523,7 +559,12 @@ name|span
 operator|.
 name|setTag
 argument_list|(
-name|HTTP_STATUS_TAG
+name|Tags
+operator|.
+name|HTTP_STATUS
+operator|.
+name|getKey
+argument_list|()
 argument_list|,
 name|responseStatus
 argument_list|)
