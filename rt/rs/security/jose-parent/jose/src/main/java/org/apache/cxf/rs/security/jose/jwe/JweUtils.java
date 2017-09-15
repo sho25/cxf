@@ -2691,7 +2691,9 @@ block|{
 return|return
 name|loadEncryptionProvider
 argument_list|(
-literal|null
+operator|new
+name|JweHeaders
+argument_list|()
 argument_list|,
 name|required
 argument_list|)
