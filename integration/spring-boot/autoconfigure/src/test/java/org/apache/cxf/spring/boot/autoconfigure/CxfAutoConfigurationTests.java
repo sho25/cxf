@@ -23,6 +23,16 @@ begin_import
 import|import
 name|org
 operator|.
+name|hamcrest
+operator|.
+name|Matcher
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|After
@@ -159,18 +169,6 @@ name|hamcrest
 operator|.
 name|Matchers
 operator|.
-name|contains
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|hamcrest
-operator|.
-name|Matchers
-operator|.
 name|equalTo
 import|;
 end_import
@@ -184,6 +182,18 @@ operator|.
 name|Matchers
 operator|.
 name|hasEntry
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|hamcrest
+operator|.
+name|Matchers
+operator|.
+name|hasItem
 import|;
 end_import
 
@@ -354,7 +364,10 @@ operator|.
 name|getUrlMappings
 argument_list|()
 argument_list|,
-name|contains
+operator|(
+name|Matcher
+operator|)
+name|hasItem
 argument_list|(
 literal|"/valid/*"
 argument_list|)
@@ -415,7 +428,10 @@ operator|.
 name|getUrlMappings
 argument_list|()
 argument_list|,
-name|contains
+operator|(
+name|Matcher
+operator|)
+name|hasItem
 argument_list|(
 literal|"/valid/*"
 argument_list|)
