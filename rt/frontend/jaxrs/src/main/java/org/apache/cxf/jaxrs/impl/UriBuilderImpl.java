@@ -700,8 +700,9 @@ decl_stmt|;
 name|URITemplate
 name|pathTempl
 init|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|thePath
 argument_list|)
@@ -763,8 +764,9 @@ block|{
 name|URITemplate
 name|queryTempl
 init|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|theQuery
 argument_list|)
@@ -858,8 +860,9 @@ block|{
 name|URITemplate
 name|fragmentTempl
 init|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|theFragment
 argument_list|)
@@ -2093,8 +2096,9 @@ comment|//CHECKSTYLE:ON
 name|URITemplate
 name|templ
 init|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|path
 argument_list|)
@@ -3276,8 +3280,9 @@ block|{
 if|if
 condition|(
 operator|!
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|path
 argument_list|)
@@ -4053,8 +4058,9 @@ condition|)
 block|{
 name|p
 operator|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|p
 argument_list|)
@@ -5062,8 +5068,9 @@ else|else
 block|{
 name|val
 operator|=
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|val
 argument_list|)
@@ -5284,8 +5291,9 @@ parameter_list|)
 block|{
 if|if
 condition|(
-operator|new
 name|URITemplate
+operator|.
+name|createExactTemplate
 argument_list|(
 name|uriTemplate
 argument_list|)
