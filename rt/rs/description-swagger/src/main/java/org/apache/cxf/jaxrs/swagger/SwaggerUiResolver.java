@@ -158,8 +158,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|,
-name|swaggerUiMavenGroupAndArtifact
-argument_list|,
 name|swaggerUiVersion
 argument_list|)
 decl_stmt|;
@@ -222,8 +220,6 @@ name|checkUiRoot
 argument_list|(
 name|urlStr
 argument_list|,
-name|swaggerUiMavenGroupAndArtifact
-argument_list|,
 name|swaggerUiVersion
 argument_list|)
 decl_stmt|;
@@ -259,9 +255,6 @@ name|checkUiRoot
 parameter_list|(
 name|String
 name|urlStr
-parameter_list|,
-name|String
-name|swaggerUiMavenGroupAndArtifact
 parameter_list|,
 name|String
 name|swaggerUiVersion
