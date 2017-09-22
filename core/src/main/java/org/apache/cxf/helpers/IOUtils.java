@@ -232,9 +232,7 @@ return|return
 literal|true
 return|;
 block|}
-try|try
-block|{
-comment|// if available is 0 it does not mean it is empty; it can also throw IOException
+comment|// if available is 0 it does not mean it is empty
 if|if
 condition|(
 name|is
@@ -249,15 +247,6 @@ return|return
 literal|false
 return|;
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
-block|}
 specifier|final
 name|byte
 index|[]
@@ -269,8 +258,6 @@ index|[
 literal|1
 index|]
 decl_stmt|;
-try|try
-block|{
 if|if
 condition|(
 name|is
@@ -308,15 +295,6 @@ name|reset
 argument_list|()
 expr_stmt|;
 block|}
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
 block|}
 if|if
 condition|(

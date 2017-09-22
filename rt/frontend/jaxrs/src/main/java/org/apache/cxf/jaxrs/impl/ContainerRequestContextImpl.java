@@ -313,23 +313,6 @@ name|boolean
 name|hasEntity
 parameter_list|()
 block|{
-name|InputStream
-name|is
-init|=
-name|getEntityStream
-argument_list|()
-decl_stmt|;
-if|if
-condition|(
-name|is
-operator|==
-literal|null
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
 comment|// Is Content-Length is explicitly set to 0 ?
 if|if
 condition|(

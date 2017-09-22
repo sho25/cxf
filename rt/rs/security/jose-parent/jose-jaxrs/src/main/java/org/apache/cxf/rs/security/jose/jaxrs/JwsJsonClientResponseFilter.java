@@ -223,15 +223,11 @@ condition|(
 name|isCheckEmptyStream
 argument_list|()
 operator|&&
-name|IOUtils
-operator|.
-name|isEmpty
-argument_list|(
+operator|!
 name|res
 operator|.
-name|getEntityStream
+name|hasEntity
 argument_list|()
-argument_list|)
 condition|)
 block|{
 return|return;

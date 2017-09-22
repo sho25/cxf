@@ -284,6 +284,22 @@ name|boolean
 name|hasEntity
 parameter_list|()
 block|{
+comment|// Is Content-Length is explicitly set to 0 ?
+if|if
+condition|(
+name|HttpUtils
+operator|.
+name|isPayloadEmpty
+argument_list|(
+name|getHeaders
+argument_list|()
+argument_list|)
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 try|try
 block|{
 return|return
