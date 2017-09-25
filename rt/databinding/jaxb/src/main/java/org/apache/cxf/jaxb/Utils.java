@@ -1952,8 +1952,8 @@ operator|==
 literal|null
 condition|)
 block|{
-name|XmlJavaTypeAdapters
-name|adapters
+name|Package
+name|packageDeclaration
 init|=
 name|m
 operator|.
@@ -1962,6 +1962,18 @@ argument_list|()
 operator|.
 name|getPackage
 argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|packageDeclaration
+operator|!=
+literal|null
+condition|)
+block|{
+name|XmlJavaTypeAdapters
+name|adapters
+init|=
+name|packageDeclaration
 operator|.
 name|getAnnotation
 argument_list|(
@@ -2013,6 +2025,7 @@ operator|=
 name|candidate
 expr_stmt|;
 break|break;
+block|}
 block|}
 block|}
 block|}
