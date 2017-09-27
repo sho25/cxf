@@ -243,11 +243,11 @@ comment|/**      * Specifies that the wsdlurl contains a plain text, new line de
 name|Boolean
 name|wsdlList
 decl_stmt|;
-comment|/**      * Specifies the frontend. Default is JAXWS. Currently supports only JAXWS frontend.      */
+comment|/**      * Specifies the frontend. Default is JAXWS. Currently supports "JAXWS" and "CXF" frontends.      */
 name|String
 name|frontEnd
 decl_stmt|;
-comment|/**      * Specifies the databinding. Default is JAXB. Currently supports only JAXB databinding.      */
+comment|/**      * Specifies the databinding. Default is JAXB.      */
 name|String
 name|dataBinding
 decl_stmt|;
