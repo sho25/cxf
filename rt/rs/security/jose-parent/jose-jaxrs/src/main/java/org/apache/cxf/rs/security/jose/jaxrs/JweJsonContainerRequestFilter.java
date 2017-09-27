@@ -406,7 +406,7 @@ argument_list|)
 operator|||
 name|HttpUtils
 operator|.
-name|isMethodWithNoContent
+name|isMethodWithNoRequestContent
 argument_list|(
 name|method
 argument_list|)
