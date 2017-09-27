@@ -1021,7 +1021,7 @@ name|encodedSignature
 init|=
 name|Base64
 operator|.
-name|getMimeEncoder
+name|getEncoder
 argument_list|()
 operator|.
 name|encodeToString
