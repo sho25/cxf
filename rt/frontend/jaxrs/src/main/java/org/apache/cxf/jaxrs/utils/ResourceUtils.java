@@ -7167,7 +7167,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|WARNING
+name|SEVERE
 argument_list|,
 literal|"No JAXB context can be created"
 argument_list|,
