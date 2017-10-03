@@ -90,7 +90,7 @@ specifier|final
 name|String
 name|CD_HEADER_PARAMS_EXPRESSION
 init|=
-literal|"(([\\w-]+( )?\\*?=( )?\"[^\"]+\")|([\\w-]+( )?\\*?=( )?[^;]+))"
+literal|"[\\w-]++( )?\\*?=( )?((\"[^\"]++\")|([^;]+))"
 decl_stmt|;
 specifier|private
 specifier|static

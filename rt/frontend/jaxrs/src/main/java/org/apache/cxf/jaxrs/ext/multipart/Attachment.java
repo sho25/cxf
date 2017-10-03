@@ -683,6 +683,7 @@ literal|"application/octet-stream"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 name|Attachment
 parameter_list|(
 name|MultivaluedMap
