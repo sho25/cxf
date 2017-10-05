@@ -875,10 +875,6 @@ literal|"support.swagger.ui"
 decl_stmt|;
 specifier|private
 name|boolean
-name|runAsFilter
-decl_stmt|;
-specifier|private
-name|boolean
 name|scanAllResources
 decl_stmt|;
 specifier|private
@@ -1160,7 +1156,8 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|runAsFilter
+name|isRunAsFilter
+argument_list|()
 condition|)
 block|{
 name|providers
@@ -1235,7 +1232,8 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|runAsFilter
+name|isRunAsFilter
+argument_list|()
 condition|)
 block|{
 name|swaggerResources
@@ -1301,7 +1299,8 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|runAsFilter
+name|isRunAsFilter
+argument_list|()
 condition|)
 block|{
 for|for
