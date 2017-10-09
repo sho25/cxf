@@ -262,7 +262,10 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-return|return
+specifier|final
+name|AtmosphereSseServletDestination
+name|destination
+init|=
 operator|new
 name|AtmosphereSseServletDestination
 argument_list|(
@@ -278,6 +281,14 @@ operator|.
 name|getAddress
 argument_list|()
 argument_list|)
+decl_stmt|;
+name|destination
+operator|.
+name|finalizeConfig
+argument_list|()
+expr_stmt|;
+return|return
+name|destination
 return|;
 block|}
 block|}

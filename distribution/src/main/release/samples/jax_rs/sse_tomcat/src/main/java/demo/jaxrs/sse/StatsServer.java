@@ -333,6 +333,13 @@ operator|.
 name|TRANSPORT_ID
 argument_list|)
 expr_stmt|;
+name|cxfServlet
+operator|.
+name|setAsyncSupported
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|context
 operator|.
 name|addServletMapping
