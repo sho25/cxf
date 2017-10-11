@@ -19,6 +19,20 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|ext
+operator|.
+name|RuntimeDelegate
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -148,7 +162,15 @@ name|context
 parameter_list|)
 throws|throws
 name|Exception
-block|{      }
+block|{
+name|RuntimeDelegate
+operator|.
+name|setInstance
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
