@@ -700,6 +700,13 @@ name|writer
 operator|.
 name|write
 argument_list|(
+literal|"\r\n"
+argument_list|)
+expr_stmt|;
+name|writer
+operator|.
+name|write
+argument_list|(
 literal|"--"
 argument_list|)
 expr_stmt|;

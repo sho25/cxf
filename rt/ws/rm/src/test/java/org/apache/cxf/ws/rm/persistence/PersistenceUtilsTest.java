@@ -589,7 +589,7 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|,
-literal|"--uuid:"
+literal|"\r\n--uuid:"
 argument_list|)
 expr_stmt|;
 name|assertNotNull
