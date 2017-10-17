@@ -639,6 +639,24 @@ literal|"false"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|sprops
+operator|.
+name|put
+argument_list|(
+literal|"async-supported"
+argument_list|,
+name|getProp
+argument_list|(
+name|properties
+argument_list|,
+name|CXF_SERVLET_PREFIX
+operator|+
+literal|"async-supported"
+argument_list|,
+literal|"true"
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// Accept extra properties by default, can be disabled if it is really needed
 if|if
 condition|(
