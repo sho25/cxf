@@ -1103,40 +1103,6 @@ name|l
 expr_stmt|;
 try|try
 block|{
-comment|//java 5/6
-name|addWorkerMethod
-operator|=
-name|ThreadPoolExecutor
-operator|.
-name|class
-operator|.
-name|getDeclaredMethod
-argument_list|(
-literal|"addIfUnderMaximumPoolSize"
-argument_list|,
-name|Runnable
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|addWorkerArgs
-operator|=
-operator|new
-name|Object
-index|[]
-block|{
-literal|null
-block|}
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Throwable
-name|t
-parameter_list|)
-block|{
-try|try
-block|{
 comment|//java 7
 name|addWorkerMethod
 operator|=
@@ -1178,7 +1144,6 @@ name|t2
 parameter_list|)
 block|{
 comment|//nothing we cando
-block|}
 block|}
 block|}
 return|return
