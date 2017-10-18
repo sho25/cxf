@@ -55,6 +55,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collections
 import|;
 end_import
@@ -698,7 +708,12 @@ name|last
 operator|+
 literal|") --> "
 operator|+
+name|Arrays
+operator|.
+name|toString
+argument_list|(
 name|fragment
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|processFragments

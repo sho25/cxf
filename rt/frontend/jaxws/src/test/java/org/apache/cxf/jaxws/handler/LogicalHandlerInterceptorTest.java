@@ -718,6 +718,14 @@ comment|//JAX-WS spec: If handler returns false, for a request-response MEP, if 
 comment|//direction is reversed during processing of a request message then the message
 comment|//becomes a response message.
 comment|//NOTE: commented out as this has been covered by other tests.
+annotation|@
+name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|xtestReturnFalseClientSide

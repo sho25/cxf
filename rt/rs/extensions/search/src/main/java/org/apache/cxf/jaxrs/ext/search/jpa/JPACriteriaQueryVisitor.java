@@ -245,7 +245,7 @@ name|queryClass
 argument_list|,
 literal|null
 argument_list|,
-literal|null
+name|joinProps
 argument_list|)
 expr_stmt|;
 block|}

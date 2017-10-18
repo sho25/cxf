@@ -1344,9 +1344,7 @@ literal|"bob"
 argument_list|)
 argument_list|)
 expr_stmt|;
-try|try
-block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
 name|tokenString
 operator|.
@@ -1356,20 +1354,6 @@ literal|"CustomActAs"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|fail
-argument_list|(
-literal|"Failure expected as the default AttributeProvider does not create this attribute"
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|AssertionError
-name|ex
-parameter_list|)
-block|{
-comment|// expected on the wrong attribute provider
-block|}
 name|List
 argument_list|<
 name|AttributeStatementProvider

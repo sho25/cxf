@@ -223,7 +223,7 @@ name|openTag
 argument_list|,
 name|closeTag
 argument_list|,
-literal|""
+name|sep
 argument_list|,
 literal|1000
 argument_list|)

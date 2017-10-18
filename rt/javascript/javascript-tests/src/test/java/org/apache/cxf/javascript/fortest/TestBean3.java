@@ -326,10 +326,12 @@ block|{
 if|if
 condition|(
 operator|!
-name|base64Item
+name|Arrays
 operator|.
 name|equals
 argument_list|(
+name|base64Item
+argument_list|,
 name|other
 operator|.
 name|base64Item

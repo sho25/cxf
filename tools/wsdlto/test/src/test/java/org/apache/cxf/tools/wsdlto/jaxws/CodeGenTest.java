@@ -8139,6 +8139,11 @@ operator|.
 name|execute
 argument_list|()
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -9099,6 +9104,11 @@ operator|.
 name|execute
 argument_list|()
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -9820,6 +9830,14 @@ name|tc
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testW3CEPR

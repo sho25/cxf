@@ -180,6 +180,14 @@ name|CERT_DN
 init|=
 literal|"CN=www.anothersts.com, L=CGN, ST=NRW, C=DE, O=AnotherSTS"
 decl_stmt|;
+annotation|@
+name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|extractValidatingCertsOK

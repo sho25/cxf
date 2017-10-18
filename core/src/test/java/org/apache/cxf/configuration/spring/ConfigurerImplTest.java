@@ -420,8 +420,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute floatAttr"
 argument_list|,
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|6F
 argument_list|)
@@ -866,8 +867,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute floatAttr"
 argument_list|,
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|16F
 argument_list|)
@@ -1407,8 +1409,9 @@ specifier|private
 name|Float
 name|floatAttr
 init|=
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|6F
 argument_list|)

@@ -2585,10 +2585,6 @@ argument_list|(
 name|Long
 operator|.
 name|MAX_VALUE
-operator|*
-name|Long
-operator|.
-name|MAX_VALUE
 argument_list|)
 argument_list|)
 block|}
@@ -8471,10 +8467,6 @@ argument_list|(
 name|Long
 operator|.
 name|MAX_VALUE
-operator|*
-name|Long
-operator|.
-name|MAX_VALUE
 argument_list|)
 argument_list|)
 block|,
@@ -8485,10 +8477,6 @@ name|String
 operator|.
 name|valueOf
 argument_list|(
-name|Long
-operator|.
-name|MAX_VALUE
-operator|*
 name|Long
 operator|.
 name|MAX_VALUE
@@ -8731,10 +8719,6 @@ argument_list|(
 name|Integer
 operator|.
 name|MAX_VALUE
-operator|*
-name|Integer
-operator|.
-name|MAX_VALUE
 argument_list|)
 argument_list|)
 block|,
@@ -8745,10 +8729,6 @@ name|String
 operator|.
 name|valueOf
 argument_list|(
-name|Long
-operator|.
-name|MAX_VALUE
-operator|*
 name|Long
 operator|.
 name|MAX_VALUE
@@ -9519,10 +9499,6 @@ argument_list|(
 name|Integer
 operator|.
 name|MAX_VALUE
-operator|*
-name|Integer
-operator|.
-name|MAX_VALUE
 argument_list|)
 argument_list|)
 block|,
@@ -9533,10 +9509,6 @@ name|String
 operator|.
 name|valueOf
 argument_list|(
-name|Long
-operator|.
-name|MAX_VALUE
-operator|*
 name|Long
 operator|.
 name|MAX_VALUE

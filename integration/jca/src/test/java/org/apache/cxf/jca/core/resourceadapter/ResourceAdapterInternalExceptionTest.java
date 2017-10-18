@@ -180,12 +180,10 @@ name|String
 name|msg
 init|=
 literal|"msg1"
-decl_stmt|;
-name|msg
 operator|.
 name|intern
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|Exception
 name|e
 init|=
@@ -250,12 +248,10 @@ name|String
 name|msg
 init|=
 literal|"msg1"
-decl_stmt|;
-name|msg
 operator|.
 name|intern
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|javax
 operator|.
 name|resource

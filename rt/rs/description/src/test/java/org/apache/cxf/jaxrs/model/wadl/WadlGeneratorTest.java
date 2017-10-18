@@ -7135,7 +7135,7 @@ name|schemaType
 argument_list|,
 literal|false
 argument_list|,
-literal|null
+name|docs
 argument_list|)
 expr_stmt|;
 block|}

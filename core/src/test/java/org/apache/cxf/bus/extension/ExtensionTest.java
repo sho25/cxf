@@ -205,6 +205,11 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -241,6 +246,11 @@ argument_list|(
 name|cl
 argument_list|,
 literal|null
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
 argument_list|)
 expr_stmt|;
 block|}
@@ -289,6 +299,11 @@ argument_list|(
 name|cl
 argument_list|,
 literal|null
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
 argument_list|)
 expr_stmt|;
 block|}
@@ -379,6 +394,11 @@ operator|.
 name|loadInterface
 argument_list|(
 name|cl
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected"
 argument_list|)
 expr_stmt|;
 block|}

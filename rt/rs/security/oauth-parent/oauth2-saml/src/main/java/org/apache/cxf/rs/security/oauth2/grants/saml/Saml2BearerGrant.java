@@ -102,7 +102,7 @@ name|this
 argument_list|(
 name|assertion
 argument_list|,
-literal|false
+name|encoded
 argument_list|,
 literal|null
 argument_list|)

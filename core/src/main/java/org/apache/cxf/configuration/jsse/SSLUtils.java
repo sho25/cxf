@@ -1646,10 +1646,12 @@ name|FINE
 argument_list|,
 literal|"CIPHERSUITES_SET"
 argument_list|,
-name|defaultCipherSuites
+name|Arrays
 operator|.
 name|toString
-argument_list|()
+argument_list|(
+name|defaultCipherSuites
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return

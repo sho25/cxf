@@ -785,14 +785,16 @@ operator|new
 name|Object
 index|[]
 block|{
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|20
 argument_list|)
 block|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|30
 argument_list|)
@@ -812,8 +814,9 @@ name|assertEquals
 argument_list|(
 literal|"Incorrect result"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|50
 argument_list|)

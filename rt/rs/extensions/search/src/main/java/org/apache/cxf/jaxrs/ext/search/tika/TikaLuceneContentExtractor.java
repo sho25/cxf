@@ -367,9 +367,7 @@ name|parser
 argument_list|,
 literal|false
 argument_list|,
-operator|new
-name|LuceneDocumentMetadata
-argument_list|()
+name|documentMetadata
 argument_list|)
 expr_stmt|;
 block|}

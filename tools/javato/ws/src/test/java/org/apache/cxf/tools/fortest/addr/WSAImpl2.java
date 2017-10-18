@@ -176,6 +176,7 @@ operator|<
 literal|0
 condition|)
 block|{
+throw|throw
 operator|new
 name|AddressingFeatureException
 argument_list|(
@@ -187,7 +188,7 @@ literal|", "
 operator|+
 name|number2
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 return|return
 name|number1

@@ -75,6 +75,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|After
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Assert
 import|;
 end_import
@@ -168,6 +178,8 @@ name|props
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|After
 specifier|public
 name|void
 name|tearDown
