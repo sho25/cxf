@@ -8009,7 +8009,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|newDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|primary
@@ -8557,7 +8557,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|newDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|primary
@@ -8929,7 +8929,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -8990,7 +8990,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -9191,7 +9191,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element

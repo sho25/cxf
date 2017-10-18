@@ -717,7 +717,7 @@ name|uuidEl
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElementNS

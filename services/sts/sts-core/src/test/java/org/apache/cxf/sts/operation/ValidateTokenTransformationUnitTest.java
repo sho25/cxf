@@ -4701,7 +4701,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -4774,7 +4774,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
