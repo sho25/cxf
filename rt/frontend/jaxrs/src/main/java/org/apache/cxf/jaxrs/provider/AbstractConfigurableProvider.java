@@ -252,7 +252,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|bus
+name|b
 operator|!=
 literal|null
 condition|)
