@@ -7387,6 +7387,10 @@ condition|(
 name|parent
 operator|instanceof
 name|Document
+operator|||
+name|parent
+operator|instanceof
+name|DocumentFragment
 condition|)
 block|{
 return|return;
@@ -8219,6 +8223,10 @@ condition|(
 name|parent
 operator|instanceof
 name|Document
+operator|||
+name|parent
+operator|instanceof
+name|DocumentFragment
 condition|)
 block|{
 return|return;
@@ -8730,6 +8738,10 @@ condition|(
 name|parent
 operator|instanceof
 name|Document
+operator|||
+name|parent
+operator|instanceof
+name|DocumentFragment
 condition|)
 block|{
 return|return

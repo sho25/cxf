@@ -305,7 +305,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|Document
+name|DocumentFragment
 import|;
 end_import
 
@@ -1298,12 +1298,15 @@ literal|null
 decl_stmt|;
 try|try
 block|{
-name|Document
-name|doc
+name|DocumentFragment
+name|frag
 init|=
 name|DOMUtils
 operator|.
-name|newDocument
+name|getEmptyDocument
+argument_list|()
+operator|.
+name|createDocumentFragment
 argument_list|()
 decl_stmt|;
 name|DOMResult
@@ -1312,7 +1315,7 @@ init|=
 operator|new
 name|DOMResult
 argument_list|(
-name|doc
+name|frag
 argument_list|)
 decl_stmt|;
 name|external
@@ -1328,10 +1331,7 @@ init|=
 operator|new
 name|W3CDOMStreamReader
 argument_list|(
-name|doc
-operator|.
-name|getDocumentElement
-argument_list|()
+name|frag
 argument_list|)
 decl_stmt|;
 comment|// CXF internal 2005/08 EndpointReferenceType should be

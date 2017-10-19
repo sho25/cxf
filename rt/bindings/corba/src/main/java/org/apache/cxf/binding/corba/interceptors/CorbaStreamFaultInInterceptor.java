@@ -1012,7 +1012,7 @@ name|faultDoc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -1025,13 +1025,6 @@ argument_list|(
 literal|"detail"
 argument_list|)
 decl_stmt|;
-name|faultDoc
-operator|.
-name|appendChild
-argument_list|(
-name|faultElement
-argument_list|)
-expr_stmt|;
 name|Element
 name|partElement
 init|=

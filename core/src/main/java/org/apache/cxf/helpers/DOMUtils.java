@@ -834,19 +834,129 @@ operator|==
 literal|null
 condition|)
 block|{
-name|emptyDocument
-operator|=
+comment|//emptyDocument = createDocument();
+comment|// uncomment this to see if anything is actually setting anything into the empty doc
+specifier|final
+name|Document
+name|doc
+init|=
 name|createDocument
 argument_list|()
-expr_stmt|;
-comment|// uncomment this to see if anything is actually setting anything into the empty doc
-comment|/*             final Document doc  = createDocument();             emptyDocument = (Document)org.apache.cxf.common.util.ProxyHelper.getProxy(                 DOMUtils.class.getClassLoader(),                  new Class<?>[] {Document.class},                  new java.lang.reflect.InvocationHandler() {                     @Override                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {                         if (method.getName().contains("create")) {                             return method.invoke(doc, args);                         }                         throw new IllegalStateException("Cannot modify factory document");                     }                 });              */
+decl_stmt|;
+name|emptyDocument
+operator|=
+operator|(
+name|Document
+operator|)
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|ProxyHelper
+operator|.
+name|getProxy
+argument_list|(
+name|DOMUtils
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
+argument_list|,
+operator|new
+name|Class
+argument_list|<
+name|?
+argument_list|>
+index|[]
+block|{
+name|Document
+operator|.
+name|class
+block|}
+operator|,
+operator|new
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|InvocationHandler
+argument_list|()
+block|{
+annotation|@
+name|Override
+specifier|public
+name|Object
+name|invoke
+parameter_list|(
+name|Object
+name|proxy
+parameter_list|,
+name|Method
+name|method
+parameter_list|,
+name|Object
+index|[]
+name|args
+parameter_list|)
+throws|throws
+name|Throwable
+block|{
+if|if
+condition|(
+name|method
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"create"
+argument_list|)
+condition|)
+block|{
+return|return
+name|method
+operator|.
+name|invoke
+argument_list|(
+name|doc
+argument_list|,
+name|args
+argument_list|)
+return|;
+block|}
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Cannot modify factory document"
+argument_list|)
+throw|;
+block|}
+block|}
+block|)
+empty_stmt|;
 block|}
 return|return
 name|emptyDocument
 return|;
 block|}
+end_class
+
+begin_comment
 comment|/**      * Returns a static Document that should always be "empty".  It's useful as a factory for       * for creating Elements and other nodes that will be traversed later and don't need to       * be attached into a document       * @return      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Document
@@ -875,7 +985,13 @@ return|return
 name|doc
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * This function is much like getAttribute, but returns null, not "", for a nonexistent attribute.      *      * @param e      * @param attributeName      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -916,7 +1032,13 @@ name|getValue
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the text content of a node and all it's children or null if there is no text      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -947,6 +1069,9 @@ name|toString
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -1023,7 +1148,13 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the trimmed text content of a node or null if there is no text      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -1060,7 +1191,13 @@ return|return
 name|s
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the raw text content of a node or null if there is no text      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -1226,7 +1363,13 @@ return|return
 name|s
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the first element child.      *      * @param parent lookup direct childs      * @param name name of the element. If null return the first element.      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Node
@@ -1341,6 +1484,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|boolean
@@ -1411,6 +1557,9 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -1470,6 +1619,9 @@ name|getNodeValue
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -1544,6 +1696,9 @@ name|getValue
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -1597,6 +1752,9 @@ name|attNode
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -1625,7 +1783,13 @@ name|attName
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Set or replace the text value      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -1690,7 +1854,13 @@ name|val
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Find the first direct child with a given attribute.      *      * @param parent      * @param elemName name of the element, or null for any      * @param attName attribute we're looking for      * @param attVal attribute value or null if we just want any      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Element
@@ -1845,7 +2015,13 @@ return|return
 name|child
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the first child's content ( ie it's included TEXT node ).      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -1923,6 +2099,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|QName
@@ -1948,7 +2127,13 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Creates a QName object based on the qualified name      * and using the Node as a base to lookup the namespace      * for the prefix      * @param qualifiedName      * @param node      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|QName
@@ -2065,6 +2250,9 @@ name|prefix
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|QName
@@ -2083,6 +2271,9 @@ literal|""
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|QName
@@ -2190,6 +2381,9 @@ name|prefix
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Set
@@ -2261,7 +2455,13 @@ return|return
 name|dropElements
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the first direct child with a given type      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Element
@@ -2321,6 +2521,9 @@ operator|)
 name|n
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Element
@@ -2376,7 +2579,13 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Return the first element child with the specified qualified name.      *      * @param parent      * @param q      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Element
@@ -2416,7 +2625,13 @@ name|lp
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Return the first element child with the specified qualified name.      *      * @param parent      * @param ns      * @param lp      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Element
@@ -2518,7 +2733,13 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Return child elements with specified name.      *      * @param parent      * @param ns      * @param localName      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -2638,7 +2859,13 @@ return|return
 name|r
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Returns all child elements with specified namespace.      *      * @param parent the element to search under      * @param ns the namespace to find elements in      * @return all child elements with specified namespace      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -2745,7 +2972,13 @@ return|return
 name|r
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the first child of the specified type.      *      * @param parent      * @param type      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Node
@@ -2803,7 +3036,13 @@ return|return
 name|n
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get the next sibling with the same name and type      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Node
@@ -2840,7 +3079,13 @@ name|type
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Return the next sibling with a given name and type      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Node
@@ -2943,6 +3188,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_class
 specifier|public
 specifier|static
 class|class
@@ -2978,6 +3226,9 @@ argument_list|)
 return|;
 block|}
 block|}
+end_class
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -3034,6 +3285,9 @@ return|return
 name|prefix
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -3139,7 +3393,13 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get all prefixes defined, up to the root, for a namespace URI.      *      * @param element      * @param namespaceUri      * @param prefixes      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -3196,7 +3456,13 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_comment
 comment|/**      * Get all prefixes defined on this element for the specified namespace.      *      * @param element      * @param namespaceUri      * @param prefixes      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -3309,6 +3575,9 @@ expr_stmt|;
 block|}
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -3366,7 +3635,13 @@ return|return
 name|p
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Starting from a node, find the namespace declaration for a prefix. for a matching namespace      * declaration.      *      * @param node search up from here to search for namespace definitions      * @param searchPrefix the prefix we are searching for      * @return the namespace if found.      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -3544,6 +3819,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -3590,7 +3868,13 @@ return|return
 name|ret
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Try to get the DOM Node from the SAAJ Node with JAVA9      * @param node The original node we need check      * @return The DOM node      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|Node
@@ -3666,6 +3950,9 @@ return|return
 name|node
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -3760,6 +4047,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -3801,6 +4091,9 @@ return|return
 name|ret
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -3873,6 +4166,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|boolean
@@ -3965,6 +4261,9 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|boolean
@@ -4035,7 +4334,13 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Set a namespace/prefix on an element if it is not set already. First off, it searches for the element      * for the prefix associated with the specified namespace. If the prefix isn't null, then this is      * returned. Otherwise, it creates a new attribute using the namespace/prefix passed as parameters.      *      * @param element      * @param namespace      * @param prefix      * @return the prefix associated with the set namespace      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|String
@@ -4091,7 +4396,13 @@ return|return
 name|prefix
 return|;
 block|}
+end_function
+
+begin_comment
 comment|/**      * Add a namespace prefix definition to an element.      *      * @param element      * @param namespaceUri      * @param prefix      */
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|void
@@ -4123,6 +4434,9 @@ name|namespaceUri
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|boolean
@@ -4133,6 +4447,9 @@ return|return
 name|isJre9SAAJ
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -4149,8 +4466,8 @@ operator|=
 name|isJava9SAAJ
 expr_stmt|;
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 
