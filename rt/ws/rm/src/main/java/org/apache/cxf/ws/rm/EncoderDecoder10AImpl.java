@@ -155,7 +155,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|Document
+name|DocumentFragment
 import|;
 end_import
 
@@ -1130,12 +1130,15 @@ parameter_list|)
 throws|throws
 name|JAXBException
 block|{
-name|Document
+name|DocumentFragment
 name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
+argument_list|()
+operator|.
+name|createDocumentFragment
 argument_list|()
 decl_stmt|;
 name|Marshaller
@@ -1181,12 +1184,15 @@ parameter_list|)
 throws|throws
 name|JAXBException
 block|{
-name|Document
+name|DocumentFragment
 name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
+argument_list|()
+operator|.
+name|createDocumentFragment
 argument_list|()
 decl_stmt|;
 name|Marshaller

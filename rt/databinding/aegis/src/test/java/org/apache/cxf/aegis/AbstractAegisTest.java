@@ -2110,6 +2110,7 @@ name|String
 name|namespacePrefix
 parameter_list|)
 block|{
+comment|//The Aegis tests use xpaths that require the created element be the root of a doc
 name|Document
 name|doc
 init|=

@@ -1516,6 +1516,8 @@ expr_stmt|;
 name|assertTrue
 argument_list|(
 name|tokenString
+argument_list|,
+name|tokenString
 operator|.
 name|contains
 argument_list|(

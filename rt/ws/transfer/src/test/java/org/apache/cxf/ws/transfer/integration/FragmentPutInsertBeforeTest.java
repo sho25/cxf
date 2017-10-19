@@ -423,7 +423,7 @@ name|addedElement
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElement
@@ -711,7 +711,7 @@ name|addedElement
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElement
@@ -991,7 +991,7 @@ name|addedElement
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElement
@@ -1202,7 +1202,7 @@ name|addedElement
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElement
@@ -1384,7 +1384,7 @@ name|addedElement
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 operator|.
 name|createElement

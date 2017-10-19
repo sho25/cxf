@@ -2165,7 +2165,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|newDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|UsernameToken
@@ -2933,7 +2933,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|newDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|BinarySecurity

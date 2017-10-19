@@ -2698,7 +2698,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -2923,7 +2923,7 @@ name|doc
 operator|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 expr_stmt|;
 name|elNode
@@ -3106,7 +3106,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element
@@ -3227,7 +3227,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 decl_stmt|;
 name|Element

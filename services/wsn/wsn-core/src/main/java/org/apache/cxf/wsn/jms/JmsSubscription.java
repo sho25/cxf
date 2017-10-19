@@ -279,7 +279,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|Document
+name|DocumentFragment
 import|;
 end_import
 
@@ -1422,12 +1422,15 @@ name|Element
 operator|)
 condition|)
 block|{
-name|Document
+name|DocumentFragment
 name|doc
 init|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
+argument_list|()
+operator|.
+name|createDocumentFragment
 argument_list|()
 decl_stmt|;
 name|jaxbContext
@@ -1444,10 +1447,12 @@ argument_list|)
 expr_stmt|;
 name|content
 operator|=
-name|doc
+name|DOMUtils
 operator|.
-name|getDocumentElement
-argument_list|()
+name|getFirstElement
+argument_list|(
+name|doc
+argument_list|)
 expr_stmt|;
 block|}
 if|if

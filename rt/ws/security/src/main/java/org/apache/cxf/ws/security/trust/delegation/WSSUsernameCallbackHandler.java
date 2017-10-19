@@ -309,7 +309,7 @@ name|doc
 operator|=
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 expr_stmt|;
 block|}

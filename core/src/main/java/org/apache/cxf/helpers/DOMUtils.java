@@ -839,6 +839,8 @@ operator|=
 name|createDocument
 argument_list|()
 expr_stmt|;
+comment|// uncomment this to see if anything is actually setting anything into the empty doc
+comment|/*             final Document doc  = createDocument();             emptyDocument = (Document)org.apache.cxf.common.util.ProxyHelper.getProxy(                 DOMUtils.class.getClassLoader(),                  new Class<?>[] {Document.class},                  new java.lang.reflect.InvocationHandler() {                     @Override                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {                         if (method.getName().contains("create")) {                             return method.invoke(doc, args);                         }                         throw new IllegalStateException("Cannot modify factory document");                     }                 });              */
 block|}
 return|return
 name|emptyDocument
@@ -868,25 +870,6 @@ operator|=
 name|createEmptyDocument
 argument_list|()
 expr_stmt|;
-block|}
-if|if
-condition|(
-name|emptyDocument
-operator|.
-name|getDocumentElement
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
-comment|// doc = createEmptyDocument();
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Document should be empty"
-argument_list|)
-throw|;
 block|}
 return|return
 name|doc

@@ -706,7 +706,7 @@ name|KerberosSecurity
 argument_list|(
 name|DOMUtils
 operator|.
-name|createDocument
+name|getEmptyDocument
 argument_list|()
 argument_list|)
 return|;
