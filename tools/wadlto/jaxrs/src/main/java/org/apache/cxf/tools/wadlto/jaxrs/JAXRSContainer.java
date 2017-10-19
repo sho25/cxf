@@ -667,7 +667,7 @@ name|getAbsoluteWadlURL
 argument_list|()
 decl_stmt|;
 name|String
-name|authorization
+name|authentication
 init|=
 operator|(
 name|String
@@ -678,7 +678,7 @@ name|get
 argument_list|(
 name|WadlToolConstants
 operator|.
-name|CFG_AUTHORIZATION
+name|CFG_AUTHENTICATION
 argument_list|)
 decl_stmt|;
 name|String
@@ -688,7 +688,7 @@ name|readWadl
 argument_list|(
 name|wadlURL
 argument_list|,
-name|authorization
+name|authentication
 argument_list|)
 decl_stmt|;
 name|SourceGenerator
@@ -798,9 +798,9 @@ argument_list|)
 expr_stmt|;
 name|sg
 operator|.
-name|setAuthorization
+name|setAuthentication
 argument_list|(
-name|authorization
+name|authentication
 argument_list|)
 expr_stmt|;
 name|String
@@ -1299,7 +1299,7 @@ name|String
 name|wadlURI
 parameter_list|,
 name|String
-name|authorization
+name|authentication
 parameter_list|)
 block|{
 try|try
@@ -1327,7 +1327,7 @@ argument_list|(
 literal|"https"
 argument_list|)
 operator|&&
-name|authorization
+name|authentication
 operator|!=
 literal|null
 condition|)
@@ -1340,7 +1340,7 @@ name|getStreamFromSecureConnection
 argument_list|(
 name|url
 argument_list|,
-name|authorization
+name|authentication
 argument_list|)
 expr_stmt|;
 block|}
