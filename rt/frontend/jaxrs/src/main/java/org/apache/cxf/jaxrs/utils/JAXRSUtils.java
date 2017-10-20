@@ -891,6 +891,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|io
+operator|.
+name|ReaderInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|JAXRSServiceImpl
@@ -6340,7 +6354,6 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|//may use the jms transport so check the Reader;
 name|Reader
 name|reader
 init|=
@@ -6353,6 +6366,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|reader
+operator|!=
+literal|null
+condition|)
+block|{
 name|is
 operator|=
 operator|new
@@ -6361,6 +6381,7 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(

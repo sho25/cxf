@@ -423,6 +423,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|io
+operator|.
+name|ReaderInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|provider
@@ -476,22 +490,6 @@ operator|.
 name|utils
 operator|.
 name|JAXRSUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|utils
-operator|.
-name|ReaderInputStream
 import|;
 end_import
 
@@ -2157,6 +2155,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|reader
+operator|!=
+literal|null
+condition|)
+block|{
 name|entityStream
 operator|=
 name|InputStream
@@ -2172,6 +2177,7 @@ name|reader
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// we need to check for readers even if no IS is set - the readers may still do it
 name|List
