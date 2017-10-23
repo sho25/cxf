@@ -2388,6 +2388,14 @@ name|getPath
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|getHost
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
 name|setHost
 argument_list|(
 name|u
@@ -2415,6 +2423,7 @@ name|getPort
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
