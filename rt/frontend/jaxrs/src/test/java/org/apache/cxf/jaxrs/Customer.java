@@ -1803,6 +1803,14 @@ literal|"query6"
 argument_list|)
 name|String
 name|queryString6
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"query7"
+argument_list|)
+name|Boolean
+name|queryString7
 parameter_list|)
 block|{
 comment|// complete

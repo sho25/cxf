@@ -11550,6 +11550,10 @@ block|,
 name|String
 operator|.
 name|class
+block|,
+name|Boolean
+operator|.
+name|class
 block|}
 decl_stmt|;
 name|Method
@@ -11580,7 +11584,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"query=first&query2=second&query3=3&query4=true&query6"
+literal|"query=first&query2=second&query3=3&query4=true&query6&query7=true"
 argument_list|)
 expr_stmt|;
 name|List
@@ -11658,7 +11662,7 @@ literal|2
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertSame
 argument_list|(
 literal|"Fourth Query Parameter of multiple was not matched correctly"
 argument_list|,
@@ -11699,6 +11703,22 @@ operator|.
 name|get
 argument_list|(
 literal|5
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertSame
+argument_list|(
+literal|"Seventh Query Parameter of multiple was not matched correctly"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|,
+name|params
+operator|.
+name|get
+argument_list|(
+literal|6
 argument_list|)
 argument_list|)
 expr_stmt|;
