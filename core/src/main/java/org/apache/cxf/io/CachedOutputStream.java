@@ -2662,7 +2662,7 @@ block|{
 name|String
 name|s
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
