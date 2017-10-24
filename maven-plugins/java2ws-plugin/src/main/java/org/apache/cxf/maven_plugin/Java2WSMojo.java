@@ -416,6 +416,60 @@ parameter_list|()
 throws|throws
 name|MojoExecutionException
 block|{
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.version"
+argument_list|)
+operator|.
+name|startsWith
+argument_list|(
+literal|"9"
+argument_list|)
+condition|)
+block|{
+name|fork
+operator|=
+literal|true
+expr_stmt|;
+name|additionalJvmArgs
+operator|=
+literal|"--add-modules java.activation,java.xml.bind,java.xml.ws "
+operator|+
+literal|"--add-exports=java.xml.bind/com.sun.xml.internal.bind.v2.runtime=ALL-UNNAMED "
+operator|+
+literal|"--add-exports=jdk.xml.dom/org.w3c.dom.html=ALL-UNNAMED "
+operator|+
+literal|"--add-exports=java.xml/com.sun.org.apache.xerces.internal.impl.xs=ALL-UNNAMED "
+operator|+
+literal|"--add-exports=java.xml.bind/com.sun.xml.internal.bind.marshaller=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.xml.ws/javax.xml.ws.wsaddressing=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.base/java.security=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.base/java.net=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.base/java.lang=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.base/java.util=ALL-UNNAMED "
+operator|+
+literal|"--add-opens java.base/java.util.concurrent=ALL-UNNAMED "
+operator|+
+operator|(
+name|additionalJvmArgs
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
+name|additionalJvmArgs
+operator|)
+expr_stmt|;
+block|}
 name|System
 operator|.
 name|setProperty

@@ -704,6 +704,12 @@ argument_list|)
 name|String
 name|fork
 decl_stmt|;
+comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      */
+annotation|@
+name|Parameter
+name|String
+name|additionalJvmArgs
+decl_stmt|;
 comment|/**      * The Maven session.      */
 annotation|@
 name|Parameter
@@ -758,13 +764,6 @@ argument_list|)
 specifier|private
 name|String
 name|javaExecutable
-decl_stmt|;
-comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      */
-annotation|@
-name|Parameter
-specifier|private
-name|String
-name|additionalJvmArgs
 decl_stmt|;
 annotation|@
 name|Component
