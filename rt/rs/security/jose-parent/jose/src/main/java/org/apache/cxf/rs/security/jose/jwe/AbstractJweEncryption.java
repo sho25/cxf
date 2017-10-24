@@ -752,6 +752,8 @@ operator|.
 name|Error
 operator|.
 name|CONTENT_ENCRYPTION_FAILURE
+argument_list|,
+name|ex
 argument_list|)
 throw|;
 block|}
