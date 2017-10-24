@@ -5535,7 +5535,6 @@ return|return
 name|result
 return|;
 block|}
-specifier|private
 specifier|static
 name|int
 name|comparePriorityStatus
