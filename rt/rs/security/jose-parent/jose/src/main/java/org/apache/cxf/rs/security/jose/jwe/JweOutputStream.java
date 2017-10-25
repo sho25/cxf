@@ -458,6 +458,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|encrypted
+operator|!=
+literal|null
+condition|)
+block|{
+if|if
+condition|(
 name|authTagProducer
 operator|!=
 literal|null
@@ -490,6 +497,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
