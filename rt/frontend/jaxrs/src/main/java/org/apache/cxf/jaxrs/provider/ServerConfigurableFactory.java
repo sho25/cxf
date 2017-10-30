@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Manages the creation of server-side Configurable<FeatureContext> depending on   * the presence of managed runtime (like CDI f.e.).   */
+comment|/**  * Manages the creation of server-side {@code Configurable<FeatureContext>} depending on   * the presence of managed runtime (like CDI f.e.).   *   *<b>Note:</b> this interface may change in the future without a prior   * notice, please be aware of that.   */
 end_comment
 
 begin_interface
