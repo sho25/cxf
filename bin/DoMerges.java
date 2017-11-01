@@ -1596,6 +1596,8 @@ literal|"git"
 block|,
 literal|"cherry-pick"
 block|,
+literal|"-x"
+block|,
 name|ver
 block|}
 argument_list|)
