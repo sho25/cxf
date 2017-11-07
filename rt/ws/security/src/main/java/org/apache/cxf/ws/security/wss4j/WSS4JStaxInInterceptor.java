@@ -750,6 +750,11 @@ argument_list|(
 name|securityProperties
 argument_list|)
 expr_stmt|;
+name|WSSec
+operator|.
+name|init
+argument_list|()
+expr_stmt|;
 name|setPhase
 argument_list|(
 name|Phase
@@ -788,6 +793,11 @@ argument_list|(
 name|props
 argument_list|)
 expr_stmt|;
+name|WSSec
+operator|.
+name|init
+argument_list|()
+expr_stmt|;
 name|setPhase
 argument_list|(
 name|Phase
@@ -814,6 +824,11 @@ name|WSS4JStaxInInterceptor
 parameter_list|()
 block|{
 name|super
+argument_list|()
+expr_stmt|;
+name|WSSec
+operator|.
+name|init
 argument_list|()
 expr_stmt|;
 name|setPhase
