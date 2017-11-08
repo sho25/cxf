@@ -4375,7 +4375,7 @@ name|response
 argument_list|)
 throw|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|Level
 name|getExceptionLogLevel
