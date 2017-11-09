@@ -139,6 +139,16 @@ name|StreamingResponse
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|reactivestreams
+operator|.
+name|Subscription
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -147,7 +157,7 @@ parameter_list|<
 name|T
 parameter_list|>
 extends|extends
-name|AbstractAsyncSubscriber
+name|AbstractSubscriber
 argument_list|<
 name|T
 argument_list|>
@@ -354,8 +364,11 @@ annotation|@
 name|Override
 specifier|public
 name|void
-name|onStart
-parameter_list|()
+name|onSubscribe
+parameter_list|(
+name|Subscription
+name|subscription
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -370,8 +383,10 @@ expr_stmt|;
 block|}
 name|super
 operator|.
-name|onStart
-argument_list|()
+name|onSubscribe
+argument_list|(
+name|subscription
+argument_list|)
 expr_stmt|;
 block|}
 specifier|private
