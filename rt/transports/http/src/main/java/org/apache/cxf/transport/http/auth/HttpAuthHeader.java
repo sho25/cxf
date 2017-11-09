@@ -862,7 +862,7 @@ name|authTypeIsNegotiate
 parameter_list|()
 block|{
 return|return
-name|AUTH_TYPE_DIGEST
+name|AUTH_TYPE_NEGOTIATE
 operator|.
 name|equals
 argument_list|(
