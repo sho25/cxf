@@ -79,18 +79,6 @@ name|Subscription
 import|;
 end_import
 
-begin_import
-import|import
-name|io
-operator|.
-name|reactivex
-operator|.
-name|subscribers
-operator|.
-name|DefaultSubscriber
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|abstract
