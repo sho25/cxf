@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|spring
+name|springmvc
 package|;
 end_package
 
