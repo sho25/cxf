@@ -117,7 +117,7 @@ name|rx2
 operator|.
 name|server
 operator|.
-name|AbstractAsyncSubscriber
+name|AbstractSubscriber
 import|;
 end_import
 
@@ -418,7 +418,7 @@ specifier|static
 class|class
 name|StringAsyncSubscriber
 extends|extends
-name|AbstractAsyncSubscriber
+name|AbstractSubscriber
 argument_list|<
 name|String
 argument_list|>
@@ -493,7 +493,7 @@ parameter_list|<
 name|T
 parameter_list|>
 extends|extends
-name|AbstractAsyncSubscriber
+name|AbstractSubscriber
 argument_list|<
 name|T
 argument_list|>
