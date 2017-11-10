@@ -327,7 +327,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/my/resource/1/matched/uris,/my/resource/1"
+literal|"my/resource/1/matched/uris,my/resource/1"
 argument_list|,
 name|data
 argument_list|)
@@ -395,7 +395,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/my/resource/1/matched/uris/param,/my/resource/1"
+literal|"my/resource/1/matched/uris/param,my/resource/1"
 argument_list|,
 name|data
 argument_list|)
@@ -463,7 +463,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/my/resource/1/matched/uris/param/2,/my/resource/1"
+literal|"my/resource/1/matched/uris/param/2,my/resource/1"
 argument_list|,
 name|data
 argument_list|)
