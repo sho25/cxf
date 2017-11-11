@@ -2843,22 +2843,11 @@ name|UriInfo
 name|u
 parameter_list|)
 block|{
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|matchedUris
-init|=
+return|return
 name|u
 operator|.
 name|getMatchedURIs
 argument_list|()
-decl_stmt|;
-comment|//        for (String s : matchedUris) {
-comment|//            System.out.println(s);
-comment|//        }
-return|return
-name|matchedUris
 return|;
 block|}
 annotation|@
