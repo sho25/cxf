@@ -371,6 +371,8 @@ decl_stmt|;
 specifier|private
 name|int
 name|retryInterval
+init|=
+literal|5000
 decl_stmt|;
 specifier|public
 name|void
