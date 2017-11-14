@@ -37,6 +37,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashMap
 import|;
 end_import
@@ -533,6 +543,10 @@ name|String
 argument_list|>
 name|HMAC_SIGN_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -548,6 +562,7 @@ argument_list|,
 name|HMAC_SHA_512_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -558,6 +573,10 @@ name|String
 argument_list|>
 name|RSA_SHA_SIGN_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -573,6 +592,7 @@ argument_list|,
 name|RS_SHA_512_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -583,6 +603,10 @@ name|String
 argument_list|>
 name|RSA_SHA_PS_SIGN_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -598,6 +622,7 @@ argument_list|,
 name|PS_SHA_512_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -608,6 +633,10 @@ name|String
 argument_list|>
 name|EC_SHA_SIGN_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -623,6 +652,7 @@ argument_list|,
 name|ES_SHA_512_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -633,6 +663,10 @@ name|String
 argument_list|>
 name|RSA_CEK_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -648,6 +682,7 @@ argument_list|,
 name|RSA1_5_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -658,6 +693,10 @@ name|String
 argument_list|>
 name|AES_GCM_CEK_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -673,6 +712,7 @@ argument_list|,
 name|A256GCM_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -683,6 +723,10 @@ name|String
 argument_list|>
 name|AES_GCM_KW_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -698,6 +742,7 @@ argument_list|,
 name|A256GCMKW_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -708,6 +753,10 @@ name|String
 argument_list|>
 name|AES_KW_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -723,6 +772,7 @@ argument_list|,
 name|A256KW_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -733,6 +783,10 @@ name|String
 argument_list|>
 name|ACBC_HS_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -748,6 +802,7 @@ argument_list|,
 name|A256CBC_HS512_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -758,6 +813,10 @@ name|String
 argument_list|>
 name|PBES_HS_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -773,6 +832,7 @@ argument_list|,
 name|PBES2_HS512_A256KW_ALGO
 argument_list|)
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -783,6 +843,10 @@ name|String
 argument_list|>
 name|ECDH_ES_WRAP_SET
 init|=
+name|Collections
+operator|.
+name|unmodifiableSet
+argument_list|(
 operator|new
 name|HashSet
 argument_list|<>
@@ -796,6 +860,7 @@ argument_list|,
 name|ECDH_ES_A192KW_ALGO
 argument_list|,
 name|ECDH_ES_A256KW_ALGO
+argument_list|)
 argument_list|)
 argument_list|)
 decl_stmt|;
