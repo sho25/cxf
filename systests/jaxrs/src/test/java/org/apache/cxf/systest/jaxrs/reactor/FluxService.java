@@ -93,7 +93,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|reactor
+name|reactivestreams
 operator|.
 name|server
 operator|.
