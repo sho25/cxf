@@ -21,6 +21,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|CancellationException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -270,7 +282,21 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
-comment|//TODO: if it is a Cancelation exception => asyncResponse.cancel();
+if|if
+condition|(
+name|t
+operator|instanceof
+name|CancellationException
+condition|)
+block|{
+name|asyncResponse
+operator|.
+name|cancel
+argument_list|()
+expr_stmt|;
+block|}
+else|else
+block|{
 name|asyncResponse
 operator|.
 name|resume
@@ -278,6 +304,7 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 literal|null
 return|;
