@@ -520,6 +520,15 @@ name|RSSEC_ENCRYPTION_INCLUDE_CERT_SHA256
 init|=
 literal|"rs.security.encryption.include.cert.sha256"
 decl_stmt|;
+comment|/**      * The value to be used for the "p2c" (PBES2 count) Header Parameter. The default is 4096.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_PBES2_COUNT
+init|=
+literal|"rs.security.encryption.pbes2.count"
+decl_stmt|;
 comment|//
 comment|// JWT specific configuration
 comment|//

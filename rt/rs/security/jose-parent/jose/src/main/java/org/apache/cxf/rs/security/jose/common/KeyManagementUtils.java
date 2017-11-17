@@ -3078,7 +3078,9 @@ expr_stmt|;
 throw|throw
 operator|new
 name|JoseException
-argument_list|()
+argument_list|(
+literal|"Properties resource is not identified"
+argument_list|)
 throw|;
 block|}
 name|props
