@@ -295,6 +295,15 @@ name|isPrimitiveOnly
 argument_list|(
 name|type
 argument_list|)
+operator|||
+name|Enum
+operator|.
+name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|type
+argument_list|)
 decl_stmt|;
 return|return
 name|isPrimitive
