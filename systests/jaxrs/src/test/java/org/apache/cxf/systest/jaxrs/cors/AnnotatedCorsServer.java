@@ -223,10 +223,6 @@ name|LocalPreflight
 import|;
 end_import
 
-begin_comment
-comment|/**  * Service bean with no class-level annotation for cross-script control.  */
-end_comment
-
 begin_class
 annotation|@
 name|CrossOriginResourceSharing
