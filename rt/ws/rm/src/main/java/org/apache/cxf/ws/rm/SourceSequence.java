@@ -971,6 +971,7 @@ name|acknowledgement
 return|;
 block|}
 comment|/**      * The target for the sequence is the first non-anonymous address that a      * message is sent to as part of this sequence. It is subsequently used for      * as the target of out-of-band protocol messages related to that sequence      * that originate from the sequnce source (i.e. TerminateSequence and      * LastMessage, but not AckRequested or SequenceAcknowledgement as these are      * orignate from the sequence destination).      *      * @param to      */
+specifier|public
 specifier|synchronized
 name|void
 name|setTarget
@@ -1000,6 +1001,7 @@ name|to
 expr_stmt|;
 block|}
 block|}
+specifier|public
 specifier|synchronized
 name|EndpointReferenceType
 name|getTarget
