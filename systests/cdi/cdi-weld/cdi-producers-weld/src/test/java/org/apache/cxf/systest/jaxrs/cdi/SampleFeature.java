@@ -145,6 +145,15 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+name|context
+operator|.
+name|register
+argument_list|(
+name|SampleNestedFeature
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 return|return
 literal|false
 return|;
