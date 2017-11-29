@@ -475,6 +475,11 @@ name|mapper
 argument_list|()
 decl_stmt|;
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
 name|Override
 specifier|public
 name|List
