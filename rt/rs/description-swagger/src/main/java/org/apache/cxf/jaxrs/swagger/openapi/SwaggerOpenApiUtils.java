@@ -15,7 +15,7 @@ name|jaxrs
 operator|.
 name|swagger
 operator|.
-name|parse
+name|openapi
 package|;
 end_package
 
@@ -286,6 +286,8 @@ argument_list|,
 literal|"minimum"
 argument_list|,
 literal|"maximum"
+argument_list|,
+literal|"default"
 argument_list|)
 decl_stmt|;
 specifier|private

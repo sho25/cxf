@@ -15,7 +15,7 @@ name|jaxrs
 operator|.
 name|swagger
 operator|.
-name|parse
+name|openapi
 package|;
 end_package
 
