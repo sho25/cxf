@@ -254,9 +254,9 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
-name|Ignore
-annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testConfigPriorityOverrides
