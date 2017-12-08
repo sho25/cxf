@@ -270,7 +270,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|OpenApiServiceDescriptionTest
+name|SwaggerToOpenApiConversionTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -281,7 +281,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|OpenApiServiceDescriptionTest
+name|SwaggerToOpenApiConversionTest
 operator|.
 name|class
 argument_list|)
