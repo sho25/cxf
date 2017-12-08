@@ -201,7 +201,7 @@ name|swagger
 operator|.
 name|openapi
 operator|.
-name|SwaggerOpenApiFilter
+name|SwaggerToOpenApiConversionFilter
 import|;
 end_import
 
@@ -388,7 +388,7 @@ operator|.
 name|setProvider
 argument_list|(
 operator|new
-name|SwaggerOpenApiFilter
+name|SwaggerToOpenApiConversionFilter
 argument_list|()
 argument_list|)
 expr_stmt|;

@@ -277,7 +277,7 @@ begin_class
 specifier|public
 specifier|final
 class|class
-name|SwaggerOpenApiUtils
+name|SwaggerToOpenApiConversionUtils
 block|{
 specifier|private
 specifier|static
@@ -289,7 +289,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|SwaggerOpenApiUtils
+name|SwaggerToOpenApiConversionUtils
 operator|.
 name|class
 argument_list|)
@@ -317,7 +317,7 @@ literal|"default"
 argument_list|)
 decl_stmt|;
 specifier|private
-name|SwaggerOpenApiUtils
+name|SwaggerToOpenApiConversionUtils
 parameter_list|()
 block|{              }
 specifier|public

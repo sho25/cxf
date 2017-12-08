@@ -131,7 +131,7 @@ name|PreMatching
 specifier|public
 specifier|final
 class|class
-name|SwaggerOpenApiFilter
+name|SwaggerToOpenApiConversionFilter
 implements|implements
 name|ContainerRequestFilter
 implements|,
@@ -266,7 +266,7 @@ decl_stmt|;
 name|String
 name|openApiJson
 init|=
-name|SwaggerOpenApiUtils
+name|SwaggerToOpenApiConversionUtils
 operator|.
 name|getOpenApiFromSwaggerJson
 argument_list|(

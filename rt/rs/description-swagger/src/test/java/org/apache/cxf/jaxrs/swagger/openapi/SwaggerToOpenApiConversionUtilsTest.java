@@ -98,7 +98,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|SwaggerOpenApiUtilsTest
+name|SwaggerToOpenApiConversionUtilsTest
 extends|extends
 name|Assert
 block|{
@@ -112,7 +112,7 @@ block|{
 name|String
 name|s
 init|=
-name|SwaggerOpenApiUtils
+name|SwaggerToOpenApiConversionUtils
 operator|.
 name|getOpenApiFromSwaggerLoc
 argument_list|(
