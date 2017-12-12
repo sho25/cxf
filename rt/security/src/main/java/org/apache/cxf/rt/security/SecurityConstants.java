@@ -219,7 +219,7 @@ name|SC_FROM_JAAS_SUBJECT
 init|=
 literal|"security.sc.jaas-subject"
 decl_stmt|;
-comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match one of the values of the      * AUDIENCE_RESTRICTIONS property. The default is "true".      */
+comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match one of the values of the      * AUDIENCE_RESTRICTIONS property. The default is "true" for SOAP services, "false" for REST services.      */
 specifier|public
 specifier|static
 specifier|final

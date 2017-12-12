@@ -858,6 +858,9 @@ name|getAudienceRestrictions
 parameter_list|(
 name|Message
 name|msg
+parameter_list|,
+name|boolean
+name|enableByDefault
 parameter_list|)
 block|{
 comment|// Add Audience Restrictions for SAML
@@ -874,7 +877,7 @@ name|AUDIENCE_RESTRICTION_VALIDATION
 argument_list|,
 name|msg
 argument_list|,
-literal|true
+name|enableByDefault
 argument_list|)
 decl_stmt|;
 if|if
