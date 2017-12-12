@@ -1,6 +1,6 @@
 begin_unit|revision:0.9.5;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one  * or more contributor license agreements. See the NOTICE file  * distributed with this work for additional information  * regarding copyright ownership. The ASF licenses this file  * to you under the Apache License, Version 2.0 (the  * "License"); you may not use this file except in compliance  * with the License. You may obtain a copy of the License at  *  * http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing,  * software distributed under the License is distributed on an  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY  * KIND, either express or implied. See the License for the  * specific language governing permissions and limitations  * under the License.  */
+comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or more contributor license agreements. See the NOTICE file  * distributed with this work for additional information  * regarding copyright ownership. The ASF licenses this file  * to you under the Apache License, Version 2.0 (the  * "License"); you may not use this file except in compliance  * with the License. You may obtain a copy of the License at  *  * http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing,  * software distributed under the License is distributed on an  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY  * KIND, either express or implied. See the License for the  * specific language governing permissions and limitations  * under the License.  */
 end_comment
 
 begin_package
@@ -464,7 +464,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is invoked by the Olingo framework when the the OData service is invoked order to display a list/collection of data (entities).  * This is the case if an EntitySet is requested by the user.  * Such an example URL would be:  * http://localhost:8080/ExampleService1/ExampleService1.svc/Products  */
+comment|/**  * This class is invoked by the Olingo framework when the the OData service   * is invoked order to display a list/collection of data (entities).  * This is the case if an EntitySet is requested by the user.  * Such an example URL would be:  * http://localhost:8080/ExampleService1/ExampleService1.svc/Products  */
 end_comment
 
 begin_class
@@ -482,6 +482,7 @@ specifier|private
 name|ServiceMetadata
 name|serviceMetadata
 decl_stmt|;
+comment|// CHECKSTYLE:OFF
 comment|// our processor is initialized with the OData context object
 specifier|public
 name|void
@@ -507,6 +508,7 @@ operator|=
 name|serviceMetadata
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:ON
 comment|// the only method that is declared in the EntityCollectionProcessor interface
 comment|// this method is called, when the user fires a request to an EntitySet
 comment|// in our example, the URL would be:
@@ -532,7 +534,8 @@ name|ODataApplicationException
 throws|,
 name|SerializerException
 block|{
-comment|// 1st we have retrieve the requested EntitySet from the uriInfo object (representation of the parsed service URI)
+comment|// 1st we have retrieve the requested EntitySet from the uriInfo object
+comment|// (representation of the parsed service URI)
 name|List
 argument_list|<
 name|UriResource
@@ -544,6 +547,7 @@ operator|.
 name|getUriResourceParts
 argument_list|()
 decl_stmt|;
+comment|// In our example, the first segment is the EntitySet
 name|UriResourceEntitySet
 name|uriResourceEntitySet
 init|=
@@ -557,7 +561,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-comment|// in our example, the first segment is the EntitySet
 name|EdmEntitySet
 name|edmEntitySet
 init|=
@@ -566,7 +569,8 @@ operator|.
 name|getEntitySet
 argument_list|()
 decl_stmt|;
-comment|// 2nd: fetch the data from backend for this requested EntitySetName // it has to be delivered as EntitySet object
+comment|// 2nd: fetch the data from backend for this requested EntitySetName
+comment|// it has to be delivered as EntitySet object
 name|EntityCollection
 name|entitySet
 init|=
@@ -702,7 +706,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Helper method for providing some sample data    * @param edmEntitySet for which the data is requested    * @return data of requested entity set    */
+comment|/**      * Helper method for providing some sample data      * @param edmEntitySet for which the data is requested      * @return data of requested entity set      */
 specifier|private
 name|EntityCollection
 name|getData
