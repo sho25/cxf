@@ -150,7 +150,7 @@ name|getProviders
 parameter_list|()
 block|{
 return|return
-name|resources
+name|providers
 return|;
 block|}
 block|}

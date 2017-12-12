@@ -135,6 +135,7 @@ implements|implements
 name|ContainerRequestFilter
 block|{
 specifier|private
+specifier|final
 name|SwaggerUiService
 name|uiService
 decl_stmt|;
