@@ -75,16 +75,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|persistence
-operator|.
-name|PersistenceContext
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -125,6 +115,10 @@ name|RefreshToken
 import|;
 end_import
 
+begin_comment
+comment|/**  * Same as {@link JPACodeDataProvider} (stores Clients and tokens in a rdbms using  * JPA APIs).  *  * The transaction demarcation is handled by the container (be it Spring  * or Java EE).  *  * Sample usage with Spring XML:<pre>  {@code<bean id="oauthProvider" class="org.apache.cxf.rs.security.oauth2.grants.code.JPACMTCodeDataProvider"         init-method="init" destroy-method="close"><property name="entityManager" ref="entityManager"/><!-- List of accepted scopes --><property name="supportedScopes" ref="supportedScopes"/><!-- List of required scopes --><!-- commented because bug in Resource Owner Flow<property name="requiredScopes" ref="coreScopes"/>          --><!--          List of scopes that the consent/authorization form should make          selected by default. For example, asking a user to do an extra click          to approve an "oidc" scope is a redundant operation because this scope          is required anyway.          --><property name="defaultScopes" ref="coreScopes"/><property name="invisibleToClientScopes" ref="invisibleToClientScopes"/></bean><bean name="entityManager" class="org.springframework.orm.jpa.support.SharedEntityManagerBean"><property name="entityManagerFactory" ref="entityManagerFactory"/></bean>      ...  }</pre>   * You can also extend this class and inject your own entityManager:  {@code     public class MyJPACodeDataProvider extends JPACMTCodeDataProvider {          @PersistenceContext         @Override         public void setEntityManager(EntityManager entityManager) {             super.setEntityManager(entityManager);         }  }  }  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -152,8 +146,6 @@ name|useJpaLockForExistingRefreshToken
 init|=
 literal|true
 decl_stmt|;
-annotation|@
-name|PersistenceContext
 specifier|private
 name|EntityManager
 name|entityManager
