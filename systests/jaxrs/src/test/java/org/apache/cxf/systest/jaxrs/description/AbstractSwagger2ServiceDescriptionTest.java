@@ -594,6 +594,15 @@ argument_list|)
 expr_stmt|;
 name|sf
 operator|.
+name|setResourceClasses
+argument_list|(
+name|BookStoreStylesheetsSwagger2
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|sf
+operator|.
 name|setResourceProvider
 argument_list|(
 name|BookStoreSwagger2
@@ -1376,7 +1385,7 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
-literal|"/bookstore/css/book.css"
+literal|"/css/book.css"
 argument_list|)
 operator|.
 name|accept
