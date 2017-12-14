@@ -55,7 +55,26 @@ name|Produces
 import|;
 end_import
 
+begin_import
+import|import
+name|io
+operator|.
+name|swagger
+operator|.
+name|annotations
+operator|.
+name|Api
+import|;
+end_import
+
 begin_class
+annotation|@
+name|Api
+argument_list|(
+name|hidden
+operator|=
+literal|true
+argument_list|)
 annotation|@
 name|Path
 argument_list|(
