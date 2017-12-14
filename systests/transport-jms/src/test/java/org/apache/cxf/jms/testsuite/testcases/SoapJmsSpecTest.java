@@ -809,7 +809,7 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-literal|null
+literal|"\"test\""
 argument_list|,
 name|responseHeader
 operator|.
