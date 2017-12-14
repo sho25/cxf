@@ -196,6 +196,15 @@ argument_list|)
 expr_stmt|;
 name|sf
 operator|.
+name|setResourceClasses
+argument_list|(
+name|BookStoreStylesheetsSwagger2
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|sf
+operator|.
 name|setResourceProvider
 argument_list|(
 name|BookStore
