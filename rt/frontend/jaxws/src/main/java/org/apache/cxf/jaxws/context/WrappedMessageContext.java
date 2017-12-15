@@ -1074,7 +1074,15 @@ name|void
 name|clear
 parameter_list|()
 block|{
-comment|//just clear the JAXWS things....
+if|if
+condition|(
+name|message
+operator|instanceof
+name|Message
+condition|)
+block|{
+comment|//server side, just clear the JAXWS things....
+comment|//Otherwise lots of CXF things will not be found
 for|for
 control|(
 name|String
@@ -1090,6 +1098,15 @@ name|remove
 argument_list|(
 name|key
 argument_list|)
+expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+name|message
+operator|.
+name|clear
+argument_list|()
 expr_stmt|;
 block|}
 block|}
