@@ -2244,7 +2244,7 @@ return|return
 name|index
 return|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|checkResponse
 parameter_list|(
