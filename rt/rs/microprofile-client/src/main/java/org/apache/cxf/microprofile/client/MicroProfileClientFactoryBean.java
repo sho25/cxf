@@ -397,6 +397,15 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|registeredProviders
+operator|.
+name|add
+argument_list|(
+operator|new
+name|JsonPProvider
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|super
 operator|.
 name|setProviders
