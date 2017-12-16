@@ -294,8 +294,7 @@ init|=
 operator|new
 name|MicroProfileClientFactoryBean
 argument_list|(
-name|getConfiguration
-argument_list|()
+name|configImpl
 argument_list|,
 name|baseUri
 argument_list|,
