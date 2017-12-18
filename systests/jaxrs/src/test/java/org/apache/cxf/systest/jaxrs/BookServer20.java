@@ -2263,7 +2263,6 @@ literal|"DynamicResponse2"
 argument_list|)
 operator|)
 operator|&&
-operator|(
 operator|!
 literal|"Prematch filter error"
 operator|.
@@ -2274,7 +2273,6 @@ operator|.
 name|getEntity
 argument_list|()
 argument_list|)
-operator|)
 condition|)
 block|{
 throw|throw
