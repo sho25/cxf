@@ -199,6 +199,13 @@ literal|"baseUrl not set"
 argument_list|)
 throw|;
 block|}
+name|Validator
+operator|.
+name|checkValid
+argument_list|(
+name|aClass
+argument_list|)
+expr_stmt|;
 name|RegisterProvider
 index|[]
 name|providers
