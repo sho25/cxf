@@ -5441,7 +5441,7 @@ argument_list|)
 return|;
 block|}
 block|}
-specifier|private
+specifier|protected
 specifier|static
 name|int
 name|compareCustomStatus
