@@ -147,7 +147,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/reactor/mono"
+literal|"/mono"
 argument_list|)
 specifier|public
 class|class

@@ -129,7 +129,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/reactor/flux"
+literal|"/flux"
 argument_list|)
 specifier|public
 class|class
