@@ -2890,7 +2890,7 @@ literal|"To enforce that particular elements were signed you must either "
 operator|+
 literal|"use WS-SecurityPolicy, or else use the CryptoCoverageChecker or "
 operator|+
-literal|"SignatureCoverageChecker"
+literal|"DefaultCryptoCoverageChecker"
 decl_stmt|;
 name|LOG
 operator|.
