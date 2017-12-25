@@ -1347,6 +1347,25 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
+finally|finally
+block|{
+try|try
+block|{
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ignore
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+block|}
 block|}
 return|return
 name|props
