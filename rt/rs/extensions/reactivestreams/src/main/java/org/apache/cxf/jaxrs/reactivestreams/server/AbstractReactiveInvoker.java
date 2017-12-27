@@ -124,6 +124,8 @@ block|{
 specifier|private
 name|boolean
 name|useStreamingSubscriberIfPossible
+init|=
+literal|true
 decl_stmt|;
 specifier|protected
 name|Object
