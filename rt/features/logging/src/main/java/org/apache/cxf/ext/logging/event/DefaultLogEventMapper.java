@@ -361,6 +361,13 @@ name|BINARY_CONTENT_MEDIA_TYPES
 operator|.
 name|add
 argument_list|(
+literal|"application/pdf"
+argument_list|)
+expr_stmt|;
+name|BINARY_CONTENT_MEDIA_TYPES
+operator|.
+name|add
+argument_list|(
 literal|"image/png"
 argument_list|)
 expr_stmt|;
