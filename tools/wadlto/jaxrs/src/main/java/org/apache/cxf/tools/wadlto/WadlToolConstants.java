@@ -272,6 +272,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_JAXB_CLASS_NAME_SUFFIX
+init|=
+literal|"jaxbClassNameSuffix"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_CREATE_JAVA_DOCS
 init|=
 literal|"javaDocs"
