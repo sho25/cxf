@@ -133,18 +133,6 @@ name|JAXBUtils
 import|;
 end_import
 
-begin_comment
-comment|// importation convention: if the same class name is used for
-end_comment
-
-begin_comment
-comment|// 2005/08 and 2004/08, then the former version is imported
-end_comment
-
-begin_comment
-comment|// and the latter is fully qualified when used
-end_comment
-
 begin_import
 import|import
 name|org
