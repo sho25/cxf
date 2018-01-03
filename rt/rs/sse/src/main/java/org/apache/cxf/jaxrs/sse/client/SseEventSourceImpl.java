@@ -23,6 +23,26 @@ begin_import
 import|import
 name|java
 operator|.
+name|security
+operator|.
+name|AccessController
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|security
+operator|.
+name|PrivilegedAction
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Collection
@@ -1388,11 +1408,30 @@ operator|!
 name|managedExecutor
 condition|)
 block|{
+name|AccessController
+operator|.
+name|doPrivileged
+argument_list|(
+call|(
+name|PrivilegedAction
+argument_list|<
+name|Void
+argument_list|>
+call|)
+argument_list|()
+operator|->
+block|{
 name|executor
 operator|.
 name|shutdown
 argument_list|()
-expr_stmt|;
+block|;
+return|return
+literal|null
+return|;
+block|}
+block|)
+function|;
 name|executor
 operator|=
 literal|null
@@ -1402,7 +1441,13 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+end_class
+
+begin_comment
 comment|// Should never happen
+end_comment
+
+begin_if
 if|if
 condition|(
 name|processor
@@ -1414,6 +1459,9 @@ return|return
 literal|true
 return|;
 block|}
+end_if
+
+begin_return
 return|return
 name|processor
 operator|.
@@ -1424,8 +1472,10 @@ argument_list|,
 name|tunit
 argument_list|)
 return|;
-block|}
-specifier|private
+end_return
+
+begin_function
+unit|}          private
 name|void
 name|scheduleReconnect
 parameter_list|(
@@ -1590,8 +1640,8 @@ literal|"ms"
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 
