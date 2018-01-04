@@ -700,7 +700,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"https://localhost:"
+literal|"http://localhost:"
 operator|+
 name|PORT
 argument_list|,
