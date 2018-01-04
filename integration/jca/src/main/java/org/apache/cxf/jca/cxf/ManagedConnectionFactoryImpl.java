@@ -129,10 +129,6 @@ name|Bus
 import|;
 end_import
 
-begin_comment
-comment|//import org.apache.cxf.BusFactory;
-end_comment
-
 begin_import
 import|import
 name|org

@@ -305,10 +305,6 @@ name|Phase
 import|;
 end_import
 
-begin_comment
-comment|//import org.apache.cxf.phase.PhaseInterceptorChain;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -368,10 +364,6 @@ operator|.
 name|EndpointInfo
 import|;
 end_import
-
-begin_comment
-comment|//import org.apache.cxf.service.model.OperationInfo;
-end_comment
 
 begin_import
 import|import

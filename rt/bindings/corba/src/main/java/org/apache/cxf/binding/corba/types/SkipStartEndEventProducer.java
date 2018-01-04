@@ -41,10 +41,6 @@ name|QName
 import|;
 end_import
 
-begin_comment
-comment|//import javax.xml.stream.XMLStreamReader;
-end_comment
-
 begin_import
 import|import
 name|javax

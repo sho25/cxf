@@ -17,10 +17,6 @@ name|cxf
 package|;
 end_package
 
-begin_comment
-comment|//import java.lang.reflect.Method;
-end_comment
-
 begin_import
 import|import
 name|java
@@ -40,10 +36,6 @@ operator|.
 name|ResourceException
 import|;
 end_import
-
-begin_comment
-comment|//import javax.resource.spi.ConnectionManager;
-end_comment
 
 begin_import
 import|import
@@ -68,10 +60,6 @@ operator|.
 name|Bus
 import|;
 end_import
-
-begin_comment
-comment|//import org.apache.cxf.jca.cxf.test.DummyBus;
-end_comment
 
 begin_import
 import|import

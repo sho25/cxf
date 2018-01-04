@@ -277,10 +277,6 @@ name|Before
 import|;
 end_import
 
-begin_comment
-comment|//import org.junit.Ignore;
-end_comment
-
 begin_import
 import|import
 name|org

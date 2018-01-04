@@ -47,10 +47,6 @@ name|Resource
 import|;
 end_import
 
-begin_comment
-comment|//import javax.jws.HandlerChain;
-end_comment
-
 begin_import
 import|import
 name|javax
