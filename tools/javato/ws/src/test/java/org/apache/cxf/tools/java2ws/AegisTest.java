@@ -129,16 +129,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|AssertionFailedError
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -202,6 +192,16 @@ operator|.
 name|junit
 operator|.
 name|After
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
 import|;
 end_import
 
@@ -943,9 +943,9 @@ name|NODE
 argument_list|)
 condition|)
 block|{
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"Failed to select any nodes for expression:\n"
 operator|+
@@ -960,7 +960,7 @@ argument_list|(
 name|doc
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 block|}
 block|}

@@ -49,16 +49,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|AssertionFailedError
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -145,6 +135,11 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|boolean
+name|f
+init|=
+literal|false
+decl_stmt|;
 try|try
 block|{
 name|XPathAssert
@@ -158,19 +153,29 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|f
+operator|=
+literal|true
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|AssertionError
+name|e
+parameter_list|)
+block|{
+comment|// this is correct
+block|}
+if|if
+condition|(
+name|f
+condition|)
+block|{
 name|fail
 argument_list|(
 literal|"Expression is valid!"
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|AssertionFailedError
-name|e
-parameter_list|)
-block|{
-comment|// this is correct
 block|}
 try|try
 block|{
@@ -185,19 +190,29 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|fail
-argument_list|(
-literal|"Expression is invalid!"
-argument_list|)
+name|f
+operator|=
+literal|true
 expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|AssertionFailedError
+name|AssertionError
 name|e
 parameter_list|)
 block|{
 comment|// this is correct
+block|}
+if|if
+condition|(
+name|f
+condition|)
+block|{
+name|fail
+argument_list|(
+literal|"Expression is valid!"
+argument_list|)
+expr_stmt|;
 block|}
 name|XPathAssert
 operator|.

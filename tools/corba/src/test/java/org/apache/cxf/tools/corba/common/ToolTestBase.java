@@ -51,11 +51,31 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|After
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|TestCase
+name|junit
+operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Before
 import|;
 end_import
 
@@ -65,7 +85,7 @@ specifier|abstract
 class|class
 name|ToolTestBase
 extends|extends
-name|TestCase
+name|Assert
 block|{
 specifier|protected
 name|PrintStream
@@ -99,6 +119,8 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+annotation|@
+name|Before
 specifier|public
 name|void
 name|setUp
@@ -161,6 +183,8 @@ literal|"/idl/HelloWorld.idl"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|After
 specifier|public
 name|void
 name|tearDown
