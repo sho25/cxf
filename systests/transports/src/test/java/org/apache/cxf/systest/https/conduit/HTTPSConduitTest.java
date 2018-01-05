@@ -537,6 +537,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|springframework
+operator|.
+name|context
+operator|.
+name|ApplicationContext
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|AfterClass
@@ -560,18 +572,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|ApplicationContext
 import|;
 end_import
 

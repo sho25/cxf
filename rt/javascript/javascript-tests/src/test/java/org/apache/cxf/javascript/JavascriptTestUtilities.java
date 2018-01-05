@@ -231,16 +231,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|junit
-operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|mozilla
 operator|.
 name|javascript
@@ -318,6 +308,16 @@ operator|.
 name|javascript
 operator|.
 name|ScriptableObject
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
 import|;
 end_import
 

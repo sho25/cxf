@@ -49,6 +49,16 @@ end_import
 
 begin_import
 import|import
+name|brave
+operator|.
+name|http
+operator|.
+name|HttpTracing
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -72,16 +82,6 @@ operator|.
 name|phase
 operator|.
 name|PhaseInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|brave
-operator|.
-name|http
-operator|.
-name|HttpTracing
 import|;
 end_import
 

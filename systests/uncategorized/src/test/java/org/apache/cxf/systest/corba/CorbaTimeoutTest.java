@@ -155,6 +155,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|omg
+operator|.
+name|CORBA
+operator|.
+name|TIMEOUT
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|AfterClass
@@ -178,18 +190,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|omg
-operator|.
-name|CORBA
-operator|.
-name|TIMEOUT
 import|;
 end_import
 

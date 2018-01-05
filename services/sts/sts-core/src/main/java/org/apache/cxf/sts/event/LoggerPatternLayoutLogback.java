@@ -19,6 +19,20 @@ end_package
 
 begin_import
 import|import
+name|ch
+operator|.
+name|qos
+operator|.
+name|logback
+operator|.
+name|classic
+operator|.
+name|PatternLayout
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -32,20 +46,6 @@ operator|.
 name|map
 operator|.
 name|MapEventLogger
-import|;
-end_import
-
-begin_import
-import|import
-name|ch
-operator|.
-name|qos
-operator|.
-name|logback
-operator|.
-name|classic
-operator|.
-name|PatternLayout
 import|;
 end_import
 

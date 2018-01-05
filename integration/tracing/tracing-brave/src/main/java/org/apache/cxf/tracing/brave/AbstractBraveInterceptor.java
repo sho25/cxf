@@ -99,6 +99,16 @@ end_import
 
 begin_import
 import|import
+name|brave
+operator|.
+name|http
+operator|.
+name|HttpTracing
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -164,16 +174,6 @@ operator|.
 name|tracing
 operator|.
 name|AbstractTracingProvider
-import|;
-end_import
-
-begin_import
-import|import
-name|brave
-operator|.
-name|http
-operator|.
-name|HttpTracing
 import|;
 end_import
 
