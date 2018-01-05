@@ -634,7 +634,7 @@ name|Level
 operator|.
 name|SEVERE
 argument_list|,
-literal|"Error occurred during error handling, give up!"
+literal|"ERROR_DURING_ERROR_PROCESSING"
 argument_list|,
 name|exc
 argument_list|)
@@ -657,7 +657,7 @@ name|Level
 operator|.
 name|SEVERE
 argument_list|,
-literal|"Error occurred during error handling, give up!"
+literal|"ERROR_DURING_ERROR_PROCESSING"
 argument_list|,
 name|exc
 argument_list|)
