@@ -63,6 +63,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|osgi
+operator|.
+name|framework
+operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Assert
@@ -204,18 +216,6 @@ operator|.
 name|core
 operator|.
 name|TinyBundles
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|osgi
-operator|.
-name|framework
-operator|.
-name|Constants
 import|;
 end_import
 

@@ -155,6 +155,16 @@ end_import
 
 begin_import
 import|import
+name|brave
+operator|.
+name|http
+operator|.
+name|HttpTracing
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -182,16 +192,6 @@ operator|.
 name|brave
 operator|.
 name|TraceScope
-import|;
-end_import
-
-begin_import
-import|import
-name|brave
-operator|.
-name|http
-operator|.
-name|HttpTracing
 import|;
 end_import
 

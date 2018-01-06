@@ -227,6 +227,36 @@ name|TestUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|After
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Before
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Test
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -262,6 +292,8 @@ specifier|private
 name|File
 name|output
 decl_stmt|;
+annotation|@
+name|Before
 specifier|public
 name|void
 name|setUp
@@ -402,6 +434,8 @@ name|dir
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|After
 specifier|public
 name|void
 name|tearDown
@@ -592,6 +626,8 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBindingGenDefault
@@ -738,6 +774,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBindingGenSpecifiedFile
@@ -888,6 +926,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testIDLGenDefault
@@ -1003,6 +1043,8 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testIDLGenSpecifiedFile
@@ -1124,6 +1166,8 @@ expr_stmt|;
 block|}
 comment|// tests generating corba and idl in default wsdl and idl files
 comment|// pass the temp directory to create the wsdl files.
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBindAndIDLGen
@@ -1344,6 +1388,8 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testNoArgs
@@ -1412,6 +1458,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMissingRequiredFlags
@@ -1484,6 +1532,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBindingGenInvalidInterface
@@ -1550,6 +1600,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBindingGenDuplicate
@@ -1618,6 +1670,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testIdlGenMissingBinding
@@ -1687,6 +1741,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testIdlGenInvalidBinding
@@ -1760,6 +1816,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMissingBindingName
@@ -1810,6 +1868,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testDetailOutput
@@ -1842,6 +1902,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testVersionOutput
@@ -1874,6 +1936,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testHelpOutput

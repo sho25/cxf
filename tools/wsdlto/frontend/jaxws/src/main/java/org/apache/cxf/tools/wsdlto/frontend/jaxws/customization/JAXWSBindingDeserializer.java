@@ -29,7 +29,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|Serializable
 import|;
 end_import
 
@@ -109,7 +109,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|*
+name|Element
 import|;
 end_import
 

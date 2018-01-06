@@ -779,13 +779,11 @@ name|pf
 operator|.
 name|registerUserProvider
 argument_list|(
-call|(
+operator|(
 name|Feature
-call|)
-argument_list|(
+operator|)
 name|context
-argument_list|)
-operator|->
+lambda|->
 block|{
 name|context
 operator|.
@@ -793,13 +791,13 @@ name|register
 argument_list|(
 name|provider
 argument_list|)
-block|;
+expr_stmt|;
 return|return
 literal|true
 return|;
 block|}
-block|)
-function|;
+argument_list|)
+expr_stmt|;
 name|ExceptionMapper
 argument_list|<
 name|WebApplicationException
@@ -820,16 +818,13 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|assertSame
-parameter_list|(
+argument_list|(
 name|provider
-parameter_list|,
+argument_list|,
 name|em
-parameter_list|)
-constructor_decl|;
+argument_list|)
+expr_stmt|;
 block|}
-end_class
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -857,13 +852,11 @@ name|pf
 operator|.
 name|registerUserProvider
 argument_list|(
-call|(
+operator|(
 name|Feature
-call|)
-argument_list|(
+operator|)
 name|context
-argument_list|)
-operator|->
+lambda|->
 block|{
 name|context
 operator|.
@@ -892,14 +885,8 @@ return|return
 literal|true
 return|;
 block|}
-end_function
-
-begin_empty_stmt
-unit|)
-empty_stmt|;
-end_empty_stmt
-
-begin_decl_stmt
+argument_list|)
+expr_stmt|;
 name|ExceptionMapper
 argument_list|<
 name|WebApplicationException
@@ -919,9 +906,6 @@ name|MessageImpl
 argument_list|()
 argument_list|)
 decl_stmt|;
-end_decl_stmt
-
-begin_expr_stmt
 name|assertSame
 argument_list|(
 name|provider
@@ -929,10 +913,8 @@ argument_list|,
 name|em
 argument_list|)
 expr_stmt|;
-end_expr_stmt
-
-begin_function
-unit|}          @
+block|}
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -1033,9 +1015,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -1239,9 +1218,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -1420,9 +1396,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -1640,9 +1613,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -1867,9 +1837,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -1991,9 +1958,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2115,9 +2079,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2222,9 +2183,6 @@ name|provider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2327,9 +2285,6 @@ name|reader2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2432,9 +2387,6 @@ name|writer2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2554,9 +2506,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2658,9 +2607,6 @@ name|factory
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2750,9 +2696,6 @@ name|mapper2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2869,9 +2812,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -2998,9 +2938,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3135,9 +3072,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3196,9 +3130,6 @@ name|WebApplicationExceptionMapper
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3248,9 +3179,6 @@ name|WebApplicationExceptionMapper
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3338,9 +3266,6 @@ name|webExMapper
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3398,9 +3323,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3467,9 +3389,6 @@ name|PrimitiveTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3536,9 +3455,6 @@ name|CustomBooleanReader2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3596,9 +3512,6 @@ name|StringTextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3787,9 +3700,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -3908,9 +3818,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4026,9 +3933,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4093,9 +3997,6 @@ name|h
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4119,9 +4020,6 @@ literal|"text/plain"
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4201,9 +4099,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4302,9 +4197,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4373,9 +4265,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|verifyProvider
@@ -4497,9 +4386,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|verifyProvider
@@ -4534,9 +4420,6 @@ name|mediaType
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4560,9 +4443,6 @@ literal|"text/*"
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4605,9 +4485,6 @@ literal|"text/html"
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4650,9 +4527,6 @@ literal|"application/json"
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4728,9 +4602,6 @@ name|mapper2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4803,9 +4674,6 @@ name|JAXBContextProvider
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4887,9 +4755,6 @@ name|JAXBContextProvider2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -4958,9 +4823,6 @@ name|cr
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -5083,9 +4945,6 @@ name|JAXBContextProvider2
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 specifier|private
 name|Message
 name|prepareMessage
@@ -5217,9 +5076,6 @@ return|return
 name|message
 return|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -5272,9 +5128,6 @@ literal|"application/widget"
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 specifier|private
 name|int
 name|indexOf
@@ -5346,9 +5199,6 @@ return|return
 name|index
 return|;
 block|}
-end_function
-
-begin_class
 annotation|@
 name|Consumes
 argument_list|(
@@ -5576,9 +5426,6 @@ comment|// TODO: better exception handling
 block|}
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Consumes
 argument_list|(
@@ -5776,9 +5623,6 @@ block|{
 comment|//Dummy
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Consumes
 argument_list|(
@@ -5976,9 +5820,6 @@ block|{
 comment|//Dummy
 block|}
 block|}
-end_class
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6055,9 +5896,6 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6182,9 +6020,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6311,9 +6146,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6413,9 +6245,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6515,9 +6344,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6620,9 +6446,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -6725,9 +6548,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_class
 annotation|@
 name|Priority
 argument_list|(
@@ -6764,9 +6584,6 @@ argument_list|()
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Priority
 argument_list|(
@@ -6803,9 +6620,6 @@ argument_list|()
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -6829,9 +6643,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Priority
 argument_list|(
@@ -6865,9 +6676,6 @@ literal|"low"
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Priority
 argument_list|(
@@ -6901,9 +6709,6 @@ literal|"high"
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Priority
 argument_list|(
@@ -7096,9 +6901,6 @@ throws|,
 name|WebApplicationException
 block|{          }
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Produces
 argument_list|(
@@ -7282,9 +7084,6 @@ throws|,
 name|WebApplicationException
 block|{          }
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Produces
 argument_list|(
@@ -7468,9 +7267,6 @@ throws|,
 name|WebApplicationException
 block|{          }
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Produces
 argument_list|(
@@ -7657,9 +7453,6 @@ throws|,
 name|WebApplicationException
 block|{         }
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Produces
 argument_list|(
@@ -7746,9 +7539,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Produces
 argument_list|(
@@ -7835,9 +7625,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -7848,9 +7635,6 @@ argument_list|<
 name|RuntimeException
 argument_list|>
 block|{      }
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -7861,9 +7645,6 @@ argument_list|<
 name|WebApplicationException
 argument_list|>
 block|{      }
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -7892,9 +7673,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -7905,9 +7683,6 @@ argument_list|<
 name|AClass
 argument_list|>
 block|{     }
-end_class
-
-begin_class
 specifier|private
 specifier|abstract
 specifier|static
@@ -8095,17 +7870,11 @@ throws|,
 name|WebApplicationException
 block|{          }
 block|}
-end_class
-
-begin_class
 specifier|public
 specifier|static
 class|class
 name|AClass
 block|{     }
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8116,9 +7885,6 @@ argument_list|<
 name|SecurityException
 argument_list|>
 block|{     }
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8129,9 +7895,6 @@ argument_list|<
 name|WebApplicationException
 argument_list|>
 block|{     }
-end_class
-
-begin_class
 specifier|private
 specifier|abstract
 specifier|static
@@ -8181,9 +7944,6 @@ argument_list|()
 return|;
 block|}
 block|}
-end_class
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -8239,9 +7999,6 @@ name|mapper
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -8380,9 +8137,6 @@ name|mapperResponse4
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_function
 annotation|@
 name|Test
 specifier|public
@@ -8521,9 +8275,6 @@ name|mapperResponse4
 argument_list|)
 expr_stmt|;
 block|}
-end_function
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8540,9 +8291,6 @@ init|=
 literal|1L
 decl_stmt|;
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8559,9 +8307,6 @@ init|=
 literal|1L
 decl_stmt|;
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8578,9 +8323,6 @@ init|=
 literal|1L
 decl_stmt|;
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8597,9 +8339,6 @@ init|=
 literal|1L
 decl_stmt|;
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8625,9 +8364,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|private
 specifier|static
 class|class
@@ -8653,9 +8389,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|public
 specifier|abstract
 specifier|static
@@ -8672,9 +8405,6 @@ argument_list|<
 name|T
 argument_list|>
 block|{     }
-end_class
-
-begin_class
 specifier|public
 specifier|static
 class|class
@@ -8700,9 +8430,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 specifier|public
 specifier|static
 class|class
@@ -8728,9 +8455,6 @@ literal|null
 return|;
 block|}
 block|}
-end_class
-
-begin_class
 annotation|@
 name|Consumes
 argument_list|(
@@ -8743,9 +8467,6 @@ name|CustomBooleanReader2
 extends|extends
 name|CustomBooleanReader
 block|{      }
-end_class
-
-begin_class
 specifier|public
 specifier|static
 class|class
@@ -8832,8 +8553,8 @@ name|TRUE
 return|;
 block|}
 block|}
+block|}
 end_class
 
-unit|}
 end_unit
 

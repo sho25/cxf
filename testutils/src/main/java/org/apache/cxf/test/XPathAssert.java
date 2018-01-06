@@ -131,16 +131,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|AssertionFailedError
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -261,9 +251,9 @@ operator|==
 literal|0
 condition|)
 block|{
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"Failed to select any nodes for expression:\n"
 operator|+
@@ -276,7 +266,7 @@ argument_list|(
 name|node
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 return|return
 name|nodes
@@ -349,9 +339,9 @@ operator|==
 literal|null
 condition|)
 block|{
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"Failed to select any nodes for expression:\n"
 operator|+
@@ -364,7 +354,7 @@ argument_list|(
 name|node
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 if|if
 condition|(
@@ -375,9 +365,9 @@ name|booleanValue
 argument_list|()
 condition|)
 block|{
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"Boolean XPath assertion evaluated to false:\n"
 operator|+
@@ -390,7 +380,7 @@ argument_list|(
 name|node
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 block|}
 specifier|private
@@ -489,9 +479,9 @@ argument_list|(
 name|node
 argument_list|)
 decl_stmt|;
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"Found multiple nodes for expression:\n"
 operator|+
@@ -501,7 +491,7 @@ literal|"\n"
 operator|+
 name|value
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 return|return
 name|nodes
@@ -630,9 +620,9 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"No nodes were found for expression: "
 operator|+
@@ -645,7 +635,7 @@ argument_list|(
 name|node
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 comment|/**      * Asser that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
@@ -797,9 +787,9 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-throw|throw
-operator|new
-name|AssertionFailedError
+name|Assert
+operator|.
+name|fail
 argument_list|(
 literal|"No nodes were found for expression: "
 operator|+
@@ -812,7 +802,7 @@ argument_list|(
 name|node
 argument_list|)
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 specifier|public
 specifier|static

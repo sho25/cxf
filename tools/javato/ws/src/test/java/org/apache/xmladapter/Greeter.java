@@ -43,10 +43,6 @@ name|WebService
 import|;
 end_import
 
-begin_comment
-comment|// import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-end_comment
-
 begin_import
 import|import
 name|javax

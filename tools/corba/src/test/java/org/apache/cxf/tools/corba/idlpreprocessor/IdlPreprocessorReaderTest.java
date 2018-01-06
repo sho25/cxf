@@ -123,11 +123,21 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|TestCase
+name|junit
+operator|.
+name|Test
 import|;
 end_import
 
@@ -136,7 +146,7 @@ specifier|public
 class|class
 name|IdlPreprocessorReaderTest
 extends|extends
-name|TestCase
+name|Assert
 block|{
 specifier|private
 name|URL
@@ -200,6 +210,8 @@ argument_list|)
 return|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testResolvedInA
@@ -236,6 +248,8 @@ name|includeReader
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMultiFileResolve
@@ -272,6 +286,8 @@ name|includeReader
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testIfElseHandling
@@ -308,6 +324,8 @@ name|includeReader
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMaximumIncludeDepthIsDetected
@@ -371,6 +389,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testUnresolvableInclude
@@ -455,6 +475,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testDefaultIncludeResolver

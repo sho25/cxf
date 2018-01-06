@@ -437,10 +437,6 @@ name|SoapOperationInfo
 import|;
 end_import
 
-begin_comment
-comment|//import org.apache.cxf.common.i18n.Message;
-end_comment
-
 begin_import
 import|import
 name|org

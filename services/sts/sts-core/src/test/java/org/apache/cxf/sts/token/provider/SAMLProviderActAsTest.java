@@ -531,16 +531,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|junit
-operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|opensaml
 operator|.
 name|core
@@ -548,6 +538,16 @@ operator|.
 name|xml
 operator|.
 name|XMLObject
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
 import|;
 end_import
 

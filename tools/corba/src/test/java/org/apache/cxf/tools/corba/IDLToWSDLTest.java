@@ -299,6 +299,36 @@ name|WSDLGenerationTester
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|After
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Before
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Test
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -349,6 +379,8 @@ name|WSDLGenerationTester
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Before
 specifier|public
 name|void
 name|setUp
@@ -493,6 +525,8 @@ name|dir
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|After
 specifier|public
 name|void
 name|tearDown
@@ -680,6 +714,8 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testNoArgs
@@ -751,6 +787,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testDetailOutput
@@ -795,6 +833,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testVersionOutput
@@ -839,6 +879,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testHelpOutput
@@ -883,6 +925,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBase64SequenceOctetMappingOption
@@ -898,6 +942,8 @@ name|CFG_SEQUENCE_OCTET_TYPE_BASE64BINARY
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testHexBinarySequenceOctetMappingOption
@@ -1128,6 +1174,8 @@ expr_stmt|;
 block|}
 block|}
 comment|// test "-x<schema-namespace>"
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testSchemaNamespace
@@ -1233,6 +1281,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// test "-f<corba-address-file>"
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCorbaAddressFile
@@ -1391,6 +1441,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// test "-t<corba-type-map target-namespace>"
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCorbaTypeMapTargetNamespace
@@ -1496,6 +1548,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// test "-b Treat bounded strings as unbounded."
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTreatBoundedStringsAsUnbounded
@@ -1599,6 +1653,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//  test "-b Treat bounded strings as unbounded."
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTreatBoundedAnonStringsAsUnbounded
@@ -1701,6 +1757,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testExceptionsWithSchemasInDifferentNS
@@ -1805,6 +1863,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testOutputWSDLFileName
@@ -1909,6 +1969,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMultipleIncludes
@@ -2088,6 +2150,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testExternalInterfaceRef
@@ -2219,6 +2283,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testDuplicateTypeGeneration
@@ -2325,6 +2391,8 @@ name|actual
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testUndefinedTypeRef
@@ -2440,6 +2508,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCXF4541
@@ -2617,6 +2687,8 @@ literal|"Did not find foo element"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCXF3329
@@ -2734,6 +2806,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCXF5340

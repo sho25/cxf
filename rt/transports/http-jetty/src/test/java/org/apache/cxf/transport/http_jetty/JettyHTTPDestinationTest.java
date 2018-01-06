@@ -675,16 +675,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|easymock
-operator|.
-name|EasyMock
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|eclipse
 operator|.
 name|jetty
@@ -720,6 +710,16 @@ operator|.
 name|server
 operator|.
 name|Response
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|easymock
+operator|.
+name|EasyMock
 import|;
 end_import
 

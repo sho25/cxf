@@ -27,18 +27,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|junit
-operator|.
-name|runner
-operator|.
-name|RunWith
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|springframework
 operator|.
 name|test
@@ -90,6 +78,18 @@ operator|.
 name|junit4
 operator|.
 name|SpringJUnit4ClassRunner
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|runner
+operator|.
+name|RunWith
 import|;
 end_import
 

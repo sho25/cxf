@@ -107,6 +107,18 @@ end_import
 
 begin_import
 import|import
+name|io
+operator|.
+name|netty
+operator|.
+name|channel
+operator|.
+name|EventLoopGroup
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|junit
@@ -152,18 +164,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-import|;
-end_import
-
-begin_import
-import|import
-name|io
-operator|.
-name|netty
-operator|.
-name|channel
-operator|.
-name|EventLoopGroup
 import|;
 end_import
 

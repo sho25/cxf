@@ -21,16 +21,6 @@ end_package
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|TestCase
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -79,6 +69,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -87,8 +87,6 @@ begin_class
 specifier|public
 class|class
 name|BadXMLTest
-extends|extends
-name|TestCase
 block|{
 name|TypeMapping
 name|mapping
@@ -135,6 +133,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|fail
 argument_list|(
 literal|"No exception was thrown"

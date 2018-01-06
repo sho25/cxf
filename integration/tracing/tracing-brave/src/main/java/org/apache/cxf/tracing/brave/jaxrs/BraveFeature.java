@@ -73,22 +73,6 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tracing
-operator|.
-name|brave
-operator|.
-name|HttpServerSpanParser
-import|;
-end_import
-
-begin_import
-import|import
 name|brave
 operator|.
 name|Tracing
@@ -102,6 +86,22 @@ operator|.
 name|http
 operator|.
 name|HttpTracing
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|tracing
+operator|.
+name|brave
+operator|.
+name|HttpServerSpanParser
 import|;
 end_import
 
