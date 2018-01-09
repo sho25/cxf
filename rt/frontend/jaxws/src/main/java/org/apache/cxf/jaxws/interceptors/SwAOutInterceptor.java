@@ -1490,6 +1490,11 @@ operator|.
 name|dispose
 argument_list|()
 expr_stmt|;
+name|iout
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 name|out
 operator|.
 name|flush

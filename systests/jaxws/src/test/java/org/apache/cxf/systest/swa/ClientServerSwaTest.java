@@ -1445,7 +1445,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/attach.jpeg2"
+literal|"resources/attach.gif"
 argument_list|)
 decl_stmt|;
 name|DataHandler
