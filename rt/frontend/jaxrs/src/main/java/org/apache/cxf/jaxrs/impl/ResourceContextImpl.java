@@ -157,10 +157,12 @@ init|=
 literal|"org.apache.cxf.jaxrs.resource.context.provider"
 decl_stmt|;
 specifier|private
+specifier|final
 name|ClassResourceInfo
 name|cri
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -168,6 +170,7 @@ argument_list|>
 name|subClass
 decl_stmt|;
 specifier|private
+specifier|final
 name|Message
 name|m
 decl_stmt|;
@@ -297,6 +300,8 @@ name|resource
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 parameter_list|<
 name|T
