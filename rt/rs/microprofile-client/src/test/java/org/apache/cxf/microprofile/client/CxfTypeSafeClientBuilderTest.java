@@ -851,20 +851,10 @@ operator|.
 name|getEntity
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|r
-operator|.
-name|getStatus
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|fail
 argument_list|(
+name|r
+argument_list|,
 literal|"Did not throw expected mapped exception: NoSuchEntityException"
 argument_list|)
 expr_stmt|;
@@ -923,6 +913,25 @@ operator|.
 name|getEntity
 argument_list|()
 decl_stmt|;
+name|fail
+argument_list|(
+name|r
+argument_list|,
+literal|"Did not throw expected mapped exception: WebApplicationException"
+argument_list|)
+expr_stmt|;
+block|}
+specifier|private
+name|void
+name|fail
+parameter_list|(
+name|Response
+name|r
+parameter_list|,
+name|String
+name|failureMessage
+parameter_list|)
+block|{
 name|System
 operator|.
 name|out
@@ -937,7 +946,7 @@ argument_list|)
 expr_stmt|;
 name|fail
 argument_list|(
-literal|"Did not throw expected mapped exception: WebApplicationException"
+name|failureMessage
 argument_list|)
 expr_stmt|;
 block|}
