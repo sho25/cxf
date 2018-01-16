@@ -35,9 +35,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|core
-operator|.
-name|Response
+name|WebApplicationException
 import|;
 end_import
 
@@ -49,7 +47,9 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|core
+operator|.
+name|Response
 import|;
 end_import
 
