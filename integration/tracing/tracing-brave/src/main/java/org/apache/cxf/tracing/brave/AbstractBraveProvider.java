@@ -427,12 +427,6 @@ condition|(
 name|span
 operator|!=
 literal|null
-operator|&&
-operator|!
-name|span
-operator|.
-name|isNoop
-argument_list|()
 condition|)
 block|{
 name|scope
