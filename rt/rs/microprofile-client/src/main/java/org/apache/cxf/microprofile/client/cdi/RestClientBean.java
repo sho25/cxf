@@ -358,6 +358,7 @@ specifier|final
 name|BeanManager
 name|beanManager
 decl_stmt|;
+specifier|public
 name|RestClientBean
 parameter_list|(
 name|Class
