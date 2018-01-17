@@ -897,6 +897,13 @@ name|getMarshallerListener
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|JAXBUtils
+operator|.
+name|setMinimumEscapeHandler
+argument_list|(
+name|marshaller
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|setEventHandler

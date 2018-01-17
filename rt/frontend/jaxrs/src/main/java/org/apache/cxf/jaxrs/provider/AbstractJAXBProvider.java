@@ -4020,6 +4020,13 @@ name|marshallerListener
 argument_list|)
 expr_stmt|;
 block|}
+name|JAXBUtils
+operator|.
+name|setMinimumEscapeHandler
+argument_list|(
+name|marshaller
+argument_list|)
+expr_stmt|;
 name|validateObjectIfNeeded
 argument_list|(
 name|marshaller
