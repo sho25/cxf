@@ -163,6 +163,16 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|mail
+operator|.
+name|MessagingException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -190,6 +200,22 @@ operator|.
 name|util
 operator|.
 name|StringUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
 import|;
 end_import
 
@@ -336,7 +362,14 @@ specifier|final
 name|int
 name|DEFAULT_MAX_HEADER_SIZE
 init|=
+name|SystemPropertyAction
+operator|.
+name|getInteger
+argument_list|(
+literal|"org.apache.cxf.attachment-max-header-size"
+argument_list|,
 literal|300
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
