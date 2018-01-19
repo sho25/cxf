@@ -949,6 +949,12 @@ block|{
 name|instanceClass
 operator|=
 name|enableStatic
+operator|&&
+name|typedClass
+operator|!=
+name|Object
+operator|.
+name|class
 condition|?
 name|typedClass
 else|:
