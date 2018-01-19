@@ -163,16 +163,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|mail
-operator|.
-name|MessagingException
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -1400,7 +1390,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Move the read pointer to the begining of the first part read till the end      * of first boundary      *      * @param pushbackInStream      * @param boundary      * @throws MessagingException      */
+comment|/**      * Move the read pointer to the begining of the first part read till the end      * of first boundary      *      * @param pushbackInStream      * @param boundary      * @throws IOException      */
 specifier|private
 specifier|static
 name|boolean
