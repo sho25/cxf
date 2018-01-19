@@ -902,6 +902,11 @@ operator|.
 name|setMinimumEscapeHandler
 argument_list|(
 name|marshaller
+argument_list|,
+name|databinding
+operator|.
+name|getEscapeHandler
+argument_list|()
 argument_list|)
 expr_stmt|;
 if|if
