@@ -685,6 +685,8 @@ operator|!
 name|processSAMLTokens
 argument_list|(
 name|parameters
+argument_list|,
+name|derived
 argument_list|)
 condition|)
 block|{
@@ -721,6 +723,8 @@ operator|!
 name|processSAMLTokens
 argument_list|(
 name|parameters
+argument_list|,
+name|derived
 argument_list|)
 condition|)
 block|{
