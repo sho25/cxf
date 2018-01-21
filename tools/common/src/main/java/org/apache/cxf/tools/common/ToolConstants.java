@@ -535,6 +535,14 @@ name|CFG_MARK_GENERATED
 init|=
 literal|"mark-generated"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_SUPPRESS_GENERATED_DATE
+init|=
+literal|"suppress-generated-date"
+decl_stmt|;
 comment|//Internal Flag to generate
 specifier|public
 specifier|static
