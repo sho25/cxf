@@ -587,6 +587,15 @@ name|equals
 argument_list|(
 name|namespace
 argument_list|)
+operator|||
+name|STSConstants
+operator|.
+name|WSP_NS_06
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
 operator|)
 operator|&&
 literal|"URI"

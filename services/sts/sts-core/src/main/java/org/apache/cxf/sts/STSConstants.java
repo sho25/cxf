@@ -117,6 +117,15 @@ name|WSP_NS_04
 init|=
 literal|"http://schemas.xmlsoap.org/ws/2004/09/policy"
 decl_stmt|;
+comment|/**      * WS-Policy 2006 namespace (deprecated)      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|WSP_NS_06
+init|=
+literal|"http://www.w3.org/2006/07/ws-policy"
+decl_stmt|;
 comment|/**      * WS-Addressing 2005 namespace      */
 specifier|public
 specifier|static
