@@ -1801,6 +1801,7 @@ name|context
 operator|=
 name|ctx
 expr_stmt|;
+comment|//create default MininumEscapeHandler
 name|escapeHandler
 operator|=
 name|JAXBUtils
@@ -1822,6 +1823,19 @@ block|{
 return|return
 name|escapeHandler
 return|;
+block|}
+specifier|public
+name|void
+name|setEscapeHandler
+parameter_list|(
+name|Object
+name|handler
+parameter_list|)
+block|{
+name|escapeHandler
+operator|=
+name|handler
+expr_stmt|;
 block|}
 annotation|@
 name|SuppressWarnings

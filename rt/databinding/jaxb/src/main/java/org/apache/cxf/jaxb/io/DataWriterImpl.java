@@ -945,6 +945,13 @@ expr_stmt|;
 if|if
 condition|(
 name|noEscape
+operator|||
+name|databinding
+operator|.
+name|getEscapeHandler
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
 name|JAXBUtils
