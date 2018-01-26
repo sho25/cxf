@@ -1805,7 +1805,7 @@ name|escapeHandler
 operator|=
 name|JAXBUtils
 operator|.
-name|createEscapeHandler
+name|createMininumEscapeHandler
 argument_list|(
 name|ctx
 operator|.
