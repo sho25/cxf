@@ -145,6 +145,22 @@ name|jaxrs2
 operator|.
 name|integration
 operator|.
+name|ServletConfigContextUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|swagger
+operator|.
+name|v3
+operator|.
+name|jaxrs2
+operator|.
+name|integration
+operator|.
 name|resources
 operator|.
 name|OpenApiResource
@@ -235,24 +251,6 @@ name|OpenApiContext
 import|;
 end_import
 
-begin_import
-import|import static
-name|io
-operator|.
-name|swagger
-operator|.
-name|v3
-operator|.
-name|jaxrs2
-operator|.
-name|integration
-operator|.
-name|ServletConfigContextUtils
-operator|.
-name|getContextIdFromServletConfig
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -265,6 +263,7 @@ specifier|final
 name|OpenApiCustomizer
 name|customizer
 decl_stmt|;
+comment|//    private boolean customized;
 specifier|public
 name|OpenApiCustomizedResource
 parameter_list|(
@@ -280,6 +279,11 @@ operator|=
 name|customizer
 expr_stmt|;
 block|}
+comment|//    private void setCustomized() {
+comment|//        synchronized (customizer) {
+comment|//            customized = true;
+comment|//        }
+comment|//    }
 annotation|@
 name|GET
 annotation|@
@@ -330,6 +334,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+comment|//        if (customizer != null&& !customized) {
 if|if
 condition|(
 name|customizer
@@ -362,6 +367,8 @@ specifier|final
 name|String
 name|ctxId
 init|=
+name|ServletConfigContextUtils
+operator|.
 name|getContextIdFromServletConfig
 argument_list|(
 name|config
@@ -409,7 +416,18 @@ argument_list|(
 name|configuration
 argument_list|)
 expr_stmt|;
+name|customizer
+operator|.
+name|customize
+argument_list|(
+name|ctx
+operator|.
+name|read
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
+comment|//            setCustomized();
 block|}
 return|return
 name|super
