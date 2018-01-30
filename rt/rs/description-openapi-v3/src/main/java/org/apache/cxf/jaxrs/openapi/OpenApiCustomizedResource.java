@@ -263,7 +263,6 @@ specifier|final
 name|OpenApiCustomizer
 name|customizer
 decl_stmt|;
-comment|//    private boolean customized;
 specifier|public
 name|OpenApiCustomizedResource
 parameter_list|(
@@ -279,11 +278,6 @@ operator|=
 name|customizer
 expr_stmt|;
 block|}
-comment|//    private void setCustomized() {
-comment|//        synchronized (customizer) {
-comment|//            customized = true;
-comment|//        }
-comment|//    }
 annotation|@
 name|GET
 annotation|@
@@ -334,7 +328,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|//        if (customizer != null&& !customized) {
 if|if
 condition|(
 name|customizer
@@ -427,7 +420,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|//            setCustomized();
 block|}
 return|return
 name|super
