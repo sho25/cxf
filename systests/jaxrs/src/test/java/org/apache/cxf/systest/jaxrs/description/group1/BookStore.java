@@ -171,14 +171,6 @@ name|Api
 import|;
 end_import
 
-begin_comment
-comment|//FIXME swagger-jaxrs 1.5.3 can't handle a self-recursive sub resource like Book. so hide Book for now
-end_comment
-
-begin_comment
-comment|//import org.apache.cxf.systest.jaxrs.Book;
-end_comment
-
 begin_class
 annotation|@
 name|Path
