@@ -1651,7 +1651,7 @@ name|int
 operator|)
 name|csPolicy
 operator|.
-name|getReceiveTimeout
+name|getConnectionRequestTimeout
 argument_list|()
 argument_list|)
 decl_stmt|;
