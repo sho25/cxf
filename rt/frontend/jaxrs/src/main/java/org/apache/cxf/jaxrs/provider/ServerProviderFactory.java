@@ -1667,7 +1667,13 @@ argument_list|,
 name|getBus
 argument_list|()
 argument_list|,
-literal|null
+name|getFilterNameBindings
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
+name|featureProvider
+argument_list|)
 argument_list|,
 literal|false
 argument_list|,
@@ -2674,7 +2680,12 @@ argument_list|,
 name|getBus
 argument_list|()
 argument_list|,
+name|Collections
+operator|.
+name|singleton
+argument_list|(
 name|nameBinding
+argument_list|)
 argument_list|,
 literal|true
 argument_list|,
