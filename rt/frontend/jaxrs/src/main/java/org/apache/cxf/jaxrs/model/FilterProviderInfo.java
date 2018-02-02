@@ -220,6 +220,12 @@ name|this
 operator|.
 name|nameBinding
 operator|=
+name|nameBinding
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|Collections
 operator|.
 name|singleton
