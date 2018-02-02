@@ -1367,6 +1367,18 @@ argument_list|>
 name|headers
 parameter_list|)
 block|{
+name|webClient
+operator|.
+name|removeAllHeaders
+argument_list|()
+expr_stmt|;
+if|if
+condition|(
+name|headers
+operator|!=
+literal|null
+condition|)
+block|{
 name|RuntimeDelegate
 name|rd
 init|=
@@ -1419,6 +1431,7 @@ argument_list|,
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 return|return
