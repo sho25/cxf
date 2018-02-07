@@ -308,6 +308,14 @@ name|CFG_VALIDATE_WADL
 init|=
 literal|"validate"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_ONEWAY
+init|=
+literal|"oneway"
+decl_stmt|;
 comment|// JAX-RS 2.0 @Suspended AsyncResponse
 specifier|public
 specifier|static
