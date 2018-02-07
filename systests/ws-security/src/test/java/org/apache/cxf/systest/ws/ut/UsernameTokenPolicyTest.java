@@ -575,11 +575,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the client is not sending a UsernameToken Supporting Token
@@ -846,11 +851,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the client is sending a hashed password
@@ -1198,11 +1208,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the client is sending a plaintext password
@@ -1550,11 +1565,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the client is not sending a Created element
@@ -1821,11 +1841,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the client is not sending a Nonce element

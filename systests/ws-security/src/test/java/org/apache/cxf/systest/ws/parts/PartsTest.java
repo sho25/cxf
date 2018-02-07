@@ -847,11 +847,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires a (bad) header
@@ -1119,11 +1124,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires a (bad) header
@@ -1391,11 +1401,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the Body must be signed
@@ -1771,11 +1786,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the To header must be signed
@@ -2043,11 +2063,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the Body must be encrypted
@@ -2423,11 +2448,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the header must be encrypted
@@ -2715,11 +2745,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the header must be encrypted
@@ -2987,11 +3022,16 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the header must be encrypted

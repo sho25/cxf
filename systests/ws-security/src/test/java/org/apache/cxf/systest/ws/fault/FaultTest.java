@@ -525,11 +525,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username
@@ -632,11 +637,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username
@@ -856,11 +866,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username
@@ -1092,11 +1107,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username
@@ -1673,11 +1693,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username
@@ -1910,11 +1935,16 @@ argument_list|,
 literal|"alice"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now make an invocation using another username

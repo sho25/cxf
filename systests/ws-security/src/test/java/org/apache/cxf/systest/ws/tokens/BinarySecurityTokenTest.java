@@ -546,11 +546,16 @@ argument_list|,
 name|securityToken
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 operator|(

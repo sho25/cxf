@@ -363,11 +363,16 @@ argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server policies match
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -378,11 +383,16 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|portQName

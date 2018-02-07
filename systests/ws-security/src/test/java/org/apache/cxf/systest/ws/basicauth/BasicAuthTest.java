@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A test for Basic Auth using the WS-SecurityPolicy HttpBasicAuthentication policy.   * Note the basic auth credentials are not actually authenticated in this test...we are testing   * the WS-SecurityPolicy enforcement of whether the credentials are present or not.  */
+comment|/**  * A test for Basic Auth using the WS-SecurityPolicy HttpBasicAuthentication policy.  * Note the basic auth credentials are not actually authenticated in this test...we are testing  * the WS-SecurityPolicy enforcement of whether the credentials are present or not.  */
 end_comment
 
 begin_class
@@ -361,11 +361,16 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|utPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 operator|(

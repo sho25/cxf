@@ -363,11 +363,16 @@ argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server policies match
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -378,11 +383,16 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|portQName
@@ -704,11 +714,16 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -719,11 +734,16 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|bus
@@ -850,11 +870,16 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server settings match
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|portQName
@@ -1099,11 +1124,16 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server settings match
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// This should fail as the client uses uses RSA-SHA256 + the server uses RSA-SHA1
@@ -1295,11 +1325,16 @@ argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server policies match
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -1310,11 +1345,16 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|portQName
@@ -1539,11 +1579,16 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -1554,11 +1599,16 @@ argument_list|(
 name|port
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|bus
