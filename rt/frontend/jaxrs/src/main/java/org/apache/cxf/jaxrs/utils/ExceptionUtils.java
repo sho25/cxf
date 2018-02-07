@@ -312,13 +312,8 @@ decl_stmt|;
 if|if
 condition|(
 name|ex
-operator|.
-name|getClass
-argument_list|()
-operator|==
+operator|instanceof
 name|WebApplicationException
-operator|.
-name|class
 condition|)
 block|{
 name|WebApplicationException
