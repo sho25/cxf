@@ -11,23 +11,14 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|cdi
+name|jaxrs
 operator|.
-name|extension
+name|ext
 package|;
 end_package
 
-begin_comment
-comment|/**  * Serves as an extension point in order to allow to customize JAX-RS server  * factory bean creation (f.e. add features, providers, assign transport, ...)  * during the CDI beans discovery and initialization.  *  * This class is now deprecated, in favor of {@link org.apache.cxf.jaxrs.ext.JAXRSServerFactoryCustomizationExtension}  */
-end_comment
-
-begin_interface
-annotation|@
-name|Deprecated
-specifier|public
-interface|interface
-name|JAXRSServerFactoryCustomizationExtension
-extends|extends
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -36,10 +27,28 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
-operator|.
+name|JAXRSServerFactoryBean
+import|;
+end_import
+
+begin_comment
+comment|/**  * Serves as an extension point in order to allow to customize JAX-RS server  * factory bean creation (f.e. add features, providers, assign transport, ...)  */
+end_comment
+
+begin_interface
+specifier|public
+interface|interface
 name|JAXRSServerFactoryCustomizationExtension
-block|{ }
+block|{
+comment|/**      * Customize JAX-RS server factory bean before it is being initialized      * @param bean JAX-RS server factory bean      */
+name|void
+name|customize
+parameter_list|(
+name|JAXRSServerFactoryBean
+name|bean
+parameter_list|)
+function_decl|;
+block|}
 end_interface
 
 end_unit
