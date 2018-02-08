@@ -507,12 +507,22 @@ operator|.
 name|getImplementedContracts
 argument_list|(
 name|o
-argument_list|)
-argument_list|)
-expr_stmt|;
+argument_list|,
+operator|new
+name|Class
+argument_list|<
+name|?
+argument_list|>
+index|[]
+block|{}
+block|)
+block|)
+function|;
 block|}
-block|}
-annotation|@
+end_class
+
+begin_function
+unit|}      @
 name|Override
 specifier|public
 name|Set
@@ -568,6 +578,9 @@ return|return
 name|classes
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -645,6 +658,9 @@ name|emptyMap
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -695,6 +711,9 @@ name|allInstances
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -716,6 +735,9 @@ name|props
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -735,6 +757,9 @@ name|name
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -757,6 +782,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -768,6 +796,9 @@ return|return
 name|runtimeType
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -787,6 +818,9 @@ name|f
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -835,6 +869,9 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -873,6 +910,9 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|public
@@ -914,6 +954,9 @@ return|return
 literal|false
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 name|void
 name|setProperty
@@ -953,6 +996,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 name|void
 name|setFeature
@@ -974,6 +1020,9 @@ name|enabled
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 specifier|private
 name|void
 name|register
@@ -1005,6 +1054,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 specifier|public
 name|boolean
 name|register
@@ -1232,6 +1284,9 @@ return|return
 literal|true
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 name|boolean
 name|contractsValid
@@ -1316,6 +1371,9 @@ return|return
 literal|true
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Map
@@ -1381,6 +1439,9 @@ return|return
 name|metadata
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Object
@@ -1417,8 +1478,8 @@ argument_list|)
 throw|;
 block|}
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 
