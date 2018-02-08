@@ -314,8 +314,6 @@ name|super
 argument_list|(
 name|configurable
 argument_list|,
-name|CONTRACTS
-argument_list|,
 name|config
 operator|==
 literal|null
@@ -332,8 +330,6 @@ operator|new
 name|ConfigurationImpl
 argument_list|(
 name|config
-argument_list|,
-name|CONTRACTS
 argument_list|)
 argument_list|)
 expr_stmt|;
