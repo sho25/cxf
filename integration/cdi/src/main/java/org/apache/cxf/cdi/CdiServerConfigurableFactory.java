@@ -421,8 +421,6 @@ argument_list|,
 name|RuntimeType
 operator|.
 name|SERVER
-argument_list|,
-name|SERVER_FILTER_INTERCEPTOR_CLASSES
 argument_list|)
 expr_stmt|;
 name|this

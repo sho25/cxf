@@ -2918,10 +2918,6 @@ argument_list|,
 name|RuntimeType
 operator|.
 name|SERVER
-argument_list|,
-name|ServerConfigurableFactory
-operator|.
-name|SERVER_FILTER_INTERCEPTOR_CLASSES
 argument_list|)
 expr_stmt|;
 block|}

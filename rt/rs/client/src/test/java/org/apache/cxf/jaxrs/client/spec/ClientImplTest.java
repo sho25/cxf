@@ -805,7 +805,7 @@ name|message
 operator|.
 name|contains
 argument_list|(
-literal|"Null or empty contracts"
+literal|"Null, empty or invalid contracts specified"
 argument_list|)
 condition|)
 block|{
@@ -893,7 +893,7 @@ name|message
 operator|.
 name|contains
 argument_list|(
-literal|"Null or empty contracts"
+literal|"Null, empty or invalid contracts specified"
 argument_list|)
 condition|)
 block|{
