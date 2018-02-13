@@ -198,11 +198,6 @@ argument_list|(
 literal|"/resolver"
 argument_list|)
 expr_stmt|;
-name|String
-name|warPath
-init|=
-literal|null
-decl_stmt|;
 name|URL
 name|res
 init|=
@@ -214,8 +209,9 @@ argument_list|(
 literal|"/resolver"
 argument_list|)
 decl_stmt|;
+name|String
 name|warPath
-operator|=
+init|=
 name|res
 operator|.
 name|toURI
@@ -223,7 +219,7 @@ argument_list|()
 operator|.
 name|getPath
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|webappcontext
 operator|.
 name|setWar
