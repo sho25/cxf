@@ -442,6 +442,13 @@ argument_list|(
 literal|500
 argument_list|)
 expr_stmt|;
+name|assertNotNull
+argument_list|(
+name|holder
+operator|.
+name|value
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"Hello"
