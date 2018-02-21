@@ -1752,6 +1752,7 @@ name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
+comment|//CHECKSTYLE:OFF: checkstyle:parameternumber
 specifier|public
 name|void
 name|testMultipleQuery
@@ -1811,10 +1812,19 @@ literal|"query7"
 argument_list|)
 name|Boolean
 name|queryString7
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"query8"
+argument_list|)
+name|String
+name|queryString8
 parameter_list|)
 block|{
 comment|// complete
 block|}
+comment|//CHECKSTYLE:ON: checkstyle:parameternumber
 annotation|@
 name|Produces
 argument_list|(

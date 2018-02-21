@@ -2324,7 +2324,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/bookheaders/simple?throwException"
+literal|"/bookstore/bookheaders/simple?throwException=true"
 decl_stmt|;
 name|WebClient
 name|wc

@@ -6445,7 +6445,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"query=24&query2"
+literal|"query=24&query2="
 argument_list|)
 expr_stmt|;
 name|List
@@ -7088,7 +7088,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"query2=query2Value&query2=query2Value2&query3=1&query3=2&query4"
+literal|"query2=query2Value&query2=query2Value2&query3=1&query3=2&query4="
 argument_list|)
 expr_stmt|;
 name|List
@@ -11554,6 +11554,10 @@ block|,
 name|Boolean
 operator|.
 name|class
+block|,
+name|String
+operator|.
+name|class
 block|}
 decl_stmt|;
 name|Method
@@ -11584,7 +11588,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"query=first&query2=second&query3=3&query4=true&query6&query7=true"
+literal|"query=first&query2=second&query3=3&query4=true&query6=&query7=true&query8"
 argument_list|)
 expr_stmt|;
 name|List
@@ -11648,11 +11652,7 @@ name|assertEquals
 argument_list|(
 literal|"Third Query Parameter of multiple was not matched correctly"
 argument_list|,
-operator|new
-name|Long
-argument_list|(
-literal|3
-argument_list|)
+literal|3L
 argument_list|,
 name|params
 operator|.
@@ -11694,7 +11694,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Six Query Parameter of multiple was not matched correctly"
+literal|"Sixth Query Parameter of multiple was not matched correctly"
 argument_list|,
 literal|""
 argument_list|,
@@ -11719,6 +11719,18 @@ operator|.
 name|get
 argument_list|(
 literal|6
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+literal|"Eighth Query Parameter of multiple was not matched correctly"
+argument_list|,
+name|params
+operator|.
+name|get
+argument_list|(
+literal|7
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -11798,7 +11810,7 @@ name|Message
 operator|.
 name|REQUEST_URI
 argument_list|,
-literal|"/foo;p4=0;p3=3/bar;p1=1;p2/baz;p4=4;p4=5;p5"
+literal|"/foo;p4=0;p3=3/bar;p1=1;p2=/baz;p4=4;p4=5;p5"
 argument_list|)
 expr_stmt|;
 name|List
@@ -11963,11 +11975,9 @@ literal|2
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertNull
 argument_list|(
 literal|"Sixth Matrix Parameter was not matched correctly"
-argument_list|,
-literal|""
 argument_list|,
 name|params
 operator|.
