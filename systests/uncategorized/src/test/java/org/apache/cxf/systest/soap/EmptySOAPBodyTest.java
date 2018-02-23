@@ -53,6 +53,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -136,15 +150,6 @@ comment|/**  * Test what happens when we make an invocation and get back an empt
 end_comment
 
 begin_class
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-argument_list|(
-literal|"Ignoring this until CXF-7653 is resolved"
-argument_list|)
 specifier|public
 class|class
 name|EmptySOAPBodyTest
@@ -345,6 +350,8 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|port
 operator|.
 name|doubleIt
@@ -352,6 +359,36 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Should have thown an exception"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|SOAPFaultException
+name|t
+parameter_list|)
+block|{
+name|assertTrue
+argument_list|(
+literal|"Wrong exception cause "
+operator|+
+name|t
+operator|.
+name|getCause
+argument_list|()
+argument_list|,
+name|t
+operator|.
+name|getCause
+argument_list|()
+operator|instanceof
+name|IllegalStateException
+argument_list|)
+expr_stmt|;
+block|}
 operator|(
 operator|(
 name|java
