@@ -2205,7 +2205,7 @@ specifier|protected
 name|ResendCandidate
 name|createResendCandidate
 parameter_list|(
-name|SoapMessage
+name|Message
 name|message
 parameter_list|)
 block|{
@@ -2309,8 +2309,7 @@ expr_stmt|;
 block|}
 name|candidate
 operator|=
-operator|new
-name|ResendCandidate
+name|createResendCandidate
 argument_list|(
 name|message
 argument_list|)
