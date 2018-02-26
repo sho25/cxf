@@ -1691,22 +1691,10 @@ decl_stmt|;
 if|if
 condition|(
 literal|null
-operator|==
+operator|!=
 name|terminatedSeq
 condition|)
 block|{
-comment|//  TODO
-name|LOG
-operator|.
-name|severe
-argument_list|(
-literal|"No such sequence."
-argument_list|)
-expr_stmt|;
-return|return
-literal|null
-return|;
-block|}
 name|destination
 operator|.
 name|terminateSequence
@@ -1714,6 +1702,7 @@ argument_list|(
 name|terminatedSeq
 argument_list|)
 expr_stmt|;
+block|}
 comment|// the following may be necessary if the last message for this sequence was a oneway
 comment|// request and hence there was no response to which a last message could have been added
 comment|// REVISIT: A last message for the correlated sequence should have been sent by the time
