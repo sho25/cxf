@@ -371,6 +371,13 @@ argument_list|,
 literal|"http://www.w3.org/2004/08/xop/include"
 argument_list|)
 decl_stmt|;
+name|int
+name|fileSize
+init|=
+literal|0
+decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|pre
 init|=
@@ -383,12 +390,8 @@ name|getResourceAsStream
 argument_list|(
 literal|"/wsdl/mtom_xop.wsdl"
 argument_list|)
-decl_stmt|;
-name|int
-name|fileSize
-init|=
-literal|0
-decl_stmt|;
+init|)
+block|{
 for|for
 control|(
 name|int
@@ -415,6 +418,7 @@ block|{
 name|fileSize
 operator|++
 expr_stmt|;
+block|}
 block|}
 name|int
 name|count

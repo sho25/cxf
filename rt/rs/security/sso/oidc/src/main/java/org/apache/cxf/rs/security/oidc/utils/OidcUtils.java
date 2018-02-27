@@ -418,6 +418,10 @@ name|String
 argument_list|>
 name|PROFILE_CLAIMS
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -478,6 +482,7 @@ name|AbstractUserInfo
 operator|.
 name|UPDATED_AT_CLAIM
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -488,6 +493,10 @@ name|String
 argument_list|>
 name|EMAIL_CLAIMS
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -500,6 +509,7 @@ name|AbstractUserInfo
 operator|.
 name|EMAIL_VERIFIED_CLAIM
 argument_list|)
+argument_list|)
 decl_stmt|;
 specifier|public
 specifier|static
@@ -510,6 +520,10 @@ name|String
 argument_list|>
 name|ADDRESS_CLAIMS
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -517,6 +531,7 @@ argument_list|(
 name|AbstractUserInfo
 operator|.
 name|ADDRESS_CLAIM
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public
@@ -528,6 +543,10 @@ name|String
 argument_list|>
 name|PHONE_CLAIMS
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -535,6 +554,7 @@ argument_list|(
 name|AbstractUserInfo
 operator|.
 name|PHONE_CLAIM
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public
@@ -1273,7 +1293,7 @@ name|algoShaSize
 init|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|algoShaSizeString
 argument_list|)

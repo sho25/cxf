@@ -503,6 +503,10 @@ name|String
 argument_list|>
 name|DEFAULT_NAMESPACES
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -520,6 +524,7 @@ argument_list|,
 literal|"http://www.w3.org/2010/soapjms/"
 argument_list|,
 literal|"http://www.w3.org/2003/05/soap/bindings/HTTP/"
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public

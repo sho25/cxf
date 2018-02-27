@@ -878,13 +878,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|requestURI
-operator|!=
-literal|null
-condition|)
-block|{
 name|inMessage
 operator|.
 name|put
@@ -904,7 +897,6 @@ argument_list|,
 name|requestURI
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(

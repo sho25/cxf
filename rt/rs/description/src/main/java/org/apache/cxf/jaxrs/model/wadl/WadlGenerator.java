@@ -12149,7 +12149,7 @@ literal|0
 else|:
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|currentPrefix
 operator|.

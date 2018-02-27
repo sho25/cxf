@@ -1349,7 +1349,7 @@ name|newTokenKey
 argument_list|,
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|parts
 index|[
@@ -1359,7 +1359,7 @@ argument_list|)
 argument_list|,
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|parts
 index|[
@@ -1511,7 +1511,7 @@ name|setDefaultPermission
 argument_list|(
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 name|allPermParts
 index|[
@@ -2078,7 +2078,7 @@ index|]
 argument_list|,
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 name|parts
 index|[
@@ -2569,7 +2569,7 @@ index|]
 argument_list|,
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|parts
 index|[
@@ -2579,7 +2579,7 @@ argument_list|)
 argument_list|,
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|parts
 index|[

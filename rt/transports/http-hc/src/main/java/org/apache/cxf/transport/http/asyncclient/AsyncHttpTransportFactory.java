@@ -65,6 +65,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashSet
 import|;
 end_import
@@ -239,11 +249,16 @@ name|String
 argument_list|>
 name|DEFAULT_NAMESPACES
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
 argument_list|(
 literal|"http://cxf.apache.org/transports/http/http-client"
+argument_list|)
 argument_list|)
 decl_stmt|;
 comment|/**      * This constant holds the prefixes served by this factory.      */

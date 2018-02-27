@@ -2702,10 +2702,6 @@ decl_stmt|;
 if|if
 condition|(
 name|val
-operator|==
-literal|null
-operator|||
-name|val
 operator|.
 name|length
 argument_list|()

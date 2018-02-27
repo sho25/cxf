@@ -2190,7 +2190,7 @@ name|retryInterval
 operator|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|retryInterval
 argument_list|)
@@ -2219,7 +2219,7 @@ name|oneSessionPerConnection
 operator|=
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 name|oneSessionPerConnection
 argument_list|)

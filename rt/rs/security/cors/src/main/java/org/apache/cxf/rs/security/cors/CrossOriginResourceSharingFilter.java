@@ -757,16 +757,12 @@ block|{
 name|Method
 name|method
 init|=
-name|findResourceMethod
-condition|?
 name|getResourceMethod
 argument_list|(
 name|m
 argument_list|,
 name|httpMethod
 argument_list|)
-else|:
-literal|null
 decl_stmt|;
 name|simpleRequest
 argument_list|(

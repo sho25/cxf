@@ -39,6 +39,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -386,6 +396,10 @@ name|String
 argument_list|>
 name|DEFAULT_NAMESPACES
 init|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -395,6 +409,7 @@ argument_list|,
 literal|"http://www.w3.org/2004/08/wsdl/http"
 argument_list|,
 literal|"http://schemas.xmlsoap.org/wsdl/http/"
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public

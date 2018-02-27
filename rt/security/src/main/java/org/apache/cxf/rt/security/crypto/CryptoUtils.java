@@ -3408,7 +3408,7 @@ argument_list|)
 operator|&&
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|javaVersion
 operator|.

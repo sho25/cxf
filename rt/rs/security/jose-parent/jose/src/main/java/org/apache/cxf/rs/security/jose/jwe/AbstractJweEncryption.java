@@ -1247,12 +1247,6 @@ argument_list|(
 name|protectedHeadersJson
 argument_list|,
 name|jweInput
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|jweInput
 operator|.
 name|getAad
 argument_list|()

@@ -4605,6 +4605,13 @@ name|IOException
 block|{
 try|try
 block|{
+if|if
+condition|(
+literal|null
+operator|!=
+name|connector
+condition|)
+block|{
 name|int
 name|cp
 init|=
@@ -4620,10 +4627,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-literal|null
-operator|!=
-name|connector
-operator|&&
 name|port
 operator|!=
 name|cp
@@ -4644,6 +4647,7 @@ operator|+
 name|port
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 catch|catch

@@ -4344,7 +4344,7 @@ literal|null
 condition|?
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|totalElementCountStr
 argument_list|)
@@ -4361,7 +4361,7 @@ literal|null
 condition|?
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|elementLevelStr
 argument_list|)
@@ -4378,7 +4378,7 @@ literal|null
 condition|?
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|innerElementCountStr
 argument_list|)

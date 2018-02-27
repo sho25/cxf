@@ -128,7 +128,7 @@ name|clientTimestamp
 init|=
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|clientTimestampString
 argument_list|)

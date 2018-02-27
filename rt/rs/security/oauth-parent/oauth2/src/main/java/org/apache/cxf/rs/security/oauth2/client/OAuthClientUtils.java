@@ -1567,7 +1567,7 @@ name|setExpiresIn
 argument_list|(
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|expiresInStr
 argument_list|)
@@ -1596,7 +1596,7 @@ literal|null
 condition|?
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|issuedAtStr
 argument_list|)

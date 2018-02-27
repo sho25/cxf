@@ -2209,7 +2209,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set SwaggerUI Maven group and artifact using the "groupId/artifactId" format.       * @param swaggerUiMavenGroupAndArtifact      */
+comment|/**      * Set SwaggerUI Maven group and artifact using the "groupId/artifactId" format.      * @param swaggerUiMavenGroupAndArtifact      */
 specifier|public
 name|void
 name|setSwaggerUiMavenGroupAndArtifact
@@ -2465,10 +2465,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|sc
-operator|!=
-literal|null
-operator|&&
 name|sc
 operator|.
 name|getInitParameter
