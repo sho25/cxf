@@ -57,6 +57,11 @@ name|boolean
 name|isResumed
 parameter_list|()
 function_decl|;
+comment|/**      * Get the timeout status      * @return true if the continuation is has been timeout.      */
+name|boolean
+name|isTimeout
+parameter_list|()
+function_decl|;
 comment|/**      * Get arbitrary object associated with the continuation for context      *      * @return An arbitrary object associated with the continuation      */
 name|Object
 name|getObject
