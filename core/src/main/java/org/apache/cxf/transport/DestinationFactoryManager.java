@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Set
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -55,6 +65,14 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
+comment|/**      * Returns all registered (as of the moment of the call) destination factories.      * @return all registered (as of the moment of the call) destination factories.      */
+name|Set
+argument_list|<
+name|String
+argument_list|>
+name|getRegisteredDestinationFactoryNames
+parameter_list|()
+function_decl|;
 comment|/**      * Returns the<code>DestinationFactory</code> registered with the specified name,      * loading the appropriate plugin if necessary.      *      * @param name      * @return the registered<code>DestinationFactory</code>      * @throws BusException      */
 name|DestinationFactory
 name|getDestinationFactory
@@ -65,6 +83,7 @@ parameter_list|)
 throws|throws
 name|BusException
 function_decl|;
+comment|/**      * Returns the<code>DestinationFactory</code> registered with the specified URI,      * loading the appropriate plugin if necessary.      *      * @param uri the uri to look up<code>DestinationFactory</code>      * @return the registered<code>DestinationFactory</code>      * @throws BusException      */
 name|DestinationFactory
 name|getDestinationFactoryForUri
 parameter_list|(

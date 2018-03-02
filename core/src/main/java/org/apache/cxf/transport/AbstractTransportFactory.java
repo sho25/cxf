@@ -55,6 +55,14 @@ specifier|abstract
 class|class
 name|AbstractTransportFactory
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PREFERRED_TRANSPORT_ID
+init|=
+literal|"org.apache.cxf.preferred.transport.id"
+decl_stmt|;
 specifier|private
 name|List
 argument_list|<
