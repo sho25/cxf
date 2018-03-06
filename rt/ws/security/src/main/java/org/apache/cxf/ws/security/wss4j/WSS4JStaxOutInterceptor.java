@@ -972,10 +972,8 @@ operator|.
 name|getActions
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 comment|// If no actions configured then return

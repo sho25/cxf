@@ -418,10 +418,8 @@ operator|.
 name|getInInterceptors
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 name|Bus
@@ -457,10 +455,8 @@ operator|.
 name|getOutInterceptors
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -544,10 +540,8 @@ operator|.
 name|getInInterceptors
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 name|Bus
@@ -583,10 +577,8 @@ operator|.
 name|getOutInterceptors
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 name|cxf2

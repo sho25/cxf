@@ -1109,10 +1109,8 @@ literal|null
 operator|||
 name|ldapAttributes
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 condition|)
 block|{
@@ -1176,10 +1174,8 @@ literal|null
 operator|||
 name|ldapAttributes
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 comment|//No result

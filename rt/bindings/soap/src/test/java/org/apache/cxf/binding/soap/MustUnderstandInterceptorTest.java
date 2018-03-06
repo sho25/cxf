@@ -1058,10 +1058,8 @@ if|if
 condition|(
 name|roles
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 try|try

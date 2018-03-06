@@ -1807,10 +1807,8 @@ operator|.
 name|getAttributes
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|XmlSchemaSequence
@@ -1979,10 +1977,8 @@ operator|.
 name|getAttributes
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|isUnion

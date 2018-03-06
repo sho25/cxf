@@ -457,10 +457,8 @@ if|if
 condition|(
 name|schemaFiles
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -501,10 +499,8 @@ if|if
 condition|(
 name|ns
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

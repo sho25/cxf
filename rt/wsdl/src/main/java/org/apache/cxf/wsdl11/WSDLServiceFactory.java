@@ -633,10 +633,8 @@ if|if
 condition|(
 name|services
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 throw|throw
@@ -981,10 +979,8 @@ if|if
 condition|(
 name|services
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 throw|throw

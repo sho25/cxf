@@ -1264,10 +1264,8 @@ if|if
 condition|(
 name|elemList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 continue|continue;

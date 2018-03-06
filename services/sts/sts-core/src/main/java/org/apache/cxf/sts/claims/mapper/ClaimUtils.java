@@ -603,10 +603,8 @@ literal|null
 operator|||
 name|mapping
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|resultClaim

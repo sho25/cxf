@@ -2404,10 +2404,8 @@ operator|.
 name|getQueue
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 return|;
 block|}
 specifier|public

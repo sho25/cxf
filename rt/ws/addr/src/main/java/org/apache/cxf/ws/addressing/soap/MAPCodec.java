@@ -4058,10 +4058,8 @@ literal|null
 operator|||
 name|soapActionHeaders
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 literal|""
 operator|.

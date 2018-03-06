@@ -1194,10 +1194,8 @@ literal|null
 operator|||
 name|groups
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 if|if
@@ -1589,10 +1587,8 @@ if|if
 condition|(
 name|filteredGroups
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|LOG

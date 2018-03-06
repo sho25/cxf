@@ -397,10 +397,8 @@ name|hc
 operator|||
 name|hc
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -859,10 +857,8 @@ operator|.
 name|getInitParam
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return;

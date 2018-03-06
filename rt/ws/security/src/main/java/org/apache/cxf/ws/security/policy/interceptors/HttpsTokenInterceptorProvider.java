@@ -1186,10 +1186,8 @@ literal|null
 operator|||
 name|auth
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 operator|!
 name|auth
@@ -1275,10 +1273,8 @@ literal|null
 operator|||
 name|auth
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 operator|!
 name|auth
@@ -1809,10 +1805,8 @@ literal|null
 operator|||
 name|auth
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 operator|!
 name|auth
@@ -1936,10 +1930,8 @@ literal|null
 operator|||
 name|auth
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 operator|!
 name|auth

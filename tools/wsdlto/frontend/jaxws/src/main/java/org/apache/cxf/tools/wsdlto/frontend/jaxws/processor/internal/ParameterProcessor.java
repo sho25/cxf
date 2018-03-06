@@ -1674,10 +1674,8 @@ literal|null
 operator|||
 name|wrappedElements
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 operator|&&
 name|countOutOfBandHeader
@@ -2617,10 +2615,8 @@ literal|null
 operator|||
 name|outputWrapElement
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|addVoidReturn

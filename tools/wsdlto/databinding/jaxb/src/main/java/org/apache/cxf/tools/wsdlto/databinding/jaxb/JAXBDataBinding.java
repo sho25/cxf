@@ -5858,10 +5858,8 @@ if|if
 condition|(
 name|impElemList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|&&
 name|incElemList
 operator|.

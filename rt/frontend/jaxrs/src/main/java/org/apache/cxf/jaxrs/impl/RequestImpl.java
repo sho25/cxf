@@ -1182,10 +1182,8 @@ literal|null
 operator|||
 name|ifMatch
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -1324,10 +1322,8 @@ literal|null
 operator|||
 name|ifNonMatch
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -1570,10 +1566,8 @@ literal|null
 operator|||
 name|ifModifiedSince
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -1696,10 +1690,8 @@ literal|null
 operator|||
 name|ifNotModifiedSince
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

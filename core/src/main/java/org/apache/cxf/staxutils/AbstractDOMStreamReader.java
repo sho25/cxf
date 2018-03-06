@@ -758,10 +758,8 @@ operator|&&
 operator|(
 name|frames
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 name|frame
 operator|.

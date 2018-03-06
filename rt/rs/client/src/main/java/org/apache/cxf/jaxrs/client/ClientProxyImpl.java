@@ -1953,10 +1953,8 @@ if|if
 condition|(
 name|parameters
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -2730,10 +2728,8 @@ operator|.
 name|getProduceTypes
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 name|ori
 operator|.
@@ -2892,10 +2888,8 @@ literal|null
 operator|||
 name|headers
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

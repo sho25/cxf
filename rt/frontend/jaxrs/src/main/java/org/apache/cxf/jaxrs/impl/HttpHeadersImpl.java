@@ -981,10 +981,8 @@ decl_stmt|;
 return|return
 name|values
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|?
 literal|null
 else|:
@@ -1025,10 +1023,8 @@ decl_stmt|;
 return|return
 name|values
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|?
 literal|null
 else|:

@@ -1103,10 +1103,8 @@ if|if
 condition|(
 name|bodyParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 name|bodyParts
 operator|.

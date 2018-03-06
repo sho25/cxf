@@ -511,10 +511,8 @@ if|if
 condition|(
 name|interfaces
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|ServiceInfo

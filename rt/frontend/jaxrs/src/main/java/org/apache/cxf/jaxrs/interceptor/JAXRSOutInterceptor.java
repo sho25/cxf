@@ -804,10 +804,8 @@ literal|null
 operator|||
 name|objs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return;

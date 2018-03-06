@@ -544,10 +544,8 @@ if|if
 condition|(
 name|serviceClasses
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|ServiceInfo

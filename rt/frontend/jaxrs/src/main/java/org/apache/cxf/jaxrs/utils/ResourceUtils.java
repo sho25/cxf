@@ -3113,10 +3113,8 @@ function|;
 return|return
 name|cs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|?
 literal|null
 else|:

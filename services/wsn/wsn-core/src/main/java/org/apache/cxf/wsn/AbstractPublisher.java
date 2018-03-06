@@ -599,10 +599,8 @@ literal|null
 operator|||
 name|topic
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 condition|)
 block|{

@@ -1629,10 +1629,8 @@ if|if
 condition|(
 name|cris
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|&&
 name|schema
 operator|!=

@@ -3304,10 +3304,8 @@ operator|.
 name|getMember
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 condition|)
 block|{
@@ -5309,10 +5307,8 @@ operator|.
 name|getFacets
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 operator|||
 operator|(
@@ -5725,10 +5721,8 @@ operator|.
 name|getAttributes
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 operator|&&
 operator|(

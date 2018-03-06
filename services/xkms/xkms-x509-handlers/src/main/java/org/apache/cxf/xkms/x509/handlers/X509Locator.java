@@ -506,10 +506,8 @@ if|if
 condition|(
 name|ids
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 throw|throw

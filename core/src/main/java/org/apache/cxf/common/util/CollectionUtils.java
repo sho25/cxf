@@ -129,10 +129,8 @@ literal|null
 operator|||
 name|c1
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|||
 name|c2
 operator|==
@@ -216,10 +214,8 @@ literal|null
 operator|||
 name|c
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

@@ -2267,10 +2267,8 @@ literal|null
 operator|||
 name|signatureResults
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}

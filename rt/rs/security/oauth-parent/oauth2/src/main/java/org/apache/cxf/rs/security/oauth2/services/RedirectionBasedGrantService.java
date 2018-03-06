@@ -2735,10 +2735,8 @@ literal|null
 operator|&&
 name|uris
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|&&
 operator|!
 name|canRedirectUriBeEmpty
