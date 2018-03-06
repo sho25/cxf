@@ -143,7 +143,7 @@ parameter_list|()
 default|default
 literal|false
 function_decl|;
-comment|/**      * Ignore binary payloads by default      */
+comment|/**      * Log binary payloads by default      */
 name|boolean
 name|logBinary
 parameter_list|()
