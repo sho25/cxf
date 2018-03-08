@@ -1704,7 +1704,7 @@ name|HttpHost
 argument_list|(
 name|isa
 operator|.
-name|getHostName
+name|getHostString
 argument_list|()
 argument_list|,
 name|isa
