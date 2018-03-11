@@ -29,18 +29,6 @@ end_import
 
 begin_import
 import|import
-name|io
-operator|.
-name|swagger
-operator|.
-name|annotations
-operator|.
-name|Api
-import|;
-end_import
-
-begin_import
-import|import
 name|sample
 operator|.
 name|rs
@@ -54,11 +42,6 @@ end_import
 begin_class
 annotation|@
 name|Path
-argument_list|(
-literal|"/sayHello2"
-argument_list|)
-annotation|@
-name|Api
 argument_list|(
 literal|"/sayHello2"
 argument_list|)

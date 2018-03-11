@@ -89,9 +89,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|swagger
+name|openapi
 operator|.
-name|Swagger2Feature
+name|OpenApiFeature
 import|;
 end_import
 
@@ -271,7 +271,7 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|createSwaggerFeature
+name|createOpenApiFeature
 argument_list|()
 argument_list|,
 operator|new
@@ -288,39 +288,39 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|Swagger2Feature
-name|createSwaggerFeature
+name|OpenApiFeature
+name|createOpenApiFeature
 parameter_list|()
 block|{
-name|Swagger2Feature
-name|swagger2Feature
+name|OpenApiFeature
+name|openApiFeature
 init|=
 operator|new
-name|Swagger2Feature
+name|OpenApiFeature
 argument_list|()
 decl_stmt|;
-name|swagger2Feature
+name|openApiFeature
 operator|.
 name|setPrettyPrint
 argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-name|swagger2Feature
+name|openApiFeature
 operator|.
 name|setTitle
 argument_list|(
 literal|"Spring Boot CXF REST Application"
 argument_list|)
 expr_stmt|;
-name|swagger2Feature
+name|openApiFeature
 operator|.
-name|setContact
+name|setContactName
 argument_list|(
 literal|"The Apache CXF team"
 argument_list|)
 expr_stmt|;
-name|swagger2Feature
+name|openApiFeature
 operator|.
 name|setDescription
 argument_list|(
@@ -331,7 +331,7 @@ operator|+
 literal|" deployed in a single JAX-RS endpoint."
 argument_list|)
 expr_stmt|;
-name|swagger2Feature
+name|openApiFeature
 operator|.
 name|setVersion
 argument_list|(
@@ -339,7 +339,7 @@ literal|"1.0.0"
 argument_list|)
 expr_stmt|;
 return|return
-name|swagger2Feature
+name|openApiFeature
 return|;
 block|}
 block|}
