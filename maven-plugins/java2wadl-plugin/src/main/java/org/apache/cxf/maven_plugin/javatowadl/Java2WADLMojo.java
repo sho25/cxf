@@ -396,7 +396,7 @@ specifier|private
 name|String
 name|classifier
 decl_stmt|;
-comment|/**      * @parameter      * @required      */
+comment|/**      * @parameter      */
 specifier|private
 name|List
 argument_list|<
@@ -1353,6 +1353,25 @@ parameter_list|()
 throws|throws
 name|MojoExecutionException
 block|{
+if|if
+condition|(
+name|classResourceNames
+operator|==
+literal|null
+operator|&&
+name|basePackages
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|MojoExecutionException
+argument_list|(
+literal|"either classResourceNames or basePackages should be specified"
+argument_list|)
+throw|;
+block|}
 name|List
 argument_list|<
 name|Class
@@ -1372,11 +1391,24 @@ argument_list|>
 argument_list|>
 argument_list|(
 name|classResourceNames
+operator|==
+literal|null
+condition|?
+literal|0
+else|:
+name|classResourceNames
 operator|.
 name|size
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|classResourceNames
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|String
@@ -1419,6 +1451,7 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 if|if
