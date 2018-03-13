@@ -130,7 +130,7 @@ specifier|final
 name|String
 name|ALL_FILES
 init|=
-literal|"**/*"
+literal|"/**/*"
 decl_stmt|;
 specifier|public
 specifier|static
