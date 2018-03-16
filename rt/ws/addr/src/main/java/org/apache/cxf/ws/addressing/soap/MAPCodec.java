@@ -3785,13 +3785,6 @@ argument_list|(
 name|ctx
 argument_list|)
 decl_stmt|;
-name|jaxbDataBinding
-operator|.
-name|setEscapeHandler
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
 name|SoapHeader
 name|h
 init|=
