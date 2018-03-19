@@ -625,6 +625,22 @@ name|ofNullable
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|cdi
+operator|.
+name|AbstractCXFBean
+operator|.
+name|DEFAULT
+import|;
+end_import
+
 begin_comment
 comment|/**  * Apache CXF portable CDI extension to support initialization of JAX-RS resources.  */
 end_comment
@@ -1347,7 +1363,22 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|event
+operator|.
+name|getBean
+argument_list|()
+operator|.
+name|getQualifiers
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|DEFAULT
+argument_list|)
+condition|)
 block|{
 name|event
 operator|.
@@ -1832,6 +1863,22 @@ operator|.
 name|addBean
 argument_list|(
 name|applicationBean
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|// otherwise will be ambiguous since we scanned it with default qualifier already
+name|existingStandardClasses
+operator|.
+name|add
+argument_list|(
+name|Application
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
