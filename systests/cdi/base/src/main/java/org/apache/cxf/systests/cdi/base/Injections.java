@@ -256,6 +256,11 @@ end_import
 begin_class
 annotation|@
 name|ApplicationScoped
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
 specifier|public
 class|class
 name|Injections
@@ -354,6 +359,9 @@ annotation|@
 name|Inject
 specifier|private
 name|ContextResolver
+argument_list|<
+name|?
+argument_list|>
 name|contextResolver
 decl_stmt|;
 comment|//NOPMD
@@ -363,6 +371,9 @@ annotation|@
 name|ContextResolved
 specifier|private
 name|ContextResolver
+argument_list|<
+name|?
+argument_list|>
 name|cxfContextResolver
 decl_stmt|;
 comment|//NOPMD

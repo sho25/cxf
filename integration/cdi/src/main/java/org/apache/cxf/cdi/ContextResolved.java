@@ -112,7 +112,16 @@ name|ContextResolved
 argument_list|>
 implements|implements
 name|ContextResolved
-block|{      }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+block|}
 block|}
 end_annotation_defn
 
