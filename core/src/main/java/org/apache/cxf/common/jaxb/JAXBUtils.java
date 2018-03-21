@@ -10059,6 +10059,13 @@ name|getClass
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|postFix
+operator|!=
+literal|null
+condition|)
+block|{
 name|marshaller
 operator|.
 name|setProperty
@@ -10072,6 +10079,7 @@ argument_list|,
 name|escapeHandler
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
