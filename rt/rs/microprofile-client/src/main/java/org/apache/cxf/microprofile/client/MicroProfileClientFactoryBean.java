@@ -79,6 +79,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|ExecutorService
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -351,6 +363,10 @@ specifier|private
 name|boolean
 name|inheritHeaders
 decl_stmt|;
+specifier|private
+name|ExecutorService
+name|executorService
+decl_stmt|;
 specifier|public
 name|MicroProfileClientFactoryBean
 parameter_list|(
@@ -368,6 +384,9 @@ argument_list|<
 name|?
 argument_list|>
 name|aClass
+parameter_list|,
+name|ExecutorService
+name|executorService
 parameter_list|)
 block|{
 name|super
@@ -392,6 +411,12 @@ name|createComparator
 argument_list|(
 name|this
 argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|executorService
+operator|=
+name|executorService
 expr_stmt|;
 name|super
 operator|.
@@ -533,6 +558,15 @@ operator|=
 name|inheritHeaders
 expr_stmt|;
 block|}
+specifier|public
+name|ExecutorService
+name|getExecutorService
+parameter_list|()
+block|{
+return|return
+name|executorService
+return|;
+block|}
 annotation|@
 name|Override
 specifier|protected
@@ -639,6 +673,8 @@ name|isRoot
 argument_list|,
 name|inheritHeaders
 argument_list|,
+name|executorService
+argument_list|,
 name|varValues
 argument_list|)
 return|;
@@ -658,6 +694,8 @@ argument_list|,
 name|isRoot
 argument_list|,
 name|inheritHeaders
+argument_list|,
+name|executorService
 argument_list|,
 name|varValues
 argument_list|)
