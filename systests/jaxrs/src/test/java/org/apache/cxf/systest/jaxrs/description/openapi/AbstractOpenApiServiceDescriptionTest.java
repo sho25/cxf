@@ -1453,7 +1453,7 @@ name|css
 argument_list|,
 name|containsString
 argument_list|(
-literal|".swagger-ui{font"
+literal|".swagger-ui{"
 argument_list|)
 argument_list|)
 expr_stmt|;
