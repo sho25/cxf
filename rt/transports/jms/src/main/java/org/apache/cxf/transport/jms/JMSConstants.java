@@ -266,6 +266,14 @@ name|RS_CONTENT_TYPE
 init|=
 literal|"org.apache.cxf.jms.rs.ContentType"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RS_CONTENT_LENGTH
+init|=
+literal|"org.apache.cxf.jms.rs.ContentLength"
+decl_stmt|;
 specifier|private
 name|JMSConstants
 parameter_list|()
