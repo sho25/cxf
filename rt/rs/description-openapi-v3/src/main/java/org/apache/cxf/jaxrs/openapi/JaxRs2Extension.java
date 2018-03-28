@@ -223,6 +223,20 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|fasterxml
+operator|.
+name|jackson
+operator|.
+name|annotation
+operator|.
+name|JsonView
+import|;
+end_import
+
+begin_import
+import|import
 name|io
 operator|.
 name|swagger
@@ -421,6 +435,10 @@ name|boolean
 name|includeRequestBody
 parameter_list|,
 specifier|final
+name|JsonView
+name|jsonViewAnnotation
+parameter_list|,
+specifier|final
 name|Iterator
 argument_list|<
 name|OpenAPIExtension
@@ -584,6 +602,8 @@ argument_list|,
 name|methodConsumes
 argument_list|,
 name|includeRequestBody
+argument_list|,
+name|jsonViewAnnotation
 argument_list|,
 name|chain
 argument_list|)
