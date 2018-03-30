@@ -395,6 +395,15 @@ argument_list|(
 name|resourcePath
 argument_list|)
 decl_stmt|;
+specifier|final
+name|String
+name|path
+init|=
+name|resourceURL
+operator|.
+name|getPath
+argument_list|()
+decl_stmt|;
 name|String
 name|mediaType
 init|=
@@ -403,7 +412,7 @@ decl_stmt|;
 name|int
 name|ind
 init|=
-name|resourcePath
+name|path
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -419,7 +428,7 @@ literal|1
 operator|&&
 name|ind
 operator|<
-name|resourcePath
+name|path
 operator|.
 name|length
 argument_list|()
@@ -428,7 +437,7 @@ block|{
 name|String
 name|resourceExt
 init|=
-name|resourcePath
+name|path
 operator|.
 name|substring
 argument_list|(
