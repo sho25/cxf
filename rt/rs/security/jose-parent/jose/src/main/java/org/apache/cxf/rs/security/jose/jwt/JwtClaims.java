@@ -351,7 +351,10 @@ argument_list|)
 return|;
 block|}
 return|return
-literal|null
+name|Collections
+operator|.
+name|emptyList
+argument_list|()
 return|;
 block|}
 specifier|public

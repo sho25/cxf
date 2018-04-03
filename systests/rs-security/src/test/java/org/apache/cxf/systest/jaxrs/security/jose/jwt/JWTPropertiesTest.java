@@ -2416,7 +2416,7 @@ literal|123L
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertNotEquals
+name|assertEquals
 argument_list|(
 name|response
 operator|.
