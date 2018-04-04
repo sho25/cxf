@@ -13,9 +13,9 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|kerberos
-operator|.
 name|ldap
+operator|.
+name|sts
 package|;
 end_package
 
@@ -672,6 +672,7 @@ name|ApplyLdifFiles
 argument_list|(
 literal|"ldap.ldif"
 argument_list|)
+comment|/**  * Test the LdapClaimsHandler that ships with the STS  */
 specifier|public
 class|class
 name|LDAPClaimsTest
