@@ -238,6 +238,13 @@ name|Condition
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|visitor
+operator|.
+name|setEncodeQueryValues
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|filter
 operator|.
 name|accept
@@ -299,6 +306,13 @@ name|Condition
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|visitor
+operator|.
+name|setEncodeQueryValues
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|filter
 operator|.
 name|accept
