@@ -6430,6 +6430,10 @@ operator|.
 name|getConvertedExpression
 argument_list|(
 name|expression
+argument_list|,
+name|Book
+operator|.
+name|class
 argument_list|)
 return|;
 block|}
