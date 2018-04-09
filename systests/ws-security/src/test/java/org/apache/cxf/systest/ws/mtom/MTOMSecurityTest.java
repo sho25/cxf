@@ -458,6 +458,10 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt4
@@ -468,6 +472,7 @@ operator|new
 name|DataHandler
 argument_list|(
 name|source
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -636,6 +641,10 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt4
@@ -646,6 +655,7 @@ operator|new
 name|DataHandler
 argument_list|(
 name|source
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1279,6 +1289,10 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt4
@@ -1289,6 +1303,7 @@ operator|new
 name|DataHandler
 argument_list|(
 name|source
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1456,6 +1471,10 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt4
@@ -1466,6 +1485,7 @@ operator|new
 name|DataHandler
 argument_list|(
 name|source
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1633,6 +1653,10 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|port
 operator|.
 name|doubleIt4
@@ -1643,6 +1667,7 @@ operator|new
 name|DataHandler
 argument_list|(
 name|source
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
