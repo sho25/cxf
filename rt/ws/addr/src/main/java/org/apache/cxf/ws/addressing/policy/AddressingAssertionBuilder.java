@@ -471,6 +471,14 @@ name|PolicyContainingPrimitiveAssertion
 operator|||
 name|nap
 operator|instanceof
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|builders
+operator|.
 name|PrimitiveAssertion
 operator|)
 condition|)
