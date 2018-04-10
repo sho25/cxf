@@ -211,6 +211,9 @@ operator|!
 name|isResponse
 argument_list|()
 operator|&&
+name|isOutbound
+argument_list|()
+operator|&&
 name|MessageContext
 operator|.
 name|HTTP_RESPONSE_HEADERS
@@ -228,6 +231,10 @@ block|}
 if|if
 condition|(
 name|isRequestor
+argument_list|()
+operator|&&
+operator|!
+name|isOutbound
 argument_list|()
 operator|&&
 name|MessageContext
