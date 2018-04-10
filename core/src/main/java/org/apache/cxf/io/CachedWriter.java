@@ -334,7 +334,9 @@ name|SystemPropertyAction
 operator|.
 name|getPropertyOrNull
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.OutputDirectory"
+name|CachedConstants
+operator|.
+name|OUTPUT_DIRECTORY_SYS_PROP
 argument_list|)
 decl_stmt|;
 if|if
@@ -601,7 +603,9 @@ name|getBusProperty
 argument_list|(
 name|b
 argument_list|,
-literal|"bus.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_BUS_PROP
 argument_list|,
 literal|null
 argument_list|)
@@ -633,7 +637,9 @@ name|getBusProperty
 argument_list|(
 name|b
 argument_list|,
-literal|"bus.io.CachedOutputStream.MaxSize"
+name|CachedConstants
+operator|.
+name|MAX_SIZE_BUS_PROP
 argument_list|,
 literal|null
 argument_list|)
@@ -661,7 +667,9 @@ name|getBusProperty
 argument_list|(
 name|b
 argument_list|,
-literal|"bus.io.CachedOutputStream.CipherTransformation"
+name|CachedConstants
+operator|.
+name|CIPHER_TRANSFORMATION_BUS_PROP
 argument_list|,
 literal|null
 argument_list|)
@@ -2508,7 +2516,9 @@ name|System
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.MaxSize"
+name|CachedConstants
+operator|.
+name|MAX_SIZE_SYS_PROP
 argument_list|)
 decl_stmt|;
 if|if
@@ -2570,7 +2580,9 @@ name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
 argument_list|)
 decl_stmt|;
 if|if
@@ -2644,7 +2656,9 @@ name|SystemPropertyAction
 operator|.
 name|getPropertyOrNull
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.CipherTransformation"
+name|CachedConstants
+operator|.
+name|CIPHER_TRANSFORMATION_SYS_PROP
 argument_list|)
 expr_stmt|;
 block|}

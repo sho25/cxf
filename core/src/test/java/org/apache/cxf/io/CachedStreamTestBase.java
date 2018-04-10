@@ -983,7 +983,9 @@ name|System
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
 argument_list|)
 decl_stmt|;
 try|try
@@ -992,7 +994,9 @@ name|System
 operator|.
 name|clearProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
 argument_list|)
 expr_stmt|;
 name|reloadDefaultProperties
@@ -1030,7 +1034,9 @@ name|System
 operator|.
 name|setProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
 argument_list|,
 literal|"4"
 argument_list|)
@@ -1098,7 +1104,9 @@ name|System
 operator|.
 name|setProperty
 argument_list|(
-literal|"org.apache.cxf.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
 argument_list|,
 name|old
 argument_list|)
@@ -1185,7 +1193,9 @@ name|b
 operator|.
 name|getProperty
 argument_list|(
-literal|"bus.io.CachedOutputStream.Threshold"
+name|CachedConstants
+operator|.
+name|THRESHOLD_BUS_PROP
 argument_list|)
 argument_list|)
 operator|.
@@ -1202,7 +1212,9 @@ name|b
 operator|.
 name|getProperty
 argument_list|(
-literal|"bus.io.CachedOutputStream.MaxSize"
+name|CachedConstants
+operator|.
+name|MAX_SIZE_BUS_PROP
 argument_list|)
 argument_list|)
 operator|.
@@ -1219,7 +1231,9 @@ name|b
 operator|.
 name|getProperty
 argument_list|(
-literal|"bus.io.CachedOutputStream.CipherTransformation"
+name|CachedConstants
+operator|.
+name|CIPHER_TRANSFORMATION_BUS_PROP
 argument_list|)
 argument_list|)
 operator|.
