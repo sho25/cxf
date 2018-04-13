@@ -894,7 +894,7 @@ literal|"-"
 operator|+
 name|ToolConstants
 operator|.
-name|CFG_MARK_GENERATED
+name|CFG_MARK_GENERATED_OPTION
 argument_list|)
 expr_stmt|;
 name|addIfTrue
@@ -913,7 +913,7 @@ literal|"-"
 operator|+
 name|ToolConstants
 operator|.
-name|CFG_SUPPRESS_GENERATED_DATE
+name|CFG_SUPPRESS_GENERATED_DATE_OPTION
 argument_list|)
 expr_stmt|;
 name|addIfNotNull

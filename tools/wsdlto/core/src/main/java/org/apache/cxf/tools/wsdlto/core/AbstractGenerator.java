@@ -762,7 +762,9 @@ argument_list|)
 expr_stmt|;
 name|setAttributes
 argument_list|(
-literal|"markGenerated"
+name|ToolConstants
+operator|.
+name|CFG_MARK_GENERATED
 argument_list|,
 name|env
 operator|.
@@ -776,7 +778,9 @@ argument_list|)
 expr_stmt|;
 name|setAttributes
 argument_list|(
-literal|"suppressGeneratedDate"
+name|ToolConstants
+operator|.
+name|CFG_SUPPRESS_GENERATED_DATE
 argument_list|,
 name|env
 operator|.
