@@ -78,6 +78,7 @@ comment|/**  * Swagger UI resource locator  */
 end_comment
 
 begin_class
+specifier|public
 class|class
 name|SwaggerUiResourceLocator
 block|{
@@ -86,6 +87,7 @@ specifier|final
 name|String
 name|swaggerUiRoot
 decl_stmt|;
+specifier|public
 name|SwaggerUiResourceLocator
 parameter_list|(
 name|String
@@ -100,6 +102,7 @@ name|swaggerUiRoot
 expr_stmt|;
 block|}
 comment|/**      * Locate Swagger UI resource corresponding to resource path      * @param resourcePath resource path      * @return Swagger UI resource URL      * @throws MalformedURLException      */
+specifier|public
 name|URL
 name|locate
 parameter_list|(
@@ -166,6 +169,7 @@ argument_list|()
 return|;
 block|}
 comment|/**      * Checks the existence of the Swagger UI resource corresponding to resource path      * @param resourcePath resource path      * @return "true" if Swagger UI resource exists, "false" otherwise      */
+specifier|public
 name|boolean
 name|exists
 parameter_list|(
