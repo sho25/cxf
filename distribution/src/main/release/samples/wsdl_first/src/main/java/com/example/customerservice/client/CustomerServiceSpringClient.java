@@ -84,6 +84,11 @@ operator|.
 name|testCustomerService
 argument_list|()
 expr_stmt|;
+name|context
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|System
 operator|.
 name|exit
