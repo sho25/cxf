@@ -520,50 +520,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|//
-comment|// This test fails with the IBM JDK 7
-comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
-comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
-comment|// allows us to use the existing IVParameterSpec class.
-comment|//
-if|if
-condition|(
-literal|"IBM Corporation"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.vendor"
-argument_list|)
-argument_list|)
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|!=
-literal|null
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"1.7"
-argument_list|)
-condition|)
-block|{
-return|return;
-block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -736,50 +692,6 @@ if|if
 condition|(
 operator|!
 name|unrestrictedPoliciesInstalled
-condition|)
-block|{
-return|return;
-block|}
-comment|//
-comment|// This test fails with the IBM JDK 7
-comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
-comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
-comment|// allows us to use the existing IVParameterSpec class.
-comment|//
-if|if
-condition|(
-literal|"IBM Corporation"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.vendor"
-argument_list|)
-argument_list|)
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|!=
-literal|null
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"1.7"
-argument_list|)
 condition|)
 block|{
 return|return;
@@ -960,50 +872,6 @@ condition|)
 block|{
 return|return;
 block|}
-comment|//
-comment|// This test fails with the IBM JDK 7
-comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
-comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
-comment|// allows us to use the existing IVParameterSpec class.
-comment|//
-if|if
-condition|(
-literal|"IBM Corporation"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.vendor"
-argument_list|)
-argument_list|)
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|!=
-literal|null
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"1.7"
-argument_list|)
-condition|)
-block|{
-return|return;
-block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -1176,50 +1044,6 @@ if|if
 condition|(
 operator|!
 name|unrestrictedPoliciesInstalled
-condition|)
-block|{
-return|return;
-block|}
-comment|//
-comment|// This test fails with the IBM JDK 7
-comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
-comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
-comment|// allows us to use the existing IVParameterSpec class.
-comment|//
-if|if
-condition|(
-literal|"IBM Corporation"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.vendor"
-argument_list|)
-argument_list|)
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|!=
-literal|null
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"1.7"
-argument_list|)
 condition|)
 block|{
 return|return;
@@ -1417,50 +1241,6 @@ if|if
 condition|(
 operator|!
 name|unrestrictedPoliciesInstalled
-condition|)
-block|{
-return|return;
-block|}
-comment|//
-comment|// This test fails with the IBM JDK 7
-comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
-comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
-comment|// allows us to use the existing IVParameterSpec class.
-comment|//
-if|if
-condition|(
-literal|"IBM Corporation"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.vendor"
-argument_list|)
-argument_list|)
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|!=
-literal|null
-operator|&&
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"1.7"
-argument_list|)
 condition|)
 block|{
 return|return;
