@@ -31,16 +31,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Base64
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|security
@@ -162,6 +152,22 @@ operator|.
 name|util
 operator|.
 name|KeyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|utils
+operator|.
+name|XMLUtils
 import|;
 end_import
 
@@ -384,10 +390,7 @@ name|input
 argument_list|)
 decl_stmt|;
 return|return
-name|Base64
-operator|.
-name|getMimeEncoder
-argument_list|()
+name|XMLUtils
 operator|.
 name|encodeToString
 argument_list|(

@@ -45,16 +45,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Base64
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Collection
 import|;
 end_import
@@ -787,6 +777,22 @@ name|Base64DecodingException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|utils
+operator|.
+name|XMLUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -1132,10 +1138,7 @@ condition|)
 block|{
 name|nonce
 operator|=
-name|Base64
-operator|.
-name|getMimeEncoder
-argument_list|()
+name|XMLUtils
 operator|.
 name|encodeToString
 argument_list|(
@@ -1902,10 +1905,7 @@ name|principal
 operator|.
 name|setNonce
 argument_list|(
-name|Base64
-operator|.
-name|getMimeDecoder
-argument_list|()
+name|XMLUtils
 operator|.
 name|decode
 argument_list|(
