@@ -41,6 +41,22 @@ name|ComplexImpl
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingFeature
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -80,6 +96,10 @@ argument_list|(
 name|address
 argument_list|,
 name|complexImpl
+argument_list|,
+operator|new
+name|LoggingFeature
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

@@ -13,6 +13,32 @@ name|server
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingFeature
+import|;
+end_import
+
 begin_comment
 comment|//import org.apache.cxf.aegis.databinding.AegisDatabinding;
 end_comment
@@ -77,6 +103,20 @@ operator|.
 name|setServiceBean
 argument_list|(
 name|helloworldImpl
+argument_list|)
+expr_stmt|;
+name|svrFactory
+operator|.
+name|setFeatures
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
+operator|new
+name|LoggingFeature
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//svrFactory.getServiceFactory().setDataBinding(new AegisDatabinding());
