@@ -1070,17 +1070,6 @@ name|getPath
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// see https://github.com/swagger-api/swagger-core/issues/2646
-if|if
-condition|(
-name|getBooksOp
-operator|.
-name|getProduces
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
 name|assertEquals
 argument_list|(
 name|MediaType
@@ -1093,7 +1082,6 @@ name|getProduces
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 name|List
 argument_list|<
 name|Parameter
