@@ -1587,7 +1587,7 @@ block|}
 specifier|public
 name|Iterator
 argument_list|<
-name|?
+name|String
 argument_list|>
 name|getPrefixes
 parameter_list|(
