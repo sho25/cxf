@@ -529,8 +529,9 @@ specifier|final
 name|Long
 name|RETRANSMISSION_INTERVAL
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)

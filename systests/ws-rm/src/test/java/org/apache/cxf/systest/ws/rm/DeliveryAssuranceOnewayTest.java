@@ -640,8 +640,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1000
 argument_list|)
@@ -937,8 +938,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)
@@ -1179,8 +1181,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)
@@ -1431,8 +1434,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)
@@ -1876,8 +1880,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)
@@ -2096,8 +2101,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)

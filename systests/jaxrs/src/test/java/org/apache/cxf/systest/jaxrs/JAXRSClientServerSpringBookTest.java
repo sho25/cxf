@@ -773,8 +773,9 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)

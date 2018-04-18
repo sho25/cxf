@@ -672,8 +672,9 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|42
 argument_list|)

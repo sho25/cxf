@@ -1716,8 +1716,9 @@ control|)
 block|{
 name|assertTrue
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(
@@ -2506,8 +2507,9 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(

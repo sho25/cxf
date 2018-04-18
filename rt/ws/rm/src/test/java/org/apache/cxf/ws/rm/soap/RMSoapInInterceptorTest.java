@@ -368,8 +368,9 @@ specifier|final
 name|Long
 name|ONE
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)
@@ -388,8 +389,9 @@ specifier|final
 name|Long
 name|MSG2_MESSAGE_NUMBER
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2
 argument_list|)

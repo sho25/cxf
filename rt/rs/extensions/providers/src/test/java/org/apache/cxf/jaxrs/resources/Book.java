@@ -215,8 +215,9 @@ argument_list|()
 operator|*
 literal|37
 operator|+
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|id
 argument_list|)
@@ -283,8 +284,9 @@ block|{
 name|Long
 name|i1
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|getId
 argument_list|()
@@ -293,8 +295,9 @@ decl_stmt|;
 name|Long
 name|i2
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|b
 operator|.

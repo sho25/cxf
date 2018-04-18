@@ -498,8 +498,9 @@ specifier|final
 name|Integer
 name|value
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)

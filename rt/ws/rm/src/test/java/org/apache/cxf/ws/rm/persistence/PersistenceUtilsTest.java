@@ -307,8 +307,9 @@ name|range
 operator|.
 name|setLower
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)
@@ -318,8 +319,9 @@ name|range
 operator|.
 name|setUpper
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)

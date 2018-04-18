@@ -548,8 +548,9 @@ name|item
 operator|.
 name|setKey
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|42
 argument_list|)
@@ -701,8 +702,9 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|5
 argument_list|)

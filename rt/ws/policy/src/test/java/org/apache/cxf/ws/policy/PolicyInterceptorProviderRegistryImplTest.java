@@ -194,8 +194,9 @@ operator|.
 name|createNiceControl
 argument_list|()
 expr_stmt|;
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|4
 argument_list|)

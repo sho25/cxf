@@ -714,8 +714,9 @@ name|book
 operator|.
 name|setId
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|123
 argument_list|)

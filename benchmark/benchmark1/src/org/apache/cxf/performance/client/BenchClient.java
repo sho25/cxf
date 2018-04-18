@@ -456,7 +456,7 @@ operator|.
 name|getBenchmark
 argument_list|()
 expr_stmt|;
-comment|/*options.setProperty(org.apache.axis2.transport.http.HTTPConstants.SO_TIMEOUT,new Integer(480000));         options.setProperty(org.apache.axis2.transport.http.HTTPConstants.CONNECTION_TIMEOUT,new Integer(480000));*/
+comment|/*options.setProperty(org.apache.axis2.transport.http.HTTPConstants.SO_TIMEOUT,Integer.valueOf(480000));         options.setProperty(org.apache.axis2.transport.http.HTTPConstants.CONNECTION_TIMEOUT,Integer.valueOf(480000));*/
 block|}
 comment|//URL or port of service
 comment|//total number of elements to send (default 10K)
@@ -1308,8 +1308,9 @@ index|[
 name|i
 index|]
 operator|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|i
 argument_list|)
@@ -1359,8 +1360,9 @@ index|[
 name|i
 index|]
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|i
 argument_list|)

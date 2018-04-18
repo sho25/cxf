@@ -501,8 +501,9 @@ condition|)
 block|{
 name|javaVersionNum
 operator|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|javaVersion
 operator|.
@@ -522,8 +523,9 @@ else|else
 block|{
 name|javaVersionNum
 operator|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|javaVersion
 argument_list|)

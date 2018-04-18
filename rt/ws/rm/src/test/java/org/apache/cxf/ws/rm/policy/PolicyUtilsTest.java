@@ -373,8 +373,9 @@ name|iat
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)
@@ -521,8 +522,9 @@ name|aiat
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|7200000
 argument_list|)
@@ -539,8 +541,9 @@ name|cfg0
 operator|.
 name|setInactivityTimeout
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3600000
 argument_list|)
@@ -608,8 +611,9 @@ name|abri
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|20000
 argument_list|)
@@ -626,8 +630,9 @@ name|cfg0
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|10000
 argument_list|)
@@ -699,8 +704,9 @@ name|aai
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)
@@ -855,8 +861,9 @@ name|cfg
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3000
 argument_list|)
@@ -1039,8 +1046,9 @@ name|bbri
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|2000
 argument_list|)

@@ -808,8 +808,9 @@ decl_stmt|;
 name|Integer
 name|ushortValue
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|123
 argument_list|)
@@ -875,8 +876,9 @@ decl_stmt|;
 name|Integer
 name|longValue
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 operator|-
 literal|1234567
@@ -1003,8 +1005,9 @@ decl_stmt|;
 name|Long
 name|longlongValue
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|"-12345678900"
 argument_list|)
@@ -1137,8 +1140,9 @@ decl_stmt|;
 name|Float
 name|floatValue
 init|=
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|float
@@ -1207,8 +1211,9 @@ decl_stmt|;
 name|Double
 name|doubleValue
 init|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 literal|987654.321
 argument_list|)

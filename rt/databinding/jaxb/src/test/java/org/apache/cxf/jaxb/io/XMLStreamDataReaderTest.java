@@ -1062,8 +1062,9 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|1.0f
 argument_list|)

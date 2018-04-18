@@ -359,8 +359,9 @@ name|testUtilities
 operator|.
 name|javaToJS
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|1776
 argument_list|)

@@ -1587,8 +1587,9 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|111
 argument_list|)
@@ -1704,8 +1705,9 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|111
 argument_list|)

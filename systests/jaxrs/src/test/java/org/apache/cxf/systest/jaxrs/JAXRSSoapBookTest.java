@@ -2671,8 +2671,9 @@ name|proxy
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|"123"
 argument_list|)
@@ -2737,8 +2738,9 @@ name|proxy
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|"123"
 argument_list|)
@@ -5455,8 +5457,9 @@ name|store
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|123
 argument_list|)
@@ -5663,8 +5666,9 @@ name|store
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|123
 argument_list|)
@@ -5955,8 +5959,9 @@ name|proxy
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|"123"
 argument_list|)
@@ -6126,8 +6131,9 @@ name|proxy
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|"123"
 argument_list|)
@@ -6303,8 +6309,9 @@ name|proxy
 operator|.
 name|getBook
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|param
 argument_list|)

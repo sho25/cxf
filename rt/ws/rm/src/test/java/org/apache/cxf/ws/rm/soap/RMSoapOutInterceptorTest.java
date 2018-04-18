@@ -480,8 +480,9 @@ specifier|final
 name|Long
 name|ONE
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)
@@ -492,8 +493,9 @@ specifier|final
 name|Long
 name|TEN
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)

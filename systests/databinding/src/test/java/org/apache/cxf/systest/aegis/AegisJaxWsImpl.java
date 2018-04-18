@@ -193,8 +193,9 @@ name|fake
 operator|.
 name|setKey
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|33
 argument_list|)

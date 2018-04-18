@@ -567,8 +567,9 @@ name|invoke
 argument_list|(
 name|inputPartObject
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|314159
 argument_list|)

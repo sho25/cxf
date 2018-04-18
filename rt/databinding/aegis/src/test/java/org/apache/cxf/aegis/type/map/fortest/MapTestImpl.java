@@ -354,8 +354,9 @@ name|put
 argument_list|(
 literal|"key"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|12
 argument_list|)

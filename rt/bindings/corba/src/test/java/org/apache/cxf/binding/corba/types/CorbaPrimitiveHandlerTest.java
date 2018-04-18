@@ -1021,8 +1021,9 @@ block|{
 name|Integer
 name|val
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|123456
 argument_list|)
@@ -1150,8 +1151,9 @@ block|{
 name|Integer
 name|val
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|654321
 argument_list|)
@@ -1279,8 +1281,9 @@ block|{
 name|Long
 name|val
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|123456789
 argument_list|)
@@ -1408,8 +1411,9 @@ block|{
 name|Long
 name|val
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|987654321
 argument_list|)
@@ -1666,8 +1670,9 @@ block|{
 name|Double
 name|val
 init|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 literal|123456.789
 argument_list|)

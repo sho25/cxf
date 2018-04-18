@@ -371,8 +371,9 @@ argument_list|()
 operator|.
 name|setAcknowledgementInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -528,8 +529,9 @@ argument_list|()
 operator|.
 name|setBaseRetransmissionInterval
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|5000
 argument_list|)

@@ -485,8 +485,9 @@ name|client
 operator|.
 name|updateInteger
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|20
 argument_list|)

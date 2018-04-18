@@ -332,8 +332,9 @@ index|[
 literal|1
 index|]
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|42
 argument_list|)

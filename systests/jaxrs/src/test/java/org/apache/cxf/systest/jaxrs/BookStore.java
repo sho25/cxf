@@ -7824,8 +7824,9 @@ name|books
 operator|.
 name|get
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|id
 argument_list|)
@@ -8649,8 +8650,9 @@ name|books
 operator|.
 name|get
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|id
 argument_list|)
@@ -8720,8 +8722,9 @@ name|theBookId
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|theBookId
 argument_list|)

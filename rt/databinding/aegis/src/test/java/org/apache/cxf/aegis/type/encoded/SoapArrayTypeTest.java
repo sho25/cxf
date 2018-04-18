@@ -861,8 +861,9 @@ index|[]
 block|{
 literal|42
 block|,
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|42.42f
 argument_list|)

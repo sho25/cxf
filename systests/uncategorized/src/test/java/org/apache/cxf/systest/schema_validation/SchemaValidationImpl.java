@@ -319,8 +319,9 @@ name|floatIntStringList
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|2
 argument_list|)
@@ -330,8 +331,9 @@ name|floatIntStringList
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 literal|2.5f
 argument_list|)

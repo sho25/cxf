@@ -1377,8 +1377,9 @@ name|BigDecimal
 operator|.
 name|valueOf
 argument_list|(
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|min
 operator|.
@@ -1453,8 +1454,9 @@ name|BigDecimal
 operator|.
 name|valueOf
 argument_list|(
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|max
 operator|.

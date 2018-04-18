@@ -180,8 +180,9 @@ operator|.
 name|hashCode
 argument_list|()
 operator|+
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|id
 argument_list|)

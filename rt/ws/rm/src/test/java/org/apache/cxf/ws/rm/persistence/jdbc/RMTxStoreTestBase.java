@@ -404,8 +404,9 @@ specifier|final
 name|Long
 name|ZERO
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -416,8 +417,9 @@ specifier|final
 name|Long
 name|ONE
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)
@@ -428,8 +430,9 @@ specifier|final
 name|Long
 name|TEN
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)
@@ -556,8 +559,9 @@ name|range
 operator|.
 name|setLower
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3
 argument_list|)
@@ -6035,8 +6039,9 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3
 argument_list|)
