@@ -413,14 +413,78 @@ name|emptyDocument
 decl_stmt|;
 static|static
 block|{
+try|try
+block|{
+name|Method
+index|[]
+name|methods
+init|=
+name|DOMUtils
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
+operator|.
+name|loadClass
+argument_list|(
+literal|"com.sun.xml.messaging.saaj.soap.SOAPDocumentImpl"
+argument_list|)
+operator|.
+name|getMethods
+argument_list|()
+decl_stmt|;
+for|for
+control|(
+name|Method
+name|method
+range|:
+name|methods
+control|)
+block|{
 if|if
 condition|(
-name|JavaUtils
+name|method
 operator|.
-name|isJava9Compatible
+name|getName
 argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"register"
+argument_list|)
 condition|)
 block|{
+comment|//this is the 1.4+ SAAJ impl
+name|setJava9SAAJ
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+break|break;
+block|}
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|cnfe
+parameter_list|)
+block|{
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|DOMUtils
+operator|.
+name|class
+argument_list|)
+operator|.
+name|finest
+argument_list|(
+literal|"can't load class com.sun.xml.messaging.saaj.soap.SOAPDocumentImpl"
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|Method
@@ -476,7 +540,7 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
-name|cnfe
+name|cnfe1
 parameter_list|)
 block|{
 name|LogUtils
@@ -851,13 +915,13 @@ name|createDocument
 argument_list|()
 expr_stmt|;
 comment|// uncomment this to see if anything is actually setting anything into the empty doc
-comment|/*             final Document doc  = createDocument();             emptyDocument = (Document)org.apache.cxf.common.util.ProxyHelper.getProxy(                 DOMUtils.class.getClassLoader(),                  new Class<?>[] {Document.class},                  new java.lang.reflect.InvocationHandler() {                     @Override                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {                         if (method.getName().contains("create")) {                             return method.invoke(doc, args);                         }                         throw new IllegalStateException("Cannot modify factory document");                     }                 });             */
+comment|/*             final Document doc  = createDocument();             emptyDocument = (Document)org.apache.cxf.common.util.ProxyHelper.getProxy(                 DOMUtils.class.getClassLoader(),                 new Class<?>[] {Document.class},                 new java.lang.reflect.InvocationHandler() {                     @Override                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {                         if (method.getName().contains("create")) {                             return method.invoke(doc, args);                         }                         throw new IllegalStateException("Cannot modify factory document");                     }                 });             */
 block|}
 return|return
 name|emptyDocument
 return|;
 block|}
-comment|/**      * Returns a static Document that should always be "empty".  It's useful as a factory for       * for creating Elements and other nodes that will be traversed later and don't need to       * be attached into a document       * @return      */
+comment|/**      * Returns a static Document that should always be "empty".  It's useful as a factory for      * for creating Elements and other nodes that will be traversed later and don't need to      * be attached into a document      * @return      */
 specifier|public
 specifier|static
 name|Document
