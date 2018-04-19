@@ -384,8 +384,9 @@ comment|//CXF corba maps the XML char type to a Byte so we need to provide the s
 name|Byte
 name|byteValue
 init|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -417,8 +418,9 @@ decl_stmt|;
 name|Byte
 name|byteResult
 init|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|result
 argument_list|)
@@ -625,8 +627,9 @@ block|{
 name|Byte
 name|val
 init|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -757,8 +760,9 @@ block|{
 name|Short
 name|val
 init|=
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -889,8 +893,9 @@ block|{
 name|Short
 name|val
 init|=
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short

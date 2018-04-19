@@ -2119,8 +2119,9 @@ name|t
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|t
 argument_list|)

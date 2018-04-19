@@ -3195,8 +3195,9 @@ name|bean
 operator|.
 name|setBigByte
 argument_list|(
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -3231,8 +3232,9 @@ decl_stmt|;
 name|Byte
 name|bb
 init|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte

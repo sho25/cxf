@@ -2940,8 +2940,9 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(
