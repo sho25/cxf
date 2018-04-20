@@ -3114,7 +3114,11 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"-mark-generated"
+literal|"-"
+operator|+
+name|ToolConstants
+operator|.
+name|CFG_MARK_GENERATED_OPTION
 block|}
 argument_list|,
 literal|0
