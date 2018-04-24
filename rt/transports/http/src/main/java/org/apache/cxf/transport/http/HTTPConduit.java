@@ -5883,9 +5883,9 @@ name|writeCacheTo
 argument_list|(
 name|b
 argument_list|,
-literal|16
+literal|16L
 operator|*
-literal|1024
+literal|1024L
 argument_list|)
 expr_stmt|;
 name|LOG
