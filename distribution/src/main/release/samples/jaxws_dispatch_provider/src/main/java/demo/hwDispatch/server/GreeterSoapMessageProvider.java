@@ -173,6 +173,8 @@ operator|.
 name|newInstance
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -183,7 +185,8 @@ name|getResourceAsStream
 argument_list|(
 literal|"/GreetMeDocLiteralResp1.xml"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|response
 operator|=
 name|factory
@@ -195,11 +198,7 @@ argument_list|,
 name|is
 argument_list|)
 expr_stmt|;
-name|is
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(

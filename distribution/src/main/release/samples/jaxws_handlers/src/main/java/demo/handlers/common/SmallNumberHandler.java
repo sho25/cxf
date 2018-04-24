@@ -15,16 +15,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|xml
@@ -292,6 +282,9 @@ operator|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|payload
 operator|)
@@ -422,6 +415,9 @@ operator|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|payload
 operator|)
@@ -527,24 +523,6 @@ operator|.
 name|println
 argument_list|(
 literal|"LogicalHandler close called"
-argument_list|)
-expr_stmt|;
-block|}
-specifier|public
-name|void
-name|init
-parameter_list|(
-name|Map
-name|config
-parameter_list|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"LogicalHandler init called"
 argument_list|)
 expr_stmt|;
 block|}
