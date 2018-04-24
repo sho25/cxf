@@ -496,7 +496,7 @@ name|charset
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|!=
 operator|-
@@ -515,7 +515,7 @@ name|charset
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 argument_list|)
 operator|.
@@ -624,7 +624,7 @@ name|enc
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 decl_stmt|;
 if|if
