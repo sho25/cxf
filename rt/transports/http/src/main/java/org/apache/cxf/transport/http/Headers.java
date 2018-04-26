@@ -503,7 +503,6 @@ name|ALLOW_LOGGING_SENSITIVE_HEADERS
 init|=
 literal|"allow.logging.sensitive.headers"
 decl_stmt|;
-comment|/**      * Known HTTP headers whose values have to be represented as individual HTTP headers      */
 specifier|private
 specifier|static
 specifier|final
