@@ -295,9 +295,7 @@ argument_list|(
 name|JMS_ENDPOINT_URI
 argument_list|)
 expr_stmt|;
-name|HelloWorld
-name|client
-init|=
+return|return
 name|factory
 operator|.
 name|create
@@ -306,9 +304,6 @@ name|HelloWorld
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-return|return
-name|client
 return|;
 block|}
 block|}
