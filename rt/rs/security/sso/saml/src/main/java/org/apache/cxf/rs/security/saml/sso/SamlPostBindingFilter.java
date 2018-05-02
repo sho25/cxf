@@ -821,9 +821,8 @@ block|}
 name|String
 name|sigAlgo
 init|=
-name|SSOConstants
-operator|.
-name|RSA_SHA1
+name|getSignatureAlgorithm
+argument_list|()
 decl_stmt|;
 name|String
 name|pubKeyAlgo
