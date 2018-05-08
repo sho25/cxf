@@ -987,6 +987,14 @@ operator|.
 name|getSignatureVerifier
 argument_list|(
 name|key
+argument_list|,
+name|jwt
+operator|.
+name|getJwsHeaders
+argument_list|()
+operator|.
+name|getSignatureAlgorithm
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
