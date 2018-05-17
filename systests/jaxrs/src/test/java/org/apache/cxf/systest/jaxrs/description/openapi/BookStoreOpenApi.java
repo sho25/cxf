@@ -490,7 +490,7 @@ name|Operation
 argument_list|(
 name|description
 operator|=
-literal|"Get book by Id"
+literal|"Delete book by Id"
 argument_list|,
 name|responses
 operator|=
