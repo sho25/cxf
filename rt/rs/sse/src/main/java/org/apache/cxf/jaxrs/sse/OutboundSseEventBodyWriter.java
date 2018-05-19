@@ -760,6 +760,13 @@ name|NEW_LINE
 argument_list|)
 expr_stmt|;
 block|}
+name|os
+operator|.
+name|write
+argument_list|(
+name|NEW_LINE
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|SuppressWarnings

@@ -1455,6 +1455,10 @@ operator|!
 name|resumedByApplication
 operator|&&
 operator|!
+name|isDone
+argument_list|()
+operator|&&
+operator|!
 name|cont
 operator|.
 name|isPending
