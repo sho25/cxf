@@ -30,6 +30,15 @@ name|OUTPUT_DIRECTORY_SYS_PROP
 init|=
 literal|"org.apache.cxf.io.CachedOutputStream.OutputDirectory"
 decl_stmt|;
+comment|/**      * The directory name for storing the temporary files. None is specified by default.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|OUTPUT_DIRECTORY_BUS_PROP
+init|=
+literal|"bus.io.CachedOutputStream.OutputDirectory"
+decl_stmt|;
 comment|/**      * The threshold value in bytes to switch from memory to file caching. The default value is 128K for      * CachedOutputStream and 64K for CachedWriter.      */
 specifier|public
 specifier|static

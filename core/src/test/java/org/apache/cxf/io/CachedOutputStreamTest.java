@@ -566,6 +566,15 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
+name|System
+operator|.
+name|clearProperty
+argument_list|(
+name|CachedConstants
+operator|.
+name|THRESHOLD_SYS_PROP
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|old
