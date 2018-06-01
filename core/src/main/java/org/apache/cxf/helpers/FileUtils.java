@@ -610,6 +610,8 @@ literal|0
 condition|)
 block|{
 comment|//all the files are gone, we can remove the shutdownhook and reset
+try|try
+block|{
 name|Runtime
 operator|.
 name|getRuntime
@@ -625,6 +627,15 @@ operator|.
 name|run
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IllegalStateException
+name|ex
+parameter_list|)
+block|{
+comment|// The JVM is already shutting down so do nothing
+block|}
 name|shutdownHook
 operator|=
 literal|null
