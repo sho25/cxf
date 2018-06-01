@@ -63,9 +63,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
+name|cxf
 operator|.
-name|lang3
+name|common
+operator|.
+name|util
 operator|.
 name|StringUtils
 import|;
