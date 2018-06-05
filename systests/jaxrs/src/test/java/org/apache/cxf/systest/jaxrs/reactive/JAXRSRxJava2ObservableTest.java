@@ -163,6 +163,18 @@ end_import
 
 begin_import
 import|import
+name|io
+operator|.
+name|reactivex
+operator|.
+name|disposables
+operator|.
+name|Disposable
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|junit
@@ -330,6 +342,9 @@ name|HelloWorldBean
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|Disposable
+name|d
+init|=
 name|obs
 operator|.
 name|subscribe
@@ -345,7 +360,22 @@ name|v
 expr_stmt|;
 block|}
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+if|if
+condition|(
+name|d
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Subscribe did not return a Disposable"
+argument_list|)
+throw|;
+block|}
 name|Thread
 operator|.
 name|sleep

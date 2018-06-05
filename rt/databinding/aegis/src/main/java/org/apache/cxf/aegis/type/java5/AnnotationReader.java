@@ -1285,7 +1285,7 @@ name|method
 init|=
 name|ann
 operator|.
-name|getClass
+name|annotationType
 argument_list|()
 operator|.
 name|getMethod
@@ -1416,7 +1416,7 @@ name|method
 init|=
 name|ann
 operator|.
-name|getClass
+name|annotationType
 argument_list|()
 operator|.
 name|getMethod
@@ -1556,7 +1556,7 @@ name|value
 init|=
 name|ann
 operator|.
-name|getClass
+name|annotationType
 argument_list|()
 operator|.
 name|getMethod

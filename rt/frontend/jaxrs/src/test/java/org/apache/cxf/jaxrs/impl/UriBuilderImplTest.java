@@ -8142,6 +8142,8 @@ name|expected
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testToTemplate
@@ -8167,7 +8169,7 @@ decl_stmt|;
 name|String
 name|expected
 init|=
-literal|"ab/a1/{xy}/3b "
+literal|"ab/a1/{xy}/3b%20"
 decl_stmt|;
 name|String
 name|template

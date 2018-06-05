@@ -698,7 +698,11 @@ name|last
 operator|+
 literal|") --> "
 operator|+
+operator|new
+name|String
+argument_list|(
 name|fragment
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|processFragments
