@@ -319,6 +319,11 @@ specifier|static
 name|String
 name|defaultCipherTransformation
 decl_stmt|;
+specifier|private
+specifier|static
+name|boolean
+name|thresholdSysPropSet
+decl_stmt|;
 static|static
 block|{
 name|String
@@ -2801,11 +2806,35 @@ operator|*
 literal|1024
 expr_stmt|;
 block|}
+else|else
+block|{
+name|thresholdSysPropSet
+operator|=
+literal|true
+expr_stmt|;
+block|}
 block|}
 name|defaultThreshold
 operator|=
 name|i
 expr_stmt|;
+block|}
+end_function
+
+begin_comment
+comment|/**      * Returns true if the default threshold is explicitly set via CachedConstants.THRESHOLD_SYS_PROP      */
+end_comment
+
+begin_function
+specifier|public
+specifier|static
+name|boolean
+name|isThresholdSysPropSet
+parameter_list|()
+block|{
+return|return
+name|thresholdSysPropSet
+return|;
 block|}
 end_function
 
