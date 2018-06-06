@@ -110,7 +110,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"hostname-server-bethal.xml"
+literal|"hostname-server-deprecated.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

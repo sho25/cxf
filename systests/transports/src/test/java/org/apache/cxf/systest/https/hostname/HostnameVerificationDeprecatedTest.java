@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A test for hostname verification when the Java system property "java.protocol.handler.pkgs" is set to   * "com.sun.net.ssl.internal.www.protocol". This means that com.sun.net.ssl.HostnameVerifier is used   * instead of the javax version.  */
+comment|/**  * A test for hostname verification when the Java system property "java.protocol.handler.pkgs" is set to  * "com.sun.net.ssl.internal.www.protocol". This means that com.sun.net.ssl.HostnameVerifier is used  * instead of the javax version.  */
 end_comment
 
 begin_class
@@ -268,7 +268,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"hostname-client-bethal.xml"
+literal|"hostname-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
