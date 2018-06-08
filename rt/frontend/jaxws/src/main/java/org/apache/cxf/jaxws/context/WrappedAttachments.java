@@ -329,6 +329,9 @@ name|a
 operator|.
 name|getClass
 argument_list|()
+operator|.
+name|getComponentType
+argument_list|()
 argument_list|,
 name|attachments
 operator|.
