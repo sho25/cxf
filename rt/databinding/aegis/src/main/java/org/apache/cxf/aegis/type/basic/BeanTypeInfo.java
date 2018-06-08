@@ -1458,10 +1458,7 @@ argument_list|(
 operator|new
 name|PropertyDescriptor
 index|[
-name|pds
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

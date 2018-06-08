@@ -1503,10 +1503,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|methods
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|)

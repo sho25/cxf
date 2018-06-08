@@ -2290,10 +2290,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|list
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 decl_stmt|;

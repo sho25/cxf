@@ -1025,10 +1025,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|interfaces
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

@@ -871,10 +871,7 @@ argument_list|(
 operator|new
 name|Source
 index|[
-name|sources
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|)

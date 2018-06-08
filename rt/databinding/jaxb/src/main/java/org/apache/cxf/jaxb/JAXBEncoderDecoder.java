@@ -3573,16 +3573,7 @@ operator|=
 name|l
 operator|.
 name|toArray
-argument_list|(
-operator|new
-name|Object
-index|[
-name|l
-operator|.
-name|size
 argument_list|()
-index|]
-argument_list|)
 expr_stmt|;
 name|cls
 operator|=

@@ -904,10 +904,7 @@ argument_list|(
 operator|new
 name|Predicate
 index|[
-name|predsList
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 decl_stmt|;
@@ -1042,10 +1039,7 @@ argument_list|(
 operator|new
 name|Predicate
 index|[
-name|predsList
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|)

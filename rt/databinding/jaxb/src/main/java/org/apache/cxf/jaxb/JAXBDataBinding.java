@@ -4692,10 +4692,7 @@ argument_list|(
 operator|new
 name|Method
 index|[
-name|setMethods
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,
@@ -4706,10 +4703,7 @@ argument_list|(
 operator|new
 name|Method
 index|[
-name|getMethods
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,
@@ -4720,10 +4714,7 @@ argument_list|(
 operator|new
 name|Method
 index|[
-name|jaxbMethods
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,
@@ -4734,10 +4725,7 @@ argument_list|(
 operator|new
 name|Field
 index|[
-name|fields
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,

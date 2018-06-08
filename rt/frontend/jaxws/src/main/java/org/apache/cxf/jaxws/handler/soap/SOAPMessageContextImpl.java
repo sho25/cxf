@@ -681,10 +681,7 @@ argument_list|(
 operator|new
 name|Object
 index|[
-name|ret
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

@@ -865,10 +865,7 @@ argument_list|(
 operator|new
 name|AbstractDestination
 index|[
-name|dest2
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

@@ -1373,10 +1373,7 @@ argument_list|(
 operator|new
 name|PropertyDescriptor
 index|[
-name|descriptors
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

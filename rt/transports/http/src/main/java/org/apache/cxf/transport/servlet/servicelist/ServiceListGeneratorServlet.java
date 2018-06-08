@@ -937,10 +937,7 @@ argument_list|(
 operator|new
 name|AbstractDestination
 index|[
-name|soapEndpoints
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
@@ -1022,10 +1019,7 @@ argument_list|(
 operator|new
 name|AbstractDestination
 index|[
-name|restfulDests
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

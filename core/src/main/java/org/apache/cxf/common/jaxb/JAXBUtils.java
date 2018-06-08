@@ -4378,10 +4378,7 @@ argument_list|<
 name|?
 argument_list|>
 index|[
-name|clses
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,

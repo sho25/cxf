@@ -133,10 +133,7 @@ argument_list|(
 operator|new
 name|QName
 index|[
-name|els
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 expr_stmt|;
@@ -203,10 +200,7 @@ argument_list|(
 operator|new
 name|QName
 index|[
-name|k
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 expr_stmt|;

@@ -1072,10 +1072,7 @@ argument_list|(
 operator|new
 name|Selection
 index|[
-name|selections
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

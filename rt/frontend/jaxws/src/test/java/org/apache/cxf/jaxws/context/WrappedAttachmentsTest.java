@@ -323,10 +323,7 @@ argument_list|(
 operator|new
 name|Attachment
 index|[
-name|attachments
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 decl_stmt|;

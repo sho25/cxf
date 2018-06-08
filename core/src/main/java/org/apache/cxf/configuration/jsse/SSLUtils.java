@@ -2604,14 +2604,6 @@ name|boolean
 name|exclude
 parameter_list|)
 block|{
-name|int
-name|numCipherSuites
-init|=
-name|cipherSuitesList
-operator|.
-name|size
-argument_list|()
-decl_stmt|;
 name|String
 index|[]
 name|cipherSuites
@@ -2623,7 +2615,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|numCipherSuites
+literal|0
 index|]
 argument_list|)
 decl_stmt|;

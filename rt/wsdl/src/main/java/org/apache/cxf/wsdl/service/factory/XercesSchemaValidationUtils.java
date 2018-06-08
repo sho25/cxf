@@ -868,10 +868,7 @@ argument_list|(
 operator|new
 name|LSInput
 index|[
-name|inputs
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 argument_list|,

@@ -1651,10 +1651,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|xsdUrls
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
@@ -1809,10 +1806,7 @@ argument_list|(
 operator|new
 name|SAXParseException
 index|[
-name|errors
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
