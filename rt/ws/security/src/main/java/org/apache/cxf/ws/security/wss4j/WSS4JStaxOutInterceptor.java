@@ -1329,10 +1329,7 @@ argument_list|,
 name|outgoingSecurityEventList
 argument_list|)
 expr_stmt|;
-specifier|final
-name|SecurityEventListener
-name|securityEventListener
-init|=
+return|return
 operator|new
 name|SecurityEventListener
 argument_list|()
@@ -1413,9 +1410,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-decl_stmt|;
-return|return
-name|securityEventListener
 return|;
 block|}
 specifier|protected

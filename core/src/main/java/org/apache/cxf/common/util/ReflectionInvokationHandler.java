@@ -1020,7 +1020,6 @@ operator|.
 name|RUNTIME
 argument_list|)
 specifier|public
-specifier|static
 expr|@interface
 name|Optional
 block|{     }
@@ -1039,7 +1038,6 @@ operator|.
 name|RUNTIME
 argument_list|)
 specifier|public
-specifier|static
 expr|@interface
 name|WrapReturn
 block|{
@@ -1071,7 +1069,6 @@ operator|.
 name|RUNTIME
 argument_list|)
 specifier|public
-specifier|static
 expr|@interface
 name|UnwrapParam
 block|{

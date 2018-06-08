@@ -81,10 +81,6 @@ name|ResponseWrapper
 import|;
 end_import
 
-begin_comment
-comment|//CHECKSTYLE:OFF
-end_comment
-
 begin_interface
 annotation|@
 name|WebService
@@ -144,7 +140,6 @@ name|className
 operator|=
 literal|"org.apache.cxf.systest.handlers.types.AddNumbersResponse"
 argument_list|)
-specifier|public
 name|int
 name|addNumbers
 parameter_list|(
@@ -179,10 +174,6 @@ parameter_list|)
 function_decl|;
 block|}
 end_interface
-
-begin_comment
-comment|//CHECKSTYLE:ON
-end_comment
 
 end_unit
 

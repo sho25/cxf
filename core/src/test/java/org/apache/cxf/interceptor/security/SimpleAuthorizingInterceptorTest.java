@@ -428,9 +428,7 @@ name|String
 name|role
 parameter_list|)
 block|{
-name|SimpleAuthorizingInterceptor
-name|in
-init|=
+return|return
 operator|new
 name|SimpleAuthorizingInterceptor
 argument_list|()
@@ -458,9 +456,6 @@ argument_list|)
 return|;
 block|}
 block|}
-decl_stmt|;
-return|return
-name|in
 return|;
 block|}
 annotation|@
