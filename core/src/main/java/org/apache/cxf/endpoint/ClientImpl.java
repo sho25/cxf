@@ -6889,6 +6889,14 @@ name|IllegalEmptyResponseException
 extends|extends
 name|IllegalStateException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
 specifier|public
 name|IllegalEmptyResponseException
 parameter_list|()
