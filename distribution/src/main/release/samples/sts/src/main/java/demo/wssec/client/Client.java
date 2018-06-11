@@ -283,10 +283,7 @@ name|bf
 operator|.
 name|createBus
 argument_list|(
-name|busFile
-operator|.
-name|toString
-argument_list|()
+name|busURL
 argument_list|)
 decl_stmt|;
 name|SpringBusFactory
