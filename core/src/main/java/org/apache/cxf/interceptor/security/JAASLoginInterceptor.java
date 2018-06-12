@@ -824,6 +824,17 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|message
+operator|.
+name|put
+argument_list|(
+literal|"suspend.chain.on.current.interceptor"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
 name|chain
 operator|.
 name|doIntercept
