@@ -468,7 +468,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * A series of invocations with implicitly propogated      * Message Addressing Properties.      */
+comment|/**      * A series of invocations with implicitly propagated      * Message Addressing Properties.      */
 specifier|private
 specifier|static
 name|void
@@ -671,7 +671,7 @@ return|return
 name|maps
 return|;
 block|}
-comment|/**      * A series of invocations with explicitly propogated      * Message Addressing Properties.      */
+comment|/**      * A series of invocations with explicitly propagated      * Message Addressing Properties.      */
 specifier|private
 specifier|static
 name|void
