@@ -1506,15 +1506,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-argument_list|(
-literal|"See CXF-6968"
-argument_list|)
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 specifier|public
 name|void
