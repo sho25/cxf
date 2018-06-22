@@ -5104,6 +5104,10 @@ operator|.
 name|getKeyManagers
 argument_list|()
 decl_stmt|;
+name|KeyManager
+index|[]
+name|configuredKeyManagers
+init|=
 name|org
 operator|.
 name|apache
@@ -5122,7 +5126,7 @@ name|tlsClientParameters
 argument_list|,
 name|keyManagers
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|TrustManager
 index|[]
 name|trustManagers
@@ -5163,7 +5167,7 @@ name|ctx
 operator|.
 name|init
 argument_list|(
-name|keyManagers
+name|configuredKeyManagers
 argument_list|,
 name|trustManagers
 argument_list|,
