@@ -1212,11 +1212,7 @@ name|Handlers
 operator|.
 name|trace
 argument_list|(
-operator|new
-name|HttpContinueReadHandler
-argument_list|(
 name|undertowHTTPHandler
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1240,11 +1236,7 @@ operator|.
 name|getPath
 argument_list|()
 argument_list|,
-operator|new
-name|HttpContinueReadHandler
-argument_list|(
 name|undertowHTTPHandler
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1259,11 +1251,7 @@ operator|.
 name|getPath
 argument_list|()
 argument_list|,
-operator|new
-name|HttpContinueReadHandler
-argument_list|(
 name|undertowHTTPHandler
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1275,7 +1263,11 @@ name|setHandler
 argument_list|(
 name|wrapHandler
 argument_list|(
+operator|new
+name|HttpContinueReadHandler
+argument_list|(
 name|path
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
