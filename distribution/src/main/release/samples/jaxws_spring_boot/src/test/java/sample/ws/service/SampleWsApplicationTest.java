@@ -101,9 +101,9 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|context
+name|web
 operator|.
-name|embedded
+name|server
 operator|.
 name|LocalServerPort
 import|;
