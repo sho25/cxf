@@ -450,6 +450,8 @@ operator|.
 name|getProperty
 argument_list|(
 literal|"exitOnFinish"
+argument_list|,
+literal|"true"
 argument_list|)
 decl_stmt|;
 if|if
