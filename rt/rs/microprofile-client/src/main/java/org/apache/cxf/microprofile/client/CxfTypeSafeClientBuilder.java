@@ -232,6 +232,21 @@ name|ExecutorService
 name|executor
 parameter_list|)
 block|{
+if|if
+condition|(
+literal|null
+operator|==
+name|executor
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"executor must not be null"
+argument_list|)
+throw|;
+block|}
 name|this
 operator|.
 name|executorService
