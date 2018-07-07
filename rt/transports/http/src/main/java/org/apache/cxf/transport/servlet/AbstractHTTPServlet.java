@@ -2740,15 +2740,26 @@ argument_list|,
 name|originalPrefix
 argument_list|)
 expr_stmt|;
+comment|// Although per Mozilla documentation
+comment|// (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host)
+comment|// it should contain one value, Apache's mod_proxy says the comma separated list could
+comment|// be returned (http://httpd.apache.org/docs/2.2/mod/mod_proxy.html). We don't need
+comment|// more than 2 components.
 name|String
 name|outermostHost
 init|=
+name|originalHost
+operator|!=
+literal|null
+condition|?
 operator|(
 name|originalHost
 operator|.
 name|split
 argument_list|(
 literal|","
+argument_list|,
+literal|2
 argument_list|)
 index|[
 literal|0
@@ -2757,6 +2768,8 @@ operator|)
 operator|.
 name|trim
 argument_list|()
+else|:
+name|originalHost
 decl_stmt|;
 name|newRequestUrl
 operator|=
