@@ -892,11 +892,6 @@ name|Exception
 block|{
 name|applicationContext
 operator|.
-name|destroy
-argument_list|()
-expr_stmt|;
-name|applicationContext
-operator|.
 name|close
 argument_list|()
 expr_stmt|;

@@ -352,6 +352,9 @@ literal|"cxfServletRegistration"
 argument_list|)
 specifier|public
 name|ServletRegistrationBean
+argument_list|<
+name|CXFServlet
+argument_list|>
 name|cxfServletRegistration
 parameter_list|()
 block|{
@@ -384,10 +387,14 @@ operator|+
 literal|"/*"
 decl_stmt|;
 name|ServletRegistrationBean
+argument_list|<
+name|CXFServlet
+argument_list|>
 name|registration
 init|=
 operator|new
 name|ServletRegistrationBean
+argument_list|<>
 argument_list|(
 operator|new
 name|CXFServlet

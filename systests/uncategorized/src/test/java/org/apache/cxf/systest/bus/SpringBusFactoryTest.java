@@ -376,7 +376,7 @@ argument_list|)
 expr_stmt|;
 name|ctx
 operator|.
-name|destroy
+name|close
 argument_list|()
 expr_stmt|;
 block|}

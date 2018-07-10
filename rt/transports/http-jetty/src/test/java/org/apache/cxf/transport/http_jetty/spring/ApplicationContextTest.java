@@ -487,11 +487,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|ctx
-operator|.
-name|destroy
-argument_list|()
-expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -540,11 +535,6 @@ expr_stmt|;
 name|ctx
 operator|.
 name|close
-argument_list|()
-expr_stmt|;
-name|ctx
-operator|.
-name|destroy
 argument_list|()
 expr_stmt|;
 block|}

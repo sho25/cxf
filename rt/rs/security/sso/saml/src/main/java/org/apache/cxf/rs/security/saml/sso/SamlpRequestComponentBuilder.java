@@ -495,6 +495,11 @@ return|return
 name|authnRequest
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 specifier|public
 specifier|static
 name|LogoutRequest
