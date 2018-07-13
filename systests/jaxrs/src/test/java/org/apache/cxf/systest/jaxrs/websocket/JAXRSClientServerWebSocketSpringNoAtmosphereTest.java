@@ -142,13 +142,7 @@ name|void
 name|cleanup
 parameter_list|()
 block|{
-name|System
-operator|.
-name|clearProperty
-argument_list|(
-literal|"org.apache.cxf.transport.websocket.atmosphere.disabled"
-argument_list|)
-expr_stmt|;
+comment|//System.clearProperty("org.apache.cxf.transport.websocket.atmosphere.disabled");
 block|}
 specifier|protected
 name|String
