@@ -631,7 +631,10 @@ name|requestedGrant
 argument_list|,
 name|requestedScopes
 argument_list|,
-literal|null
+name|Collections
+operator|.
+name|emptyList
+argument_list|()
 argument_list|)
 return|;
 block|}
