@@ -92,7 +92,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|BookServerOAuth2Grants
+name|BookServerOAuth2GrantsJWT
 extends|extends
 name|AbstractBusTestServerBase
 block|{
@@ -102,13 +102,13 @@ specifier|final
 name|URL
 name|SERVER_CONFIG_FILE
 init|=
-name|BookServerOAuth2Grants
+name|BookServerOAuth2GrantsJWT
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"grants-server.xml"
+literal|"grants-server-jwt.xml"
 argument_list|)
 decl_stmt|;
 specifier|protected
@@ -148,7 +148,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|BookServerOAuth2Grants
+name|BookServerOAuth2GrantsJWT
 argument_list|()
 expr_stmt|;
 block|}
