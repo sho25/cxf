@@ -723,6 +723,19 @@ name|RuntimeException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"Error creating the access token"
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
 comment|// This is done to bypass a Check-Style
 comment|// restriction on a number of return statements
 name|OAuthServiceException
