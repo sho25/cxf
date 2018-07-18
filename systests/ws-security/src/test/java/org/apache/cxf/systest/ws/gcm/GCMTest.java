@@ -426,7 +426,6 @@ specifier|static
 name|Collection
 argument_list|<
 name|TestParam
-index|[]
 argument_list|>
 name|data
 parameter_list|()
@@ -439,8 +438,6 @@ argument_list|(
 operator|new
 name|TestParam
 index|[]
-index|[]
-block|{
 block|{
 operator|new
 name|TestParam
@@ -449,9 +446,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -459,9 +454,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -469,9 +462,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -479,7 +470,6 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,         }
 argument_list|)
 return|;

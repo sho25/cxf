@@ -682,7 +682,6 @@ specifier|static
 name|Collection
 argument_list|<
 name|TestParam
-index|[]
 argument_list|>
 name|data
 parameter_list|()
@@ -695,8 +694,6 @@ argument_list|(
 operator|new
 name|TestParam
 index|[]
-index|[]
-block|{
 block|{
 operator|new
 name|TestParam
@@ -707,9 +704,7 @@ name|PORT2
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -719,9 +714,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -731,9 +724,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -743,9 +734,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -755,9 +744,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -767,9 +754,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -779,9 +764,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -791,9 +774,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -803,9 +784,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -815,9 +794,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -827,9 +804,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -839,9 +814,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -851,9 +824,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -863,9 +834,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -875,9 +844,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -887,9 +854,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -899,9 +864,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -911,9 +874,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -923,9 +884,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -935,9 +894,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -947,9 +904,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -959,9 +914,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -971,9 +924,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -983,9 +934,7 @@ name|PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -995,11 +944,9 @@ name|PORT2
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Endorsing streaming not supported
-comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService", PORT, true)},
-block|{
+comment|// new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService", PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1009,9 +956,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1021,9 +966,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1033,9 +976,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1045,9 +986,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1057,9 +996,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1069,9 +1006,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1081,9 +1016,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1093,9 +1026,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1105,9 +1036,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1117,9 +1046,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1129,9 +1056,7 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1141,16 +1066,14 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Streaming endorsing not working
-comment|// {new TestParam("XC_IPingService", PORT, true)},
-comment|// {new TestParam("XDC_IPingService", PORT, true)},
-comment|// {new TestParam("XDC_IPingService1", PORT, true)},
-comment|// {new TestParam("XDC-ES_IPingService", PORT, true)},
-comment|// {new TestParam("XDC-SEES_IPingService", PORT, true)},
-comment|// {new TestParam("_X_IPingService", PORT, true)},
-block|{
+comment|// new TestParam("XC_IPingService", PORT, true),
+comment|// new TestParam("XDC_IPingService", PORT, true),
+comment|// new TestParam("XDC_IPingService1", PORT, true),
+comment|// new TestParam("XDC-ES_IPingService", PORT, true),
+comment|// new TestParam("XDC-SEES_IPingService", PORT, true),
+comment|// new TestParam("_X_IPingService", PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1160,13 +1083,11 @@ name|PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Streaming endorsing not working
-comment|// {new TestParam("_XD_IPingService", PORT, true)},
-comment|// {new TestParam("_XD-SEES_IPingService", PORT, true)},
-comment|// {new TestParam("_XD-ES_IPingService", PORT, true)},
-block|{
+comment|// new TestParam("_XD_IPingService", PORT, true),
+comment|// new TestParam("_XD-SEES_IPingService", PORT, true),
+comment|// new TestParam("_XD-ES_IPingService", PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1176,12 +1097,10 @@ name|STAX_PORT2
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
 comment|// TODO StAX Policy Validation error caused by incorrect DOM message
-comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
-comment|//               STAX_PORT, false)},
-block|{
+comment|// new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
+comment|//               STAX_PORT, false),
 operator|new
 name|TestParam
 argument_list|(
@@ -1191,9 +1110,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1203,9 +1120,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1215,9 +1130,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1227,9 +1140,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1239,9 +1150,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1251,9 +1160,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1263,9 +1170,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1275,9 +1180,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1287,9 +1190,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1299,9 +1200,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1311,9 +1210,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1323,9 +1220,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1335,9 +1230,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1347,9 +1240,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1359,9 +1250,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1371,9 +1260,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1383,9 +1270,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1395,9 +1280,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1407,9 +1290,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1419,9 +1300,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1431,9 +1310,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1443,9 +1320,7 @@ name|STAX_PORT
 argument_list|,
 literal|false
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1455,12 +1330,10 @@ name|STAX_PORT2
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Endorsing derived keys not supported.
-comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
-comment|//               STAX_PORT, true)},
-block|{
+comment|// new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
+comment|//               STAX_PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1470,9 +1343,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1482,9 +1353,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1494,9 +1363,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1506,9 +1373,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1518,9 +1383,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1530,9 +1393,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1542,9 +1403,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1554,9 +1413,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1566,9 +1423,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1578,9 +1433,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1590,9 +1443,7 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1602,16 +1453,14 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Streaming endorsing not working
-comment|// {new TestParam("XC_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("XDC_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("XDC_IPingService1", STAX_PORT, true)},
-comment|// {new TestParam("XDC-ES_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("XDC-SEES_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("_X_IPingService", STAX_PORT, true)},
-block|{
+comment|// new TestParam("XC_IPingService", STAX_PORT, true),
+comment|// new TestParam("XDC_IPingService", STAX_PORT, true),
+comment|// new TestParam("XDC_IPingService1", STAX_PORT, true),
+comment|// new TestParam("XDC-ES_IPingService", STAX_PORT, true),
+comment|// new TestParam("XDC-SEES_IPingService", STAX_PORT, true),
+comment|// new TestParam("_X_IPingService", STAX_PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1621,13 +1470,11 @@ name|STAX_PORT
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
 comment|// TODO Streaming endorsing not working
-comment|// {new TestParam("_XD_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("_XD-SEES_IPingService", STAX_PORT, true)},
-comment|// {new TestParam("_XD-ES_IPingService", STAX_PORT, true)},
-block|{
+comment|// new TestParam("_XD_IPingService", STAX_PORT, true),
+comment|// new TestParam("_XD-SEES_IPingService", STAX_PORT, true),
+comment|// new TestParam("_XD-ES_IPingService", STAX_PORT, true),
 operator|new
 name|TestParam
 argument_list|(
@@ -1639,9 +1486,7 @@ literal|false
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1653,9 +1498,7 @@ literal|true
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1667,9 +1510,7 @@ literal|false
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,
-block|{
 operator|new
 name|TestParam
 argument_list|(
@@ -1681,7 +1522,6 @@ literal|true
 argument_list|,
 literal|true
 argument_list|)
-block|}
 block|,         }
 argument_list|)
 return|;
