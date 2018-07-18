@@ -90,7 +90,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|OIDCNegativeServer
+name|UserInfoServerJWT
 extends|extends
 name|AbstractBusTestServerBase
 block|{
@@ -100,13 +100,13 @@ specifier|final
 name|URL
 name|SERVER_CONFIG_FILE
 init|=
-name|OIDCNegativeServer
+name|UserInfoServerJWT
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"oidc-negative-server.xml"
+literal|"userinfo-server-jwt.xml"
 argument_list|)
 decl_stmt|;
 specifier|protected
@@ -146,7 +146,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|OIDCNegativeServer
+name|UserInfoServerJWT
 argument_list|()
 expr_stmt|;
 block|}
