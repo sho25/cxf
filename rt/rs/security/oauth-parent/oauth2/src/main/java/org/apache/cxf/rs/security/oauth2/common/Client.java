@@ -117,6 +117,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|Lob
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|ManyToOne
 import|;
 end_import
@@ -890,6 +900,8 @@ name|EAGER
 argument_list|)
 annotation|@
 name|OrderColumn
+annotation|@
+name|Lob
 specifier|public
 name|List
 argument_list|<
