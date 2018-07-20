@@ -2610,6 +2610,11 @@ name|mu
 init|=
 name|maps
 operator|.
+name|isRequired
+argument_list|()
+operator|||
+name|maps
+operator|.
 name|getMustUnderstand
 argument_list|()
 operator|.
