@@ -1118,7 +1118,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|roles
+name|rolesP
 operator|!=
 literal|null
 condition|)
