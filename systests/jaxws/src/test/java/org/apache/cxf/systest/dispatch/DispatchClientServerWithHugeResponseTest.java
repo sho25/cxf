@@ -171,6 +171,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -1037,7 +1051,7 @@ if|if
 condition|(
 name|t
 operator|instanceof
-name|SoapFault
+name|SOAPFaultException
 condition|)
 block|{
 name|SoapFault
@@ -1046,7 +1060,7 @@ init|=
 operator|(
 name|SoapFault
 operator|)
-name|e
+name|t
 operator|.
 name|getCause
 argument_list|()
@@ -1357,7 +1371,7 @@ if|if
 condition|(
 name|t
 operator|instanceof
-name|SoapFault
+name|SOAPFaultException
 condition|)
 block|{
 name|SoapFault
@@ -1366,7 +1380,7 @@ init|=
 operator|(
 name|SoapFault
 operator|)
-name|e
+name|t
 operator|.
 name|getCause
 argument_list|()
