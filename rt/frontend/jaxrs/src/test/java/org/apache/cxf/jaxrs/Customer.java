@@ -1086,6 +1086,32 @@ parameter_list|)
 block|{      }
 specifier|public
 name|void
+name|testGenericObjectParamDefaultValue
+parameter_list|(
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p1"
+argument_list|)
+name|String
+name|query1
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p2"
+argument_list|)
+annotation|@
+name|DefaultValue
+argument_list|(
+literal|"thequery"
+argument_list|)
+name|String
+name|query2
+parameter_list|)
+block|{      }
+specifier|public
+name|void
 name|testXmlAdapter
 parameter_list|(
 annotation|@
