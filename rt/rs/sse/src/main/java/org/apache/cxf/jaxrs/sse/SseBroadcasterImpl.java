@@ -205,6 +205,7 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|SseBroadcasterImpl
 implements|implements
@@ -326,6 +327,21 @@ argument_list|(
 name|sink
 argument_list|)
 expr_stmt|;
+comment|// The SseEventSinkImpl completes the asynchronous operation on close() method call.
+name|closers
+operator|.
+name|forEach
+argument_list|(
+name|closer
+lambda|->
+name|closer
+operator|.
+name|accept
+argument_list|(
+name|sink
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override
@@ -364,6 +380,26 @@ operator|.
 name|remove
 argument_list|(
 name|sink
+argument_list|)
+expr_stmt|;
+comment|// Propagate the error from SseEventSinkImpl asynchronous context
+name|exceptioners
+operator|.
+name|forEach
+argument_list|(
+name|exceptioner
+lambda|->
+name|exceptioner
+operator|.
+name|accept
+argument_list|(
+name|sink
+argument_list|,
+name|asyncEvent
+operator|.
+name|getThrowable
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -570,20 +606,6 @@ name|subscriber
 operator|.
 name|close
 argument_list|()
-expr_stmt|;
-name|closers
-operator|.
-name|forEach
-argument_list|(
-name|closer
-lambda|->
-name|closer
-operator|.
-name|accept
-argument_list|(
-name|subscriber
-argument_list|)
-argument_list|)
 expr_stmt|;
 block|}
 argument_list|)
