@@ -1716,6 +1716,21 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|JPA_PORT
+operator|.
+name|equals
+argument_list|(
+name|port
+argument_list|)
+condition|)
+block|{
+comment|// We don't run this test for the JPA provider due to:
+comment|// java.sql.BatchUpdateException: data exception: string data, right truncation;
+comment|// table: CLIENT_APPLICATIONCERTIFICATES column: APPLICATIONCERTIFICATES
+return|return;
+block|}
 name|String
 name|address
 init|=
