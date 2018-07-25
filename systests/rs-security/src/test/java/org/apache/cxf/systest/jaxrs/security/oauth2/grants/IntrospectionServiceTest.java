@@ -610,9 +610,10 @@ argument_list|,
 name|JCACHE_PORT
 argument_list|,
 name|JWT_JCACHE_PORT
+argument_list|,
+name|JPA_PORT
 argument_list|)
 return|;
-comment|// TODOJPA_PORT);
 block|}
 annotation|@
 name|org
