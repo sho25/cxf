@@ -918,9 +918,27 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|log
 argument_list|(
-literal|"Error validating the audience parameter"
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"Error validating the audience parameter. Supplied audience {0} "
+operator|+
+literal|"does not match with the registered audiences {1}"
+argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
+name|audienceParam
+block|,
+name|c
+operator|.
+name|getRegisteredAudiences
+argument_list|()
+block|}
 argument_list|)
 expr_stmt|;
 throw|throw
