@@ -55,7 +55,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|Annotation
 import|;
@@ -129,6 +129,7 @@ argument_list|(
 name|item
 operator|.
 name|value
+argument_list|()
 argument_list|)
 return|;
 block|}

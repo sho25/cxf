@@ -561,7 +561,7 @@ argument_list|(
 literal|"book-store"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -733,6 +733,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -753,6 +754,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1031,6 +1033,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1051,6 +1054,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1106,7 +1110,7 @@ argument_list|(
 literal|"book-store"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -1200,6 +1204,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1220,6 +1225,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|not
 argument_list|(
@@ -1241,6 +1247,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1261,6 +1268,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1320,7 +1328,7 @@ argument_list|(
 literal|"book-store"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -1469,6 +1477,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1489,6 +1498,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|not
 argument_list|(
@@ -1510,6 +1520,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1530,6 +1541,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1612,6 +1624,7 @@ literal|3
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1687,6 +1700,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1775,7 +1789,7 @@ argument_list|(
 literal|"book-store"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -1899,6 +1913,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1919,6 +1934,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(

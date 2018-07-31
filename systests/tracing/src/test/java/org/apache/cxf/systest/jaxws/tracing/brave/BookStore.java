@@ -184,7 +184,7 @@ argument_list|(
 literal|"book-store"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
