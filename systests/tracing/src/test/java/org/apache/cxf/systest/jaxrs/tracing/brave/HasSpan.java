@@ -65,7 +65,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|Annotation
 import|;
@@ -73,7 +73,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|Span
 import|;
@@ -204,6 +204,7 @@ argument_list|(
 name|item
 operator|.
 name|name
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -226,6 +227,7 @@ argument_list|(
 name|item
 operator|.
 name|annotations
+argument_list|()
 argument_list|)
 return|;
 block|}

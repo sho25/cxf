@@ -113,7 +113,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|Span
 import|;
@@ -121,7 +121,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|reporter
 operator|.
@@ -433,7 +433,7 @@ argument_list|(
 literal|"myservice"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 name|reporter
 argument_list|)
@@ -474,7 +474,7 @@ argument_list|(
 literal|"myservice"
 argument_list|)
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 name|reporter
 argument_list|)

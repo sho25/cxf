@@ -39,7 +39,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|Span
 import|;
@@ -47,7 +47,7 @@ end_import
 
 begin_import
 import|import
-name|zipkin
+name|zipkin2
 operator|.
 name|reporter
 operator|.

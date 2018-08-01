@@ -587,28 +587,6 @@ begin_import
 import|import static
 name|org
 operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|systest
-operator|.
-name|jaxrs
-operator|.
-name|tracing
-operator|.
-name|brave
-operator|.
-name|IsBinaryAnnotationContaining
-operator|.
-name|hasItem
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
 name|hamcrest
 operator|.
 name|CoreMatchers
@@ -638,6 +616,20 @@ operator|.
 name|CoreMatchers
 operator|.
 name|nullValue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|hamcrest
+operator|.
+name|collection
+operator|.
+name|IsMapContaining
+operator|.
+name|hasEntry
 import|;
 end_import
 
@@ -696,7 +688,7 @@ operator|.
 name|newBuilder
 argument_list|()
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -839,7 +831,7 @@ operator|.
 name|newBuilder
 argument_list|()
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
@@ -934,6 +926,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -954,6 +947,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1089,6 +1083,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1109,6 +1104,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1199,6 +1195,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1218,9 +1215,10 @@ argument_list|(
 literal|0
 argument_list|)
 operator|.
-name|binaryAnnotations
+name|tags
+argument_list|()
 argument_list|,
-name|hasItem
+name|hasEntry
 argument_list|(
 literal|"book-id"
 argument_list|,
@@ -1404,6 +1402,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1424,6 +1423,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|not
 argument_list|(
@@ -1515,6 +1515,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1535,6 +1536,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1555,6 +1557,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|not
 argument_list|(
@@ -1576,6 +1579,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1590,6 +1594,7 @@ literal|1
 argument_list|)
 operator|.
 name|id
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1676,6 +1681,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1754,6 +1760,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1774,6 +1781,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1876,6 +1884,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1896,6 +1905,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -1916,6 +1926,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2086,6 +2097,7 @@ name|index
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2108,6 +2120,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2130,6 +2143,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2288,6 +2302,7 @@ name|index
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2310,6 +2325,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2332,6 +2348,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2464,6 +2481,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2484,6 +2502,7 @@ literal|0
 argument_list|)
 operator|.
 name|parentId
+argument_list|()
 argument_list|,
 name|not
 argument_list|(
@@ -2505,6 +2524,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2525,6 +2545,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2583,6 +2604,7 @@ literal|3
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2754,6 +2776,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2774,6 +2797,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2794,6 +2818,7 @@ literal|2
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2852,6 +2877,7 @@ literal|3
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2938,6 +2964,7 @@ literal|1
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2958,6 +2985,7 @@ literal|0
 argument_list|)
 operator|.
 name|name
+argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
@@ -2992,7 +3020,7 @@ operator|.
 name|newBuilder
 argument_list|()
 operator|.
-name|reporter
+name|spanReporter
 argument_list|(
 operator|new
 name|TestSpanReporter
