@@ -85,9 +85,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
-operator|.
-name|Continuation
+name|Span
 import|;
 end_import
 
@@ -144,14 +142,14 @@ parameter_list|)
 block|{
 comment|// Check if there is a server span passed along with the message
 specifier|final
-name|Continuation
+name|Span
 name|continuation
 init|=
 name|message
 operator|.
 name|get
 argument_list|(
-name|Continuation
+name|Span
 operator|.
 name|class
 argument_list|)

@@ -23,18 +23,6 @@ end_package
 
 begin_import
 import|import
-name|com
-operator|.
-name|uber
-operator|.
-name|jaeger
-operator|.
-name|LogData
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|hamcrest
@@ -62,6 +50,18 @@ operator|.
 name|core
 operator|.
 name|IsCollectionContaining
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|jaegertracing
+operator|.
+name|internal
+operator|.
+name|LogData
 import|;
 end_import
 

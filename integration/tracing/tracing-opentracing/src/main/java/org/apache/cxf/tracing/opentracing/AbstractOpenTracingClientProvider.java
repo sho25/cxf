@@ -129,7 +129,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
+name|Scope
 import|;
 end_import
 
@@ -139,9 +139,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
-operator|.
-name|Continuation
+name|Span
 import|;
 end_import
 
@@ -259,7 +257,7 @@ name|method
 parameter_list|)
 block|{
 specifier|final
-name|ActiveSpan
+name|Span
 name|parent
 init|=
 name|tracer
@@ -267,8 +265,8 @@ operator|.
 name|activeSpan
 argument_list|()
 decl_stmt|;
-name|ActiveSpan
-name|span
+name|Scope
+name|scope
 init|=
 literal|null
 decl_stmt|;
@@ -279,7 +277,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|span
+name|scope
 operator|=
 name|tracer
 operator|.
@@ -297,12 +295,14 @@ argument_list|)
 argument_list|)
 operator|.
 name|startActive
-argument_list|()
+argument_list|(
+literal|false
+argument_list|)
 expr_stmt|;
 block|}
 else|else
 block|{
-name|span
+name|scope
 operator|=
 name|tracer
 operator|.
@@ -325,11 +325,16 @@ name|parent
 argument_list|)
 operator|.
 name|startActive
-argument_list|()
+argument_list|(
+literal|false
+argument_list|)
 expr_stmt|;
 block|}
 comment|// Set additional tags
+name|scope
+operator|.
 name|span
+argument_list|()
 operator|.
 name|setTag
 argument_list|(
@@ -343,7 +348,10 @@ argument_list|,
 name|method
 argument_list|)
 expr_stmt|;
+name|scope
+operator|.
 name|span
+argument_list|()
 operator|.
 name|setTag
 argument_list|(
@@ -364,7 +372,10 @@ name|tracer
 operator|.
 name|inject
 argument_list|(
+name|scope
+operator|.
 name|span
+argument_list|()
 operator|.
 name|context
 argument_list|()
@@ -382,8 +393,8 @@ argument_list|)
 expr_stmt|;
 comment|// In case of asynchronous client invocation, the span should be detached as JAX-RS
 comment|// client request / response filters are going to be executed in different threads.
-name|Continuation
-name|continuation
+name|Span
+name|span
 init|=
 literal|null
 decl_stmt|;
@@ -393,16 +404,16 @@ name|isAsyncInvocation
 argument_list|()
 condition|)
 block|{
-name|continuation
-operator|=
 name|span
+operator|=
+name|scope
 operator|.
-name|capture
+name|span
 argument_list|()
 expr_stmt|;
-name|span
+name|scope
 operator|.
-name|deactivate
+name|close
 argument_list|()
 expr_stmt|;
 block|}
@@ -418,10 +429,10 @@ name|TraceScope
 argument_list|(
 name|span
 argument_list|,
-name|continuation
+name|scope
 argument_list|)
 argument_list|,
-name|continuation
+name|span
 operator|!=
 literal|null
 comment|/* detached */
@@ -474,7 +485,7 @@ return|return;
 block|}
 specifier|final
 name|TraceScope
-name|scope
+name|traceScope
 init|=
 name|holder
 operator|.
@@ -483,17 +494,25 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|scope
+name|traceScope
 operator|!=
 literal|null
 condition|)
 block|{
-name|ActiveSpan
+name|Span
 name|span
 init|=
-name|scope
+name|traceScope
 operator|.
 name|getSpan
+argument_list|()
+decl_stmt|;
+name|Scope
+name|scope
+init|=
+name|traceScope
+operator|.
+name|getScope
 argument_list|()
 decl_stmt|;
 comment|// If the client invocation was asynchronous , the trace span has been created
@@ -506,18 +525,25 @@ name|isDetached
 argument_list|()
 condition|)
 block|{
-name|span
-operator|=
 name|scope
+operator|=
+name|tracer
 operator|.
-name|getContinuation
+name|scopeManager
 argument_list|()
 operator|.
 name|activate
-argument_list|()
+argument_list|(
+name|span
+argument_list|,
+literal|false
+argument_list|)
 expr_stmt|;
 block|}
+name|scope
+operator|.
 name|span
+argument_list|()
 operator|.
 name|setTag
 argument_list|(
@@ -531,7 +557,15 @@ argument_list|,
 name|responseStatus
 argument_list|)
 expr_stmt|;
+name|scope
+operator|.
 name|span
+argument_list|()
+operator|.
+name|finish
+argument_list|()
+expr_stmt|;
+name|scope
 operator|.
 name|close
 argument_list|()

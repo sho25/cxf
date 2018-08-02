@@ -15,23 +15,23 @@ end_package
 
 begin_import
 import|import
-name|com
+name|io
 operator|.
-name|uber
+name|jaegertracing
 operator|.
-name|jaeger
+name|internal
 operator|.
-name|Span
+name|JaegerSpan
 import|;
 end_import
 
 begin_import
 import|import
-name|com
+name|io
 operator|.
-name|uber
+name|jaegertracing
 operator|.
-name|jaeger
+name|internal
 operator|.
 name|exceptions
 operator|.
@@ -41,13 +41,11 @@ end_import
 
 begin_import
 import|import
-name|com
+name|io
 operator|.
-name|uber
+name|jaegertracing
 operator|.
-name|jaeger
-operator|.
-name|senders
+name|spi
 operator|.
 name|Sender
 import|;
@@ -101,7 +99,7 @@ specifier|public
 name|int
 name|append
 parameter_list|(
-name|Span
+name|JaegerSpan
 name|span
 parameter_list|)
 throws|throws

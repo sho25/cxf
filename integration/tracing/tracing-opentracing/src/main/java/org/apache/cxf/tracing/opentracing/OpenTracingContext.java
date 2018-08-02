@@ -63,7 +63,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
+name|Scope
 import|;
 end_import
 
@@ -73,9 +73,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
-operator|.
-name|Continuation
+name|Span
 import|;
 end_import
 
@@ -103,7 +101,7 @@ name|tracer
 decl_stmt|;
 specifier|private
 specifier|final
-name|Continuation
+name|Span
 name|continuation
 decl_stmt|;
 specifier|public
@@ -130,7 +128,7 @@ name|Tracer
 name|tracer
 parameter_list|,
 specifier|final
-name|Continuation
+name|Span
 name|continuation
 parameter_list|)
 block|{
@@ -155,7 +153,7 @@ argument_list|(
 literal|"unchecked"
 argument_list|)
 specifier|public
-name|ActiveSpan
+name|Scope
 name|startSpan
 parameter_list|(
 specifier|final
@@ -191,7 +189,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|ActiveSpan
+name|Scope
 name|scope
 init|=
 literal|null
@@ -212,10 +210,17 @@ condition|)
 block|{
 name|scope
 operator|=
-name|continuation
+name|tracer
+operator|.
+name|scopeManager
+argument_list|()
 operator|.
 name|activate
-argument_list|()
+argument_list|(
+name|continuation
+argument_list|,
+literal|false
+argument_list|)
 expr_stmt|;
 block|}
 try|try
@@ -248,7 +253,7 @@ condition|)
 block|{
 name|scope
 operator|.
-name|deactivate
+name|close
 argument_list|()
 expr_stmt|;
 block|}
@@ -318,7 +323,7 @@ block|}
 decl_stmt|;
 comment|// Carry over parent from the current thread
 specifier|final
-name|ActiveSpan
+name|Span
 name|parent
 init|=
 name|tracer
@@ -332,8 +337,8 @@ lambda|->
 block|{
 try|try
 init|(
-name|ActiveSpan
-name|span
+name|Scope
+name|scope
 init|=
 name|newOrChildSpan
 argument_list|(
@@ -367,7 +372,7 @@ name|value
 parameter_list|)
 block|{
 specifier|final
-name|ActiveSpan
+name|Span
 name|current
 init|=
 name|tracer
@@ -404,7 +409,7 @@ name|message
 parameter_list|)
 block|{
 specifier|final
-name|ActiveSpan
+name|Span
 name|current
 init|=
 name|tracer
@@ -429,7 +434,7 @@ expr_stmt|;
 block|}
 block|}
 specifier|private
-name|ActiveSpan
+name|Scope
 name|newOrChildSpan
 parameter_list|(
 specifier|final
@@ -437,7 +442,7 @@ name|String
 name|description
 parameter_list|,
 specifier|final
-name|ActiveSpan
+name|Span
 name|parent
 parameter_list|)
 block|{
@@ -457,7 +462,9 @@ name|description
 argument_list|)
 operator|.
 name|startActive
-argument_list|()
+argument_list|(
+literal|true
+argument_list|)
 return|;
 block|}
 else|else
@@ -476,7 +483,9 @@ name|parent
 argument_list|)
 operator|.
 name|startActive
-argument_list|()
+argument_list|(
+literal|true
+argument_list|)
 return|;
 block|}
 block|}

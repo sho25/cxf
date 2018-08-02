@@ -109,7 +109,7 @@ name|io
 operator|.
 name|opentracing
 operator|.
-name|ActiveSpan
+name|Scope
 import|;
 end_import
 
@@ -182,7 +182,7 @@ parameter_list|()
 block|{
 try|try
 init|(
-name|ActiveSpan
+name|Scope
 name|span
 init|=
 name|tracer
@@ -193,7 +193,9 @@ literal|"Get Books"
 argument_list|)
 operator|.
 name|startActive
-argument_list|()
+argument_list|(
+literal|true
+argument_list|)
 init|)
 block|{
 return|return
