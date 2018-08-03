@@ -1300,6 +1300,8 @@ name|initialState
 expr_stmt|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|query
@@ -1333,6 +1335,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|header
@@ -1430,6 +1434,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|headers
@@ -1458,6 +1464,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|accept
@@ -1495,6 +1503,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|type
@@ -1516,6 +1526,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|type
@@ -1543,6 +1555,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|accept
@@ -1575,6 +1589,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|cookie
@@ -1600,6 +1616,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|authorization
@@ -1637,6 +1655,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|modified
@@ -1691,6 +1711,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|language
@@ -1718,6 +1740,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|match
@@ -1762,6 +1786,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|acceptLanguage
@@ -1794,6 +1820,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|acceptEncoding
@@ -1826,6 +1854,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|encoding
@@ -1853,6 +1883,8 @@ name|this
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|MultivaluedMap
 argument_list|<
@@ -1873,11 +1905,7 @@ name|map
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|false
 argument_list|,
@@ -1899,6 +1927,8 @@ name|map
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|URI
 name|getBaseURI
@@ -1912,6 +1942,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|URI
 name|getCurrentURI
@@ -1929,6 +1961,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Response
 name|getResponse
@@ -1942,6 +1976,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Override
 specifier|public
 name|Client
 name|reset
@@ -1956,6 +1992,8 @@ return|return
 name|this
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|close
@@ -1985,11 +2023,6 @@ condition|)
 block|{
 return|return;
 block|}
-for|for
-control|(
-name|Closeable
-name|c
-range|:
 name|cfg
 operator|.
 name|getEndpoint
@@ -1997,7 +2030,11 @@ argument_list|()
 operator|.
 name|getCleanupHooks
 argument_list|()
-control|)
+operator|.
+name|forEach
+argument_list|(
+name|c
+lambda|->
 block|{
 try|try
 block|{
@@ -2016,6 +2053,8 @@ block|{
 comment|//ignore
 block|}
 block|}
+argument_list|)
+expr_stmt|;
 name|ClientLifeCycleManager
 name|mgr
 init|=
@@ -2223,10 +2262,6 @@ name|contains
 argument_list|(
 name|value
 argument_list|)
-condition|?
-literal|true
-else|:
-literal|false
 return|;
 block|}
 specifier|protected
@@ -2324,12 +2359,11 @@ name|values
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|values
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|!=
-literal|0
 condition|)
 block|{
 name|List
@@ -2353,11 +2387,7 @@ name|templatesMap
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|vars
 operator|.
@@ -2667,16 +2697,15 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
-for|for
-control|(
-name|Object
-name|valObject
-range|:
 name|entry
 operator|.
 name|getValue
 argument_list|()
-control|)
+operator|.
+name|forEach
+argument_list|(
+name|valObject
+lambda|->
 block|{
 if|if
 condition|(
@@ -2717,7 +2746,7 @@ index|[]
 block|{
 literal|""
 block|}
-expr_stmt|;
+empty_stmt|;
 block|}
 elseif|else
 if|if
@@ -2808,7 +2837,7 @@ index|[]
 block|{
 name|val
 block|}
-expr_stmt|;
+empty_stmt|;
 block|}
 for|for
 control|(
@@ -2867,6 +2896,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 name|String
@@ -3017,7 +3048,9 @@ name|headers
 operator|.
 name|getFirst
 argument_list|(
-literal|"Content-Type"
+name|HttpHeaders
+operator|.
+name|CONTENT_TYPE
 argument_list|)
 decl_stmt|;
 if|if
@@ -3512,7 +3545,6 @@ argument_list|,
 name|proxy
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
 block|}
 specifier|protected
@@ -4785,46 +4817,29 @@ argument_list|,
 literal|""
 argument_list|)
 decl_stmt|;
-for|for
-control|(
-name|Map
-operator|.
-name|Entry
-argument_list|<
-name|String
-argument_list|,
-name|List
-argument_list|<
-name|Object
-argument_list|>
-argument_list|>
-name|entry
-range|:
 name|values
 operator|.
-name|entrySet
-argument_list|()
-control|)
+name|forEach
+argument_list|(
+parameter_list|(
+name|key
+parameter_list|,
+name|value
+parameter_list|)
+lambda|->
 block|{
-for|for
-control|(
-name|Object
-name|v
-range|:
-name|entry
+name|value
 operator|.
-name|getValue
-argument_list|()
-control|)
+name|forEach
+argument_list|(
+name|v
+lambda|->
 block|{
 name|convertMatrixOrQueryToBuilder
 argument_list|(
 name|ub
 argument_list|,
-name|entry
-operator|.
-name|getKey
-argument_list|()
+name|key
 argument_list|,
 name|v
 argument_list|,
@@ -4834,7 +4849,11 @@ name|anns
 argument_list|)
 expr_stmt|;
 block|}
+argument_list|)
+expr_stmt|;
 block|}
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|private
@@ -5328,26 +5347,16 @@ name|HttpURLConnection
 name|conn
 parameter_list|)
 block|{
-for|for
-control|(
-name|Map
-operator|.
-name|Entry
-argument_list|<
-name|String
-argument_list|,
-name|List
-argument_list|<
-name|String
-argument_list|>
-argument_list|>
-name|entry
-range|:
 name|headers
 operator|.
-name|entrySet
-argument_list|()
-control|)
+name|forEach
+argument_list|(
+parameter_list|(
+name|key
+parameter_list|,
+name|value
+parameter_list|)
+lambda|->
 block|{
 name|StringBuilder
 name|b
@@ -5365,10 +5374,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|entry
-operator|.
-name|getValue
-argument_list|()
+name|value
 operator|.
 name|size
 argument_list|()
@@ -5377,24 +5383,16 @@ name|i
 operator|++
 control|)
 block|{
-name|String
-name|value
-init|=
-name|entry
-operator|.
-name|getValue
-argument_list|()
-operator|.
-name|get
-argument_list|(
-name|i
-argument_list|)
-decl_stmt|;
 name|b
 operator|.
 name|append
 argument_list|(
 name|value
+operator|.
+name|get
+argument_list|(
+name|i
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if
@@ -5403,10 +5401,7 @@ name|i
 operator|+
 literal|1
 operator|<
-name|entry
-operator|.
-name|getValue
-argument_list|()
+name|value
 operator|.
 name|size
 argument_list|()
@@ -5425,10 +5420,7 @@ name|conn
 operator|.
 name|setRequestProperty
 argument_list|(
-name|entry
-operator|.
-name|getKey
-argument_list|()
+name|key
 argument_list|,
 name|b
 operator|.
@@ -5437,6 +5429,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 name|String
@@ -6141,6 +6135,8 @@ name|getBus
 argument_list|()
 argument_list|)
 block|{
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initializeInterceptors
@@ -7129,18 +7125,8 @@ name|MessageObserver
 operator|.
 name|class
 argument_list|,
-operator|new
-name|MessageObserver
-argument_list|()
-block|{
-specifier|public
-name|void
-name|onMessage
-parameter_list|(
-specifier|final
-name|Message
 name|message
-parameter_list|)
+lambda|->
 block|{
 if|if
 condition|(
@@ -7167,14 +7153,8 @@ name|executor
 operator|.
 name|execute
 argument_list|(
-operator|new
-name|Runnable
-argument_list|()
-block|{
-specifier|public
-name|void
-name|run
 parameter_list|()
+lambda|->
 block|{
 name|observer
 operator|.
@@ -7183,7 +7163,6 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 argument_list|)
 expr_stmt|;
@@ -7197,7 +7176,6 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 argument_list|)
@@ -7227,26 +7205,6 @@ name|boolean
 name|proxy
 parameter_list|)
 block|{
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-name|reqContext
-init|=
-literal|null
-decl_stmt|;
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-name|resContext
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|context
@@ -7262,8 +7220,14 @@ argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|reqContext
-operator|=
+init|=
 name|CastUtils
 operator|.
 name|cast
@@ -7283,9 +7247,15 @@ argument_list|(
 name|REQUEST_CONTEXT
 argument_list|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|resContext
-operator|=
+init|=
 name|CastUtils
 operator|.
 name|cast
@@ -7305,7 +7275,7 @@ argument_list|(
 name|RESPONSE_CONTEXT
 argument_list|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|reqContext
@@ -7781,6 +7751,8 @@ name|WRITE
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|handleMessage
@@ -7943,6 +7915,8 @@ name|RetryableImpl
 implements|implements
 name|Retryable
 block|{
+annotation|@
+name|Override
 specifier|public
 name|Object
 index|[]
@@ -8008,6 +7982,8 @@ name|PRE_STREAM
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|handleMessage
