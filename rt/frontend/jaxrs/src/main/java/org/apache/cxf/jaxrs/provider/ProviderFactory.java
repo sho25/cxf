@@ -7664,6 +7664,8 @@ name|getName
 argument_list|()
 operator|+
 literal|" can not be instantiated"
+argument_list|,
+name|ex
 argument_list|)
 throw|;
 block|}
