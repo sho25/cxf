@@ -387,7 +387,13 @@ condition|)
 block|{
 name|swaggerUiVersion
 operator|=
-literal|""
+name|b
+operator|.
+name|getVersion
+argument_list|()
+operator|.
+name|toString
+argument_list|()
 expr_stmt|;
 block|}
 name|URL
