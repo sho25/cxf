@@ -1563,6 +1563,9 @@ name|System
 operator|.
 name|currentTimeMillis
 argument_list|()
+argument_list|,
+name|getStateTimeToLive
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|String

@@ -553,6 +553,13 @@ operator|+
 name|domain
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|stateTimeToLive
+operator|>
+literal|0
+condition|)
+block|{
 comment|// Keep the cookie across the browser restarts until it actually expires.
 comment|// Note that the Expires property has been deprecated but apparently is
 comment|// supported better than 'max-age' property by different browsers
@@ -606,6 +613,7 @@ literal|";Expires="
 operator|+
 name|cookieExpires
 expr_stmt|;
+block|}
 comment|//TODO: Consider adding an 'HttpOnly' attribute
 return|return
 name|contextCookie

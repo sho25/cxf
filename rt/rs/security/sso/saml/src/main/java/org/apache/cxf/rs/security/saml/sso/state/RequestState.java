@@ -127,10 +127,15 @@ specifier|private
 name|long
 name|createdAt
 decl_stmt|;
+specifier|private
+name|long
+name|timeToLive
+decl_stmt|;
 specifier|public
 name|RequestState
 parameter_list|()
 block|{      }
+comment|// CHECKSTYLE:OFF
 specifier|public
 name|RequestState
 parameter_list|(
@@ -154,6 +159,9 @@ name|webAppDomain
 parameter_list|,
 name|long
 name|createdAt
+parameter_list|,
+name|long
+name|timeToLive
 parameter_list|)
 block|{
 name|this
@@ -198,7 +206,14 @@ name|createdAt
 operator|=
 name|createdAt
 expr_stmt|;
+name|this
+operator|.
+name|timeToLive
+operator|=
+name|timeToLive
+expr_stmt|;
 block|}
+comment|// CHECKSTYLE:ON
 specifier|public
 name|String
 name|getTargetAddress
@@ -242,6 +257,15 @@ parameter_list|()
 block|{
 return|return
 name|createdAt
+return|;
+block|}
+specifier|public
+name|long
+name|getTimeToLive
+parameter_list|()
+block|{
+return|return
+name|timeToLive
 return|;
 block|}
 specifier|public
