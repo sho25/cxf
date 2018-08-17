@@ -1389,7 +1389,7 @@ operator|.
 name|getAddress
 argument_list|()
 operator|+
-literal|" does match"
+literal|" does not match"
 operator|+
 literal|" client address "
 operator|+
