@@ -451,13 +451,7 @@ block|,
 name|testUtils
 argument_list|()
 block|,
-name|features
-argument_list|(
-name|karafUrl
-argument_list|,
-literal|"spring"
-argument_list|)
-block|,
+comment|//features(karafUrl, "spring"),
 name|features
 argument_list|(
 name|cxfUrl

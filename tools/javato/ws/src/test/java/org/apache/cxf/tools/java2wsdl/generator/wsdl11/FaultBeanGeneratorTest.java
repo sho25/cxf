@@ -274,13 +274,13 @@ literal|":"
 operator|+
 name|java9PlusFolder
 operator|+
-literal|"/jaxb-api-2.2.11.jar"
+literal|"/jaxb-api-2.3.0.jar"
 operator|+
 literal|":"
 operator|+
 name|java9PlusFolder
 operator|+
-literal|"/jaxws-api-2.2.9.jar"
+literal|"/jaxws-api-2.3.0.jar"
 operator|+
 literal|":"
 operator|+
