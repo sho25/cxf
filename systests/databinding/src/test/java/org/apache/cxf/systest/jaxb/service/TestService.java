@@ -108,6 +108,17 @@ parameter_list|()
 throws|throws
 name|TestServiceException
 function_decl|;
+annotation|@
+name|WebMethod
+name|String
+name|echo
+parameter_list|(
+name|String
+name|test
+parameter_list|)
+throws|throws
+name|PropertyOrderException
+function_decl|;
 block|}
 end_interface
 
