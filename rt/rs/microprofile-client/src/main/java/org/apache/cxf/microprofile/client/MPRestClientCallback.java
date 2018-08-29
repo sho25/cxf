@@ -138,6 +138,9 @@ name|T
 parameter_list|>
 extends|extends
 name|JaxrsClientCallback
+argument_list|<
+name|T
+argument_list|>
 block|{
 specifier|public
 name|MPRestClientCallback

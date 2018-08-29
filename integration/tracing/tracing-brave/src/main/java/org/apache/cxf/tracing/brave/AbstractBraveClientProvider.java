@@ -359,11 +359,6 @@ argument_list|(
 name|request
 argument_list|)
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|final
 name|HttpClientHandler
 argument_list|<
@@ -648,11 +643,6 @@ argument_list|(
 name|response
 argument_list|)
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|final
 name|HttpClientHandler
 argument_list|<

@@ -341,7 +341,7 @@ argument_list|)
 expr_stmt|;
 name|context
 operator|.
-name|addServletMapping
+name|addServletMappingDecoded
 argument_list|(
 literal|"/rest/*"
 argument_list|,
