@@ -546,6 +546,11 @@ operator|.
 name|getScope
 argument_list|()
 decl_stmt|;
+name|Span
+name|span
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|scope
@@ -566,6 +571,8 @@ name|isDetached
 argument_list|()
 condition|)
 block|{
+name|span
+operator|=
 name|brave
 operator|.
 name|tracing
@@ -653,6 +660,21 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|span
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// We do not care about the span created by joinSpan, since it
+comment|// should be managed by the scope.getSpan() itself.
+name|span
+operator|.
+name|abandon
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 block|}
