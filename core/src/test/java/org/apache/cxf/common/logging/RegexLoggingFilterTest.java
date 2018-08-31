@@ -69,7 +69,7 @@ name|filter
 operator|.
 name|setPattern
 argument_list|(
-literal|"jms(.*?)password=+([^ ]+)[.]"
+literal|"jms(.*?)password=+([^ ]+)"
 argument_list|)
 expr_stmt|;
 name|filter
@@ -95,7 +95,7 @@ name|assertEquals
 argument_list|(
 name|wantFilter
 argument_list|,
-literal|"jms:queue:soapRequestQueue?username=admin&password=*****."
+literal|"jms:queue:soapRequestQueue?username=admin&password=*****"
 argument_list|)
 expr_stmt|;
 block|}

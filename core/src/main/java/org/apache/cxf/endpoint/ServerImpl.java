@@ -491,7 +491,7 @@ name|filter
 operator|.
 name|setPattern
 argument_list|(
-literal|"jms(.*?)password=+([^ ]+)[.]"
+literal|"jms(.*?)password=+([^ ]+)"
 argument_list|)
 expr_stmt|;
 name|filter
