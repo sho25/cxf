@@ -440,6 +440,11 @@ operator|.
 name|ioctrl
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|this
+operator|.
+name|endOfStream
 condition|)
 block|{
 name|this
