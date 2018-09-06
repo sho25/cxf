@@ -1132,6 +1132,13 @@ operator|)
 name|key
 argument_list|)
 argument_list|)
+operator|||
+name|get
+argument_list|(
+name|key
+argument_list|)
+operator|!=
+literal|null
 return|;
 block|}
 specifier|public
