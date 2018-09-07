@@ -2691,8 +2691,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|severe
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 name|ex
 operator|.
 name|getCause
@@ -2702,9 +2706,6 @@ name|getMessage
 argument_list|()
 argument_list|,
 name|ex
-operator|.
-name|getCause
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|Response
