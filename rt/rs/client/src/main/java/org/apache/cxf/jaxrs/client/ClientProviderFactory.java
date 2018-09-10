@@ -485,6 +485,27 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|providerCls
+operator|==
+name|Object
+operator|.
+name|class
+condition|)
+block|{
+comment|// If the provider is a lambda, ClassHelper.getRealClass returns Object.class
+name|providerCls
+operator|=
+name|provider
+operator|.
+name|getProvider
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|filterContractSupported
 argument_list|(
 name|provider
