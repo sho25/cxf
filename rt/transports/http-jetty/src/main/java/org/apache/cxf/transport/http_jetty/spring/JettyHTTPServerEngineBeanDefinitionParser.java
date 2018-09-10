@@ -1026,6 +1026,13 @@ block|}
 elseif|else
 if|if
 condition|(
+literal|"sessionTimeout"
+operator|.
+name|equals
+argument_list|(
+name|name
+argument_list|)
+operator|||
 literal|"sessionSupport"
 operator|.
 name|equals

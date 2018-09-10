@@ -886,6 +886,18 @@ name|getThreadNamePrefix
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"session timeout should be 600 secs"
+argument_list|,
+literal|600
+argument_list|,
+name|engine
+operator|.
+name|getSessionTimeout
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"The engine should support session manager"
