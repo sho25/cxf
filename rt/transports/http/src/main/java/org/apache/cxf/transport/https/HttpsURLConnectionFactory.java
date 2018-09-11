@@ -530,11 +530,35 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|// ssl socket factory not yet instantiated, create a new one with tlsClientParameters's Trust
-comment|// Managers, Key Managers, etc
 name|SSLContext
 name|ctx
 init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+name|tlsClientParameters
+operator|.
+name|getSslContext
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// Use the SSLContext which was set
+name|ctx
+operator|=
+name|tlsClientParameters
+operator|.
+name|getSslContext
+argument_list|()
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|// Create socketfactory with tlsClientParameters's Trust Managers, Key Managers, etc
+name|ctx
+operator|=
 name|org
 operator|.
 name|apache
@@ -551,7 +575,8 @@ name|getSSLContext
 argument_list|(
 name|tlsClientParameters
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 name|String
 index|[]
 name|cipherSuites
@@ -588,8 +613,7 @@ argument_list|,
 name|LOG
 argument_list|)
 decl_stmt|;
-comment|// The SSLSocketFactoryWrapper enables certain cipher suites
-comment|// from the policy.
+comment|// The SSLSocketFactoryWrapper enables certain cipher suites from the policy.
 name|String
 name|protocol
 init|=
@@ -605,7 +629,10 @@ operator|.
 name|getSecureSocketProtocol
 argument_list|()
 else|:
-literal|"TLS"
+name|ctx
+operator|.
+name|getProtocol
+argument_list|()
 decl_stmt|;
 name|socketFactory
 operator|=
