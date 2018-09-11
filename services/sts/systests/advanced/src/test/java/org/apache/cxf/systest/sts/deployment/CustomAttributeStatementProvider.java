@@ -23,16 +23,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URI
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -487,7 +477,7 @@ operator|new
 name|AttributeBean
 argument_list|()
 decl_stmt|;
-name|URI
+name|String
 name|claimType
 init|=
 name|claim
@@ -521,9 +511,6 @@ operator|.
 name|setQualifiedName
 argument_list|(
 name|claimType
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|attributeBean
@@ -540,9 +527,6 @@ name|String
 name|uri
 init|=
 name|claimType
-operator|.
-name|toString
-argument_list|()
 decl_stmt|;
 name|int
 name|lastSlash

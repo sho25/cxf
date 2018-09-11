@@ -320,7 +320,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|supportedClaimTypes
 init|=
@@ -390,7 +390,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|getSupportedClaimTypes
 parameter_list|()
@@ -1531,7 +1531,7 @@ name|claims
 parameter_list|,
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|handlerClaimTypes
 parameter_list|)
@@ -1606,7 +1606,7 @@ range|:
 name|requestedClaims
 control|)
 block|{
-name|URI
+name|String
 name|claimType
 init|=
 name|claim

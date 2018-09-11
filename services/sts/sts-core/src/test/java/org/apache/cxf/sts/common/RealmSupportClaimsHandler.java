@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URI
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|List
@@ -192,7 +182,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|supportedClaimTypes
 decl_stmt|;
@@ -232,7 +222,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|getSupportedClaimTypes
 parameter_list|()
@@ -247,7 +237,7 @@ name|setSupportedClaimTypes
 parameter_list|(
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|supportedClaimTypes
 parameter_list|)

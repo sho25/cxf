@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URI
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|List
@@ -66,7 +56,7 @@ name|ClaimsHandler
 block|{
 name|List
 argument_list|<
-name|URI
+name|String
 argument_list|>
 name|getSupportedClaimTypes
 parameter_list|()

@@ -525,7 +525,7 @@ range|:
 name|result
 control|)
 block|{
-name|URI
+name|String
 name|claimType
 init|=
 name|c
@@ -535,18 +535,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|claimType
-operator|!=
-literal|null
-operator|&&
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/unused"
 operator|.
 name|equals
 argument_list|(
 name|claimType
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 condition|)
 block|{

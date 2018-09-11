@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URI
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -452,7 +442,7 @@ name|boolean
 name|saml2
 parameter_list|)
 block|{
-name|URI
+name|String
 name|claimType
 init|=
 name|claim
@@ -470,9 +460,6 @@ operator|new
 name|AttributeKey
 argument_list|(
 name|claimType
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|nameFormat
 argument_list|,
@@ -486,9 +473,6 @@ name|String
 name|uri
 init|=
 name|claimType
-operator|.
-name|toString
-argument_list|()
 decl_stmt|;
 name|int
 name|lastSlash
