@@ -133,8 +133,6 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
 name|claims
 operator|.
 name|SAMLClaim

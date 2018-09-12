@@ -15,7 +15,7 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
+name|claims
 operator|.
 name|interceptor
 package|;
@@ -241,8 +241,6 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
 name|claims
 operator|.
 name|ClaimBean
@@ -261,11 +259,9 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
 name|claims
 operator|.
-name|SAMLClaim
+name|ClaimsSecurityContext
 import|;
 end_import
 
@@ -281,11 +277,9 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
 name|claims
 operator|.
-name|SAMLSecurityContext
+name|SAMLClaim
 import|;
 end_import
 
@@ -545,7 +539,7 @@ operator|!
 operator|(
 name|sc
 operator|instanceof
-name|SAMLSecurityContext
+name|ClaimsSecurityContext
 operator|)
 condition|)
 block|{
@@ -570,7 +564,7 @@ condition|(
 name|authorize
 argument_list|(
 operator|(
-name|SAMLSecurityContext
+name|ClaimsSecurityContext
 operator|)
 name|sc
 argument_list|,
@@ -707,7 +701,7 @@ specifier|protected
 name|boolean
 name|authorize
 parameter_list|(
-name|SAMLSecurityContext
+name|ClaimsSecurityContext
 name|sc
 parameter_list|,
 name|Method
