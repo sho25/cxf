@@ -1113,6 +1113,12 @@ operator|new
 name|ClaimBean
 argument_list|(
 name|claim
+argument_list|,
+literal|"a"
+argument_list|,
+literal|null
+argument_list|,
+literal|false
 argument_list|)
 argument_list|)
 argument_list|)
