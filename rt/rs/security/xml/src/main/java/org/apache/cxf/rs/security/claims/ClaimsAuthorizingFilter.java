@@ -15,9 +15,7 @@ name|rs
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
-name|authorization
+name|claims
 package|;
 end_package
 
