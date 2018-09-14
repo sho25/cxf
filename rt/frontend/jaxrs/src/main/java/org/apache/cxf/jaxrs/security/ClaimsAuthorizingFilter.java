@@ -11,11 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
 name|security
-operator|.
-name|claims
 package|;
 end_package
 
