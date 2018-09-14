@@ -495,7 +495,7 @@ name|getProperty
 argument_list|(
 literal|"karaf.version"
 argument_list|,
-literal|"4.2.1-SNAPSHOT"
+literal|"4.2.1"
 argument_list|)
 decl_stmt|;
 name|String
