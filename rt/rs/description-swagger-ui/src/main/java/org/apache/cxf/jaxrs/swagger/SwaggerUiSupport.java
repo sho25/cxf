@@ -85,6 +85,24 @@ name|PropertyUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|swagger
+operator|.
+name|ui
+operator|.
+name|SwaggerUiConfig
+import|;
+end_import
+
 begin_comment
 comment|/**  * Generic trait to support Swagger UI integration for Swagger 1.5.x and  * OpenAPI v3.x (Swagger 2.x) integrations.  */
 end_comment
@@ -220,6 +238,14 @@ name|getSwaggerUiMediaTypes
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|swaggerUiService
+operator|.
+name|setConfig
+argument_list|(
+name|getSwaggerUiConfig
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 operator|!
@@ -362,6 +388,11 @@ argument_list|,
 name|String
 argument_list|>
 name|getSwaggerUiMediaTypes
+parameter_list|()
+function_decl|;
+comment|/**      * Returns Swagger UI configuration parameters.      * @return Swagger UI configuration parameters or "null" if not available      */
+name|SwaggerUiConfig
+name|getSwaggerUiConfig
 parameter_list|()
 function_decl|;
 block|}
