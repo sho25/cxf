@@ -929,8 +929,6 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
-try|try
-block|{
 name|writePayload
 argument_list|(
 name|payload
@@ -940,15 +938,6 @@ argument_list|,
 name|event
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
-block|}
 return|return
 name|payload
 operator|.
@@ -956,7 +945,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-specifier|protected
+specifier|private
 name|void
 name|writePayload
 parameter_list|(
@@ -969,8 +958,6 @@ parameter_list|,
 name|LogEvent
 name|event
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|StringBuffer
 name|buffer
