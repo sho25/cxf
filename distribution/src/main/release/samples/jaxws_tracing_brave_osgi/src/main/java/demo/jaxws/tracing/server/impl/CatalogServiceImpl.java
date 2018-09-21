@@ -81,6 +81,16 @@ end_import
 
 begin_import
 import|import
+name|brave
+operator|.
+name|propagation
+operator|.
+name|TraceContext
+import|;
+end_import
+
+begin_import
+import|import
 name|demo
 operator|.
 name|jaxws
@@ -169,6 +179,21 @@ name|Book
 name|book
 parameter_list|)
 block|{
+specifier|final
+name|TraceContext
+name|parent
+init|=
+name|brave
+operator|.
+name|tracer
+argument_list|()
+operator|.
+name|currentSpan
+argument_list|()
+operator|.
+name|context
+argument_list|()
+decl_stmt|;
 name|executor
 operator|.
 name|submit
@@ -185,9 +210,11 @@ operator|.
 name|tracer
 argument_list|()
 operator|.
-name|startScopedSpan
+name|startScopedSpanWithParent
 argument_list|(
 literal|"Inserting New Book"
+argument_list|,
+name|parent
 argument_list|)
 decl_stmt|;
 try|try

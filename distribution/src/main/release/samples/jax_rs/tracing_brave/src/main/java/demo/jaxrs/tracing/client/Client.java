@@ -89,9 +89,15 @@ end_import
 
 begin_import
 import|import
-name|brave
+name|demo
 operator|.
-name|Tracing
+name|jaxrs
+operator|.
+name|tracing
+operator|.
+name|server
+operator|.
+name|CatalogTracing
 import|;
 end_import
 
@@ -119,16 +125,14 @@ throws|throws
 name|Exception
 block|{
 specifier|final
-name|Tracing
-name|brave
+name|CatalogTracing
+name|tracing
 init|=
-name|Tracing
-operator|.
-name|newBuilder
-argument_list|()
-operator|.
-name|build
-argument_list|()
+operator|new
+name|CatalogTracing
+argument_list|(
+literal|"catalog-client"
+argument_list|)
 decl_stmt|;
 specifier|final
 name|BraveClientProvider
@@ -137,7 +141,10 @@ init|=
 operator|new
 name|BraveClientProvider
 argument_list|(
-name|brave
+name|tracing
+operator|.
+name|getHttpTracing
+argument_list|()
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -188,6 +195,14 @@ name|response
 operator|.
 name|close
 argument_list|()
+expr_stmt|;
+comment|// Give the tracer the time to flush traces (since we are using async reporter)
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|1000
+argument_list|)
 expr_stmt|;
 block|}
 block|}
