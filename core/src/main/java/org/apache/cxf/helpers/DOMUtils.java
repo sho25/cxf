@@ -583,6 +583,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|throwable
+parameter_list|)
+block|{
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|DOMUtils
+operator|.
+name|class
+argument_list|)
+operator|.
+name|finest
+argument_list|(
+literal|"Other JDK vendor"
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 specifier|private
 name|DOMUtils
