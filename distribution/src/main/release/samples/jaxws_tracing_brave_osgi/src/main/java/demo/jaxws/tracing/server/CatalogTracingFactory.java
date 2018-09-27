@@ -43,16 +43,6 @@ name|AsyncReporter
 import|;
 end_import
 
-begin_import
-import|import
-name|zipkin2
-operator|.
-name|reporter
-operator|.
-name|Sender
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -68,8 +58,13 @@ name|String
 name|serviceName
 parameter_list|,
 specifier|final
-name|Sender
-name|sender
+name|AsyncReporter
+argument_list|<
+name|zipkin2
+operator|.
+name|Span
+argument_list|>
+name|reporter
 parameter_list|)
 block|{
 return|return
@@ -96,12 +91,7 @@ argument_list|)
 operator|.
 name|spanReporter
 argument_list|(
-name|AsyncReporter
-operator|.
-name|create
-argument_list|(
-name|sender
-argument_list|)
+name|reporter
 argument_list|)
 operator|.
 name|build
