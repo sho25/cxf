@@ -1606,7 +1606,12 @@ argument_list|(
 operator|new
 name|DOMSource
 argument_list|(
+name|DOMUtils
+operator|.
+name|getDomElement
+argument_list|(
 name|el
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
