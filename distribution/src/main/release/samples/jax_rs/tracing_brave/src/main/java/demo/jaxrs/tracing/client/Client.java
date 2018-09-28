@@ -124,6 +124,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 specifier|final
 name|CatalogTracing
 name|tracing
@@ -133,7 +135,8 @@ name|CatalogTracing
 argument_list|(
 literal|"catalog-client"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 specifier|final
 name|BraveClientProvider
 name|provider
@@ -196,14 +199,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-comment|// Give the tracer the time to flush traces (since we are using async reporter)
-name|Thread
-operator|.
-name|sleep
-argument_list|(
-literal|1000
-argument_list|)
-expr_stmt|;
+block|}
 block|}
 block|}
 end_class
