@@ -19,14 +19,6 @@ end_package
 
 begin_import
 import|import
-name|brave
-operator|.
-name|ScopedSpan
-import|;
-end_import
-
-begin_import
-import|import
 name|java
 operator|.
 name|util
@@ -68,6 +60,14 @@ operator|.
 name|concurrent
 operator|.
 name|Executors
+import|;
+end_import
+
+begin_import
+import|import
+name|brave
+operator|.
+name|ScopedSpan
 import|;
 end_import
 

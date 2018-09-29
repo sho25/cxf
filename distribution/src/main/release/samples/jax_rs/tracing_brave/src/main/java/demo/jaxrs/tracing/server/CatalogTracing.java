@@ -191,8 +191,6 @@ argument_list|(
 name|sender
 argument_list|)
 expr_stmt|;
-name|httpTracing
-operator|=
 name|result
 operator|=
 name|createHttpTracing
@@ -201,6 +199,10 @@ name|serviceName
 argument_list|,
 name|reporter
 argument_list|)
+expr_stmt|;
+name|httpTracing
+operator|=
+name|result
 expr_stmt|;
 block|}
 block|}

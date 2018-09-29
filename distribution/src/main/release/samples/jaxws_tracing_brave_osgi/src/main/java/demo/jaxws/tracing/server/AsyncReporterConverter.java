@@ -90,7 +90,6 @@ name|target
 parameter_list|)
 block|{
 return|return
-operator|(
 name|source
 operator|instanceof
 name|AsyncReporter
@@ -106,7 +105,6 @@ operator|==
 name|AsyncReporter
 operator|.
 name|class
-operator|)
 return|;
 block|}
 annotation|@

@@ -45,9 +45,14 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|CatalogTracingFactory
 block|{
+specifier|private
+name|CatalogTracingFactory
+parameter_list|()
+block|{     }
 specifier|public
 specifier|static
 name|Tracing
