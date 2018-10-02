@@ -469,6 +469,31 @@ parameter_list|)
 throws|throws
 name|Base64Exception
 block|{
+if|if
+condition|(
+name|id
+operator|!=
+literal|null
+operator|&&
+name|id
+operator|.
+name|length
+operator|==
+literal|0
+operator|&&
+name|l
+operator|==
+literal|0
+condition|)
+block|{
+return|return
+operator|new
+name|byte
+index|[
+literal|0
+index|]
+return|;
+block|}
 comment|// Keep it simple - must be>= 4. Unpadded
 comment|// base64 data contain< 3 octets is invalid.
 comment|//
