@@ -73,22 +73,6 @@ name|Provider
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|client
-operator|.
-name|SyncInvokerImpl
-import|;
-end_import
-
 begin_class
 annotation|@
 name|Provider
@@ -114,22 +98,11 @@ name|ExecutorService
 name|executorService
 parameter_list|)
 block|{
-comment|// TODO: At the moment we still delegate if possible to the async HTTP conduit.
-comment|// Investigate if letting the RxJava thread pool deal with the sync invocation
-comment|// is indeed more effective
 return|return
 operator|new
 name|ObservableRxInvokerImpl
 argument_list|(
-operator|(
-operator|(
-name|SyncInvokerImpl
-operator|)
 name|syncInvoker
-operator|)
-operator|.
-name|getWebClient
-argument_list|()
 argument_list|,
 name|executorService
 argument_list|)
