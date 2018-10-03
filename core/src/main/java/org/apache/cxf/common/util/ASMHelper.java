@@ -775,6 +775,11 @@ argument_list|)
 expr_stmt|;
 name|tryClass
 argument_list|(
+literal|"org.apache.xbean.asm7.ClassWriter"
+argument_list|)
+expr_stmt|;
+name|tryClass
+argument_list|(
 literal|"org.apache.xbean.asm5.ClassWriter"
 argument_list|)
 expr_stmt|;
