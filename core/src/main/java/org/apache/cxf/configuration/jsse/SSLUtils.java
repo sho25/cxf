@@ -425,7 +425,7 @@ literal|".*"
 block|}
 argument_list|)
 decl_stmt|;
-comment|/**      * By default, exclude NULL, anon, EXPORT, DES ciphersuites      */
+comment|/**      * By default, exclude NULL, anon, EXPORT, DES, 3DES, MD5, CBC and RC4 ciphersuites      */
 specifier|private
 specifier|static
 specifier|final
@@ -450,6 +450,14 @@ block|,
 literal|".*_EXPORT_.*"
 block|,
 literal|".*_DES_.*"
+block|,
+literal|".*_3DES_.*"
+block|,
+literal|".*_MD5"
+block|,
+literal|".*_CBC_.*"
+block|,
+literal|".*_RC4_.*"
 block|}
 argument_list|)
 decl_stmt|;
