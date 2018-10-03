@@ -311,6 +311,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|helpers
+operator|.
+name|JavaUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|testutil
 operator|.
 name|common
@@ -396,6 +410,16 @@ operator|.
 name|junit
 operator|.
 name|AfterClass
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assume
 import|;
 end_import
 
@@ -2143,6 +2167,17 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// TODO There seems to be a bug with BC 1.60 + JDK 11
+name|Assume
+operator|.
+name|assumeFalse
+argument_list|(
+name|JavaUtils
+operator|.
+name|isJava11Compatible
+argument_list|()
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|Security
