@@ -290,7 +290,7 @@ block|{
 name|String
 name|configName
 init|=
-literal|"org/apache/cxf/systest/ws/wssec10/client_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client.xml"
 decl_stmt|;
 name|Bus
 name|bus
@@ -348,7 +348,7 @@ block|{
 name|String
 name|configName
 init|=
-literal|"org/apache/cxf/systest/ws/wssec10/client_restricted_unauthorized.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client_unauthorized.xml"
 decl_stmt|;
 name|Bus
 name|bus

@@ -101,7 +101,7 @@ specifier|static
 name|String
 name|configFileName
 init|=
-literal|"org/apache/cxf/systest/ws/wssec10/server_restricted_authorized.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/server_authorized.xml"
 decl_stmt|;
 specifier|public
 name|AuthorizedServer
