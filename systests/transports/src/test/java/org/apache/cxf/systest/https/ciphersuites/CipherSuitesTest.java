@@ -1057,7 +1057,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Client only includes RC4, server only includes AES
+comment|// Client only includes DHE, server excludes it
 annotation|@
 name|org
 operator|.
@@ -1066,7 +1066,7 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testClientRC4ServerAESIncluded
+name|testClientDHEServerExcludesIncluded
 parameter_list|()
 throws|throws
 name|Exception
@@ -1087,7 +1087,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"ciphersuites-rc4-client.xml"
+literal|"ciphersuites-dhe-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1212,7 +1212,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Client only includes RC4, server only includes AES
+comment|// Client only includes DHE, server excludes it
 annotation|@
 name|org
 operator|.
@@ -1221,7 +1221,7 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testClientRC4ServerAESIncludedAsync
+name|testClientDHEServerExcludesIncludedAsync
 parameter_list|()
 throws|throws
 name|Exception
@@ -1242,7 +1242,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"ciphersuites-rc4-client.xml"
+literal|"ciphersuites-dhe-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1385,7 +1385,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Both client + server include RC4
+comment|// Both client + server include DHE
 annotation|@
 name|org
 operator|.
@@ -1394,55 +1394,11 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testRC4Included
+name|testDHEIncluded
 parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|String
-name|version
-init|=
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|JavaUtils
-operator|.
-name|isJava9Compatible
-argument_list|()
-operator|||
-name|version
-operator|.
-name|length
-argument_list|()
-operator|>
-literal|1
-operator|&&
-literal|1.8D
-operator|<=
-name|Double
-operator|.
-name|parseDouble
-argument_list|(
-name|version
-operator|.
-name|substring
-argument_list|(
-literal|0
-argument_list|,
-literal|3
-argument_list|)
-argument_list|)
-condition|)
-block|{
-comment|// RC4 not supported since JDK8
-return|return;
-block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -1459,7 +1415,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"ciphersuites-rc4-client.xml"
+literal|"ciphersuites-dhe-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1573,7 +1529,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Both client + server include RC4
+comment|// Both client + server include DHE
 annotation|@
 name|org
 operator|.
@@ -1582,55 +1538,11 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testRC4IncludedAsync
+name|testDHEIncludedAsync
 parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|String
-name|version
-init|=
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|JavaUtils
-operator|.
-name|isJava9Compatible
-argument_list|()
-operator|||
-name|version
-operator|.
-name|length
-argument_list|()
-operator|>
-literal|1
-operator|&&
-literal|1.8D
-operator|<=
-name|Double
-operator|.
-name|parseDouble
-argument_list|(
-name|version
-operator|.
-name|substring
-argument_list|(
-literal|0
-argument_list|,
-literal|3
-argument_list|)
-argument_list|)
-condition|)
-block|{
-comment|// RC4 not supported since JDK8
-return|return;
-block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -1647,7 +1559,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"ciphersuites-rc4-client.xml"
+literal|"ciphersuites-dhe-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1779,7 +1691,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Client only includes AES, server only includes RC4
+comment|// Client only includes ECDHE, server only includes DHE
 annotation|@
 name|org
 operator|.
@@ -1788,7 +1700,7 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testClientAESServerRC4Included
+name|testClientECDHEServerDHEIncluded
 parameter_list|()
 throws|throws
 name|Exception
@@ -1934,7 +1846,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Client only includes AES, server only includes RC4
+comment|// Client only includes ECDHE, server only includes DHE
 annotation|@
 name|org
 operator|.
@@ -1943,7 +1855,7 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testClientAESServerRC4IncludedAsync
+name|testClientECDHEServerDHEIncludedAsync
 parameter_list|()
 throws|throws
 name|Exception
