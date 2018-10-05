@@ -416,7 +416,7 @@ name|HTTPS_CIPHER_SUITES
 init|=
 literal|"https.cipherSuites"
 decl_stmt|;
-comment|/**      * By default, exclude NULL, anon and EXPORT ciphersuites      */
+comment|/**      * By default, exclude NULL, anon, EXPORT, (3)DES, MD5, CBC and RC4 ciphersuites      */
 specifier|private
 specifier|static
 specifier|final
@@ -439,6 +439,14 @@ block|,
 literal|".*anon.*"
 block|,
 literal|".*EXPORT.*"
+block|,
+literal|".*DES.*"
+block|,
+literal|".*MD5"
+block|,
+literal|".*CBC.*"
+block|,
+literal|".*RC4.*"
 block|}
 argument_list|)
 decl_stmt|;

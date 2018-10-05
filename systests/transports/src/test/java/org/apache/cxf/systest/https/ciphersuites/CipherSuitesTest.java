@@ -4001,7 +4001,7 @@ name|c
 operator|.
 name|matches
 argument_list|(
-literal|".*NULL|anon|EXPORT.*"
+literal|".*NULL|anon|EXPORT|DES|MD5|CBC|RC4.*"
 argument_list|)
 argument_list|)
 argument_list|)
