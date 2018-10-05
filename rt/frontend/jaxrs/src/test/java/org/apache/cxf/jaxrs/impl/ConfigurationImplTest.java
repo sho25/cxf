@@ -1156,7 +1156,9 @@ name|void
 name|testServerFilterContractsOnClientIsRejected
 parameter_list|()
 block|{
-name|Configurable
+try|try
+init|(
+name|ConfigurableImpl
 argument_list|<
 name|Client
 argument_list|>
@@ -1175,7 +1177,8 @@ name|RuntimeType
 operator|.
 name|CLIENT
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Configuration
 name|config
 init|=
@@ -1262,6 +1265,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 end_function
 
 begin_function
@@ -1272,7 +1276,9 @@ name|void
 name|testClientFilterWithNestedInterfacesIsAccepted
 parameter_list|()
 block|{
-name|Configurable
+try|try
+init|(
+name|ConfigurableImpl
 argument_list|<
 name|Client
 argument_list|>
@@ -1289,7 +1295,8 @@ name|RuntimeType
 operator|.
 name|CLIENT
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Configuration
 name|config
 init|=
@@ -1351,6 +1358,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 end_function
 
@@ -1898,7 +1906,9 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
-name|Configurable
+try|try
+init|(
+name|ConfigurableImpl
 argument_list|<
 name|Client
 argument_list|>
@@ -1917,7 +1927,8 @@ name|RuntimeType
 operator|.
 name|CLIENT
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Configuration
 name|config
 init|=
@@ -1979,6 +1990,7 @@ return|return;
 comment|// success
 block|}
 block|}
+block|}
 name|fail
 argument_list|(
 literal|"did not log expected message"
@@ -2016,7 +2028,9 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
-name|Configurable
+try|try
+init|(
+name|ConfigurableImpl
 argument_list|<
 name|Client
 argument_list|>
@@ -2035,7 +2049,8 @@ name|RuntimeType
 operator|.
 name|CLIENT
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Configuration
 name|config
 init|=
@@ -2095,6 +2110,7 @@ condition|)
 block|{
 return|return;
 comment|// success
+block|}
 block|}
 block|}
 name|fail
