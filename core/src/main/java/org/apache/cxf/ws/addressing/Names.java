@@ -820,6 +820,13 @@ argument_list|(
 name|WSA_MESSAGEID_QNAME
 argument_list|)
 expr_stmt|;
+name|headers
+operator|.
+name|add
+argument_list|(
+name|WSA_RELATESTO_QNAME
+argument_list|)
+expr_stmt|;
 name|HEADERS
 operator|=
 name|Collections
