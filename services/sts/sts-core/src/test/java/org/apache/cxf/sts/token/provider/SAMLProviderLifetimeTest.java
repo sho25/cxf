@@ -776,8 +776,14 @@ name|providerResponse
 operator|.
 name|getExpires
 argument_list|()
+operator|.
+name|toEpochMilli
+argument_list|()
 argument_list|,
 name|expirationTime
+operator|.
+name|toEpochMilli
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
