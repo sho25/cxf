@@ -349,6 +349,7 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|properties
@@ -359,7 +360,6 @@ block|{
 comment|// we're simply stopping. if we couldn't unregister, that means we had to little time to register
 comment|// otherwise, we'll try to register the servlet
 return|return;
-block|}
 block|}
 name|alias
 operator|=
