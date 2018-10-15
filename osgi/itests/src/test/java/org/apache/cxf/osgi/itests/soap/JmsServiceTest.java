@@ -451,7 +451,13 @@ block|,
 name|testUtils
 argument_list|()
 block|,
-comment|//features(karafUrl, "spring"),
+name|features
+argument_list|(
+name|springLegacyUrl
+argument_list|,
+literal|"spring/4.3.18.RELEASE_1"
+argument_list|)
+block|,
 name|features
 argument_list|(
 name|cxfUrl
