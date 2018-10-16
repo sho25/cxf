@@ -569,6 +569,10 @@ name|baseClients
 init|=
 name|Collections
 operator|.
+name|synchronizedSet
+argument_list|(
+name|Collections
+operator|.
 name|newSetFromMap
 argument_list|(
 operator|new
@@ -579,6 +583,7 @@ argument_list|,
 name|Boolean
 argument_list|>
 argument_list|()
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public
@@ -624,6 +629,11 @@ operator|!
 name|closed
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|baseClients
+init|)
+block|{
 for|for
 control|(
 name|WebClient
@@ -637,6 +647,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 name|baseClients
 operator|=
