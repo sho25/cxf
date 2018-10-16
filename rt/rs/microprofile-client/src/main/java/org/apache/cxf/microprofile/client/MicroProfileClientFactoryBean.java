@@ -352,6 +352,7 @@ argument_list|>
 name|registeredProviders
 decl_stmt|;
 specifier|private
+specifier|final
 name|Configuration
 name|configuration
 decl_stmt|;
@@ -675,6 +676,8 @@ name|inheritHeaders
 argument_list|,
 name|executorService
 argument_list|,
+name|configuration
+argument_list|,
 name|varValues
 argument_list|)
 return|;
@@ -696,6 +699,8 @@ argument_list|,
 name|inheritHeaders
 argument_list|,
 name|executorService
+argument_list|,
+name|configuration
 argument_list|,
 name|varValues
 argument_list|)
