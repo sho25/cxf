@@ -240,7 +240,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
-literal|"SHA-256="
+name|digestAlgorithmName
+operator|+
+literal|"="
 operator|+
 operator|new
 name|String
