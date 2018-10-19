@@ -146,7 +146,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS CXF Filter which extracts signature data from the context and sends it to the message verifier  *  * @author Fredrik Espedal  */
+comment|/**  * RS CXF Filter which extracts signature data from the context and sends it to the message verifier  *  */
 end_comment
 
 begin_class
