@@ -172,7 +172,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS CXF Reader Interceptor which extracts signature data from the message and sends it to the message verifier  *  * @author Fredrik Espedal  */
+comment|/**  * RS CXF Reader Interceptor which extracts signature data from the message and sends it to the message verifier  *  */
 end_comment
 
 begin_class
