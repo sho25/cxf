@@ -1129,52 +1129,6 @@ argument_list|(
 name|messageHeaders
 argument_list|)
 decl_stmt|;
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"MessageVerifier: method: "
-operator|+
-name|method
-operator|+
-literal|" uri: "
-operator|+
-name|uri
-operator|+
-literal|" (request-target): "
-operator|+
-name|messageHeaders
-operator|.
-name|get
-argument_list|(
-literal|"(request-target)"
-argument_list|)
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"signature: "
-operator|+
-name|messageHeaders
-operator|.
-name|get
-argument_list|(
-literal|"Signature"
-argument_list|)
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|Verifier
 name|verifier
 init|=
@@ -1222,13 +1176,6 @@ operator|!
 name|success
 condition|)
 block|{
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"not success"
-argument_list|)
-expr_stmt|;
 throw|throw
 name|exceptionHandler
 operator|.
