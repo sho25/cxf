@@ -360,7 +360,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|getTargetRequestSubString
+name|getRequestTargetSubString
 argument_list|(
 name|responseHeaders
 operator|.
@@ -410,7 +410,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|getTargetRequestSubString
+name|getRequestTargetSubString
 argument_list|(
 name|responseHeaders
 operator|.
@@ -512,7 +512,7 @@ block|}
 specifier|private
 specifier|static
 name|String
-name|getTargetRequestSubString
+name|getRequestTargetSubString
 parameter_list|(
 name|String
 name|requestTarget
