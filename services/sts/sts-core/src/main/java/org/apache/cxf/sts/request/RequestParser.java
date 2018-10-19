@@ -1193,10 +1193,6 @@ name|requestObject
 decl_stmt|;
 if|if
 condition|(
-name|jaxbElement
-operator|!=
-literal|null
-operator|&&
 name|LOG
 operator|.
 name|isLoggable
