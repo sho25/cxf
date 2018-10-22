@@ -134,7 +134,7 @@ name|Exchange
 extends|extends
 name|StringMap
 block|{
-comment|/**      * Returns the inbound message for the exchange. On the client-side, this      * is the response. On the server-side, this is the request.      *      * @return the inboubnd message      */
+comment|/**      * Returns the inbound message for the exchange. On the client-side, this      * is the response. On the server-side, this is the request.      *      * @return the inbound message      */
 name|Message
 name|getInMessage
 parameter_list|()
