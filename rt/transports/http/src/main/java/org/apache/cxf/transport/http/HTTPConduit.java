@@ -5133,8 +5133,10 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
 name|allowCurrentThread
-operator|&&
+operator|||
+operator|(
 name|policy
 operator|!=
 literal|null
@@ -5148,6 +5150,7 @@ name|policy
 operator|.
 name|isAsyncExecuteTimeoutRejection
 argument_list|()
+operator|)
 condition|)
 block|{
 throw|throw
