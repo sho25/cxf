@@ -227,7 +227,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Verify signature filter is disabled"
 argument_list|)
@@ -236,7 +236,7 @@ return|return;
 block|}
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Starting filter message verification process"
 argument_list|)
@@ -263,7 +263,7 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Finished filter message verification process"
 argument_list|)

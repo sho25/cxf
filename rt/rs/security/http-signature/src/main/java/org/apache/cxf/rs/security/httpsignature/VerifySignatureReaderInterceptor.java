@@ -167,6 +167,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -192,14 +204,6 @@ implements|implements
 name|ReaderInterceptor
 block|{
 specifier|private
-name|MessageVerifier
-name|messageVerifier
-decl_stmt|;
-specifier|private
-name|boolean
-name|enabled
-decl_stmt|;
-specifier|protected
 specifier|static
 specifier|final
 name|Logger
@@ -213,6 +217,14 @@ name|VerifySignatureReaderInterceptor
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+specifier|private
+name|MessageVerifier
+name|messageVerifier
+decl_stmt|;
+specifier|private
+name|boolean
+name|enabled
 decl_stmt|;
 specifier|public
 name|VerifySignatureReaderInterceptor
@@ -255,7 +267,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Verify signature reader interceptor is disabled"
 argument_list|)
@@ -269,7 +281,7 @@ return|;
 block|}
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Starting interceptor message verification process"
 argument_list|)
@@ -323,7 +335,7 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Finished interceptor message verification process"
 argument_list|)

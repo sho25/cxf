@@ -142,7 +142,7 @@ specifier|private
 name|ExceptionHandler
 name|exceptionHandler
 decl_stmt|;
-specifier|protected
+specifier|private
 specifier|static
 specifier|final
 name|Logger
@@ -708,7 +708,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Starting digest verification"
 argument_list|)
@@ -841,7 +841,7 @@ throw|;
 block|}
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Finished digest verification"
 argument_list|)
@@ -1144,7 +1144,7 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Starting signature verification"
 argument_list|)
