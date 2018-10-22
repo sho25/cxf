@@ -385,9 +385,7 @@ name|perRecipientUnprotectedHeaders
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JweHeaders
-argument_list|>
+argument_list|<>
 argument_list|(
 name|propLocs
 operator|.

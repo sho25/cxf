@@ -441,9 +441,7 @@ name|theResponse
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|OutHeaderResponse
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Holder
@@ -454,9 +452,7 @@ name|headerInfo
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|SOAPHeaderData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|proxy
@@ -577,9 +573,7 @@ name|headerInfo
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|SOAPHeaderData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SOAPHeaderData

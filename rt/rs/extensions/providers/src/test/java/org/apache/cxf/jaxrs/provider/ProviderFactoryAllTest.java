@@ -325,9 +325,7 @@ name|provider
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|pf

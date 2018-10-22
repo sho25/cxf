@@ -338,9 +338,7 @@ name|phases
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|Phase
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|phases
@@ -2576,9 +2574,7 @@ name|a
 operator|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -2593,9 +2589,7 @@ name|b
 operator|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

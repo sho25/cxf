@@ -131,9 +131,7 @@ name|before
 init|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -146,9 +144,7 @@ name|after
 init|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Instantiates the interceptor to live in a specified phase. The      * interceptor's id will be set to the name of the implementing class.      *      * @param phase the interceptor's phase      */

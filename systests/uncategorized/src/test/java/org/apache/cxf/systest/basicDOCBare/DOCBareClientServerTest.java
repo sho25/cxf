@@ -422,9 +422,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TradePriceData
-argument_list|>
+argument_list|<>
 argument_list|(
 name|priceData
 argument_list|)
@@ -520,9 +518,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TradePriceData
-argument_list|>
+argument_list|<>
 argument_list|(
 name|priceData
 argument_list|)

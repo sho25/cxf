@@ -1195,9 +1195,7 @@ name|jsonP
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|OAuthAuthorizationData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|jsonP

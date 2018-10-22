@@ -364,9 +364,7 @@ name|cachedElement
 operator|=
 operator|new
 name|SoftReference
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|(
 name|el
 argument_list|)
@@ -528,9 +526,7 @@ name|cachedElement
 operator|=
 operator|new
 name|SoftReference
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|(
 name|element
 argument_list|)

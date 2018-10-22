@@ -58,9 +58,7 @@ name|state
 init|=
 operator|new
 name|LocalVisitorState
-argument_list|<
-name|StringBuilder
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

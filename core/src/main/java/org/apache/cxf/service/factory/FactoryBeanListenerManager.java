@@ -118,9 +118,7 @@ name|listeners
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|FactoryBeanListener
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

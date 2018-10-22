@@ -386,9 +386,7 @@ name|providers
 operator|=
 operator|new
 name|CopyOnWriteArraySet
-argument_list|<
-name|PolicyInterceptorProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

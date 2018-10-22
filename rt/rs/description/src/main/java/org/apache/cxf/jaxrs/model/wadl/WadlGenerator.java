@@ -1935,9 +1935,7 @@ name|docProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|DocumentationProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

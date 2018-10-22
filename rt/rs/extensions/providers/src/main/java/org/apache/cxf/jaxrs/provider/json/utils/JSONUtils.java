@@ -1534,9 +1534,7 @@ name|mixed
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|IgnoreMixedContentWriter

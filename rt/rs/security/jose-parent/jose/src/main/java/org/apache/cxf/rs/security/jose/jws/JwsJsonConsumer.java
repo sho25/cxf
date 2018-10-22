@@ -262,9 +262,7 @@ name|signatures
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JwsJsonSignatureEntry
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * @param jwsSignedDocument      *            signed JWS Document      */
@@ -1196,9 +1194,7 @@ name|validatedSignatures
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JwsJsonSignatureEntry
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1320,9 +1316,7 @@ name|nonValidatedSignatures
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JwsJsonSignatureEntry
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

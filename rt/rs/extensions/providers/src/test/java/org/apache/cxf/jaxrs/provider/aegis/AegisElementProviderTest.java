@@ -335,9 +335,7 @@ name|p
 init|=
 operator|new
 name|AegisElementProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -374,9 +372,7 @@ name|p
 init|=
 operator|new
 name|AegisElementProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -415,9 +411,7 @@ name|p
 init|=
 operator|new
 name|AegisElementProvider
-argument_list|<
-name|AegisTestBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|byte
@@ -497,9 +491,7 @@ name|p
 init|=
 operator|new
 name|NoNamespaceAegisElementProvider
-argument_list|<
-name|AegisTestBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|byte
@@ -579,9 +571,7 @@ name|p
 init|=
 operator|new
 name|AegisElementProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ByteArrayOutputStream
@@ -690,9 +680,7 @@ name|p
 init|=
 operator|new
 name|NoNamespaceAegisElementProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ByteArrayOutputStream

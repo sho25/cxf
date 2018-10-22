@@ -975,9 +975,7 @@ name|approvedScopes
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|OAuthPermission
-argument_list|>
+argument_list|<>
 argument_list|(
 name|approvedScopesSet
 argument_list|)

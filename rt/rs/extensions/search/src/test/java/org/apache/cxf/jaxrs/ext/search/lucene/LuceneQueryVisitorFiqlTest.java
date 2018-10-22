@@ -860,9 +860,7 @@ name|visitor
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|visitor
@@ -937,9 +935,7 @@ name|visitor
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final

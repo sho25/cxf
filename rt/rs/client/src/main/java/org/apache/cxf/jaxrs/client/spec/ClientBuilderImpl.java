@@ -235,9 +235,7 @@ name|configImpl
 operator|=
 operator|new
 name|ClientConfigurableImpl
-argument_list|<
-name|ClientBuilder
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|)
@@ -784,9 +782,7 @@ name|configImpl
 operator|=
 operator|new
 name|ClientConfigurableImpl
-argument_list|<
-name|ClientBuilder
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,

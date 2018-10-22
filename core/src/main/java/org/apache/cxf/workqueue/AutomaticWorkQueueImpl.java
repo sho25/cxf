@@ -2277,9 +2277,7 @@ name|delayQueue
 operator|=
 operator|new
 name|DelayQueue
-argument_list|<
-name|DelayedTaskWrapper
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|watchDog

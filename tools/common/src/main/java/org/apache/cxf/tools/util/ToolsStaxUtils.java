@@ -292,9 +292,7 @@ name|stack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Tag
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while

@@ -156,9 +156,7 @@ name|errors
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ErrorInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

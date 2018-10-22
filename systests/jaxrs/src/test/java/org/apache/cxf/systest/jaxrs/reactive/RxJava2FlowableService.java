@@ -701,9 +701,7 @@ name|beans
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ListAsyncSubscriber

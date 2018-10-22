@@ -221,9 +221,7 @@ name|contexts
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|NSContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Stack
@@ -234,9 +232,7 @@ name|elNames
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|QName

@@ -1291,9 +1291,7 @@ name|ret
 init|=
 operator|new
 name|CXF2411Result
-argument_list|<
-name|CXF2411SubClass
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|CXF2411SubClass

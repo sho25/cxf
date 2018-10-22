@@ -995,9 +995,7 @@ name|customProvider
 init|=
 operator|new
 name|JAXBElementProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|pf
@@ -1126,9 +1124,7 @@ name|customProvider
 init|=
 operator|new
 name|JAXBElementProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|pf
@@ -2748,9 +2744,7 @@ name|provider
 init|=
 operator|new
 name|JAXBElementProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|pf
@@ -4382,9 +4376,7 @@ name|superBookHandler
 init|=
 operator|new
 name|SuperBookReaderWriter2
-argument_list|<
-name|SuperBook
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providers
@@ -6481,9 +6473,7 @@ name|provider
 init|=
 operator|new
 name|JAXBElementProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ProviderFactory

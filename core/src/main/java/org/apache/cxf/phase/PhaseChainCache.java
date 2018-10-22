@@ -131,9 +131,7 @@ name|lastData
 init|=
 operator|new
 name|AtomicReference
-argument_list|<
-name|ChainHolder
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

@@ -527,9 +527,7 @@ name|resourceProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ResourceProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -541,9 +539,7 @@ name|jaxrsProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -555,9 +551,7 @@ name|cxfFeatures
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

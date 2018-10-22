@@ -448,9 +448,7 @@ name|parser
 operator|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -1714,9 +1712,7 @@ name|visitor
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"ct"
 argument_list|,

@@ -76,9 +76,7 @@ name|d
 init|=
 operator|new
 name|Document
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|id
 argument_list|)

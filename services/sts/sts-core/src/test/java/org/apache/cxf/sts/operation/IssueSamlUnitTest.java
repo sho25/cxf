@@ -7689,9 +7689,7 @@ name|useKeyType
 operator|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|UseKeyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.

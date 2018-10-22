@@ -152,9 +152,7 @@ name|eps
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|EndpointImpl
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

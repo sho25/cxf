@@ -1010,9 +1010,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1082,9 +1080,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Double
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

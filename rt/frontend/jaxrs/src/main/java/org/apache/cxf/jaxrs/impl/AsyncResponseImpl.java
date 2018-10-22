@@ -362,9 +362,7 @@ name|completionCallbacks
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|CompletionCallback
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -376,9 +374,7 @@ name|connectionCallbacks
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ConnectionCallback
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

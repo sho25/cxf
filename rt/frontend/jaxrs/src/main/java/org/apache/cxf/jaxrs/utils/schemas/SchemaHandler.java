@@ -484,9 +484,7 @@ name|schemaURLs
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|URL
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

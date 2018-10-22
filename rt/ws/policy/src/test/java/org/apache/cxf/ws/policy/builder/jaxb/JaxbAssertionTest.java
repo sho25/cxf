@@ -229,9 +229,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertNull
@@ -380,9 +378,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|FooType
@@ -602,9 +598,7 @@ name|oassertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|oassertion
@@ -675,9 +669,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|FooType

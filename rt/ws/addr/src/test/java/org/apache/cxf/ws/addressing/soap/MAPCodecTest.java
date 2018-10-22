@@ -2773,9 +2773,7 @@ name|jaxbElement
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|QName

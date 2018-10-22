@@ -2717,9 +2717,7 @@ name|toDo
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|GenericWsdlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2852,9 +2850,7 @@ name|artifactsPath
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

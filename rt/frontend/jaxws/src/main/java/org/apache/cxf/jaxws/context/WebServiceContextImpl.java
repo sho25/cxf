@@ -289,9 +289,7 @@ name|context
 init|=
 operator|new
 name|ThreadLocal
-argument_list|<
-name|MessageContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

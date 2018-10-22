@@ -735,9 +735,7 @@ name|list
 init|=
 operator|new
 name|ManagedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|elemList
 operator|.

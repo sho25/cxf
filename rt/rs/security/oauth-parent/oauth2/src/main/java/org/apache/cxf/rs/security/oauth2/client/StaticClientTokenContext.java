@@ -38,9 +38,7 @@ name|STATIC_CONTEXT
 init|=
 operator|new
 name|ThreadLocal
-argument_list|<
-name|ClientTokenContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

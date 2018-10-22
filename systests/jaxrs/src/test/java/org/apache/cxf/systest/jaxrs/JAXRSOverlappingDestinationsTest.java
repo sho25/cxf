@@ -430,9 +430,7 @@ name|task
 init|=
 operator|new
 name|FutureTask
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callable
 argument_list|)
@@ -622,9 +620,7 @@ name|task
 init|=
 operator|new
 name|FutureTask
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callable
 argument_list|)

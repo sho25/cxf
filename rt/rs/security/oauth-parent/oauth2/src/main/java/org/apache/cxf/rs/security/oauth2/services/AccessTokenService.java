@@ -414,9 +414,7 @@ name|grantHandlers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|AccessTokenGrantHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -428,9 +426,7 @@ name|responseHandlers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|AccessTokenResponseFilter
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Sets the list of optional grant handlers      * @param handlers the grant handlers      */

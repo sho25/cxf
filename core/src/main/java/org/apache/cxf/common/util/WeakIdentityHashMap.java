@@ -144,9 +144,7 @@ name|queue
 init|=
 operator|new
 name|ReferenceQueue
-argument_list|<
-name|K
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

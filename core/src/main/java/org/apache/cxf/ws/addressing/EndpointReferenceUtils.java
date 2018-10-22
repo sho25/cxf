@@ -5206,9 +5206,7 @@ name|jaxEle
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|EndpointReferenceType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|qname
 argument_list|,

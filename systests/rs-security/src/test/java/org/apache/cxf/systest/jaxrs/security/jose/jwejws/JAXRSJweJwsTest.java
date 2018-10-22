@@ -863,9 +863,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweWriterInterceptor
@@ -1047,9 +1045,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweWriterInterceptor
@@ -1266,9 +1262,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweWriterInterceptor
@@ -1511,9 +1505,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweWriterInterceptor
@@ -2354,9 +2346,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JwsWriterInterceptor
@@ -2538,9 +2528,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JwsWriterInterceptor
@@ -2793,9 +2781,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JwsWriterInterceptor
@@ -3022,9 +3008,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweWriterInterceptor
@@ -3314,9 +3298,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// writer
@@ -3495,9 +3477,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// writer

@@ -482,9 +482,7 @@ name|protectedHeaders
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JwsHeaders
-argument_list|>
+argument_list|<>
 argument_list|(
 name|propLocs
 operator|.

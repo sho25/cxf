@@ -2428,9 +2428,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|obj
 argument_list|)
@@ -3121,9 +3119,7 @@ name|ret
 init|=
 operator|new
 name|JaxwsResponseCallback
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callback
 argument_list|)
@@ -3214,9 +3210,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|obj
 argument_list|)

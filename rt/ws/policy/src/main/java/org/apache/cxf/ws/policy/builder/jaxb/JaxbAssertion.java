@@ -424,9 +424,7 @@ name|a
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|getName
 argument_list|()

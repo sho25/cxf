@@ -123,9 +123,7 @@ name|resources
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

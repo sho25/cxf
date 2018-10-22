@@ -189,9 +189,7 @@ name|p
 init|=
 operator|new
 name|DataSourceProvider
-argument_list|<
-name|DataHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|DataHandler
@@ -274,9 +272,7 @@ name|p
 init|=
 operator|new
 name|DataSourceProvider
-argument_list|<
-name|DataHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|DataHandler
@@ -374,9 +370,7 @@ name|p
 init|=
 operator|new
 name|DataSourceProvider
-argument_list|<
-name|DataSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|DataSource
@@ -456,9 +450,7 @@ name|p
 init|=
 operator|new
 name|DataSourceProvider
-argument_list|<
-name|DataSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|DataSource
@@ -576,9 +568,7 @@ name|p
 init|=
 operator|new
 name|DataSourceProvider
-argument_list|<
-name|DataSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|p

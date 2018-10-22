@@ -1975,9 +1975,7 @@ name|provider
 init|=
 operator|new
 name|FormEncodingProvider
-argument_list|<
-name|Form
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|true
 argument_list|)

@@ -1350,9 +1350,7 @@ name|runner
 init|=
 operator|new
 name|TestRunner
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"No."
 operator|+

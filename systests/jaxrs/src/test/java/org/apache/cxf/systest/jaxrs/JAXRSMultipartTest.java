@@ -3339,9 +3339,7 @@ name|atts
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|atts
@@ -3457,9 +3455,7 @@ name|atts
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|atts
@@ -7716,9 +7712,7 @@ name|provider
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 return|return

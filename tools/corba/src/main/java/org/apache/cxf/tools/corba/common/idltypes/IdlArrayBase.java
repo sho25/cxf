@@ -108,9 +108,7 @@ name|dims
 operator|=
 operator|new
 name|Vector
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if

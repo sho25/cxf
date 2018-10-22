@@ -93,9 +93,7 @@ name|bean
 init|=
 operator|new
 name|Beanspector
-argument_list|<
-name|SimpleBean
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|SimpleBean

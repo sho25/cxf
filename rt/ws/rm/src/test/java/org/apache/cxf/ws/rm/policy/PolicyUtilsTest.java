@@ -1069,9 +1069,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|RMAssertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertion

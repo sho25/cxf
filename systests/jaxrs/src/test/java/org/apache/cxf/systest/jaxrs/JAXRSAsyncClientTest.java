@@ -2029,9 +2029,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -2156,9 +2154,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -2305,9 +2301,7 @@ name|bookHolder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -2358,9 +2352,7 @@ name|booleanHolder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -2598,9 +2590,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|InvocationCallback

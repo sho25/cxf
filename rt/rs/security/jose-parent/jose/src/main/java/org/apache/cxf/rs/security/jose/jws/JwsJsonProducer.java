@@ -284,9 +284,7 @@ name|signatures
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JwsJsonSignatureEntry
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1203,9 +1201,7 @@ name|b64Set
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

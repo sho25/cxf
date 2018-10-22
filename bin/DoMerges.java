@@ -103,9 +103,7 @@ name|records
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|String
 operator|.
@@ -122,9 +120,7 @@ name|patchIds
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|String
 operator|.
@@ -173,9 +169,7 @@ name|pathMaps
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ToFrom
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|static
@@ -1007,9 +1001,7 @@ name|verList
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Process
@@ -2367,9 +2359,7 @@ name|args
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -2387,9 +2377,7 @@ name|check
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -2501,9 +2489,7 @@ name|newList
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2605,9 +2591,7 @@ name|jiras
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -131,9 +131,7 @@ name|auth
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|Authenticator
-argument_list|>
+argument_list|<>
 argument_list|(
 name|cxfauth
 argument_list|)

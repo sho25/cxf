@@ -476,9 +476,7 @@ name|features
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

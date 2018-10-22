@@ -41,9 +41,7 @@ name|infos
 init|=
 operator|new
 name|ThreadLocal
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

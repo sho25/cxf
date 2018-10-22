@@ -433,9 +433,7 @@ name|name
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"Sam"
 argument_list|)
@@ -639,9 +637,7 @@ name|handler
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|DataHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|handler

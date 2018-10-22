@@ -389,9 +389,7 @@ name|parser
 operator|=
 operator|new
 name|ODataParser
-argument_list|<
-name|Person
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Person
 operator|.

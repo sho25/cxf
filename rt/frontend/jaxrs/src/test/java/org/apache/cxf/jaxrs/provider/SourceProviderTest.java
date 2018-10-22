@@ -397,9 +397,7 @@ name|p
 init|=
 operator|new
 name|SourceProvider
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -466,9 +464,7 @@ name|p
 init|=
 operator|new
 name|SourceProvider
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -537,9 +533,7 @@ name|p
 init|=
 operator|new
 name|TestSourceProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertSame
@@ -677,9 +671,7 @@ name|p
 init|=
 operator|new
 name|TestSourceProvider
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|InputStream
@@ -842,9 +834,7 @@ name|p
 init|=
 operator|new
 name|SourceProvider
-argument_list|<
-name|Document
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Document
@@ -936,9 +926,7 @@ name|p
 init|=
 operator|new
 name|TestSourceProvider
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|p
@@ -990,9 +978,7 @@ name|p
 init|=
 operator|new
 name|TestSourceProvider
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StreamSource

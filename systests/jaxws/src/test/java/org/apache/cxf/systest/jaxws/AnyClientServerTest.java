@@ -472,9 +472,7 @@ name|ele1
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|QName
@@ -506,9 +504,7 @@ name|ele2
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|QName

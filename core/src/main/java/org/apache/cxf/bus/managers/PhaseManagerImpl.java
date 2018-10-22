@@ -214,9 +214,7 @@ name|inPhases
 operator|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|Phase
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|inPhases
@@ -571,9 +569,7 @@ name|outPhases
 operator|=
 operator|new
 name|SortedArraySet
-argument_list|<
-name|Phase
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|int

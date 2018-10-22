@@ -171,9 +171,7 @@ name|queue
 init|=
 operator|new
 name|LinkedBlockingQueue
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

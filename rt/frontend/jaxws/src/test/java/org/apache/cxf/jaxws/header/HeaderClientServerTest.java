@@ -794,9 +794,7 @@ name|out
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader2Response
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Holder
@@ -807,9 +805,7 @@ name|outHeader
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader2Response
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -983,9 +979,7 @@ name|inoutHeader
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader3
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1197,9 +1191,7 @@ name|out
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader5ResponseBody
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Holder
@@ -1210,9 +1202,7 @@ name|outHeader
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader5
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TestHeader5
@@ -1400,9 +1390,7 @@ name|inoutHeader
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|TestHeader3
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1870,9 +1858,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|HeaderMessage
-argument_list|>
+argument_list|<>
 argument_list|(
 name|header
 argument_list|)
@@ -2027,9 +2013,7 @@ name|simpleAll
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|SimpleAll
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SimpleAll

@@ -2347,9 +2347,7 @@ name|dropElements
 operator|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|(
 name|expandedQNames
 operator|.
@@ -3690,9 +3688,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|findAllElementsByTagNameNS
@@ -3986,9 +3982,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|findAllElementsByTagName

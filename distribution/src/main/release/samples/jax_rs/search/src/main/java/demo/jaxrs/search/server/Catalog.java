@@ -1915,9 +1915,7 @@ name|newVisitor
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"ct"
 argument_list|,

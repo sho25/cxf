@@ -182,9 +182,7 @@ name|parser
 operator|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.

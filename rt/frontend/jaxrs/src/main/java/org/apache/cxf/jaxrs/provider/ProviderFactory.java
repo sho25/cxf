@@ -3597,9 +3597,7 @@ name|extensions
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|addBusExtension
@@ -8844,9 +8842,7 @@ name|theProvider
 init|=
 operator|new
 name|ProviderInfo
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|provider
 argument_list|,

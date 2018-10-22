@@ -352,9 +352,7 @@ name|ordered
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1710,9 +1708,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1876,9 +1872,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Extension

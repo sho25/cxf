@@ -192,9 +192,7 @@ name|returnValue
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Student
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -269,9 +267,7 @@ name|returnValue
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Student
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

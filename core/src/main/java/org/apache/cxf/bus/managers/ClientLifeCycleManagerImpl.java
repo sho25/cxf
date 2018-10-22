@@ -167,9 +167,7 @@ name|listeners
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|ClientLifeCycleListener
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

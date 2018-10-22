@@ -600,9 +600,7 @@ name|configImpl
 operator|=
 operator|new
 name|ClientConfigurableImpl
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -1335,9 +1333,7 @@ name|configImpl
 operator|=
 operator|new
 name|ClientConfigurableImpl
-argument_list|<
-name|WebTarget
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -1426,9 +1422,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

@@ -1253,9 +1253,7 @@ name|seenTypes
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|seenTypes

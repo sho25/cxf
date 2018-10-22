@@ -1465,9 +1465,7 @@ name|appContexts
 operator|=
 operator|new
 name|CopyOnWriteArraySet
-argument_list|<
-name|ApplicationContext
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|addApplicationContext

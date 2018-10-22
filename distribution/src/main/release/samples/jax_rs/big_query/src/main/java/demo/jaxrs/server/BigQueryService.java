@@ -498,9 +498,7 @@ name|texts
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ShakespeareText
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

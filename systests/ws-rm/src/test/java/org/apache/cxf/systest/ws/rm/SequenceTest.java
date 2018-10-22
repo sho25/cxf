@@ -10739,9 +10739,7 @@ name|cm
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|RMMessage
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|map

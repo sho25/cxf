@@ -693,9 +693,7 @@ name|list
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|OSGiExtension
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|List

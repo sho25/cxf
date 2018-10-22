@@ -1733,9 +1733,7 @@ name|uniqueVars
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|templ
 operator|.

@@ -1918,9 +1918,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|SOAPHeaderData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|holder
@@ -2019,9 +2017,7 @@ name|outHeaderHolder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|OutHeaderResponse
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Holder
@@ -2032,9 +2028,7 @@ name|soapHeaderHolder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|SOAPHeaderData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|proxy

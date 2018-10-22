@@ -567,9 +567,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|table
 argument_list|,

@@ -1973,9 +1973,7 @@ name|r
 init|=
 operator|new
 name|DataWriterImpl
-argument_list|<
-name|XMLStreamWriter
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -2017,9 +2015,7 @@ name|r
 init|=
 operator|new
 name|DataWriterImpl
-argument_list|<
-name|OutputStream
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -2061,9 +2057,7 @@ name|r
 init|=
 operator|new
 name|DataWriterImpl
-argument_list|<
-name|XMLEventWriter
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -2105,9 +2099,7 @@ name|r
 init|=
 operator|new
 name|DataWriterImpl
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|(
 name|this
 argument_list|,
@@ -2602,9 +2594,7 @@ name|bi
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|DOMSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -2618,9 +2608,7 @@ name|schemas
 operator|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|DOMSource
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 try|try

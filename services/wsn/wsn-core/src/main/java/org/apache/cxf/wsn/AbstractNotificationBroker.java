@@ -974,9 +974,7 @@ name|nonContactPublishers
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|AbstractPublisher
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

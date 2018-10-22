@@ -103,9 +103,7 @@ name|filter
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Book
 operator|.
@@ -125,9 +123,7 @@ name|jpa
 init|=
 operator|new
 name|JPALanguageVisitor
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Book
 operator|.

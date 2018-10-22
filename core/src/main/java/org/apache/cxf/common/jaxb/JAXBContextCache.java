@@ -379,9 +379,7 @@ name|ccas
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|CachedContextAndSchemasInternal
-argument_list|>
+argument_list|<>
 argument_list|(
 name|i
 argument_list|)
@@ -537,9 +535,7 @@ name|context
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|JAXBContext
-argument_list|>
+argument_list|<>
 argument_list|(
 name|context
 argument_list|)

@@ -145,9 +145,7 @@ name|bindings
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|BindingInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -158,9 +156,7 @@ name|endpoints
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|EndpointInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map

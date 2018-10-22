@@ -97,9 +97,7 @@ name|extraMessages
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Constructs a new exception with the specified detail      * message.      *      * @param message the detail message.      */

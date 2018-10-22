@@ -258,9 +258,7 @@ name|acks
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|SequenceAcknowledgement
-argument_list|>
+argument_list|<>
 argument_list|(
 name|a
 argument_list|)
@@ -282,9 +280,7 @@ name|acksRequested
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|AckRequestedType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ar
 argument_list|)

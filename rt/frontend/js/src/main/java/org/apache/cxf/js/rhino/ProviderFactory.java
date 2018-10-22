@@ -238,9 +238,7 @@ name|providers
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|AbstractDOMProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 static|static

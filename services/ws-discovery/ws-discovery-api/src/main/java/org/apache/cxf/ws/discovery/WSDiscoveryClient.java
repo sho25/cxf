@@ -2471,9 +2471,7 @@ name|response
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|ResolveMatchesType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AsyncHandler

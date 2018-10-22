@@ -1015,9 +1015,7 @@ name|cleanupHooks
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|Closeable
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

@@ -1372,9 +1372,7 @@ name|jweProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JweEncryptionProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|KeyEncryptionProvider
@@ -1466,9 +1464,7 @@ name|perRecipientHeades
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JweHeaders
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|perRecipientHeades

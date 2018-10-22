@@ -550,9 +550,7 @@ name|preSetPolicyProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|PolicyProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -768,9 +766,7 @@ name|policyProviders
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|PolicyProvider
-argument_list|>
+argument_list|<>
 argument_list|(
 name|p
 argument_list|)
@@ -831,9 +827,7 @@ name|policyProviders
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|PolicyProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if

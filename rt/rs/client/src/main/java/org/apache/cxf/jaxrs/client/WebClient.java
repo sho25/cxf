@@ -4065,9 +4065,7 @@ name|cb
 init|=
 operator|new
 name|JaxrsClientCallback
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callback
 argument_list|,

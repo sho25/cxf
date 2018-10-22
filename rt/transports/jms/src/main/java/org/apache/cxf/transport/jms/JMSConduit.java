@@ -2142,9 +2142,7 @@ name|ref
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|JMSConduit
-argument_list|>
+argument_list|<>
 argument_list|(
 name|c
 argument_list|)

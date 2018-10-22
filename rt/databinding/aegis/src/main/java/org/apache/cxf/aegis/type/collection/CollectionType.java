@@ -366,9 +366,7 @@ name|values
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -410,9 +408,7 @@ name|values
 operator|=
 operator|new
 name|TreeSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -433,9 +429,7 @@ name|values
 operator|=
 operator|new
 name|Vector
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -456,9 +450,7 @@ name|values
 operator|=
 operator|new
 name|Stack
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

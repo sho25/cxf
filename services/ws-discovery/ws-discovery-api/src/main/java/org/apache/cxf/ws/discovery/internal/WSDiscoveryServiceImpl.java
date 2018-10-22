@@ -928,9 +928,7 @@ name|registered
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|HelloType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ObjectFactory
@@ -2055,9 +2053,7 @@ name|consider
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|HelloType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|registered
 argument_list|)

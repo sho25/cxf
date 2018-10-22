@@ -1175,9 +1175,7 @@ name|NS_AWARE_INPUT_FACTORY_POOL
 operator|=
 operator|new
 name|ArrayBlockingQueue
-argument_list|<
-name|XMLInputFactory
-argument_list|>
+argument_list|<>
 argument_list|(
 name|i
 argument_list|)
@@ -1186,9 +1184,7 @@ name|OUTPUT_FACTORY_POOL
 operator|=
 operator|new
 name|ArrayBlockingQueue
-argument_list|<
-name|XMLOutputFactory
-argument_list|>
+argument_list|<>
 argument_list|(
 name|i
 argument_list|)
@@ -4165,9 +4161,7 @@ name|countStack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -5859,9 +5853,7 @@ name|sortedAttrs
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -6986,9 +6978,7 @@ name|stack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -7596,9 +7586,7 @@ name|stack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

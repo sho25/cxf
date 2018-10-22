@@ -513,9 +513,7 @@ name|outFilters
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MultipartOutputFilter
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|m
@@ -588,9 +586,7 @@ name|inFilters
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MultipartInputFilter
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|m
@@ -1371,9 +1367,7 @@ name|all
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -111,9 +111,7 @@ name|placeParser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Place
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Place
 operator|.
@@ -164,9 +162,7 @@ name|roomParser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Room
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Room
 operator|.

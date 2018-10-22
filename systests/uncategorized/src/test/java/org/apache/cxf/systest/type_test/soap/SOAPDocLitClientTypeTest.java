@@ -308,9 +308,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|FixedArray
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOrig
 argument_list|)
@@ -323,9 +321,7 @@ name|z
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|FixedArray
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try

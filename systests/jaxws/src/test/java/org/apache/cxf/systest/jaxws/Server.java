@@ -366,9 +366,7 @@ name|eps
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -877,9 +875,7 @@ name|r
 init|=
 operator|new
 name|ServerAsyncResponse
-argument_list|<
-name|GreetMeResponse
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -1020,9 +1016,7 @@ name|r
 init|=
 operator|new
 name|ServerAsyncResponse
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new

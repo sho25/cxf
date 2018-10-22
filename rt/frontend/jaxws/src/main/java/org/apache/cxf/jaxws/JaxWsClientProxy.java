@@ -2290,9 +2290,7 @@ name|ret
 init|=
 operator|new
 name|JaxwsResponseCallback
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callback
 argument_list|)

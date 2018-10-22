@@ -251,9 +251,7 @@ name|failed
 init|=
 operator|new
 name|CopyOnWriteArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -264,9 +262,7 @@ name|loaded
 init|=
 operator|new
 name|CopyOnWriteArraySet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -439,9 +435,7 @@ name|factory
 operator|=
 operator|new
 name|TransportFinder
-argument_list|<
-name|ConduitInitiator
-argument_list|>
+argument_list|<>
 argument_list|(
 name|bus
 argument_list|,

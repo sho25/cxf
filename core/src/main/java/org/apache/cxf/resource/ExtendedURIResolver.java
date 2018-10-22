@@ -87,9 +87,7 @@ name|resourceOpened
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|InputStream
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

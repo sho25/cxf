@@ -385,9 +385,7 @@ name|responseHandlers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|AccessTokenResponseFilter
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

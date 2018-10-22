@@ -143,9 +143,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -173,9 +171,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"printers"
 argument_list|)
@@ -227,9 +223,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -257,9 +251,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"printers"
 argument_list|)
@@ -316,9 +308,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -346,9 +336,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"printers"
 argument_list|)
@@ -386,9 +374,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -416,9 +402,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"printers"
 argument_list|)

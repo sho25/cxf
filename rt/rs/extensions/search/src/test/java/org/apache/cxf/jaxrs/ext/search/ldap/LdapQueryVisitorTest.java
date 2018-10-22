@@ -133,9 +133,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Condition
 operator|.
@@ -172,9 +170,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|filter
@@ -233,9 +229,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|visitor
@@ -301,9 +295,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|visitor
@@ -369,9 +361,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|filter
@@ -430,9 +420,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|filter

@@ -5323,9 +5323,7 @@ name|requestRepsWithElements
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean
@@ -7635,9 +7633,7 @@ name|inParamElements
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -8411,9 +8407,7 @@ name|responseRepWithElements
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|getRepsWithElements
@@ -14821,9 +14815,7 @@ name|inheritedParams
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ContextInfo

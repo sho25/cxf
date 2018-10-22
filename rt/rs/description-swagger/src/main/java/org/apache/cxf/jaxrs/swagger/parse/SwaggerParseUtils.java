@@ -1169,9 +1169,7 @@ name|userOpParams
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Parameter
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1401,9 +1399,7 @@ name|resources
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|UserResource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

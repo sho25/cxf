@@ -99,9 +99,7 @@ name|books
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

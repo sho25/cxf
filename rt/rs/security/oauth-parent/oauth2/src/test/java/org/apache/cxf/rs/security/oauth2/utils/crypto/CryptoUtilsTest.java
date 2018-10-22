@@ -774,9 +774,7 @@ name|jsonp
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|BearerAccessToken
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|jsonp
@@ -998,9 +996,7 @@ name|jsonp
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|BearerAccessToken
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|jsonp
@@ -1205,9 +1201,7 @@ name|jsonp
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|jsonp
@@ -1442,9 +1436,7 @@ name|jsonp
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|ServerAuthorizationCodeGrant
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|jsonp

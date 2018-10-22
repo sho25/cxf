@@ -295,9 +295,7 @@ name|endpoints
 init|=
 operator|new
 name|CopyOnWriteArraySet
-argument_list|<
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

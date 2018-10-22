@@ -1166,9 +1166,7 @@ name|configurable
 init|=
 operator|new
 name|ConfigurableImpl
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|createClientProxy
 argument_list|()
@@ -1916,9 +1914,7 @@ name|configurable
 init|=
 operator|new
 name|ConfigurableImpl
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|createClientProxy
 argument_list|()
@@ -2038,9 +2034,7 @@ name|configurable
 init|=
 operator|new
 name|ConfigurableImpl
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|createClientProxy
 argument_list|()

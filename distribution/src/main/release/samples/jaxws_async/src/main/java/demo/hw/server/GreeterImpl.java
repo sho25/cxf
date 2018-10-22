@@ -249,9 +249,7 @@ name|r
 init|=
 operator|new
 name|ServerAsyncResponse
-argument_list|<
-name|GreetMeSometimeResponse
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new

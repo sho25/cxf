@@ -4676,9 +4676,7 @@ name|disp
 init|=
 operator|new
 name|DispatchImpl
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|client
 argument_list|,

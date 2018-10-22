@@ -712,9 +712,7 @@ name|phases
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|Phase
-argument_list|>
+argument_list|<>
 argument_list|(
 name|bus
 operator|.

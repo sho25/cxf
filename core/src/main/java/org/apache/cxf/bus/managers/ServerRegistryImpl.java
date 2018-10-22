@@ -179,9 +179,7 @@ name|serversList
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -196,9 +194,7 @@ name|serversList
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|setBus

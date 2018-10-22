@@ -531,9 +531,7 @@ name|param
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|DataHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -614,9 +612,7 @@ name|name
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"call detail"
 argument_list|)

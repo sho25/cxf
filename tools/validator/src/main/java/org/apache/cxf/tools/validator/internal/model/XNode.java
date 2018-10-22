@@ -644,9 +644,7 @@ name|parentNodes
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|XNode
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|XNode
@@ -997,9 +995,7 @@ name|nodes
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|XNode
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|nodes

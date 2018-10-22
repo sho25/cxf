@@ -121,9 +121,7 @@ name|provider
 init|=
 operator|new
 name|XPathProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|provider
@@ -276,9 +274,7 @@ name|provider
 init|=
 operator|new
 name|XPathProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertFalse
@@ -410,9 +406,7 @@ name|provider
 init|=
 operator|new
 name|XPathProvider
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|provider

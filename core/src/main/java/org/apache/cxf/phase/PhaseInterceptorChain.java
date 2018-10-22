@@ -431,9 +431,7 @@ name|CURRENT_MESSAGE
 init|=
 operator|new
 name|ThreadLocal
-argument_list|<
-name|Message
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

@@ -182,9 +182,7 @@ name|pool
 operator|=
 operator|new
 name|ArrayBlockingQueue
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|max
 argument_list|,
@@ -225,9 +223,7 @@ name|pool
 operator|=
 operator|new
 name|ArrayBlockingQueue
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|objs
 operator|.

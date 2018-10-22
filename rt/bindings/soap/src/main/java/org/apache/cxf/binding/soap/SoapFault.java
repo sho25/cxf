@@ -540,9 +540,7 @@ name|subCodes
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -700,9 +698,7 @@ name|subCodes
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

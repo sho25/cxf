@@ -1226,9 +1226,7 @@ name|list
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String

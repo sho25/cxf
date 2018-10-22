@@ -309,9 +309,7 @@ name|ret
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|findAllPolicyElementsOfLocalName

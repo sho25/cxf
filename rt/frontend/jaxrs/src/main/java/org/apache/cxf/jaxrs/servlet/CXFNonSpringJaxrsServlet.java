@@ -2681,9 +2681,7 @@ name|list
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|map
@@ -3080,9 +3078,7 @@ name|provider
 operator|=
 operator|new
 name|ProviderInfo
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|c
 operator|.

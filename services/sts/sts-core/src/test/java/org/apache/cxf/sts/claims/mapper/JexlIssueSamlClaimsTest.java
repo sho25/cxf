@@ -1686,9 +1686,7 @@ name|tokenType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -1787,9 +1785,7 @@ name|claimsTypeJaxb
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|ClaimsType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -1992,9 +1988,7 @@ name|onbehalfofType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|OnBehalfOfType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.

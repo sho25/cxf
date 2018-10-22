@@ -1023,9 +1023,7 @@ name|handlers
 init|=
 operator|new
 name|ModCountCopyOnWriteArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

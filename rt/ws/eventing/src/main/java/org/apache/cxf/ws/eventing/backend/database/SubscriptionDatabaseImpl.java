@@ -150,9 +150,7 @@ name|ticketList
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|SubscriptionTicket
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

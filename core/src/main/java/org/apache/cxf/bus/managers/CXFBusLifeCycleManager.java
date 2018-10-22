@@ -165,9 +165,7 @@ name|listeners
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|BusLifeCycleListener
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -182,9 +180,7 @@ name|listeners
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|BusLifeCycleListener
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|setBus

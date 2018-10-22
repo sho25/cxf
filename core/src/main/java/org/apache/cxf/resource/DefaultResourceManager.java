@@ -139,9 +139,7 @@ name|registeredResolvers
 init|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|ResourceResolver
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

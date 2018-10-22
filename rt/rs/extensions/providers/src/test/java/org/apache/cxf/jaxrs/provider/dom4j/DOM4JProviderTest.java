@@ -1436,9 +1436,7 @@ name|provider
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|provider
@@ -1776,9 +1774,7 @@ name|provider
 init|=
 operator|new
 name|JSONProvider
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|provider

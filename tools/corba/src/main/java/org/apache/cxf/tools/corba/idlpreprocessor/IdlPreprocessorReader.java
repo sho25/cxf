@@ -136,9 +136,7 @@ name|includeStack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|IncludeStackEntry
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Stack of Booleans, corresponding to nested 'if' preprocessor directives.      * The top of the stack signals whether the current idl code is skipped.      *      * @see #skips()      */
@@ -152,9 +150,7 @@ name|ifStack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

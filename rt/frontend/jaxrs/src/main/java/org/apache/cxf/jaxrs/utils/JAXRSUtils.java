@@ -3632,9 +3632,7 @@ name|finalPathSubresources
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|OperationResourceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -5468,9 +5466,7 @@ name|actualMts
 operator|=
 operator|new
 name|LinkedList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

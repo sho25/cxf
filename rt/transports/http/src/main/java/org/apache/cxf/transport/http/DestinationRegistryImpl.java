@@ -736,9 +736,7 @@ name|dest2
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|AbstractHTTPDestination
-argument_list|>
+argument_list|<>
 argument_list|(
 name|getDestinations
 argument_list|()

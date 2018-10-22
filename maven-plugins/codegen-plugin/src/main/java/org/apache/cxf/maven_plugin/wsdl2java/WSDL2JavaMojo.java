@@ -2063,9 +2063,7 @@ name|artifactsPath
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -3424,9 +3424,7 @@ name|connectionFuture
 operator|=
 operator|new
 name|BasicFuture
-argument_list|<
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|callback
 argument_list|)

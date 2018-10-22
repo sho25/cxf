@@ -401,9 +401,7 @@ name|sc
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SearchBean
 operator|.
@@ -423,9 +421,7 @@ name|visitor
 init|=
 operator|new
 name|HBaseQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"book"
 argument_list|)

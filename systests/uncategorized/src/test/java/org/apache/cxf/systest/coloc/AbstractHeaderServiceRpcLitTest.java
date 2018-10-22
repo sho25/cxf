@@ -771,9 +771,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|HeaderInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|holder
@@ -901,9 +899,7 @@ name|respHolder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|OutHeaderResponseT
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|respHolder
@@ -920,9 +916,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|HeaderInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|HeaderInfo

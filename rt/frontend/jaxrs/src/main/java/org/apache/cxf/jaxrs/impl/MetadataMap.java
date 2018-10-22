@@ -963,9 +963,7 @@ name|set
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|K
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|KeyComparator

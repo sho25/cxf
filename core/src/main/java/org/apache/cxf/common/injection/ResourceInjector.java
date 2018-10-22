@@ -2219,9 +2219,7 @@ name|methods
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|addAnnotatedMethods

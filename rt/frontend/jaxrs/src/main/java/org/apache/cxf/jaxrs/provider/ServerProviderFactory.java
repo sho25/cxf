@@ -854,9 +854,7 @@ name|dynamicFeatures
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|DynamicFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1528,9 +1526,7 @@ name|allProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -377,9 +377,7 @@ name|uris
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try

@@ -515,9 +515,7 @@ name|providers
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JweJsonWriterInterceptor

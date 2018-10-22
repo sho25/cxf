@@ -7287,9 +7287,7 @@ name|proxy
 operator|=
 operator|new
 name|ThreadLocalContextResolver
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

@@ -118,9 +118,7 @@ name|exceptions
 operator|=
 operator|new
 name|Vector
-argument_list|<
-name|IdlException
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|oneway

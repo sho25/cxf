@@ -457,9 +457,7 @@ name|image
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|Image
-argument_list|>
+argument_list|<>
 argument_list|(
 name|getImage
 argument_list|(

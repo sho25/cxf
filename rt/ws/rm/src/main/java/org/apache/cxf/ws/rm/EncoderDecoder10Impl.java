@@ -441,9 +441,7 @@ name|jaxbContextReference
 init|=
 operator|new
 name|AtomicReference
-argument_list|<
-name|JAXBContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

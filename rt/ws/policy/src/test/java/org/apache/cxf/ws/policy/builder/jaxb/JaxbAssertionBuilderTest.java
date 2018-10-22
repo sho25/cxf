@@ -279,9 +279,7 @@ name|ab
 init|=
 operator|new
 name|JaxbAssertionBuilder
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|FooType
 operator|.
@@ -349,9 +347,7 @@ name|ab
 init|=
 operator|new
 name|JaxbAssertionBuilder
-argument_list|<
-name|FooType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|FooType
 operator|.

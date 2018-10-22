@@ -249,9 +249,7 @@ name|parser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Condition
 operator|.
@@ -1147,9 +1145,7 @@ name|parser
 operator|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Condition
 operator|.
@@ -2249,9 +2245,7 @@ name|jobParser
 init|=
 operator|new
 name|FiqlParser
-argument_list|<
-name|Job
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Job
 operator|.

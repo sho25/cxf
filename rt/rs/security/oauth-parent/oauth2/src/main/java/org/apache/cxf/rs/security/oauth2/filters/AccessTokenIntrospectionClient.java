@@ -636,9 +636,7 @@ name|perms
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|OAuthPermission
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

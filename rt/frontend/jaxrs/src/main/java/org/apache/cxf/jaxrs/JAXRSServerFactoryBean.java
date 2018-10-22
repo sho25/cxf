@@ -654,9 +654,7 @@ name|clsNameBindings
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|appNameBindings
 argument_list|)

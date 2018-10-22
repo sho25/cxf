@@ -782,9 +782,7 @@ name|propsList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Properties
-argument_list|>
+argument_list|<>
 argument_list|(
 name|propLocs
 operator|.
@@ -846,9 +844,7 @@ name|keyAlgos
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|KeyAlgorithm
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -859,9 +855,7 @@ name|keyProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|KeyEncryptionProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1056,9 +1050,7 @@ name|theEncProviders
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|JweEncryptionProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
