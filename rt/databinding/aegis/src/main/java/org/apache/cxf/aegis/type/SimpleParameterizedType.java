@@ -207,9 +207,12 @@ return|;
 block|}
 if|if
 condition|(
+operator|!
+operator|(
 name|obj
-operator|==
-literal|null
+operator|instanceof
+name|ParameterizedType
+operator|)
 condition|)
 block|{
 return|return
