@@ -60,12 +60,7 @@ name|cachedClass
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 name|cachedClass
 argument_list|)
@@ -109,12 +104,7 @@ name|cachedClass
 operator|=
 operator|new
 name|WeakReference
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 name|cachedClass
 argument_list|)

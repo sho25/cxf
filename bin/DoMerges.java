@@ -1215,10 +1215,7 @@ name|map
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|String
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -3214,12 +3211,7 @@ name|matchingLogs
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|List
-argument_list|<
-name|String
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

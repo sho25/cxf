@@ -241,10 +241,7 @@ name|outbound
 operator|=
 operator|new
 name|CopyOnWriteArrayList
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|addAfter

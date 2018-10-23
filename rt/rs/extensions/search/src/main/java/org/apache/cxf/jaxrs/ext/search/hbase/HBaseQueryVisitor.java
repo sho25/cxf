@@ -298,12 +298,7 @@ name|queryStack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|List
-argument_list|<
-name|Filter
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

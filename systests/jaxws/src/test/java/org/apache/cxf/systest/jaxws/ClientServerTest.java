@@ -3438,12 +3438,7 @@ name|responses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Response
-argument_list|<
-name|GreetMeResponse
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

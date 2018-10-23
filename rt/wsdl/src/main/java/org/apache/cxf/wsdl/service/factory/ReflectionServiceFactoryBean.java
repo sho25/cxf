@@ -9560,14 +9560,7 @@ name|map
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|,
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|,

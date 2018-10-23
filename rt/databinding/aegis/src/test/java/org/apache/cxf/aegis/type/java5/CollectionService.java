@@ -391,10 +391,7 @@ name|data
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|double
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|double
@@ -558,10 +555,7 @@ name|l
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Document
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|l

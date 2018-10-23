@@ -438,10 +438,7 @@ name|photo
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"CXF"
 operator|.
@@ -601,10 +598,7 @@ name|image
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 name|bytes
 argument_list|)

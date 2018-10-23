@@ -1663,12 +1663,7 @@ name|contextClasses
 operator|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|contextClasses
@@ -2322,12 +2317,7 @@ name|contextClasses
 operator|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

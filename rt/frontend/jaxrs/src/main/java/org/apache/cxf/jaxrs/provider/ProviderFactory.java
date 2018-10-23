@@ -1655,12 +1655,7 @@ name|candidates
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ContextResolver
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -6235,12 +6230,7 @@ name|list
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|ProviderInfo
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

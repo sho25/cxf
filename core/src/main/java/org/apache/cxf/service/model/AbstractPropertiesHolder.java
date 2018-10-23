@@ -145,10 +145,7 @@ name|extensors
 init|=
 operator|new
 name|AtomicReference
-argument_list|<
-name|Object
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

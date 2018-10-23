@@ -327,12 +327,7 @@ name|pushedAheadEvents
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|List
-argument_list|<
-name|ParsingEvent
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

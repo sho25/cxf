@@ -519,10 +519,7 @@ name|data
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"foobar"
 operator|.
@@ -704,10 +701,7 @@ name|attach4
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 name|IOUtils
 operator|.
@@ -729,10 +723,7 @@ name|attach5
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 name|IOUtils
 operator|.

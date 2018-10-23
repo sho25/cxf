@@ -3294,11 +3294,7 @@ name|actions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSSConstants
-operator|.
-name|Action
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|actions

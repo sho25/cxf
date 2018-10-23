@@ -861,12 +861,7 @@ name|validated
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|List
-argument_list|<
-name|Assertion
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|)

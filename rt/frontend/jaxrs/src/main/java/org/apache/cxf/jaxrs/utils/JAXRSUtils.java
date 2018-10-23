@@ -1880,12 +1880,7 @@ name|STREAMING_OUT_TYPES
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.

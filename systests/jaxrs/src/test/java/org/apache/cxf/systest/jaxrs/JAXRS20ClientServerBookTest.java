@@ -3442,12 +3442,7 @@ name|holder
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|List
-argument_list|<
-name|Book
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|InvocationCallback

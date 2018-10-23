@@ -447,10 +447,7 @@ name|param
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|byte
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|param

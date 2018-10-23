@@ -983,12 +983,7 @@ name|selections
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Selection
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 name|attributes
 operator|.

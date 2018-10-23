@@ -405,12 +405,7 @@ name|predStack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|List
-argument_list|<
-name|Predicate
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

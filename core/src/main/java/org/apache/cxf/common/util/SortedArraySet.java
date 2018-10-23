@@ -119,10 +119,7 @@ name|data
 init|=
 operator|new
 name|AtomicReference
-argument_list|<
-name|T
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
