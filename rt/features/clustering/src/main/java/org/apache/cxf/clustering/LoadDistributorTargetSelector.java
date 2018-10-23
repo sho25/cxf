@@ -286,9 +286,7 @@ decl_stmt|;
 name|InvocationContext
 name|invocation
 init|=
-name|inProgress
-operator|.
-name|get
+name|getInvocationContext
 argument_list|(
 name|key
 argument_list|)
