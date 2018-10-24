@@ -930,8 +930,8 @@ name|incoming
 argument_list|)
 expr_stmt|;
 name|byte
-name|out
 index|[]
+name|out
 init|=
 name|msg
 operator|.

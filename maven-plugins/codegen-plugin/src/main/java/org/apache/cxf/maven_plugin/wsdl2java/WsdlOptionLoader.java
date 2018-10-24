@@ -335,12 +335,12 @@ name|File
 name|wsdlBasedir
 parameter_list|,
 name|String
-name|includes
 index|[]
+name|includes
 parameter_list|,
 name|String
-name|excludes
 index|[]
+name|excludes
 parameter_list|,
 name|File
 name|defaultOutputDir

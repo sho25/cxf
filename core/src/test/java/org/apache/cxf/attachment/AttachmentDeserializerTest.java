@@ -2644,8 +2644,8 @@ argument_list|)
 init|)
 block|{
 name|byte
-name|b
 index|[]
+name|b
 init|=
 operator|new
 name|byte
@@ -2862,8 +2862,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 operator|new
 name|byte
@@ -3085,8 +3085,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 operator|new
 name|byte
@@ -3377,8 +3377,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 operator|new
 name|byte
@@ -3711,8 +3711,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 operator|new
 name|byte

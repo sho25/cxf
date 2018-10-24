@@ -234,8 +234,8 @@ name|msg
 argument_list|)
 decl_stmt|;
 name|Object
-name|params
 index|[]
+name|params
 init|=
 block|{
 name|param1
@@ -266,8 +266,8 @@ name|String
 name|msg
 parameter_list|,
 name|Object
-name|params
 index|[]
+name|params
 parameter_list|)
 block|{
 if|if
@@ -461,8 +461,8 @@ name|sourceMethod
 argument_list|)
 expr_stmt|;
 name|Object
-name|params
 index|[]
+name|params
 init|=
 block|{
 name|param1
@@ -499,8 +499,8 @@ name|String
 name|msg
 parameter_list|,
 name|Object
-name|params
 index|[]
+name|params
 parameter_list|)
 block|{
 if|if
@@ -740,8 +740,8 @@ name|sourceMethod
 argument_list|)
 expr_stmt|;
 name|Object
-name|params
 index|[]
+name|params
 init|=
 block|{
 name|param1
@@ -785,8 +785,8 @@ name|String
 name|msg
 parameter_list|,
 name|Object
-name|params
 index|[]
+name|params
 parameter_list|)
 block|{
 if|if
@@ -973,8 +973,8 @@ argument_list|)
 condition|)
 block|{
 name|Object
-name|params
 index|[]
+name|params
 init|=
 block|{
 name|param1
@@ -1008,8 +1008,8 @@ name|String
 name|sourceMethod
 parameter_list|,
 name|Object
-name|params
 index|[]
+name|params
 parameter_list|)
 block|{
 if|if
@@ -1183,8 +1183,8 @@ argument_list|)
 condition|)
 block|{
 name|Object
-name|params
 index|[]
+name|params
 init|=
 block|{
 name|result
@@ -1993,8 +1993,8 @@ block|}
 try|try
 block|{
 name|Object
-name|parameters
 index|[]
+name|parameters
 init|=
 name|record
 operator|.

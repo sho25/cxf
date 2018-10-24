@@ -400,8 +400,8 @@ comment|// bytes were already copied after flush
 try|try
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|cos
 operator|.

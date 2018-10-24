@@ -823,8 +823,8 @@ argument_list|)
 condition|)
 block|{
 name|String
-name|supers
 index|[]
+name|supers
 init|=
 name|context
 operator|.

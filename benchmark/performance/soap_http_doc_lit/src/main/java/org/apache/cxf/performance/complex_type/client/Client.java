@@ -642,8 +642,8 @@ name|void
 name|main
 parameter_list|(
 name|String
-name|args
 index|[]
+name|args
 parameter_list|)
 throws|throws
 name|Exception
@@ -742,8 +742,8 @@ literal|1
 condition|)
 block|{
 name|String
-name|tmp
 index|[]
+name|tmp
 init|=
 operator|new
 name|String
@@ -829,8 +829,8 @@ literal|1
 condition|)
 block|{
 name|String
-name|threads
 index|[]
+name|threads
 init|=
 name|args
 index|[

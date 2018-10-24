@@ -1368,8 +1368,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|char
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|char
@@ -1488,8 +1488,8 @@ argument_list|)
 init|)
 block|{
 name|char
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|char
@@ -1643,8 +1643,8 @@ argument_list|)
 init|)
 block|{
 name|char
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|char
@@ -1812,8 +1812,8 @@ argument_list|)
 init|)
 block|{
 name|char
-name|chars
 index|[]
+name|chars
 init|=
 operator|new
 name|char

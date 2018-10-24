@@ -1610,8 +1610,8 @@ argument_list|)
 throw|;
 block|}
 name|String
-name|nm
 index|[]
+name|nm
 init|=
 name|unscopeName
 argument_list|(
@@ -2761,8 +2761,8 @@ argument_list|)
 expr_stmt|;
 block|}
 name|String
-name|name
 index|[]
+name|name
 init|=
 name|unscopeName
 argument_list|(
@@ -3007,8 +3007,8 @@ name|QName
 name|idlType
 parameter_list|,
 name|String
-name|name
 index|[]
+name|name
 parameter_list|,
 name|CorbaType
 name|corbaType
@@ -4282,8 +4282,8 @@ name|getLocalPart
 argument_list|()
 decl_stmt|;
 name|String
-name|mname
 index|[]
+name|mname
 init|=
 name|unscopeName
 argument_list|(
@@ -4442,8 +4442,8 @@ name|getLocalPart
 argument_list|()
 decl_stmt|;
 name|String
-name|mname
 index|[]
+name|mname
 init|=
 name|unscopeName
 argument_list|(
@@ -5348,8 +5348,8 @@ literal|"."
 argument_list|)
 decl_stmt|;
 name|String
-name|result
 index|[]
+name|result
 init|=
 operator|new
 name|String

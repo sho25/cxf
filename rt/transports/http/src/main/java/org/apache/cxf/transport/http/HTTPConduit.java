@@ -2890,8 +2890,8 @@ init|=
 literal|0
 decl_stmt|;
 name|byte
-name|buffer
 index|[]
+name|buffer
 init|=
 operator|new
 name|byte

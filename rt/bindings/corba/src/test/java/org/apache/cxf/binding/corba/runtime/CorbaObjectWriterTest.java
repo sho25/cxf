@@ -1395,8 +1395,8 @@ name|testWriteArray
 parameter_list|()
 block|{
 name|int
-name|data
 index|[]
+name|data
 init|=
 block|{
 literal|1
@@ -1659,8 +1659,8 @@ name|testWriteSequence
 parameter_list|()
 block|{
 name|String
-name|data
 index|[]
+name|data
 init|=
 block|{
 literal|"one"

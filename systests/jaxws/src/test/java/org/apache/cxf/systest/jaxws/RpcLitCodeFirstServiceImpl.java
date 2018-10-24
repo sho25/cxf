@@ -99,8 +99,8 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|DATA
 index|[]
+name|DATA
 init|=
 operator|new
 name|String
@@ -717,8 +717,8 @@ name|numbers
 parameter_list|)
 block|{
 name|String
-name|ret
 index|[]
+name|ret
 init|=
 operator|new
 name|String

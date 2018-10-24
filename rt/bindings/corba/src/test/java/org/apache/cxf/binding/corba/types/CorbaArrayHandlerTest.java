@@ -372,8 +372,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 name|int
-name|arrayData
 index|[]
+name|arrayData
 init|=
 block|{
 literal|2

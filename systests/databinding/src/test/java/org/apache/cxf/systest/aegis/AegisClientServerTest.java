@@ -570,8 +570,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|String
-name|roles
 index|[]
+name|roles
 init|=
 name|service
 operator|.
@@ -833,8 +833,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|String
-name|roles
 index|[]
+name|roles
 init|=
 name|service
 operator|.

@@ -2762,8 +2762,8 @@ name|boolean
 name|isExistsPolicy
 parameter_list|(
 name|Object
-name|exts
 index|[]
+name|exts
 parameter_list|,
 name|String
 name|uri
@@ -2842,8 +2842,8 @@ name|boolean
 name|isExistsPolicyReference
 parameter_list|(
 name|Object
-name|exts
 index|[]
+name|exts
 parameter_list|,
 name|String
 name|uri

@@ -134,8 +134,8 @@ specifier|public
 specifier|static
 specifier|final
 name|Object
-name|NO_PARAMS
 index|[]
+name|NO_PARAMS
 init|=
 operator|new
 name|Object

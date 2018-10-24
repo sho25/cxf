@@ -676,8 +676,8 @@ name|ctx
 argument_list|)
 expr_stmt|;
 name|String
-name|names
 index|[]
+name|names
 init|=
 name|ctx
 operator|.

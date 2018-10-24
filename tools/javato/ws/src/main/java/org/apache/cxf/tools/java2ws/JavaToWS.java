@@ -140,8 +140,8 @@ specifier|public
 name|JavaToWS
 parameter_list|(
 name|String
-name|pargs
 index|[]
+name|pargs
 parameter_list|)
 block|{
 name|args

@@ -784,8 +784,8 @@ annotation|@
 name|Parameter
 specifier|protected
 name|String
-name|includes
 index|[]
+name|includes
 decl_stmt|;
 comment|/**      * Directory in which the "DONE" markers are saved that      */
 annotation|@
@@ -862,8 +862,8 @@ annotation|@
 name|Parameter
 specifier|protected
 name|String
-name|excludes
 index|[]
+name|excludes
 decl_stmt|;
 annotation|@
 name|Parameter
@@ -2922,8 +2922,8 @@ name|classPath
 argument_list|)
 expr_stmt|;
 name|String
-name|args
 index|[]
+name|args
 init|=
 name|createForkOnceArgs
 argument_list|(

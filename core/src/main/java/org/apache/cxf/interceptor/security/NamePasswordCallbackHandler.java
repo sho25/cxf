@@ -540,8 +540,8 @@ name|arg
 argument_list|)
 decl_stmt|;
 name|Object
-name|args
 index|[]
+name|args
 init|=
 operator|new
 name|Object

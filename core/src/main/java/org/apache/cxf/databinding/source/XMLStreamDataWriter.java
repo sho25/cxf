@@ -1406,8 +1406,8 @@ name|getMessage
 argument_list|()
 decl_stmt|;
 name|String
-name|str
 index|[]
+name|str
 init|=
 name|msg
 operator|.

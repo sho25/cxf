@@ -327,8 +327,8 @@ name|int
 name|jwsSignatureLen
 parameter_list|,
 name|byte
-name|jcaDer
 index|[]
+name|jcaDer
 parameter_list|)
 block|{
 comment|// Apache2 Licensed Jose4j code which adapts the Apache Santuario XMLSecurity
@@ -591,8 +591,8 @@ argument_list|)
 throw|;
 block|}
 name|byte
-name|concatenatedSignatureBytes
 index|[]
+name|concatenatedSignatureBytes
 init|=
 operator|new
 name|byte

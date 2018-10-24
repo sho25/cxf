@@ -1032,8 +1032,8 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|DEF_PREFIXES
 index|[]
+name|DEF_PREFIXES
 init|=
 operator|new
 name|String

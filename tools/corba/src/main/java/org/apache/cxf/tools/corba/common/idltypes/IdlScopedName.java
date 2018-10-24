@@ -54,8 +54,8 @@ name|localName
 decl_stmt|;
 specifier|private
 name|String
-name|parentNames
 index|[]
+name|parentNames
 decl_stmt|;
 name|IdlScopedName
 parameter_list|(

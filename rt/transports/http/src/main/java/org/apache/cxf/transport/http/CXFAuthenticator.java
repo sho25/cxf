@@ -456,8 +456,8 @@ literal|"ReferencingAuthenticator.class"
 argument_list|)
 decl_stmt|;
 name|byte
-name|b
 index|[]
+name|b
 init|=
 name|IOUtils
 operator|.

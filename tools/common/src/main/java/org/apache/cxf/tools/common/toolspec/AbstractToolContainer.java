@@ -342,8 +342,8 @@ name|err
 decl_stmt|;
 specifier|private
 name|String
-name|arguments
 index|[]
+name|arguments
 decl_stmt|;
 specifier|private
 name|boolean

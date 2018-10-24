@@ -116,8 +116,8 @@ operator|.
 name|IOException
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|PlugInClassLoaderHelper
 operator|.

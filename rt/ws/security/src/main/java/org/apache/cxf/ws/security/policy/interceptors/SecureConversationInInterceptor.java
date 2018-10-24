@@ -2328,8 +2328,8 @@ name|namespace
 argument_list|)
 expr_stmt|;
 name|byte
-name|clientEntropy
 index|[]
+name|clientEntropy
 init|=
 literal|null
 decl_stmt|;

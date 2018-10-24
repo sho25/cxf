@@ -62,8 +62,8 @@ argument_list|()
 condition|)
 block|{
 name|String
-name|fields
 index|[]
+name|fields
 init|=
 name|value
 operator|.

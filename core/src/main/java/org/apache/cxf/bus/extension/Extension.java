@@ -221,8 +221,8 @@ argument_list|()
 decl_stmt|;
 specifier|protected
 name|Object
-name|args
 index|[]
+name|args
 decl_stmt|;
 specifier|protected
 specifier|volatile
@@ -694,8 +694,8 @@ name|void
 name|setArgs
 parameter_list|(
 name|Object
-name|a
 index|[]
+name|a
 parameter_list|)
 block|{
 name|args

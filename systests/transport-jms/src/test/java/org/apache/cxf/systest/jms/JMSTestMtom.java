@@ -553,8 +553,8 @@ name|handler1
 argument_list|)
 expr_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|IOUtils
 operator|.
@@ -698,8 +698,8 @@ name|testOutMtom
 argument_list|()
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|IOUtils
 operator|.

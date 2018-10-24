@@ -271,8 +271,8 @@ name|write
 parameter_list|(
 specifier|final
 name|byte
-name|b
 index|[]
+name|b
 parameter_list|,
 specifier|final
 name|int

@@ -1969,8 +1969,8 @@ parameter_list|)
 block|{
 comment|// use the IETF BCP 47 delimiter but accept the toString delimiter for cxf 2.7.x
 name|String
-name|parts
 index|[]
+name|parts
 init|=
 name|locale
 operator|.

@@ -351,8 +351,8 @@ argument_list|)
 condition|)
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|(
 name|byte

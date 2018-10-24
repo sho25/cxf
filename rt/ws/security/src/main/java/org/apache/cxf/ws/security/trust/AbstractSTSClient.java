@@ -5448,8 +5448,8 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 name|Object
-name|obj
 index|[]
+name|obj
 init|=
 name|client
 operator|.
@@ -6683,8 +6683,8 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 name|Object
-name|obj
 index|[]
+name|obj
 init|=
 name|client
 operator|.
@@ -7079,8 +7079,8 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 name|Object
-name|o
 index|[]
+name|o
 init|=
 name|client
 operator|.
@@ -7311,8 +7311,8 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 name|Object
-name|o
 index|[]
+name|o
 init|=
 name|client
 operator|.

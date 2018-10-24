@@ -436,8 +436,8 @@ name|Bus
 name|b
 parameter_list|,
 name|Object
-name|args
 index|[]
+name|args
 parameter_list|)
 block|{
 name|bus

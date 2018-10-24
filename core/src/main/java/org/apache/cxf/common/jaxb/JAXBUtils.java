@@ -6880,7 +6880,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2         extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {          String nsctxt[];          public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String sup[] = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String f[]) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
+comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2         extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {          String[] nsctxt;          public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String[] sup = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String[] f) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
 comment|//CHECKSTYLE:OFF
 comment|//bunch of really long ASM based methods that cannot be shortened easily
 specifier|private
@@ -8334,8 +8334,8 @@ name|visitEnd
 argument_list|()
 expr_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 name|cw
 operator|.
@@ -9695,8 +9695,8 @@ name|visitEnd
 argument_list|()
 expr_stmt|;
 name|byte
-name|bts
 index|[]
+name|bts
 init|=
 name|cw
 operator|.

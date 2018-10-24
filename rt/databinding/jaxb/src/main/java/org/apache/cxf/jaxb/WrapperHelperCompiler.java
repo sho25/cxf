@@ -562,8 +562,8 @@ name|visitEnd
 argument_list|()
 expr_stmt|;
 name|byte
-name|bt
 index|[]
+name|bt
 init|=
 name|cw
 operator|.

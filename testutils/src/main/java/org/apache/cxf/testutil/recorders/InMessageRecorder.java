@@ -295,8 +295,8 @@ name|close
 argument_list|()
 expr_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|bos
 operator|.

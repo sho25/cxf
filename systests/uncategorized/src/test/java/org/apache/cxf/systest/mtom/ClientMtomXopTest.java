@@ -929,8 +929,8 @@ argument_list|>
 name|name
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 decl_stmt|;
 name|InputStream
 name|in
@@ -1668,8 +1668,8 @@ argument_list|>
 name|name
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 decl_stmt|;
 name|InputStream
 name|in

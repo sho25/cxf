@@ -367,8 +367,8 @@ name|NP_WSDL_CORBA
 argument_list|)
 decl_stmt|;
 name|String
-name|members
 index|[]
+name|members
 init|=
 operator|new
 name|String

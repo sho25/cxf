@@ -522,8 +522,8 @@ name|boolean
 name|validOptions
 parameter_list|(
 name|String
-name|options
 index|[]
+name|options
 index|[]
 parameter_list|,
 name|DocErrorReporter

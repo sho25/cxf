@@ -591,8 +591,8 @@ name|void
 name|checkStrings
 parameter_list|(
 name|byte
-name|orig
 index|[]
+name|orig
 parameter_list|,
 name|byte
 name|generated

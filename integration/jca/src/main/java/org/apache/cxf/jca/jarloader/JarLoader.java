@@ -787,8 +787,8 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|(
 name|byte
@@ -966,8 +966,8 @@ block|}
 else|else
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|getBytesFromInputStream
 argument_list|(
@@ -1013,8 +1013,8 @@ throws|throws
 name|IOException
 block|{
 name|byte
-name|chunk
 index|[]
+name|chunk
 init|=
 operator|new
 name|byte

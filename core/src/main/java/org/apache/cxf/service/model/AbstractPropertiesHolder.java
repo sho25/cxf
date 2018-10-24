@@ -724,8 +724,8 @@ argument_list|)
 return|;
 block|}
 name|Object
-name|exts
 index|[]
+name|exts
 init|=
 name|extensors
 operator|.
@@ -789,8 +789,8 @@ expr_stmt|;
 return|return;
 block|}
 name|Object
-name|exts
 index|[]
+name|exts
 init|=
 name|extensors
 operator|.
@@ -798,8 +798,8 @@ name|get
 argument_list|()
 decl_stmt|;
 name|Object
-name|exts2
 index|[]
+name|exts2
 decl_stmt|;
 if|if
 condition|(
@@ -923,8 +923,8 @@ argument_list|)
 return|;
 block|}
 name|Object
-name|exts
 index|[]
+name|exts
 init|=
 name|extensors
 operator|.
@@ -1023,8 +1023,8 @@ argument_list|)
 return|;
 block|}
 name|Object
-name|exts
 index|[]
+name|exts
 init|=
 name|extensors
 operator|.

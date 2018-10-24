@@ -5204,8 +5204,8 @@ block|}
 try|try
 block|{
 name|Object
-name|obj
 index|[]
+name|obj
 init|=
 name|processResult
 argument_list|(

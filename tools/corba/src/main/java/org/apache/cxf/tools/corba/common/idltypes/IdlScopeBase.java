@@ -435,8 +435,8 @@ init|=
 name|this
 decl_stmt|;
 name|String
-name|parents
 index|[]
+name|parents
 init|=
 name|name
 operator|.
@@ -502,8 +502,8 @@ name|IdlDefn
 name|lookup
 parameter_list|(
 name|String
-name|scopedName
 index|[]
+name|scopedName
 parameter_list|)
 block|{
 return|return
@@ -520,8 +520,8 @@ name|IdlDefn
 name|lookup
 parameter_list|(
 name|String
-name|scopedName
 index|[]
+name|scopedName
 parameter_list|,
 name|boolean
 name|undefined

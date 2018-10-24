@@ -1025,8 +1025,8 @@ name|service
 argument_list|)
 expr_stmt|;
 name|String
-name|addresses
 index|[]
+name|addresses
 init|=
 block|{
 literal|"http://localhost:"

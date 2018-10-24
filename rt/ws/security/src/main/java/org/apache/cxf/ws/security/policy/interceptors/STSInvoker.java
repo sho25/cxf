@@ -1417,8 +1417,8 @@ throws|,
 name|XMLStreamException
 block|{
 name|byte
-name|secret
 index|[]
+name|secret
 init|=
 literal|null
 decl_stmt|;
@@ -1494,8 +1494,8 @@ block|}
 else|else
 block|{
 name|byte
-name|entropy
 index|[]
+name|entropy
 init|=
 name|WSSecurityUtil
 operator|.

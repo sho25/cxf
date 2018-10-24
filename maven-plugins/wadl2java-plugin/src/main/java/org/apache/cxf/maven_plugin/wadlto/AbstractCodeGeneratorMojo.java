@@ -683,15 +683,15 @@ comment|/**      * A list of wadl files to include. Can contain ant-style wildca
 annotation|@
 name|Parameter
 name|String
-name|includes
 index|[]
+name|includes
 decl_stmt|;
 comment|/**      * A list of wadl files to exclude. Can contain ant-style wildcards and double wildcards.      */
 annotation|@
 name|Parameter
 name|String
-name|excludes
 index|[]
+name|excludes
 decl_stmt|;
 comment|/**      * Allows running the JavaToWs in a separate process.      * Valid values are "false", "always", and "once"      * The value of "true" is equal to "once"      */
 annotation|@
@@ -1591,8 +1591,8 @@ name|classPath
 argument_list|)
 expr_stmt|;
 name|String
-name|args
 index|[]
+name|args
 init|=
 name|createForkOnceArgs
 argument_list|(

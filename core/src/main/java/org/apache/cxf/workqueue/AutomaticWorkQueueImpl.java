@@ -431,8 +431,8 @@ name|Method
 name|addWorkerMethod
 decl_stmt|;
 name|Object
-name|addWorkerArgs
 index|[]
+name|addWorkerArgs
 decl_stmt|;
 name|AWQThreadFactory
 name|threadFactory

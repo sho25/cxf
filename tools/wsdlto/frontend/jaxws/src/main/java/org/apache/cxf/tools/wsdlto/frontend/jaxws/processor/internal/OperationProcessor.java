@@ -1160,8 +1160,8 @@ name|method
 parameter_list|)
 block|{
 name|String
-name|o
 index|[]
+name|o
 init|=
 name|context
 operator|.
@@ -1205,8 +1205,8 @@ name|method
 parameter_list|)
 block|{
 name|String
-name|o
 index|[]
+name|o
 init|=
 name|context
 operator|.
@@ -1250,8 +1250,8 @@ name|method
 parameter_list|)
 block|{
 name|String
-name|o
 index|[]
+name|o
 init|=
 name|context
 operator|.

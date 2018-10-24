@@ -266,8 +266,8 @@ argument_list|)
 throw|;
 block|}
 name|String
-name|authInfo
 index|[]
+name|authInfo
 init|=
 name|authDecoded
 operator|.

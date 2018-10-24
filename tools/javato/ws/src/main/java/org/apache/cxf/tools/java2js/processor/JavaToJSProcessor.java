@@ -1011,8 +1011,8 @@ block|}
 else|else
 block|{
 name|String
-name|list
 index|[]
+name|list
 init|=
 operator|(
 name|String

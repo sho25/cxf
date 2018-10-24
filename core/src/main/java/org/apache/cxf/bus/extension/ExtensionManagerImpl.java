@@ -466,8 +466,8 @@ specifier|public
 name|ExtensionManagerImpl
 parameter_list|(
 name|String
-name|resources
 index|[]
+name|resources
 parameter_list|,
 name|ClassLoader
 name|cl
@@ -608,8 +608,8 @@ name|void
 name|load
 parameter_list|(
 name|String
-name|resources
 index|[]
+name|resources
 parameter_list|)
 block|{
 if|if

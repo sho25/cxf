@@ -1705,8 +1705,8 @@ literal|65536
 expr_stmt|;
 block|}
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte

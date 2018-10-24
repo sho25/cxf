@@ -980,8 +980,8 @@ argument_list|)
 expr_stmt|;
 comment|// Write the Base-64 encoded certificate
 name|byte
-name|data
 index|[]
+name|data
 init|=
 name|signingCert
 operator|.

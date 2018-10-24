@@ -190,14 +190,14 @@ decl_stmt|;
 comment|/**      * A list of wsdl files to include. Can contain ant-style wildcards and double wildcards. Defaults to      * *.wsdl      *      * @parameter      */
 specifier|private
 name|String
-name|includes
 index|[]
+name|includes
 decl_stmt|;
 comment|/**      * A list of wsdl files to exclude. Can contain ant-style wildcards and double wildcards.      *      * @parameter      */
 specifier|private
 name|String
-name|excludes
 index|[]
+name|excludes
 decl_stmt|;
 specifier|private
 name|String

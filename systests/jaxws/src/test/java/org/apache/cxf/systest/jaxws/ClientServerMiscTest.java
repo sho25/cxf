@@ -1429,8 +1429,8 @@ name|GreetMeResponse
 name|resp
 decl_stmt|;
 name|BigInteger
-name|i
 index|[]
+name|i
 decl_stmt|;
 name|req
 operator|.
@@ -3412,8 +3412,8 @@ name|String
 name|s
 decl_stmt|;
 name|String
-name|arrayOut
 index|[]
+name|arrayOut
 init|=
 name|port
 operator|.
@@ -3943,8 +3943,8 @@ name|length
 argument_list|)
 expr_stmt|;
 name|int
-name|ints
 index|[]
+name|ints
 init|=
 name|port
 operator|.
@@ -4525,8 +4525,8 @@ throws|throws
 name|Exception
 block|{
 name|String
-name|ret
 index|[]
+name|ret
 init|=
 name|port
 operator|.
@@ -4584,8 +4584,8 @@ name|String
 name|s
 decl_stmt|;
 name|String
-name|arrayOut
 index|[]
+name|arrayOut
 init|=
 name|port
 operator|.

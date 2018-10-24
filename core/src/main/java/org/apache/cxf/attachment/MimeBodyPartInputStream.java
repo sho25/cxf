@@ -114,8 +114,8 @@ name|int
 name|read
 parameter_list|(
 name|byte
-name|buf
 index|[]
+name|buf
 parameter_list|,
 name|int
 name|origOff
@@ -127,8 +127,8 @@ throws|throws
 name|IOException
 block|{
 name|byte
-name|b
 index|[]
+name|b
 init|=
 name|buf
 decl_stmt|;

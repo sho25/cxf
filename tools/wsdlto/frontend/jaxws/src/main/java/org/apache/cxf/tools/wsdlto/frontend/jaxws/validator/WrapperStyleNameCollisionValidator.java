@@ -503,8 +503,8 @@ name|opName
 parameter_list|)
 block|{
 name|String
-name|o
 index|[]
+name|o
 init|=
 name|context
 operator|.

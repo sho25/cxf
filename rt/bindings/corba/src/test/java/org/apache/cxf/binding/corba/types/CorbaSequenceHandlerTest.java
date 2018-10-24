@@ -372,8 +372,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 name|int
-name|sequenceData
 index|[]
+name|sequenceData
 init|=
 block|{
 literal|2

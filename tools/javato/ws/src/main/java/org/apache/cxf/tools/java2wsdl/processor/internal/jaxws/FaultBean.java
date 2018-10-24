@@ -584,8 +584,8 @@ literal|3
 argument_list|)
 decl_stmt|;
 name|char
-name|chars
 index|[]
+name|chars
 init|=
 name|name
 operator|.

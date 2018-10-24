@@ -1587,8 +1587,8 @@ argument_list|)
 condition|)
 block|{
 name|byte
-name|data
 index|[]
+name|data
 init|=
 literal|null
 decl_stmt|;

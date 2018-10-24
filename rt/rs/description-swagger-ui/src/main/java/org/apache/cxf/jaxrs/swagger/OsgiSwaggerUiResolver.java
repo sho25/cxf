@@ -82,8 +82,8 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|DEFAULT_LOCATIONS
 index|[]
+name|DEFAULT_LOCATIONS
 init|=
 block|{
 literal|"mvn:"

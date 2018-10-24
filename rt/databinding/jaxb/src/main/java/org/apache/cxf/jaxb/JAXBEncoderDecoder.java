@@ -7249,8 +7249,8 @@ name|f
 argument_list|)
 expr_stmt|;
 name|String
-name|ns
 index|[]
+name|ns
 init|=
 operator|(
 name|String

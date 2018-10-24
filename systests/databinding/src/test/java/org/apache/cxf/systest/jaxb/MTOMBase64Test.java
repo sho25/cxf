@@ -511,8 +511,8 @@ name|x
 parameter_list|)
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte
@@ -828,8 +828,8 @@ operator|++
 control|)
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|data
 operator|.

@@ -660,8 +660,8 @@ argument_list|>
 name|mapField
 decl_stmt|;
 name|String
-name|arrayField
 index|[]
+name|arrayField
 decl_stmt|;
 name|List
 argument_list|<

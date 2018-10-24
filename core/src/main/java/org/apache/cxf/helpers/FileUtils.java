@@ -538,8 +538,8 @@ argument_list|()
 expr_stmt|;
 comment|// attempt a garbage collect to close any files
 name|String
-name|files
 index|[]
+name|files
 init|=
 name|defaultTempDir
 operator|.

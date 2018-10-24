@@ -101,8 +101,8 @@ name|void
 name|main
 parameter_list|(
 name|String
-name|args
 index|[]
+name|args
 parameter_list|)
 throws|throws
 name|Exception
@@ -173,8 +173,8 @@ expr_stmt|;
 return|return;
 block|}
 name|String
-name|wargs
 index|[]
+name|wargs
 init|=
 operator|new
 name|String

@@ -176,8 +176,8 @@ name|method
 parameter_list|,
 specifier|final
 name|Object
-name|args
 index|[]
+name|args
 parameter_list|)
 throws|throws
 name|Throwable

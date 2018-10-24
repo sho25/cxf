@@ -1532,8 +1532,8 @@ literal|null
 argument_list|)
 expr_stmt|;
 name|String
-name|csLabels
 index|[]
+name|csLabels
 init|=
 block|{
 literal|"COMPLETED_YES"

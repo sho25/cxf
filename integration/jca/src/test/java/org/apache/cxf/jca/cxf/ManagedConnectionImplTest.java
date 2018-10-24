@@ -601,8 +601,8 @@ literal|"user"
 argument_list|)
 decl_stmt|;
 name|char
-name|password
 index|[]
+name|password
 init|=
 block|{
 literal|'a'
@@ -670,8 +670,8 @@ literal|"user"
 argument_list|)
 decl_stmt|;
 name|char
-name|password
 index|[]
+name|password
 init|=
 block|{
 literal|'a'

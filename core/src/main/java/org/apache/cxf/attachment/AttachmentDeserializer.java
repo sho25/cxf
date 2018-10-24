@@ -973,8 +973,8 @@ literal|4096
 argument_list|)
 decl_stmt|;
 name|byte
-name|buf
 index|[]
+name|buf
 init|=
 operator|new
 name|byte

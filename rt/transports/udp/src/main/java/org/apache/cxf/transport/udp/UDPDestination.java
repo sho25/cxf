@@ -628,8 +628,8 @@ block|}
 try|try
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte
@@ -2099,8 +2099,8 @@ name|void
 name|write
 parameter_list|(
 name|byte
-name|b
 index|[]
+name|b
 parameter_list|,
 name|int
 name|off

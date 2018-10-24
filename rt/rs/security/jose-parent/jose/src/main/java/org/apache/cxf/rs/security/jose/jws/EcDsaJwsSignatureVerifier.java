@@ -417,8 +417,8 @@ index|[]
 name|signatureToDer
 parameter_list|(
 name|byte
-name|joseSig
 index|[]
+name|joseSig
 parameter_list|)
 block|{
 comment|// Apache2 Licensed Jose4j code which adapts the Apache Santuario XMLSecurity
@@ -566,8 +566,8 @@ name|int
 name|offset
 decl_stmt|;
 name|byte
-name|derEncodedSignatureBytes
 index|[]
+name|derEncodedSignatureBytes
 decl_stmt|;
 if|if
 condition|(

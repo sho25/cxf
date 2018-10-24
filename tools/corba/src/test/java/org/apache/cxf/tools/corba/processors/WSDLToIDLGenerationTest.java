@@ -249,8 +249,8 @@ name|void
 name|checkIDLStrings
 parameter_list|(
 name|byte
-name|orig
 index|[]
+name|orig
 parameter_list|,
 name|byte
 name|generated
@@ -643,8 +643,8 @@ literal|"/idlgen/expected_oneway.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -738,8 +738,8 @@ literal|"/idlgen/expected_stringtypes.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -846,8 +846,8 @@ literal|"/idlgen/expected_integertypes.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -954,8 +954,8 @@ literal|"/idlgen/expected_uniontypes.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1062,8 +1062,8 @@ literal|"/idlgen/expected_defaultuniontypes.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1170,8 +1170,8 @@ literal|"/idlgen/expected_exceptions.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1278,8 +1278,8 @@ literal|"/idlgen/expected_struct.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1386,8 +1386,8 @@ literal|"/idlgen/expected_sequencetype.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1494,8 +1494,8 @@ literal|"/idlgen/expected_array.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1602,8 +1602,8 @@ literal|"/idlgen/expected_enum.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1710,8 +1710,8 @@ literal|"/idlgen/expected_content.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1818,8 +1818,8 @@ literal|"/idlgen/expected_alltype.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -1926,8 +1926,8 @@ literal|"/idlgen/expected_fixed.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2034,8 +2034,8 @@ literal|"/idlgen/expected_anonfixed.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2142,8 +2142,8 @@ literal|"/idlgen/expected_any.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2250,8 +2250,8 @@ literal|"/idlgen/expected_typeInheritance.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2358,8 +2358,8 @@ literal|"/idlgen/expected_nillable.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2466,8 +2466,8 @@ literal|"/idlgen/expected_typedef.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2574,8 +2574,8 @@ literal|"/idlgen/expected_nested.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2682,8 +2682,8 @@ literal|"/idlgen/expected_nested-derivedtypes.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2790,8 +2790,8 @@ literal|"/idlgen/expected_nested_complex.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -2898,8 +2898,8 @@ literal|"/idlgen/expected_nested_interfaces.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3006,8 +3006,8 @@ literal|"/idlgen/expected_datetime.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3114,8 +3114,8 @@ literal|"/idlgen/expected_wsaddressing_server.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3222,8 +3222,8 @@ literal|"/idlgen/expected_wsaddressing_account.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3330,8 +3330,8 @@ literal|"/idlgen/expected_wsaddressing_bank.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3438,8 +3438,8 @@ literal|"/idlgen/expected_multiplebinding.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3585,8 +3585,8 @@ literal|"/idlgen/expected_complex_types.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3693,8 +3693,8 @@ literal|"/idlgen/expected_databaseService.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3808,8 +3808,8 @@ literal|"/idlgen/expected_recursivestruct.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(
@@ -3923,8 +3923,8 @@ literal|"/idlgen/expected_recursiveunion.idl"
 argument_list|)
 decl_stmt|;
 name|byte
-name|orig
 index|[]
+name|orig
 init|=
 name|inputStreamToBytes
 argument_list|(

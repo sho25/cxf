@@ -1742,8 +1742,8 @@ init|=
 literal|null
 decl_stmt|;
 name|String
-name|s
 index|[]
+name|s
 init|=
 name|prop
 operator|.

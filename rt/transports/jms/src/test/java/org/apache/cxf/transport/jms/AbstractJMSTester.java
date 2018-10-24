@@ -1153,8 +1153,8 @@ literal|null
 condition|)
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte
@@ -1222,8 +1222,8 @@ name|class
 argument_list|)
 decl_stmt|;
 name|char
-name|buffer
 index|[]
+name|buffer
 init|=
 operator|new
 name|char

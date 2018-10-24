@@ -211,8 +211,8 @@ name|void
 name|characters
 parameter_list|(
 name|char
-name|ch
 index|[]
+name|ch
 parameter_list|,
 name|int
 name|start
@@ -282,8 +282,8 @@ name|void
 name|ignorableWhitespace
 parameter_list|(
 name|char
-name|ch
 index|[]
+name|ch
 parameter_list|,
 name|int
 name|start

@@ -297,8 +297,8 @@ specifier|protected
 name|ClassReader
 parameter_list|(
 name|byte
-name|buf
 index|[]
+name|buf
 parameter_list|,
 name|Map
 argument_list|<

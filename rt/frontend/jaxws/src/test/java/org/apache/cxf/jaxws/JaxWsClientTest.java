@@ -1783,8 +1783,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|Object
-name|ret
 index|[]
+name|ret
 init|=
 name|client
 operator|.

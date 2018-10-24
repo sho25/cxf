@@ -505,8 +505,8 @@ argument_list|)
 expr_stmt|;
 block|}
 name|char
-name|s
 index|[]
+name|s
 init|=
 operator|new
 name|char

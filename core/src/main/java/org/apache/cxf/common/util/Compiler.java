@@ -1452,8 +1452,8 @@ init|=
 literal|null
 decl_stmt|;
 name|String
-name|cmdArray
 index|[]
+name|cmdArray
 init|=
 literal|null
 decl_stmt|;
@@ -2006,8 +2006,8 @@ name|boolean
 name|isLongCommandLines
 parameter_list|(
 name|String
-name|args
 index|[]
+name|args
 parameter_list|)
 block|{
 name|StringBuilder

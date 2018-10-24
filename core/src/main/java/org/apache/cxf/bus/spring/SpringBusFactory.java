@@ -498,8 +498,8 @@ name|Bus
 name|createBus
 parameter_list|(
 name|String
-name|cfgFiles
 index|[]
+name|cfgFiles
 parameter_list|)
 block|{
 return|return
@@ -663,8 +663,8 @@ name|Bus
 name|createBus
 parameter_list|(
 name|String
-name|cfgFiles
 index|[]
+name|cfgFiles
 parameter_list|,
 name|boolean
 name|includeDefaults
@@ -850,8 +850,8 @@ name|ConfigurableApplicationContext
 name|createApplicationContext
 parameter_list|(
 name|String
-name|cfgFiles
 index|[]
+name|cfgFiles
 parameter_list|,
 name|boolean
 name|includeDefaults

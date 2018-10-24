@@ -213,8 +213,8 @@ name|defaultNamespacePackageMapping
 decl_stmt|;
 comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|String
-name|dependencies
 index|[]
+name|dependencies
 decl_stmt|;
 comment|/**      * Redundant directories to be deleted after code generation      */
 name|File
@@ -540,8 +540,8 @@ name|void
 name|setDependencies
 parameter_list|(
 name|String
-name|dependencies
 index|[]
+name|dependencies
 parameter_list|)
 block|{
 name|this

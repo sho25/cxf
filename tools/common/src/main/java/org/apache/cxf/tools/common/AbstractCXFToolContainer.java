@@ -1451,8 +1451,8 @@ name|ClassCollector
 argument_list|()
 decl_stmt|;
 name|String
-name|reserved
 index|[]
+name|reserved
 init|=
 operator|(
 name|String

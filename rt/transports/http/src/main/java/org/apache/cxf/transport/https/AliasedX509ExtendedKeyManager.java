@@ -356,8 +356,8 @@ name|String
 name|chooseEngineClientAlias
 parameter_list|(
 name|String
-name|keyType
 index|[]
+name|keyType
 parameter_list|,
 name|Principal
 index|[]

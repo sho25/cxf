@@ -1214,8 +1214,8 @@ name|int
 name|read
 parameter_list|(
 name|byte
-name|b
 index|[]
+name|b
 parameter_list|,
 name|int
 name|offset

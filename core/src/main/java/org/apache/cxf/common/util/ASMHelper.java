@@ -1427,8 +1427,8 @@ name|s
 parameter_list|)
 block|{
 name|char
-name|ch
 index|[]
+name|ch
 init|=
 name|s
 operator|.
@@ -2688,8 +2688,8 @@ name|String
 name|name
 parameter_list|,
 name|byte
-name|bytes
 index|[]
+name|bytes
 parameter_list|)
 block|{
 name|Class

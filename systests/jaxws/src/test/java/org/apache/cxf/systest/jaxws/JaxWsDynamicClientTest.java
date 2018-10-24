@@ -353,8 +353,8 @@ name|bytes
 argument_list|)
 expr_stmt|;
 name|byte
-name|messageDigest
 index|[]
+name|messageDigest
 init|=
 name|algorithm
 operator|.

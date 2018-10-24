@@ -229,8 +229,8 @@ literal|"negativefilters.properties"
 decl_stmt|;
 specifier|private
 name|String
-name|jarUrls
 index|[]
+name|jarUrls
 init|=
 operator|new
 name|String
@@ -311,8 +311,8 @@ name|void
 name|processJarUrls
 parameter_list|(
 name|String
-name|urls
 index|[]
+name|urls
 parameter_list|)
 block|{
 for|for
@@ -730,8 +730,8 @@ name|path
 argument_list|)
 expr_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 literal|null
 decl_stmt|;

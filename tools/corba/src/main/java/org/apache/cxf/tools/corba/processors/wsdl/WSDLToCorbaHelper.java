@@ -1049,8 +1049,8 @@ specifier|protected
 specifier|static
 specifier|final
 name|String
-name|DISCRIMINATORTYPES
 index|[]
+name|DISCRIMINATORTYPES
 init|=
 operator|new
 name|String

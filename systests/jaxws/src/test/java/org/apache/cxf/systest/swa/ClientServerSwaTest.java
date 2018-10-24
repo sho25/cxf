@@ -918,8 +918,8 @@ name|getInputStream
 argument_list|()
 expr_stmt|;
 name|byte
-name|b
 index|[]
+name|b
 init|=
 operator|new
 name|byte
@@ -1103,8 +1103,8 @@ name|getInputStream
 argument_list|()
 expr_stmt|;
 name|byte
-name|b
 index|[]
+name|b
 init|=
 operator|new
 name|byte
@@ -1276,8 +1276,8 @@ name|getInputStream
 argument_list|()
 decl_stmt|;
 name|byte
-name|b
 index|[]
+name|b
 init|=
 operator|new
 name|byte

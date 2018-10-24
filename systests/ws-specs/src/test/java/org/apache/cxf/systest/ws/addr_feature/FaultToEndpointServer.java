@@ -778,8 +778,8 @@ argument_list|)
 expr_stmt|;
 comment|//System.out.println("In handler: " + request.getContentLength());
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte

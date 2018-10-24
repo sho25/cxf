@@ -918,8 +918,8 @@ init|=
 literal|""
 decl_stmt|;
 name|byte
-name|data
 index|[]
+name|data
 init|=
 name|DatatypeConverter
 operator|.

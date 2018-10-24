@@ -191,8 +191,8 @@ decl_stmt|;
 static|static
 block|{
 name|String
-name|notWorking
 index|[]
+name|notWorking
 init|=
 operator|new
 name|String
@@ -462,8 +462,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|String
-name|notWorkingIBM
 index|[]
+name|notWorkingIBM
 init|=
 operator|new
 name|String

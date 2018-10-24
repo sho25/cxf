@@ -102,8 +102,8 @@ name|void
 name|assertEquals
 parameter_list|(
 name|byte
-name|b1
 index|[]
+name|b1
 parameter_list|,
 name|byte
 name|b2
@@ -387,8 +387,8 @@ throws|throws
 name|Exception
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte
@@ -425,8 +425,8 @@ name|x
 expr_stmt|;
 block|}
 name|char
-name|encodedChars
 index|[]
+name|encodedChars
 init|=
 name|Base64Utility
 operator|.
@@ -466,8 +466,8 @@ name|encodedChars
 argument_list|)
 expr_stmt|;
 name|byte
-name|bytesDecoded
 index|[]
+name|bytesDecoded
 init|=
 name|Base64Utility
 operator|.
@@ -764,8 +764,8 @@ init|=
 literal|"QWxhZGRpbjpvcGVuIHNlc2FtZQ=="
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 name|Base64Utility
 operator|.
@@ -852,8 +852,8 @@ throws|throws
 name|Exception
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte

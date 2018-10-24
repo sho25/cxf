@@ -1533,8 +1533,8 @@ name|ByteArrayOutputStream
 condition|)
 block|{
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|(
 operator|(
@@ -1597,8 +1597,8 @@ init|charsetName)
 block|)
 block|{
 name|char
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|char
@@ -1845,8 +1845,8 @@ init|charsetName)
 block|)
 block|{
 name|char
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|char

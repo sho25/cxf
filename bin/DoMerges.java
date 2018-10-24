@@ -2060,8 +2060,8 @@ throws|throws
 name|Exception
 block|{
 name|String
-name|commands
 index|[]
+name|commands
 init|=
 operator|new
 name|String
@@ -2128,8 +2128,8 @@ name|getOutputStream
 argument_list|()
 decl_stmt|;
 name|byte
-name|bytes
 index|[]
+name|bytes
 init|=
 operator|new
 name|byte
@@ -2306,8 +2306,8 @@ name|void
 name|main
 parameter_list|(
 name|String
-name|a
 index|[]
+name|a
 parameter_list|)
 throws|throws
 name|Exception

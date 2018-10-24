@@ -192,8 +192,8 @@ decl_stmt|;
 static|static
 block|{
 name|String
-name|patterns
 index|[]
+name|patterns
 init|=
 block|{
 literal|"/"
@@ -1060,8 +1060,8 @@ name|name
 return|;
 block|}
 name|char
-name|chars
 index|[]
+name|chars
 init|=
 name|name
 operator|.

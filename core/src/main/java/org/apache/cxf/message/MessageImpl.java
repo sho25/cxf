@@ -532,8 +532,8 @@ block|{
 comment|//very unlikely to happen.   Haven't seen more than about 6,
 comment|//but just in case we'll add a few more
 name|Object
-name|tmp
 index|[]
+name|tmp
 init|=
 operator|new
 name|Object

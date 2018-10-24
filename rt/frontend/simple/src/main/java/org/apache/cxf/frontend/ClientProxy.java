@@ -520,8 +520,8 @@ argument_list|)
 throw|;
 block|}
 name|Object
-name|rawRet
 index|[]
+name|rawRet
 init|=
 name|client
 operator|.

@@ -81,8 +81,8 @@ argument_list|()
 decl_stmt|;
 comment|/**      * Specifies JAXB binding files. Use spaces to separate multiple entries.      */
 name|String
-name|bindingFiles
 index|[]
+name|bindingFiles
 init|=
 operator|new
 name|String
@@ -210,8 +210,8 @@ name|void
 name|setBindingFiles
 parameter_list|(
 name|String
-name|files
 index|[]
+name|files
 parameter_list|)
 block|{
 name|bindingFiles
@@ -238,8 +238,8 @@ name|file
 parameter_list|)
 block|{
 name|String
-name|tmp
 index|[]
+name|tmp
 init|=
 operator|new
 name|String
