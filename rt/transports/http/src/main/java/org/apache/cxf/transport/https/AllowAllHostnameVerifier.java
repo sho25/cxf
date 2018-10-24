@@ -124,9 +124,13 @@ name|SSLException
 name|e
 parameter_list|)
 block|{
-return|return
-literal|false
-return|;
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"HostnameVerifier, socket reset for TTL"
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|public

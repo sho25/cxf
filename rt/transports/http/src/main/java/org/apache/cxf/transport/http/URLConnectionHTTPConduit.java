@@ -83,16 +83,6 @@ name|java
 operator|.
 name|net
 operator|.
-name|SocketException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|net
-operator|.
 name|URI
 import|;
 end_import
@@ -1531,13 +1521,23 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|SocketException
+name|Exception
 name|e
 parameter_list|)
 block|{
 if|if
 condition|(
 literal|"Socket Closed"
+operator|.
+name|equals
+argument_list|(
+name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|)
+operator|||
+literal|"HostnameVerifier, socket reset for TTL"
 operator|.
 name|equals
 argument_list|(
