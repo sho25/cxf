@@ -2097,16 +2097,7 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
-if|if
-condition|(
-name|this
-operator|.
-name|connectionTTL
-operator|==
-literal|0
-condition|)
-block|{
-comment|//if the connection does not have an expiry deadline
+comment|//Always start the idle checker thread to validate pending requests and
 comment|//use the ConnectionMaxIdle to close the idle connection
 operator|new
 name|CloseIdleConnectionThread
@@ -2119,7 +2110,6 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 comment|//provide a hook to customize the builder
 specifier|protected
@@ -2188,7 +2178,9 @@ name|client
 parameter_list|)
 block|{
 name|super
-argument_list|()
+argument_list|(
+literal|"CXFCloseIdleConnectionThread"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
@@ -2210,6 +2202,16 @@ name|void
 name|run
 parameter_list|()
 block|{
+name|long
+name|nextIdleCheck
+init|=
+name|System
+operator|.
+name|currentTimeMillis
+argument_list|()
+operator|+
+name|connectionMaxIdle
+decl_stmt|;
 try|try
 block|{
 while|while
@@ -2227,8 +2229,33 @@ init|)
 block|{
 name|sleep
 argument_list|(
-name|connectionMaxIdle
+name|selectInterval
 argument_list|)
+expr_stmt|;
+comment|// make sure pending leases fail in a timely manner,
+comment|// not just when a connection becomes available
+name|connMgr
+operator|.
+name|validatePendingRequests
+argument_list|()
+expr_stmt|;
+if|if
+condition|(
+name|connectionMaxIdle
+operator|>
+literal|0
+operator|&&
+name|System
+operator|.
+name|currentTimeMillis
+argument_list|()
+operator|>=
+name|nextIdleCheck
+condition|)
+block|{
+name|nextIdleCheck
+operator|+=
+name|connectionMaxIdle
 expr_stmt|;
 comment|// close connections
 comment|// that have been idle longer than specified connectionMaxIdle
@@ -2243,6 +2270,7 @@ operator|.
 name|MILLISECONDS
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
