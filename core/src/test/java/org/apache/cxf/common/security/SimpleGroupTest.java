@@ -31,18 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|security
-operator|.
-name|acl
-operator|.
-name|Group
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Enumeration
@@ -175,7 +163,7 @@ name|void
 name|testAddRemoveMembers
 parameter_list|()
 block|{
-name|Group
+name|GroupPrincipal
 name|group
 init|=
 operator|new

@@ -31,18 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|security
-operator|.
-name|acl
-operator|.
-name|Group
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Enumeration
@@ -90,7 +78,7 @@ name|SimpleGroup
 extends|extends
 name|SimplePrincipal
 implements|implements
-name|Group
+name|GroupPrincipal
 block|{
 specifier|private
 specifier|static
