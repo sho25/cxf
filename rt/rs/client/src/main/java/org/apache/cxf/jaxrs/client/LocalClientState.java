@@ -155,11 +155,7 @@ name|requestHeaders
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|false
 argument_list|,
@@ -251,11 +247,7 @@ name|requestHeaders
 operator|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|cs
 operator|.

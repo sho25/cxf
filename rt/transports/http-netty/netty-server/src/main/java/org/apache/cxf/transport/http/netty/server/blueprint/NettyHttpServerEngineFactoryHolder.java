@@ -526,11 +526,7 @@ name|threadingParametersMap
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|ThreadingParameters
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -611,11 +607,7 @@ name|sslMap
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|TLSServerParameters
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

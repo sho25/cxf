@@ -3697,11 +3697,7 @@ operator|.
 name|util
 operator|.
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// assume a document binding style, which is default according to W3C spec on WSDL

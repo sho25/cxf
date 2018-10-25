@@ -108,11 +108,7 @@ name|messageParts
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|QName
-argument_list|,
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|)

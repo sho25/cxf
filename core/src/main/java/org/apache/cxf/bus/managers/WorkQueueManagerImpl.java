@@ -290,11 +290,7 @@ name|namedQueues
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|AutomaticWorkQueue
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|,

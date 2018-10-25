@@ -123,11 +123,7 @@ name|proxyMethodMap
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Method
-argument_list|,
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

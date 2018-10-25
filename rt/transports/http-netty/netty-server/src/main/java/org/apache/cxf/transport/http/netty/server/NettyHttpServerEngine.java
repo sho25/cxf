@@ -348,11 +348,7 @@ name|handlerMap
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|NettyHttpContextHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * This field holds the TLS ServerParameters that are programatically      * configured. The tlsServerParamers (due to JAXB) holds the struct      * placed by SpringConfig.      */

@@ -760,14 +760,7 @@ name|extras
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PhaseInterceptor
-argument_list|<
-name|?
-extends|extends
-name|Message
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1
 argument_list|)

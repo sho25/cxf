@@ -526,14 +526,7 @@ name|inheritScopeMap
 operator|=
 operator|new
 name|TreeMap
-argument_list|<
-name|Scope
-argument_list|,
-name|List
-argument_list|<
-name|Scope
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|targetNamespace

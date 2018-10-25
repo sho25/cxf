@@ -129,11 +129,7 @@ name|instances
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The unresolved SOAP references by referenced id.      */
@@ -152,14 +148,7 @@ name|unresolvedRefs
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|List
-argument_list|<
-name|SoapRef
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Get the SoapRefRegistry stored in the context, and if necessary create a new one.      *      * @param context the unmarshal context      * @return the SoapRefRegistry; never null      */

@@ -257,14 +257,7 @@ name|namespaceStack
 init|=
 operator|new
 name|FastStack
-argument_list|<
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Namespace
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

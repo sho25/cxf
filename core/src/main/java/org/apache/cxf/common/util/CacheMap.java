@@ -98,11 +98,7 @@ name|mainDataMap
 init|=
 operator|new
 name|WeakHashMap
-argument_list|<
-name|K
-argument_list|,
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -115,11 +111,7 @@ name|extraKeyMap
 init|=
 operator|new
 name|WeakIdentityHashMap
-argument_list|<
-name|K
-argument_list|,
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

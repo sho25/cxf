@@ -265,11 +265,7 @@ name|biToBop
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|BindingInfo
-argument_list|,
-name|BindingOperationInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|,

@@ -328,11 +328,7 @@ name|bindingFactories
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|BindingFactory
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|8
 argument_list|,
@@ -353,11 +349,7 @@ name|bindingFactories
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|BindingFactory
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|8
 argument_list|,

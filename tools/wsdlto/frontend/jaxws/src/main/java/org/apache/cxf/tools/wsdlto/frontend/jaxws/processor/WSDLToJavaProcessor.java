@@ -480,11 +480,7 @@ name|map
 operator|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|QName
-argument_list|,
-name|JavaModel
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|context

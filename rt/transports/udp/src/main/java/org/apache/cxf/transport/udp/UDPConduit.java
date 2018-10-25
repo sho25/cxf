@@ -568,14 +568,7 @@ name|connections
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|Queue
-argument_list|<
-name|ConnectFuture
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

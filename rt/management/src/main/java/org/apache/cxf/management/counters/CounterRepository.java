@@ -254,11 +254,7 @@ name|counters
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|ObjectName
-argument_list|,
-name|Counter
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

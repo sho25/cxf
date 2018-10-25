@@ -669,11 +669,7 @@ name|newParams
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|params
 argument_list|)

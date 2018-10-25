@@ -256,16 +256,7 @@ name|ret
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Map
-operator|.
-name|Entry
-argument_list|<
-name|K
-argument_list|,
-name|V
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -277,11 +277,7 @@ name|conduitInitiators
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|ConduitInitiator
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|8
 argument_list|,
@@ -302,11 +298,7 @@ name|conduitInitiators
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|ConduitInitiator
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|8
 argument_list|,

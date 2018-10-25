@@ -1537,11 +1537,7 @@ name|data
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|FormUtils
@@ -1622,11 +1618,7 @@ name|map
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|String
-argument_list|,
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

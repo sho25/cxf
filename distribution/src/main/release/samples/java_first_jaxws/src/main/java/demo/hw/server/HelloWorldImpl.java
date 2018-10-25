@@ -75,11 +75,7 @@ name|users
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|Integer
-argument_list|,
-name|User
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

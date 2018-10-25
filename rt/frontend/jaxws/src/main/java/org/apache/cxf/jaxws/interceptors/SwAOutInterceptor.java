@@ -732,11 +732,7 @@ name|SWA_REF_METHOD
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|,

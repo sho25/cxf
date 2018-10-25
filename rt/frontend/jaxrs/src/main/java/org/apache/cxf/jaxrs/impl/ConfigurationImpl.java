@@ -268,11 +268,7 @@ name|features
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|Feature
-argument_list|,
-name|Boolean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

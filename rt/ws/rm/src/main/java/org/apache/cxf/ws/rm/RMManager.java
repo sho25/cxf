@@ -1032,11 +1032,7 @@ name|reliableEndpoints
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Endpoint
-argument_list|,
-name|RMEndpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

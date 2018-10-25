@@ -101,11 +101,7 @@ name|e
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|K
-argument_list|,
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|16
 argument_list|,
@@ -130,11 +126,7 @@ name|e
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|K
-argument_list|,
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|e
 argument_list|)

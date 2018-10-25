@@ -170,14 +170,7 @@ name|inlist
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Interceptor
-argument_list|<
-name|?
-extends|extends
-name|Message
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -194,14 +187,7 @@ name|outlist
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Interceptor
-argument_list|<
-name|?
-extends|extends
-name|Message
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -218,14 +204,7 @@ name|faultlist
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Interceptor
-argument_list|<
-name|?
-extends|extends
-name|Message
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//private InstrumentationManager im;

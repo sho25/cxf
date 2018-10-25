@@ -520,12 +520,7 @@ name|map2
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|map2
@@ -726,11 +721,7 @@ name|formParams
 operator|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|MediaType

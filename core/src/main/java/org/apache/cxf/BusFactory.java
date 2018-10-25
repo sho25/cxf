@@ -213,11 +213,7 @@ name|THREAD_BUSSES
 init|=
 operator|new
 name|WeakHashMap
-argument_list|<
-name|Thread
-argument_list|,
-name|BusHolder
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

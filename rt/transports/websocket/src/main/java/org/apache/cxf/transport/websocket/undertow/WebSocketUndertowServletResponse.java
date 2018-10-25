@@ -305,11 +305,7 @@ name|responseHeaders
 operator|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|String
 operator|.

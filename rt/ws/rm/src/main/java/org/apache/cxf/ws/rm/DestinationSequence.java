@@ -538,11 +538,7 @@ name|continuations
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|Long
-argument_list|,
-name|Continuation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// this map is used for robust and redelivery tracking. for redelivery it holds the beingDeliverd messages

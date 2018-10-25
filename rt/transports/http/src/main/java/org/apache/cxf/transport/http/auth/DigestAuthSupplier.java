@@ -187,11 +187,7 @@ name|authInfo
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|URI
-argument_list|,
-name|DigestInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

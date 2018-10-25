@@ -867,14 +867,7 @@ name|userOpsMap
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|String
-argument_list|,
-name|List
-argument_list|<
-name|UserOperation
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set

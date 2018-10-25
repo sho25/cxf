@@ -4266,11 +4266,7 @@ name|outputPartsMap
 operator|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|QName
-argument_list|,
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|outputParts

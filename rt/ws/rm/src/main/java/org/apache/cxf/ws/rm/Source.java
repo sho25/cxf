@@ -221,11 +221,7 @@ name|map
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|current

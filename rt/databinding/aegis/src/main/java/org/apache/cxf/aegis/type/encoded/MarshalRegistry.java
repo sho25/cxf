@@ -100,11 +100,7 @@ name|instances
 init|=
 operator|new
 name|IdentityHashMap
-argument_list|<
-name|Object
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The objects not yet marshaled.  The is maintained as a map for debugging purposes. It is IMPORTANT      * that this be a LinkedHashMap so we write the objects in the order they were discovered in the object      * graphs (and writes them in numeric order).      */
@@ -120,11 +116,7 @@ name|notMarshalled
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The next id.      */

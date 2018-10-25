@@ -1528,11 +1528,7 @@ name|rootHeaders
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|root
 operator|.

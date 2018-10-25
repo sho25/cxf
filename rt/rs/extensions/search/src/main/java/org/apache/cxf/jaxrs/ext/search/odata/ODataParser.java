@@ -936,12 +936,7 @@ name|conditions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SearchCondition
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)

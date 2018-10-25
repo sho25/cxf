@@ -470,15 +470,7 @@ name|state
 init|=
 operator|new
 name|ThreadLocalVisitorState
-argument_list|<
-name|Stack
-argument_list|<
-name|List
-argument_list|<
-name|Query
-argument_list|>
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

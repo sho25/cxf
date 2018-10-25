@@ -486,11 +486,7 @@ name|done
 init|=
 operator|new
 name|IdentityHashMap
-argument_list|<
-name|Definition
-argument_list|,
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|done

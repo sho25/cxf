@@ -357,11 +357,7 @@ name|keyMap
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|String
-argument_list|,
-name|JsonWebKey
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Validate core JWT claims      * @param claims the claims      * @param clientId OAuth2 client id      * @param validateClaimsAlways if set to true then enforce that the claims      *                             to be validated must be set      */

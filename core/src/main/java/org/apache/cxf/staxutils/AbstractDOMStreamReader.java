@@ -122,14 +122,7 @@ name|frames
 init|=
 operator|new
 name|FastStack
-argument_list|<
-name|ElementFrame
-argument_list|<
-name|T
-argument_list|,
-name|I
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

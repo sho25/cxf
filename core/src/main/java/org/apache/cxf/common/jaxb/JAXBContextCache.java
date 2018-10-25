@@ -1430,11 +1430,7 @@ name|cachedContextAndSchemasInternalMap
 operator|=
 operator|new
 name|CacheMap
-argument_list|<
-name|String
-argument_list|,
-name|CachedContextAndSchemasInternal
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

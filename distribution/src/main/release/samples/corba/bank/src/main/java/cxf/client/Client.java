@@ -179,9 +179,7 @@ operator|.
 name|ws
 operator|.
 name|Holder
-argument_list|<
-name|Account
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|Account

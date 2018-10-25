@@ -73,11 +73,7 @@ name|definitions
 init|=
 operator|new
 name|CacheMap
-argument_list|<
-name|Object
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Object

@@ -323,14 +323,7 @@ name|extensions
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Long
-argument_list|,
-name|List
-argument_list|<
-name|OSGiExtension
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|16
 argument_list|,

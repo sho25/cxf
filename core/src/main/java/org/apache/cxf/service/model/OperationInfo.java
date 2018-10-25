@@ -629,11 +629,7 @@ name|faults
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|QName
-argument_list|,
-name|FaultInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|,

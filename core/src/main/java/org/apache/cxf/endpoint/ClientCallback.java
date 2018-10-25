@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Asynchronous callback object for calls to {@link Client#invoke(ClientCallback, String, Object...)}  * and related functions.  *  * The default behavior of this expects the following pattern:  *<ol>  *<li>ClientCallback cb = new ClientCallback();</li>  *<li>client.invoke(cb, "someMethod", ....);</li>  *<li>cb.wait();</li>  *<li>// CXF calls notify on the callback object when the operation is complete.</li>  *</ol>  */
+comment|/**  * Asynchronous callback object for calls to {@link Client#invoke(ClientCallback, String, Object...)}  * and related functions.  *  * The default behavior of this expects the following pattern:  *<ol>  *<li>ClientCallback cb = new ClientCallback();<>  *<li>client.invoke(cb, "someMethod", ....);</li>  *<li>cb.wait();</li>  *<li>// CXF calls notify on the callback object when the operation is complete.</li>  *</ol>  */
 end_comment
 
 begin_class

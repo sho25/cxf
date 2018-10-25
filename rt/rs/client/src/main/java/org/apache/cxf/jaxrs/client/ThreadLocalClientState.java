@@ -661,11 +661,7 @@ name|checkpointMap
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Thread
-argument_list|,
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

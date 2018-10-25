@@ -2272,11 +2272,7 @@ name|proxies
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|T
-argument_list|,
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|proxyMap

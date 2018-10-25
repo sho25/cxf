@@ -711,9 +711,7 @@ operator|.
 name|concurrent
 operator|.
 name|CopyOnWriteArrayList
-argument_list|<
-name|Annotation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Annotation

@@ -581,11 +581,7 @@ name|messages
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|QName
-argument_list|,
-name|MessageInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|16
 argument_list|,
