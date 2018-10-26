@@ -912,9 +912,7 @@ name|visitor
 init|=
 operator|new
 name|SQLPrinterVisitor
-argument_list|<
-name|Condition
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"table"
 argument_list|,

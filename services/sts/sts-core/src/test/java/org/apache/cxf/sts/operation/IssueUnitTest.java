@@ -2058,9 +2058,7 @@ name|lifetimeJaxb
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|LifetimeType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.

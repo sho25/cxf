@@ -238,11 +238,7 @@ name|recipientsMap
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|JweJsonEncryptionEntry
-argument_list|,
-name|JweHeaders
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

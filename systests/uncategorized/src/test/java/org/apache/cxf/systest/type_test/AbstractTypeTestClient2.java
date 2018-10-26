@@ -10116,9 +10116,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|StructWithSubstitutionGroupAbstract
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOrig
 argument_list|)
@@ -11031,9 +11029,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|StructWithMultipleSubstitutionGroups
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOrig
 argument_list|)
@@ -11046,9 +11042,7 @@ name|z
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|StructWithMultipleSubstitutionGroups
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StructWithMultipleSubstitutionGroups
@@ -11402,9 +11396,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|ChoiceWithSubstitutionGroupAbstract
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOrig
 argument_list|)
@@ -11417,9 +11409,7 @@ name|z
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|ChoiceWithSubstitutionGroupAbstract
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ChoiceWithSubstitutionGroupAbstract
@@ -12404,9 +12394,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|ChoiceWithSubstitutionGroup
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOrig
 argument_list|)
@@ -12419,9 +12407,7 @@ name|z
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|ChoiceWithSubstitutionGroup
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertTrue

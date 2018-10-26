@@ -8006,12 +8006,7 @@ name|books
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JAXBElement
-argument_list|<
-name|Book
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|books
@@ -8448,12 +8443,7 @@ name|books
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JAXBElement
-argument_list|<
-name|BookNoXmlRootElement
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|books

@@ -921,9 +921,7 @@ name|lucene
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|useAnalyzer
 condition|?
@@ -1041,9 +1039,7 @@ name|lucene
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|useAnalyzer
 condition|?
@@ -1150,9 +1146,7 @@ name|lucene
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"ct"
 argument_list|,
@@ -1220,9 +1214,7 @@ name|lucene
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|"ct"
 argument_list|,
@@ -1351,9 +1343,7 @@ name|lucene
 init|=
 operator|new
 name|LuceneQueryVisitor
-argument_list|<
-name|SearchBean
-argument_list|>
+argument_list|<>
 argument_list|(
 name|fieldName
 argument_list|,

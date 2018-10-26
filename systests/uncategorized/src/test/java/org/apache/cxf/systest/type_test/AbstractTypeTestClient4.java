@@ -4871,9 +4871,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|StructWithNillableStruct
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOriginal
 argument_list|)

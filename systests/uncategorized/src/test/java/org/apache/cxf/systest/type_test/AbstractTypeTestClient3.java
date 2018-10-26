@@ -8736,9 +8736,7 @@ name|y
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|MultipleOccursSequenceInSequence
-argument_list|>
+argument_list|<>
 argument_list|(
 name|yOriginal
 argument_list|)
@@ -8751,9 +8749,7 @@ name|z
 init|=
 operator|new
 name|Holder
-argument_list|<
-name|MultipleOccursSequenceInSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|MultipleOccursSequenceInSequence

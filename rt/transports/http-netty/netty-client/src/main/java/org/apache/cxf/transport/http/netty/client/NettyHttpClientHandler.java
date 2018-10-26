@@ -114,9 +114,7 @@ name|sendedQueue
 init|=
 operator|new
 name|LinkedBlockingDeque
-argument_list|<
-name|NettyHttpClientRequest
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

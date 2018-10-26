@@ -386,9 +386,7 @@ name|visitor
 init|=
 operator|new
 name|LdapQueryVisitor
-argument_list|<
-name|User
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Collections
 operator|.

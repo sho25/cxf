@@ -3646,9 +3646,7 @@ name|useKeyType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|UseKeyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -4246,9 +4244,7 @@ name|entropyJaxbType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|EntropyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -4811,9 +4807,7 @@ name|entropyJaxbType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|EntropyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -5391,9 +5385,7 @@ name|entropyJaxbType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|EntropyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
@@ -7387,9 +7379,7 @@ name|useKeyType
 init|=
 operator|new
 name|JAXBElement
-argument_list|<
-name|UseKeyType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|QNameConstants
 operator|.
