@@ -2241,6 +2241,10 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
+name|connectionTTL
+operator|==
+literal|0
+operator|&&
 name|connectionMaxIdle
 operator|>
 literal|0
