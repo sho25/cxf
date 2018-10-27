@@ -573,9 +573,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|HTTPClientPolicy
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|ClientPolicyCalculator
@@ -941,9 +939,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|HTTPServerPolicy
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|ServerPolicyCalculator

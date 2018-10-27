@@ -791,11 +791,7 @@ name|testMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|AegisTestBean
-argument_list|,
-name|AegisSuperBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Class

@@ -407,11 +407,7 @@ name|m
 init|=
 operator|new
 name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|metadata
 argument_list|,

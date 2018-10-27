@@ -603,11 +603,7 @@ name|registedPaths
 init|=
 operator|new
 name|CopyOnWriteMap
-argument_list|<
-name|String
-argument_list|,
-name|UndertowHTTPHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

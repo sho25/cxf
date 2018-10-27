@@ -799,12 +799,7 @@ name|disposableCreationalContexts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CreationalContext
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

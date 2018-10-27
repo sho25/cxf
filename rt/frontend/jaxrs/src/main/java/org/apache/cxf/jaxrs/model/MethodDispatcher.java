@@ -87,11 +87,7 @@ name|oriToMethod
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|OperationResourceInfo
-argument_list|,
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -105,11 +101,7 @@ name|methodToOri
 init|=
 operator|new
 name|LinkedHashMap
-argument_list|<
-name|Method
-argument_list|,
-name|OperationResourceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

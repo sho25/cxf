@@ -107,14 +107,7 @@ name|targetAnnotations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Class
-argument_list|<
-name|?
-extends|extends
-name|Annotation
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

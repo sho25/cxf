@@ -781,11 +781,7 @@ name|staticContentTypes
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|DEFAULT_STATIC_CONTENT_TYPES
 argument_list|)

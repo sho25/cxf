@@ -266,9 +266,7 @@ name|assertion
 init|=
 operator|new
 name|JaxbAssertion
-argument_list|<
-name|TestPolicy
-argument_list|>
+argument_list|<>
 argument_list|(
 name|TEST_POLICY_NAME
 argument_list|,

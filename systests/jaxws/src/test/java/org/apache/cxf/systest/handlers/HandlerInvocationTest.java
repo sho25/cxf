@@ -6896,9 +6896,7 @@ name|handler
 init|=
 operator|new
 name|TestMustUnderstandHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|addHandlersToChain

@@ -245,14 +245,7 @@ name|map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|NoDefaultConstructorBeanKey
-argument_list|,
-name|Collection
-argument_list|<
-name|NoDefaultConstructorBean
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection

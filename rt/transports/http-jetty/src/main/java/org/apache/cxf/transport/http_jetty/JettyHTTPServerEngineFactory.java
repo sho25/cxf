@@ -311,11 +311,7 @@ name|portMap
 init|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Integer
-argument_list|,
-name|JettyHTTPServerEngine
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -334,11 +330,7 @@ name|threadingParametersMap
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|ThreadingParameters
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -357,11 +349,7 @@ name|tlsParametersMap
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|TLSServerParameters
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The bus.      */
