@@ -716,11 +716,11 @@ name|algorithm
 decl_stmt|;
 if|if
 condition|(
-name|digAlg
+literal|"MD5-sess"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"MD5-sess"
+name|digAlg
 argument_list|)
 condition|)
 block|{

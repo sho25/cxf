@@ -2205,11 +2205,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|name
+literal|"Content-Transfer-Encoding"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"Content-Transfer-Encoding"
+name|name
 argument_list|)
 condition|)
 block|{

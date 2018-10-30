@@ -93,11 +93,11 @@ argument_list|(
 name|clz
 argument_list|)
 operator|&&
-name|entryName
+literal|"handlerResource"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"handlerResource"
+name|entryName
 argument_list|)
 condition|)
 block|{

@@ -78,11 +78,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|appleType
+literal|"Fuji"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"Fuji"
+name|appleType
 argument_list|)
 condition|)
 block|{

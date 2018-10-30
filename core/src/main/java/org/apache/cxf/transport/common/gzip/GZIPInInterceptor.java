@@ -489,11 +489,11 @@ control|)
 block|{
 if|if
 condition|(
-name|key
+literal|"Content-Encoding"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"Content-Encoding"
+name|key
 argument_list|)
 condition|)
 block|{

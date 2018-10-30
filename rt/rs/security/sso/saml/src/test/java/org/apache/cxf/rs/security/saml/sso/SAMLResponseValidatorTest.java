@@ -4206,11 +4206,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|pubKeyAlgo
+literal|"DSA"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"DSA"
+name|pubKeyAlgo
 argument_list|)
 condition|)
 block|{

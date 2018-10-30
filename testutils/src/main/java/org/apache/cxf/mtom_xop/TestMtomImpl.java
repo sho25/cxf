@@ -126,13 +126,13 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|name
-operator|.
-name|value
+literal|"have name"
 operator|.
 name|equals
 argument_list|(
-literal|"have name"
+name|name
+operator|.
+name|value
 argument_list|)
 operator|&&
 name|attachinfo

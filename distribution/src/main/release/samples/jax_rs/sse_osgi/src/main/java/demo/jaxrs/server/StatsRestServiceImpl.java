@@ -400,11 +400,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|ext
+literal|"js"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"js"
+name|ext
 argument_list|)
 condition|)
 block|{

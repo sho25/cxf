@@ -134,11 +134,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|carType
+literal|"Porsche"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-literal|"Porsche"
+name|carType
 argument_list|)
 condition|)
 block|{
