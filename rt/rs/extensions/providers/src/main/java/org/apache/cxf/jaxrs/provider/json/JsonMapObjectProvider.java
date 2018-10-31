@@ -485,9 +485,6 @@ operator|new
 name|JsonMapObject
 argument_list|()
 else|:
-operator|(
-name|JsonMapObject
-operator|)
 name|cls
 operator|.
 name|newInstance
