@@ -5143,12 +5143,6 @@ name|part
 operator|!=
 literal|null
 condition|?
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|part
 operator|.
 name|getTypeClass
@@ -5234,12 +5228,6 @@ name|part
 operator|!=
 literal|null
 condition|?
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|part
 operator|.
 name|getTypeClass

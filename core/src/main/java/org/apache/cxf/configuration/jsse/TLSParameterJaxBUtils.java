@@ -2162,9 +2162,6 @@ name|getCertStore
 argument_list|()
 argument_list|)
 else|:
-operator|(
-name|KeyStore
-operator|)
 literal|null
 operator|)
 decl_stmt|;
