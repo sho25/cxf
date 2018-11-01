@@ -960,6 +960,21 @@ expr_stmt|;
 name|injectContexts
 argument_list|(
 name|factory
+argument_list|,
+operator|(
+name|ApplicationInfo
+operator|)
+name|ep
+operator|.
+name|get
+argument_list|(
+name|Application
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|factory
@@ -1573,18 +1588,40 @@ name|injectContexts
 parameter_list|(
 name|ServerProviderFactory
 name|factory
+parameter_list|,
+name|ApplicationInfo
+name|fallback
 parameter_list|)
 block|{
+comment|// Sometimes the application provider (ApplicationInfo) is injected through
+comment|// the endpoint, not JAXRSServerFactoryBean (like for example OpenApiFeature
+comment|// or Swagger2Feature do). As such, without consulting the endpoint, the injection
+comment|// may not work properly.
+specifier|final
+name|ApplicationInfo
+name|appInfoProvider
+init|=
+operator|(
+name|appProvider
+operator|==
+literal|null
+operator|)
+condition|?
+name|fallback
+else|:
+name|appProvider
+decl_stmt|;
+specifier|final
 name|Application
 name|application
 init|=
-name|appProvider
+name|appInfoProvider
 operator|==
 literal|null
 condition|?
 literal|null
 else|:
-name|appProvider
+name|appInfoProvider
 operator|.
 name|getProvider
 argument_list|()
@@ -1642,7 +1679,7 @@ name|InjectionUtils
 operator|.
 name|injectContextProxiesAndApplication
 argument_list|(
-name|appProvider
+name|appInfoProvider
 argument_list|,
 name|application
 argument_list|,
