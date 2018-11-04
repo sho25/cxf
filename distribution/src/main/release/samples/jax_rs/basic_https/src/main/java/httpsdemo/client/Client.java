@@ -323,6 +323,11 @@ name|toCharArray
 argument_list|()
 argument_list|)
 operator|.
+name|useProtocol
+argument_list|(
+literal|"TLSv1.2"
+argument_list|)
+operator|.
 name|build
 argument_list|()
 decl_stmt|;
