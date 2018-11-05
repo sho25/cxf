@@ -948,14 +948,6 @@ expr_stmt|;
 name|String
 name|dataString
 init|=
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|io
-operator|.
 name|IOUtils
 operator|.
 name|toString
