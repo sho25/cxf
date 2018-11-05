@@ -660,6 +660,13 @@ argument_list|(
 name|myTrustStoreKeyManagers
 argument_list|)
 expr_stmt|;
+name|tlsCP
+operator|.
+name|setDisableCNCheck
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|httpConduit
 operator|.
 name|setTlsClientParameters
