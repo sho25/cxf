@@ -97,7 +97,7 @@ name|autoconfigure
 operator|.
 name|condition
 operator|.
-name|ConditionalOnBean
+name|ConditionalOnClass
 import|;
 end_import
 
@@ -153,7 +153,7 @@ begin_class
 annotation|@
 name|Configuration
 annotation|@
-name|ConditionalOnBean
+name|ConditionalOnClass
 argument_list|(
 name|OpenApiFeature
 operator|.
