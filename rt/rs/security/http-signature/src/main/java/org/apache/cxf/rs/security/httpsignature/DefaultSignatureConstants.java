@@ -19,23 +19,42 @@ name|httpsignature
 package|;
 end_package
 
-begin_interface
-annotation|@
-name|FunctionalInterface
+begin_class
 specifier|public
-interface|interface
-name|AlgorithmProvider
+specifier|final
+class|class
+name|DefaultSignatureConstants
 block|{
-comment|/**      *      * @param keyId      * @return the algorithm name (which is never {@code null})      */
+specifier|public
+specifier|static
+specifier|final
 name|String
-name|getAlgorithmName
-parameter_list|(
+name|SIGNING_ALGORITHM
+init|=
+literal|"rsa-sha256"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|String
-name|keyId
-parameter_list|)
-function_decl|;
+name|DIGEST_ALGORITHM
+init|=
+literal|"SHA-256"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SECURITY_PROVIDER
+init|=
+literal|"SunRsaSign"
+decl_stmt|;
+specifier|private
+name|DefaultSignatureConstants
+parameter_list|()
+block|{     }
 block|}
-end_interface
+end_class
 
 end_unit
 
