@@ -415,8 +415,8 @@ name|getThrown
 argument_list|()
 decl_stmt|;
 name|Handler
-name|targets
 index|[]
+name|targets
 init|=
 name|getHandlers
 argument_list|()

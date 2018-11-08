@@ -9175,8 +9175,8 @@ literal|"foo://example.com:8042/over/there?name=ferret#nose"
 block|}
 decl_stmt|;
 name|URI
-name|urisReplace
 index|[]
+name|urisReplace
 init|=
 operator|new
 name|URI

@@ -112,8 +112,8 @@ name|testHeader1
 parameter_list|()
 block|{
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|cls
 operator|.
@@ -248,8 +248,8 @@ name|testInOutHeader
 parameter_list|()
 block|{
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|cls
 operator|.

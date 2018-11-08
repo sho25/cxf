@@ -1354,8 +1354,8 @@ name|Constructor
 argument_list|<
 name|?
 argument_list|>
-name|cons
 index|[]
+name|cons
 init|=
 name|faultClass
 operator|.
@@ -2368,8 +2368,8 @@ block|}
 block|}
 comment|//also use/try public getter/setter methods
 name|Method
-name|meth
 index|[]
+name|meth
 init|=
 name|faultBean
 operator|.

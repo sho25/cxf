@@ -1308,8 +1308,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 name|File
-name|dirs
 index|[]
+name|dirs
 init|=
 name|o
 operator|.
@@ -1711,8 +1711,8 @@ name|root
 parameter_list|)
 block|{
 name|File
-name|files
 index|[]
+name|files
 init|=
 name|rootFile
 operator|.
@@ -2952,8 +2952,8 @@ name|toDo
 control|)
 block|{
 name|File
-name|dirs
 index|[]
+name|dirs
 init|=
 name|wsdlOption
 operator|.

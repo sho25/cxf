@@ -1019,8 +1019,8 @@ block|}
 else|else
 block|{
 name|File
-name|files
 index|[]
+name|files
 init|=
 name|wsdlOption
 operator|.

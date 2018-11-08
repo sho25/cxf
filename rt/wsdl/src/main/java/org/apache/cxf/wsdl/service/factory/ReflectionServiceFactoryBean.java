@@ -13817,8 +13817,8 @@ name|fi
 parameter_list|)
 block|{
 name|Field
-name|fields
 index|[]
+name|fields
 init|=
 name|exClass
 operator|.
@@ -15292,8 +15292,8 @@ name|sc
 parameter_list|)
 block|{
 name|Annotation
-name|anns
 index|[]
+name|anns
 init|=
 name|serviceClass
 operator|.

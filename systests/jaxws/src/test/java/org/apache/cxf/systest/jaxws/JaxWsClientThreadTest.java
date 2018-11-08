@@ -382,8 +382,8 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Throwable
-name|errorHolder
 index|[]
+name|errorHolder
 init|=
 operator|new
 name|Throwable
@@ -916,8 +916,8 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Throwable
-name|errorHolder
 index|[]
+name|errorHolder
 init|=
 operator|new
 name|Throwable

@@ -389,8 +389,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|checkExceptionTypes
 index|[]
+name|checkExceptionTypes
 init|=
 name|method
 operator|.

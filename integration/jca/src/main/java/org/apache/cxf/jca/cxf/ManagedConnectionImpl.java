@@ -977,8 +977,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|classes
 index|[]
+name|classes
 init|=
 block|{
 name|Connection

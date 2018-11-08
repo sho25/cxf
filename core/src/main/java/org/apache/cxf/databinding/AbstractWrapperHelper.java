@@ -118,8 +118,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|NO_CLASSES
 index|[]
+name|NO_CLASSES
 init|=
 operator|new
 name|Class

@@ -1457,8 +1457,8 @@ name|found
 condition|)
 block|{
 name|Annotation
-name|tmp
 index|[]
+name|tmp
 init|=
 operator|new
 name|Annotation
@@ -3073,8 +3073,8 @@ name|seq
 argument_list|)
 expr_stmt|;
 name|Method
-name|methods
 index|[]
+name|methods
 init|=
 name|cls
 operator|.

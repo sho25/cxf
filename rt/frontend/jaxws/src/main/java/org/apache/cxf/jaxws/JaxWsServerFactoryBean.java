@@ -680,8 +680,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|cls2
 index|[]
+name|cls2
 init|=
 operator|new
 name|Class

@@ -906,8 +906,8 @@ name|Element
 argument_list|>
 block|{
 name|QName
-name|knownElements
 index|[]
+name|knownElements
 init|=
 block|{
 name|KNOWN

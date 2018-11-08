@@ -478,8 +478,8 @@ literal|"com.mypizzaco.pizza.PizzaPortType"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|clz
 operator|.
@@ -919,8 +919,8 @@ literal|"com.mypizzaco.pizza.PizzaPortType"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|clz
 operator|.
@@ -1158,8 +1158,8 @@ literal|"com.mypizzaco.pizza.PizzaPortType"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|clz
 operator|.
@@ -1388,8 +1388,8 @@ literal|"org.apache.cxf.pizza_wrapped.Pizza"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|clz
 operator|.
@@ -1621,8 +1621,8 @@ literal|"org.apache.cxf.bugs.oobh.LoginInterface"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|clz
 operator|.
@@ -8460,8 +8460,8 @@ literal|"org.apache.header_test.rpc.TestRPCHeaderPort"
 argument_list|)
 decl_stmt|;
 name|Method
-name|meths
 index|[]
+name|meths
 init|=
 name|cls
 operator|.
@@ -10234,8 +10234,8 @@ literal|"org.apache.cxf.helloworld.HelloWorldServiceImpl"
 argument_list|)
 decl_stmt|;
 name|Method
-name|m
 index|[]
+name|m
 init|=
 name|sei
 operator|.

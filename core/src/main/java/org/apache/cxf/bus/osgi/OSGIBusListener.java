@@ -760,8 +760,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|getServiceReferences
 argument_list|(
@@ -830,8 +830,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|getServiceReferences
 argument_list|(
@@ -912,8 +912,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|getServiceReferences
 argument_list|(
@@ -994,8 +994,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|getServiceReferences
 argument_list|(

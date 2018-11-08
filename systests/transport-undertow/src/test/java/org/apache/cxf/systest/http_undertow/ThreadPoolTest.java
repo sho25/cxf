@@ -350,8 +350,8 @@ literal|1
 argument_list|)
 expr_stmt|;
 name|TestRunnable
-name|r
 index|[]
+name|r
 init|=
 operator|new
 name|TestRunnable

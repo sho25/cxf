@@ -522,8 +522,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|cls
 index|[]
+name|cls
 init|=
 name|service
 operator|.

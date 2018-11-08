@@ -636,8 +636,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 name|File
-name|dirs
 index|[]
+name|dirs
 init|=
 name|o
 operator|.

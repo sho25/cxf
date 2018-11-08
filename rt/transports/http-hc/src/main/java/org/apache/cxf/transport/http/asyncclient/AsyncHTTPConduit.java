@@ -4273,8 +4273,8 @@ throws|throws
 name|IOException
 block|{
 name|Header
-name|headers
 index|[]
+name|headers
 init|=
 name|getHttpResponse
 argument_list|()

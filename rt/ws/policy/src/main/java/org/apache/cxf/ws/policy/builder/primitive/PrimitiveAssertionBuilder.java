@@ -105,8 +105,8 @@ argument_list|>
 block|{
 specifier|private
 name|QName
-name|knownElements
 index|[]
+name|knownElements
 init|=
 block|{}
 decl_stmt|;

@@ -2080,8 +2080,8 @@ operator|.
 name|transform
 operator|.
 name|Source
-name|schemas
 index|[]
+name|schemas
 init|=
 operator|new
 name|javax

@@ -1295,8 +1295,8 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 name|CXF2411SubClass
-name|content
 index|[]
+name|content
 init|=
 operator|new
 name|CXF2411SubClass

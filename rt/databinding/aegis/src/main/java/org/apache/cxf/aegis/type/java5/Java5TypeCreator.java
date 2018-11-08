@@ -1395,8 +1395,8 @@ operator|)
 name|cls
 decl_stmt|;
 name|Type
-name|types
 index|[]
+name|types
 init|=
 name|pt
 operator|.

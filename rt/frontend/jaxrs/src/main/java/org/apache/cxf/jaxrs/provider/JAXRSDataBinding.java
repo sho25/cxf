@@ -365,8 +365,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|SUPPORTED_READER_FORMATS
 index|[]
+name|SUPPORTED_READER_FORMATS
 init|=
 operator|new
 name|Class
@@ -387,8 +387,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|SUPPORTED_WRITER_FORMATS
 index|[]
+name|SUPPORTED_WRITER_FORMATS
 init|=
 operator|new
 name|Class

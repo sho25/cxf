@@ -6926,8 +6926,8 @@ expr_stmt|;
 block|}
 block|}
 name|ClientThread
-name|clients
 index|[]
+name|clients
 init|=
 operator|new
 name|ClientThread
@@ -7511,8 +7511,8 @@ expr_stmt|;
 block|}
 block|}
 name|ClientThread
-name|clients
 index|[]
+name|clients
 init|=
 operator|new
 name|ClientThread

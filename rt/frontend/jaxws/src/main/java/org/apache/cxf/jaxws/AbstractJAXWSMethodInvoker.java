@@ -683,8 +683,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|ptypes
 index|[]
+name|ptypes
 init|=
 operator|new
 name|Class

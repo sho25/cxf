@@ -822,8 +822,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|context
 operator|.
@@ -1118,8 +1118,8 @@ name|ServiceReference
 argument_list|<
 name|?
 argument_list|>
-name|refs
 index|[]
+name|refs
 init|=
 name|context
 operator|.

@@ -647,8 +647,8 @@ comment|// type, we still need to create a schema type so that the visitor knows
 comment|// kind of parameter this is.  For a default endpoint, we'll just provide a
 comment|// reference to a WS addressing EndpointReferenceType.
 name|XmlSchema
-name|scs
 index|[]
+name|scs
 init|=
 name|schemas
 operator|.
@@ -1259,8 +1259,8 @@ block|}
 comment|// Create a schema namespace for WS addressing and use it to create an endpoint
 comment|// reference type.  This will be used as the type for our endpoint reference.
 name|XmlSchema
-name|scs
 index|[]
+name|scs
 init|=
 name|schemas
 operator|.

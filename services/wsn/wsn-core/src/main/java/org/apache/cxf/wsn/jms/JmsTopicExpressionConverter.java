@@ -212,8 +212,8 @@ name|size
 argument_list|()
 decl_stmt|;
 name|ActiveMQTopic
-name|childrenDestinations
 index|[]
+name|childrenDestinations
 init|=
 operator|new
 name|ActiveMQTopic

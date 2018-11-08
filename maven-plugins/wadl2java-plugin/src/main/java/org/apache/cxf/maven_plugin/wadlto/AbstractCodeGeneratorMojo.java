@@ -1619,8 +1619,8 @@ name|toDo
 control|)
 block|{
 name|File
-name|dirs
 index|[]
+name|dirs
 init|=
 name|option
 operator|.
@@ -3426,8 +3426,8 @@ block|}
 else|else
 block|{
 name|File
-name|files
 index|[]
+name|files
 init|=
 name|wadlOption
 operator|.

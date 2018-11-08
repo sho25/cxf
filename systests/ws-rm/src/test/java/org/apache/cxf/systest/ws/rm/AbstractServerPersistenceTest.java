@@ -1073,8 +1073,8 @@ name|Response
 argument_list|<
 name|GreetMeResponse
 argument_list|>
-name|responses
 index|[]
+name|responses
 init|=
 name|cast
 argument_list|(

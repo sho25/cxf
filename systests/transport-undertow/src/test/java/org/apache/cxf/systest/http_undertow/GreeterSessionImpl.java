@@ -345,8 +345,8 @@ name|SERVLET_REQUEST
 argument_list|)
 decl_stmt|;
 name|Cookie
-name|cookies
 index|[]
+name|cookies
 init|=
 name|req
 operator|.

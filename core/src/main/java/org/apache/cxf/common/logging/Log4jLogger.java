@@ -1134,8 +1134,8 @@ name|cname
 parameter_list|)
 block|{
 name|StackTraceElement
-name|el
 index|[]
+name|el
 init|=
 name|Thread
 operator|.

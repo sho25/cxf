@@ -1469,8 +1469,8 @@ name|loader
 argument_list|)
 decl_stmt|;
 name|Method
-name|methods
 index|[]
+name|methods
 init|=
 name|ReflectionUtil
 operator|.
@@ -2171,8 +2171,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|Method
-name|methods
 index|[]
+name|methods
 init|=
 name|objectFactory
 operator|.

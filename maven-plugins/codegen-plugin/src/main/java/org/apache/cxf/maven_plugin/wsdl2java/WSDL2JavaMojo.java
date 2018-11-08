@@ -1201,8 +1201,8 @@ block|}
 else|else
 block|{
 name|URI
-name|dependencies
 index|[]
+name|dependencies
 init|=
 name|wsdlOption
 operator|.

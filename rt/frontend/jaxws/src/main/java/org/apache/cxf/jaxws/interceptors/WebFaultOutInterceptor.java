@@ -1523,8 +1523,8 @@ argument_list|()
 decl_stmt|;
 comment|//copy props
 name|Method
-name|meth
 index|[]
+name|meth
 init|=
 name|cause
 operator|.

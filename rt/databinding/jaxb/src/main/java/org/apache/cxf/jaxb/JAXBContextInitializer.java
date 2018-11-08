@@ -2627,8 +2627,8 @@ comment|// only look for fields if we are instructed to
 comment|//fields are accessible even if not public, must look at the declared fields
 comment|//then walk to parents declared fields, etc...
 name|Field
-name|fields
 index|[]
+name|fields
 init|=
 name|ReflectionUtil
 operator|.
@@ -2727,8 +2727,8 @@ condition|)
 block|{
 comment|// only look for methods if we are instructed to
 name|Method
-name|methods
 index|[]
+name|methods
 init|=
 name|ReflectionUtil
 operator|.

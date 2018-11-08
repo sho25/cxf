@@ -340,8 +340,8 @@ block|}
 block|}
 block|}
 name|Tag
-name|retTags
 index|[]
+name|retTags
 init|=
 name|method
 operator|.

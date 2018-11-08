@@ -1804,8 +1804,8 @@ block|}
 comment|//try to get the right class name/method name - just trace
 comment|//back the stack till we get out of this class
 name|StackTraceElement
-name|stack
 index|[]
+name|stack
 init|=
 operator|(
 operator|new

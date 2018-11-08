@@ -2057,8 +2057,8 @@ operator|.
 name|length
 decl_stmt|;
 name|T
-name|ret
 index|[]
+name|ret
 init|=
 operator|(
 name|T

@@ -1193,8 +1193,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|interfaces
 index|[]
+name|interfaces
 init|=
 block|{
 name|CXFConnection

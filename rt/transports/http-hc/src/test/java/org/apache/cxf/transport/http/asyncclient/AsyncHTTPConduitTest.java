@@ -1682,8 +1682,8 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|boolean
-name|wdone
 index|[]
+name|wdone
 init|=
 operator|new
 name|boolean
@@ -1700,8 +1700,8 @@ name|AsyncHandler
 argument_list|<
 name|GreetMeLaterResponse
 argument_list|>
-name|whandler
 index|[]
+name|whandler
 init|=
 operator|new
 name|AsyncHandler

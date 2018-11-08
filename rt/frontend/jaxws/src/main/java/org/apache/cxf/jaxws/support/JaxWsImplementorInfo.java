@@ -2040,8 +2040,8 @@ literal|null
 condition|)
 block|{
 name|Type
-name|intfTypes
 index|[]
+name|intfTypes
 init|=
 name|c
 operator|.
@@ -2091,8 +2091,8 @@ name|clazz
 condition|)
 block|{
 name|Type
-name|paramTypes
 index|[]
+name|paramTypes
 init|=
 operator|(
 operator|(

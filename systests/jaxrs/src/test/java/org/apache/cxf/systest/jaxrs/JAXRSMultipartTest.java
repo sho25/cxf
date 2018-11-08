@@ -1101,8 +1101,8 @@ name|getDefaultTempDir
 argument_list|()
 decl_stmt|;
 name|File
-name|files
 index|[]
+name|files
 init|=
 name|file
 operator|.
