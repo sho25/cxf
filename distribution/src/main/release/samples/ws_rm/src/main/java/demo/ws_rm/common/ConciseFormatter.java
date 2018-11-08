@@ -63,9 +63,7 @@ argument_list|(
 name|record
 argument_list|)
 decl_stmt|;
-name|String
-name|shortForm
-init|=
+return|return
 name|longForm
 operator|.
 name|indexOf
@@ -90,9 +88,6 @@ literal|6
 argument_list|)
 else|:
 name|longForm
-decl_stmt|;
-return|return
-name|shortForm
 return|;
 block|}
 block|}

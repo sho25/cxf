@@ -809,7 +809,6 @@ argument_list|()
 decl_stmt|;
 while|while
 condition|(
-operator|(
 name|eventType
 operator|==
 name|XMLStreamConstants
@@ -818,9 +817,7 @@ name|CHARACTERS
 operator|&&
 name|isWhiteSpace
 argument_list|()
-operator|)
 operator|||
-operator|(
 name|eventType
 operator|==
 name|XMLStreamConstants
@@ -829,7 +826,6 @@ name|CDATA
 operator|&&
 name|isWhiteSpace
 argument_list|()
-operator|)
 comment|// skip whitespace
 operator|||
 name|eventType

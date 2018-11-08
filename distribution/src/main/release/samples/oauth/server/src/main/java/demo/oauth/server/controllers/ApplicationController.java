@@ -679,9 +679,7 @@ argument_list|(
 name|consumerKey
 argument_list|)
 expr_stmt|;
-name|ModelAndView
-name|modelAndView
-init|=
+return|return
 operator|new
 name|ModelAndView
 argument_list|(
@@ -691,9 +689,6 @@ argument_list|(
 literal|"/app/listRegisteredClients"
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|modelAndView
 return|;
 block|}
 annotation|@
@@ -726,9 +721,7 @@ argument_list|(
 name|consumerKey
 argument_list|)
 expr_stmt|;
-name|ModelAndView
-name|modelAndView
-init|=
+return|return
 operator|new
 name|ModelAndView
 argument_list|(
@@ -738,9 +731,6 @@ argument_list|(
 literal|"/app/listAuthorizedClients"
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|modelAndView
 return|;
 block|}
 annotation|@

@@ -4600,9 +4600,7 @@ operator|.
 name|build
 argument_list|()
 decl_stmt|;
-name|WebApplicationException
-name|ex
-init|=
+throw|throw
 name|read
 condition|?
 name|ExceptionUtils
@@ -4622,9 +4620,6 @@ name|t
 argument_list|,
 name|r
 argument_list|)
-decl_stmt|;
-throw|throw
-name|ex
 throw|;
 block|}
 end_function

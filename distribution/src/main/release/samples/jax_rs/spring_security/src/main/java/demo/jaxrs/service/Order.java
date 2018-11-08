@@ -204,9 +204,7 @@ operator|+
 name|productId
 argument_list|)
 expr_stmt|;
-name|Product
-name|p
-init|=
+return|return
 name|products
 operator|.
 name|get
@@ -218,9 +216,6 @@ argument_list|(
 name|productId
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|p
 return|;
 block|}
 specifier|final

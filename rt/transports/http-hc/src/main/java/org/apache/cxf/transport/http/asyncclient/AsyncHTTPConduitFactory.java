@@ -1885,9 +1885,7 @@ name|ConnectionConfig
 name|config
 parameter_list|)
 block|{
-name|ManagedNHttpClientConnection
-name|conn
-init|=
+return|return
 name|super
 operator|.
 name|create
@@ -1896,9 +1894,6 @@ name|iosession
 argument_list|,
 name|config
 argument_list|)
-decl_stmt|;
-return|return
-name|conn
 return|;
 block|}
 block|}

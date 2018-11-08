@@ -423,9 +423,7 @@ operator|)
 name|ex
 throw|;
 block|}
-name|IOException
-name|ioException
-init|=
+throw|throw
 operator|new
 name|IOException
 argument_list|(
@@ -433,9 +431,6 @@ literal|"Error while initializing secure socket"
 argument_list|,
 name|ex
 argument_list|)
-decl_stmt|;
-throw|throw
-name|ioException
 throw|;
 block|}
 block|}

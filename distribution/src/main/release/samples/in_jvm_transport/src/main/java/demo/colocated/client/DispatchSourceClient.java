@@ -678,9 +678,7 @@ argument_list|,
 name|value
 argument_list|)
 decl_stmt|;
-name|Source
-name|source
-init|=
+return|return
 operator|new
 name|StreamSource
 argument_list|(
@@ -695,9 +693,6 @@ literal|"utf-8"
 argument_list|)
 argument_list|)
 argument_list|)
-decl_stmt|;
-return|return
-name|source
 return|;
 block|}
 specifier|private
