@@ -256,6 +256,10 @@ control|)
 block|{
 if|if
 condition|(
+literal|"OldLoggingFactoryBeanListener"
+operator|.
+name|equals
+argument_list|(
 name|f
 operator|.
 name|getClass
@@ -263,10 +267,6 @@ argument_list|()
 operator|.
 name|getSimpleName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"OldLoggingFactoryBeanListener"
 argument_list|)
 condition|)
 block|{

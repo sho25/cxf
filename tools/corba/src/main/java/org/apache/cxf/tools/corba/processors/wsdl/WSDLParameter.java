@@ -2157,6 +2157,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+literal|"out"
+operator|.
+name|equals
+argument_list|(
 name|d2
 operator|.
 name|getMode
@@ -2164,10 +2168,6 @@ argument_list|()
 operator|.
 name|value
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"out"
 argument_list|)
 condition|)
 block|{
@@ -2264,6 +2264,10 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+literal|"inout"
+operator|.
+name|equals
+argument_list|(
 name|d2
 operator|.
 name|getMode
@@ -2271,10 +2275,6 @@ argument_list|()
 operator|.
 name|value
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"inout"
 argument_list|)
 condition|)
 block|{
@@ -2321,13 +2321,14 @@ name|getName
 argument_list|()
 argument_list|)
 operator|&&
-operator|(
 operator|!
 name|simpleOrdering
-operator|)
 operator|&&
-operator|(
 operator|!
+literal|"inout"
+operator|.
+name|equals
+argument_list|(
 name|d3
 operator|.
 name|getMode
@@ -2335,12 +2336,7 @@ argument_list|()
 operator|.
 name|value
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"inout"
 argument_list|)
-operator|)
 condition|)
 block|{
 comment|// the in/outs are in a different order in the

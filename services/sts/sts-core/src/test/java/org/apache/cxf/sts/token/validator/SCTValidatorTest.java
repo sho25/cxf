@@ -580,6 +580,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"alice"
+operator|.
+name|equals
+argument_list|(
 name|validatorResponse
 operator|.
 name|getPrincipal
@@ -587,10 +591,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"alice"
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -547,6 +547,10 @@ block|{
 comment|// Disable the test on Redhat Enterprise Linux which doesn't enable the UDP broadcast by default
 if|if
 condition|(
+literal|"Linux"
+operator|.
+name|equals
+argument_list|(
 name|System
 operator|.
 name|getProperties
@@ -556,10 +560,6 @@ name|getProperty
 argument_list|(
 literal|"os.name"
 argument_list|)
-operator|.
-name|equals
-argument_list|(
-literal|"Linux"
 argument_list|)
 operator|&&
 name|System

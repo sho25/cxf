@@ -1047,6 +1047,10 @@ name|ENCODING
 argument_list|)
 decl_stmt|;
 return|return
+literal|"org.apache.cxf.binding.soap.model.SoapBindingInfo"
+operator|.
+name|equals
+argument_list|(
 name|info
 operator|.
 name|getClass
@@ -1054,12 +1058,12 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+argument_list|)
+operator|&&
+literal|"org.apache.cxf.jaxb.JAXBDataBinding"
 operator|.
 name|equals
 argument_list|(
-literal|"org.apache.cxf.binding.soap.model.SoapBindingInfo"
-argument_list|)
-operator|&&
 name|s
 operator|.
 name|getDataBinding
@@ -1070,10 +1074,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"org.apache.cxf.jaxb.JAXBDataBinding"
 argument_list|)
 operator|&&
 operator|!

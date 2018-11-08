@@ -2213,6 +2213,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"manager"
+operator|.
+name|equals
+argument_list|(
 name|roles
 operator|.
 name|iterator
@@ -2223,10 +2227,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"manager"
 argument_list|)
 argument_list|)
 expr_stmt|;

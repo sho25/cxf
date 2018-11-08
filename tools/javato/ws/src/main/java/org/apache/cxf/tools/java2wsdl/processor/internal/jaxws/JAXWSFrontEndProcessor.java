@@ -1454,6 +1454,10 @@ argument_list|()
 argument_list|)
 operator|&&
 operator|!
+literal|"java.lang.Object"
+operator|.
+name|equals
+argument_list|(
 name|method
 operator|.
 name|getDeclaringClass
@@ -1461,10 +1465,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"java.lang.Object"
 argument_list|)
 condition|)
 block|{

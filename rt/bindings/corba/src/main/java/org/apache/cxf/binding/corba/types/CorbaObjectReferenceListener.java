@@ -129,23 +129,19 @@ block|{
 comment|//REVISIT, just checking the address for now.
 if|if
 condition|(
-operator|(
 name|currentElement
 operator|!=
 literal|null
-operator|)
 operator|&&
-operator|(
+literal|"Address"
+operator|.
+name|equals
+argument_list|(
 name|currentElement
 operator|.
 name|getLocalPart
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"Address"
 argument_list|)
-operator|)
 condition|)
 block|{
 name|org

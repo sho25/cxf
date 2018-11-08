@@ -1277,6 +1277,10 @@ name|binding
 operator|!=
 literal|null
 operator|&&
+literal|"SoapBinding"
+operator|.
+name|equals
+argument_list|(
 name|binding
 operator|.
 name|getClass
@@ -1284,10 +1288,6 @@ argument_list|()
 operator|.
 name|getSimpleName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"SoapBinding"
 argument_list|)
 return|;
 block|}

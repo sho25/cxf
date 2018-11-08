@@ -4865,6 +4865,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"application/json"
+operator|.
+name|equals
+argument_list|(
 name|candidateList
 operator|.
 name|get
@@ -4874,10 +4878,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"application/json"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4919,6 +4919,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"application/json"
+operator|.
+name|equals
+argument_list|(
 name|candidateList
 operator|.
 name|get
@@ -4928,10 +4932,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"application/json"
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -260,6 +260,10 @@ control|)
 block|{
 if|if
 condition|(
+literal|"LoggingInInterceptor"
+operator|.
+name|equals
+argument_list|(
 name|i
 operator|.
 name|getClass
@@ -267,10 +271,6 @@ argument_list|()
 operator|.
 name|getSimpleName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"LoggingInInterceptor"
 argument_list|)
 condition|)
 block|{
@@ -712,6 +712,10 @@ control|)
 block|{
 if|if
 condition|(
+literal|"LoggingInInterceptor"
+operator|.
+name|equals
+argument_list|(
 name|i
 operator|.
 name|getClass
@@ -719,10 +723,6 @@ argument_list|()
 operator|.
 name|getSimpleName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"LoggingInInterceptor"
 argument_list|)
 condition|)
 block|{

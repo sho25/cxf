@@ -236,7 +236,7 @@ literal|"false"
 operator|.
 name|equals
 argument_list|(
-literal|"nillableValue"
+name|nillableValue
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -293,7 +293,7 @@ literal|"false"
 operator|.
 name|equals
 argument_list|(
-literal|"nillableValue"
+name|nillableValue
 argument_list|)
 argument_list|)
 expr_stmt|;

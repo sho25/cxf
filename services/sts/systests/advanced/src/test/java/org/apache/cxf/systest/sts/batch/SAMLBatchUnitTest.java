@@ -671,6 +671,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"Assertion"
+operator|.
+name|equals
+argument_list|(
 name|tokens
 operator|.
 name|get
@@ -683,10 +687,6 @@ argument_list|()
 operator|.
 name|getLocalName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"Assertion"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -715,6 +715,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+literal|"Assertion"
+operator|.
+name|equals
+argument_list|(
 name|tokens
 operator|.
 name|get
@@ -727,10 +731,6 @@ argument_list|()
 operator|.
 name|getLocalName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"Assertion"
 argument_list|)
 argument_list|)
 expr_stmt|;

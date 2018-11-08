@@ -5248,12 +5248,12 @@ comment|// If this is a GET method we must not touch the output
 comment|// stream as this automagically turns the request into a POST.
 if|if
 condition|(
-name|getMethod
-argument_list|()
+literal|"GET"
 operator|.
 name|equals
 argument_list|(
-literal|"GET"
+name|getMethod
+argument_list|()
 argument_list|)
 operator|||
 name|cachedStream

@@ -649,7 +649,7 @@ argument_list|)
 operator|!=
 literal|null
 return|;
-comment|/*         for (Class c : m.getContentFormats()) {             if (c.equals(Node.class) || c.getName().equals("javax.xml.soap.SOAPMessage")) {                 return true;             }         }         return false;         */
+comment|/*         for (Class c : m.getContentFormats()) {             if (c.equals(Node.class) || "javax.xml.soap.SOAPMessage".equals(c.getName())) {                 return true;             }         }         return false;         */
 block|}
 block|}
 end_class

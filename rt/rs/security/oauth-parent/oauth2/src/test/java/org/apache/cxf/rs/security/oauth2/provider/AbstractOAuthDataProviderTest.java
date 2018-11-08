@@ -737,6 +737,10 @@ name|compareClients
 argument_list|(
 name|c
 argument_list|,
+literal|"12345"
+operator|.
+name|equals
+argument_list|(
 name|aliceClients
 operator|.
 name|get
@@ -746,10 +750,6 @@ argument_list|)
 operator|.
 name|getClientId
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"12345"
 argument_list|)
 condition|?
 name|aliceClients
@@ -771,6 +771,10 @@ name|compareClients
 argument_list|(
 name|c2
 argument_list|,
+literal|"56789"
+operator|.
+name|equals
+argument_list|(
 name|aliceClients
 operator|.
 name|get
@@ -780,10 +784,6 @@ argument_list|)
 operator|.
 name|getClientId
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"56789"
 argument_list|)
 condition|?
 name|aliceClients

@@ -441,6 +441,10 @@ name|obj
 operator|instanceof
 name|XMLBindingMessageFormat
 operator|&&
+literal|"sayHi"
+operator|.
+name|equals
+argument_list|(
 operator|(
 operator|(
 name|XMLBindingMessageFormat
@@ -453,10 +457,6 @@ argument_list|()
 operator|.
 name|getLocalPart
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"sayHi"
 argument_list|)
 condition|)
 block|{

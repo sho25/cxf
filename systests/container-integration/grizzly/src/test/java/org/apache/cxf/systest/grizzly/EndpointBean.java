@@ -221,14 +221,14 @@ block|{
 if|if
 condition|(
 operator|!
+literal|"text/plain"
+operator|.
+name|equals
+argument_list|(
 name|dataHandler
 operator|.
 name|getContentType
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"text/plain"
 argument_list|)
 condition|)
 block|{
@@ -243,14 +243,14 @@ block|}
 if|if
 condition|(
 operator|!
+literal|"some string"
+operator|.
+name|equals
+argument_list|(
 name|dataHandler
 operator|.
 name|getContent
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"some string"
 argument_list|)
 condition|)
 block|{

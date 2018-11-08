@@ -345,6 +345,10 @@ comment|//detect usage of user-defined proxy and avoid optimizations in that cas
 if|if
 condition|(
 operator|!
+literal|"sun.net.spi.DefaultProxySelector"
+operator|.
+name|equals
+argument_list|(
 name|sel
 operator|.
 name|getClass
@@ -352,10 +356,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"sun.net.spi.DefaultProxySelector"
 argument_list|)
 condition|)
 block|{
