@@ -2082,8 +2082,8 @@ argument_list|>
 name|cls
 parameter_list|,
 name|Annotation
-name|anns
 index|[]
+name|anns
 parameter_list|,
 name|Set
 argument_list|<
@@ -2362,8 +2362,8 @@ argument_list|>
 name|cls
 parameter_list|,
 name|Annotation
-name|anns
 index|[]
+name|anns
 parameter_list|,
 name|Set
 argument_list|<

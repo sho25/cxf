@@ -112,8 +112,8 @@ name|outputDir
 decl_stmt|;
 comment|/**      * @parameter      */
 name|IdltowsdlOption
-name|idltowsdlOptions
 index|[]
+name|idltowsdlOptions
 decl_stmt|;
 specifier|public
 name|void

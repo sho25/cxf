@@ -132,8 +132,8 @@ name|wsdlVersion
 decl_stmt|;
 comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|File
-name|dependencies
 index|[]
+name|dependencies
 decl_stmt|;
 specifier|public
 name|Option

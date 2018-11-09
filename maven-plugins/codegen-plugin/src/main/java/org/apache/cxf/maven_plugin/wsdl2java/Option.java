@@ -218,8 +218,8 @@ name|dependencies
 decl_stmt|;
 comment|/**      * Redundant directories to be deleted after code generation      */
 name|File
-name|redundantDirs
 index|[]
+name|redundantDirs
 decl_stmt|;
 comment|/**      * Specifies JAXWS or JAXB binding files. Use spaces to separate multiple entries.      */
 name|Set

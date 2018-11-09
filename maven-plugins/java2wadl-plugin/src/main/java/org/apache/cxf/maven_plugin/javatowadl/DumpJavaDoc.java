@@ -523,8 +523,8 @@ name|validOptions
 parameter_list|(
 name|String
 index|[]
-name|options
 index|[]
+name|options
 parameter_list|,
 name|DocErrorReporter
 name|reporter

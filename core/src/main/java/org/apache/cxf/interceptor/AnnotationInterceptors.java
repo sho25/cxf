@@ -156,8 +156,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|clazzes
 index|[]
+name|clazzes
 decl_stmt|;
 specifier|public
 name|AnnotationInterceptors

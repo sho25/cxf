@@ -1217,8 +1217,8 @@ argument_list|()
 decl_stmt|;
 specifier|private
 name|WebServiceFeature
-name|serviceFeatures
 index|[]
+name|serviceFeatures
 decl_stmt|;
 specifier|public
 name|ServiceImpl

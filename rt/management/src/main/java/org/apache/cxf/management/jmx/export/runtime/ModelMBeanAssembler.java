@@ -773,8 +773,8 @@ name|Method
 name|findMethodByName
 parameter_list|(
 name|Method
-name|methods
 index|[]
+name|methods
 parameter_list|,
 name|String
 name|methodName

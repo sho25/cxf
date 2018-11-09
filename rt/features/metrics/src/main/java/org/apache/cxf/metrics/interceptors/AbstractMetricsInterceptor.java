@@ -280,8 +280,8 @@ operator|+
 literal|".METRICS_MAP"
 decl_stmt|;
 name|MetricsProvider
-name|providers
 index|[]
+name|providers
 decl_stmt|;
 specifier|public
 name|AbstractMetricsInterceptor

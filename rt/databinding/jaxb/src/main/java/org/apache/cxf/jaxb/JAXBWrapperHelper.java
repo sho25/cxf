@@ -91,8 +91,8 @@ block|{
 specifier|protected
 specifier|final
 name|Method
-name|jaxbObjectMethods
 index|[]
+name|jaxbObjectMethods
 decl_stmt|;
 specifier|protected
 specifier|final
@@ -117,8 +117,8 @@ index|[]
 name|gets
 parameter_list|,
 name|Method
-name|jaxbs
 index|[]
+name|jaxbs
 parameter_list|,
 name|Field
 index|[]

@@ -256,8 +256,8 @@ block|{
 annotation|@
 name|Parameter
 name|WadlOption
-name|wadlOptions
 index|[]
+name|wadlOptions
 decl_stmt|;
 annotation|@
 name|Parameter

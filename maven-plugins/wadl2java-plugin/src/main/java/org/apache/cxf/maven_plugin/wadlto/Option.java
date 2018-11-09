@@ -59,13 +59,13 @@ name|outputDir
 decl_stmt|;
 comment|/**      * A set of dependent files used to detect the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|File
-name|dependencies
 index|[]
+name|dependencies
 decl_stmt|;
 comment|/**      * Redundant directories to be deleted after code generation      */
 name|File
-name|redundantDirs
 index|[]
+name|redundantDirs
 decl_stmt|;
 comment|/**      * Extra arguments to pass to the command-line code generator. For compatibility as well as to      * specify any extra flags not addressed by other parameters      */
 name|List

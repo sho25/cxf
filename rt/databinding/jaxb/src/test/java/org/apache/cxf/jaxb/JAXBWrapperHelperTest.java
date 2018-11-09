@@ -567,8 +567,8 @@ literal|"Parameter3"
 argument_list|)
 specifier|protected
 name|boolean
-name|parameter3
 index|[]
+name|parameter3
 decl_stmt|;
 annotation|@
 name|XmlElement

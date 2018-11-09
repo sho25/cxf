@@ -692,8 +692,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|extraClasses
 index|[]
+name|extraClasses
 decl_stmt|;
 specifier|private
 name|JAXBContext

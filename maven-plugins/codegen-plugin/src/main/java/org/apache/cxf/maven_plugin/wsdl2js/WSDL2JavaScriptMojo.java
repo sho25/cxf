@@ -400,8 +400,8 @@ comment|/**      * Options that specify WSDLs to process and/or control the proc
 annotation|@
 name|Parameter
 name|WsdlOption
-name|wsdlOptions
 index|[]
+name|wsdlOptions
 decl_stmt|;
 annotation|@
 name|Override

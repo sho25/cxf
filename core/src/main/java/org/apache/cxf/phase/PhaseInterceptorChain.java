@@ -447,20 +447,20 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|Phase
-name|phases
 index|[]
+name|phases
 decl_stmt|;
 comment|// heads[phase] refers to the first interceptor of the given phase
 specifier|private
 name|InterceptorHolder
-name|heads
 index|[]
+name|heads
 decl_stmt|;
 comment|// tails[phase] refers to the last interceptor of the given phase
 specifier|private
 name|InterceptorHolder
-name|tails
 index|[]
+name|tails
 decl_stmt|;
 comment|// hasAfters[phase] indicates that the given phase has already inserted
 comment|// interceptors that may need to be placed after future to-be-inserted
@@ -470,8 +470,8 @@ comment|// Note no hasBefores[] is needed because implementation adds subsequent
 comment|// interceptors to the end of the list by default.
 specifier|private
 name|boolean
-name|hasAfters
 index|[]
+name|hasAfters
 decl_stmt|;
 specifier|private
 name|State
@@ -3821,8 +3821,8 @@ argument_list|>
 argument_list|>
 block|{
 name|InterceptorHolder
-name|heads
 index|[]
+name|heads
 decl_stmt|;
 name|InterceptorHolder
 name|prev

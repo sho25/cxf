@@ -234,8 +234,8 @@ name|outputDir
 decl_stmt|;
 comment|/**      * @parameter      */
 name|WsdltoidlOption
-name|wsdltoidlOptions
 index|[]
+name|wsdltoidlOptions
 decl_stmt|;
 comment|/**      * @parameter expression="${project}"      * @required      */
 name|MavenProject

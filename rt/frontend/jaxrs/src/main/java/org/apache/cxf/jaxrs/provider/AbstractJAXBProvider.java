@@ -2250,8 +2250,8 @@ name|Type
 name|genericType
 parameter_list|,
 name|Annotation
-name|annotations
 index|[]
+name|annotations
 parameter_list|,
 name|MediaType
 name|mediaType

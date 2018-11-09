@@ -64,8 +64,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|classes
 index|[]
+name|classes
 decl_stmt|;
 specifier|private
 specifier|final
