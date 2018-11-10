@@ -1010,9 +1010,9 @@ operator|.
 name|getName
 argument_list|()
 operator|+
-literal|"requires a wrapper bean but problems with"
+literal|" requires a wrapper bean but problems with"
 operator|+
-literal|" ASM has prevented creating one.  Operation may not work correctly."
+literal|" ASM has prevented creating one. Operation may not work correctly."
 argument_list|)
 expr_stmt|;
 return|return;
