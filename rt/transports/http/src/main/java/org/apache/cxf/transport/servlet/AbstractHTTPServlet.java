@@ -2702,7 +2702,7 @@ name|originalProto
 expr_stmt|;
 if|if
 condition|(
-name|newRemoteAddr
+name|originalRemoteAddr
 operator|!=
 literal|null
 condition|)
