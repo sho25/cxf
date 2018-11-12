@@ -259,34 +259,34 @@ name|requireNonNull
 argument_list|(
 name|publicKeyProvider
 argument_list|,
-literal|"Public key provider cannot be null"
+literal|"public key provider cannot be null"
 argument_list|)
 expr_stmt|;
 name|Objects
 operator|.
 name|requireNonNull
 argument_list|(
-name|publicKeyProvider
+name|exceptionHandler
 argument_list|,
-literal|"Public key provider cannot be null"
+literal|"exception handler cannot be null"
 argument_list|)
 expr_stmt|;
 name|Objects
 operator|.
 name|requireNonNull
 argument_list|(
-name|publicKeyProvider
+name|securityProvider
 argument_list|,
-literal|"Public key provider cannot be null"
+literal|"security provider cannot be null"
 argument_list|)
 expr_stmt|;
 name|Objects
 operator|.
 name|requireNonNull
 argument_list|(
-name|publicKeyProvider
+name|algorithmProvider
 argument_list|,
-literal|"Public key provider cannot be null"
+literal|"algorithm provider cannot be null"
 argument_list|)
 expr_stmt|;
 name|this
@@ -822,6 +822,21 @@ operator|new
 name|IllegalStateException
 argument_list|(
 literal|"public key provider is not set"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|exceptionHandler
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"exception handler is not set"
 argument_list|)
 throw|;
 block|}
