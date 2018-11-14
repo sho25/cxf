@@ -27,16 +27,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|net
-operator|.
-name|MalformedURLException
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|wsdl
@@ -293,14 +283,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|MalformedURLException
-name|e
-parameter_list|)
-block|{
-comment|//ignore
 block|}
 catch|catch
 parameter_list|(

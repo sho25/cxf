@@ -2279,13 +2279,7 @@ block|}
 catch|catch
 parameter_list|(
 name|MalformedURLException
-name|e
-parameter_list|)
-block|{
-comment|// do nothing
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|URISyntaxException
 name|e
 parameter_list|)

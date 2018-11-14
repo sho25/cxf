@@ -959,13 +959,7 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-comment|//Not supported by the orb. skip it.
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|java
 operator|.
 name|lang

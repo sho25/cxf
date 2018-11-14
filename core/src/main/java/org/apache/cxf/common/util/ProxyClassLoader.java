@@ -228,13 +228,7 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
-name|cnfe
-parameter_list|)
-block|{
-comment|// Try next
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|NoClassDefFoundError
 name|cnfe
 parameter_list|)
@@ -262,13 +256,7 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
-name|cnfe
-parameter_list|)
-block|{
-comment|// Try next
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|NoClassDefFoundError
 name|cnfe
 parameter_list|)

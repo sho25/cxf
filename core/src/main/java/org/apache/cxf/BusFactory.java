@@ -1524,16 +1524,7 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-name|busFactoryClass
-operator|=
-name|DEFAULT_BUS_FACTORY
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|NoClassDefFoundError
 name|e
 parameter_list|)

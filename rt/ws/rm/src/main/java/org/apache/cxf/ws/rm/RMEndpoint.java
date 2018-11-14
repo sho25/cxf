@@ -1493,25 +1493,7 @@ block|}
 catch|catch
 parameter_list|(
 name|RuntimeOperationsException
-name|e
-parameter_list|)
-block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|WARNING
-argument_list|,
-literal|"Error handling JMX notification"
-argument_list|,
-name|e
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|MBeanException
 name|e
 parameter_list|)

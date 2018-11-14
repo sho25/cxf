@@ -511,15 +511,7 @@ block|}
 catch|catch
 parameter_list|(
 name|NoClassDefFoundError
-name|e
-parameter_list|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|ClassNotFoundException
 name|e
 parameter_list|)

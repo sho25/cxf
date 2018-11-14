@@ -475,22 +475,6 @@ name|xml
 operator|.
 name|ws
 operator|.
-name|soap
-operator|.
-name|SOAPFaultException
-name|ex
-parameter_list|)
-block|{
-comment|// expected
-block|}
-catch|catch
-parameter_list|(
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
 name|WebServiceException
 name|ex
 parameter_list|)

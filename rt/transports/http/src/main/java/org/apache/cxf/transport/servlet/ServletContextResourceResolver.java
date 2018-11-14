@@ -527,15 +527,9 @@ block|}
 catch|catch
 parameter_list|(
 name|MalformedURLException
-name|e1
-parameter_list|)
-block|{
-comment|//ignore
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|URISyntaxException
-name|e
+name|e1
 parameter_list|)
 block|{
 comment|//ignore

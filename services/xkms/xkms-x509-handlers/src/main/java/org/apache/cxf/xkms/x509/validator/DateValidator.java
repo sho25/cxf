@@ -258,15 +258,7 @@ block|}
 catch|catch
 parameter_list|(
 name|CertificateNotYetValidException
-name|e
-parameter_list|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|CertificateExpiredException
 name|e
 parameter_list|)
