@@ -2305,13 +2305,7 @@ block|}
 catch|catch
 parameter_list|(
 name|InterruptedException
-name|e
-parameter_list|)
-block|{
-comment|// ?
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|ExecutionException
 name|e
 parameter_list|)
@@ -2624,13 +2618,7 @@ block|}
 catch|catch
 parameter_list|(
 name|InterruptedException
-name|e
-parameter_list|)
-block|{
-comment|// ?
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|ExecutionException
 name|e
 parameter_list|)

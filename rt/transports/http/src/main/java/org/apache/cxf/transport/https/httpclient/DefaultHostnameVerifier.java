@@ -1625,13 +1625,7 @@ block|}
 catch|catch
 parameter_list|(
 name|NoSuchElementException
-name|ignore
-parameter_list|)
-block|{
-comment|//
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|NamingException
 name|ignore
 parameter_list|)

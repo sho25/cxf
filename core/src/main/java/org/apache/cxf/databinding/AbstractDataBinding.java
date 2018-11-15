@@ -1271,13 +1271,7 @@ block|}
 catch|catch
 parameter_list|(
 name|XMLStreamException
-name|e
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|ParserConfigurationException
 name|e
 parameter_list|)

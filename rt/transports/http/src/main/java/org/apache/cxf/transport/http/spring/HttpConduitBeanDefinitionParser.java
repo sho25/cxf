@@ -1281,53 +1281,9 @@ block|}
 catch|catch
 parameter_list|(
 name|IllegalAccessException
-name|ex
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Element '"
-operator|+
-name|elementName
-operator|+
-literal|"' could not load "
-operator|+
-name|classProperty
-operator|+
-literal|" - "
-operator|+
-name|ex
-argument_list|)
-throw|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Element '"
-operator|+
-name|elementName
-operator|+
-literal|"' could not load "
-operator|+
-name|classProperty
-operator|+
-literal|" - "
-operator|+
-name|ex
-argument_list|)
-throw|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|InstantiationException
 name|ex
 parameter_list|)

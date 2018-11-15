@@ -869,15 +869,7 @@ block|}
 catch|catch
 parameter_list|(
 name|UnsupportedEncodingException
-name|uee
-parameter_list|)
-block|{
-return|return
-name|srcString
-return|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|Base64Exception
 name|e
 parameter_list|)

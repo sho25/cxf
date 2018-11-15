@@ -480,21 +480,7 @@ block|}
 catch|catch
 parameter_list|(
 name|Base64Exception
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|DatabindingException
-argument_list|(
-literal|"Could not parse base64Binary data."
-argument_list|,
-name|e
-argument_list|)
-throw|;
-block|}
-catch|catch
-parameter_list|(
+decl||
 name|XMLStreamException
 name|e
 parameter_list|)
