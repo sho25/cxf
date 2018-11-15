@@ -191,8 +191,8 @@ index|[]
 name|gets
 parameter_list|,
 name|Field
-name|f
 index|[]
+name|f
 parameter_list|)
 block|{
 name|setMethods

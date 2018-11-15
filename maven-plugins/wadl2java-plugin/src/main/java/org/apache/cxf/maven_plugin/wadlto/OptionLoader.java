@@ -574,8 +574,8 @@ index|[]
 name|includes
 parameter_list|,
 name|String
-name|excludes
 index|[]
+name|excludes
 parameter_list|)
 throws|throws
 name|MojoExecutionException

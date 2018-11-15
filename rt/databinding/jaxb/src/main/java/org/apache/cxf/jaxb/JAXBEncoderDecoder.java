@@ -7536,8 +7536,8 @@ name|String
 argument_list|,
 name|String
 argument_list|>
-name|namespaces
 index|[]
+name|namespaces
 init|=
 name|nsMap
 operator|.

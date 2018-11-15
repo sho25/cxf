@@ -122,8 +122,8 @@ specifier|public
 name|MetricsMessageClientOutInterceptor
 parameter_list|(
 name|MetricsProvider
-name|p
 index|[]
+name|p
 parameter_list|)
 block|{
 name|super

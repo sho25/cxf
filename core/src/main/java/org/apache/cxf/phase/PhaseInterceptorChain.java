@@ -3833,8 +3833,8 @@ decl_stmt|;
 name|PhaseInterceptorIterator
 parameter_list|(
 name|InterceptorHolder
-name|h
 index|[]
+name|h
 parameter_list|)
 block|{
 name|heads

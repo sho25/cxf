@@ -2365,8 +2365,8 @@ index|[]
 name|getKeyManagersWithCertAlias
 parameter_list|(
 name|KeyManager
-name|keyManagers
 index|[]
+name|keyManagers
 parameter_list|)
 throws|throws
 name|Exception

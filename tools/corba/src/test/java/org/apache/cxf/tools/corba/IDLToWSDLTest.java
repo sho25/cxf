@@ -595,8 +595,8 @@ index|[]
 name|orig
 parameter_list|,
 name|byte
-name|generated
 index|[]
+name|generated
 parameter_list|)
 throws|throws
 name|Exception

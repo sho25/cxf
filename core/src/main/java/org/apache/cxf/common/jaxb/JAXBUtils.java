@@ -4127,8 +4127,8 @@ argument_list|>
 name|refcls
 parameter_list|,
 name|Annotation
-name|anns
 index|[]
+name|anns
 parameter_list|)
 throws|throws
 name|JAXBException

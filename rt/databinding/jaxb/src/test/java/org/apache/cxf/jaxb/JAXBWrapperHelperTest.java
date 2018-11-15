@@ -669,8 +669,8 @@ name|void
 name|setParameter3
 parameter_list|(
 name|boolean
-name|value
 index|[]
+name|value
 parameter_list|)
 block|{
 name|this

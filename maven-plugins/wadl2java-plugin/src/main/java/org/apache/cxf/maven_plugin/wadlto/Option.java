@@ -140,8 +140,8 @@ name|void
 name|setDependencies
 parameter_list|(
 name|File
-name|files
 index|[]
+name|files
 parameter_list|)
 block|{
 name|dependencies
@@ -164,8 +164,8 @@ name|void
 name|setDeleteDirs
 parameter_list|(
 name|File
-name|files
 index|[]
+name|files
 parameter_list|)
 block|{
 name|redundantDirs

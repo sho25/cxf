@@ -112,8 +112,8 @@ specifier|public
 name|MetricsMessageInOneWayInterceptor
 parameter_list|(
 name|MetricsProvider
-name|p
 index|[]
+name|p
 parameter_list|)
 block|{
 name|super

@@ -143,8 +143,8 @@ specifier|private
 specifier|static
 specifier|final
 name|QName
-name|KNOWN_ELEMENTS
 index|[]
+name|KNOWN_ELEMENTS
 init|=
 block|{
 name|MetadataConstants

@@ -1653,8 +1653,8 @@ name|Type
 name|t
 parameter_list|,
 name|Annotation
-name|anns
 index|[]
+name|anns
 parameter_list|)
 throws|throws
 name|IOException

@@ -1106,8 +1106,8 @@ name|String
 name|wsdl
 parameter_list|,
 name|WebServiceFeature
-name|f
 index|[]
+name|f
 parameter_list|)
 block|{
 name|bus
@@ -1214,8 +1214,8 @@ name|String
 name|bindingUri
 parameter_list|,
 name|WebServiceFeature
-name|features
 index|[]
+name|features
 parameter_list|)
 block|{
 name|this

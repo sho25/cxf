@@ -1996,8 +1996,8 @@ argument_list|>
 name|getAllFeatures
 parameter_list|(
 name|WebServiceFeature
-name|features
 index|[]
+name|features
 parameter_list|)
 block|{
 name|List

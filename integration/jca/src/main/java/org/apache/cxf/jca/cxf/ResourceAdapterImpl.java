@@ -584,8 +584,8 @@ index|[]
 name|getXAResources
 parameter_list|(
 name|ActivationSpec
-name|as
 index|[]
+name|as
 parameter_list|)
 throws|throws
 name|ResourceException

@@ -142,8 +142,8 @@ specifier|public
 name|PrimitiveAssertionBuilder
 parameter_list|(
 name|QName
-name|els
 index|[]
+name|els
 parameter_list|)
 block|{
 name|knownElements
@@ -210,8 +210,8 @@ name|void
 name|setKnownElements
 parameter_list|(
 name|QName
-name|k
 index|[]
+name|k
 parameter_list|)
 block|{
 name|knownElements

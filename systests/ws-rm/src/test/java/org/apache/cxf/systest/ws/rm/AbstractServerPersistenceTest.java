@@ -1256,8 +1256,8 @@ name|Response
 argument_list|<
 name|GreetMeResponse
 argument_list|>
-name|responses
 index|[]
+name|responses
 parameter_list|)
 throws|throws
 name|Exception
@@ -1411,8 +1411,8 @@ name|Response
 argument_list|<
 name|GreetMeResponse
 argument_list|>
-name|responses
 index|[]
+name|responses
 parameter_list|)
 throws|throws
 name|Exception

@@ -84,8 +84,8 @@ specifier|public
 name|MetricsMessageInPostInvokeInterceptor
 parameter_list|(
 name|MetricsProvider
-name|p
 index|[]
+name|p
 parameter_list|)
 block|{
 name|super

@@ -662,8 +662,8 @@ name|void
 name|setDeleteDirs
 parameter_list|(
 name|File
-name|files
 index|[]
+name|files
 parameter_list|)
 block|{
 name|redundantDirs

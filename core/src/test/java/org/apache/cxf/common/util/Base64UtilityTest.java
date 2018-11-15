@@ -106,8 +106,8 @@ index|[]
 name|b1
 parameter_list|,
 name|byte
-name|b2
 index|[]
+name|b2
 parameter_list|)
 block|{
 name|assertEquals
