@@ -142,9 +142,9 @@ argument_list|)
 condition|)
 block|{
 name|Annotation
+index|[]
+index|[]
 name|annotations
-index|[]
-index|[]
 init|=
 name|m
 operator|.
@@ -278,9 +278,9 @@ argument_list|)
 condition|)
 block|{
 name|Annotation
+index|[]
+index|[]
 name|annotations
-index|[]
-index|[]
 init|=
 name|m
 operator|.
