@@ -39,16 +39,6 @@ name|BeforeClass
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Test
-import|;
-end_import
-
 begin_comment
 comment|/**  * A version of RMMessageTest using a cached out set up.  */
 end_comment
@@ -132,21 +122,6 @@ name|oldThreshold
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testContentCachedOutputStream
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|super
-operator|.
-name|testContentCachedOutputStream
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 end_class

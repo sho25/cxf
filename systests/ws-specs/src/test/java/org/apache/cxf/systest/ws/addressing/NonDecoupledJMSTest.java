@@ -95,16 +95,6 @@ name|BeforeClass
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Test
-import|;
-end_import
-
 begin_comment
 comment|/**  * Tests the addition of WS-Addressing Message Addressing Properties  * in the non-decoupled case.  */
 end_comment
@@ -169,23 +159,6 @@ block|{
 return|return
 name|PORT
 return|;
-block|}
-annotation|@
-name|Test
-annotation|@
-name|Override
-specifier|public
-name|void
-name|testImplicitMAPs
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|super
-operator|.
-name|testImplicitMAPs
-argument_list|()
-expr_stmt|;
 block|}
 specifier|public
 name|String

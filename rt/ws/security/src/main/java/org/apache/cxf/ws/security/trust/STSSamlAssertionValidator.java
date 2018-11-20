@@ -169,31 +169,6 @@ specifier|private
 name|boolean
 name|trustVerificationSucceeded
 decl_stmt|;
-comment|/**      * Validate the credential argument. It must contain a non-null AssertionWrapper.      * A Crypto and a CallbackHandler implementation is also required to be set.      *      * @param credential the Credential to be validated      * @param data the RequestData associated with the request      * @throws WSSecurityException on a failed validation      */
-specifier|public
-name|Credential
-name|validate
-parameter_list|(
-name|Credential
-name|credential
-parameter_list|,
-name|RequestData
-name|data
-parameter_list|)
-throws|throws
-name|WSSecurityException
-block|{
-return|return
-name|super
-operator|.
-name|validate
-argument_list|(
-name|credential
-argument_list|,
-name|data
-argument_list|)
-return|;
-block|}
 comment|/**      * Try to verify trust on the assertion. If it fails, then set a boolean and return.      * @param assertion The signed Assertion      * @param data The RequestData context      * @return A Credential instance      * @throws WSSecurityException      */
 annotation|@
 name|Override
