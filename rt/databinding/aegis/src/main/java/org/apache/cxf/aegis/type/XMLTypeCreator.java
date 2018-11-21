@@ -648,6 +648,15 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+name|AEGIS_DOCUMENT_BUILDER_FACTORY
+operator|.
+name|setFeature
+argument_list|(
+literal|"http://apache.org/xml/features/disallow-doctype-decl"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
