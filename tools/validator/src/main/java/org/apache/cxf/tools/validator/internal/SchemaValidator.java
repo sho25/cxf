@@ -1184,6 +1184,15 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
+name|saxFactory
+operator|.
+name|setFeature
+argument_list|(
+literal|"http://apache.org/xml/features/disallow-doctype-decl"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 name|saxParser
 operator|=
 name|saxFactory
