@@ -10,6 +10,8 @@ operator|.
 name|rs
 operator|.
 name|service
+operator|.
+name|api
 package|;
 end_package
 

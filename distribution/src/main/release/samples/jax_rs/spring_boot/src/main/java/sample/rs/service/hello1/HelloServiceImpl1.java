@@ -23,6 +23,8 @@ name|rs
 operator|.
 name|service
 operator|.
+name|api
+operator|.
 name|HelloService
 import|;
 end_import
