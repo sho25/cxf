@@ -10057,6 +10057,10 @@ condition|(
 name|postFix
 operator|!=
 literal|null
+operator|&&
+name|escapeHandler
+operator|!=
+literal|null
 condition|)
 block|{
 name|marshaller
