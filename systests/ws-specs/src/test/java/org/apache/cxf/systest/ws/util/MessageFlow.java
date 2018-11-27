@@ -2019,9 +2019,8 @@ argument_list|(
 name|index
 argument_list|)
 decl_stmt|;
-assert|assert
-literal|null
-operator|!=
+name|assertNotNull
+argument_list|(
 name|getRMHeaderElement
 argument_list|(
 name|d
@@ -2030,7 +2029,8 @@ name|RMConstants
 operator|.
 name|SEQUENCE_FAULT_NAME
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void

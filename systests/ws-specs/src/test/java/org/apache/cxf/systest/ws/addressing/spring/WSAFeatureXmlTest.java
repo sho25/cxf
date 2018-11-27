@@ -368,11 +368,13 @@ operator|new
 name|JaxWsServerFactoryBean
 argument_list|()
 decl_stmt|;
-assert|assert
+name|assertNotNull
+argument_list|(
 name|bus
 operator|!=
 literal|null
-assert|;
+argument_list|)
+expr_stmt|;
 name|sf
 operator|.
 name|setServiceBean
