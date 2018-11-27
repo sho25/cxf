@@ -86,7 +86,7 @@ name|tsSource
 init|=
 literal|"/org/apache/cxf/tools/common/toolspec/parser/resources/testtool.xml"
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|builder
 operator|.
@@ -100,8 +100,6 @@ argument_list|(
 name|tsSource
 argument_list|)
 argument_list|)
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

@@ -1141,11 +1141,9 @@ operator|.
 name|getParent
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|dir
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock

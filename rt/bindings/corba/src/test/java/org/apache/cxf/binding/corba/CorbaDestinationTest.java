@@ -224,13 +224,11 @@ operator|.
 name|getAddress
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"EndpointReferenceType should not be null"
 argument_list|,
 name|rtype
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|BindingInfo
@@ -241,13 +239,11 @@ operator|.
 name|getBindingInfo
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"BindingInfo should not be null"
 argument_list|,
 name|bindingInfo
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|EndpointInfo
@@ -258,13 +254,11 @@ operator|.
 name|getEndPointInfo
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"EndpointInfo should not be null"
 argument_list|,
 name|e2
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|Message
@@ -295,7 +289,7 @@ name|serverConduit
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*     @Test     public void testSetMessageObserverActivate() throws Exception {        endpointInfo = testUtils.setupServiceInfo("http://cxf.apache.org/bindings/corba/simple",                         "/wsdl/simpleIdl.wsdl", "SimpleCORBAService",                         "SimpleCORBAPort");        CorbaDestination destination = new CorbaDestination(endpointInfo);        String addr = destination.getAddressType().getLocation();        assertEquals(addr, "corbaloc::localhost:40000/Simple");         Bus bus = BusFactory.newInstance().getDefaultBus();        Service service = new ServiceImpl();        Endpoint endpoint = new EndpointImpl(bus, service, endpointInfo);        MessageObserver observer = new ChainInitiationObserver(endpoint, bus);        destination.setMessageObserver(observer);        assertTrue("orb should not be null",  destination.getOrb() != null);         try {            File file = new File("endpoint.ior");            assertEquals(true,file.exists());        } finally {            new File("endpoint.ior").deleteOnExit();        }         addr = destination.getAddressType().getLocation();        addr = addr.substring(0,4);        assertEquals(addr, "IOR:");        destination.shutdown();    }*/
+comment|/*     @Test     public void testSetMessageObserverActivate() throws Exception {        endpointInfo = testUtils.setupServiceInfo("http://cxf.apache.org/bindings/corba/simple",                         "/wsdl/simpleIdl.wsdl", "SimpleCORBAService",                         "SimpleCORBAPort");        CorbaDestination destination = new CorbaDestination(endpointInfo);        String addr = destination.getAddressType().getLocation();        assertEquals(addr, "corbaloc::localhost:40000/Simple");         Bus bus = BusFactory.newInstance().getDefaultBus();        Service service = new ServiceImpl();        Endpoint endpoint = new EndpointImpl(bus, service, endpointInfo);        MessageObserver observer = new ChainInitiationObserver(endpoint, bus);        destination.setMessageObserver(observer);        assertNotNull("orb should not be null",  destination.getOrb());         try {            File file = new File("endpoint.ior");            assertEquals(true,file.exists());        } finally {            new File("endpoint.ior").deleteOnExit();        }         addr = destination.getAddressType().getLocation();        addr = addr.substring(0,4);        assertEquals(addr, "IOR:");        destination.shutdown();    }*/
 block|}
 end_class
 

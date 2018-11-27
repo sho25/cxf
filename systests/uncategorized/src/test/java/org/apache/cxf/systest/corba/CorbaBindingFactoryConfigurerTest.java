@@ -260,13 +260,11 @@ operator|.
 name|getOrbConfig
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"CorbaBindingFactoryConfigurer is null"
 argument_list|,
 name|orbConfig
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|Properties
@@ -277,13 +275,11 @@ operator|.
 name|getOrbProperties
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"probs is null"
 argument_list|,
 name|props
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -365,13 +361,11 @@ operator|.
 name|getOrbArgs
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"orbArgs is null"
 argument_list|,
 name|orbArgs
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|String

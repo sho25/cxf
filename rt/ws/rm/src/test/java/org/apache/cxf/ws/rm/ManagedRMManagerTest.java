@@ -586,22 +586,18 @@ operator|=
 name|createTestEndpoint
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"Instrumentation Manager should not be null"
 argument_list|,
 name|im
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"RMManager should not be null"
 argument_list|,
 name|manager
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|MBeanServer

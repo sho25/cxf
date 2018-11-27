@@ -2261,11 +2261,9 @@ operator|.
 name|TAG_SAML_ASSERTION
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|assertion
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 if|if

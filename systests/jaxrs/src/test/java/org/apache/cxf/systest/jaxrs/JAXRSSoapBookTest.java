@@ -6684,13 +6684,11 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"payload was null"
 argument_list|,
 name|payload
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|assertTrue

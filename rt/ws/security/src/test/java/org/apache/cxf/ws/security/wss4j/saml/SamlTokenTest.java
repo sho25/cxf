@@ -2288,11 +2288,9 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|actionResult
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2732,11 +2730,9 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|actionResult
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

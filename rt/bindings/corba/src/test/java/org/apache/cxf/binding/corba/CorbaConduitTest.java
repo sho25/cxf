@@ -705,13 +705,11 @@ argument_list|(
 literal|false
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"conduit should not be null"
 argument_list|,
 name|conduit
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -830,13 +828,11 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"OutputStream should not be null"
 argument_list|,
 name|os
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|ORB
@@ -852,13 +848,11 @@ argument_list|(
 literal|"orb"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"Orb should not be null"
 argument_list|,
 name|orb2
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|Object
@@ -871,13 +865,11 @@ argument_list|(
 literal|"endpoint"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"EndpointReferenceType should not be null"
 argument_list|,
 name|obj
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -943,13 +935,11 @@ argument_list|(
 name|t
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"ref should not be null"
 argument_list|,
 name|ref
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -1015,13 +1005,11 @@ operator|.
 name|getAddress
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"address should not be null"
 argument_list|,
 name|address
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1324,13 +1312,11 @@ operator|.
 name|getTarget
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"EndpointReferenceType should not be null"
 argument_list|,
 name|endpoint
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

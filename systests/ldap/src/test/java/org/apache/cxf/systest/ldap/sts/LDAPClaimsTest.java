@@ -2530,11 +2530,9 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|cert
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

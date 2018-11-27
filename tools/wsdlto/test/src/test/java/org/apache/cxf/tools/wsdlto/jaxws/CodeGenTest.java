@@ -11539,13 +11539,11 @@ name|class
 block|}
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"greetMe operation is NOT generated correctly as excepted"
 argument_list|,
 name|method
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|RequestWrapper

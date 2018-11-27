@@ -535,13 +535,11 @@ argument_list|,
 name|cri2
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"should not get a match"
 argument_list|,
 name|mcon
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -625,13 +623,11 @@ argument_list|,
 name|cri
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"Connection must be null"
 argument_list|,
 name|mcon
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

@@ -1234,11 +1234,9 @@ argument_list|(
 name|providerParameters
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|providerResponse
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|assertTrue

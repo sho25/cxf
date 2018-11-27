@@ -317,13 +317,11 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"Instrumentation Manager should not be null"
 argument_list|,
 name|serverIM
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|Thread
@@ -361,13 +359,11 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"Instrumentation Manager should not be null"
 argument_list|,
 name|clientIM
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|ready

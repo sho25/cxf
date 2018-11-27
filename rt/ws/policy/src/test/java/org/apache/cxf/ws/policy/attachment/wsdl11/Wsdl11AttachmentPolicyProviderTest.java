@@ -1275,7 +1275,7 @@ operator|new
 name|EndpointInfo
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|app
 operator|.
@@ -1283,8 +1283,6 @@ name|getElementPolicy
 argument_list|(
 name|ei
 argument_list|)
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

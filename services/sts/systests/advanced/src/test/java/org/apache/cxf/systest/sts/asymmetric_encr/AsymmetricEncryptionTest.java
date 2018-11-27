@@ -521,11 +521,9 @@ name|getStsPort
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|token
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|bus

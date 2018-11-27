@@ -372,11 +372,9 @@ literal|"./resources/amazon.xml"
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|reader
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

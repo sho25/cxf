@@ -1648,11 +1648,9 @@ argument_list|(
 literal|"-r unknown"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|commandDocument
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

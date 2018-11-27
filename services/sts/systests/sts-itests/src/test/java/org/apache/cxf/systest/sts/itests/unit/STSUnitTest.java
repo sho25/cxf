@@ -521,14 +521,12 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|token
 operator|.
 name|getToken
 argument_list|()
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 comment|// Process the token
@@ -581,11 +579,9 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|assertion
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|Assert

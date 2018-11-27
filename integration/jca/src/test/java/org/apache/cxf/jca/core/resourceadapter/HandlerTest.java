@@ -166,13 +166,11 @@ operator|.
 name|getInputStream
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"stream is not null"
 argument_list|,
 name|is
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

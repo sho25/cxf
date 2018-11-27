@@ -282,14 +282,12 @@ literal|" is in the CLASSPATH"
 argument_list|)
 throw|;
 block|}
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|cxfConfig
 operator|.
 name|toExternalForm
 argument_list|()
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

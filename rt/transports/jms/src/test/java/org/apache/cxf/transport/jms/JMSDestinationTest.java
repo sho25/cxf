@@ -449,13 +449,11 @@ expr_stmt|;
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destiantion should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|verifyReceivedMessage
@@ -690,13 +688,11 @@ name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
 comment|// just verify the Destination inMessage
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destiantion should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|verifyReceivedMessage
@@ -2096,13 +2092,11 @@ name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
 comment|// just verify the Destination inMessage
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destination should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|verifyReplyToNotSet
@@ -2125,13 +2119,11 @@ expr_stmt|;
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destination should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|String
@@ -2200,13 +2192,11 @@ expr_stmt|;
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destiantion should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|verifyReplyToSet
@@ -2253,13 +2243,11 @@ expr_stmt|;
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destiantion should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|verifyReplyToNotSet
@@ -2300,13 +2288,11 @@ expr_stmt|;
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"The destiantion should have got the message "
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|exName
