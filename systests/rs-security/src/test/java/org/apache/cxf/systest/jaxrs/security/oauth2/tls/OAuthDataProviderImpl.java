@@ -109,7 +109,7 @@ name|grants
 operator|.
 name|code
 operator|.
-name|DefaultEHCacheCodeDataProvider
+name|JCacheCodeDataProvider
 import|;
 end_import
 
@@ -176,7 +176,7 @@ specifier|public
 class|class
 name|OAuthDataProviderImpl
 extends|extends
-name|DefaultEHCacheCodeDataProvider
+name|JCacheCodeDataProvider
 block|{
 specifier|public
 name|OAuthDataProviderImpl
