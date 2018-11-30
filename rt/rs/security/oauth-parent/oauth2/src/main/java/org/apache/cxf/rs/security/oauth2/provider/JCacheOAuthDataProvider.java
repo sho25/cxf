@@ -1079,6 +1079,13 @@ argument_list|,
 name|at
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|isStoreJwtTokenKeyOnly
+argument_list|()
+condition|)
+block|{
 name|accessTokenCache
 operator|.
 name|replace
@@ -1091,6 +1098,7 @@ argument_list|,
 name|at
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Override
