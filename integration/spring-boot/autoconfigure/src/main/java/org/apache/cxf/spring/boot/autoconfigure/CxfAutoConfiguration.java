@@ -53,6 +53,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|endpoint
+operator|.
+name|Server
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|JAXRSServerFactoryBean
@@ -500,6 +514,13 @@ argument_list|(
 literal|"'${cxf.jaxrs.component-scan}'=='true'&& '${cxf.jaxrs.classes-scan}'!='true'"
 argument_list|)
 annotation|@
+name|ConditionalOnMissingBean
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+annotation|@
 name|Import
 argument_list|(
 name|SpringComponentScanServer
@@ -524,6 +545,13 @@ annotation|@
 name|ConditionalOnExpression
 argument_list|(
 literal|"'${cxf.jaxrs.classes-scan}'=='true'&& '${cxf.jaxrs.component-scan}'!='true'"
+argument_list|)
+annotation|@
+name|ConditionalOnMissingBean
+argument_list|(
+name|Server
+operator|.
+name|class
 argument_list|)
 annotation|@
 name|Import
