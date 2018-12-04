@@ -274,7 +274,7 @@ name|JETTY_AVAILABLE
 init|=
 name|probeClass
 argument_list|(
-literal|"org.eclipse.jetty.server.Server"
+literal|"org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory"
 argument_list|)
 decl_stmt|;
 specifier|private
@@ -285,7 +285,7 @@ name|UNDERTOW_AVAILABLE
 init|=
 name|probeClass
 argument_list|(
-literal|"io.undertow.websockets.core.WebSockets"
+literal|"org.apache.cxf.transport.http_undertow.UndertowHTTPServerEngineFactory"
 argument_list|)
 decl_stmt|;
 specifier|private
