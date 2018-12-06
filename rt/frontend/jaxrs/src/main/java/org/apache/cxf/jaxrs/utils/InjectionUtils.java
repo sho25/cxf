@@ -6757,12 +6757,10 @@ name|String
 index|[]
 name|segments
 init|=
-name|StringUtils
+name|v
 operator|.
 name|split
 argument_list|(
-name|v
-argument_list|,
 literal|"/"
 argument_list|)
 decl_stmt|;

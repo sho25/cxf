@@ -779,12 +779,10 @@ name|String
 index|[]
 name|values
 init|=
-name|StringUtils
+name|packagesAsCsv
 operator|.
 name|split
 argument_list|(
-name|packagesAsCsv
-argument_list|,
 literal|","
 argument_list|)
 decl_stmt|;

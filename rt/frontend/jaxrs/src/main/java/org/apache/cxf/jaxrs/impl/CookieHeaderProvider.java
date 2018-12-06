@@ -47,22 +47,6 @@ name|HeaderDelegate
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|util
-operator|.
-name|StringUtils
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -150,12 +134,10 @@ name|String
 index|[]
 name|tokens
 init|=
-name|StringUtils
+name|c
 operator|.
 name|split
 argument_list|(
-name|c
-argument_list|,
 literal|";"
 argument_list|)
 decl_stmt|;

@@ -5586,12 +5586,10 @@ name|String
 index|[]
 name|parts
 init|=
-name|StringUtils
+name|subType
 operator|.
 name|split
 argument_list|(
-name|subType
-argument_list|,
 literal|"\\+"
 argument_list|)
 decl_stmt|;

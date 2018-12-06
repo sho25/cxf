@@ -119,22 +119,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
-operator|.
-name|util
-operator|.
-name|StringUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|jaxrs
 operator|.
 name|json
@@ -426,12 +410,10 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|StringUtils
+name|acr
 operator|.
 name|split
 argument_list|(
-name|acr
-argument_list|,
 literal|" "
 argument_list|)
 argument_list|)

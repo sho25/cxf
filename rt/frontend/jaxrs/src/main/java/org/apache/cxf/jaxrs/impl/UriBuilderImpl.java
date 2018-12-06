@@ -2506,12 +2506,10 @@ name|String
 index|[]
 name|values
 init|=
-name|StringUtils
+name|theValue
 operator|.
 name|split
 argument_list|(
-name|theValue
-argument_list|,
 literal|"/"
 argument_list|)
 decl_stmt|;

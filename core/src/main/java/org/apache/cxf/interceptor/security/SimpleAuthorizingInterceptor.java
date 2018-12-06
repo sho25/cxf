@@ -87,22 +87,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
-operator|.
-name|util
-operator|.
-name|StringUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|security
 operator|.
 name|SecurityContext
@@ -530,12 +514,10 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|StringUtils
+name|roles
 operator|.
 name|split
 argument_list|(
-name|roles
-argument_list|,
 literal|" "
 argument_list|)
 argument_list|)
@@ -625,15 +607,13 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|StringUtils
-operator|.
-name|split
-argument_list|(
 name|entry
 operator|.
 name|getValue
 argument_list|()
-argument_list|,
+operator|.
+name|split
+argument_list|(
 literal|" "
 argument_list|)
 argument_list|)

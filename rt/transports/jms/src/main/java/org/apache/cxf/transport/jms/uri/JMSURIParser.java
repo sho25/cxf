@@ -111,22 +111,6 @@ name|LogUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|util
-operator|.
-name|StringUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * Unfortunately soap/jms URIs are not recognized correctly in URI.  * So this class is specialized on parsing jms uris into their parts  */
 end_comment
@@ -385,12 +369,10 @@ name|String
 index|[]
 name|parameters
 init|=
-name|StringUtils
+name|query
 operator|.
 name|split
 argument_list|(
-name|query
-argument_list|,
 literal|"&"
 argument_list|)
 decl_stmt|;
