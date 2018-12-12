@@ -788,7 +788,8 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
-name|bus
+name|getBus
+argument_list|()
 argument_list|,
 name|provider
 argument_list|)
@@ -820,7 +821,8 @@ name|providerCls
 argument_list|,
 name|provider
 argument_list|,
-name|bus
+name|getBus
+argument_list|()
 argument_list|,
 name|configuration
 operator|.
