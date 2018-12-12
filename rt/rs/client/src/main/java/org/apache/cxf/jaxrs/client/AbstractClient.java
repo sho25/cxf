@@ -3339,9 +3339,15 @@ argument_list|()
 operator|<=
 literal|0
 operator|||
+operator|(
 name|status
 operator|>=
 literal|300
+operator|&&
+name|status
+operator|!=
+literal|304
+operator|)
 condition|)
 block|{
 return|return
