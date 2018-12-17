@@ -676,9 +676,6 @@ name|getServiceClass
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|MicroProfileClientProxyImpl
-name|impl
-decl_stmt|;
 if|if
 condition|(
 name|actualState
@@ -686,8 +683,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|impl
-operator|=
+return|return
 operator|new
 name|MicroProfileClientProxyImpl
 argument_list|(
@@ -715,12 +711,11 @@ name|interceptorWrapper
 argument_list|,
 name|varValues
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 else|else
 block|{
-name|impl
-operator|=
+return|return
 operator|new
 name|MicroProfileClientProxyImpl
 argument_list|(
@@ -742,11 +737,8 @@ name|interceptorWrapper
 argument_list|,
 name|varValues
 argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|impl
 return|;
+block|}
 block|}
 name|Configuration
 name|getConfiguration
