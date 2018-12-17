@@ -2795,7 +2795,7 @@ block|}
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|checkActions
 parameter_list|(
