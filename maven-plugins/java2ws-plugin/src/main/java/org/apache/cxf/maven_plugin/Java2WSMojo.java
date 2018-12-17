@@ -2095,7 +2095,10 @@ name|attachArtifact
 argument_list|(
 name|project
 argument_list|,
-literal|"wsdl"
+name|wsdlFile
+operator|.
+name|getName
+argument_list|()
 argument_list|,
 name|classifier
 argument_list|,
@@ -2111,7 +2114,10 @@ name|attachArtifact
 argument_list|(
 name|project
 argument_list|,
-literal|"wsdl"
+name|wsdlFile
+operator|.
+name|getName
+argument_list|()
 argument_list|,
 name|wsdlFile
 argument_list|)
