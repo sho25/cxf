@@ -23,16 +23,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|UnsupportedEncodingException
 import|;
 end_import
@@ -83,11 +73,18 @@ name|void
 name|testGetEncoding
 parameter_list|()
 throws|throws
-name|IOException
+name|Exception
 block|{
 name|assertEquals
 argument_list|(
 literal|"Get the wrong encoding"
+argument_list|,
+name|StandardCharsets
+operator|.
+name|UTF_8
+operator|.
+name|name
+argument_list|()
 argument_list|,
 name|JMSMessageUtils
 operator|.
@@ -95,6 +92,11 @@ name|getEncoding
 argument_list|(
 literal|"text/xml; charset=utf-8"
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Get the wrong encoding"
 argument_list|,
 name|StandardCharsets
 operator|.
@@ -102,11 +104,6 @@ name|UTF_8
 operator|.
 name|name
 argument_list|()
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"Get the wrong encoding"
 argument_list|,
 name|JMSMessageUtils
 operator|.
@@ -114,18 +111,13 @@ name|getEncoding
 argument_list|(
 literal|"text/xml"
 argument_list|)
-argument_list|,
-name|StandardCharsets
-operator|.
-name|UTF_8
-operator|.
-name|name
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"Get the wrong encoding"
+argument_list|,
+literal|"GBK"
 argument_list|,
 name|JMSMessageUtils
 operator|.
@@ -133,8 +125,6 @@ name|getEncoding
 argument_list|(
 literal|"text/xml; charset=GBK"
 argument_list|)
-argument_list|,
-literal|"GBK"
 argument_list|)
 expr_stmt|;
 try|try
@@ -154,19 +144,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|UnsupportedEncodingException
 name|ex
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|"we should get the UnsupportedEncodingException here"
-argument_list|,
-name|ex
-operator|instanceof
-name|UnsupportedEncodingException
-argument_list|)
-expr_stmt|;
+comment|// we should get the UnsupportedEncodingException here
 block|}
 block|}
 block|}
