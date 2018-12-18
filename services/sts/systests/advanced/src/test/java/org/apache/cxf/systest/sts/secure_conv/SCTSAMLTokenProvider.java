@@ -1504,14 +1504,14 @@ if|if
 condition|(
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|==
 literal|null
 operator|||
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|.
 name|getX509Cert

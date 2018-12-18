@@ -399,7 +399,7 @@ name|sts
 operator|.
 name|request
 operator|.
-name|ReceivedKey
+name|ReceivedCredential
 import|;
 end_import
 
@@ -7227,14 +7227,14 @@ argument_list|(
 name|cryptoType
 argument_list|)
 decl_stmt|;
-name|ReceivedKey
-name|receivedKey
+name|ReceivedCredential
+name|receivedCredential
 init|=
 operator|new
-name|ReceivedKey
+name|ReceivedCredential
 argument_list|()
 decl_stmt|;
-name|receivedKey
+name|receivedCredential
 operator|.
 name|setX509Cert
 argument_list|(
@@ -7246,9 +7246,9 @@ argument_list|)
 expr_stmt|;
 name|keyRequirements
 operator|.
-name|setReceivedKey
+name|setReceivedCredential
 argument_list|(
-name|receivedKey
+name|receivedCredential
 argument_list|)
 expr_stmt|;
 name|parameters

@@ -255,7 +255,7 @@ name|sts
 operator|.
 name|request
 operator|.
-name|ReceivedKey
+name|ReceivedCredential
 import|;
 end_import
 
@@ -1570,12 +1570,12 @@ name|keyType
 argument_list|)
 condition|)
 block|{
-name|ReceivedKey
-name|receivedKey
+name|ReceivedCredential
+name|receivedCredential
 init|=
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 decl_stmt|;
 comment|// Validate UseKey trust
@@ -1596,7 +1596,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getX509Cert
 argument_list|()
@@ -1628,7 +1628,7 @@ operator|new
 name|X509Certificate
 index|[]
 block|{
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getX509Cert
 argument_list|()
@@ -1676,7 +1676,7 @@ block|}
 block|}
 if|if
 condition|(
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getPublicKey
 argument_list|()
@@ -1693,7 +1693,7 @@ argument_list|()
 operator|.
 name|verifyTrust
 argument_list|(
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getPublicKey
 argument_list|()
@@ -1736,12 +1736,12 @@ block|}
 return|return
 name|createPublicKeyKeyInfo
 argument_list|(
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getX509Cert
 argument_list|()
 argument_list|,
-name|receivedKey
+name|receivedCredential
 operator|.
 name|getPublicKey
 argument_list|()

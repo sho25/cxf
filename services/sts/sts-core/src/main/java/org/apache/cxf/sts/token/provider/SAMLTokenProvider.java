@@ -2281,7 +2281,7 @@ if|if
 condition|(
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|==
 literal|null
@@ -2289,7 +2289,7 @@ operator|||
 operator|(
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|.
 name|getX509Cert
@@ -2299,7 +2299,7 @@ literal|null
 operator|&&
 name|keyRequirements
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|.
 name|getPublicKey

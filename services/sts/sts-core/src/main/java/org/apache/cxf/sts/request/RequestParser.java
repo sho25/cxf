@@ -1939,8 +1939,8 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-name|ReceivedKey
-name|receivedKey
+name|ReceivedCredential
+name|receivedCredential
 init|=
 name|parseUseKey
 argument_list|(
@@ -1951,9 +1951,9 @@ argument_list|)
 decl_stmt|;
 name|keyRequirements
 operator|.
-name|setReceivedKey
+name|setReceivedCredential
 argument_list|(
-name|receivedKey
+name|receivedCredential
 argument_list|)
 expr_stmt|;
 block|}
@@ -2786,7 +2786,7 @@ end_comment
 begin_function
 specifier|private
 specifier|static
-name|ReceivedKey
+name|ReceivedCredential
 name|parseUseKey
 parameter_list|(
 name|UseKeyType
@@ -3382,14 +3382,14 @@ argument_list|(
 literal|"Successfully parsed X509 Certificate from UseKey"
 argument_list|)
 expr_stmt|;
-name|ReceivedKey
-name|receivedKey
+name|ReceivedCredential
+name|receivedCredential
 init|=
 operator|new
-name|ReceivedKey
+name|ReceivedCredential
 argument_list|()
 decl_stmt|;
-name|receivedKey
+name|receivedCredential
 operator|.
 name|setX509Cert
 argument_list|(
@@ -3397,7 +3397,7 @@ name|cert
 argument_list|)
 expr_stmt|;
 return|return
-name|receivedKey
+name|receivedCredential
 return|;
 block|}
 catch|catch
@@ -3633,13 +3633,13 @@ end_return
 
 begin_comment
 unit|}
-comment|/**      * Parse the KeyInfo Element to return a ReceivedKey object containing the found certificate or      * public key.      */
+comment|/**      * Parse the KeyInfo Element to return a ReceivedCredential object containing the found certificate or      * public key.      */
 end_comment
 
 begin_function
 unit|private
 specifier|static
-name|ReceivedKey
+name|ReceivedCredential
 name|parseKeyInfoElement
 parameter_list|(
 name|Element
@@ -3753,11 +3753,11 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
-name|ReceivedKey
+name|ReceivedCredential
 name|receivedKey
 init|=
 operator|new
-name|ReceivedKey
+name|ReceivedCredential
 argument_list|()
 decl_stmt|;
 name|receivedKey
@@ -3787,11 +3787,11 @@ operator|instanceof
 name|X509Certificate
 condition|)
 block|{
-name|ReceivedKey
+name|ReceivedCredential
 name|receivedKey
 init|=
 operator|new
-name|ReceivedKey
+name|ReceivedCredential
 argument_list|()
 decl_stmt|;
 name|receivedKey
@@ -3875,11 +3875,11 @@ operator|instanceof
 name|X509Certificate
 condition|)
 block|{
-name|ReceivedKey
+name|ReceivedCredential
 name|receivedKey
 init|=
 operator|new
-name|ReceivedKey
+name|ReceivedCredential
 argument_list|()
 decl_stmt|;
 name|receivedKey

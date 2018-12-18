@@ -39,24 +39,14 @@ name|X509Certificate
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|crypto
-operator|.
-name|SecretKey
-import|;
-end_import
-
 begin_comment
-comment|/**  * This class represents a received Key. It can contain either an X509Certificate, PublicKey or  * SecretKey object.  */
+comment|/**  * This class represents a received credential. It can contain either an X509Certificate or PublicKey.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|ReceivedKey
+name|ReceivedCredential
 block|{
 specifier|private
 name|X509Certificate
@@ -65,10 +55,6 @@ decl_stmt|;
 specifier|private
 name|PublicKey
 name|publicKey
-decl_stmt|;
-specifier|private
-name|SecretKey
-name|secretKey
 decl_stmt|;
 specifier|public
 name|X509Certificate
@@ -116,30 +102,6 @@ operator|.
 name|publicKey
 operator|=
 name|publicKey
-expr_stmt|;
-block|}
-specifier|public
-name|SecretKey
-name|getSecretKey
-parameter_list|()
-block|{
-return|return
-name|secretKey
-return|;
-block|}
-specifier|public
-name|void
-name|setSecretKey
-parameter_list|(
-name|SecretKey
-name|secretKey
-parameter_list|)
-block|{
-name|this
-operator|.
-name|secretKey
-operator|=
-name|secretKey
 expr_stmt|;
 block|}
 block|}

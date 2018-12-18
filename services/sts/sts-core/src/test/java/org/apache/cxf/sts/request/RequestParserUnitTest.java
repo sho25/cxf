@@ -1032,7 +1032,7 @@ operator|.
 name|getKeyRequirements
 argument_list|()
 operator|.
-name|getReceivedKey
+name|getReceivedCredential
 argument_list|()
 operator|.
 name|getX509Cert
