@@ -37,6 +37,28 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|crypto
+operator|.
+name|SecretKey
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|security
+operator|.
+name|auth
+operator|.
+name|DestroyFailedException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -235,8 +257,9 @@ operator|.
 name|getJavaName
 argument_list|()
 decl_stmt|;
-name|theCek
-operator|=
+name|SecretKey
+name|secretKey
+init|=
 name|CryptoUtils
 operator|.
 name|getSecretKey
@@ -253,6 +276,10 @@ argument_list|(
 name|headers
 argument_list|)
 argument_list|)
+decl_stmt|;
+name|theCek
+operator|=
+name|secretKey
 operator|.
 name|getEncoded
 argument_list|()
@@ -272,6 +299,23 @@ operator|=
 name|theCek
 expr_stmt|;
 block|}
+block|}
+comment|// Clean the key after we're done with it
+try|try
+block|{
+name|secretKey
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|e
+parameter_list|)
+block|{
+comment|// ignore
 block|}
 block|}
 else|else
