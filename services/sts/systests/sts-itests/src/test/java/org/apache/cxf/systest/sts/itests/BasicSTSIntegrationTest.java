@@ -583,7 +583,7 @@ name|getProperty
 argument_list|(
 literal|"karaf.version"
 argument_list|,
-literal|"4.2.2-SNAPSHOT"
+literal|"4.2.2"
 argument_list|)
 operator|+
 literal|".jar"
@@ -606,7 +606,7 @@ name|getProperty
 argument_list|(
 literal|"karaf.version"
 argument_list|,
-literal|"4.2.2-SNAPSHOT"
+literal|"4.2.2"
 argument_list|)
 operator|+
 literal|".jar"
