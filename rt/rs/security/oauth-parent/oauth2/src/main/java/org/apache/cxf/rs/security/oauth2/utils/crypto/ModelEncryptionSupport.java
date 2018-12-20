@@ -105,6 +105,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|security
+operator|.
+name|auth
+operator|.
+name|DestroyFailedException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -618,7 +630,9 @@ name|getKeyAlgo
 argument_list|()
 argument_list|)
 decl_stmt|;
-return|return
+name|Client
+name|client
+init|=
 name|decryptClient
 argument_list|(
 name|encodedSequence
@@ -627,6 +641,26 @@ name|key
 argument_list|,
 name|props
 argument_list|)
+decl_stmt|;
+comment|// Clean the secret key from memory when we're done
+try|try
+block|{
+name|key
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+return|return
+name|client
 return|;
 block|}
 specifier|public
@@ -761,7 +795,9 @@ name|getKeyAlgo
 argument_list|()
 argument_list|)
 decl_stmt|;
-return|return
+name|ServerAccessToken
+name|serverAccessToken
+init|=
 name|decryptAccessToken
 argument_list|(
 name|provider
@@ -772,6 +808,26 @@ name|key
 argument_list|,
 name|props
 argument_list|)
+decl_stmt|;
+comment|// Clean the secret key from memory when we're done
+try|try
+block|{
+name|key
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+return|return
+name|serverAccessToken
 return|;
 block|}
 specifier|public
@@ -918,7 +974,9 @@ name|getKeyAlgo
 argument_list|()
 argument_list|)
 decl_stmt|;
-return|return
+name|RefreshToken
+name|refreshToken
+init|=
 name|decryptRefreshToken
 argument_list|(
 name|provider
@@ -929,6 +987,26 @@ name|key
 argument_list|,
 name|props
 argument_list|)
+decl_stmt|;
+comment|// Clean the secret key from memory when we're done
+try|try
+block|{
+name|key
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+return|return
+name|refreshToken
 return|;
 block|}
 specifier|public
@@ -1075,7 +1153,9 @@ name|getKeyAlgo
 argument_list|()
 argument_list|)
 decl_stmt|;
-return|return
+name|ServerAuthorizationCodeGrant
+name|authzCodeGrant
+init|=
 name|decryptCodeGrant
 argument_list|(
 name|provider
@@ -1086,6 +1166,26 @@ name|key
 argument_list|,
 name|props
 argument_list|)
+decl_stmt|;
+comment|// Clean the secret key from memory when we're done
+try|try
+block|{
+name|key
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+return|return
+name|authzCodeGrant
 return|;
 block|}
 specifier|public

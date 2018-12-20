@@ -85,6 +85,18 @@ name|security
 operator|.
 name|auth
 operator|.
+name|DestroyFailedException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|security
+operator|.
+name|auth
+operator|.
 name|callback
 operator|.
 name|CallbackHandler
@@ -587,7 +599,9 @@ literal|true
 argument_list|)
 return|;
 block|}
-return|return
+name|Document
+name|metadata
+init|=
 name|metadataWriter
 operator|.
 name|getMetaData
@@ -607,6 +621,26 @@ index|]
 argument_list|,
 literal|true
 argument_list|)
+decl_stmt|;
+comment|// Clean the private key from memory when we're done
+try|try
+block|{
+name|privateKey
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+return|return
+name|metadata
 return|;
 block|}
 catch|catch

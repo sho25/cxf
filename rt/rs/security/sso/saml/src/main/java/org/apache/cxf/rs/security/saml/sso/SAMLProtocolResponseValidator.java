@@ -81,6 +81,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -3031,6 +3041,19 @@ literal|"invalidSAMLsecurity"
 argument_list|)
 throw|;
 block|}
+comment|// Clean the symmetric key from memory now that we're done with it
+name|Arrays
+operator|.
+name|fill
+argument_list|(
+name|decryptedBytes
+argument_list|,
+operator|(
+name|byte
+operator|)
+literal|0
+argument_list|)
+expr_stmt|;
 name|Document
 name|payloadDoc
 init|=

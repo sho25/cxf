@@ -97,6 +97,18 @@ begin_import
 import|import
 name|javax
 operator|.
+name|security
+operator|.
+name|auth
+operator|.
+name|DestroyFailedException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|xml
 operator|.
 name|namespace
@@ -981,6 +993,23 @@ argument_list|(
 name|privateKey
 argument_list|)
 expr_stmt|;
+comment|// Clean the private key from memory when we're done
+try|try
+block|{
+name|privateKey
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|DestroyFailedException
+name|ex
+parameter_list|)
+block|{
+comment|// ignore
+block|}
 return|return
 name|sig
 operator|.

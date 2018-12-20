@@ -85,6 +85,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|crypto
@@ -552,6 +562,19 @@ name|ex
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Clean the secret key from memory
+name|Arrays
+operator|.
+name|fill
+argument_list|(
+name|symmetricKeyBytes
+argument_list|,
+operator|(
+name|byte
+operator|)
+literal|0
+argument_list|)
+expr_stmt|;
 name|Document
 name|payloadDoc
 init|=
