@@ -381,12 +381,6 @@ name|byte
 index|[]
 name|secret
 decl_stmt|;
-comment|/**      * Some binary data associated with the token      */
-specifier|private
-name|byte
-index|[]
-name|data
-decl_stmt|;
 comment|/**      * A key associated with the token      */
 specifier|private
 specifier|transient
@@ -1541,32 +1535,6 @@ operator|.
 name|key
 operator|=
 name|key
-expr_stmt|;
-block|}
-specifier|public
-name|byte
-index|[]
-name|getData
-parameter_list|()
-block|{
-return|return
-name|data
-return|;
-block|}
-specifier|public
-name|void
-name|setData
-parameter_list|(
-name|byte
-index|[]
-name|data
-parameter_list|)
-block|{
-name|this
-operator|.
-name|data
-operator|=
-name|data
 expr_stmt|;
 block|}
 specifier|private

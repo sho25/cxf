@@ -616,16 +616,6 @@ name|getID
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|token
-operator|.
-name|setData
-argument_list|(
-name|bst
-operator|.
-name|getToken
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|SecretKey
 name|secretKey
 init|=
