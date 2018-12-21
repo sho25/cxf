@@ -255,6 +255,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This tests credential delegation. The client enables credential delegation + sends a Kerberos  * token to an Intermediary via WS-Security. The Intermediary validates the token, and then  * uses the delgated credential to obtain a ticket to in turn retrieve a SAML token from the  * STS. The SAML token is used to secure access to the backend service.  *  * The tests are @Ignored by default, as a KDC is needed. To replicate the test scenario, set up a KDC with  * user principal "alice" (keytab in "/etc/alice.keytab"), and host service "bob@service.ws.apache.org"  * (keytab in "/etc/bob.keytab").  */
 end_comment

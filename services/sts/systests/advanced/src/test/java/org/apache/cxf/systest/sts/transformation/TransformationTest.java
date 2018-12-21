@@ -169,6 +169,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a CXF provider.  * The provider dispatches the Username Token to an STS for validation (via TLS), and also  * send a TokenType corresponding to a SAML2 Assertion. The STS will create the requested  * SAML Assertion after validation and return it to the provider.  *  * In the second test, the service will also send some claims to the STS for inclusion in the  * SAML Token, and validate the result.  */
 end_comment

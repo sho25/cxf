@@ -215,6 +215,30 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a CXF intermediary.  * The intermediary validates the UsernameToken, and then inserts the username into a SAML  * Assertion which it signs and sends to a provider (via TLS).  */
 end_comment

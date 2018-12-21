@@ -199,6 +199,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * The CXF client gets a token from the STS by authenticating via an X.509 Cert over the asymmetric binding,  * and then sends it to the CXF endpoint using the asymmetric binding. The SAML Token contains a role, that is  * required by the endpoint to access the service correctly. Therefore, client authentication is done by the  * asymmetric signature, authorization is done by extracting roles from the SAML Token.  */
 end_comment

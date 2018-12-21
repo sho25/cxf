@@ -115,6 +115,30 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
 begin_comment
 comment|/**  * Test case for CXF-6319 - namespace declarations in body and envelope are not processed correctly  * when there is a SOAPHandler.  *  * @author Tomas Hofman (thofman@redhat.com)  */
 end_comment

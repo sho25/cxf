@@ -373,6 +373,18 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF JAX-RS client gets a JWT token from the STS + sends it to the  * service provider, which validates it.  */
 end_comment

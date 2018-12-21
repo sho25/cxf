@@ -267,6 +267,30 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test, a CXF client gets a token from the STS over the Asymmetric Binding. The STS is configured  * to encrypt the issued token, using the certificate obtained from the received signature.  */
 end_comment

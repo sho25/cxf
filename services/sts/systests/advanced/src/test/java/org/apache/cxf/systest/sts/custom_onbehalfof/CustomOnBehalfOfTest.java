@@ -179,6 +179,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In these test cases, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "OnBehalfOf" element. This username is obtained  * by parsing the SecurityConstants.USERNAME property. The client then invokes on the service  * provider using the returned (custom BinarySecurityToken) token from the STS.  *  * In the first test-case, the service provider dispatches the received BinarySecurityToken to the STS  * for validation, and receives a transformed SAML Token in response. In the second test-case, the  * service just validates the Token locally.  */
 end_comment

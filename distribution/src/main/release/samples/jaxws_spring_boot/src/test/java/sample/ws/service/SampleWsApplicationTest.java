@@ -197,9 +197,9 @@ name|org
 operator|.
 name|hamcrest
 operator|.
-name|Matchers
+name|MatcherAssert
 operator|.
-name|containsString
+name|assertThat
 import|;
 end_import
 
@@ -207,11 +207,11 @@ begin_import
 import|import static
 name|org
 operator|.
-name|junit
+name|hamcrest
 operator|.
-name|Assert
+name|Matchers
 operator|.
-name|assertThat
+name|containsString
 import|;
 end_import
 

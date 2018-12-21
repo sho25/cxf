@@ -215,6 +215,42 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a STS instance, and  * receives a (HOK) SAML 1.1 Assertion. This is then sent via (1-way) TLS to an Intermediary  * service provider. The intermediary service provider validates the token, and then the  * Intermediary client uses delegation to dispatch the received token (via OnBehalfOf) to another  * STS instance. This returns another (HOK) SAML 2 Assertion which is sent to the service provider  * via (2-way) TLS.  */
 end_comment

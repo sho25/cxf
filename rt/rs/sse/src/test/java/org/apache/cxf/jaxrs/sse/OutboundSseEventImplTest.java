@@ -99,17 +99,55 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|Test
 import|;
 end_import
 
 begin_import
-import|import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
-name|Test
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
 import|;
 end_import
 
@@ -117,10 +155,8 @@ begin_class
 specifier|public
 class|class
 name|OutboundSseEventImplTest
-extends|extends
-name|Assert
 block|{
-comment|/**      * Ensure that the<code>SseImpl</code> returns the correct builder class,       *<code>OutboundSseEventImpl.BuilderImpl.class</code>.      */
+comment|/**      * Ensure that the<code>SseImpl</code> returns the correct builder class,      *<code>OutboundSseEventImpl.BuilderImpl.class</code>.      */
 annotation|@
 name|Test
 specifier|public
@@ -787,7 +823,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Test that event built by the builder contains all of the data passed in      * to it.       */
+comment|/**      * Test that event built by the builder contains all of the data passed in      * to it.      */
 annotation|@
 name|Test
 specifier|public

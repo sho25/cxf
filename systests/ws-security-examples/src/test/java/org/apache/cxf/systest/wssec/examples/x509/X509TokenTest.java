@@ -221,6 +221,18 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * A set of tests for X509 Tokens using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  */
 end_comment

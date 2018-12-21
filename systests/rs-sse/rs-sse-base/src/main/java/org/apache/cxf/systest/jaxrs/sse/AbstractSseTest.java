@@ -271,6 +271,18 @@ name|hasItems
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|hamcrest
+operator|.
+name|MatcherAssert
+operator|.
+name|assertThat
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract

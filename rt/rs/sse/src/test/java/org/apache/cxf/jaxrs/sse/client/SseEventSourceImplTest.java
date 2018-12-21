@@ -343,16 +343,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Before
 import|;
 end_import
@@ -463,6 +453,18 @@ begin_import
 import|import static
 name|org
 operator|.
+name|hamcrest
+operator|.
+name|MatcherAssert
+operator|.
+name|assertThat
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
 name|mockito
 operator|.
 name|ArgumentMatchers
@@ -530,8 +532,6 @@ argument_list|)
 specifier|public
 class|class
 name|SseEventSourceImplTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

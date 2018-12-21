@@ -197,6 +197,42 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * This is a set of system tests to renew SAML tokens. The client obtains a (soon to be expired token)  * from the STS, and sends it to the service provider, which should succeed. The client then sleeps to  * expire the token, and the IssuedTokenInterceptorProvider should realise that the token is expired,  * and renew it with the STS, before making another service invocation.  *  * These tests also illustrate proof-of-possession for renewing a token.  */
 end_comment

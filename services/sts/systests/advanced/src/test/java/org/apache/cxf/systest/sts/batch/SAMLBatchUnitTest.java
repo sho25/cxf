@@ -285,6 +285,18 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF client requests a number of SAML Tokens from an STS using batch processing.  * It uses a simple STSClient implementation to request both a SAML 1.1 and 2.0 token at the same time.  * Batch validation is also tested.  */
 end_comment

@@ -151,6 +151,18 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test case, a CXF client requests a SecurityContextToken from an STS, and then uses the  * corresponding secret to secure a service request. The service endpoint must contact the STS to validate  * the received SCT and get the secret required to decrypt/verify the client request (via a SAML2 Assertion).  */
 end_comment

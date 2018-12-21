@@ -151,6 +151,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * In this test, a CXF client obtains a SAML token from an STS in one realm and sends it to a CXF  * endpoint. The CXF endpoint dispatches it for validation to a different STS.  */
 end_comment

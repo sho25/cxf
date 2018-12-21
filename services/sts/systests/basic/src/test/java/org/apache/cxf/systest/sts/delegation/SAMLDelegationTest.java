@@ -477,6 +477,42 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some tests for sending a SAML Token OnBehalfOf/ActAs to the STS. The STS is set up with  * two endpoints, one requiring a UsernameToken over TLS, the other just requiring TLS  * without client authentication (insecure, but used as part of the test process) with a  * SAML DelegationHandler.  */
 end_comment

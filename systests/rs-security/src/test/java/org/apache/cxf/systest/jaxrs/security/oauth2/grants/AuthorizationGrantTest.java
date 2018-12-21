@@ -509,6 +509,30 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some tests for various authorization grants. The tests are run multiple times with different OAuthDataProvider  * implementations:  * a) JCACHE_PORT - JCache  * b) JWT_JCACHE_PORT - JCache with useJwtFormatForAccessTokens enabled  * c) JPA_PORT - JPA provider  * d) JWT_NON_PERSIST_JCACHE_PORT-  JCache with useJwtFormatForAccessTokens + !persistJwtEncoding  */
 end_comment
