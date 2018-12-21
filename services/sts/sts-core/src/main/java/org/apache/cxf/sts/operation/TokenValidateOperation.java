@@ -1109,6 +1109,11 @@ argument_list|(
 name|event
 argument_list|)
 expr_stmt|;
+name|cleanRequest
+argument_list|(
+name|requestRequirements
+argument_list|)
+expr_stmt|;
 return|return
 name|response
 return|;
