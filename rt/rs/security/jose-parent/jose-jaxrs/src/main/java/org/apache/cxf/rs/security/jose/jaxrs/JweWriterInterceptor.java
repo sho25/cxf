@@ -655,7 +655,7 @@ argument_list|()
 argument_list|,
 name|encryption
 operator|.
-name|getContentEncryptionKey
+name|getEncryptedContentEncryptionKey
 argument_list|()
 argument_list|,
 name|encryption

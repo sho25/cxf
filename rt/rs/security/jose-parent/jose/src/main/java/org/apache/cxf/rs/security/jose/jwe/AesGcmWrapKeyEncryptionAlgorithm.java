@@ -363,6 +363,19 @@ argument_list|,
 name|encodedTag
 argument_list|)
 expr_stmt|;
+comment|// Cleanup
+name|Arrays
+operator|.
+name|fill
+argument_list|(
+name|wrappedKeyAndTag
+argument_list|,
+operator|(
+name|byte
+operator|)
+literal|0
+argument_list|)
+expr_stmt|;
 return|return
 name|wrappedKey
 return|;

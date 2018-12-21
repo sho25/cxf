@@ -933,7 +933,7 @@ name|encryptedCek
 init|=
 name|state
 operator|.
-name|getContentEncryptionKey
+name|getEncryptedContentEncryptionKey
 argument_list|()
 decl_stmt|;
 if|if

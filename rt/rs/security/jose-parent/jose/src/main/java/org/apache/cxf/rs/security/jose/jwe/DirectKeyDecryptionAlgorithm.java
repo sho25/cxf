@@ -191,6 +191,9 @@ argument_list|)
 expr_stmt|;
 return|return
 name|contentDecryptionKey
+operator|.
+name|clone
+argument_list|()
 return|;
 block|}
 annotation|@

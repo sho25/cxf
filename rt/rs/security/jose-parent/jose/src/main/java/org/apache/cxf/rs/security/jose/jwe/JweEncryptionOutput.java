@@ -65,7 +65,7 @@ decl_stmt|;
 specifier|private
 name|byte
 index|[]
-name|contentEncryptionKey
+name|encryptedContentEncryptionKey
 decl_stmt|;
 specifier|private
 name|byte
@@ -102,7 +102,7 @@ name|headers
 parameter_list|,
 name|byte
 index|[]
-name|contentEncryptionKey
+name|encryptedContentEncryptionKey
 parameter_list|,
 name|byte
 index|[]
@@ -138,9 +138,9 @@ name|headers
 expr_stmt|;
 name|this
 operator|.
-name|contentEncryptionKey
+name|encryptedContentEncryptionKey
 operator|=
-name|contentEncryptionKey
+name|encryptedContentEncryptionKey
 expr_stmt|;
 name|this
 operator|.
@@ -194,11 +194,11 @@ block|}
 specifier|public
 name|byte
 index|[]
-name|getContentEncryptionKey
+name|getEncryptedContentEncryptionKey
 parameter_list|()
 block|{
 return|return
-name|contentEncryptionKey
+name|encryptedContentEncryptionKey
 return|;
 block|}
 specifier|public
