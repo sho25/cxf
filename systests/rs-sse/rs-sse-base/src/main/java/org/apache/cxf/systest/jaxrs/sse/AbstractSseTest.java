@@ -283,6 +283,30 @@ name|assertThat
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -1516,7 +1540,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Jetty / Undertow do not propagate errors from the runnable passed to       * AsyncContext::start() up to the AsyncEventListener::onError(). Tomcat however       * does it.      * @return      */
+comment|/**      * Jetty / Undertow do not propagate errors from the runnable passed to      * AsyncContext::start() up to the AsyncEventListener::onError(). Tomcat however      * does it.      * @return      */
 specifier|protected
 name|boolean
 name|supportsErrorPropagation
