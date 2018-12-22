@@ -265,6 +265,42 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class tests several issues and Conduit policies based  * on a set up of redirecting servers.  *<pre>  *  * Http Redirection:  *  * Rethwel(http:9004) ----> Mortimer (http:9000)  *  * Redirect Loop:  *  * Hurlon (http:9006) ----> Abost(http:9007) ----\  *   ^                                            |  *   |-------------------------------------------/  */
 end_comment

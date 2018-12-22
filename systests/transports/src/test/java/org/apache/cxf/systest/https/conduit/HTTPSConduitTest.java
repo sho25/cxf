@@ -575,6 +575,54 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class tests several issues and Conduit policies based  * on a set up of redirecting servers.  *<pre>  *  * Http Redirection:  *  * Poltim(https:9005)  ----> Mortimer (http:9000)  *  * HttpS redirection/Trust:  *  * Tarpin(https:9003) ----> Gordy(https:9001) ----> Bethal(https:9002)  *  * Hostname Verifier Test  *  * Morpit (https:9008)  *  *</pre>HTTPConduitTest  * The Bethal server issues 401 with differing realms depending on the  * User name given in the authorization header.  *<p>  * The Morpit has a CN that is not equal to "localhost" to kick in  * the Hostname Verifier.  */
 end_comment
