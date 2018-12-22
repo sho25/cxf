@@ -815,7 +815,53 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -2711,6 +2757,8 @@ name|i
 operator|++
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testFixedArray(): Incorrect value for inout param"
@@ -2738,6 +2786,8 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testFixedArray(): Incorrect value for out param"
@@ -2765,6 +2815,8 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testFixedArray(): Incorrect return value"
@@ -3045,6 +3097,8 @@ name|i
 operator|++
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testBoundedArray(): Incorrect value for inout param"
@@ -3074,6 +3128,8 @@ argument_list|,
 name|delta
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testBoundedArray(): Incorrect value for out param"
@@ -3103,6 +3159,8 @@ argument_list|,
 name|delta
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testBoundedArray(): Incorrect return value"
@@ -4047,6 +4105,8 @@ name|j
 operator|++
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testNestedArray(): Incorrect value for inout param"
@@ -4090,6 +4150,8 @@ name|j
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testNestedArray(): Incorrect value for out param"
@@ -4133,6 +4195,8 @@ name|j
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testNestedArray(): Incorrect return value"
@@ -4262,6 +4326,8 @@ operator|++
 name|i
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -4352,6 +4418,8 @@ operator|++
 name|i
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -4878,6 +4946,8 @@ argument_list|,
 name|y
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -4893,6 +4963,8 @@ name|getVarUnion
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -8431,6 +8503,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|x
@@ -8446,6 +8520,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|yOriginal
@@ -8461,6 +8537,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|x
@@ -8613,6 +8691,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|x
@@ -8628,6 +8708,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|yOriginal
@@ -8643,6 +8725,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|x
@@ -8675,6 +8759,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -8690,6 +8776,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -13912,6 +14000,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -13927,6 +14017,8 @@ name|getAttrib1A
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -13942,6 +14034,8 @@ name|getAttrib1B
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -14203,6 +14297,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -14218,6 +14314,8 @@ name|getAttrib2A
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -14542,6 +14640,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -14557,6 +14657,8 @@ name|getAttrib3A
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg
@@ -14927,6 +15029,8 @@ argument_list|,
 name|y
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|msg

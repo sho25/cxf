@@ -635,7 +635,53 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
 import|;
 end_import
 
@@ -10564,6 +10610,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringList(): Incorrect value for inout param"
@@ -10575,6 +10623,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringList(): Incorrect value for out param"
@@ -10586,6 +10636,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringList(): Incorrect return value"
@@ -10840,6 +10892,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringListRestriction(): Incorrect value for inout param"
@@ -10851,6 +10905,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringListRestriction(): Incorrect value for out param"
@@ -10862,6 +10918,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithStringListRestriction(): Incorrect return value"
@@ -11126,6 +11184,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonList(): Incorrect value for inout param"
@@ -11137,6 +11197,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonList(): Incorrect value for out param"
@@ -11148,6 +11210,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonList(): Incorrect return value"
@@ -11412,6 +11476,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testString(): Incorrect value for inout param"
@@ -11423,6 +11489,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testString(): Incorrect value for out param"
@@ -11434,6 +11502,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testString(): Incorrect return value"

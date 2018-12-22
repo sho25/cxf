@@ -251,7 +251,41 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
 import|;
 end_import
 
@@ -401,6 +435,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction(): Incorrect value for inout param"
@@ -418,6 +454,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction(): Incorrect value for out param"
@@ -435,6 +473,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction(): Incorrect return value"
@@ -683,6 +723,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction2(): Incorrect value for inout param"
@@ -700,6 +742,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction2(): Incorrect value for out param"
@@ -717,6 +761,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction2(): Incorrect return value"
@@ -966,6 +1012,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction3(): Incorrect value for inout param"
@@ -983,6 +1031,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction3(): Incorrect value for out param"
@@ -1000,6 +1050,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction3(): Incorrect return value"
@@ -1320,6 +1372,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction4(): Incorrect value for inout param"
@@ -1337,6 +1391,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction4(): Incorrect value for out param"
@@ -1354,6 +1410,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction4(): Incorrect return value"
@@ -1589,6 +1647,8 @@ operator|!
 name|perfTestOnly
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction5(): Incorrect value for inout param"
@@ -1606,6 +1666,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction5(): Incorrect value for out param"
@@ -1623,6 +1685,8 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testComplexRestriction5(): Incorrect return value"
@@ -3511,6 +3575,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAnyStrict names don't match"
@@ -3526,6 +3592,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAnyStrict addresses don't match"
@@ -3592,6 +3660,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAnyArrayLax names don't match"
@@ -3607,6 +3677,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAnyArrayLax addresses don't match"
@@ -3644,6 +3716,8 @@ operator|.
 name|getAny
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAnyArrayLax soap element lengths don't match"
@@ -3698,6 +3772,8 @@ operator|instanceof
 name|SOAPElement
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|ae

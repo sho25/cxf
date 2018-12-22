@@ -131,6 +131,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * A test for the StaxTransformFeature. The client uses "DoubleIt2" but the service uses "DoubleIt".  * The service uses the StaxTransformFeature's "inTransformElements" and "outTransformElements" to alter  * the client request/response.  */
 end_comment

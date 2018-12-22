@@ -729,7 +729,53 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
 import|;
 end_import
 
@@ -6742,6 +6788,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny names don't match"
@@ -6757,6 +6805,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny addresses don't match"
@@ -6826,6 +6876,8 @@ name|SOAPElement
 operator|)
 name|elB
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny soap element names don't match"
@@ -6841,6 +6893,8 @@ name|getElementName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny soap element text nodes don't match"
@@ -7790,6 +7844,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny names don't match"
@@ -7805,6 +7861,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny addresses don't match"
@@ -7842,6 +7900,8 @@ operator|.
 name|getAny
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"StructWithAny soap element lengths don't match"
@@ -14737,6 +14797,8 @@ name|i
 operator|++
 control|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testAnonEnumList(): Incorrect value for inout param"
@@ -14760,6 +14822,8 @@ name|shortValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testAnonEnumList(): Incorrect value for out param"
@@ -14783,6 +14847,8 @@ name|shortValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testAnonEnumList(): Incorrect return value"
@@ -14920,6 +14986,8 @@ name|z
 argument_list|)
 expr_stmt|;
 block|}
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonEnum(): Incorrect value for inout param"
@@ -14931,6 +14999,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonEnum(): Incorrect value for out param"
@@ -14942,6 +15012,8 @@ operator|.
 name|value
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"testUnionWithAnonEnum(): Incorrect return value"
