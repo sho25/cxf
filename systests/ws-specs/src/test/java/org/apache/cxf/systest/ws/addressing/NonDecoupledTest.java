@@ -49,6 +49,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Tests the addition of WS-Addressing Message Addressing Properties  * in the non-decoupled case.  */
 end_comment

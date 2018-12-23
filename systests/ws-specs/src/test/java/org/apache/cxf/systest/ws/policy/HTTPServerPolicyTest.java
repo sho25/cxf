@@ -251,6 +251,42 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Tests the use of the WS-Policy Framework to determine the behaviour of the HTTP client  * by policies including the HTTPClientPolicy assertion attached to different subjects  * of the contract (endpoint, operation, binding, messager).  * The server in this test is not policy aware.  * Neither client nor server do have addressing interceptors installed: there are no addressing  * assertions that would trigger the installation of the interceptors on the client side. The use  * of the DecoupledEndpoint attribute in the HTTPClientPolicy assertions is merely for illustrating  * the use of multiple compatible or incompatible assertions.  */
 end_comment
