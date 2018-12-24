@@ -1007,8 +1007,6 @@ operator|new
 name|Class
 index|[]
 block|{
-name|cls
-block|,
 name|Closeable
 operator|.
 name|class
@@ -1016,6 +1014,8 @@ block|,
 name|Client
 operator|.
 name|class
+block|,
+name|cls
 block|}
 return|;
 block|}
