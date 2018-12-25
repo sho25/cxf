@@ -85,6 +85,30 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * A test to make sure that DOCTYPE declarations are not allowed  */
 end_comment
