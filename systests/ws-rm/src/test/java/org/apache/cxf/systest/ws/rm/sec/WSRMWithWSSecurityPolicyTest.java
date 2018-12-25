@@ -303,6 +303,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Tests the correct interaction of ws-rm calls with security.when policy validator verifies the calls.  */
 end_comment
