@@ -339,6 +339,54 @@ name|DateUtil
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for creating SAML Tokens with lifetime  */
 end_comment
@@ -347,12 +395,6 @@ begin_class
 specifier|public
 class|class
 name|SAMLProviderLifetimeTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 comment|/**      * Issue SAML 2 token with a valid requested lifetime      */
 annotation|@

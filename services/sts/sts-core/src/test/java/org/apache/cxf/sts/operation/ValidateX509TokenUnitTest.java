@@ -445,6 +445,30 @@ name|CustomTokenPrincipal
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for the validate operation to validate X.509 tokens.  */
 end_comment
@@ -453,12 +477,6 @@ begin_class
 specifier|public
 class|class
 name|ValidateX509TokenUnitTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|public
 specifier|static

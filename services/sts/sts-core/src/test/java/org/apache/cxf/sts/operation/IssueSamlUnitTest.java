@@ -913,6 +913,66 @@ name|WSSecurityUtil
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for the issue operation to issue SAML tokens.  */
 end_comment
@@ -921,12 +981,6 @@ begin_class
 specifier|public
 class|class
 name|IssueSamlUnitTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|public
 specifier|static

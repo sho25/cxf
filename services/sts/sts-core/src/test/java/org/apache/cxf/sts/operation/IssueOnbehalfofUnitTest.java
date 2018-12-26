@@ -1087,6 +1087,54 @@ name|DOM2Writer
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for the issue operation.  */
 end_comment
@@ -1095,12 +1143,6 @@ begin_class
 specifier|public
 class|class
 name|IssueOnbehalfofUnitTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|public
 specifier|static

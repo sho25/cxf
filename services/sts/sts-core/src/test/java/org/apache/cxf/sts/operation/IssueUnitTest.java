@@ -437,6 +437,42 @@ name|DateUtil
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for the issue operation.  */
 end_comment
@@ -445,12 +481,6 @@ begin_class
 specifier|public
 class|class
 name|IssueUnitTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 comment|/**      * Test to successfully issue a (dummy) token.      */
 annotation|@

@@ -957,6 +957,30 @@ name|Assert
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This tests validating a JWT Token + transforming into a SAML token, and vice versa.  */
 end_comment
@@ -965,12 +989,6 @@ begin_class
 specifier|public
 class|class
 name|ValidateJWTTransformationTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|public
 specifier|static

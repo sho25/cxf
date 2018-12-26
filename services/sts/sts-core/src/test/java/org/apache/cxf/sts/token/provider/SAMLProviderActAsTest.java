@@ -551,6 +551,42 @@ name|Assert
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for creating SAML Tokens with an ActAs element.  */
 end_comment
@@ -559,12 +595,6 @@ begin_class
 specifier|public
 class|class
 name|SAMLProviderActAsTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 comment|/**      * Create a default Saml1 Bearer Assertion with ActAs from a UsernameToken      */
 annotation|@

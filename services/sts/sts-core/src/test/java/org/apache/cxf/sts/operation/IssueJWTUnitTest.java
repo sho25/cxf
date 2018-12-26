@@ -617,6 +617,30 @@ name|Assert
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for the issue operation to issue JWT Tokens.  */
 end_comment
@@ -625,12 +649,6 @@ begin_class
 specifier|public
 class|class
 name|IssueJWTUnitTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|public
 specifier|static

@@ -83,16 +83,46 @@ name|BeforeClass
 import|;
 end_import
 
-begin_class
-specifier|public
-class|class
-name|HazelCastTokenStoreTest
-extends|extends
+begin_import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
 name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_class
+specifier|public
+class|class
+name|HazelCastTokenStoreTest
 block|{
 specifier|private
 specifier|static
