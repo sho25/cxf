@@ -45,23 +45,11 @@ name|LogUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|abstract
 class|class
 name|AbstractTestServerBase
-extends|extends
-name|Assert
 block|{
 name|boolean
 name|inProcess

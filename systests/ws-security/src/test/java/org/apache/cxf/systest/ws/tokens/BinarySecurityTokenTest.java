@@ -249,6 +249,30 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This is a test to add a custom BinarySecurityToken to the security header of a service request,  * and to process it accordingly.  */
 end_comment

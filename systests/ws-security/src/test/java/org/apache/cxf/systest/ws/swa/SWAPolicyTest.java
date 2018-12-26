@@ -257,6 +257,18 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * A set of tests for the SwA specification (SOAP with Attachments) via WS-SecurityPolicy.  */
 end_comment

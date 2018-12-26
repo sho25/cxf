@@ -151,8 +151,32 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
-comment|/**  * A test for Basic Auth using JAASLoginInterceptor.  * To ensure the Interceptor Chain resume to use the   * expected next interceptor  */
+comment|/**  * A test for Basic Auth using JAASLoginInterceptor.  * To ensure the Interceptor Chain resume to use the  * expected next interceptor  */
 end_comment
 
 begin_class

@@ -211,6 +211,42 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * A test for Basic Auth using the WS-SecurityPolicy HttpBasicAuthentication policy.  * Note the basic auth credentials are not actually authenticated in this test...we are testing  * the WS-SecurityPolicy enforcement of whether the credentials are present or not.  */
 end_comment

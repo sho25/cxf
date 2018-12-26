@@ -193,6 +193,18 @@ name|Parameters
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class runs the second half of the tests, as having all in  * the one class causes an out of memory problem in eclipse  */
 end_comment

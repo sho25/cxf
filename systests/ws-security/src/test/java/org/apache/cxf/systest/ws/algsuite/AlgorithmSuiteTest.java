@@ -151,6 +151,42 @@ name|BeforeClass
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * This is a test for AlgorithmSuites. Essentially it checks that a service endpoint will  * reject a client request that uses a different AlgorithmSuite. It tests both DOM + StAX  * clients against the DOM server.  */
 end_comment
