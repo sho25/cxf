@@ -212,7 +212,7 @@ name|bus
 argument_list|,
 name|ei
 argument_list|,
-name|target
+literal|null
 argument_list|)
 decl_stmt|;
 name|Assert
@@ -544,7 +544,7 @@ name|bus
 argument_list|,
 name|ei
 argument_list|,
-name|target
+literal|null
 argument_list|)
 decl_stmt|;
 name|Assert

@@ -148,10 +148,6 @@ name|ei
 init|=
 name|setupServiceInfo
 argument_list|(
-literal|"http://cxf.apache.org/hello_world_jms"
-argument_list|,
-name|WSDL
-argument_list|,
 literal|"HelloWorldQueueBinMsgService"
 argument_list|,
 literal|"HelloWorldQueueBinMsgPort"
@@ -203,10 +199,6 @@ name|ei
 init|=
 name|setupServiceInfo
 argument_list|(
-literal|"http://cxf.apache.org/hello_world_jms"
-argument_list|,
-name|WSDL
-argument_list|,
 literal|"HelloWorldService"
 argument_list|,
 literal|"HelloWorldPort"
@@ -292,10 +284,6 @@ name|ei
 init|=
 name|setupServiceInfo
 argument_list|(
-literal|"http://cxf.apache.org/hello_world_jms"
-argument_list|,
-name|WSDL
-argument_list|,
 literal|"HelloWorldServiceLoop"
 argument_list|,
 literal|"HelloWorldPortLoop"
@@ -317,12 +305,7 @@ argument_list|()
 operator|.
 name|setReceiveTimeout
 argument_list|(
-name|Long
-operator|.
-name|valueOf
-argument_list|(
-literal|1
-argument_list|)
+literal|1L
 argument_list|)
 expr_stmt|;
 name|Message

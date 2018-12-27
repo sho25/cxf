@@ -19,18 +19,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|concurrent
-operator|.
-name|Executors
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|jms
@@ -139,17 +127,19 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|Test
 import|;
 end_import
 
 begin_import
-import|import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
-name|Test
+name|Assert
+operator|.
+name|assertNotNull
 import|;
 end_import
 
@@ -178,7 +168,7 @@ throws|,
 name|InterruptedException
 block|{
 specifier|final
-name|PooledConnectionFactory
+name|ConnectionFactory
 name|cf
 init|=
 operator|new
@@ -206,21 +196,11 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|Executors
-operator|.
-name|newSingleThreadExecutor
-argument_list|()
-operator|.
-name|execute
-argument_list|(
 operator|new
-name|Runnable
-argument_list|()
-block|{
-specifier|public
-name|void
-name|run
+name|Thread
+argument_list|(
 parameter_list|()
+lambda|->
 block|{
 try|try
 block|{
@@ -234,7 +214,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|JMSException
+name|Exception
 name|e
 parameter_list|)
 block|{
@@ -245,8 +225,10 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-block|}
 argument_list|)
+operator|.
+name|start
+argument_list|()
 expr_stmt|;
 name|sendWithReplyToTemp
 argument_list|(
@@ -257,6 +239,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 name|void
 name|sendWithReplyToTemp
 parameter_list|(
@@ -350,7 +333,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|500
+literal|500L
 argument_list|)
 expr_stmt|;
 name|MessageConsumer
@@ -371,8 +354,6 @@ operator|.
 name|receive
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|replyMsg
@@ -401,6 +382,7 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
+specifier|static
 name|void
 name|receiveAndRespondWithMessageIdAsCorrelationId
 parameter_list|(

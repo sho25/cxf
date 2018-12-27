@@ -243,16 +243,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -326,6 +316,18 @@ operator|.
 name|EasyMock
 operator|.
 name|verify
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
 import|;
 end_import
 
@@ -487,8 +489,6 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"The connection is already closed"
@@ -666,8 +666,6 @@ name|getValue
 argument_list|()
 decl_stmt|;
 comment|// Closing the pooled connection will result in a NPE when using it
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"Wrapped exception. null"
@@ -892,7 +890,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|0
+literal|0L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -914,7 +912,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -936,7 +934,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 name|container
@@ -1079,7 +1077,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|0
+literal|0L
 argument_list|)
 expr_stmt|;
 name|assertNumMessagesInQueue
@@ -1092,7 +1090,7 @@ name|dlq
 argument_list|,
 literal|0
 argument_list|,
-literal|0
+literal|0L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -1114,7 +1112,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -1136,7 +1134,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|2000
+literal|2000L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -1158,7 +1156,7 @@ name|dlq
 argument_list|,
 literal|1
 argument_list|,
-literal|2500
+literal|2500L
 argument_list|)
 expr_stmt|;
 block|}
@@ -1393,11 +1391,12 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|0
+literal|0L
 argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 name|void
 name|assertNumMessagesInQueue
 parameter_list|(
@@ -1413,7 +1412,7 @@ parameter_list|,
 name|int
 name|expectedNum
 parameter_list|,
-name|int
+name|long
 name|timeout
 parameter_list|)
 throws|throws
@@ -1445,13 +1444,22 @@ argument_list|,
 name|queue
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|actualNum
+operator|==
+name|expectedNum
+condition|)
+block|{
+break|break;
+block|}
 comment|//System.out.println("Messages in queue " + queue.getQueueName() + ": " + actualNum
 comment|//                   + ", expecting: " + expectedNum);
 name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|100
+literal|100L
 argument_list|)
 expr_stmt|;
 block|}
@@ -1473,8 +1481,6 @@ operator|!=
 name|actualNum
 condition|)
 do|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 name|message
@@ -1488,6 +1494,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 name|void
 name|sendMessage
 parameter_list|(
@@ -1556,14 +1563,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|Thread
-operator|.
-name|sleep
-argument_list|(
-literal|500
-argument_list|)
-expr_stmt|;
-comment|// Give receiver some time to process
+comment|//        Thread.sleep(500L); // Give receiver some time to process
 block|}
 specifier|private
 specifier|static
