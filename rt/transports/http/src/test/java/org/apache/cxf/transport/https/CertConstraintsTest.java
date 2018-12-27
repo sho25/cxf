@@ -127,16 +127,34 @@ name|StaxUtils
 import|;
 end_import
 
-begin_class
-specifier|public
-class|class
-name|CertConstraintsTest
-extends|extends
+begin_import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
 name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_class
+specifier|public
+class|class
+name|CertConstraintsTest
 block|{
 annotation|@
 name|org

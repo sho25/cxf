@@ -237,6 +237,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|/**  * In these test-cases, the client is using DOM and the service is using StaX. The tests are  * for different Encryption Key Identifier methods.  */
 end_comment

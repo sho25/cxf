@@ -265,12 +265,6 @@ begin_class
 specifier|public
 class|class
 name|RequestComponentBuilderTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 specifier|private
 name|DocumentBuilder

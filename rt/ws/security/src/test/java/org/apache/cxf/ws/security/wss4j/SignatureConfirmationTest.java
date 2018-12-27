@@ -271,6 +271,30 @@ name|WSHandlerResult
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This a test of the Signature Confirmation functionality that is contained in the  * WS-Security 1.1 specification. The requestor signs an outbound SOAP message and saves  * the signature. The responder processes the inbound SOAP message and saves the received  * signature. Then in the responding message the received signature is attached in the  * form of a wsse11:SignatureConfirmation blob. The requestor processes this blob and  * checks to make sure that the signature value contained therein matches the saved value.  */
 end_comment

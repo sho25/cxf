@@ -139,12 +139,6 @@ begin_class
 specifier|public
 class|class
 name|XACMLAuthorizingInterceptorTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 static|static
 block|{
