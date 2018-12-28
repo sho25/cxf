@@ -115,6 +115,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|//userName eq "admin@amarkevich.talend.com" and entitlements sw "TDP_"
 end_comment

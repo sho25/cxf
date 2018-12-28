@@ -207,6 +207,42 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class "tests" the HTTPConduit that uses java.net.HttpURLConnection  * and java.net.HttpsURLConnection for its implementation. Should the  * implementation of HTTPConduit change (i.e. no longer use the URLConnections)  * this test will break.  */
 end_comment

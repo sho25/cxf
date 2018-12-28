@@ -281,6 +281,30 @@ name|YES
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertSame
+import|;
+end_import
+
 begin_comment
 comment|/**  * Test for the parsing of Accept-Encoding by the GZIPOutInterceptor. For  * Accept-Encoding values that enable gzip we expect an extra interceptor to be  * added to the out message, and the {@link GZIPOutInterceptor#USE_GZIP_KEY} to  * be set correctly. For Accept-Encoding values that do not enable gzip the  * interceptor should not be added.  */
 end_comment

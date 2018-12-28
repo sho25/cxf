@@ -97,6 +97,42 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class invokes the service described in /wsdl/greeter_control.wsdl.  * This WSDL contains operations with in-out parameters.  * It sets up the a client in "getPort()" to send requests to the  * server which is listening on port 9001 (SOAP/HTTP).  * The subclass defines where CXF configuration and the  * target server (transport, etc).  *  */
 end_comment

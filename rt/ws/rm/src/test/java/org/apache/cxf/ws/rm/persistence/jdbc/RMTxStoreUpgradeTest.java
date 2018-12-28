@@ -151,6 +151,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes  * in the database tables.  */
 end_comment
