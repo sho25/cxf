@@ -171,16 +171,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Before
 import|;
 end_import
@@ -223,8 +213,6 @@ begin_class
 specifier|public
 class|class
 name|ModelMBeanAssemblerTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static
