@@ -225,8 +225,6 @@ begin_class
 specifier|public
 class|class
 name|AsyncResponseImplTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

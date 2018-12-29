@@ -307,8 +307,6 @@ begin_class
 specifier|public
 class|class
 name|ParseBodyTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 specifier|final

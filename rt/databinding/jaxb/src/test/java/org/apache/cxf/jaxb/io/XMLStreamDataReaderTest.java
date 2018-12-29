@@ -329,8 +329,6 @@ begin_class
 specifier|public
 class|class
 name|XMLStreamDataReaderTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|XMLInputFactory

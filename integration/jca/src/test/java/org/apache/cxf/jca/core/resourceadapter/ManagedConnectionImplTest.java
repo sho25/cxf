@@ -167,8 +167,6 @@ begin_class
 specifier|public
 class|class
 name|ManagedConnectionImplTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|DummyManagedConnectionImpl

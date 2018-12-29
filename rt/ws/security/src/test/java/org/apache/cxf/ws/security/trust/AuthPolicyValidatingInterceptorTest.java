@@ -173,8 +173,6 @@ begin_class
 specifier|public
 class|class
 name|AuthPolicyValidatingInterceptorTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

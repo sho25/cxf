@@ -105,8 +105,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaStreamReaderTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|CorbaStreamReader

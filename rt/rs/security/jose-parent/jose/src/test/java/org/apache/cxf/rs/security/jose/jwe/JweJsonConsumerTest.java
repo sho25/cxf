@@ -273,8 +273,6 @@ begin_class
 specifier|public
 class|class
 name|JweJsonConsumerTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 specifier|final

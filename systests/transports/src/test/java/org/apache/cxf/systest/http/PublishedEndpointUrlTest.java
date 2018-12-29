@@ -281,8 +281,6 @@ begin_class
 specifier|public
 class|class
 name|PublishedEndpointUrlTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

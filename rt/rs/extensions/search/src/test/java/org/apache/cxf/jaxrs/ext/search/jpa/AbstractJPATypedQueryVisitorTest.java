@@ -318,8 +318,6 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractJPATypedQueryVisitorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|EntityManagerFactory

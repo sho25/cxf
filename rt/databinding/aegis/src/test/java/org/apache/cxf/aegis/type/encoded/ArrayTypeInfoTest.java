@@ -145,6 +145,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -656,6 +666,8 @@ name|actualString
 argument_list|)
 decl_stmt|;
 comment|// only compare local part because prefix is only resolved when using the MessageReader constructor
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -669,6 +681,8 @@ name|getRanks
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -692,6 +706,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -759,6 +775,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -815,6 +833,8 @@ argument_list|,
 name|mapping
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -828,6 +848,8 @@ name|getRanks
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -851,6 +873,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected
@@ -912,6 +936,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 name|expected

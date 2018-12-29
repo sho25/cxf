@@ -131,8 +131,6 @@ begin_class
 specifier|public
 class|class
 name|CatalogTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

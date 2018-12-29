@@ -135,8 +135,6 @@ begin_class
 specifier|public
 class|class
 name|SQLHierarchicalQueryTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

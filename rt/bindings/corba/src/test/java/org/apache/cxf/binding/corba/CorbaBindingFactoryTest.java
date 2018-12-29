@@ -371,8 +371,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaBindingFactoryTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|Bus

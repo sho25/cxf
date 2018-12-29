@@ -253,8 +253,6 @@ begin_class
 specifier|public
 class|class
 name|BinaryDataProviderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

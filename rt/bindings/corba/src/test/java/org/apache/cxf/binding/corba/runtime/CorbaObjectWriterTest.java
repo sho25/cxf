@@ -435,8 +435,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaObjectWriterTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

@@ -181,8 +181,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLDefinitionBuilderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|BeforeClass

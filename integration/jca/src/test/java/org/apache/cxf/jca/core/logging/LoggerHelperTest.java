@@ -171,8 +171,6 @@ begin_class
 specifier|public
 class|class
 name|LoggerHelperTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

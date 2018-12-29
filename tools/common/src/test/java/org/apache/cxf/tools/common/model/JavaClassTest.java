@@ -55,8 +55,6 @@ begin_class
 specifier|public
 class|class
 name|JavaClassTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

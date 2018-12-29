@@ -235,8 +235,6 @@ begin_class
 specifier|public
 class|class
 name|JAXRSServiceFactoryBeanTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Before

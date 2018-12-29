@@ -219,8 +219,6 @@ begin_class
 specifier|public
 class|class
 name|SimpleAuthorizingInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|Message

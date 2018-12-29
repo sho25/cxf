@@ -167,8 +167,6 @@ begin_class
 specifier|public
 class|class
 name|NettyHttpServerEngineFactoryTest
-extends|extends
-name|Assert
 block|{
 name|Bus
 name|bus

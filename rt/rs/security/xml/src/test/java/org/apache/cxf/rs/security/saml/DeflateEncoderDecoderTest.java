@@ -153,8 +153,6 @@ begin_class
 specifier|public
 class|class
 name|DeflateEncoderDecoderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

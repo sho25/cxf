@@ -351,8 +351,6 @@ begin_class
 specifier|public
 class|class
 name|ColocMessageObserverTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

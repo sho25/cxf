@@ -453,8 +453,6 @@ begin_class
 specifier|public
 class|class
 name|HTTPConduitTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Before

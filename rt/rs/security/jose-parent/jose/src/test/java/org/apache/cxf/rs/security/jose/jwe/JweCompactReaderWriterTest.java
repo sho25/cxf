@@ -347,8 +347,6 @@ begin_class
 specifier|public
 class|class
 name|JweCompactReaderWriterTest
-extends|extends
-name|Assert
 block|{
 comment|// A1 example
 specifier|static

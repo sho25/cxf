@@ -219,8 +219,6 @@ begin_class
 specifier|public
 class|class
 name|JPAOidcUserSubjectTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|EntityManagerFactory

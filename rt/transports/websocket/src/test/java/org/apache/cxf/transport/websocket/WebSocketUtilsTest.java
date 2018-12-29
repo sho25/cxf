@@ -89,8 +89,6 @@ begin_class
 specifier|public
 class|class
 name|WebSocketUtilsTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

@@ -231,8 +231,6 @@ begin_class
 specifier|public
 class|class
 name|JAXWSDefinitionBuilderTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ToolContext

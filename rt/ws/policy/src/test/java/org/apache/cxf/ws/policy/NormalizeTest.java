@@ -197,8 +197,6 @@ begin_class
 specifier|public
 class|class
 name|NormalizeTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

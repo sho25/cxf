@@ -639,8 +639,6 @@ comment|// Responses built in this test don't need to be closed
 specifier|public
 class|class
 name|ResponseImplTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -445,8 +445,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaServerConduitTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|EndpointInfo

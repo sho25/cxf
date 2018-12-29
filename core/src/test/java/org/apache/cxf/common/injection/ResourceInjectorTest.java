@@ -277,8 +277,6 @@ begin_class
 specifier|public
 class|class
 name|ResourceInjectorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

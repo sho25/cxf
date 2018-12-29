@@ -85,8 +85,6 @@ begin_class
 specifier|public
 class|class
 name|PropertiesLoaderUtilsTest
-extends|extends
-name|Assert
 block|{
 name|Properties
 name|properties

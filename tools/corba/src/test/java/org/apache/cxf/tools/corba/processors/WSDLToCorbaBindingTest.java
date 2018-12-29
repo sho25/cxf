@@ -629,8 +629,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLToCorbaBindingTest
-extends|extends
-name|Assert
 block|{
 name|WSDLToCorbaBinding
 name|generator

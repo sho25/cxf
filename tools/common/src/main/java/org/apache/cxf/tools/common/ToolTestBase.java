@@ -96,8 +96,6 @@ specifier|public
 specifier|abstract
 class|class
 name|ToolTestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|PrintStream

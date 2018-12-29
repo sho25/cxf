@@ -155,8 +155,6 @@ begin_class
 specifier|public
 class|class
 name|MessageTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

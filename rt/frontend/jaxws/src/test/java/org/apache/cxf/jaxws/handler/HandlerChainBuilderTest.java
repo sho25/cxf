@@ -324,8 +324,6 @@ argument_list|)
 specifier|public
 class|class
 name|HandlerChainBuilderTest
-extends|extends
-name|Assert
 block|{
 name|Handler
 index|[]

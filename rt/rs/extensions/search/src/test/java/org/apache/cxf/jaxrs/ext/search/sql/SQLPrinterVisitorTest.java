@@ -181,8 +181,6 @@ begin_class
 specifier|public
 class|class
 name|SQLPrinterVisitorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|FiqlParser

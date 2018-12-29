@@ -83,8 +83,6 @@ begin_class
 specifier|public
 class|class
 name|ClassLoaderUtilsTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

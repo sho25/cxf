@@ -171,8 +171,6 @@ begin_class
 specifier|public
 class|class
 name|WebServiceContextImplTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|After

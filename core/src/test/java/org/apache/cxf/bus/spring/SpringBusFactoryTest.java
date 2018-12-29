@@ -467,8 +467,6 @@ begin_class
 specifier|public
 class|class
 name|SpringBusFactoryTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|After

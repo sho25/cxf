@@ -415,8 +415,6 @@ begin_class
 specifier|public
 class|class
 name|ClassResourceInfoTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Path

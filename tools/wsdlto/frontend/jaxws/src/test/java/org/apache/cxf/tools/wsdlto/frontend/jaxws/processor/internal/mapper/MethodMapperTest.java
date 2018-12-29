@@ -171,8 +171,6 @@ begin_class
 specifier|public
 class|class
 name|MethodMapperTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|OperationInfo

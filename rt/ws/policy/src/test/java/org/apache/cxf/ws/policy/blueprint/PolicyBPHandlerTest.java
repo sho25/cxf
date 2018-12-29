@@ -59,8 +59,6 @@ begin_class
 specifier|public
 class|class
 name|PolicyBPHandlerTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -1327,8 +1327,6 @@ begin_class
 specifier|public
 class|class
 name|JAXRSUtilsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Before

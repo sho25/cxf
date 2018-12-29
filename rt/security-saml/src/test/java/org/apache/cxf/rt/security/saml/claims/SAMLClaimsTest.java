@@ -293,8 +293,6 @@ begin_class
 specifier|public
 class|class
 name|SAMLClaimsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|org

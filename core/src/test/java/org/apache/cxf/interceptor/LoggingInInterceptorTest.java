@@ -192,8 +192,6 @@ argument_list|)
 specifier|public
 class|class
 name|LoggingInInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 name|String

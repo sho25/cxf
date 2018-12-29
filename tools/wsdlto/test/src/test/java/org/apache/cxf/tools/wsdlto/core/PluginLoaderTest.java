@@ -157,8 +157,6 @@ begin_class
 specifier|public
 class|class
 name|PluginLoaderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

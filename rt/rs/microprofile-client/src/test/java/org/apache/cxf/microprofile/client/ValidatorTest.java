@@ -215,8 +215,6 @@ begin_class
 specifier|public
 class|class
 name|ValidatorTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|abstract

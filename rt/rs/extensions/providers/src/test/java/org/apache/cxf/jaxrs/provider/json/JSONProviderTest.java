@@ -837,8 +837,6 @@ begin_class
 specifier|public
 class|class
 name|JSONProviderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

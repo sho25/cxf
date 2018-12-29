@@ -561,8 +561,6 @@ begin_class
 specifier|public
 class|class
 name|BareInInterceptorTest
-extends|extends
-name|Assert
 block|{
 name|PhaseInterceptorChain
 name|chain

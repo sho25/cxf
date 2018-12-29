@@ -179,8 +179,6 @@ begin_class
 specifier|public
 class|class
 name|WebParamAnnotatorTest
-extends|extends
-name|Assert
 block|{
 name|JavaMethod
 name|method

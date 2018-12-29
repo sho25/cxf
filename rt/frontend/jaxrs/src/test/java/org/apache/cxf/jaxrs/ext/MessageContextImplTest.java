@@ -483,8 +483,6 @@ begin_class
 specifier|public
 class|class
 name|MessageContextImplTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

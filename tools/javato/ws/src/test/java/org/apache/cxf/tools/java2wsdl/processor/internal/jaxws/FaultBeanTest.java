@@ -123,8 +123,6 @@ begin_class
 specifier|public
 class|class
 name|FaultBeanTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

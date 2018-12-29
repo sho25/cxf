@@ -133,8 +133,6 @@ begin_class
 specifier|public
 class|class
 name|URIResolverTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|URIResolver

@@ -233,18 +233,6 @@ name|assertEquals
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
-import|;
-end_import
-
 begin_comment
 comment|/**  * Test mapping DOM.  * Commented out code for the case of an embedded Node object,  *  which doesn't work at all, and perhaps isn't supposed to.  */
 end_comment

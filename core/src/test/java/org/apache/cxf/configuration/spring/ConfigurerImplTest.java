@@ -227,8 +227,6 @@ begin_class
 specifier|public
 class|class
 name|ConfigurerImplTest
-extends|extends
-name|Assert
 block|{
 static|static
 block|{

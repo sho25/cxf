@@ -251,8 +251,6 @@ begin_class
 specifier|public
 class|class
 name|FormEncodingProviderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

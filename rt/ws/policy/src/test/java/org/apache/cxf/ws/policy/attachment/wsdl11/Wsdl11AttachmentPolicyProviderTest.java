@@ -567,8 +567,6 @@ begin_class
 specifier|public
 class|class
 name|Wsdl11AttachmentPolicyProviderTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

@@ -347,8 +347,6 @@ begin_class
 specifier|public
 class|class
 name|OASISCatalogTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 specifier|final

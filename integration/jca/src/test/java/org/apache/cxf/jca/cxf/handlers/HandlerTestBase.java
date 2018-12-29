@@ -163,8 +163,6 @@ begin_class
 specifier|public
 class|class
 name|HandlerTestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|Bus

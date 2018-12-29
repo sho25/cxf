@@ -151,8 +151,6 @@ begin_class
 specifier|public
 class|class
 name|XPathProviderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

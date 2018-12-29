@@ -299,8 +299,6 @@ begin_class
 specifier|public
 class|class
 name|HttpHeadersImplTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

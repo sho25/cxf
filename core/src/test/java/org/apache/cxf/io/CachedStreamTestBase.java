@@ -274,8 +274,6 @@ specifier|public
 specifier|abstract
 class|class
 name|CachedStreamTestBase
-extends|extends
-name|Assert
 block|{
 comment|// use two typical ciphers for testing
 specifier|private

@@ -55,8 +55,6 @@ begin_class
 specifier|public
 class|class
 name|SearchUtilsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

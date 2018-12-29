@@ -208,8 +208,6 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractColocTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

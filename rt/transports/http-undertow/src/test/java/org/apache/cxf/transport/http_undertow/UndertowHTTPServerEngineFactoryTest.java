@@ -213,8 +213,6 @@ begin_class
 specifier|public
 class|class
 name|UndertowHTTPServerEngineFactoryTest
-extends|extends
-name|Assert
 block|{
 name|Bus
 name|bus

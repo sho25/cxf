@@ -107,8 +107,6 @@ begin_class
 specifier|public
 class|class
 name|ToolSpecTest
-extends|extends
-name|Assert
 block|{
 name|ToolSpec
 name|toolSpec

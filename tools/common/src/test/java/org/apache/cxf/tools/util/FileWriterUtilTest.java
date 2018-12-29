@@ -73,8 +73,6 @@ begin_class
 specifier|public
 class|class
 name|FileWriterUtilTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|void

@@ -195,8 +195,6 @@ begin_class
 specifier|public
 class|class
 name|ConnectionFactoryImplTest
-extends|extends
-name|Assert
 block|{
 name|ManagedConnectionFactory
 name|mockConnectionFactory

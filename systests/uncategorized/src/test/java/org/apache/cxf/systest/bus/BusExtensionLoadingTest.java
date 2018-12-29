@@ -219,8 +219,6 @@ begin_class
 specifier|public
 class|class
 name|BusExtensionLoadingTest
-extends|extends
-name|Assert
 block|{
 comment|/**      * Tests the ExtensionManagerBus can be built using a given classloader      *      * @throws Exception      */
 annotation|@

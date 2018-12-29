@@ -229,8 +229,6 @@ begin_class
 specifier|public
 class|class
 name|MessageFlow
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|final

@@ -213,8 +213,6 @@ begin_class
 specifier|public
 class|class
 name|JMSUtilTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

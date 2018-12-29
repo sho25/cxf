@@ -121,8 +121,6 @@ begin_class
 specifier|public
 class|class
 name|JAASAuthenticationFilterTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

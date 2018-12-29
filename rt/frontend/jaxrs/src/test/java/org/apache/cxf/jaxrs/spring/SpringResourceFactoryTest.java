@@ -209,8 +209,6 @@ begin_class
 specifier|public
 class|class
 name|SpringResourceFactoryTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|After

@@ -109,8 +109,6 @@ begin_class
 specifier|public
 class|class
 name|JwsCompactHeaderTest
-extends|extends
-name|Assert
 block|{
 comment|/**      * JWS string, which lacks the "alg" header field.      *      * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present in the compact serialization.      */
 specifier|public

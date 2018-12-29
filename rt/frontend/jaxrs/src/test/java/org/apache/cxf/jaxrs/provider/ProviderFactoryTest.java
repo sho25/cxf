@@ -849,8 +849,6 @@ begin_class
 specifier|public
 class|class
 name|ProviderFactoryTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Before

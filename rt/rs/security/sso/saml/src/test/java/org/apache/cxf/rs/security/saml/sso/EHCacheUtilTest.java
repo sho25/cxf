@@ -125,8 +125,6 @@ begin_class
 specifier|public
 class|class
 name|EHCacheUtilTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

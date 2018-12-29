@@ -487,8 +487,6 @@ begin_class
 specifier|public
 class|class
 name|InjectionUtilsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

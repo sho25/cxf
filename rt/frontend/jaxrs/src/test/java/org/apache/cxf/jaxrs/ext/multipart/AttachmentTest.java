@@ -93,8 +93,6 @@ begin_class
 specifier|public
 class|class
 name|AttachmentTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -67,8 +67,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLVersionTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

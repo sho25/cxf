@@ -277,8 +277,6 @@ begin_class
 specifier|public
 class|class
 name|XMLSourceTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -101,8 +101,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLGeneratorFactoryTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

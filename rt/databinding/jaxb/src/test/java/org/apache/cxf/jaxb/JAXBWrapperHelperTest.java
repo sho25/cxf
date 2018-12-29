@@ -201,8 +201,6 @@ begin_class
 specifier|public
 class|class
 name|JAXBWrapperHelperTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

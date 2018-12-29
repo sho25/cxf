@@ -265,8 +265,6 @@ begin_class
 specifier|public
 class|class
 name|SoapActionInterceptorTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

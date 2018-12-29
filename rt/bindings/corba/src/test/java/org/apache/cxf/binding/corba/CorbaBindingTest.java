@@ -149,8 +149,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaBindingTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ORB

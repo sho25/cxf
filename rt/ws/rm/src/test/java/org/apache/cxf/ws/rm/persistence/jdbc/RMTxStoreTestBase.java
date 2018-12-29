@@ -438,8 +438,6 @@ specifier|public
 specifier|abstract
 class|class
 name|RMTxStoreTestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

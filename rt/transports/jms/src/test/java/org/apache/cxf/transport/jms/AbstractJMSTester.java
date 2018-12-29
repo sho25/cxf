@@ -416,8 +416,6 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractJMSTester
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

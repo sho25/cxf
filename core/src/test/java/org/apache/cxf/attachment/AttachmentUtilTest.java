@@ -51,8 +51,6 @@ begin_class
 specifier|public
 class|class
 name|AttachmentUtilTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

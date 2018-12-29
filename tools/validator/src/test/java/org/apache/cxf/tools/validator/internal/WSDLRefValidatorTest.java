@@ -195,8 +195,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLRefValidatorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|Definition

@@ -85,8 +85,6 @@ begin_class
 specifier|public
 class|class
 name|FormTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

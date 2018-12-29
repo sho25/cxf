@@ -233,8 +233,6 @@ begin_class
 specifier|public
 class|class
 name|JMSContinuationTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|Message

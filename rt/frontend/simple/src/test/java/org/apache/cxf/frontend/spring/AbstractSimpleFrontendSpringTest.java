@@ -67,8 +67,6 @@ begin_class
 specifier|public
 class|class
 name|AbstractSimpleFrontendSpringTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|AbstractApplicationContext

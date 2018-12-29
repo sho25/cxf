@@ -165,8 +165,6 @@ begin_class
 specifier|public
 class|class
 name|AutomaticWorkQueueTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

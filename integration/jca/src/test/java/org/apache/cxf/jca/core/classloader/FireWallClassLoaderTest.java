@@ -133,8 +133,6 @@ begin_class
 specifier|public
 class|class
 name|FireWallClassLoaderTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 name|FireWallClassLoaderTest

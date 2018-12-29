@@ -431,8 +431,6 @@ begin_class
 specifier|public
 class|class
 name|STSClientTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

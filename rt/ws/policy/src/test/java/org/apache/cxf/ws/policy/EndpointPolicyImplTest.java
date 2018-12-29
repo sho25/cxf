@@ -399,8 +399,6 @@ begin_class
 specifier|public
 class|class
 name|EndpointPolicyImplTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

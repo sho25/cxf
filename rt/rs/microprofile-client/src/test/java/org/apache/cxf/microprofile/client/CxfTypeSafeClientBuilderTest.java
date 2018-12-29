@@ -517,8 +517,6 @@ begin_class
 specifier|public
 class|class
 name|CxfTypeSafeClientBuilderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test
@@ -1353,6 +1351,8 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|fail
 argument_list|(
 literal|"Should have thrown IOException"
@@ -1382,6 +1382,8 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|fail
 argument_list|(
 name|failureMessage

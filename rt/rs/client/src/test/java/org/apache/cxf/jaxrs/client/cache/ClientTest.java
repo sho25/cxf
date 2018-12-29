@@ -119,8 +119,6 @@ begin_class
 specifier|public
 class|class
 name|ClientTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

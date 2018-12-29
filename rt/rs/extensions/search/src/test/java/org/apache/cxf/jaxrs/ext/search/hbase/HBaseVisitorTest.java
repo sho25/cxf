@@ -297,8 +297,6 @@ begin_class
 specifier|public
 class|class
 name|HBaseVisitorTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

@@ -539,8 +539,6 @@ begin_class
 specifier|public
 class|class
 name|JAXWSMethodInvokerTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

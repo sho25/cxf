@@ -521,8 +521,6 @@ begin_class
 specifier|public
 class|class
 name|ImportRepairTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 name|boolean

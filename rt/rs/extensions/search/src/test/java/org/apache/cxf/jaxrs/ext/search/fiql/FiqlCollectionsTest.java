@@ -103,8 +103,6 @@ begin_class
 specifier|public
 class|class
 name|FiqlCollectionsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

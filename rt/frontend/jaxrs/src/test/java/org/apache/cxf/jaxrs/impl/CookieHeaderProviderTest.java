@@ -79,8 +79,6 @@ begin_class
 specifier|public
 class|class
 name|CookieHeaderProviderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

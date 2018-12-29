@@ -87,8 +87,6 @@ begin_class
 specifier|public
 class|class
 name|InterfaceInfoTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|InterfaceInfo

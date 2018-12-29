@@ -149,8 +149,6 @@ begin_class
 specifier|public
 class|class
 name|WrapperTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

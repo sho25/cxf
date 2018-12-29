@@ -313,8 +313,6 @@ begin_class
 specifier|public
 class|class
 name|GZIPAcceptEncodingTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|GZIPOutInterceptor

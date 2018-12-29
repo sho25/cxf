@@ -209,8 +209,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaStructHandlerTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ORB

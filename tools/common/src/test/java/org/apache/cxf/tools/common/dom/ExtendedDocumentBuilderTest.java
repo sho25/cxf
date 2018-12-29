@@ -79,8 +79,6 @@ begin_class
 specifier|public
 class|class
 name|ExtendedDocumentBuilderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

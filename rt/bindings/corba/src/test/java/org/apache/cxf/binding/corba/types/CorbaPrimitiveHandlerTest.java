@@ -141,8 +141,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaPrimitiveHandlerTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ORB

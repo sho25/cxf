@@ -99,8 +99,6 @@ begin_class
 specifier|public
 class|class
 name|WSDL11ValidatorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ToolContext

@@ -181,8 +181,6 @@ begin_class
 specifier|public
 class|class
 name|RMContextUtilsTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

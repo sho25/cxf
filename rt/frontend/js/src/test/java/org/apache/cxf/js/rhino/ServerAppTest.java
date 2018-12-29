@@ -139,8 +139,6 @@ begin_class
 specifier|public
 class|class
 name|ServerAppTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|String

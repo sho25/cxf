@@ -166,8 +166,6 @@ specifier|public
 specifier|abstract
 class|class
 name|ManagedConnectionTestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|Subject

@@ -317,8 +317,6 @@ begin_class
 specifier|public
 class|class
 name|OutgoingChainInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

@@ -119,8 +119,6 @@ begin_class
 specifier|public
 class|class
 name|HandlerTest
-extends|extends
-name|Assert
 block|{
 name|Handler
 name|h

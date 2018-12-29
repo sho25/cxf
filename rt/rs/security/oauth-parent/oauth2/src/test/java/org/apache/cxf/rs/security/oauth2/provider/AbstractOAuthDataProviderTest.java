@@ -457,8 +457,6 @@ begin_class
 specifier|abstract
 class|class
 name|AbstractOAuthDataProviderTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

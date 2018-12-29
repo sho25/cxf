@@ -433,8 +433,6 @@ begin_class
 specifier|public
 class|class
 name|ClaimsAuthorizingInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|ClaimsAuthorizingInterceptor

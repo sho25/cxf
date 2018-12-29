@@ -85,8 +85,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaStreamWriterTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

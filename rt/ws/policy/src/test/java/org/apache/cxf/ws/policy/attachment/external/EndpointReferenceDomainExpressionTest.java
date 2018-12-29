@@ -227,8 +227,6 @@ begin_class
 specifier|public
 class|class
 name|EndpointReferenceDomainExpressionTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

@@ -259,8 +259,6 @@ begin_class
 specifier|public
 class|class
 name|JaxbAssertionTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -97,8 +97,6 @@ begin_class
 specifier|public
 class|class
 name|StaxStreamFilterTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

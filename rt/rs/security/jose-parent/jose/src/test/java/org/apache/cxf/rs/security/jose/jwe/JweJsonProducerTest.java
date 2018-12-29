@@ -251,8 +251,6 @@ begin_class
 specifier|public
 class|class
 name|JweJsonProducerTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 specifier|final

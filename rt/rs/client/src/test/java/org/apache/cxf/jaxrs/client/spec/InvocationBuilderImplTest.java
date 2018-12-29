@@ -203,8 +203,6 @@ begin_class
 specifier|public
 class|class
 name|InvocationBuilderImplTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

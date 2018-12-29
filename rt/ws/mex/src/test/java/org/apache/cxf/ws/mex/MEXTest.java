@@ -191,8 +191,6 @@ begin_class
 specifier|public
 class|class
 name|MEXTest
-extends|extends
-name|Assert
 block|{
 specifier|static
 name|Server

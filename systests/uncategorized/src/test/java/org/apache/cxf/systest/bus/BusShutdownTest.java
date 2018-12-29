@@ -283,8 +283,6 @@ begin_class
 specifier|public
 class|class
 name|BusShutdownTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

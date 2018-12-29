@@ -835,8 +835,6 @@ begin_class
 specifier|public
 class|class
 name|UndertowHTTPDestinationTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

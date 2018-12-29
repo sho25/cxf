@@ -715,8 +715,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLServiceBuilderTest
-extends|extends
-name|Assert
 block|{
 comment|// TODO: reuse the wsdl in testutils and add the parameter order into one of the wsdl
 specifier|private

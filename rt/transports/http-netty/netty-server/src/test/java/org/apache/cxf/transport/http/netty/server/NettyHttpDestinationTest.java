@@ -837,8 +837,6 @@ begin_class
 specifier|public
 class|class
 name|NettyHttpDestinationTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

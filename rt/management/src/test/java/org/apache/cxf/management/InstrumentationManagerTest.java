@@ -249,8 +249,6 @@ begin_class
 specifier|public
 class|class
 name|InstrumentationManagerTest
-extends|extends
-name|Assert
 block|{
 name|InstrumentationManager
 name|im

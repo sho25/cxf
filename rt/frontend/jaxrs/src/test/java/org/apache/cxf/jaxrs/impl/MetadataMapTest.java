@@ -185,8 +185,6 @@ begin_class
 specifier|public
 class|class
 name|MetadataMapTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

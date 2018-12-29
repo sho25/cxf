@@ -193,8 +193,6 @@ begin_class
 specifier|public
 class|class
 name|WebClientTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

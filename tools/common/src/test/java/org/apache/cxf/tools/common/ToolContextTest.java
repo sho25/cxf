@@ -97,8 +97,6 @@ begin_class
 specifier|public
 class|class
 name|ToolContextTest
-extends|extends
-name|Assert
 block|{
 name|ToolContext
 name|context

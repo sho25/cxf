@@ -233,8 +233,6 @@ begin_class
 specifier|public
 class|class
 name|AbstractMessageResponseTestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

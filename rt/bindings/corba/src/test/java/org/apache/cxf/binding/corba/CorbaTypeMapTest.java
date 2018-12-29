@@ -83,8 +83,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaTypeMapTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

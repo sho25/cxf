@@ -225,8 +225,6 @@ begin_class
 specifier|public
 class|class
 name|JwkUtilsTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

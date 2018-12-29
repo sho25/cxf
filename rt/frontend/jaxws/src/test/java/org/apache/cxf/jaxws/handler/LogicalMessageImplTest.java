@@ -239,8 +239,6 @@ begin_class
 specifier|public
 class|class
 name|LogicalMessageImplTest
-extends|extends
-name|Assert
 block|{
 name|AddNumbers
 name|req

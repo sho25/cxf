@@ -451,8 +451,6 @@ begin_class
 specifier|public
 class|class
 name|AsyncMethodTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Rule

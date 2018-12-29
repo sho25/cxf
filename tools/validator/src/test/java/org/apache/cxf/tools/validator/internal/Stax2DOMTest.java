@@ -145,8 +145,6 @@ begin_class
 specifier|public
 class|class
 name|Stax2DOMTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

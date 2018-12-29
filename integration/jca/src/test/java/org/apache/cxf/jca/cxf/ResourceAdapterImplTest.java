@@ -245,8 +245,6 @@ begin_class
 specifier|public
 class|class
 name|ResourceAdapterImplTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 name|ResourceAdapterImplTest

@@ -67,8 +67,6 @@ begin_class
 specifier|public
 class|class
 name|EJBEndpointTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|EJBEndpoint

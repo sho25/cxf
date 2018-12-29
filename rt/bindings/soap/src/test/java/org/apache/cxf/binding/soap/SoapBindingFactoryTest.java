@@ -467,8 +467,6 @@ begin_class
 specifier|public
 class|class
 name|SoapBindingFactoryTest
-extends|extends
-name|Assert
 block|{
 name|IMocksControl
 name|control

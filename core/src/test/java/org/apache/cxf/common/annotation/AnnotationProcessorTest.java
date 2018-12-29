@@ -171,8 +171,6 @@ begin_class
 specifier|public
 class|class
 name|AnnotationProcessorTest
-extends|extends
-name|Assert
 block|{
 name|AnnotatedGreeterImpl
 name|greeterImpl

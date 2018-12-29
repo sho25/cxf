@@ -141,8 +141,6 @@ begin_class
 specifier|public
 class|class
 name|HTTPClientAssertionBuilderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

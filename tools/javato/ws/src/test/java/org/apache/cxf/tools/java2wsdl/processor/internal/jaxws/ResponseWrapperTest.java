@@ -183,8 +183,6 @@ begin_class
 specifier|public
 class|class
 name|ResponseWrapperTest
-extends|extends
-name|Assert
 block|{
 name|JaxwsServiceBuilder
 name|builder

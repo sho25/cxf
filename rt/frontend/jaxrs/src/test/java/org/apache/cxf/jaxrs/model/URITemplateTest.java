@@ -187,8 +187,6 @@ begin_class
 specifier|public
 class|class
 name|URITemplateTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Before

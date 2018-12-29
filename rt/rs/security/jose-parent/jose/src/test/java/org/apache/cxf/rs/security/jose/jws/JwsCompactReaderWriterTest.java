@@ -385,8 +385,6 @@ begin_class
 specifier|public
 class|class
 name|JwsCompactReaderWriterTest
-extends|extends
-name|Assert
 block|{
 specifier|public
 specifier|static

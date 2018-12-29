@@ -169,8 +169,6 @@ begin_class
 specifier|public
 class|class
 name|ClassHelperTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|Object

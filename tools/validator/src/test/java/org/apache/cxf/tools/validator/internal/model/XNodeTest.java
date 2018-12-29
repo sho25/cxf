@@ -71,8 +71,6 @@ begin_class
 specifier|public
 class|class
 name|XNodeTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

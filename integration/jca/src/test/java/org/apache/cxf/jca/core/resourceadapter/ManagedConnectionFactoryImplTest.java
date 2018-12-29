@@ -223,8 +223,6 @@ begin_class
 specifier|public
 class|class
 name|ManagedConnectionFactoryImplTest
-extends|extends
-name|Assert
 block|{
 name|DummyManagedConnectionFactoryImpl
 name|mcf

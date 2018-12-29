@@ -77,8 +77,6 @@ begin_class
 specifier|public
 class|class
 name|ASMHelperTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

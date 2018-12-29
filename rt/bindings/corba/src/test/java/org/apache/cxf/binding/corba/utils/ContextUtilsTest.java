@@ -116,8 +116,6 @@ specifier|public
 specifier|final
 class|class
 name|ContextUtilsTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

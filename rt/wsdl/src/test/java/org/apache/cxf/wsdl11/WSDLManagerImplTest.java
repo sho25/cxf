@@ -217,8 +217,6 @@ begin_class
 specifier|public
 class|class
 name|WSDLManagerImplTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

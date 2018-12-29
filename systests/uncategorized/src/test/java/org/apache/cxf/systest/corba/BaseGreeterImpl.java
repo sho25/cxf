@@ -158,8 +158,6 @@ argument_list|)
 specifier|public
 class|class
 name|BaseGreeterImpl
-extends|extends
-name|Assert
 implements|implements
 name|Greeter
 block|{

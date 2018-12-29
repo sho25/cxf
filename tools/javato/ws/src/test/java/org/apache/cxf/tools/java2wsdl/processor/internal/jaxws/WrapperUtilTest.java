@@ -105,8 +105,6 @@ begin_class
 specifier|public
 class|class
 name|WrapperUtilTest
-extends|extends
-name|Assert
 block|{
 name|String
 name|pkgName

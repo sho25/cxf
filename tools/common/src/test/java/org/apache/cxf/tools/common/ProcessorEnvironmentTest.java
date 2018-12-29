@@ -109,8 +109,6 @@ begin_class
 specifier|public
 class|class
 name|ProcessorEnvironmentTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

@@ -211,8 +211,6 @@ begin_class
 specifier|public
 class|class
 name|ServletControllerTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|HttpServletRequest

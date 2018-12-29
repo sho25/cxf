@@ -197,8 +197,6 @@ begin_class
 specifier|public
 class|class
 name|InTransformReaderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test

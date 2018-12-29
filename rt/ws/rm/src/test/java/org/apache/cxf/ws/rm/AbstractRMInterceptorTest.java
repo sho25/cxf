@@ -309,8 +309,6 @@ begin_class
 specifier|public
 class|class
 name|AbstractRMInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|IMocksControl

@@ -379,8 +379,6 @@ begin_class
 specifier|public
 class|class
 name|AttachmentDeserializerTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 name|MessageImpl

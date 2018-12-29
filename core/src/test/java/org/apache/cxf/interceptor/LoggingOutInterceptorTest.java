@@ -322,8 +322,6 @@ argument_list|)
 specifier|public
 class|class
 name|LoggingOutInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|IMocksControl

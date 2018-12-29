@@ -239,8 +239,6 @@ begin_class
 specifier|public
 class|class
 name|CorbaDSIServantTest
-extends|extends
-name|Assert
 block|{
 specifier|protected
 specifier|static

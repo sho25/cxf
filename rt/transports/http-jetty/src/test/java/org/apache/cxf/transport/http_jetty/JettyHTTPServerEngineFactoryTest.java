@@ -279,8 +279,6 @@ begin_class
 specifier|public
 class|class
 name|JettyHTTPServerEngineFactoryTest
-extends|extends
-name|Assert
 block|{
 name|Bus
 name|bus
