@@ -205,6 +205,42 @@ name|AbstractClient
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|client
+operator|.
+name|ClientProperties
+operator|.
+name|HTTP_CONNECTION_TIMEOUT_PROP
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|client
+operator|.
+name|ClientProperties
+operator|.
+name|HTTP_RECEIVE_TIMEOUT_PROP
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -858,8 +894,6 @@ expr_stmt|;
 return|return
 name|property
 argument_list|(
-name|ClientImpl
-operator|.
 name|HTTP_CONNECTION_TIMEOUT_PROP
 argument_list|,
 name|timeUnit
@@ -892,8 +926,6 @@ expr_stmt|;
 return|return
 name|property
 argument_list|(
-name|ClientImpl
-operator|.
 name|HTTP_RECEIVE_TIMEOUT_PROP
 argument_list|,
 name|timeUnit
