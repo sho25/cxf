@@ -275,10 +275,6 @@ argument_list|,
 literal|"Mortimer"
 argument_list|)
 decl_stmt|;
-specifier|public
-name|DigestAuthTest
-parameter_list|()
-block|{     }
 annotation|@
 name|BeforeClass
 specifier|public
