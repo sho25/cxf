@@ -98,6 +98,29 @@ name|String
 name|message
 parameter_list|)
 function_decl|;
+comment|/**      * Returns an object of the specified type to allow access to the specific API       * of the tracing provider.      * @param clazz - the class of the object to be returned.      * @return an instance of the specified class       */
+specifier|default
+parameter_list|<
+name|T
+parameter_list|>
+name|T
+name|unwrap
+parameter_list|(
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|clazz
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"This operation is not supported"
+argument_list|)
+throw|;
+block|}
 block|}
 end_interface
 
