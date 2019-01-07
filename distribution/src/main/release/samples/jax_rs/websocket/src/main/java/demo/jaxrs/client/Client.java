@@ -432,7 +432,9 @@ name|Server
 operator|.
 name|CONTEXT_PATH
 operator|+
-literal|"/customerservice/monitor"
+literal|"/customerservice/monitor\r\n"
+operator|+
+literal|"Accept: text/xml; charset=ISO-8859-1\r\n"
 argument_list|)
 expr_stmt|;
 name|client2
