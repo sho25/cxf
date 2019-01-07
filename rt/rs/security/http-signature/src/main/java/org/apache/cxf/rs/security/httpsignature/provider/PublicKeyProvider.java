@@ -17,50 +17,37 @@ name|security
 operator|.
 name|httpsignature
 operator|.
-name|exception
+name|provider
 package|;
 end_package
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
+name|java
 operator|.
 name|security
 operator|.
-name|httpsignature
-operator|.
-name|SignatureException
+name|PublicKey
 import|;
 end_import
 
-begin_class
+begin_interface
+annotation|@
+name|FunctionalInterface
 specifier|public
-class|class
-name|InvalidDataToVerifySignatureException
-extends|extends
-name|SignatureException
+interface|interface
+name|PublicKeyProvider
 block|{
-specifier|public
-name|InvalidDataToVerifySignatureException
+comment|/**      *      * @param keyId      * @return the public key (which is never {@code null})      * @throws NullPointerException if the provided key ID is {@code null}      */
+name|PublicKey
+name|getKey
 parameter_list|(
 name|String
-name|message
+name|keyId
 parameter_list|)
-block|{
-name|super
-argument_list|(
-name|message
-argument_list|)
-expr_stmt|;
+function_decl|;
 block|}
-block|}
-end_class
+end_interface
 
 end_unit
 

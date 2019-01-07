@@ -16,26 +16,35 @@ operator|.
 name|security
 operator|.
 name|httpsignature
+operator|.
+name|exception
 package|;
 end_package
 
-begin_interface
-annotation|@
-name|FunctionalInterface
+begin_class
 specifier|public
-interface|interface
-name|AlgorithmProvider
+class|class
+name|DifferentAlgorithmsException
+extends|extends
+name|SignatureException
 block|{
-comment|/**      *      * @param keyId      * @return the algorithm name (which is never {@code null})      */
-name|String
-name|getAlgorithmName
+specifier|public
+name|DifferentAlgorithmsException
 parameter_list|(
 name|String
-name|keyId
+name|message
 parameter_list|)
-function_decl|;
+block|{
+name|super
+argument_list|(
+name|message
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
-end_interface
+block|}
+end_class
 
 end_unit
 
