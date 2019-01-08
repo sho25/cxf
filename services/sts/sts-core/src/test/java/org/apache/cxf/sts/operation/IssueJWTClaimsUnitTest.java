@@ -1054,16 +1054,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.
@@ -1444,8 +1434,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"alice"
@@ -2096,8 +2084,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"alice"
@@ -2819,8 +2805,6 @@ name|getJwtToken
 argument_list|()
 decl_stmt|;
 comment|// subject unchanged
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"alice"
@@ -3581,8 +3565,6 @@ name|getJwtToken
 argument_list|()
 decl_stmt|;
 comment|// subject changed (to uppercase)
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"ALICE"

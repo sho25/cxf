@@ -568,8 +568,6 @@ operator|.
 name|getCause
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 name|HTTPException
@@ -590,8 +588,6 @@ name|HTTPException
 operator|)
 name|cause
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|401

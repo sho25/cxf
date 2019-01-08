@@ -669,16 +669,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Before
 import|;
 end_import
@@ -7084,8 +7074,6 @@ operator|!
 name|local
 condition|)
 block|{
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|1

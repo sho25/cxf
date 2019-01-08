@@ -615,16 +615,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|BeforeClass
 import|;
 end_import
@@ -3393,8 +3383,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -3410,8 +3398,6 @@ name|ACCESS_TOKEN_HASH_CLAIM
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -3833,8 +3819,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -3850,8 +3834,6 @@ name|ACCESS_TOKEN_HASH_CLAIM
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -4268,8 +4250,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
 name|jwt
@@ -4285,8 +4265,6 @@ name|ACCESS_TOKEN_HASH_CLAIM
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -4530,8 +4508,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -4675,8 +4651,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -5049,8 +5023,6 @@ name|idToken
 argument_list|)
 decl_stmt|;
 comment|// returning c_hash in the id_token returned after exchanging the code is optional
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
 name|jwtConsumer
@@ -5291,8 +5263,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -5341,8 +5311,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -5369,8 +5337,6 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6282,8 +6248,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|jwtConsumer
@@ -6344,8 +6308,6 @@ name|getJwtToken
 argument_list|()
 decl_stmt|;
 comment|// Validate claims
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"alice"
@@ -6360,8 +6322,6 @@ name|CLAIM_SUBJECT
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"OIDC IdP"
@@ -6376,8 +6336,6 @@ name|CLAIM_ISSUER
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"consumer-id"
@@ -6392,8 +6350,6 @@ name|CLAIM_AUDIENCE
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6406,8 +6362,6 @@ name|CLAIM_EXPIRY
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6427,8 +6381,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 name|nonce
@@ -6486,15 +6438,11 @@ argument_list|(
 literal|"alice"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|cert
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|jwtConsumer
@@ -6547,8 +6495,6 @@ name|getJwtToken
 argument_list|()
 decl_stmt|;
 comment|// Validate claims
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6561,8 +6507,6 @@ name|CLAIM_SUBJECT
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6575,8 +6519,6 @@ name|CLAIM_EXPIRY
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
@@ -6631,15 +6573,11 @@ argument_list|(
 literal|"alice"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|cert
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|jwtConsumer

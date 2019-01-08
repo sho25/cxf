@@ -511,8 +511,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|result

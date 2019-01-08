@@ -739,12 +739,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|2

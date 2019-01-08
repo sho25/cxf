@@ -892,8 +892,6 @@ block|}
 block|}
 block|}
 block|}
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundActAsAttribute
@@ -1153,8 +1151,6 @@ block|}
 block|}
 block|}
 block|}
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundActAsAttribute
@@ -1813,8 +1809,6 @@ block|}
 block|}
 block|}
 block|}
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundActAsAttribute
@@ -2185,8 +2179,6 @@ block|}
 block|}
 block|}
 block|}
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundActAsAttribute
@@ -2441,15 +2433,11 @@ block|}
 block|}
 block|}
 block|}
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundBob
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|foundTechnical

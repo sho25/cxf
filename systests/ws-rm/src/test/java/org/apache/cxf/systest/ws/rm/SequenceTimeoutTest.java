@@ -1185,8 +1185,6 @@ name|t
 parameter_list|)
 block|{
 comment|//expected
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|t

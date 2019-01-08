@@ -2408,12 +2408,6 @@ literal|"Exception expected"
 argument_list|)
 throw|;
 block|}
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|2
@@ -2444,12 +2438,6 @@ literal|"Unexpected exception"
 argument_list|)
 throw|;
 block|}
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|500

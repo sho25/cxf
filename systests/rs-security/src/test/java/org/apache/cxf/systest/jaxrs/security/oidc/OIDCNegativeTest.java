@@ -1342,8 +1342,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|jwt
