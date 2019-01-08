@@ -455,16 +455,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Before
 import|;
 end_import
@@ -479,6 +469,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|/**  * Unit test for testing DocLiteralInInterceptor to use Source Data Binding  *  */
 end_comment
@@ -487,8 +489,6 @@ begin_class
 specifier|public
 class|class
 name|DocLiteralInInterceptorTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

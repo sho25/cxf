@@ -83,16 +83,58 @@ name|BeforeClass
 import|;
 end_import
 
-begin_class
-specifier|public
-class|class
-name|MemoryTokenStoreTest
-extends|extends
+begin_import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
 name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_class
+specifier|public
+class|class
+name|MemoryTokenStoreTest
 block|{
 specifier|private
 specifier|static

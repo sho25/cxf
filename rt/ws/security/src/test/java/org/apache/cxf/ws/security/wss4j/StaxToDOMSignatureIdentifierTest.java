@@ -307,6 +307,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|/**  * In these test-cases, the client is using StaX and the service is using DOM. The tests are  * for different Signature Key Identifier methods.  */
 end_comment

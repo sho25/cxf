@@ -323,17 +323,19 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|Before
 import|;
 end_import
 
 begin_import
-import|import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
-name|Before
+name|Assert
+operator|.
+name|assertNotNull
 import|;
 end_import
 
@@ -341,8 +343,6 @@ begin_class
 specifier|public
 class|class
 name|TestBase
-extends|extends
-name|Assert
 block|{
 specifier|protected
 name|PhaseInterceptorChain

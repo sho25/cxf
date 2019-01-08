@@ -131,6 +131,18 @@ name|SecurityContext
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests to test the AbstractXACMLAuthorizingInterceptor.  */
 end_comment
@@ -139,12 +151,6 @@ begin_class
 specifier|public
 class|class
 name|XACMLAuthorizingInterceptorTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 static|static
 block|{

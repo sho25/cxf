@@ -329,6 +329,42 @@ name|DOM2Writer
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for creating custom SAML Tokens.  */
 end_comment
@@ -337,12 +373,6 @@ begin_class
 specifier|public
 class|class
 name|SAMLProviderCustomTest
-extends|extends
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 block|{
 comment|/**      * Create a custom Saml1 Attribute Assertion.      */
 annotation|@

@@ -127,16 +127,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|BeforeClass
 import|;
 end_import
@@ -151,6 +141,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes  * in the database tables.  */
 end_comment
@@ -159,8 +161,6 @@ begin_class
 specifier|public
 class|class
 name|RMTxStoreUpgradeTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static

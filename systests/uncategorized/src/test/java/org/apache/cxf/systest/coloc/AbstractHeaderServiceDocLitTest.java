@@ -187,6 +187,30 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotSame
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class invokes the service described in /wsdl/header_doc_lit.wsdl.  * This WSDL contains operations with in-out parameters.  * It sets up the a client in "testColoc()" to send requests to the  * colco server which is listening on port 9001 (SOAP/HTTP).  * The subclass defines where CXF configuration and the  * target server (transport, etc).  *  */
 end_comment

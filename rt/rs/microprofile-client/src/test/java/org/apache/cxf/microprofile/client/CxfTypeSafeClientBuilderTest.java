@@ -477,12 +477,46 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|fail
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
 name|CxfTypeSafeClientBuilderTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Test
@@ -1317,6 +1351,8 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|fail
 argument_list|(
 literal|"Should have thrown IOException"
@@ -1346,6 +1382,8 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|fail
 argument_list|(
 name|failureMessage

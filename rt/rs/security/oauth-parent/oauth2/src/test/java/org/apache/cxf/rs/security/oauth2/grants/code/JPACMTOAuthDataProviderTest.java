@@ -307,6 +307,30 @@ name|RunWith
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotNull
+import|;
+end_import
+
 begin_comment
 comment|/**  * Runs the same tests as JPAOAuthDataProviderTest but within a Spring Managed Transaction.  *  * Spring spawns a transaction before each call to<code><oauthProvider</code>.  *  * Note : this test needs<code>@DirtiesContext</code>, otherwise  * spring tests cache and reuse emf across test classes  * while non spring unit tests are closing emf (hence connection exception: closed).  *  * @author agonzalez  */
 end_comment

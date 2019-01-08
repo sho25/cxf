@@ -385,16 +385,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Rule
 import|;
 end_import
@@ -431,6 +421,18 @@ name|*
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_comment
 comment|//CHECKSTYLE:ON
 end_comment
@@ -439,8 +441,6 @@ begin_class
 specifier|public
 class|class
 name|AsyncMethodTest
-extends|extends
-name|Assert
 block|{
 annotation|@
 name|Rule

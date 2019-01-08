@@ -336,7 +336,7 @@ specifier|final
 name|String
 name|METHOD
 init|=
-literal|"Get"
+literal|"GET"
 decl_stmt|;
 specifier|private
 specifier|static

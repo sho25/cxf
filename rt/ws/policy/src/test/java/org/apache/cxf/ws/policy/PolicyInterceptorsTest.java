@@ -319,16 +319,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Before
 import|;
 end_import
@@ -343,6 +333,18 @@ name|Test
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertSame
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -351,8 +353,6 @@ begin_class
 specifier|public
 class|class
 name|PolicyInterceptorsTest
-extends|extends
-name|Assert
 block|{
 specifier|private
 specifier|static
