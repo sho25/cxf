@@ -31,6 +31,16 @@ name|PublicKey
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -53,7 +63,12 @@ name|this
 operator|.
 name|publicKey
 operator|=
+name|Objects
+operator|.
+name|requireNonNull
+argument_list|(
 name|publicKey
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@

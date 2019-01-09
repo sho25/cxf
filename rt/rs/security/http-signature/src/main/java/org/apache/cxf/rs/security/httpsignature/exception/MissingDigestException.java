@@ -30,6 +30,10 @@ name|SignatureException
 block|{
 specifier|public
 name|MissingDigestException
+parameter_list|()
+block|{ }
+specifier|public
+name|MissingDigestException
 parameter_list|(
 name|String
 name|message

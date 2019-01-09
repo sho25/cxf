@@ -30,6 +30,10 @@ name|SignatureException
 block|{
 specifier|public
 name|MultipleSignatureHeaderException
+parameter_list|()
+block|{ }
+specifier|public
+name|MultipleSignatureHeaderException
 parameter_list|(
 name|String
 name|message

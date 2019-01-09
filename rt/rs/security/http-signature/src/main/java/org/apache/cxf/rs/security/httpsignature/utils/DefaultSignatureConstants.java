@@ -54,7 +54,7 @@ decl_stmt|;
 specifier|private
 name|DefaultSignatureConstants
 parameter_list|()
-block|{     }
+block|{ }
 block|}
 end_class
 

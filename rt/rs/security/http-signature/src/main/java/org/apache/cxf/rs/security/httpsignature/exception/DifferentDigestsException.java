@@ -30,6 +30,10 @@ name|SignatureException
 block|{
 specifier|public
 name|DifferentDigestsException
+parameter_list|()
+block|{ }
+specifier|public
+name|DifferentDigestsException
 parameter_list|(
 name|String
 name|message

@@ -1083,8 +1083,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|NoSuchAlgorithmException
-decl||
 name|IOException
 name|e
 parameter_list|)

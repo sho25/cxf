@@ -30,6 +30,10 @@ name|RuntimeException
 block|{
 specifier|public
 name|SignatureException
+parameter_list|()
+block|{ }
+specifier|public
+name|SignatureException
 parameter_list|(
 name|String
 name|message
