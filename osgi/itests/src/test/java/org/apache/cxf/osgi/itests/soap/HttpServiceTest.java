@@ -55,6 +55,22 @@ name|osgi
 operator|.
 name|itests
 operator|.
+name|AbstractServerActivator
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|osgi
+operator|.
+name|itests
+operator|.
 name|CXFOSGiTestSupport
 import|;
 end_import
@@ -68,16 +84,6 @@ operator|.
 name|framework
 operator|.
 name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
 import|;
 end_import
 
@@ -223,6 +229,18 @@ begin_import
 import|import static
 name|org
 operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
 name|ops4j
 operator|.
 name|pax
@@ -323,8 +341,6 @@ argument_list|(
 literal|"Chris"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"Hi Chris"
@@ -362,8 +378,6 @@ argument_list|(
 literal|"Chris"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"Hi Chris"
@@ -436,13 +450,18 @@ argument_list|()
 block|,
 name|features
 argument_list|(
+name|karafUrl
+argument_list|,
+literal|"http"
+argument_list|)
+block|,
+name|features
+argument_list|(
 name|cxfUrl
 argument_list|,
 literal|"cxf-jaxws"
 argument_list|,
 literal|"cxf-http-jetty"
-argument_list|,
-literal|"http"
 argument_list|)
 block|,
 name|testUtils
@@ -464,6 +483,7 @@ block|}
 return|;
 block|}
 specifier|private
+specifier|static
 name|InputStream
 name|serviceBundle
 parameter_list|()
@@ -473,6 +493,13 @@ name|TinyBundles
 operator|.
 name|bundle
 argument_list|()
+operator|.
+name|add
+argument_list|(
+name|AbstractServerActivator
+operator|.
+name|class
+argument_list|)
 operator|.
 name|add
 argument_list|(

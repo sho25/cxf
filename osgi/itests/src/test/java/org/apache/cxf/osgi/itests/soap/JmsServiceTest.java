@@ -125,16 +125,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -251,6 +241,18 @@ begin_import
 import|import static
 name|org
 operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
 name|ops4j
 operator|.
 name|pax
@@ -329,8 +331,6 @@ argument_list|(
 literal|"Chris"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
 literal|"Hi Chris"
@@ -340,6 +340,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 name|Greeter
 name|greeterJms
 parameter_list|()
@@ -401,6 +402,7 @@ argument_list|)
 return|;
 block|}
 specifier|private
+specifier|static
 name|ActiveMQConnectionFactory
 name|createConnectionFactory
 parameter_list|()
@@ -448,14 +450,13 @@ block|{
 name|cxfBaseConfig
 argument_list|()
 block|,
-name|testUtils
-argument_list|()
-block|,
 name|features
 argument_list|(
-name|springLegacyUrl
+name|karafUrl
 argument_list|,
-literal|"spring/4.3.18.RELEASE_1"
+literal|"aries-blueprint"
+argument_list|,
+literal|"shell-compat"
 argument_list|)
 block|,
 name|features
@@ -471,11 +472,14 @@ argument_list|)
 block|,
 name|features
 argument_list|(
+name|springLegacyUrl
+argument_list|,
+literal|"spring/4.3.18.RELEASE_1"
+argument_list|)
+block|,
+name|features
+argument_list|(
 name|amqUrl
-argument_list|,
-literal|"aries-blueprint"
-argument_list|,
-literal|"shell-compat"
 argument_list|,
 literal|"activemq-broker-noweb"
 argument_list|)
@@ -489,6 +493,7 @@ block|}
 return|;
 block|}
 specifier|private
+specifier|static
 name|InputStream
 name|serviceBundle
 parameter_list|()
