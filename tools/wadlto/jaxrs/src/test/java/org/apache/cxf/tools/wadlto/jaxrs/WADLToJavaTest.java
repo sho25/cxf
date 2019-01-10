@@ -715,15 +715,13 @@ name|files
 init|=
 name|FileUtils
 operator|.
-name|getFilesRecurse
+name|getFilesRecurseUsingSuffix
 argument_list|(
 name|output
 argument_list|,
-literal|".+\\."
+literal|"."
 operator|+
 name|ext
-operator|+
-literal|"$"
 argument_list|)
 decl_stmt|;
 name|int

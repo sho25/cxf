@@ -2520,11 +2520,11 @@ name|srcFiles
 init|=
 name|FileUtils
 operator|.
-name|getFilesRecurse
+name|getFilesRecurseUsingSuffix
 argument_list|(
 name|src
 argument_list|,
-literal|".+\\.java$"
+literal|".java"
 argument_list|)
 decl_stmt|;
 if|if
