@@ -28,7 +28,7 @@ specifier|public
 interface|interface
 name|AlgorithmProvider
 block|{
-comment|/**      * @param keyId is used as lookup to find the correct configured algorithm name for this keyId      *              The keyId is sent in the message together with the signature      * @throws NullPointerException if it can't provide an algorithm based on keyId      * @return the algorithm name (which is never {@code null})      */
+comment|/**      * @param keyId is used as lookup to find the correct configured algorithm name for this keyId      *              The keyId is sent in the message together with the signature      * @throws IllegalArgumentException if it can't provide an algorithm based on keyId      * @return the algorithm name (which is never {@code null})      */
 name|String
 name|getAlgorithmName
 parameter_list|(

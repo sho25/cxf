@@ -55,16 +55,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Objects
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|logging
 operator|.
 name|Logger
@@ -277,7 +267,6 @@ end_import
 
 begin_class
 specifier|public
-specifier|final
 class|class
 name|TomitribeSignatureValidator
 implements|implements
@@ -362,15 +351,6 @@ name|getKeyId
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|Objects
-operator|.
-name|requireNonNull
-argument_list|(
-name|providedAlgorithm
-argument_list|,
-literal|"provided algorithm is null"
-argument_list|)
-expr_stmt|;
 name|String
 name|signatureAlgorithm
 init|=
@@ -414,15 +394,6 @@ name|getKeyId
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|Objects
-operator|.
-name|requireNonNull
-argument_list|(
-name|key
-argument_list|,
-literal|"provided public key is null"
-argument_list|)
-expr_stmt|;
 name|java
 operator|.
 name|security
@@ -440,15 +411,6 @@ name|getKeyId
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|Objects
-operator|.
-name|requireNonNull
-argument_list|(
-name|provider
-argument_list|,
-literal|"provided security provider is null"
-argument_list|)
-expr_stmt|;
 name|runVerifier
 argument_list|(
 name|messageHeaders

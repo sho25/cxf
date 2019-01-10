@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|SecurityProvider
 block|{
-comment|/**      * @param keyId is used as lookup to find the correct configured security provider for this keyId      *              The keyId is sent in the message together with the signature      * @throws NullPointerException if it can't provide a public key based on keyId      * @return the security provider (which is never {@code null})      */
+comment|/**      * @param keyId is used as lookup to find the correct configured security provider for this keyId      *              The keyId is sent in the message together with the signature      * @throws IllegalArgumentException if it can't provide a public key based on keyId      * @return the security provider (which is never {@code null})      */
 name|Provider
 name|getProvider
 parameter_list|(
