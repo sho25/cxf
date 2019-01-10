@@ -139,7 +139,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testGetFound
+name|testGetFirstFound
 parameter_list|()
 throws|throws
 name|Exception
@@ -157,7 +157,7 @@ name|isEmpty
 argument_list|(
 name|StringUtils
 operator|.
-name|getFound
+name|getFirstFound
 argument_list|(
 literal|"velocity-dep-1.4.jar"
 argument_list|,
@@ -174,7 +174,7 @@ name|isEmpty
 argument_list|(
 name|StringUtils
 operator|.
-name|getFound
+name|getFirstFound
 argument_list|(
 literal|"velocity-1.4.jar"
 argument_list|,
@@ -191,7 +191,7 @@ name|isEmpty
 argument_list|(
 name|StringUtils
 operator|.
-name|getFound
+name|getFirstFound
 argument_list|(
 literal|null
 argument_list|,
