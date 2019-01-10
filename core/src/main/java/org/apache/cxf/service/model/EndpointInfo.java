@@ -61,22 +61,6 @@ name|EndpointReferenceType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|EndpointReferenceUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * The EndpointInfo contains the information for a web service 'port' inside of a service.  */
 end_comment
