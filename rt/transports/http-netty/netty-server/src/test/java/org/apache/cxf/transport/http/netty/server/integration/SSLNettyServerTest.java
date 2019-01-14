@@ -830,7 +830,7 @@ block|{
 name|String
 name|alg
 init|=
-name|KeyManagerFactory
+name|TrustManagerFactory
 operator|.
 name|getDefaultAlgorithm
 argument_list|()

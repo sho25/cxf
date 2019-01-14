@@ -566,7 +566,10 @@ name|TrustManagerFactory
 operator|.
 name|getInstance
 argument_list|(
-literal|"PKIX"
+name|TrustManagerFactory
+operator|.
+name|getDefaultAlgorithm
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|tmf
@@ -819,7 +822,10 @@ name|TrustManagerFactory
 operator|.
 name|getInstance
 argument_list|(
-literal|"PKIX"
+name|TrustManagerFactory
+operator|.
+name|getDefaultAlgorithm
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|tmf

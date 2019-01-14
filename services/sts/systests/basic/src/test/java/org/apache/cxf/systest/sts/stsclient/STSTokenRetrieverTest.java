@@ -1587,7 +1587,7 @@ name|SSLContext
 operator|.
 name|getInstance
 argument_list|(
-literal|"SSL"
+literal|"TLS"
 argument_list|)
 decl_stmt|;
 name|sc
