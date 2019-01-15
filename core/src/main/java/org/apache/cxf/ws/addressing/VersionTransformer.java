@@ -2345,7 +2345,7 @@ argument_list|(
 name|exposedURI
 argument_list|)
 condition|?
-name|ContextUtils
+name|ContextJAXBUtils
 operator|.
 name|getJAXBContext
 argument_list|()

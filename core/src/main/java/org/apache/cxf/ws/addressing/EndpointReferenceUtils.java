@@ -4543,6 +4543,7 @@ name|EndpointReferenceType
 name|getAnonymousEndpointReference
 parameter_list|()
 block|{
+specifier|final
 name|EndpointReferenceType
 name|reference
 init|=
