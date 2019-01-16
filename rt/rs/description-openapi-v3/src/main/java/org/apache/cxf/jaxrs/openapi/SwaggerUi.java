@@ -29,6 +29,8 @@ name|jaxrs
 operator|.
 name|swagger
 operator|.
+name|ui
+operator|.
 name|OsgiSwaggerUiResolver
 import|;
 end_import
@@ -44,6 +46,8 @@ operator|.
 name|jaxrs
 operator|.
 name|swagger
+operator|.
+name|ui
 operator|.
 name|SwaggerUiResolver
 import|;

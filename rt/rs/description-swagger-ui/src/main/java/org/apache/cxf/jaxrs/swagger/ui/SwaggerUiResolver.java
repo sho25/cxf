@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|swagger
+operator|.
+name|ui
 package|;
 end_package
 

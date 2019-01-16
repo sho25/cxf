@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|swagger
+operator|.
+name|ui
 package|;
 end_package
 
@@ -82,24 +84,6 @@ operator|.
 name|util
 operator|.
 name|PropertyUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|swagger
-operator|.
-name|ui
-operator|.
-name|SwaggerUiConfig
 import|;
 end_import
 

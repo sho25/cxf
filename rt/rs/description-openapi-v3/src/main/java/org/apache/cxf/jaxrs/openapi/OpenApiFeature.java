@@ -335,7 +335,9 @@ name|jaxrs
 operator|.
 name|swagger
 operator|.
-name|SwaggerUiSupport
+name|ui
+operator|.
+name|SwaggerUiConfig
 import|;
 end_import
 
@@ -353,7 +355,7 @@ name|swagger
 operator|.
 name|ui
 operator|.
-name|SwaggerUiConfig
+name|SwaggerUiSupport
 import|;
 end_import
 
