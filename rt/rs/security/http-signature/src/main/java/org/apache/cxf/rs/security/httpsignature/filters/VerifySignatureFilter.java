@@ -294,6 +294,11 @@ name|responseHeaders
 argument_list|,
 name|requestCtx
 operator|.
+name|getMethod
+argument_list|()
+argument_list|,
+name|requestCtx
+operator|.
 name|getUriInfo
 argument_list|()
 operator|.
@@ -301,11 +306,6 @@ name|getAbsolutePath
 argument_list|()
 operator|.
 name|getPath
-argument_list|()
-argument_list|,
-name|requestCtx
-operator|.
-name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
