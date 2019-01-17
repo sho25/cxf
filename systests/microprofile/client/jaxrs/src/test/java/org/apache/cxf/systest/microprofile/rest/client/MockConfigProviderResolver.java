@@ -11,11 +11,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|systest
+operator|.
 name|microprofile
 operator|.
-name|client
+name|rest
 operator|.
-name|mock
+name|client
 package|;
 end_package
 
