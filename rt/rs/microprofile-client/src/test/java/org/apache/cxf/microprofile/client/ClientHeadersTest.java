@@ -95,6 +95,24 @@ name|client
 operator|.
 name|mock
 operator|.
+name|HeadersOnMethodClient
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|microprofile
+operator|.
+name|client
+operator|.
+name|mock
+operator|.
 name|MyClientHeadersFactory
 import|;
 end_import
@@ -336,20 +354,116 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO: uncomment once @ClientHeaderParams (plural) is updated to include target of TYPE and METHOD
-comment|//    @Test
-comment|//    public void testClientHeaderParamsOnMethod() {
-comment|//        HeadersOnMethodClient client = RestClientBuilder.newBuilder()
-comment|//                                                        .baseUri(URI.create("http://localhost/notUsed"))
-comment|//                                                        .register(HeaderCaptureClientRequestFilter.class)
-comment|//                                                        .build(HeadersOnMethodClient.class);
-comment|//        assertEquals("SUCCESS", client.delete("ignored"));
-comment|//        assertNotNull(getOutboundHeaders());
-comment|//        assertEquals("valueA", getOutboundHeaders().getFirst("MethodHeader1"));
-comment|//        assertEquals("valueB,valueC", getOutboundHeaders().getFirst("MethodHeader2"));
-comment|//        assertEquals("HeadersOnMethodClientValueForMethodHeader3", getOutboundHeaders().getFirst("MethodHeader3"));
-comment|//        assertEquals("valueForMethodHeader4", getOutboundHeaders().getFirst("MethodHeader4"));
-comment|//    }
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testClientHeaderParamsOnMethod
+parameter_list|()
+block|{
+name|HeadersOnMethodClient
+name|client
+init|=
+name|RestClientBuilder
+operator|.
+name|newBuilder
+argument_list|()
+operator|.
+name|baseUri
+argument_list|(
+name|URI
+operator|.
+name|create
+argument_list|(
+literal|"http://localhost/notUsed"
+argument_list|)
+argument_list|)
+operator|.
+name|register
+argument_list|(
+name|HeaderCaptureClientRequestFilter
+operator|.
+name|class
+argument_list|)
+operator|.
+name|build
+argument_list|(
+name|HeadersOnMethodClient
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"SUCCESS"
+argument_list|,
+name|client
+operator|.
+name|delete
+argument_list|(
+literal|"ignored"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNotNull
+argument_list|(
+name|getOutboundHeaders
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"valueA"
+argument_list|,
+name|getOutboundHeaders
+argument_list|()
+operator|.
+name|getFirst
+argument_list|(
+literal|"MethodHeader1"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"valueB,valueC"
+argument_list|,
+name|getOutboundHeaders
+argument_list|()
+operator|.
+name|getFirst
+argument_list|(
+literal|"MethodHeader2"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"HeadersOnMethodClientValueForMethodHeader3"
+argument_list|,
+name|getOutboundHeaders
+argument_list|()
+operator|.
+name|getFirst
+argument_list|(
+literal|"MethodHeader3"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"valueForMethodHeader4"
+argument_list|,
+name|getOutboundHeaders
+argument_list|()
+operator|.
+name|getFirst
+argument_list|(
+literal|"MethodHeader4"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|Test
 specifier|public

@@ -43,6 +43,24 @@ name|Path
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|eclipse
+operator|.
+name|microprofile
+operator|.
+name|rest
+operator|.
+name|client
+operator|.
+name|annotation
+operator|.
+name|ClientHeaderParam
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -62,12 +80,54 @@ operator|+
 name|headerName
 return|;
 block|}
-comment|//TODO: uncomment once @ClientHeaderParams (plural) is updated to include target of TYPE and METHOD
-comment|//    @ClientHeaderParam(name = "MethodHeader1", value = "valueA")
-comment|//    @ClientHeaderParam(name = "MethodHeader2", value = {"valueB", "valueC"})
-comment|//    @ClientHeaderParam(name = "MethodHeader3", value = "{computeHeader}")
-comment|//    @ClientHeaderParam(name = "MethodHeader4",
-comment|//        value = "{org.apache.cxf.microprofile.client.mock.HeaderGenerator.generateHeader}")
+annotation|@
+name|ClientHeaderParam
+argument_list|(
+name|name
+operator|=
+literal|"MethodHeader1"
+argument_list|,
+name|value
+operator|=
+literal|"valueA"
+argument_list|)
+annotation|@
+name|ClientHeaderParam
+argument_list|(
+name|name
+operator|=
+literal|"MethodHeader2"
+argument_list|,
+name|value
+operator|=
+block|{
+literal|"valueB"
+block|,
+literal|"valueC"
+block|}
+argument_list|)
+annotation|@
+name|ClientHeaderParam
+argument_list|(
+name|name
+operator|=
+literal|"MethodHeader3"
+argument_list|,
+name|value
+operator|=
+literal|"{computeHeader}"
+argument_list|)
+annotation|@
+name|ClientHeaderParam
+argument_list|(
+name|name
+operator|=
+literal|"MethodHeader4"
+argument_list|,
+name|value
+operator|=
+literal|"{org.apache.cxf.microprofile.client.mock.HeaderGenerator.generateHeader}"
+argument_list|)
 annotation|@
 name|DELETE
 annotation|@
