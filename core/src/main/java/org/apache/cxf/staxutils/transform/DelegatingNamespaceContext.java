@@ -297,10 +297,8 @@ if|if
 condition|(
 name|ns
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -535,10 +533,8 @@ if|if
 condition|(
 name|ns
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -563,10 +559,8 @@ literal|null
 operator|&&
 name|value
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

@@ -1148,10 +1148,8 @@ operator|.
 name|getNamespaceURI
 argument_list|()
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 comment|// message part has same namespace with the message

@@ -83,7 +83,7 @@ name|common
 operator|.
 name|util
 operator|.
-name|URIParserUtil
+name|PackageUtils
 import|;
 end_import
 
@@ -716,7 +716,7 @@ name|ns
 parameter_list|)
 block|{
 return|return
-name|URIParserUtil
+name|PackageUtils
 operator|.
 name|getNamespace
 argument_list|(

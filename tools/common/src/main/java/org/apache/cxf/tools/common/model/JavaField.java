@@ -59,11 +59,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|helpers
 operator|.
-name|util
-operator|.
-name|URIParserUtil
+name|JavaUtils
 import|;
 end_import
 
@@ -279,12 +277,10 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|URIParserUtil
+name|JavaUtils
 operator|.
-name|containsReservedKeywords
+name|isJavaKeyword
 argument_list|(
-name|this
-operator|.
 name|name
 argument_list|)
 condition|)
@@ -292,14 +288,10 @@ block|{
 return|return
 literal|"_"
 operator|+
-name|this
-operator|.
 name|name
 return|;
 block|}
 return|return
-name|this
-operator|.
 name|name
 return|;
 block|}

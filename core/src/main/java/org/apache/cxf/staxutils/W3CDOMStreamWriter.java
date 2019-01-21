@@ -1305,10 +1305,8 @@ if|if
 condition|(
 name|prefix
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|writeDefaultNamespace

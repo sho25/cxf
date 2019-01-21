@@ -5401,8 +5401,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-try|try
-block|{
 name|env
 operator|.
 name|put
@@ -5440,9 +5438,6 @@ operator|new
 name|File
 argument_list|(
 name|output
-operator|.
-name|getCanonicalPath
-argument_list|()
 argument_list|,
 literal|"org/tempuri/GreeterRPCLit.java"
 argument_list|)
@@ -5474,24 +5469,6 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|fail
-argument_list|(
-literal|"The cxf978.wsdl is a valid wsdl, should pass the test, caused by: "
-operator|+
-name|e
-operator|.
-name|getMessage
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
 block|}
 annotation|@
 name|Test
