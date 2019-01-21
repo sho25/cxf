@@ -473,7 +473,9 @@ expr_stmt|;
 throw|throw
 operator|new
 name|BadRequestException
-argument_list|()
+argument_list|(
+name|ex
+argument_list|)
 throw|;
 block|}
 name|LOG
