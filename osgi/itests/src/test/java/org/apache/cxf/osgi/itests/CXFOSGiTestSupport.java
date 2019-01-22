@@ -350,10 +350,6 @@ name|cxfUrl
 decl_stmt|;
 specifier|protected
 name|MavenUrlReference
-name|karafUrl
-decl_stmt|;
-specifier|protected
-name|MavenUrlReference
 name|amqUrl
 decl_stmt|;
 specifier|protected
@@ -383,8 +379,10 @@ name|Option
 name|cxfBaseConfig
 parameter_list|()
 block|{
+specifier|final
+name|MavenUrlReference
 name|karafUrl
-operator|=
+init|=
 name|maven
 argument_list|()
 operator|.
@@ -408,7 +406,7 @@ name|type
 argument_list|(
 literal|"tar.gz"
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|cxfUrl
 operator|=
 name|maven

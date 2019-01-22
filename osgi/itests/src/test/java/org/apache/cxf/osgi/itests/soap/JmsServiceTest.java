@@ -452,15 +452,6 @@ argument_list|()
 block|,
 name|features
 argument_list|(
-name|karafUrl
-argument_list|,
-literal|"aries-blueprint"
-argument_list|,
-literal|"shell-compat"
-argument_list|)
-block|,
-name|features
-argument_list|(
 name|cxfUrl
 argument_list|,
 literal|"cxf-core"
@@ -480,6 +471,8 @@ block|,
 name|features
 argument_list|(
 name|amqUrl
+argument_list|,
+literal|"shell-compat"
 argument_list|,
 literal|"activemq-broker-noweb"
 argument_list|)

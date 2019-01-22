@@ -450,13 +450,6 @@ argument_list|()
 block|,
 name|features
 argument_list|(
-name|karafUrl
-argument_list|,
-literal|"http"
-argument_list|)
-block|,
-name|features
-argument_list|(
 name|cxfUrl
 argument_list|,
 literal|"cxf-jaxws"

@@ -287,14 +287,9 @@ argument_list|()
 block|,
 name|features
 argument_list|(
-name|karafUrl
+name|cxfUrl
 argument_list|,
 literal|"aries-blueprint"
-argument_list|)
-block|,
-name|features
-argument_list|(
-name|cxfUrl
 argument_list|,
 literal|"cxf-core"
 argument_list|,
