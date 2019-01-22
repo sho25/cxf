@@ -51,8 +51,11 @@ specifier|final
 name|String
 name|IPV4_BASIC_PATTERN_STRING
 init|=
-literal|"(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}"
-comment|// initial 3 fields, 0-255 followed by .
+literal|"(([1-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){1}"
+comment|// initial first field, 1-255
+operator|+
+literal|"(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){2}"
+comment|// following 2 fields, 0-255 followed by .
 operator|+
 literal|"([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])"
 decl_stmt|;
