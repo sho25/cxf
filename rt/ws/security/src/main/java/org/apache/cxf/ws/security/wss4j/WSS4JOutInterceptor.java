@@ -1190,10 +1190,8 @@ operator|.
 name|getUsername
 argument_list|()
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|String
@@ -1328,10 +1326,8 @@ operator|.
 name|getUsername
 argument_list|()
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 operator|)
 operator|&&
 operator|(

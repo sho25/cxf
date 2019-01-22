@@ -1145,10 +1145,8 @@ literal|null
 operator|||
 name|ns
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|at

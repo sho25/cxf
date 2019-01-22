@@ -419,10 +419,8 @@ literal|null
 operator|&&
 name|value
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 comment|//pass empty string to number type will result in Exception

@@ -902,10 +902,8 @@ operator|.
 name|getNamespaceURI
 argument_list|()
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 operator|&&
 operator|!
 name|bindingName
@@ -913,10 +911,8 @@ operator|.
 name|getLocalPart
 argument_list|()
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|Collection

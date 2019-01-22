@@ -1279,10 +1279,8 @@ operator|&&
 operator|!
 name|classProperty
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|bean
@@ -1310,10 +1308,8 @@ operator|&&
 operator|!
 name|beanref
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|bean

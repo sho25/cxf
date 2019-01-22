@@ -1599,10 +1599,8 @@ operator|.
 name|getPackageJavaDoc
 argument_list|()
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|sclz

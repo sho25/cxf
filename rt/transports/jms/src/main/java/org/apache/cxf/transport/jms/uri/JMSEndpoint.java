@@ -856,10 +856,8 @@ literal|null
 operator|||
 name|value
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 continue|continue;
