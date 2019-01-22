@@ -227,7 +227,7 @@ name|initialTimestamp
 operator|>
 name|expiresValue
 operator|*
-literal|1000
+literal|1000L
 return|;
 block|}
 specifier|public
