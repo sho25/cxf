@@ -224,7 +224,7 @@ name|version
 operator|.
 name|startsWith
 argument_list|(
-literal|"1.8.0"
+literal|"1.8.0_"
 argument_list|)
 operator|&&
 name|Integer
