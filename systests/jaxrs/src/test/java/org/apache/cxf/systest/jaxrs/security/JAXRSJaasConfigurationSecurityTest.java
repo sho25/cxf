@@ -275,14 +275,10 @@ name|HttpHeaders
 operator|.
 name|AUTHORIZATION
 argument_list|,
-literal|"Basic "
-operator|+
-name|base64Encode
+name|basicAuthHeader
 argument_list|(
 literal|"foo"
-operator|+
-literal|":"
-operator|+
+argument_list|,
 literal|"bar1"
 argument_list|)
 argument_list|)

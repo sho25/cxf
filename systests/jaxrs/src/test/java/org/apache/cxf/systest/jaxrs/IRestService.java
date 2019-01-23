@@ -83,10 +83,6 @@ parameter_list|<
 name|T
 extends|extends
 name|Book
-parameter_list|,
-name|PK
-extends|extends
-name|Long
 parameter_list|>
 block|{
 annotation|@
@@ -99,13 +95,13 @@ name|QueryParam
 argument_list|(
 literal|"id"
 argument_list|)
-name|PK
+name|Long
 name|id
 parameter_list|)
 function_decl|;
 annotation|@
 name|POST
-name|PK
+name|Long
 name|postEntity
 parameter_list|(
 name|T
