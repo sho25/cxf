@@ -1468,11 +1468,6 @@ name|String
 name|rst
 parameter_list|)
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 name|ServiceReference
 argument_list|<
 name|Object

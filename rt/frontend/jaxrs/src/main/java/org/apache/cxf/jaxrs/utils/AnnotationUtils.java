@@ -458,6 +458,8 @@ specifier|static
 name|Class
 argument_list|<
 name|?
+extends|extends
+name|Annotation
 argument_list|>
 name|loadClassOrNull
 parameter_list|(
@@ -486,6 +488,10 @@ argument_list|(
 name|name
 argument_list|,
 name|AnnotationUtils
+operator|.
+name|class
+argument_list|,
+name|Annotation
 operator|.
 name|class
 argument_list|)

@@ -2579,11 +2579,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 name|AbstractPhaseInterceptor
 argument_list|<
 name|Message

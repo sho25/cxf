@@ -202,8 +202,6 @@ operator|.
 name|filter
 operator|.
 name|CompareFilter
-operator|.
-name|CompareOp
 import|;
 end_import
 
@@ -614,6 +612,11 @@ literal|0
 argument_list|)
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|private
 name|Filter
 name|buildSimpleQuery
@@ -660,6 +663,8 @@ name|getClass
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|CompareFilter
+operator|.
 name|CompareOp
 name|compareOp
 init|=
@@ -680,6 +685,8 @@ name|EQUALS
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|EQUAL
@@ -708,6 +715,8 @@ name|NOT_EQUALS
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|NOT_EQUAL
@@ -736,6 +745,8 @@ name|GREATER_THAN
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|GREATER
@@ -746,6 +757,8 @@ name|GREATER_OR_EQUALS
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|GREATER_OR_EQUAL
@@ -756,6 +769,8 @@ name|LESS_THAN
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|LESS
@@ -766,6 +781,8 @@ name|LESS_OR_EQUALS
 case|:
 name|compareOp
 operator|=
+name|CompareFilter
+operator|.
 name|CompareOp
 operator|.
 name|LESS_OR_EQUAL

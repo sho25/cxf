@@ -28,6 +28,14 @@ name|MissingDigestException
 extends|extends
 name|SignatureException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
 specifier|public
 name|MissingDigestException
 parameter_list|()

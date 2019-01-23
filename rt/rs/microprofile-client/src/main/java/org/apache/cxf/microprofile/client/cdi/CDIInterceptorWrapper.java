@@ -155,6 +155,9 @@ index|[]
 name|params
 parameter_list|,
 name|Callable
+argument_list|<
+name|Object
+argument_list|>
 name|callable
 parameter_list|)
 throws|throws
