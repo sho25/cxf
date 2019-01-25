@@ -213,6 +213,9 @@ operator|.
 name|getAlgorithmSuite
 argument_list|()
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|setAsymmetricSignature
 argument_list|(
 name|rsaSha2SigMethod
@@ -224,6 +227,9 @@ init|=
 name|binding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|getAsymmetricSignature

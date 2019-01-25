@@ -699,7 +699,7 @@ name|algorithmSuite
 operator|.
 name|addSignatureMethod
 argument_list|(
-name|cxfAlgorithmSuite
+name|algorithmSuiteType
 operator|.
 name|getAsymmetricSignature
 argument_list|()
@@ -709,7 +709,7 @@ name|algorithmSuite
 operator|.
 name|addSignatureMethod
 argument_list|(
-name|cxfAlgorithmSuite
+name|algorithmSuiteType
 operator|.
 name|getSymmetricSignature
 argument_list|()

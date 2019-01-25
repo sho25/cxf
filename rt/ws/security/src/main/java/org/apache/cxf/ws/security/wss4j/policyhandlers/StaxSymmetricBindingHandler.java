@@ -974,6 +974,9 @@ operator|.
 name|getAlgorithmSuite
 argument_list|()
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|setAsymmetricSignature
 argument_list|(
 name|asymSignatureAlgorithm
@@ -1013,6 +1016,9 @@ block|{
 name|sbinding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|setSymmetricSignature
@@ -3689,6 +3695,9 @@ argument_list|(
 name|sbinding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|getSymmetricSignature
