@@ -1064,6 +1064,8 @@ name|getValue
 argument_list|()
 argument_list|)
 decl_stmt|;
+comment|// The operation could be null, the particular HTTP verb may not contain any
+comment|// operations but Swagger may still include it.
 if|if
 condition|(
 name|oper
