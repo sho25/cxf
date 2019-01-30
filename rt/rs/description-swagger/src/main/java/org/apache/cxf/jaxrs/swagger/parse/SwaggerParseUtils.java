@@ -1064,6 +1064,13 @@ name|getValue
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|oper
+operator|!=
+literal|null
+condition|)
+block|{
 name|userOp
 operator|.
 name|setPath
@@ -1381,6 +1388,7 @@ argument_list|(
 name|userOp
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
