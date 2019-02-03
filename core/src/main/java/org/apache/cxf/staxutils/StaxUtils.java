@@ -2053,7 +2053,13 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Cannot create a secure XMLInputFactory"
+literal|"Cannot create a secure XMLInputFactory, "
+operator|+
+literal|"you should either add woodstox or set "
+operator|+
+name|ALLOW_INSECURE_PARSER
+operator|+
+literal|" system property to true if an unsafe mode is acceptable."
 argument_list|)
 throw|;
 block|}
