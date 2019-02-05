@@ -71,6 +71,22 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|classloader
+operator|.
+name|ClassLoaderUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|logging
 operator|.
 name|LogUtils
@@ -196,10 +212,12 @@ name|FINE
 argument_list|,
 literal|"interface's classloader for new created ProxyClassLoader is "
 operator|+
-name|proxyInterface
+name|ClassLoaderUtils
 operator|.
-name|getClassLoader
-argument_list|()
+name|getClassLoaderName
+argument_list|(
+name|proxyInterface
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
@@ -439,10 +457,10 @@ name|FINE
 argument_list|,
 literal|"the interface' classloader we are checking is "
 operator|+
-name|currentInterface
-operator|.
 name|getClassLoader
-argument_list|()
+argument_list|(
+name|currentInterface
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if
