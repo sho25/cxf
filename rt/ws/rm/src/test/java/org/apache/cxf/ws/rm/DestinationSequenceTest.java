@@ -751,9 +751,8 @@ name|otherSeq
 init|=
 literal|null
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|seq
 operator|.
 name|equals
@@ -829,9 +828,8 @@ operator|.
 name|RM10WSA200408
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|seq
 operator|.
 name|equals
@@ -2587,9 +2585,8 @@ operator|.
 name|RM10WSA200408
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|seq
 operator|.
 name|sendAcknowledgement
@@ -2774,9 +2771,8 @@ literal|200
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|seq
 operator|.
 name|sendAcknowledgement
@@ -4100,9 +4096,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|seq
 operator|.
 name|canPiggybackAckOnPartialResponse

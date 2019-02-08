@@ -99,6 +99,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -227,11 +239,10 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Policies are compatible."
 argument_list|,
-operator|!
 name|calc
 operator|.
 name|compatible
@@ -485,9 +496,8 @@ argument_list|,
 name|p2
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|p
 operator|.
 name|isAllowChunking
@@ -554,9 +564,8 @@ argument_list|(
 literal|"http://localhost:8080/decoupled"
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|calc
 operator|.
 name|equals
@@ -593,9 +602,8 @@ argument_list|(
 literal|10000L
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|calc
 operator|.
 name|equals

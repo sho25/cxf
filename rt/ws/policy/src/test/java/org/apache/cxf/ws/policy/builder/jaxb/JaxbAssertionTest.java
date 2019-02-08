@@ -213,6 +213,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNull
 import|;
 end_import
@@ -284,9 +296,8 @@ name|getData
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|isOptional
@@ -470,9 +481,8 @@ operator|new
 name|Policy
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|equal
@@ -487,9 +497,8 @@ operator|new
 name|All
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|equal
@@ -504,9 +513,8 @@ operator|new
 name|ExactlyOne
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|equal
@@ -583,9 +591,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|equal
@@ -651,9 +658,8 @@ argument_list|(
 name|qn
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|assertion
 operator|.
 name|equal
@@ -907,9 +913,8 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|alternatives
 operator|.
 name|hasNext

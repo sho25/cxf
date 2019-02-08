@@ -2691,10 +2691,8 @@ operator|.
 name|SIGN
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
-operator|(
 name|signatureResults
 operator|==
 literal|null
@@ -2703,7 +2701,6 @@ name|signatureResults
 operator|.
 name|isEmpty
 argument_list|()
-operator|)
 argument_list|)
 expr_stmt|;
 block|}

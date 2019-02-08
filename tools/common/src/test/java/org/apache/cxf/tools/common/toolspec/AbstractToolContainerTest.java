@@ -79,18 +79,6 @@ name|assertNotNull
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -230,11 +218,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
 block|}
 annotation|@
 name|Test

@@ -849,9 +849,8 @@ operator|+
 literal|5000
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|getNext
@@ -873,9 +872,8 @@ operator|+
 literal|7000
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|getNext
@@ -887,9 +885,8 @@ name|refDate
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|isPending
@@ -970,9 +967,8 @@ operator|+
 literal|15000
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|getNext
@@ -994,9 +990,8 @@ operator|+
 literal|17000
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|getNext
@@ -1008,9 +1003,8 @@ name|refDate
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|candidate
 operator|.
 name|isPending

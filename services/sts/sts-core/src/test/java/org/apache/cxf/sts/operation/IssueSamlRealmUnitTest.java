@@ -971,9 +971,8 @@ operator|.
 name|getRequestSecurityTokenResponse
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityTokenResponse
 operator|.
 name|isEmpty
@@ -1415,9 +1414,8 @@ operator|.
 name|getRequestSecurityTokenResponse
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityTokenResponse
 operator|.
 name|isEmpty
@@ -1859,9 +1857,8 @@ operator|.
 name|getRequestSecurityTokenResponse
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityTokenResponse
 operator|.
 name|isEmpty
@@ -2379,9 +2376,8 @@ operator|.
 name|getRequestSecurityTokenResponse
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityTokenResponse
 operator|.
 name|isEmpty
@@ -2880,9 +2876,8 @@ operator|.
 name|getRequestSecurityTokenResponse
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityTokenResponse
 operator|.
 name|isEmpty

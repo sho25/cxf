@@ -436,9 +436,8 @@ argument_list|(
 name|iat
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|RMPolicyUtilities
 operator|.
 name|equals
@@ -484,9 +483,8 @@ argument_list|(
 name|eb
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|RMPolicyUtilities
 operator|.
 name|equals

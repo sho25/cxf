@@ -263,7 +263,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertSame
+name|assertFalse
 import|;
 end_import
 
@@ -275,7 +275,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|assertSame
 import|;
 end_import
 
@@ -721,9 +721,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -804,9 +803,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -849,9 +847,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -947,9 +944,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -992,9 +988,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -1122,9 +1117,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext
@@ -1308,9 +1302,8 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|it
 operator|.
 name|hasNext

@@ -758,14 +758,11 @@ name|getProtocolHandlers
 argument_list|()
 control|)
 block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
-operator|(
 name|h
 operator|instanceof
 name|LogicalHandler
-operator|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -6420,7 +6417,7 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//        assertTrue(!invoker.getInvokedHandlers().contains(logicalHandlers[1]));
+comment|//        assertFalse(invoker.getInvokedHandlers().contains(logicalHandlers[1]));
 name|assertTrue
 argument_list|(
 name|invoker

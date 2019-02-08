@@ -181,6 +181,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNull
 import|;
 end_import
@@ -350,9 +362,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|eprde
 operator|.
 name|appliesTo
@@ -361,9 +372,8 @@ name|si
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|eprde
 operator|.
 name|appliesTo
@@ -372,9 +382,8 @@ name|boi
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|eprde
 operator|.
 name|appliesTo
@@ -383,9 +392,8 @@ name|bmi
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|eprde
 operator|.
 name|appliesTo
@@ -468,9 +476,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|eprde
 operator|.
 name|appliesTo

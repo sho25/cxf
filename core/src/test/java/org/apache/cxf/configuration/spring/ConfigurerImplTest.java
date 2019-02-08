@@ -197,6 +197,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNull
 import|;
 end_import
@@ -792,11 +804,10 @@ name|getStringAttr
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Unexpected value for attribute booleanAttr"
 argument_list|,
-operator|!
 name|sb
 operator|.
 name|getBooleanAttr
@@ -1044,11 +1055,10 @@ argument_list|(
 name|sb
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Unexpected value for attribute booleanAttr"
 argument_list|,
-operator|!
 name|sb
 operator|.
 name|getBooleanAttr
@@ -1130,11 +1140,10 @@ argument_list|(
 name|sb
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Unexpected value for attribute booleanAttr"
 argument_list|,
-operator|!
 name|sb
 operator|.
 name|getBooleanAttr

@@ -71,6 +71,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -130,9 +142,8 @@ argument_list|(
 literal|"seq1"
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|AbstractSequence
 operator|.
 name|identifierEquals
@@ -157,9 +168,8 @@ argument_list|(
 literal|"seq2"
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|AbstractSequence
 operator|.
 name|identifierEquals

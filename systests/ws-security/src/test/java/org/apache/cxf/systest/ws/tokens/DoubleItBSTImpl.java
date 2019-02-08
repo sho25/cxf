@@ -300,9 +300,8 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|results
 operator|.
 name|isEmpty
@@ -341,9 +340,8 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|securityResults
 operator|.
 name|isEmpty

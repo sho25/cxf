@@ -375,7 +375,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertNull
+name|assertFalse
 import|;
 end_import
 
@@ -387,7 +387,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|assertNull
 import|;
 end_import
 
@@ -646,11 +646,10 @@ name|getBeanName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Unexpected value for property validating"
 argument_list|,
-operator|!
 name|Boolean
 operator|.
 name|TRUE
@@ -1395,11 +1394,10 @@ name|getBeanName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Unexpected value for property validating"
 argument_list|,
-operator|!
 name|Boolean
 operator|.
 name|TRUE

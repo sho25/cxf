@@ -195,6 +195,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNull
 import|;
 end_import
@@ -457,9 +469,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|pa
 operator|.
 name|appliesTo
@@ -593,9 +604,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|pa
 operator|.
 name|appliesTo
@@ -729,9 +739,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|pa
 operator|.
 name|appliesTo
@@ -865,9 +874,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|pa
 operator|.
 name|appliesTo
@@ -1001,9 +1009,8 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|pa
 operator|.
 name|appliesTo

@@ -677,11 +677,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -712,11 +708,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|ctx
 operator|.
@@ -824,11 +816,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -859,11 +847,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|ctx
 operator|.
@@ -934,11 +918,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut
@@ -977,11 +957,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1069,11 +1045,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut
@@ -1185,11 +1157,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut
@@ -1228,11 +1196,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1265,11 +1229,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1300,11 +1260,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1392,11 +1348,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut
@@ -1452,11 +1404,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1487,11 +1435,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|wssOut
 operator|.
@@ -1585,11 +1529,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut
@@ -1628,11 +1568,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 comment|// this is successful because the alternative policy allows a password to be specified.
 name|wssOut
@@ -1727,11 +1663,7 @@ name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 name|WSS4JOutInterceptor
 name|wssOut

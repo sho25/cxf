@@ -6502,9 +6502,8 @@ operator|!=
 name|id2
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|id1
 operator|.
 name|getValue

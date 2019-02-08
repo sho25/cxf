@@ -77,6 +77,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNull
 import|;
 end_import
@@ -158,11 +170,10 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Extension is deferred."
 argument_list|,
-operator|!
 name|e
 operator|.
 name|isDeferred

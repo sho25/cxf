@@ -3405,9 +3405,8 @@ argument_list|>
 name|links
 parameter_list|)
 block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|links
 operator|.
 name|isEmpty

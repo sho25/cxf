@@ -612,11 +612,7 @@ name|IllegalStateException
 name|ie
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 catch|catch
 parameter_list|(

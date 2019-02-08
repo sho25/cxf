@@ -1091,11 +1091,7 @@ name|ResourceAdapterInternalException
 name|raie
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 block|}
 annotation|@
