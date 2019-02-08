@@ -1763,10 +1763,16 @@ name|JAVA_VERSION_16
 condition|?
 name|operLink
 else|:
+name|javaDocsBuiltByVersion
+operator|<=
+name|JAVA_VERSION_18
+condition|?
 name|operLink
 operator|.
 name|toLowerCase
 argument_list|()
+else|:
+literal|"<a id=\""
 return|;
 block|}
 specifier|protected
