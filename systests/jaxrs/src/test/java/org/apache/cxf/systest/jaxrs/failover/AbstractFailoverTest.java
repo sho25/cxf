@@ -1583,7 +1583,7 @@ name|expectServerException
 condition|)
 block|{
 comment|//String currEndpoint = getCurrentEndpointAddress(bookStore);
-comment|//assertTrue(currEndpoint.equals(inactiveReplica));
+comment|//assertEquals(currEndpoint, inactiveReplica);
 throw|throw
 name|error
 throw|;
@@ -1909,14 +1909,11 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|currEndpoint
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|activeReplica1
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -2047,27 +2044,21 @@ condition|(
 name|notAvailableOnly
 condition|)
 block|{
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|currEndpoint
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|currentReplica
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
 else|else
 block|{
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|currEndpoint
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|newReplica
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

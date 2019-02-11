@@ -342,14 +342,11 @@ operator|!=
 literal|0
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|data
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|data
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// checkstyle isn't smart enough to know we're testing equals....

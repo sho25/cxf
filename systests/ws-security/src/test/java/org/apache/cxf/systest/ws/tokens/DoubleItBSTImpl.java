@@ -25,16 +25,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|List
 import|;
 end_import
@@ -382,11 +372,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|binarySecurityToken
 operator|.
@@ -397,7 +383,6 @@ literal|"This is a token"
 operator|.
 name|getBytes
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 return|return

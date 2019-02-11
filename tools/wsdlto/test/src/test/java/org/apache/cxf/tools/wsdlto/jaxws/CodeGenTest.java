@@ -4796,7 +4796,7 @@ index|[]
 block|{}
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"method declared on SayHi"
 argument_list|,
@@ -4804,11 +4804,8 @@ name|method
 operator|.
 name|getDeclaringClass
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|clz
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

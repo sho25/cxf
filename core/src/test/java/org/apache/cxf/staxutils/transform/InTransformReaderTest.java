@@ -171,18 +171,6 @@ name|assertEquals
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -268,14 +256,11 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"<test2 xmlns=\"\"/>"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|value
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

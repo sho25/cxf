@@ -2146,14 +2146,11 @@ argument_list|,
 literal|"table"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"SELECT * FROM table WHERE name = 'test'"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|sql
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

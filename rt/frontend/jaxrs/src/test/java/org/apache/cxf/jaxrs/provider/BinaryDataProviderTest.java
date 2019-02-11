@@ -111,16 +111,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Arrays
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|ws
@@ -212,6 +202,18 @@ operator|.
 name|junit
 operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertArrayEquals
 import|;
 end_import
 
@@ -504,11 +506,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 operator|new
 name|String
@@ -520,7 +518,6 @@ name|getBytes
 argument_list|()
 argument_list|,
 name|bytes
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|InputStream
@@ -578,11 +575,7 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 operator|new
 name|String
@@ -594,7 +587,6 @@ name|getBytes
 argument_list|()
 argument_list|,
 name|bytes
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Reader
@@ -722,11 +714,7 @@ operator|.
 name|toByteArray
 argument_list|()
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 operator|new
 name|String
@@ -738,7 +726,6 @@ name|getBytes
 argument_list|()
 argument_list|,
 name|bytes
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -825,16 +812,11 @@ name|utf8Bytes
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|utf8Bytes
 argument_list|,
 name|readBytes
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -896,11 +878,7 @@ argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 operator|new
 name|String
@@ -915,7 +893,6 @@ name|os
 operator|.
 name|toByteArray
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|ByteArrayInputStream
@@ -955,11 +932,7 @@ argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|os
 operator|.
@@ -974,7 +947,6 @@ argument_list|)
 operator|.
 name|getBytes
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Reader
@@ -1016,11 +988,7 @@ argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|os
 operator|.
@@ -1035,7 +1003,6 @@ argument_list|)
 operator|.
 name|getBytes
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|os
@@ -1070,11 +1037,7 @@ argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|os
 operator|.
@@ -1089,7 +1052,6 @@ argument_list|)
 operator|.
 name|getBytes
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

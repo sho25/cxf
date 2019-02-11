@@ -161,6 +161,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -349,18 +361,15 @@ argument_list|(
 literal|"Betty"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Unexpected returned string: "
 operator|+
 name|output
 argument_list|,
 literal|"Hello Betty"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|output
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

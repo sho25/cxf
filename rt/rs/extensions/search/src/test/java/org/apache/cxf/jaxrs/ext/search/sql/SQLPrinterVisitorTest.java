@@ -163,6 +163,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -871,14 +883,11 @@ operator|.
 name|getQuery
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"SELECT * FROM table WHERE name = 'test'"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|sql
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -934,14 +943,11 @@ operator|.
 name|getQuery
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"SELECT NAMES FROM table WHERE name = 'test'"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|sql
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1013,14 +1019,11 @@ operator|.
 name|getQuery
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"SELECT NAMES FROM table WHERE NAMES = 'test'"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|sql
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

@@ -105,6 +105,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertFalse
 import|;
 end_import
@@ -262,16 +274,13 @@ operator|!=
 name|hashcode2
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"reflexivity violated"
 argument_list|,
 name|ep
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|ep
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertFalse

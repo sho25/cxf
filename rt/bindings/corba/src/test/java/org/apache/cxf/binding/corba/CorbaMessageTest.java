@@ -862,7 +862,7 @@ name|retVal
 argument_list|)
 expr_stmt|;
 comment|// NEED TO DO TEST FOR EXCEPTIONS
-comment|/*Exception ex = new CorbaBindingException("TestException");         msg.s.setException(ex);         Exception msgEx = msg.getException();         assertNotNull(msgEx);         assertTrue(msgEx.getMessage().equals(ex.getMessage()));*/
+comment|/*Exception ex = new CorbaBindingException("TestException");         msg.s.setException(ex);         Exception msgEx = msg.getException();         assertNotNull(msgEx);         assertEquals(msgEx.getMessage(), ex.getMessage());*/
 block|}
 block|}
 end_class

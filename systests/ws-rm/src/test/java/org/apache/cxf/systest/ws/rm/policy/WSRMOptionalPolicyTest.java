@@ -121,6 +121,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -223,12 +235,10 @@ init|=
 name|createService
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Hello, cxf!"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|service
 operator|.
 name|hello
@@ -236,20 +246,16 @@ argument_list|(
 literal|"cxf"
 argument_list|)
 argument_list|)
-argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Goodbye, cxf!"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|service
 operator|.
 name|goodbye
 argument_list|(
 literal|"cxf"
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

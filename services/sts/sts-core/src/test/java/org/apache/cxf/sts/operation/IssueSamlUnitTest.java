@@ -55,16 +55,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Base64
 import|;
 end_import
@@ -910,6 +900,18 @@ operator|.
 name|util
 operator|.
 name|WSSecurityUtil
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertArrayEquals
 import|;
 end_import
 
@@ -5753,11 +5755,7 @@ operator|.
 name|getSubjectKeyInfo
 argument_list|()
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|secret
 argument_list|,
@@ -5765,7 +5763,6 @@ name|samlKeyInfo
 operator|.
 name|getSecret
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

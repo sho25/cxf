@@ -57,6 +57,30 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNotEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -133,16 +157,13 @@ literal|"fooPort"
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Checking equals "
 argument_list|,
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -200,16 +221,13 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Checking equals with null parameters "
 argument_list|,
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -283,17 +301,13 @@ literal|"fooPort"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"Checking that objects are not equals "
 argument_list|,
-operator|!
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|cr1
@@ -352,17 +366,13 @@ literal|"fooPort"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"Checking that objects are not equal "
 argument_list|,
-operator|!
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|cr1
@@ -421,17 +431,13 @@ literal|"fooPort"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"Checking that objects are not equal "
 argument_list|,
-operator|!
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|cr1
@@ -490,17 +496,13 @@ literal|"fooPortx"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"Checking that objects are not equal "
 argument_list|,
-operator|!
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|cr1
@@ -555,17 +557,13 @@ literal|"fooPort"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"Checking that objects are not equal "
 argument_list|,
-operator|!
 name|cr1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|cr2
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

@@ -469,18 +469,6 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|fail
 import|;
 end_import
@@ -1906,12 +1894,10 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"AuthenticationContext"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|securityTokenResponse
 operator|.
 name|get
@@ -1921,7 +1907,6 @@ argument_list|)
 operator|.
 name|getContext
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

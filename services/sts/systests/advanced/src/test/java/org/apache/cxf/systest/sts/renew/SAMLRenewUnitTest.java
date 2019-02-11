@@ -281,6 +281,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertFalse
 import|;
 end_import
@@ -1105,7 +1117,7 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|validatedTokens
 operator|.
@@ -1113,11 +1125,8 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|token
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Renew the token
@@ -1430,7 +1439,7 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|validatedTokens
 operator|.
@@ -1438,11 +1447,8 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|token
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Renew the token

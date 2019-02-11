@@ -3523,18 +3523,15 @@ operator|.
 name|getResponseType
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected string, "
 operator|+
 name|expected
 argument_list|,
 name|expected
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|responseValue
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Test oneway
@@ -3583,18 +3580,15 @@ operator|.
 name|getResponseType
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected string, "
 operator|+
 name|expected
 argument_list|,
 name|expected
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|responseValue2
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Test async callback
@@ -3646,18 +3640,15 @@ operator|.
 name|getResponseType
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected string, "
 operator|+
 name|expected
 argument_list|,
 name|expected
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|responseValue3
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|org
@@ -4075,18 +4066,15 @@ operator|.
 name|getResponseType
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected string, "
 operator|+
 name|expected
 argument_list|,
 name|expected
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|responseValue
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals

@@ -2190,16 +2190,13 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Policy was not merged"
 argument_list|,
 name|n1
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|aqn1
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

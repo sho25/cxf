@@ -277,17 +277,14 @@ name|MessageReader
 name|reader
 parameter_list|)
 block|{
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Envelope"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|reader
 operator|.
 name|getLocalName
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// make sure we can repeat this

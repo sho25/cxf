@@ -2486,12 +2486,10 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"manager"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roles
 operator|.
 name|iterator
@@ -2502,7 +2500,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -2714,12 +2711,10 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"employee"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roles
 operator|.
 name|iterator
@@ -2730,7 +2725,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

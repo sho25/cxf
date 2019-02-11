@@ -996,20 +996,13 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected sequence identifier"
 argument_list|,
-name|o
-operator|instanceof
-name|String
-operator|&&
 name|sseqId
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|o
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|o
@@ -1477,20 +1470,13 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"Expected sequence identifier"
 argument_list|,
-name|o
-operator|instanceof
-name|String
-operator|&&
 name|sseqId
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|o
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|o

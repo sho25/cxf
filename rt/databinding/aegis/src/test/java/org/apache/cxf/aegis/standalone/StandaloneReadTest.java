@@ -296,14 +296,11 @@ argument_list|(
 name|streamReader
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"ball-of-yarn"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|something
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

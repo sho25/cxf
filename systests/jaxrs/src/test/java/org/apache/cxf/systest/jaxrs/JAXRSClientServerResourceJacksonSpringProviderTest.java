@@ -53,16 +53,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Collection
 import|;
 end_import
@@ -292,6 +282,18 @@ operator|.
 name|junit
 operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertArrayEquals
 import|;
 end_import
 
@@ -732,16 +734,11 @@ argument_list|(
 name|is2
 argument_list|)
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|Arrays
-operator|.
-name|equals
+name|assertArrayEquals
 argument_list|(
 name|image1
 argument_list|,
 name|image2
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

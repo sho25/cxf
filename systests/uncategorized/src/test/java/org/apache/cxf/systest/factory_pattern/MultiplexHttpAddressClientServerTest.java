@@ -323,6 +323,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -761,21 +773,18 @@ operator|.
 name|isEven
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"103 is not even"
 argument_list|,
 name|Boolean
 operator|.
 name|FALSE
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|numResp
 operator|.
 name|isEven
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

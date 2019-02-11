@@ -53,7 +53,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 import|;
 end_import
 
@@ -116,12 +116,10 @@ argument_list|(
 name|service
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"somevalue"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|db
 operator|.
 name|getUnmarshallerProperties
@@ -130,7 +128,6 @@ operator|.
 name|get
 argument_list|(
 literal|"someproperty"
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -657,6 +657,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -901,17 +913,14 @@ operator|.
 name|EXPIRED
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"A"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|validatorResponse
 operator|.
 name|getTokenRealm
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Renew the Assertion
@@ -1354,17 +1363,14 @@ operator|.
 name|EXPIRED
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"B"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|validatorResponse
 operator|.
 name|getTokenRealm
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Renew the Assertion

@@ -4935,12 +4935,10 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"application/json"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|candidateList
 operator|.
 name|get
@@ -4950,7 +4948,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//test basic
@@ -4989,12 +4986,10 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"application/json"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|candidateList
 operator|.
 name|get
@@ -5004,7 +4999,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//test accept wild card */*
@@ -5123,12 +5117,10 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"application/json"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|candidateList
 operator|.
 name|get
@@ -5138,7 +5130,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//test produce wild card application/*
@@ -5163,12 +5154,10 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"application/json"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|candidateList
 operator|.
 name|get
@@ -5178,7 +5167,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//test produce wild card */*, accept wild card */*
@@ -5203,12 +5191,10 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"*/*"
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|candidateList
 operator|.
 name|get
@@ -5218,7 +5204,6 @@ argument_list|)
 operator|.
 name|toString
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

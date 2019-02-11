@@ -167,18 +167,6 @@ name|assertNotNull
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -401,19 +389,16 @@ operator|.
 name|getTypeMap
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|resultTM
 operator|.
 name|getTargetNamespace
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|CorbaConstants
 operator|.
 name|NU_WSDL_CORBA
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

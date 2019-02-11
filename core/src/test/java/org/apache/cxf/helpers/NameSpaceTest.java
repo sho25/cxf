@@ -61,18 +61,6 @@ name|assertNull
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -324,14 +312,11 @@ name|nsDecl1
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|nsDecl3
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|nsDecl1
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

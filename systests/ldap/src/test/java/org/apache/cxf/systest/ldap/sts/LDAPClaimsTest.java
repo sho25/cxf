@@ -2686,7 +2686,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2697,11 +2697,8 @@ argument_list|)
 operator|.
 name|getClaimType
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roleURI
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Assert
@@ -2847,7 +2844,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2858,11 +2855,8 @@ argument_list|)
 operator|.
 name|getClaimType
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roleURI
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Assert
@@ -3027,7 +3021,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -3038,11 +3032,8 @@ argument_list|)
 operator|.
 name|getClaimType
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roleURI
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Assert
@@ -3207,7 +3198,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -3218,11 +3209,8 @@ argument_list|)
 operator|.
 name|getClaimType
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|roleURI
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|Assert
