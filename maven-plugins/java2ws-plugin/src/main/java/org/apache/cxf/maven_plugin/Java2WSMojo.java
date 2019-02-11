@@ -428,6 +428,11 @@ specifier|private
 name|Boolean
 name|classpathAsEnvVar
 decl_stmt|;
+comment|/**      * Disable garbage collection at the end of the execution.      *      * @parameter expression="${cxf.skipGarbageCollection}" default-value="false"      * @since 3.3.1      */
+specifier|private
+name|boolean
+name|skipGarbageCollection
+decl_stmt|;
 specifier|public
 name|void
 name|execute
@@ -705,11 +710,18 @@ name|restoreClassLoader
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+operator|!
+name|skipGarbageCollection
+condition|)
+block|{
 name|System
 operator|.
 name|gc
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|List
