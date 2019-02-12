@@ -93,7 +93,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertEquals
+name|assertTrue
 import|;
 end_import
 
@@ -132,7 +132,7 @@ argument_list|,
 literal|"org.apache.cxf.client"
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 name|ContextUtils
 operator|.
@@ -140,8 +140,6 @@ name|isRequestor
 argument_list|(
 name|message
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -182,7 +180,7 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 name|ContextUtils
 operator|.
@@ -190,8 +188,6 @@ name|isOutbound
 argument_list|(
 name|message
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}

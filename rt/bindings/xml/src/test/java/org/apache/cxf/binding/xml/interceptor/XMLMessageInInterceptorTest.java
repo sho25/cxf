@@ -185,6 +185,18 @@ name|assertNotNull
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -381,11 +393,9 @@ operator|instanceof
 name|MyComplexStructType
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"method input in1 is String tli"
-argument_list|,
-literal|true
 argument_list|,
 operator|(
 operator|(
@@ -522,11 +532,9 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"method input me is String tli"
-argument_list|,
-literal|true
 argument_list|,
 operator|(
 operator|(
@@ -667,11 +675,9 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"method input me is String tli"
-argument_list|,
-literal|true
 argument_list|,
 name|list
 operator|.

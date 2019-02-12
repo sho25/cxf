@@ -447,6 +447,18 @@ name|assertNotSame
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -1296,11 +1308,9 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Should return true"
-argument_list|,
-literal|true
 argument_list|,
 name|match
 argument_list|)
@@ -1532,11 +1542,9 @@ argument_list|,
 name|fil2
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Should find a match"
-argument_list|,
-literal|true
 argument_list|,
 name|match
 argument_list|)
@@ -1573,11 +1581,9 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Should return true"
-argument_list|,
-literal|true
 argument_list|,
 name|match
 argument_list|)
@@ -1783,11 +1789,9 @@ argument_list|,
 name|mi2
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Should find a match"
-argument_list|,
-literal|true
 argument_list|,
 name|match
 argument_list|)

@@ -6423,10 +6423,8 @@ name|name
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|webParamAnno
 operator|.
 name|header
@@ -6650,10 +6648,8 @@ argument_list|,
 literal|"greetMe"
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|webParamAnno
 operator|.
 name|header

@@ -1865,33 +1865,14 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// no other headers should be present
-if|if
-condition|(
-operator|!
+name|assertTrue
+argument_list|(
 name|headers
 operator|.
 name|isEmpty
 argument_list|()
-condition|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"Unexpected header element "
-operator|+
-name|headers
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-operator|.
-name|getName
-argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 end_class

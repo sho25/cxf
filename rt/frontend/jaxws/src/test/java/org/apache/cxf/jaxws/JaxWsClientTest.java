@@ -2053,10 +2053,8 @@ name|Fault
 name|fault
 parameter_list|)
 block|{
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|fault
 operator|.
 name|getMessage

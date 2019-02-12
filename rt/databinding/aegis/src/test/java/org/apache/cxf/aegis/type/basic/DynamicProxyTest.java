@@ -288,10 +288,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|data
 operator|.
 name|isUseless
@@ -970,10 +968,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|data
 operator|.
 name|getMyInterface

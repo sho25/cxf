@@ -6828,13 +6828,11 @@ operator|.
 name|getMessage
 argument_list|()
 decl_stmt|;
-name|assertFalse
+name|assertNotNull
 argument_list|(
 name|error
 argument_list|,
 name|e
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

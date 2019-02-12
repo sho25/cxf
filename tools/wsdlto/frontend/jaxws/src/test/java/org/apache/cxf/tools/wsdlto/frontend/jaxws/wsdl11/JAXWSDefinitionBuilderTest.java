@@ -390,11 +390,9 @@ name|getPackage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Customized enableAsync does not parsered"
-argument_list|,
-literal|true
 argument_list|,
 name|binding
 operator|.
@@ -728,11 +726,9 @@ name|getPackage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Customized enableAsync does not parsered"
-argument_list|,
-literal|true
 argument_list|,
 name|binding
 operator|.

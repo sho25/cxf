@@ -507,10 +507,8 @@ operator|.
 name|getObj
 argument_list|()
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|true
-argument_list|,
 name|genericObj
 operator|.
 name|getA

@@ -260,11 +260,10 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"object method must not be passed to next handler in chain"
 argument_list|,
-operator|!
 name|dummyHandler
 operator|.
 name|invokeCalled
@@ -376,11 +375,10 @@ name|this
 block|}
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"object method must not be passed to next handler in chain"
 argument_list|,
-operator|!
 name|dummyHandler
 operator|.
 name|invokeCalled
@@ -643,11 +641,10 @@ argument_list|,
 name|args
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"object method must not be passed to next handler in chain"
 argument_list|,
-operator|!
 name|dummyHandler
 operator|.
 name|invokeCalled

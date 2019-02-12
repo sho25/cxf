@@ -243,6 +243,30 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertNotEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -585,7 +609,7 @@ operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"property is null"
 argument_list|,
@@ -597,8 +621,6 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -770,15 +792,12 @@ operator|.
 name|reload
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"address is different"
 argument_list|,
-operator|!
 name|address
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|requestContext
 operator|.
 name|get
@@ -788,10 +807,9 @@ operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
 argument_list|)
-argument_list|)
 expr_stmt|;
 comment|// verify value reflects what other threads were doing
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"property is null from last thread execution"
 argument_list|,
@@ -803,8 +821,6 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -1144,7 +1160,7 @@ operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"property is null"
 argument_list|,
@@ -1156,8 +1172,6 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -1329,15 +1343,12 @@ operator|.
 name|reload
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"address is different"
 argument_list|,
-operator|!
 name|address
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|requestContext
 operator|.
 name|get
@@ -1347,10 +1358,9 @@ operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
 argument_list|)
-argument_list|)
 expr_stmt|;
 comment|// verify value reflects what other threads were doing
-name|assertTrue
+name|assertNull
 argument_list|(
 literal|"property is null from last thread execution"
 argument_list|,
@@ -1362,8 +1372,6 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|)
-operator|==
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

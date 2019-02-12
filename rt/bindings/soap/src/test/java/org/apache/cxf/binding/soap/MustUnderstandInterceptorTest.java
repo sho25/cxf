@@ -333,18 +333,6 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertEquals
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|assertTrue
 import|;
 end_import
@@ -541,11 +529,9 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getRoles has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -553,11 +539,9 @@ name|isCalledGetRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getUnderstood has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -600,11 +584,9 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getRoles has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -612,11 +594,9 @@ name|isCalledGetRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getUnderstood has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -776,11 +756,9 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getRoles has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -788,11 +766,9 @@ name|isCalledGetRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getUnderstood has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -898,11 +874,9 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getRoles has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.
@@ -910,11 +884,9 @@ name|isCalledGetRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"DummaySoapInterceptor getUnderstood has been called!"
-argument_list|,
-literal|true
 argument_list|,
 name|dsi
 operator|.

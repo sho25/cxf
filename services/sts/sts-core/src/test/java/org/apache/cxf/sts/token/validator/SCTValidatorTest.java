@@ -599,7 +599,7 @@ operator|.
 name|VALID
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
 name|validatorResponse
 operator|.
@@ -612,8 +612,6 @@ name|SCTValidator
 operator|.
 name|SCT_VALIDATOR_SECRET
 argument_list|)
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals

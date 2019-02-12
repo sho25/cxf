@@ -143,6 +143,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -410,12 +422,10 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"class loader must NOT be the plugInClassLoader"
 argument_list|,
-operator|!
-operator|(
 name|plugInClassLoader
 operator|.
 name|equals
@@ -425,7 +435,6 @@ operator|.
 name|getClassLoader
 argument_list|()
 argument_list|)
-operator|)
 argument_list|)
 expr_stmt|;
 block|}

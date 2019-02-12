@@ -901,7 +901,7 @@ operator|.
 name|getEngine
 argument_list|()
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 name|engine
 operator|.
@@ -913,11 +913,9 @@ argument_list|()
 operator|.
 name|isWant
 argument_list|()
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 name|engine
 operator|.
@@ -929,8 +927,6 @@ argument_list|()
 operator|.
 name|isRequired
 argument_list|()
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|NettyHttpDestination
