@@ -169,7 +169,19 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertEquals
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -459,11 +471,9 @@ name|contentType
 argument_list|)
 expr_stmt|;
 comment|//assert
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"The truncated status should be set to false"
-argument_list|,
-literal|false
 argument_list|,
 name|classUnderTest
 operator|.
@@ -507,11 +517,9 @@ name|contentType
 argument_list|)
 expr_stmt|;
 comment|//assert
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"The truncated status should be set to true"
-argument_list|,
-literal|true
 argument_list|,
 name|classUnderTest
 operator|.

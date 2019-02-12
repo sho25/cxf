@@ -2159,11 +2159,10 @@ name|sequence
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"queue is empty"
 argument_list|,
-operator|!
 name|queue
 operator|.
 name|isEmpty

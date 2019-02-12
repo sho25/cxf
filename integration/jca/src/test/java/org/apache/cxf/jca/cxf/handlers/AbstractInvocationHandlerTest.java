@@ -69,7 +69,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertSame
+name|assertFalse
 import|;
 end_import
 
@@ -81,7 +81,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|assertSame
 import|;
 end_import
 
@@ -141,11 +141,10 @@ argument_list|,
 name|args
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"target object must not be called"
 argument_list|,
-operator|!
 name|target
 operator|.
 name|methodInvoked

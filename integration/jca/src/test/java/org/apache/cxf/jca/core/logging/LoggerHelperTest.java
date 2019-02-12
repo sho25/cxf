@@ -129,6 +129,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -339,11 +351,10 @@ operator|new
 name|DummyWriter
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"The DummyWriter init error"
 argument_list|,
-operator|!
 name|writer
 operator|.
 name|writed

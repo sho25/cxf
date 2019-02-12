@@ -71,7 +71,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertFalse
+name|fail
 import|;
 end_import
 
@@ -187,11 +187,9 @@ operator|.
 name|printStackTrace
 argument_list|()
 expr_stmt|;
-name|assertFalse
+name|fail
 argument_list|(
-literal|"Some Exception happen to MBServerConnectorTest"
-argument_list|,
-literal|true
+literal|"Some Exception happened to MBServerConnectorTest"
 argument_list|)
 expr_stmt|;
 block|}

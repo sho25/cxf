@@ -191,6 +191,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -504,11 +516,10 @@ argument_list|,
 name|rai2
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"props not empty"
 argument_list|,
-operator|!
 name|rai2
 operator|.
 name|getPluginProps

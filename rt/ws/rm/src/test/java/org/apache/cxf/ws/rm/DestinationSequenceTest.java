@@ -3494,11 +3494,10 @@ literal|true
 expr_stmt|;
 block|}
 block|}
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"timed out waiting for messages to be processed in order"
 argument_list|,
-operator|!
 name|timedOut
 argument_list|)
 expr_stmt|;

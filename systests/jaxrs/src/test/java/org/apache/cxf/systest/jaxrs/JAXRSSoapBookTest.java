@@ -6245,11 +6245,10 @@ name|handleMessageOnOutInterceptorCalled
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"In Interceptor not invoked"
 argument_list|,
-operator|!
 name|testFeature
 operator|.
 name|handleMessageOnInInterceptorCalled
@@ -6447,11 +6446,10 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"In Interceptor not invoked"
 argument_list|,
-operator|!
 name|testFeature
 operator|.
 name|handleMessageOnInInterceptorCalled

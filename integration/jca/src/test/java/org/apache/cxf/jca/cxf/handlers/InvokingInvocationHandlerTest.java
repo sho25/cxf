@@ -91,6 +91,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -266,11 +278,10 @@ parameter_list|()
 throws|throws
 name|Throwable
 block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
-literal|"target method  must not have be called"
+literal|"target method must not have be called"
 argument_list|,
-operator|!
 name|target
 operator|.
 name|methodInvoked
@@ -310,11 +321,10 @@ parameter_list|()
 throws|throws
 name|IllegalArgumentException
 block|{
-name|assertTrue
+name|assertFalse
 argument_list|(
-literal|"target object must no have been invoked"
+literal|"target object must not have been invoked"
 argument_list|,
-operator|!
 name|target
 operator|.
 name|methodInvoked

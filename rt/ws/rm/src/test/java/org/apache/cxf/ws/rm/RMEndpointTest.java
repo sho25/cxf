@@ -465,6 +465,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -2471,33 +2483,30 @@ argument_list|,
 name|oi
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Operation is oneway."
 argument_list|,
-operator|!
 name|oi
 operator|.
 name|isOneWay
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Operation is unwrapped."
 argument_list|,
-operator|!
 name|oi
 operator|.
 name|isUnwrapped
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Operation is unwrappedCapable."
 argument_list|,
-operator|!
 name|oi
 operator|.
 name|isUnwrappedCapable
@@ -2568,11 +2577,10 @@ argument_list|,
 name|oi
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 literal|"Operation is oneway."
 argument_list|,
-operator|!
 name|oi
 operator|.
 name|isOneWay
