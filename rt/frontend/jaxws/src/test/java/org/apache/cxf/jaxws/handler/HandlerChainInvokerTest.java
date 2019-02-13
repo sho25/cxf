@@ -985,10 +985,8 @@ argument_list|,
 name|lmc
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
-literal|false
-argument_list|,
 name|ret
 argument_list|)
 expr_stmt|;
@@ -1200,10 +1198,8 @@ name|isClosed
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
-literal|false
-argument_list|,
 name|ret
 argument_list|)
 expr_stmt|;

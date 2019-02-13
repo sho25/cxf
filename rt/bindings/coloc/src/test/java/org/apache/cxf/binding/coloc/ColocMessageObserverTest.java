@@ -321,7 +321,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertEquals
+name|assertFalse
 import|;
 end_import
 
@@ -334,6 +334,18 @@ operator|.
 name|Assert
 operator|.
 name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -967,14 +979,13 @@ argument_list|,
 name|inEx
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Message.REQUESTOR_ROLE should be false"
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|FALSE
-argument_list|,
+operator|)
 name|inMsg
 operator|.
 name|get
@@ -985,14 +996,13 @@ name|REQUESTOR_ROLE
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Message.INBOUND_MESSAGE should be true"
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|inMsg
 operator|.
 name|get

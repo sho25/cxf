@@ -2130,13 +2130,11 @@ argument_list|(
 name|message
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"doIntercept not return false"
 argument_list|,
 name|result
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 name|assertNotNull

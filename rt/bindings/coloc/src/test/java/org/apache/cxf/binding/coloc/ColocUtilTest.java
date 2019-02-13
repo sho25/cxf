@@ -431,6 +431,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertNotNull
 import|;
 end_import
@@ -969,11 +981,9 @@ operator|.
 name|iterator
 argument_list|()
 decl_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not have interceptors in chain"
-argument_list|,
-literal|false
 argument_list|,
 name|iter
 operator|.
@@ -1254,11 +1264,9 @@ operator|.
 name|iterator
 argument_list|()
 decl_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not have interceptors in chain"
-argument_list|,
-literal|false
 argument_list|,
 name|iter
 operator|.
@@ -1337,11 +1345,9 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)
@@ -1357,11 +1363,9 @@ argument_list|,
 name|fil1
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)
@@ -1486,11 +1490,9 @@ argument_list|,
 name|fil2
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)
@@ -1655,11 +1657,9 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)
@@ -1675,11 +1675,9 @@ argument_list|,
 name|mi2
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)
@@ -1760,11 +1758,9 @@ argument_list|,
 name|mi2
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 literal|"Should not find a match"
-argument_list|,
-literal|false
 argument_list|,
 name|match
 argument_list|)

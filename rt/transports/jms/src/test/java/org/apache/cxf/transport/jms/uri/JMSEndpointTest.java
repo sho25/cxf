@@ -263,10 +263,8 @@ operator|.
 name|QUEUE
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
-literal|false
-argument_list|,
 name|endpoint
 operator|.
 name|isUseConduitIdSelector

@@ -441,11 +441,9 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Customized enable EnableWrapperStyle name does not been parsered"
-argument_list|,
-literal|true
 argument_list|,
 name|binding
 operator|.
@@ -777,11 +775,9 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Customized enable EnableWrapperStyle name does not been parsered"
-argument_list|,
-literal|true
 argument_list|,
 name|binding
 operator|.

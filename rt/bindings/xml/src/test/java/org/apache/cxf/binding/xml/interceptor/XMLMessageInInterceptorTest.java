@@ -377,11 +377,9 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"method input in2 is MyComplexStructType"
-argument_list|,
-literal|true
 argument_list|,
 name|list
 operator|.

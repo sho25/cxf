@@ -2742,15 +2742,11 @@ argument_list|(
 name|created
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertFalse
 argument_list|(
 name|created
 operator|.
 name|value
-argument_list|,
-name|Boolean
-operator|.
-name|FALSE
 argument_list|)
 expr_stmt|;
 block|}

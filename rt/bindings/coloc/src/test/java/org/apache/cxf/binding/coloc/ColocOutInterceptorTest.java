@@ -533,6 +533,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|fail
 import|;
 end_import
@@ -1631,14 +1643,13 @@ argument_list|(
 name|msg
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"COLOCATED property should be set"
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|msg
 operator|.
 name|get
@@ -1983,14 +1994,13 @@ argument_list|,
 name|inMsg
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Requestor role should be set to true."
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|inMsg
 operator|.
 name|get
@@ -2001,14 +2011,13 @@ name|REQUESTOR_ROLE
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Inbound Message should be set to true."
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|inMsg
 operator|.
 name|get
@@ -2029,14 +2038,13 @@ name|getInterceptorChain
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"Client Invoke state should be FINISHED"
 argument_list|,
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|ex
 operator|.
 name|get

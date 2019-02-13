@@ -1671,11 +1671,9 @@ operator|.
 name|getClient
 argument_list|()
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"the httpClientPolicy's autoRedirect should be true"
-argument_list|,
-literal|true
 argument_list|,
 name|httpClientPolicy
 operator|.

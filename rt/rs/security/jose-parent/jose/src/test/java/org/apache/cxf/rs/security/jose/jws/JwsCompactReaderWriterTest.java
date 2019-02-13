@@ -1441,12 +1441,11 @@ name|getExpiryTime
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
+operator|(
 name|Boolean
-operator|.
-name|TRUE
-argument_list|,
+operator|)
 name|claims
 operator|.
 name|getClaim
