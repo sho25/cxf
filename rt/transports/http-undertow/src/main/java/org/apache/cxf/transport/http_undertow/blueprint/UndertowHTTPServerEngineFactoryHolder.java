@@ -1014,6 +1014,16 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|threads
+operator|.
+name|getWorkerIOThreads
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|rThreads
 operator|.
 name|setWorkerIOThreads
@@ -1024,6 +1034,7 @@ name|getWorkerIOThreads
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|eng
 operator|.
 name|setThreadingParameters
