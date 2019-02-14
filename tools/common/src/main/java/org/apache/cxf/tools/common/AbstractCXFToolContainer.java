@@ -1044,7 +1044,7 @@ name|strBuf
 operator|.
 name|append
 argument_list|(
-literal|"_"
+literal|'_'
 argument_list|)
 expr_stmt|;
 block|}

@@ -629,7 +629,7 @@ name|ob
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 comment|// extra trailing space won't hurt.

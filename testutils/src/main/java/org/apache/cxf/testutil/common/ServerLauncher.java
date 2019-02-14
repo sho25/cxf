@@ -2229,7 +2229,7 @@ name|classpath
 operator|.
 name|append
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 expr_stmt|;
 comment|//on OSX, the compatibility lib brclasspath.indexOf("/.compatibility/")

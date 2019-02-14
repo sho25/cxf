@@ -1423,7 +1423,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 expr_stmt|;
 block|}
@@ -1449,7 +1449,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|"["
+literal|'['
 argument_list|)
 expr_stmt|;
 for|for
@@ -1471,7 +1471,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 block|}
@@ -1479,7 +1479,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|"]"
+literal|']'
 argument_list|)
 expr_stmt|;
 block|}
@@ -1488,7 +1488,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|"["
+literal|'['
 argument_list|)
 expr_stmt|;
 name|string
@@ -1525,7 +1525,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 operator|.
 name|append
@@ -1538,7 +1538,7 @@ name|string
 operator|.
 name|append
 argument_list|(
-literal|"]"
+literal|']'
 argument_list|)
 expr_stmt|;
 return|return

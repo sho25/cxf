@@ -626,7 +626,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"{"
+literal|'{'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -665,7 +665,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -697,7 +697,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -727,7 +727,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -759,7 +759,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -795,7 +795,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 if|if
@@ -842,7 +842,7 @@ name|arr
 operator|.
 name|append
 argument_list|(
-literal|"["
+literal|'['
 argument_list|)
 expr_stmt|;
 name|List
@@ -885,7 +885,7 @@ name|arr
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 block|}
@@ -916,7 +916,7 @@ name|arr
 operator|.
 name|append
 argument_list|(
-literal|"]"
+literal|']'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -949,7 +949,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -969,7 +969,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1000,7 +1000,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1032,7 +1032,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1087,7 +1087,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 if|if
@@ -1116,7 +1116,7 @@ name|cnfObj
 operator|.
 name|append
 argument_list|(
-literal|"{"
+literal|'{'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1138,7 +1138,7 @@ name|cnfObj
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1181,7 +1181,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|String
@@ -1236,7 +1236,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"{"
+literal|'{'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1267,7 +1267,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1299,7 +1299,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1321,7 +1321,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|String
@@ -1376,7 +1376,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"{"
+literal|'{'
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1397,7 +1397,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1429,7 +1429,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1463,7 +1463,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1495,7 +1495,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1548,7 +1548,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
@@ -1571,7 +1571,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|String
@@ -1666,7 +1666,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 expr_stmt|;
 if|if

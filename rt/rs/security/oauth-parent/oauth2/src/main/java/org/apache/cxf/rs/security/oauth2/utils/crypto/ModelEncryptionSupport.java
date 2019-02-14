@@ -1958,7 +1958,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -1993,7 +1993,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 9.2
@@ -2014,7 +2014,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 9.3
@@ -2032,7 +2032,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 9.4
@@ -2053,7 +2053,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 9.5
@@ -3317,7 +3317,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 2
@@ -3338,7 +3338,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 3
@@ -3359,7 +3359,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// 4
@@ -3383,7 +3383,7 @@ name|state
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}

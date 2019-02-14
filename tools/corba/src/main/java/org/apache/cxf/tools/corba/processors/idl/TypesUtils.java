@@ -403,7 +403,7 @@ name|name
 operator|.
 name|append
 argument_list|(
-literal|"_"
+literal|'_'
 argument_list|)
 expr_stmt|;
 name|name
@@ -422,7 +422,7 @@ name|name
 operator|.
 name|append
 argument_list|(
-literal|"_"
+literal|'_'
 argument_list|)
 expr_stmt|;
 name|name

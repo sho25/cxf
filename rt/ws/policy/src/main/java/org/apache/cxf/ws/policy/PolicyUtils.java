@@ -670,7 +670,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 name|buf
@@ -727,7 +727,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|")"
+literal|')'
 argument_list|)
 expr_stmt|;
 name|nl

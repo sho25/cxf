@@ -3883,7 +3883,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|.
 name|append
@@ -4044,7 +4044,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|writeImports
@@ -4945,7 +4945,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -5131,7 +5131,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|.
 name|append
@@ -5795,7 +5795,7 @@ name|sbMethodCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -5836,7 +5836,7 @@ name|sbMethodCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -6178,7 +6178,7 @@ name|sbMethodCode
 operator|.
 name|append
 argument_list|(
-literal|"("
+literal|'('
 argument_list|)
 expr_stmt|;
 name|List
@@ -6252,7 +6252,7 @@ name|sbMethodCode
 operator|.
 name|append
 argument_list|(
-literal|")"
+literal|')'
 argument_list|)
 expr_stmt|;
 name|writeThrows
@@ -6280,7 +6280,7 @@ name|sbMethodCode
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 expr_stmt|;
 block|}
@@ -6657,7 +6657,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 operator|.
 name|append
@@ -6721,7 +6721,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 operator|.
 name|append
@@ -6863,7 +6863,7 @@ name|mainCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -6949,7 +6949,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|.
 name|append
@@ -7105,7 +7105,7 @@ name|sbMethodClassCode
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|createJavaSourceFile
@@ -7990,7 +7990,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 block|}
@@ -8610,7 +8610,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -8837,7 +8837,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -9246,7 +9246,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 name|String
@@ -9290,7 +9290,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -9431,7 +9431,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 operator|.
 name|append
@@ -9839,7 +9839,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -9849,7 +9849,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -9862,7 +9862,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 operator|.
 name|append
@@ -9939,7 +9939,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -9954,7 +9954,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}
@@ -9984,7 +9984,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 operator|.
 name|append
@@ -10187,7 +10187,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|.
 name|append
@@ -10302,7 +10302,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 block|}
@@ -10312,7 +10312,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 expr_stmt|;
 block|}
@@ -10581,7 +10581,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 expr_stmt|;
 name|createJavaSourceFile
@@ -10663,7 +10663,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"}"
+literal|'}'
 argument_list|)
 operator|.
 name|append
@@ -12063,7 +12063,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 operator|.
 name|append
@@ -12093,7 +12093,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|"{"
+literal|'{'
 argument_list|)
 expr_stmt|;
 block|}
@@ -12261,7 +12261,7 @@ name|sbCode
 operator|.
 name|append
 argument_list|(
-literal|")"
+literal|')'
 argument_list|)
 expr_stmt|;
 name|sbCode

@@ -236,7 +236,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"["
+literal|'['
 argument_list|)
 expr_stmt|;
 name|sb
@@ -287,7 +287,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"]"
+literal|']'
 argument_list|)
 expr_stmt|;
 return|return

@@ -621,7 +621,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"$"
+literal|'$'
 argument_list|)
 expr_stmt|;
 name|badXPathPattern
@@ -672,7 +672,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"$"
+literal|'$'
 argument_list|)
 expr_stmt|;
 name|goodXPathPattern

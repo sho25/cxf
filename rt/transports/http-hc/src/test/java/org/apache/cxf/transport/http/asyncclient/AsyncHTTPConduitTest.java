@@ -1575,7 +1575,7 @@ name|x
 operator|++
 control|)
 block|{
-comment|//builder.append("a");
+comment|//builder.append('a');
 comment|//long s1 = System.nanoTime();
 comment|//System.out.println("aa1: " + s1);
 name|String
@@ -1624,7 +1624,7 @@ name|x
 operator|++
 control|)
 block|{
-comment|//builder.append("a");
+comment|//builder.append('a');
 comment|//long s1 = System.nanoTime();
 comment|//System.out.println("aa1: " + s1);
 name|g
@@ -1891,7 +1891,7 @@ name|x
 operator|++
 control|)
 block|{
-comment|//builder.append("a");
+comment|//builder.append('a');
 comment|//long s1 = System.nanoTime();
 comment|//System.out.println("aa1: " + s1);
 name|g
@@ -2070,7 +2070,7 @@ name|x
 operator|++
 control|)
 block|{
-comment|//builder.append("a");
+comment|//builder.append('a');
 comment|//long s1 = System.nanoTime();
 comment|//System.out.println("aa1: " + s1);
 name|g
