@@ -90,7 +90,7 @@ name|name
 operator|.
 name|indexOf
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 decl_stmt|;
 if|if
@@ -197,7 +197,7 @@ name|name
 operator|.
 name|indexOf
 argument_list|(
-literal|" "
+literal|' '
 argument_list|)
 decl_stmt|;
 name|SplitNameResponse

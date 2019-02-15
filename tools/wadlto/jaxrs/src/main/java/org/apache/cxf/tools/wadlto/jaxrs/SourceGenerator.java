@@ -3491,7 +3491,7 @@ name|systemId
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 decl_stmt|;
 if|if
@@ -4270,7 +4270,7 @@ name|resourceId
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|qname
@@ -5093,7 +5093,7 @@ name|clsName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 if|if
@@ -5522,7 +5522,7 @@ name|elementRef
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 decl_stmt|;
 name|suffixName
@@ -6047,7 +6047,7 @@ name|pathSeg
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 decl_stmt|;
 if|if
@@ -7227,7 +7227,7 @@ name|clsFullName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|String
@@ -11270,7 +11270,7 @@ name|clsName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 if|if
@@ -13311,7 +13311,7 @@ name|docPath
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 decl_stmt|;
 return|return

@@ -2198,7 +2198,7 @@ name|setter
 operator|.
 name|indexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 return|;
 block|}

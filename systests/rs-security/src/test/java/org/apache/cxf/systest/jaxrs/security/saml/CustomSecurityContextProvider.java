@@ -109,7 +109,7 @@ argument_list|()
 operator|.
 name|indexOf
 argument_list|(
-literal|"@"
+literal|'@'
 argument_list|)
 decl_stmt|;
 return|return

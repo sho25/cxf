@@ -462,7 +462,7 @@ name|link
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|">"
+literal|'>'
 argument_list|,
 name|link
 operator|.

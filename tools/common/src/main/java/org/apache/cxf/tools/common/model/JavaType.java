@@ -423,7 +423,7 @@ name|clzName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 operator|==
 operator|-
@@ -452,7 +452,7 @@ name|clzName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|this

@@ -2213,7 +2213,7 @@ name|baseURI
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 operator|+
 literal|1

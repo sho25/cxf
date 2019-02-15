@@ -1747,7 +1747,7 @@ name|ln
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|!=
 operator|-
@@ -1764,7 +1764,7 @@ name|ln
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|+
 literal|1
@@ -1811,7 +1811,7 @@ name|ln
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|==
 operator|-
@@ -1842,7 +1842,7 @@ name|ln
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 argument_list|)
 argument_list|)
@@ -1896,7 +1896,7 @@ name|nodeName
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|!=
 operator|-
@@ -1915,7 +1915,7 @@ name|nodeName
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 argument_list|)
 expr_stmt|;

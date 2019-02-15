@@ -1142,7 +1142,7 @@ name|value
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|<
 literal|0
@@ -1166,7 +1166,7 @@ name|value
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|+
 literal|1

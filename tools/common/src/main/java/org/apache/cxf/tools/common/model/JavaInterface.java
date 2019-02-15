@@ -1144,7 +1144,7 @@ name|i
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 operator|!=
 operator|-
@@ -1170,7 +1170,7 @@ name|i
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 argument_list|)
 argument_list|)
@@ -1325,7 +1325,7 @@ name|fullName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|setPackageName

@@ -156,7 +156,7 @@ name|str
 operator|.
 name|indexOf
 argument_list|(
-literal|"\n"
+literal|'\n'
 argument_list|)
 operator|>=
 literal|0
@@ -242,7 +242,7 @@ name|str
 operator|.
 name|indexOf
 argument_list|(
-literal|"\n"
+literal|'\n'
 argument_list|)
 operator|>=
 literal|0

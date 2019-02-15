@@ -644,7 +644,7 @@ name|soapAction
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"\""
+literal|'"'
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -712,7 +712,7 @@ name|contentTypeAction
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 operator|!=
 operator|-
@@ -731,7 +731,7 @@ name|contentTypeAction
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -758,7 +758,7 @@ name|contentTypeAction
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"\""
+literal|'"'
 argument_list|)
 argument_list|)
 expr_stmt|;

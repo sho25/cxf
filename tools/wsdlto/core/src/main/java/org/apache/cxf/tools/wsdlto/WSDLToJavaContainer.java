@@ -2259,7 +2259,7 @@ name|wsdlURL
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 decl_stmt|;
 name|int
@@ -2269,7 +2269,7 @@ name|wsdlURL
 operator|.
 name|indexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|,
 name|slashIndex
 argument_list|)
@@ -3363,7 +3363,7 @@ index|]
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 decl_stmt|;
 if|if
@@ -3580,7 +3580,7 @@ index|]
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 decl_stmt|;
 name|String
@@ -4016,7 +4016,7 @@ name|wsdl
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|!=
 operator|-

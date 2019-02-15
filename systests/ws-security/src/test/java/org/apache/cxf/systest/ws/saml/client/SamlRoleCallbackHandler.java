@@ -685,7 +685,7 @@ name|uri
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 decl_stmt|;
 if|if
@@ -719,7 +719,7 @@ name|uri
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 expr_stmt|;
 block|}

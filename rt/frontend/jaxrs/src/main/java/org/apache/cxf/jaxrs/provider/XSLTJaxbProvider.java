@@ -3029,7 +3029,7 @@ name|value
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 decl_stmt|;
 if|if

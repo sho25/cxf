@@ -4419,7 +4419,7 @@ name|rawType
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 operator|+
 literal|1
@@ -4590,7 +4590,7 @@ name|rawType
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 operator|+
 literal|1

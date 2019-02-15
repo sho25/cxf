@@ -493,7 +493,7 @@ name|loc
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 operator|==
 operator|-

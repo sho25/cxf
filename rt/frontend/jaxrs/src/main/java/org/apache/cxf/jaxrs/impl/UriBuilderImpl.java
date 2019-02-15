@@ -3343,7 +3343,7 @@ name|pathEncoded
 operator|.
 name|indexOf
 argument_list|(
-literal|";"
+literal|';'
 argument_list|)
 expr_stmt|;
 if|if
@@ -5365,7 +5365,7 @@ name|uri
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 decl_stmt|;
 if|if
@@ -5427,7 +5427,7 @@ name|uri
 operator|.
 name|indexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 expr_stmt|;
 if|if
@@ -5511,7 +5511,7 @@ name|uri
 operator|.
 name|indexOf
 argument_list|(
-literal|"?"
+literal|'?'
 argument_list|)
 expr_stmt|;
 if|if

@@ -856,7 +856,7 @@ name|s
 operator|.
 name|indexOf
 argument_list|(
-literal|"-"
+literal|'-'
 argument_list|)
 operator|!=
 operator|-
@@ -876,7 +876,7 @@ name|s
 operator|.
 name|indexOf
 argument_list|(
-literal|"-"
+literal|'-'
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -891,7 +891,7 @@ name|s
 operator|.
 name|indexOf
 argument_list|(
-literal|"-"
+literal|'-'
 argument_list|)
 operator|+
 literal|1

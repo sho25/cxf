@@ -83,7 +83,7 @@ name|name
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 if|if
@@ -113,7 +113,7 @@ name|name
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"$"
+literal|'$'
 argument_list|)
 decl_stmt|;
 if|if

@@ -4859,7 +4859,7 @@ name|content
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 argument_list|)
 argument_list|)
@@ -4887,7 +4887,7 @@ name|content
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|+
 literal|1

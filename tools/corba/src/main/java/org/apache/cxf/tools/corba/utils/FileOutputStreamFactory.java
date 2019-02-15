@@ -356,7 +356,7 @@ name|packageName
 operator|.
 name|indexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|,
 name|pos1
 argument_list|)
@@ -408,7 +408,7 @@ name|packageName
 operator|.
 name|indexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|,
 name|pos1
 argument_list|)

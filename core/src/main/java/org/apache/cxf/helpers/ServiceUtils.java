@@ -801,7 +801,7 @@ name|name
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 if|if
@@ -831,7 +831,7 @@ name|name
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"$"
+literal|'$'
 argument_list|)
 decl_stmt|;
 if|if
@@ -1058,7 +1058,7 @@ name|className
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 if|if
@@ -1277,7 +1277,7 @@ name|namespace
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|>
 operator|-
@@ -1294,7 +1294,7 @@ name|namespace
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|+
 literal|1
@@ -1306,7 +1306,7 @@ name|hostname
 operator|.
 name|indexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 operator|>
 operator|-
@@ -1325,7 +1325,7 @@ name|hostname
 operator|.
 name|indexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 argument_list|)
 expr_stmt|;

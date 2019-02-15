@@ -1210,7 +1210,7 @@ name|className
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|collector
@@ -1265,7 +1265,7 @@ name|className
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"."
+literal|'.'
 argument_list|)
 decl_stmt|;
 name|collector
@@ -1763,7 +1763,7 @@ index|]
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 decl_stmt|;
 name|String
@@ -1980,7 +1980,7 @@ index|]
 operator|.
 name|indexOf
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 decl_stmt|;
 if|if

@@ -508,7 +508,7 @@ name|cname
 operator|.
 name|indexOf
 argument_list|(
-literal|"$"
+literal|'$'
 argument_list|)
 operator|!=
 operator|-
@@ -534,7 +534,7 @@ name|cname
 operator|.
 name|indexOf
 argument_list|(
-literal|"?"
+literal|'?'
 argument_list|)
 operator|!=
 operator|-
@@ -610,7 +610,7 @@ name|cname
 operator|.
 name|indexOf
 argument_list|(
-literal|"-"
+literal|'-'
 argument_list|)
 operator|!=
 operator|-
@@ -636,7 +636,7 @@ name|cname
 operator|.
 name|indexOf
 argument_list|(
-literal|"/"
+literal|'/'
 argument_list|)
 operator|!=
 operator|-
@@ -704,7 +704,7 @@ name|value
 operator|.
 name|indexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|!=
 operator|-
@@ -721,7 +721,7 @@ name|value
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 operator|+
 literal|1

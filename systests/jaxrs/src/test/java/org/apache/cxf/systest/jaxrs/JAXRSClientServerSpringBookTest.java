@@ -2595,7 +2595,7 @@ name|helloStringISO88591
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|"\""
+literal|'"'
 argument_list|)
 argument_list|)
 decl_stmt|;
