@@ -1097,6 +1097,13 @@ literal|true
 return|;
 block|}
 return|return
+name|clz
+operator|.
+name|getPackage
+argument_list|()
+operator|!=
+literal|null
+operator|&&
 literal|"java.lang"
 operator|.
 name|equals
