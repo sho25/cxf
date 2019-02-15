@@ -1293,12 +1293,10 @@ name|isEmpty
 parameter_list|()
 block|{
 return|return
-literal|0
-operator|==
 name|getUnacknowledged
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
 return|;
 block|}

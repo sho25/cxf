@@ -591,6 +591,7 @@ operator|>
 literal|0
 condition|)
 block|{
+comment|// NOPMD
 for|for
 control|(
 name|Iterator
@@ -737,6 +738,7 @@ operator|>
 literal|0
 condition|)
 block|{
+comment|// NOPMD
 for|for
 control|(
 name|Iterator

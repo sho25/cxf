@@ -1114,12 +1114,11 @@ name|sl
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|sl
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>=
-literal|1
 condition|)
 block|{
 for|for

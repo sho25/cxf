@@ -2467,12 +2467,11 @@ argument_list|(
 name|mappedName
 argument_list|)
 operator|&&
+operator|!
 name|values
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|//ensure we collapse Accept into first line

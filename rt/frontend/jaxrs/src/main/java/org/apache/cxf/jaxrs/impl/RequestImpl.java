@@ -655,10 +655,8 @@ if|if
 condition|(
 name|encs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|<
-literal|1
 condition|)
 block|{
 name|requestVars

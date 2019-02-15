@@ -1516,11 +1516,9 @@ end_if
 begin_if
 if|if
 condition|(
-literal|0
-operator|==
 name|resources
 operator|.
-name|size
+name|isEmpty
 argument_list|()
 condition|)
 block|{

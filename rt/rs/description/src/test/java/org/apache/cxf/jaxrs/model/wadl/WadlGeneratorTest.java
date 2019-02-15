@@ -7936,12 +7936,11 @@ decl_stmt|;
 name|int
 name|schemaElementsIndex
 init|=
+operator|!
 name|importEls
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 literal|0
 else|:

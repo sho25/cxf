@@ -701,12 +701,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|branchCases
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|!=
-literal|0
 condition|)
 block|{
 name|CaseType

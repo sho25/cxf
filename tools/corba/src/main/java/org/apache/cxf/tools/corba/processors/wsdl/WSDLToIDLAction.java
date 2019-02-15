@@ -5316,12 +5316,11 @@ else|else
 block|{
 if|if
 condition|(
+operator|!
 name|bindings
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>=
-literal|1
 condition|)
 block|{
 name|binding

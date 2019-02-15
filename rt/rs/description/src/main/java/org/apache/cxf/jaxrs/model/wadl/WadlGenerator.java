@@ -2185,12 +2185,11 @@ name|whiteList
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|whiteList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ServletRequest

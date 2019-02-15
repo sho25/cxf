@@ -5286,12 +5286,11 @@ decl_stmt|;
 name|Element
 name|firstRequestEl
 init|=
+operator|!
 name|requestEls
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>=
-literal|1
 condition|?
 name|requestEls
 operator|.

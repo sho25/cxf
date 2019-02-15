@@ -1808,10 +1808,8 @@ literal|null
 operator|||
 name|content
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|<
-literal|1
 condition|)
 block|{
 comment|// nothing to convert
@@ -1987,10 +1985,8 @@ literal|null
 operator|||
 name|content
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|<
-literal|1
 condition|)
 block|{
 comment|// nothing to convert

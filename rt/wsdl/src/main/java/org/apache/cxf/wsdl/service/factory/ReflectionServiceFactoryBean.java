@@ -10292,15 +10292,14 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|getJaxbAnnoMap
 argument_list|(
 name|part
 argument_list|)
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|op

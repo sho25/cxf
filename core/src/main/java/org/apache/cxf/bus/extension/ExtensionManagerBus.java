@@ -1213,12 +1213,11 @@ name|objs
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|objs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|!=
-literal|0
 condition|)
 block|{
 name|extensions

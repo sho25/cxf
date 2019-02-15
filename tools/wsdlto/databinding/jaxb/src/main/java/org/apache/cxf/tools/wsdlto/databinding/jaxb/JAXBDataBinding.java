@@ -5899,10 +5899,8 @@ argument_list|()
 operator|&&
 name|incElemList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|&&
 operator|!
 name|hasJAXB

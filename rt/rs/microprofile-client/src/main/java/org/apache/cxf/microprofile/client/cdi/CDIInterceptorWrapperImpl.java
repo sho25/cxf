@@ -788,10 +788,8 @@ literal|null
 operator|||
 name|annotations
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return

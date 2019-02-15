@@ -794,12 +794,10 @@ name|isEmpty
 parameter_list|()
 block|{
 return|return
-literal|0
-operator|==
 name|getUndelivered
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
 return|;
 block|}

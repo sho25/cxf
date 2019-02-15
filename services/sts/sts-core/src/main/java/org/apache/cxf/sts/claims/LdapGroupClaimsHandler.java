@@ -1230,13 +1230,12 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|getAppliesToScopeMapping
 argument_list|()
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|parameters
 operator|.
