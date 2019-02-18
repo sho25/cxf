@@ -2394,9 +2394,7 @@ return|return
 name|executor
 operator|==
 literal|null
-condition|?
-literal|true
-else|:
+operator|||
 name|executor
 operator|.
 name|getQueue
@@ -2413,11 +2411,9 @@ parameter_list|()
 block|{
 return|return
 name|executor
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|executor
 operator|.
 name|getQueue

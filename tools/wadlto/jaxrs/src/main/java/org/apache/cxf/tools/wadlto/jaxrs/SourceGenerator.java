@@ -5399,10 +5399,9 @@ specifier|final
 name|boolean
 name|suspendedAsync
 init|=
+operator|!
 name|responseRequired
-condition|?
-literal|false
-else|:
+operator|&&
 name|isMethodMatched
 argument_list|(
 name|suspendedAsyncMethods

@@ -343,11 +343,9 @@ parameter_list|)
 block|{
 return|return
 name|msg
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|Boolean
 operator|.
 name|TRUE

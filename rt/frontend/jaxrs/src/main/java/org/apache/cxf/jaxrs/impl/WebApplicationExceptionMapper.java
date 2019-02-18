@@ -285,11 +285,9 @@ name|r
 operator|.
 name|getEntity
 argument_list|()
-operator|!=
+operator|==
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|addMessageToResponse
 decl_stmt|;
 name|Message

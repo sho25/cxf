@@ -379,11 +379,9 @@ argument_list|()
 decl_stmt|;
 return|return
 name|sc
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|sc
 operator|.
 name|isUserInRole

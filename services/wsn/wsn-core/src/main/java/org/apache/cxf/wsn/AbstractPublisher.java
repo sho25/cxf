@@ -550,7 +550,7 @@ name|isDemand
 argument_list|()
 operator|!=
 literal|null
-condition|?
+operator|&&
 name|registerPublisherRequest
 operator|.
 name|isDemand
@@ -558,8 +558,6 @@ argument_list|()
 operator|.
 name|booleanValue
 argument_list|()
-else|:
-literal|false
 expr_stmt|;
 comment|// Check all parameters
 if|if

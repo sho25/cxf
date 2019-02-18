@@ -1536,11 +1536,9 @@ argument_list|()
 decl_stmt|;
 return|return
 name|ex
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|ex
 operator|.
 name|isOneWay

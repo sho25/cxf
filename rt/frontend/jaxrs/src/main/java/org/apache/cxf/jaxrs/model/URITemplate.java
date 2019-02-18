@@ -570,7 +570,7 @@ name|endPos
 operator|>=
 literal|0
 operator|)
-condition|?
+operator|&&
 name|patternBuilder
 operator|.
 name|charAt
@@ -579,8 +579,6 @@ name|endPos
 argument_list|)
 operator|==
 literal|'/'
-else|:
-literal|false
 decl_stmt|;
 if|if
 condition|(

@@ -1382,9 +1382,7 @@ return|return
 name|o1
 operator|==
 literal|null
-condition|?
-literal|true
-else|:
+operator|||
 name|o1
 operator|.
 name|equals

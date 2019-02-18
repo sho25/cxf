@@ -332,12 +332,10 @@ block|{
 return|return
 operator|(
 name|paramMap
-operator|==
+operator|!=
 literal|null
 operator|)
-condition|?
-literal|false
-else|:
+operator|&&
 name|paramMap
 operator|.
 name|containsKey

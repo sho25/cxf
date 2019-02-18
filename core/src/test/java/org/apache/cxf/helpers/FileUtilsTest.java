@@ -401,9 +401,8 @@ argument_list|,
 literal|".class"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|foundFiles
 operator|.
 name|isEmpty

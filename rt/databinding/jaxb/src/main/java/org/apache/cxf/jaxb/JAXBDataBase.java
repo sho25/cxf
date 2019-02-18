@@ -861,11 +861,9 @@ argument_list|)
 decl_stmt|;
 return|return
 name|b
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|b
 return|;
 block|}

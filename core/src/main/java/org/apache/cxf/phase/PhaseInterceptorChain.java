@@ -2203,7 +2203,7 @@ argument_list|()
 operator|!=
 literal|null
 operator|)
-condition|?
+operator|&&
 name|message
 operator|.
 name|getExchange
@@ -2217,8 +2217,6 @@ name|isRobustOneWay
 argument_list|(
 name|message
 argument_list|)
-else|:
-literal|false
 return|;
 block|}
 specifier|private

@@ -9573,9 +9573,8 @@ argument_list|(
 name|values
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|values
 operator|.
 name|contains

@@ -1429,11 +1429,9 @@ name|boolean
 name|ignoreWriters
 init|=
 name|ignoreWritersProp
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|Boolean
 operator|.
 name|valueOf
@@ -2314,7 +2312,7 @@ name|boolean
 name|streamingOn
 init|=
 name|configurableProvider
-condition|?
+operator|&&
 operator|(
 operator|(
 name|AbstractConfigurableProvider
@@ -2324,8 +2322,6 @@ operator|)
 operator|.
 name|getEnableStreaming
 argument_list|()
-else|:
-literal|false
 decl_stmt|;
 if|if
 condition|(

@@ -121,6 +121,18 @@ name|junit
 operator|.
 name|Assert
 operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+operator|.
 name|assertTrue
 import|;
 end_import
@@ -169,9 +181,8 @@ argument_list|(
 literal|"public,must-revalidate"
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|c
 operator|.
 name|isPrivate
@@ -195,9 +206,8 @@ name|isProxyRevalidate
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|c
 operator|.
 name|isNoCache

@@ -477,9 +477,7 @@ name|denyRoles
 operator|.
 name|isEmpty
 argument_list|()
-condition|?
-literal|true
-else|:
+operator|||
 name|isUserInRole
 argument_list|(
 name|sc

@@ -789,11 +789,9 @@ parameter_list|()
 block|{
 return|return
 name|expires
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 operator|new
 name|Date
 argument_list|()

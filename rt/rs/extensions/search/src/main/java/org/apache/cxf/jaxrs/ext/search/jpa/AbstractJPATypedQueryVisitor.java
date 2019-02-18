@@ -2051,11 +2051,9 @@ parameter_list|)
 block|{
 return|return
 name|joinProperties
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|joinProperties
 operator|.
 name|contains

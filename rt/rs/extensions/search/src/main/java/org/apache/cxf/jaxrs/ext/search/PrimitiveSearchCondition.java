@@ -429,11 +429,9 @@ argument_list|)
 decl_stmt|;
 return|return
 name|lValue
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|compare
 argument_list|(
 name|lValue

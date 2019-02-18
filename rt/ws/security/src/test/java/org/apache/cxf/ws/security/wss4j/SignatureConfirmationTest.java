@@ -279,7 +279,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertNotNull
+name|assertFalse
 import|;
 end_import
 
@@ -291,7 +291,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|assertNotNull
 import|;
 end_import
 
@@ -518,9 +518,8 @@ argument_list|(
 name|sigv
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|sigv
 operator|.
 name|isEmpty
@@ -726,9 +725,8 @@ argument_list|(
 name|sigReceived
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
-operator|!
 name|sigReceived
 operator|.
 name|isEmpty

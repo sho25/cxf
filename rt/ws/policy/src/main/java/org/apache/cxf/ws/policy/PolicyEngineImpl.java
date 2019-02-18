@@ -992,9 +992,7 @@ return|return
 name|ignoreUnknownAssertions
 operator|==
 literal|null
-condition|?
-literal|true
-else|:
+operator|||
 name|ignoreUnknownAssertions
 return|;
 block|}

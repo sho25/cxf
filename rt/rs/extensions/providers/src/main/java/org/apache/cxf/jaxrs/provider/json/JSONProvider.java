@@ -3845,9 +3845,7 @@ return|return
 name|theArrayKeys
 operator|!=
 literal|null
-condition|?
-literal|true
-else|:
+operator|||
 name|getBooleanJsonProperty
 argument_list|(
 name|ROOT_IS_ARRAY_PROPERTY

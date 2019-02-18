@@ -1683,11 +1683,9 @@ decl_stmt|;
 name|lastMessage
 operator|=
 literal|null
-operator|==
+operator|!=
 name|e
-condition|?
-literal|false
-else|:
+operator|&&
 name|getLastMessage
 argument_list|(
 name|e

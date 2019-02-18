@@ -396,11 +396,9 @@ parameter_list|()
 block|{
 return|return
 name|generateImpl
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|generateImpl
 return|;
 block|}
@@ -426,11 +424,9 @@ parameter_list|()
 block|{
 return|return
 name|generateInterface
-operator|==
+operator|!=
 literal|null
-condition|?
-literal|false
-else|:
+operator|&&
 name|generateInterface
 return|;
 block|}
