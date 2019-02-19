@@ -379,7 +379,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"/matched%21uris"
+literal|"/matched!uris"
 argument_list|)
 annotation|@
 name|Produces

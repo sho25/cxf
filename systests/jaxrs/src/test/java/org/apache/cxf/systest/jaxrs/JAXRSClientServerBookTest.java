@@ -17098,48 +17098,7 @@ name|PORT
 operator|+
 literal|"/bookstore/"
 operator|+
-literal|"booksubresource/123/chapters/sub/1/matched%21uris?decode=true"
-argument_list|,
-name|expected
-argument_list|,
-literal|"text/plain"
-argument_list|,
-literal|"text/plain"
-argument_list|,
-literal|200
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testUriInfoMatchedUrisNoDecode
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-comment|//note '%21' instead of '!'
-name|String
-name|expected
-init|=
-literal|"[bookstore/booksubresource/123/chapters/sub/1/matched%21uris, "
-operator|+
-literal|"bookstore/booksubresource/123/chapters/sub/1/, "
-operator|+
-literal|"bookstore/booksubresource/123/, "
-operator|+
-literal|"bookstore]"
-decl_stmt|;
-name|getAndCompare
-argument_list|(
-literal|"http://localhost:"
-operator|+
-name|PORT
-operator|+
-literal|"/bookstore/"
-operator|+
-literal|"booksubresource/123/chapters/sub/1/matched%21uris?decode=false"
+literal|"booksubresource/123/chapters/sub/1/matched!uris?decode=true"
 argument_list|,
 name|expected
 argument_list|,
