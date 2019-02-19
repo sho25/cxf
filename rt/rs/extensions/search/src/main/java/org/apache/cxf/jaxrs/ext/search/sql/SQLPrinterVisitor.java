@@ -638,6 +638,7 @@ argument_list|(
 literal|"'"
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 block|}
 block|}
 else|else
