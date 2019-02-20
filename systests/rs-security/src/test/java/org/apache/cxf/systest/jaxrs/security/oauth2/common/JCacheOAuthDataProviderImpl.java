@@ -1228,6 +1228,13 @@ operator|-
 literal|5L
 argument_list|)
 expr_stmt|;
+name|token
+operator|.
+name|setIssuer
+argument_list|(
+literal|"jwt-issuer"
+argument_list|)
+expr_stmt|;
 return|return
 name|token
 return|;
