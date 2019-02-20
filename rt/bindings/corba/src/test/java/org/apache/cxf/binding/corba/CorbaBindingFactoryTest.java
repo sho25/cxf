@@ -871,9 +871,6 @@ argument_list|(
 literal|"one"
 argument_list|,
 name|str
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|str
@@ -890,9 +887,6 @@ argument_list|(
 literal|"two"
 argument_list|,
 name|str
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

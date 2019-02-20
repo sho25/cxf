@@ -382,9 +382,6 @@ if|if
 condition|(
 name|ROLE
 operator|.
-name|toString
-argument_list|()
-operator|.
 name|equals
 argument_list|(
 name|requestClaim
@@ -406,9 +403,6 @@ elseif|else
 if|if
 condition|(
 name|GIVEN_NAME
-operator|.
-name|toString
-argument_list|()
 operator|.
 name|equals
 argument_list|(
@@ -437,9 +431,6 @@ elseif|else
 if|if
 condition|(
 name|LANGUAGE
-operator|.
-name|toString
-argument_list|()
 operator|.
 name|equals
 argument_list|(

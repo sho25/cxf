@@ -454,12 +454,9 @@ condition|)
 block|{
 if|if
 condition|(
-operator|!
-operator|(
 name|inObjects
-operator|==
+operator|!=
 name|outObjects
-operator|)
 condition|)
 block|{
 for|for

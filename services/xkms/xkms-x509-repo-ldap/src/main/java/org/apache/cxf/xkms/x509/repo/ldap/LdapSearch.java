@@ -365,9 +365,6 @@ operator|.
 name|PROVIDER_URL
 argument_list|,
 name|ldapuri
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|env

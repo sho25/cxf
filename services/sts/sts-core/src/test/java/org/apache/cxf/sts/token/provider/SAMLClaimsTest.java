@@ -1530,9 +1530,6 @@ operator|.
 name|put
 argument_list|(
 name|CLAIM_STATIC_COMPANY
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|CLAIM_STATIC_COMPANY_VALUE
 argument_list|)
@@ -1765,9 +1762,6 @@ name|getName
 argument_list|()
 argument_list|,
 name|CLAIM_STATIC_COMPANY
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|XMLObject
@@ -1872,9 +1866,6 @@ operator|.
 name|put
 argument_list|(
 name|CLAIM_APPLICATION
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|CLAIM_APPLICATION_VALUE
 argument_list|)
@@ -2159,9 +2150,6 @@ name|getName
 argument_list|()
 argument_list|,
 name|CLAIM_APPLICATION
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|XMLObject
@@ -2268,9 +2256,6 @@ operator|.
 name|put
 argument_list|(
 name|CLAIM_APPLICATION
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|CLAIM_APPLICATION_VALUE
 argument_list|)

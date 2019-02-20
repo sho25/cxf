@@ -1839,9 +1839,6 @@ operator|.
 name|setValueFromData
 argument_list|(
 name|val
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|String
@@ -1952,9 +1949,6 @@ operator|.
 name|setValueFromData
 argument_list|(
 name|val
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|String

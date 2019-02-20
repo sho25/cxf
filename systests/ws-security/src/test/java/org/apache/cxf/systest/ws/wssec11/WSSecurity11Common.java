@@ -547,12 +547,9 @@ argument_list|()
 expr_stmt|;
 block|}
 return|return
-operator|!
-operator|(
 name|javaVersionNum
-operator|<
+operator|>=
 literal|1.6
-operator|)
 return|;
 block|}
 block|}

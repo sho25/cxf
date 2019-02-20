@@ -674,9 +674,6 @@ name|String
 name|uri
 init|=
 name|ROLE_URI
-operator|.
-name|toString
-argument_list|()
 decl_stmt|;
 name|int
 name|lastSlash

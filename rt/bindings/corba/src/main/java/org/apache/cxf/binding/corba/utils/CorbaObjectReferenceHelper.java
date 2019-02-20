@@ -946,15 +946,12 @@ comment|// parse out type_id from IOR CDR encapsulation
 name|boolean
 name|bigIndian
 init|=
-operator|!
-operator|(
 name|data
 index|[
 literal|0
 index|]
-operator|>
+operator|<=
 literal|0
-operator|)
 decl_stmt|;
 name|int
 name|typeIdStringSize

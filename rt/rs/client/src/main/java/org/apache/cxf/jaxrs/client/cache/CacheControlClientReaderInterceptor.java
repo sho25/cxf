@@ -541,9 +541,6 @@ operator|.
 name|valueOf
 argument_list|(
 name|cacheControlHeader
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|byte

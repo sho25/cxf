@@ -195,7 +195,6 @@ name|index
 operator|>
 literal|0
 operator|&&
-operator|!
 operator|(
 name|tempValue
 operator|.
@@ -203,7 +202,7 @@ name|indexOf
 argument_list|(
 literal|'='
 argument_list|)
-operator|<
+operator|>=
 name|index
 operator|)
 condition|)

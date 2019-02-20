@@ -183,9 +183,6 @@ operator|new
 name|ValidationException
 argument_list|(
 name|message
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 throw|;
 block|}
