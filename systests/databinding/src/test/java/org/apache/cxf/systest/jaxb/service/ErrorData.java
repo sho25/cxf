@@ -86,9 +86,6 @@ name|title
 parameter_list|,
 name|String
 name|description
-parameter_list|,
-name|String
-name|stack
 parameter_list|)
 block|{
 name|this

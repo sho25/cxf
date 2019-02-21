@@ -313,11 +313,25 @@ name|int
 name|hashCode
 parameter_list|()
 block|{
-return|return
+name|int
+name|result
+init|=
 name|super
 operator|.
 name|hashCode
 argument_list|()
+decl_stmt|;
+name|result
+operator|*=
+name|Boolean
+operator|.
+name|hashCode
+argument_list|(
+name|extended
+argument_list|)
+expr_stmt|;
+return|return
+name|result
 return|;
 block|}
 comment|/*      * (non-Javadoc)      *      * @see java.lang.Object#toString()      */

@@ -382,25 +382,6 @@ expr_stmt|;
 block|}
 else|else
 block|{
-if|if
-condition|(
-name|WSSecurity11Common
-operator|.
-name|isIBMJDK16
-argument_list|()
-condition|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Not running as there is a problem with 1.6 jdk and restricted jars"
-argument_list|)
-expr_stmt|;
-return|return;
-block|}
 name|assertTrue
 argument_list|(
 literal|"Server failed to launch"
@@ -826,17 +807,8 @@ name|IOException
 block|{
 if|if
 condition|(
-operator|(
 operator|!
 name|unrestrictedPoliciesInstalled
-operator|)
-operator|&&
-operator|(
-name|WSSecurity11Common
-operator|.
-name|isIBMJDK16
-argument_list|()
-operator|)
 condition|)
 block|{
 name|System

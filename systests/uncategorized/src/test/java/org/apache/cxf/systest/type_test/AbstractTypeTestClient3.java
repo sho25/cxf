@@ -1628,11 +1628,9 @@ name|yOrig
 operator|.
 name|setVarInt
 argument_list|(
-operator|new
 name|BigInteger
-argument_list|(
-literal|"10"
-argument_list|)
+operator|.
+name|TEN
 argument_list|)
 expr_stmt|;
 name|yOrig
@@ -2315,11 +2313,9 @@ name|yOrig
 operator|.
 name|setVarInt
 argument_list|(
-operator|new
 name|BigInteger
-argument_list|(
-literal|"10"
-argument_list|)
+operator|.
+name|TEN
 argument_list|)
 expr_stmt|;
 name|yOrig

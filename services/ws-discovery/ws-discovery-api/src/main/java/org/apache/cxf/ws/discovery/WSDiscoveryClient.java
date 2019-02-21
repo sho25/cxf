@@ -1457,7 +1457,7 @@ name|addAddressing
 argument_list|(
 name|dispatch
 argument_list|,
-literal|false
+name|addSeq
 argument_list|,
 name|action
 argument_list|)
@@ -1738,12 +1738,12 @@ parameter_list|()
 throws|throws
 name|Throwable
 block|{
+name|close
+argument_list|()
+expr_stmt|;
 name|super
 operator|.
 name|finalize
-argument_list|()
-expr_stmt|;
-name|close
 argument_list|()
 expr_stmt|;
 block|}

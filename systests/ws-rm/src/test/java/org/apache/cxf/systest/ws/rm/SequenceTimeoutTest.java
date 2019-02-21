@@ -684,17 +684,12 @@ name|String
 name|cfgResource
 parameter_list|,
 name|boolean
-name|useDecoupledEndpoint
-parameter_list|,
-name|boolean
 name|useDispatchClient
 parameter_list|)
 block|{
 name|init
 argument_list|(
 name|cfgResource
-argument_list|,
-name|useDecoupledEndpoint
 argument_list|,
 name|useDispatchClient
 argument_list|,
@@ -708,9 +703,6 @@ name|init
 parameter_list|(
 name|String
 name|cfgResource
-parameter_list|,
-name|boolean
-name|useDecoupledEndpoint
 parameter_list|,
 name|boolean
 name|useDispatchClient
@@ -746,8 +738,6 @@ else|else
 block|{
 name|initProxy
 argument_list|(
-name|useDecoupledEndpoint
-argument_list|,
 name|executor
 argument_list|)
 expr_stmt|;
@@ -877,9 +867,6 @@ specifier|private
 name|void
 name|initProxy
 parameter_list|(
-name|boolean
-name|useDecoupledEndpoint
-parameter_list|,
 name|Executor
 name|executor
 parameter_list|)
@@ -953,8 +940,6 @@ block|{
 name|init
 argument_list|(
 literal|"org/apache/cxf/systest/ws/rm/rminterceptors.xml"
-argument_list|,
-literal|true
 argument_list|,
 literal|true
 argument_list|)

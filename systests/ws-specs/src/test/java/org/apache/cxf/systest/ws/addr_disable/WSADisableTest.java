@@ -768,19 +768,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|WebServiceException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|"expected WebServiceException"
-argument_list|,
-name|e
-operator|instanceof
-name|WebServiceException
-argument_list|)
-expr_stmt|;
 name|String
 name|expected
 init|=

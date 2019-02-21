@@ -81,18 +81,6 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
 name|fail
 import|;
 end_import
@@ -146,6 +134,8 @@ specifier|public
 name|void
 name|testInvoke
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 try|try
 block|{
@@ -184,17 +174,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-comment|// supprot spring 2.0.x and sping 2.5
-name|assertTrue
-argument_list|(
-literal|"we expect a Bean Exception here"
-argument_list|,
-name|ex
-operator|instanceof
 name|org
 operator|.
 name|springframework
@@ -202,8 +181,10 @@ operator|.
 name|beans
 operator|.
 name|FatalBeanException
-argument_list|)
-expr_stmt|;
+name|ex
+parameter_list|)
+block|{
+comment|// expected
 block|}
 block|}
 block|}

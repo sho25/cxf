@@ -169,9 +169,7 @@ name|Continuation
 name|continuation
 init|=
 name|getContinuation
-argument_list|(
-name|name
-argument_list|)
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
@@ -343,10 +341,7 @@ block|}
 specifier|private
 name|Continuation
 name|getContinuation
-parameter_list|(
-name|String
-name|name
-parameter_list|)
+parameter_list|()
 block|{
 name|ContinuationProvider
 name|provider

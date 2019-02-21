@@ -438,6 +438,7 @@ literal|0x06
 block|,
 literal|0x07
 block|,
+comment|//NOPMD
 literal|0x08
 block|,
 literal|0x09

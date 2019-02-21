@@ -256,7 +256,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|SOAPFaultException
 name|e
 parameter_list|)
 block|{
@@ -265,16 +265,9 @@ name|expectedDetail
 init|=
 literal|"A header representing a Message Addressing Property is not valid"
 decl_stmt|;
-if|if
-condition|(
-name|e
-operator|instanceof
-name|SOAPFaultException
-condition|)
-block|{
 name|assertTrue
 argument_list|(
-literal|"Expect fault deail : "
+literal|"Expect fault detail : "
 operator|+
 name|expectedDetail
 argument_list|,
@@ -292,13 +285,6 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-throw|throw
-name|e
-throw|;
-block|}
 block|}
 block|}
 block|}

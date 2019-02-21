@@ -564,8 +564,10 @@ name|replaceAll
 argument_list|(
 literal|"portno"
 argument_list|,
-literal|""
-operator|+
+name|Integer
+operator|.
+name|toString
+argument_list|(
 name|super
 operator|.
 name|getLdapServer
@@ -573,6 +575,7 @@ argument_list|()
 operator|.
 name|getPort
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|Path
