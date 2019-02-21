@@ -1142,6 +1142,13 @@ argument_list|(
 literal|"bob:bobPassword"
 argument_list|)
 expr_stmt|;
+name|this
+operator|.
+name|setIssuer
+argument_list|(
+literal|"jwt-issuer"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|Certificate
@@ -1226,13 +1233,6 @@ literal|1000L
 operator|)
 operator|-
 literal|5L
-argument_list|)
-expr_stmt|;
-name|token
-operator|.
-name|setIssuer
-argument_list|(
-literal|"jwt-issuer"
 argument_list|)
 expr_stmt|;
 return|return
