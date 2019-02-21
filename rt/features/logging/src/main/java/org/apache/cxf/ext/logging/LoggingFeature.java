@@ -517,7 +517,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for Logging In Interceptor.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addInBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Add additionaly binary media types for Logging In Interceptor to default values.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addInBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
 name|addInBinaryContentMediaTypes
@@ -534,7 +534,7 @@ name|mediaTypes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for Logging Out Interceptor.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addOutBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Add additionaly binary media types for Logging Out Interceptor to default values.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addOutBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
 name|addOutBinaryContentMediaTypes
@@ -551,7 +551,7 @@ name|mediaTypes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for both Logging Interceptors.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Add additionaly binary media types for both Logging Interceptors to default values.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
 name|addBinaryContentMediaTypes
