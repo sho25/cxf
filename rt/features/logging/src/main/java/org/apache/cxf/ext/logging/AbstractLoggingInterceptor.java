@@ -310,7 +310,7 @@ return|;
 block|}
 specifier|public
 name|void
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 parameter_list|(
 name|String
 name|mediaTypes
@@ -318,7 +318,7 @@ parameter_list|)
 block|{
 name|eventMapper
 operator|.
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 argument_list|(
 name|mediaTypes
 argument_list|)

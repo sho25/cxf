@@ -517,10 +517,10 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for Logging In Interceptor.      * Contet for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="inBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Set binary media types for Logging In Interceptor.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addInBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
-name|setInBinaryContentMediaTypes
+name|addInBinaryContentMediaTypes
 parameter_list|(
 name|String
 name|mediaTypes
@@ -528,16 +528,16 @@ parameter_list|)
 block|{
 name|in
 operator|.
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 argument_list|(
 name|mediaTypes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for Logging Out Interceptor.      * Contet for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="outBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Set binary media types for Logging Out Interceptor.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addOutBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
-name|setOutBinaryContentMediaTypes
+name|addOutBinaryContentMediaTypes
 parameter_list|(
 name|String
 name|mediaTypes
@@ -545,27 +545,27 @@ parameter_list|)
 block|{
 name|out
 operator|.
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 argument_list|(
 name|mediaTypes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set binary media types for both Logging Interceptors.      * Contet for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="binaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
+comment|/**      * Set binary media types for both Logging Interceptors.      * Content for these types was not logged.      * Uses, for example:      *<pre>      *&lt;bean id="loggingFeature" class="org.apache.cxf.ext.logging.LoggingFeature"&gt;      *&lt;property name="addBinaryContentMediaTypes" value="application/vnd.oasis.opendocument.spreadsheet;application/zip"/&gt;      *&lt;/bean&gt;      *</pre>      * @param mediaTypes list of mediaTypes. symbol ; - delimeter      */
 specifier|public
 name|void
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 parameter_list|(
 name|String
 name|mediaTypes
 parameter_list|)
 block|{
-name|setInBinaryContentMediaTypes
+name|addInBinaryContentMediaTypes
 argument_list|(
 name|mediaTypes
 argument_list|)
 expr_stmt|;
-name|setOutBinaryContentMediaTypes
+name|addOutBinaryContentMediaTypes
 argument_list|(
 name|mediaTypes
 argument_list|)

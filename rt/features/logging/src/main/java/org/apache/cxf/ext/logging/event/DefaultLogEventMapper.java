@@ -411,7 +411,7 @@ argument_list|)
 decl_stmt|;
 specifier|public
 name|void
-name|setBinaryContentMediaTypes
+name|addBinaryContentMediaTypes
 parameter_list|(
 name|String
 name|mediaTypes
