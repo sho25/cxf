@@ -13,6 +13,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|common
+operator|.
 name|openapi
 package|;
 end_package
@@ -76,9 +78,25 @@ import|;
 end_import
 
 begin_interface
+specifier|public
 interface|interface
 name|SwaggerProperties
 block|{
+name|String
+name|DEFAULT_PROPS_LOCATION
+init|=
+literal|"/swagger.properties"
+decl_stmt|;
+name|String
+name|DEFAULT_LICENSE_VALUE
+init|=
+literal|"Apache 2.0 License"
+decl_stmt|;
+name|String
+name|DEFAULT_LICENSE_URL
+init|=
+literal|"http://www.apache.org/licenses/LICENSE-2.0.html"
+decl_stmt|;
 name|String
 name|RESOURCE_PACKAGE_PROPERTY
 init|=
@@ -150,9 +168,8 @@ name|getClasspathResourceStream
 argument_list|(
 name|location
 argument_list|,
-name|SwaggerProperties
-operator|.
-name|class
+name|getClass
+argument_list|()
 argument_list|,
 name|bus
 argument_list|)
