@@ -1159,8 +1159,7 @@ name|portNum
 operator|++
 decl_stmt|;
 try|try
-block|{
-comment|//make sure the port can be opened.   Something MIGHT be running on it.
+init|(
 name|ServerSocket
 name|sock
 init|=
@@ -1169,12 +1168,9 @@ name|ServerSocket
 argument_list|(
 name|pn
 argument_list|)
-decl_stmt|;
-name|sock
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+init|)
+block|{
+comment|//make sure the port can be opened.   Something MIGHT be running on it.
 name|p
 operator|=
 name|Integer
