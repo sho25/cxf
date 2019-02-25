@@ -1672,6 +1672,17 @@ argument_list|()
 operator|.
 name|isWant
 argument_list|()
+operator|&&
+operator|!
+name|this
+operator|.
+name|tlsServerParameters
+operator|.
+name|getClientAuthentication
+argument_list|()
+operator|.
+name|isRequired
+argument_list|()
 condition|)
 block|{
 name|builder
