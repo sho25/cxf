@@ -260,6 +260,14 @@ name|SseEventSinkImpl
 implements|implements
 name|SseEventSink
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BUFFER_SIZE_PROPERTY
+init|=
+literal|"org.apache.cxf.sse.sink.buffer.size"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -291,7 +299,7 @@ specifier|private
 specifier|static
 specifier|final
 name|int
-name|BUFFER_SIZE
+name|DEFAULT_BUFFER_SIZE
 init|=
 literal|10000
 decl_stmt|;
@@ -363,6 +371,12 @@ argument_list|(
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|private
+specifier|final
+name|int
+name|bufferSize
+decl_stmt|;
+comment|/**      * Create new SseEventSink implementation with the default buffer size of 10000      * SSE events.      *       * @param writer message body writer      * @param async asynchronous response       * @param ctx asynchronous context      */
 specifier|public
 name|SseEventSinkImpl
 parameter_list|(
@@ -383,6 +397,42 @@ name|ctx
 parameter_list|)
 block|{
 name|this
+argument_list|(
+name|writer
+argument_list|,
+name|async
+argument_list|,
+name|ctx
+argument_list|,
+name|DEFAULT_BUFFER_SIZE
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Create new SseEventSink implementation with the configurable SSE events buffer       * size.      *       * @param writer message body writer      * @param async asynchronous response       * @param ctx asynchronous context      * @param bufferSize SSE events buffer size      */
+specifier|public
+name|SseEventSinkImpl
+parameter_list|(
+specifier|final
+name|MessageBodyWriter
+argument_list|<
+name|OutboundSseEvent
+argument_list|>
+name|writer
+parameter_list|,
+specifier|final
+name|AsyncResponse
+name|async
+parameter_list|,
+specifier|final
+name|AsyncContext
+name|ctx
+parameter_list|,
+specifier|final
+name|int
+name|bufferSize
+parameter_list|)
+block|{
+name|this
 operator|.
 name|writer
 operator|=
@@ -396,7 +446,7 @@ operator|new
 name|ArrayBlockingQueue
 argument_list|<>
 argument_list|(
-name|BUFFER_SIZE
+name|bufferSize
 argument_list|)
 expr_stmt|;
 name|this
@@ -404,6 +454,12 @@ operator|.
 name|ctx
 operator|=
 name|ctx
+expr_stmt|;
+name|this
+operator|.
+name|bufferSize
+operator|=
+name|bufferSize
 expr_stmt|;
 if|if
 condition|(
@@ -892,7 +948,15 @@ argument_list|(
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"The buffer is full (10000), unable to queue SSE event for send"
+literal|"The buffer is full ("
+operator|+
+name|bufferSize
+operator|+
+literal|"), unable to queue SSE event for send. Please use '"
+operator|+
+name|BUFFER_SIZE_PROPERTY
+operator|+
+literal|"' property to increase the limit."
 argument_list|)
 argument_list|)
 expr_stmt|;
