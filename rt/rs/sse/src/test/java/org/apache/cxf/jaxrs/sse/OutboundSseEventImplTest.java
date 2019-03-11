@@ -663,17 +663,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
-name|t
+name|IllegalArgumentException
+name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|t
-operator|instanceof
-name|IllegalArgumentException
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
@@ -696,17 +690,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
-name|t
+name|IllegalArgumentException
+name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|t
-operator|instanceof
-name|IllegalArgumentException
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
@@ -733,17 +721,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
-name|t
+name|IllegalArgumentException
+name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|t
-operator|instanceof
-name|IllegalArgumentException
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
@@ -773,17 +755,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
-name|t
+name|IllegalArgumentException
+name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|t
-operator|instanceof
-name|IllegalArgumentException
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
@@ -810,17 +786,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
-name|t
+name|IllegalArgumentException
+name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|t
-operator|instanceof
-name|IllegalArgumentException
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 block|}
 comment|/**      * Test that event built by the builder contains all of the data passed in      * to it.      */

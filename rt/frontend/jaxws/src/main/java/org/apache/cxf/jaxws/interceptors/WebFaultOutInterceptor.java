@@ -1343,16 +1343,9 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|nex
-parameter_list|)
-block|{
-if|if
-condition|(
-name|nex
-operator|instanceof
 name|Fault
-condition|)
+name|f2
+parameter_list|)
 block|{
 name|message
 operator|.
@@ -1362,7 +1355,7 @@ name|Exception
 operator|.
 name|class
 argument_list|,
-name|nex
+name|f2
 argument_list|)
 expr_stmt|;
 name|super
@@ -1373,7 +1366,11 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+catch|catch
+parameter_list|(
+name|Exception
+name|nex
+parameter_list|)
 block|{
 comment|//if exception occurs while writing a fault, we'll just let things continue
 comment|//and let the rest of the chain try handling it as is.
@@ -1390,7 +1387,6 @@ argument_list|,
 name|nex
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 else|else

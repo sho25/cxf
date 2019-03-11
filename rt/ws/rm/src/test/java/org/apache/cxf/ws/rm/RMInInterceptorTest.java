@@ -2161,17 +2161,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|RMException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|e
-operator|instanceof
-name|RMException
-argument_list|)
-expr_stmt|;
 comment|// verify a partial error text match to exclude an unexpected exception
 comment|// (see WSA_REQUIRED_EXC in Messages.properties)
 specifier|final
@@ -2419,17 +2412,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|RMException
 name|e
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|e
-operator|instanceof
-name|RMException
-argument_list|)
-expr_stmt|;
 comment|// verify a partial error text match to exclude an unexpected exception
 comment|// (see WSRM_REQUIRED_EXC in Messages.properties)
 specifier|final

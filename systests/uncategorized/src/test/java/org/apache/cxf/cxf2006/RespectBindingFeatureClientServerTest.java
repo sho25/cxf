@@ -338,16 +338,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"WebServiceException is expected"
-argument_list|,
-name|ex
-operator|instanceof
 name|javax
 operator|.
 name|xml
@@ -355,8 +345,9 @@ operator|.
 name|ws
 operator|.
 name|WebServiceException
-argument_list|)
-expr_stmt|;
+name|ex
+parameter_list|)
+block|{
 name|assertTrue
 argument_list|(
 literal|"RespectBindingFeature message is expected: "
@@ -440,16 +431,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"WebServiceException is expected"
-argument_list|,
-name|ex
-operator|instanceof
 name|javax
 operator|.
 name|xml
@@ -457,8 +438,9 @@ operator|.
 name|ws
 operator|.
 name|WebServiceException
-argument_list|)
-expr_stmt|;
+name|ex
+parameter_list|)
+block|{
 name|assertTrue
 argument_list|(
 literal|"RespectBindingFeature message is expected: "
@@ -542,16 +524,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"WebServiceException is expected"
-argument_list|,
-name|ex
-operator|instanceof
 name|javax
 operator|.
 name|xml
@@ -559,8 +531,9 @@ operator|.
 name|ws
 operator|.
 name|WebServiceException
-argument_list|)
-expr_stmt|;
+name|ex
+parameter_list|)
+block|{
 name|assertTrue
 argument_list|(
 literal|"RespectBindingFeature message is expected: "
@@ -644,16 +617,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"WebServiceException is expected"
-argument_list|,
-name|ex
-operator|instanceof
 name|javax
 operator|.
 name|xml
@@ -661,8 +624,9 @@ operator|.
 name|ws
 operator|.
 name|WebServiceException
-argument_list|)
-expr_stmt|;
+name|ex
+parameter_list|)
+block|{
 name|assertTrue
 argument_list|(
 literal|"RespectBindingFeature message is expected: "
