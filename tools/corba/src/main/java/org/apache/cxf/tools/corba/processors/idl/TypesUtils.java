@@ -411,7 +411,10 @@ operator|.
 name|append
 argument_list|(
 literal|"Anon"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|id
 operator|.
 name|toString

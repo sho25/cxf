@@ -1897,7 +1897,10 @@ operator|.
 name|append
 argument_list|(
 literal|"// - simple type "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|type
 operator|.
 name|getQName

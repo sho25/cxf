@@ -3688,7 +3688,10 @@ name|charAt
 argument_list|(
 literal|0
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|split
 index|[
 name|i
@@ -3877,7 +3880,10 @@ operator|.
 name|append
 argument_list|(
 literal|"package "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|classPackage
 argument_list|)
 operator|.
@@ -3965,16 +3971,25 @@ operator|.
 name|append
 argument_list|(
 literal|"public "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|getClassType
 argument_list|(
 name|info
 operator|.
 name|interfaceIsGenerated
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|className
 argument_list|)
 expr_stmt|;
@@ -3998,10 +4013,16 @@ operator|.
 name|append
 argument_list|(
 literal|" {"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|getLineSep
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|getLineSep
 argument_list|()
 argument_list|)
@@ -4572,7 +4593,10 @@ operator|.
 name|append
 argument_list|(
 literal|" implements "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|StringUtils
 operator|.
 name|capitalize
@@ -4968,9 +4992,15 @@ operator|.
 name|append
 argument_list|(
 literal|"(\""
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|value
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\")"
 argument_list|)
 expr_stmt|;
@@ -5125,7 +5155,10 @@ operator|.
 name|append
 argument_list|(
 literal|"import "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|clsName
 argument_list|)
 operator|.
@@ -6941,7 +6974,10 @@ operator|.
 name|append
 argument_list|(
 literal|"package "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|classPackage
 argument_list|)
 operator|.
@@ -7065,9 +7101,15 @@ operator|.
 name|append
 argument_list|(
 literal|"@HttpMethod(\""
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|methodName
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\")"
 argument_list|)
 operator|.
@@ -7082,7 +7124,10 @@ operator|.
 name|append
 argument_list|(
 literal|"public @interface "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|methodName
 argument_list|)
 expr_stmt|;
@@ -7091,10 +7136,16 @@ operator|.
 name|append
 argument_list|(
 literal|" {"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|getLineSep
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|getLineSep
 argument_list|()
 argument_list|)
@@ -7332,9 +7383,15 @@ operator|.
 name|append
 argument_list|(
 literal|"get"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|localName
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|suffixName
 argument_list|)
 expr_stmt|;
@@ -8549,7 +8606,10 @@ operator|.
 name|append
 argument_list|(
 name|elementType
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" "
 argument_list|)
 expr_stmt|;
@@ -10179,7 +10239,10 @@ operator|.
 name|append
 argument_list|(
 literal|"package "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|classPackage
 argument_list|)
 operator|.
@@ -10205,7 +10268,10 @@ operator|.
 name|append
 argument_list|(
 literal|"public enum "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|clsName
 argument_list|)
 expr_stmt|;
@@ -12219,9 +12285,15 @@ operator|.
 name|append
 argument_list|(
 literal|"\""
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|mediaType
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\""
 argument_list|)
 expr_stmt|;

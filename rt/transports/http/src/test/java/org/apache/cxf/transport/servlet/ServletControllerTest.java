@@ -435,6 +435,7 @@ name|requestUri
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|registry
 operator|.
 name|getDestinationsPaths

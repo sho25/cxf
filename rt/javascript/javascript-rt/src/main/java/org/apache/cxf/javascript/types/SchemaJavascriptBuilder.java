@@ -601,7 +601,10 @@ operator|.
 name|append
 argument_list|(
 literal|"// Definitions for schema: "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|schema
 operator|.
 name|getTargetNamespace
@@ -623,7 +626,10 @@ operator|.
 name|append
 argument_list|(
 literal|"\n//  "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|schema
 operator|.
 name|getSourceURI

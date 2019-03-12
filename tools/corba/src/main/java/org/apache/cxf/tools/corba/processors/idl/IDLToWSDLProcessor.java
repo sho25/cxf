@@ -2725,7 +2725,10 @@ name|bindingTokens
 index|[
 name|j
 index|]
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"."
 argument_list|)
 expr_stmt|;

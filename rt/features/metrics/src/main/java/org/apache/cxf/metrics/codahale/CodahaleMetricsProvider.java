@@ -540,7 +540,10 @@ argument_list|(
 name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|":"
 argument_list|)
 expr_stmt|;

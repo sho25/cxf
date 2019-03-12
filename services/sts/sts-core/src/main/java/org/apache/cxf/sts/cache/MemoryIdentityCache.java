@@ -659,7 +659,10 @@ operator|.
 name|append
 argument_list|(
 literal|"MemoryIdentityCache-"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|System
 operator|.
 name|identityHashCode

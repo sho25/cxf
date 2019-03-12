@@ -485,7 +485,10 @@ operator|.
 name|append
 argument_list|(
 literal|" left join "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|joinTable
 argument_list|)
 expr_stmt|;
@@ -494,17 +497,35 @@ operator|.
 name|append
 argument_list|(
 literal|" on "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|primaryTable
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|".id"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" = "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|joinTable
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"."
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|joiningKey
 argument_list|)
 expr_stmt|;

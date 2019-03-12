@@ -561,7 +561,7 @@ argument_list|(
 literal|"=Shared,"
 argument_list|)
 expr_stmt|;
-comment|//buffer.append(WorkQueueManagerImplMBeanWrapper.TYPE_VALUE + "=Shared,");
+comment|//buffer.append(WorkQueueManagerImplMBeanWrapper.TYPE_VALUE).append("=Shared,");
 block|}
 name|buffer
 operator|.

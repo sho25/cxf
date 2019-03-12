@@ -377,7 +377,10 @@ operator|.
 name|append
 argument_list|(
 literal|"MemoryIdentityCacheStatistics-"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|System
 operator|.
 name|identityHashCode

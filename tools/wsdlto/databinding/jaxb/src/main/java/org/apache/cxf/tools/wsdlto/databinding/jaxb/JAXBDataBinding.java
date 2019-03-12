@@ -2997,7 +2997,10 @@ operator|.
 name|append
 argument_list|(
 name|arg
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" "
 argument_list|)
 expr_stmt|;

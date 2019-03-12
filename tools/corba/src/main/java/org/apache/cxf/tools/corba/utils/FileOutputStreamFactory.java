@@ -390,7 +390,10 @@ name|pos1
 argument_list|,
 name|pos2
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|File
 operator|.
 name|separator
