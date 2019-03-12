@@ -778,9 +778,6 @@ name|st
 operator|.
 name|getMessageNumber
 argument_list|()
-operator|.
-name|longValue
-argument_list|()
 decl_stmt|;
 name|LOG
 operator|.
@@ -793,7 +790,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-literal|0
+literal|0L
 operator|!=
 name|lastMessageNumber
 operator|&&
@@ -936,7 +933,7 @@ if|if
 condition|(
 name|diff
 operator|==
-literal|1
+literal|1L
 condition|)
 block|{
 name|r
@@ -960,7 +957,7 @@ if|if
 condition|(
 name|diff
 operator|>
-literal|0
+literal|0L
 condition|)
 block|{
 break|break;
@@ -974,11 +971,8 @@ name|r
 operator|.
 name|getUpper
 argument_list|()
-operator|.
-name|longValue
-argument_list|()
 operator|==
-literal|1
+literal|1L
 condition|)
 block|{
 name|r
