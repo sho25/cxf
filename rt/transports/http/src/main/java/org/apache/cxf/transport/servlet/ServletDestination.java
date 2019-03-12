@@ -276,6 +276,13 @@ operator|.
 name|create
 argument_list|(
 name|address
+operator|.
+name|replaceAll
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
 argument_list|)
 operator|.
 name|getPath
