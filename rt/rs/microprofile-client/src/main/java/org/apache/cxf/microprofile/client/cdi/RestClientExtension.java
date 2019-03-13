@@ -161,7 +161,6 @@ implements|implements
 name|Extension
 block|{
 specifier|private
-specifier|static
 name|Set
 argument_list|<
 name|Class
@@ -177,7 +176,6 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
-specifier|static
 name|Set
 argument_list|<
 name|Throwable
