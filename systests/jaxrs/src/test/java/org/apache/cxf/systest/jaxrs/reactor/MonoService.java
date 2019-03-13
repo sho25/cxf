@@ -242,9 +242,9 @@ literal|null
 argument_list|,
 literal|null
 argument_list|,
-literal|1000
+literal|1000L
 argument_list|,
-literal|0
+literal|0L
 argument_list|)
 argument_list|)
 expr_stmt|;
