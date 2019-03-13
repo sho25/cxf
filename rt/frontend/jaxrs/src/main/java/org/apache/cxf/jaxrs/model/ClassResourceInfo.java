@@ -665,7 +665,7 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|c
+name|theServiceClass
 parameter_list|,
 name|boolean
 name|theRoot
@@ -691,7 +691,7 @@ name|this
 argument_list|(
 name|theResourceClass
 argument_list|,
-name|theResourceClass
+name|theServiceClass
 argument_list|,
 name|theRoot
 argument_list|,

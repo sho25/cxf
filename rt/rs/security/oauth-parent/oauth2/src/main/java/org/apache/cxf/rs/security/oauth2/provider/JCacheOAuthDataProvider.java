@@ -420,6 +420,8 @@ name|getThreadDefaultBus
 argument_list|(
 literal|true
 argument_list|)
+argument_list|,
+name|storeJwtTokenKeyOnly
 argument_list|)
 expr_stmt|;
 block|}

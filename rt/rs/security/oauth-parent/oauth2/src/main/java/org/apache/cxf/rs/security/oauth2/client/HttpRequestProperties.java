@@ -212,6 +212,12 @@ name|httpMethod
 operator|=
 name|httpMethod
 expr_stmt|;
+name|this
+operator|.
+name|requestQuery
+operator|=
+name|requestQuery
+expr_stmt|;
 block|}
 specifier|private
 specifier|static

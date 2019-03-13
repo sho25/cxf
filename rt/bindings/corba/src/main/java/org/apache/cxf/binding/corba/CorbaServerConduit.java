@@ -422,9 +422,7 @@ name|class
 argument_list|,
 operator|new
 name|CorbaOutputStream
-argument_list|(
-name|message
-argument_list|)
+argument_list|()
 argument_list|)
 expr_stmt|;
 if|if
@@ -883,12 +881,6 @@ name|CorbaOutputStream
 extends|extends
 name|CachedOutputStream
 block|{
-name|CorbaOutputStream
-parameter_list|(
-name|Message
-name|m
-parameter_list|)
-block|{         }
 comment|/**          * Perform any actions required on stream flush (freeze headers, reset          * output stream ... etc.)          */
 specifier|public
 name|void

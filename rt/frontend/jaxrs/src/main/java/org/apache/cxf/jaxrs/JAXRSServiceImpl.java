@@ -578,7 +578,7 @@ argument_list|)
 expr_stmt|;
 name|createServiceModel
 operator|=
-literal|true
+name|create
 expr_stmt|;
 block|}
 specifier|public

@@ -365,10 +365,7 @@ name|setDestinationFactory
 argument_list|(
 operator|new
 name|CustomDestinationFactory
-argument_list|(
-name|getBus
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|ServerImpl
@@ -691,10 +688,7 @@ name|DestinationFactory
 block|{
 specifier|public
 name|CustomDestinationFactory
-parameter_list|(
-name|Bus
-name|b
-parameter_list|)
+parameter_list|()
 block|{
 name|super
 argument_list|(

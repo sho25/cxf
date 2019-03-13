@@ -274,6 +274,12 @@ name|crinfo
 operator|=
 name|crInfo
 expr_stmt|;
+name|this
+operator|.
+name|subject
+operator|=
+name|sj
+expr_stmt|;
 block|}
 specifier|public
 name|void
