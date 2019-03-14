@@ -499,6 +499,18 @@ name|String
 name|uri
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Starting signature validation"
+argument_list|)
+expr_stmt|;
+name|boolean
+name|success
+decl_stmt|;
+try|try
+block|{
 name|Verifier
 name|verifier
 init|=
@@ -512,18 +524,6 @@ argument_list|,
 name|provider
 argument_list|)
 decl_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Starting signature validation"
-argument_list|)
-expr_stmt|;
-name|boolean
-name|success
-decl_stmt|;
-try|try
-block|{
 name|success
 operator|=
 name|verifier
