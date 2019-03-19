@@ -37,6 +37,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|ArrayList
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collection
 import|;
 end_import
@@ -58,16 +68,6 @@ operator|.
 name|util
 operator|.
 name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Vector
 import|;
 end_import
 
@@ -117,7 +117,7 @@ expr_stmt|;
 name|exceptions
 operator|=
 operator|new
-name|Vector
+name|ArrayList
 argument_list|<>
 argument_list|()
 expr_stmt|;

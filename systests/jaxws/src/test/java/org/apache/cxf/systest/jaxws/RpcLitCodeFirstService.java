@@ -29,16 +29,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Vector
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|jws
@@ -192,7 +182,7 @@ parameter_list|)
 function_decl|;
 annotation|@
 name|WebMethod
-name|Vector
+name|List
 argument_list|<
 name|String
 argument_list|>

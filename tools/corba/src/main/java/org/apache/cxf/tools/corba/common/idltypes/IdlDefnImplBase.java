@@ -37,7 +37,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|ArrayList
 import|;
 end_import
 
@@ -47,7 +47,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Vector
+name|List
 import|;
 end_import
 
@@ -263,7 +263,7 @@ argument_list|(
 literal|null
 argument_list|,
 operator|new
-name|Vector
+name|ArrayList
 argument_list|<
 name|Object
 argument_list|>

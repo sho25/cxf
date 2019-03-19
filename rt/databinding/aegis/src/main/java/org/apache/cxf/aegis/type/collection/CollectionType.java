@@ -425,6 +425,7 @@ name|class
 argument_list|)
 condition|)
 block|{
+comment|//NOPMD
 name|values
 operator|=
 operator|new
@@ -432,6 +433,7 @@ name|Vector
 argument_list|<>
 argument_list|()
 expr_stmt|;
+comment|//NOPMD
 block|}
 elseif|else
 if|if

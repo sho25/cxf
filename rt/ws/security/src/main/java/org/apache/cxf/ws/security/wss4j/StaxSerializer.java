@@ -909,6 +909,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+comment|//NOPMD
 name|LoadingByteArrayOutputStream
 name|byteArrayOutputStream
 init|=
