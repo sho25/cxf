@@ -199,14 +199,23 @@ name|part
 operator|.
 name|getName
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" part element name "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|ixsre
 operator|.
 name|getMessage
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
@@ -246,9 +255,15 @@ name|part
 operator|.
 name|getName
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" of message "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|part
 operator|.
 name|getMessageInfo
@@ -256,7 +271,10 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" part type QName null.\n"
 argument_list|)
 expr_stmt|;
@@ -295,14 +313,23 @@ name|part
 operator|.
 name|getName
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" part type name "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|ixsre
 operator|.
 name|getMessage
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;

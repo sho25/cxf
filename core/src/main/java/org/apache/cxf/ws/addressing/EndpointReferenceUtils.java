@@ -3130,36 +3130,6 @@ name|ref
 argument_list|)
 decl_stmt|;
 comment|//wsdlLocation attribute is a list of anyURI.
-name|StringBuilder
-name|strBuf
-init|=
-operator|new
-name|StringBuilder
-argument_list|()
-decl_stmt|;
-for|for
-control|(
-name|String
-name|str
-range|:
-name|wsdlLocation
-control|)
-block|{
-name|strBuf
-operator|.
-name|append
-argument_list|(
-name|str
-argument_list|)
-expr_stmt|;
-name|strBuf
-operator|.
-name|append
-argument_list|(
-literal|' '
-argument_list|)
-expr_stmt|;
-block|}
 name|metadata
 operator|.
 name|getOtherAttributes
@@ -3169,10 +3139,14 @@ name|put
 argument_list|(
 name|WSDL_LOCATION
 argument_list|,
-name|strBuf
+name|String
 operator|.
-name|toString
-argument_list|()
+name|join
+argument_list|(
+literal|" "
+argument_list|,
+name|wsdlLocation
+argument_list|)
 operator|.
 name|trim
 argument_list|()
