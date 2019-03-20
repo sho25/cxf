@@ -351,6 +351,15 @@ operator|+
 literal|"/"
 argument_list|)
 expr_stmt|;
+name|sf
+operator|.
+name|setProvider
+argument_list|(
+operator|new
+name|MappedExceptionMapper
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|server
 operator|=
 name|sf
