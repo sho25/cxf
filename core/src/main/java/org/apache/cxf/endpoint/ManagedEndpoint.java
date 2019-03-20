@@ -398,24 +398,12 @@ parameter_list|()
 throws|throws
 name|JMException
 block|{
-name|String
-name|busId
-init|=
-name|bus
-operator|.
-name|getId
-argument_list|()
-decl_stmt|;
+comment|//Use default domain name of server
 name|StringBuilder
 name|buffer
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
-decl_stmt|;
-name|buffer
-operator|.
-name|append
 argument_list|(
 name|ManagementConstants
 operator|.
@@ -426,7 +414,7 @@ name|append
 argument_list|(
 literal|':'
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|buffer
 operator|.
 name|append
@@ -443,7 +431,10 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|busId
+name|bus
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 operator|.
 name|append
@@ -671,7 +662,6 @@ argument_list|(
 name|instanceId
 argument_list|)
 expr_stmt|;
-comment|//Use default domain name of server
 return|return
 operator|new
 name|ObjectName
