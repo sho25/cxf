@@ -123,6 +123,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|BadRequestException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|Priorities
 import|;
 end_import
@@ -218,7 +230,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS CXF client Filter which signs outgoing messages. It does not create a digest header  *  */
+comment|/**  * RS CXF client Filter which signs outgoing messages. It does not create a digest header  */
 end_comment
 
 begin_class
@@ -248,7 +260,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|VerifySignatureFilter
+name|CreateSignatureClientFilter
 operator|.
 name|class
 argument_list|)
@@ -393,14 +405,16 @@ block|}
 catch|catch
 parameter_list|(
 name|IOException
-name|e
+name|ex
 parameter_list|)
 block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+throw|throw
+operator|new
+name|BadRequestException
+argument_list|(
+name|ex
+argument_list|)
+throw|;
 block|}
 name|requestHeaders
 operator|.

@@ -302,7 +302,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS CXF Filter which extracts signature data from the context and sends it to the message verifier  *  */
+comment|/**  * RS CXF container Filter which extracts signature data from the context and sends it to the message verifier  */
 end_comment
 
 begin_class
