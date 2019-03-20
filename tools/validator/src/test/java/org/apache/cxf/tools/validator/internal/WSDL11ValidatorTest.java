@@ -69,7 +69,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertFalse
+name|assertTrue
 import|;
 end_import
 
@@ -81,7 +81,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertTrue
+name|fail
 import|;
 end_import
 
@@ -148,13 +148,13 @@ argument_list|)
 decl_stmt|;
 try|try
 block|{
-name|assertFalse
-argument_list|(
 name|validator
 operator|.
 name|isValid
 argument_list|()
-argument_list|)
+expr_stmt|;
+name|fail
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch
@@ -163,6 +163,14 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+specifier|final
+name|String
+name|error
+init|=
+literal|"Caused by {http://apache.org/hello_world/messages}"
+operator|+
+literal|"[portType:GreeterA][operation:sayHi] not exist."
+decl_stmt|;
 name|assertTrue
 argument_list|(
 name|e
@@ -175,15 +183,28 @@ operator|.
 name|getMessage
 argument_list|()
 operator|.
-name|indexOf
+name|contains
 argument_list|(
-literal|"Caused by {http://apache.org/hello_world/messages}"
-operator|+
-literal|"[portType:GreeterA][operation:sayHi] not exist."
+name|error
 argument_list|)
-operator|!=
-operator|-
-literal|1
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|validator
+operator|.
+name|getErrorMessage
+argument_list|()
+argument_list|,
+name|validator
+operator|.
+name|getErrorMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
