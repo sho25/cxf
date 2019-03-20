@@ -935,7 +935,7 @@ name|newToken
 operator|.
 name|append
 argument_list|(
-literal|"_"
+literal|'_'
 argument_list|)
 operator|.
 name|append

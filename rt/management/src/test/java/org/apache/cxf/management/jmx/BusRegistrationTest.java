@@ -621,7 +621,7 @@ name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
 operator|+
-literal|":"
+literal|':'
 argument_list|)
 decl_stmt|;
 name|buffer
@@ -635,7 +635,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -645,7 +645,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|buffer
@@ -674,7 +674,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append

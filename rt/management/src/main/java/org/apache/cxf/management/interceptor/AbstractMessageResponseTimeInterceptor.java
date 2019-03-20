@@ -838,7 +838,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|":"
+literal|':'
 argument_list|)
 expr_stmt|;
 name|buffer
@@ -852,7 +852,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -865,7 +865,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|Message
@@ -895,7 +895,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -924,7 +924,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -951,7 +951,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -961,7 +961,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 expr_stmt|;
 name|buffer
@@ -975,7 +975,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append
@@ -1251,7 +1251,7 @@ name|buffer
 operator|.
 name|append
 argument_list|(
-literal|","
+literal|','
 argument_list|)
 operator|.
 name|append
@@ -1263,7 +1263,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"="
+literal|'='
 argument_list|)
 operator|.
 name|append

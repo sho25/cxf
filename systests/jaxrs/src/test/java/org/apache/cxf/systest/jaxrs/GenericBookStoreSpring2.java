@@ -132,8 +132,6 @@ name|Logging
 specifier|public
 class|class
 name|GenericBookStoreSpring2
-extends|extends
-name|AbstractBookStoreSpring
 block|{
 annotation|@
 name|POST
