@@ -192,6 +192,7 @@ specifier|private
 name|Log
 name|log
 decl_stmt|;
+comment|//NOPMD
 specifier|private
 name|String
 name|origClassPath
@@ -211,6 +212,7 @@ name|Log
 name|log
 parameter_list|)
 block|{
+comment|//NOPMD
 name|this
 operator|.
 name|log

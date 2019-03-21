@@ -198,6 +198,7 @@ specifier|private
 name|Log
 name|log
 decl_stmt|;
+comment|//NOPMD
 specifier|private
 name|String
 name|origClassPath

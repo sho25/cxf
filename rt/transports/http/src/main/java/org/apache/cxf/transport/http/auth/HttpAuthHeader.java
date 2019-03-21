@@ -505,8 +505,6 @@ operator|+
 literal|"="
 operator|+
 name|param
-operator|+
-literal|""
 argument_list|)
 expr_stmt|;
 block|}

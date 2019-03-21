@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -38,6 +50,22 @@ operator|.
 name|ws
 operator|.
 name|Holder
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -257,6 +285,21 @@ init|=
 literal|"/wsdl/header_doc_lit.wsdl"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|AbstractHeaderServiceDocLitTest
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+specifier|private
 name|HeaderTester
 name|service
 decl_stmt|;
@@ -428,10 +471,9 @@ name|HeaderTester
 name|ht
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Client: calling inHeader"
 argument_list|)
@@ -510,10 +552,9 @@ name|HeaderTester
 name|ht
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Client: calling inoutHeader"
 argument_list|)
@@ -649,10 +690,9 @@ name|HeaderTester
 name|ht
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Client: calling outHeader"
 argument_list|)

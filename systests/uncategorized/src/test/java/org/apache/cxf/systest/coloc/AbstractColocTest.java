@@ -81,20 +81,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|logging
-operator|.
-name|Log
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|cxf
 operator|.
 name|Bus
@@ -341,14 +327,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|getLogger
-argument_list|()
-operator|.
-name|debug
-argument_list|(
-literal|"tearDown ..."
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|endpoint
@@ -472,13 +450,6 @@ specifier|protected
 specifier|abstract
 name|Object
 name|getServiceImpl
-parameter_list|()
-function_decl|;
-comment|/**      * @return logger object      */
-specifier|protected
-specifier|abstract
-name|Log
-name|getLogger
 parameter_list|()
 function_decl|;
 comment|/**      * @return transport URI for the WS Endpoint      */

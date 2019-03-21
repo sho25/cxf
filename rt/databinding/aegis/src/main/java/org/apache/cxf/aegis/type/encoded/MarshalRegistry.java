@@ -198,8 +198,13 @@ condition|)
 block|{
 name|id
 operator|=
-literal|""
-operator|+
+name|Integer
+operator|.
+name|toString
+argument_list|(
+name|nextId
+argument_list|)
+expr_stmt|;
 name|nextId
 operator|++
 expr_stmt|;

@@ -554,12 +554,15 @@ name|Headers
 operator|.
 name|CONTENT_LENGTH
 argument_list|,
-literal|""
-operator|+
+name|Integer
+operator|.
+name|toString
+argument_list|(
 name|errorPage
 operator|.
 name|length
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|undertowExchange

@@ -597,11 +597,7 @@ argument_list|()
 operator|+
 name|SEPARATOR
 operator|+
-literal|""
-operator|+
 name|SEPARATOR
-operator|+
-literal|""
 operator|+
 name|SEPARATOR
 return|;

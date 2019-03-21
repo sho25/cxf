@@ -68,11 +68,15 @@ name|nothing
 parameter_list|()
 block|{
 return|return
-literal|""
-operator|+
 name|bean
+operator|.
+name|toString
+argument_list|()
 operator|+
 name|client
+operator|.
+name|toString
+argument_list|()
 return|;
 block|}
 block|}

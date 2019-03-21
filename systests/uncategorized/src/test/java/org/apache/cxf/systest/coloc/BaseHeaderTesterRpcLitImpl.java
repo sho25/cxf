@@ -29,6 +29,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -45,11 +57,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
+name|cxf
 operator|.
-name|logging
+name|common
 operator|.
-name|Log
+name|i18n
+operator|.
+name|Message
 import|;
 end_import
 
@@ -63,9 +77,9 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|i18n
+name|logging
 operator|.
-name|Message
+name|LogUtils
 import|;
 end_import
 
@@ -291,8 +305,19 @@ implements|implements
 name|HeaderTester
 block|{
 specifier|private
-name|Log
-name|logger
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|BaseHeaderTesterRpcLitImpl
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
 specifier|public
 name|InHeaderResponseT
@@ -305,10 +330,9 @@ name|HeaderInfo
 name|header
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Server: inHeader called"
 argument_list|)
@@ -383,10 +407,9 @@ argument_list|>
 name|header
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Server: inoutHeader called"
 argument_list|)
@@ -502,10 +525,9 @@ argument_list|>
 name|header
 parameter_list|)
 block|{
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Server: outHeader called"
 argument_list|)
@@ -594,10 +616,9 @@ operator|.
 name|getFaultType
 argument_list|()
 decl_stmt|;
-name|getLogger
-argument_list|()
+name|LOG
 operator|.
-name|debug
+name|fine
 argument_list|(
 literal|"Server: in pingMe:"
 operator|+
@@ -713,28 +734,6 @@ return|return
 operator|new
 name|PingMeResponseT
 argument_list|()
-return|;
-block|}
-specifier|public
-name|void
-name|init
-parameter_list|(
-name|Log
-name|log
-parameter_list|)
-block|{
-name|logger
-operator|=
-name|log
-expr_stmt|;
-block|}
-specifier|protected
-name|Log
-name|getLogger
-parameter_list|()
-block|{
-return|return
-name|logger
 return|;
 block|}
 block|}

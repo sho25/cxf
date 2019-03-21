@@ -1551,9 +1551,12 @@ name|writer
 operator|.
 name|writeCharacters
 argument_list|(
-literal|""
-operator|+
+name|Integer
+operator|.
+name|toString
+argument_list|(
 name|keySize
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|writer
