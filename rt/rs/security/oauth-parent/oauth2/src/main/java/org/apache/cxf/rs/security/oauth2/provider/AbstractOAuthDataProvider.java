@@ -720,7 +720,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// At a later stage we will likely introduce a dedicate Confirmation bean (as it is used in POP etc)
+comment|// At a later stage we will likely introduce a dedicated Confirmation bean (as it is used in POP etc)
 name|at
 operator|.
 name|getExtraProperties
