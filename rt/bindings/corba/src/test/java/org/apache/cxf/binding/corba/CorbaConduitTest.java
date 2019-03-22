@@ -55,16 +55,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|List
 import|;
 end_import
@@ -1385,7 +1375,7 @@ name|control
 operator|.
 name|createMock
 argument_list|(
-name|ArrayList
+name|List
 operator|.
 name|class
 argument_list|)

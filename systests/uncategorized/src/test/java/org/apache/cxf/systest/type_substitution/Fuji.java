@@ -25,9 +25,10 @@ extends|extends
 name|Apple
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|type
+name|TYPE
 init|=
 literal|"Fuji"
 decl_stmt|;
@@ -37,7 +38,7 @@ parameter_list|()
 block|{
 name|setType
 argument_list|(
-literal|"Fuji"
+name|TYPE
 argument_list|)
 expr_stmt|;
 block|}

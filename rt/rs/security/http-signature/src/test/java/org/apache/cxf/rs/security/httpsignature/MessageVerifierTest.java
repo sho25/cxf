@@ -399,7 +399,7 @@ name|BeforeClass
 specifier|public
 specifier|static
 name|void
-name|setup
+name|setUp
 parameter_list|()
 block|{
 try|try

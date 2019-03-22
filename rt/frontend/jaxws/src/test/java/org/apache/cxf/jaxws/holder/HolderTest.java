@@ -223,9 +223,10 @@ extends|extends
 name|AbstractJaxWsTest
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|address
+name|ADDRESS
 init|=
 literal|"local://localhost:9000/HolderService"
 decl_stmt|;
@@ -271,7 +272,7 @@ name|ei
 operator|.
 name|setAddress
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|Destination
@@ -334,7 +335,7 @@ argument_list|()
 operator|.
 name|setAddress
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|HolderService
@@ -422,7 +423,7 @@ name|svr
 operator|.
 name|setAddress
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|svr
@@ -444,7 +445,7 @@ name|response
 operator|=
 name|invoke
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|,
 name|LocalTransportFactory
 operator|.
@@ -481,7 +482,7 @@ name|response
 operator|=
 name|invoke
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|,
 name|LocalTransportFactory
 operator|.
@@ -519,7 +520,7 @@ name|response
 operator|=
 name|invoke
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|,
 name|LocalTransportFactory
 operator|.

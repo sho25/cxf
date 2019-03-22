@@ -321,7 +321,7 @@ annotation|@
 name|Before
 specifier|public
 name|void
-name|setup
+name|setUp
 parameter_list|()
 block|{
 specifier|final

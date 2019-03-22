@@ -675,9 +675,10 @@ extends|extends
 name|AbstractJaxWsTest
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|QName
-name|serviceName
+name|SERVICE_NAME
 init|=
 operator|new
 name|QName
@@ -688,9 +689,10 @@ literal|"SOAPService"
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|QName
-name|portName
+name|PORT_NAME
 init|=
 operator|new
 name|QName
@@ -701,9 +703,10 @@ literal|"SoapPort"
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|address
+name|ADDRESS
 init|=
 literal|"http://localhost:9000/SoapContext/SoapPort"
 decl_stmt|;
@@ -757,7 +760,7 @@ name|ei
 operator|.
 name|setAddress
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|d
@@ -899,7 +902,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 name|Greeter
@@ -909,7 +912,7 @@ name|s
 operator|.
 name|getPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Greeter
 operator|.
@@ -978,7 +981,7 @@ name|assertEquals
 argument_list|(
 literal|"the address get from requestContext is not equal"
 argument_list|,
-name|address
+name|ADDRESS
 argument_list|,
 name|reqAddr
 argument_list|)
@@ -1034,7 +1037,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1045,7 +1048,7 @@ name|s
 operator|.
 name|getPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Greeter
 operator|.
@@ -1274,7 +1277,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1288,7 +1291,7 @@ name|s
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|DOMSource
 operator|.
@@ -1514,7 +1517,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1525,7 +1528,7 @@ name|s
 operator|.
 name|getPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Greeter
 operator|.
@@ -2461,7 +2464,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 name|Greeter
@@ -2471,7 +2474,7 @@ name|s
 operator|.
 name|getPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Greeter
 operator|.
@@ -2737,7 +2740,7 @@ name|create
 argument_list|(
 name|url
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 name|Greeter
@@ -2747,7 +2750,7 @@ name|s
 operator|.
 name|getPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Greeter
 operator|.

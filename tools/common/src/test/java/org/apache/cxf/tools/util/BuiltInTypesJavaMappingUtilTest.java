@@ -45,9 +45,10 @@ class|class
 name|BuiltInTypesJavaMappingUtilTest
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|xmlSchemaNS
+name|XML_SCHEMA_NS
 init|=
 literal|"http://www.w3.org/2000/10/XMLSchema"
 decl_stmt|;
@@ -65,7 +66,7 @@ name|BuiltInTypesJavaMappingUtil
 operator|.
 name|getJType
 argument_list|(
-name|xmlSchemaNS
+name|XML_SCHEMA_NS
 argument_list|,
 literal|"string"
 argument_list|)

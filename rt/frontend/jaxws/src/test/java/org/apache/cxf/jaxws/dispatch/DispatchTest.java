@@ -543,9 +543,10 @@ extends|extends
 name|AbstractJaxWsTest
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|QName
-name|serviceName
+name|SERVICE_NAME
 init|=
 operator|new
 name|QName
@@ -556,9 +557,10 @@ literal|"SOAPService"
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|QName
-name|portName
+name|PORT_NAME
 init|=
 operator|new
 name|QName
@@ -569,9 +571,10 @@ literal|"SoapPort"
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|address
+name|ADDRESS
 init|=
 literal|"http://localhost:9000/SoapContext/SoapPort"
 decl_stmt|;
@@ -603,7 +606,7 @@ name|ei
 operator|.
 name|setAddress
 argument_list|(
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|d
@@ -662,7 +665,7 @@ name|SOAPService
 argument_list|(
 name|wsdl
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -690,7 +693,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|jc
 argument_list|,
@@ -757,7 +760,7 @@ argument_list|(
 literal|"/wsdl/hello_world.wsdl"
 argument_list|)
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|,
 literal|null
 argument_list|)
@@ -772,7 +775,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Source
 operator|.
@@ -796,7 +799,7 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|d
@@ -868,7 +871,7 @@ argument_list|()
 argument_list|,
 literal|null
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|,
 literal|null
 argument_list|)
@@ -877,7 +880,7 @@ name|service
 operator|.
 name|addPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|HTTPBinding
 operator|.
@@ -896,7 +899,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Source
 operator|.
@@ -940,7 +943,7 @@ argument_list|()
 argument_list|,
 literal|null
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|,
 literal|null
 argument_list|)
@@ -949,7 +952,7 @@ name|service
 operator|.
 name|addPort
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|SOAPBinding
 operator|.
@@ -968,7 +971,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Source
 operator|.
@@ -1036,7 +1039,7 @@ name|SOAPService
 argument_list|(
 name|wsdl
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -1064,7 +1067,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|jc
 argument_list|,
@@ -1146,7 +1149,7 @@ argument_list|(
 literal|"/wsdl/hello_world.wsdl"
 argument_list|)
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|,
 literal|null
 argument_list|)
@@ -1161,7 +1164,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Source
 operator|.
@@ -1266,7 +1269,7 @@ argument_list|(
 literal|"/wsdl/hello_world.wsdl"
 argument_list|)
 argument_list|,
-name|serviceName
+name|SERVICE_NAME
 argument_list|,
 literal|null
 argument_list|)
@@ -1281,7 +1284,7 @@ name|service
 operator|.
 name|createDispatch
 argument_list|(
-name|portName
+name|PORT_NAME
 argument_list|,
 name|Source
 operator|.
@@ -1305,7 +1308,7 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-name|address
+name|ADDRESS
 argument_list|)
 expr_stmt|;
 name|disp
