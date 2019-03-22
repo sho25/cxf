@@ -128,6 +128,15 @@ name|RSSEC_SIGNATURE_PROPS
 init|=
 literal|"rs.security.signature.properties"
 decl_stmt|;
+comment|/**      * The signature key id.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_KEY_ID
+init|=
+literal|"rs.security.signature.key.id"
+decl_stmt|;
 specifier|private
 name|HTTPSignatureConstants
 parameter_list|()
