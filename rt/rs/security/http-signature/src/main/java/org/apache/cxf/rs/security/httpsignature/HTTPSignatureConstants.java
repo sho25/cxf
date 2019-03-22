@@ -92,7 +92,7 @@ name|RSSEC_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.key.password.provider"
 decl_stmt|;
-comment|/**      * The signature algorithm to use. The default algorithm if not specified is XXXX      */
+comment|/**      * The signature algorithm to use. The default algorithm if not specified is "rsa-sha256".      */
 specifier|public
 specifier|static
 specifier|final
