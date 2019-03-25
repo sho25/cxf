@@ -21,30 +21,27 @@ name|common
 package|;
 end_package
 
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Properties
-import|;
-end_import
-
 begin_interface
+annotation|@
+name|Deprecated
 specifier|public
 interface|interface
 name|PrivateKeyPasswordProvider
-block|{
-name|char
-index|[]
-name|getPassword
-parameter_list|(
-name|Properties
-name|storeProperties
-parameter_list|)
-function_decl|;
-block|}
+extends|extends
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|rs
+operator|.
+name|PrivateKeyPasswordProvider
+block|{ }
 end_interface
 
 end_unit

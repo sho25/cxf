@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|httpsignature
+name|rs
 package|;
 end_package
 

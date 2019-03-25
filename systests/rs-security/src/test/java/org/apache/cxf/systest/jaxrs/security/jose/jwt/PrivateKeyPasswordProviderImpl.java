@@ -41,13 +41,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|jose
-operator|.
-name|common
+name|rs
 operator|.
 name|PrivateKeyPasswordProvider
 import|;

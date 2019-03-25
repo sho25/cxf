@@ -19,8 +19,26 @@ name|httpsignature
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|rs
+operator|.
+name|RSSecurityConstants
+import|;
+end_import
+
 begin_comment
-comment|/**  * Some security constants to be used with HTTP Signature. Note that some of the configuration tags are  * shared with some of the JOSEConstants, meaning we could consolidate these in the future.  */
+comment|/**  * Some security constants to be used with HTTP Signature.  */
 end_comment
 
 begin_class
@@ -28,106 +46,9 @@ specifier|public
 specifier|final
 class|class
 name|HTTPSignatureConstants
+extends|extends
+name|RSSecurityConstants
 block|{
-comment|/**      * The keystore type. It defaults to "JKS".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_TYPE
-init|=
-literal|"rs.security.keystore.type"
-decl_stmt|;
-comment|/**      * The password required to access the keystore.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_PSWD
-init|=
-literal|"rs.security.keystore.password"
-decl_stmt|;
-comment|/**      * The password required to access the private key (in the keystore).      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_PSWD
-init|=
-literal|"rs.security.key.password"
-decl_stmt|;
-comment|/**      * The keystore alias corresponding to the key to use.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_ALIAS
-init|=
-literal|"rs.security.keystore.alias"
-decl_stmt|;
-comment|/**      * The path to the keystore file.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_FILE
-init|=
-literal|"rs.security.keystore.file"
-decl_stmt|;
-comment|/**      * The KeyStore Object.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE
-init|=
-literal|"rs.security.keystore"
-decl_stmt|;
-comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_PSWD_PROVIDER
-init|=
-literal|"rs.security.key.password.provider"
-decl_stmt|;
-comment|/**      * The signature algorithm to use. The default algorithm if not specified is "rsa-sha256".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_ALGORITHM
-init|=
-literal|"rs.security.signature.algorithm"
-decl_stmt|;
-comment|/**      * The signature properties file for signature creation. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_OUT_PROPS
-init|=
-literal|"rs.security.signature.out.properties"
-decl_stmt|;
-comment|/**      * The signature properties file for signature verification. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_IN_PROPS
-init|=
-literal|"rs.security.signature.in.properties"
-decl_stmt|;
-comment|/**      * The signature properties file for signature creation/verification.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_PROPS
-init|=
-literal|"rs.security.signature.properties"
-decl_stmt|;
 comment|/**      * The signature key id.      */
 specifier|public
 specifier|static

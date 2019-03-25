@@ -21,11 +21,31 @@ name|common
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|rs
+operator|.
+name|RSSecurityConstants
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|final
 class|class
 name|JoseConstants
+extends|extends
+name|RSSecurityConstants
 block|{
 specifier|public
 specifier|static
@@ -209,42 +229,6 @@ comment|//
 comment|//
 comment|// Shared configuration
 comment|//
-comment|/**      * The keystore type. Suitable values are "jks" or "jwk". The default value is "jwk".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_TYPE
-init|=
-literal|"rs.security.keystore.type"
-decl_stmt|;
-comment|/**      * The password required to access the keystore.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_PSWD
-init|=
-literal|"rs.security.keystore.password"
-decl_stmt|;
-comment|/**      * The password required to access the private key (in the keystore).      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_PSWD
-init|=
-literal|"rs.security.key.password"
-decl_stmt|;
-comment|/**      * The keystore alias corresponding to the key to use. You can append one of the following to this tag to      * get the alias for more specific operations:      *  - jwe.out      *  - jwe.in      *  - jws.out      *  - jws.in      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_ALIAS
-init|=
-literal|"rs.security.keystore.alias"
-decl_stmt|;
 comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form. You can      * append one of the following to this tag to get the alias for more specific operations:      *  - jws.out      *  - jws.in      */
 specifier|public
 specifier|static
@@ -253,33 +237,6 @@ name|String
 name|RSSEC_KEY_STORE_ALIASES
 init|=
 literal|"rs.security.keystore.aliases"
-decl_stmt|;
-comment|/**      * The path to the keystore file.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE_FILE
-init|=
-literal|"rs.security.keystore.file"
-decl_stmt|;
-comment|/**      * The KeyStore Object.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_STORE
-init|=
-literal|"rs.security.keystore"
-decl_stmt|;
-comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_KEY_PSWD_PROVIDER
-init|=
-literal|"rs.security.key.password.provider"
 decl_stmt|;
 comment|/**      * Whether to allow using a JWK received in the header for signature validation. The default      * is "false".      */
 specifier|public
@@ -319,15 +276,6 @@ name|RSSEC_SIGNATURE_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.signature.key.password.provider"
 decl_stmt|;
-comment|/**      * The signature algorithm to use. The default algorithm if not specified is 'RS256'.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_ALGORITHM
-init|=
-literal|"rs.security.signature.algorithm"
-decl_stmt|;
 comment|/**      * The EC Curve to use with EC keys loaded from Java Key Store.      * JWK EC Keys are expected to use a standard "crv" property instead.      */
 specifier|public
 specifier|static
@@ -336,33 +284,6 @@ name|String
 name|RSSEC_EC_CURVE
 init|=
 literal|"rs.security.elliptic.curve"
-decl_stmt|;
-comment|/**      * The signature properties file for compact signature creation. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_OUT_PROPS
-init|=
-literal|"rs.security.signature.out.properties"
-decl_stmt|;
-comment|/**      * The signature properties file for compact signature verification. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_IN_PROPS
-init|=
-literal|"rs.security.signature.in.properties"
-decl_stmt|;
-comment|/**      * The signature properties file for compact signature creation/verification.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_PROPS
-init|=
-literal|"rs.security.signature.properties"
 decl_stmt|;
 comment|/**      * Include the JWK public key for signature in the "jwk" header.      */
 specifier|public

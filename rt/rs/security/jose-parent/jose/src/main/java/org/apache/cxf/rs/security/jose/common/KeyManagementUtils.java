@@ -465,6 +465,24 @@ name|MessageDigestUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|rs
+operator|.
+name|PrivateKeyPasswordProvider
+import|;
+end_import
+
 begin_comment
 comment|/**  * Encryption helpers  */
 end_comment
