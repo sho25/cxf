@@ -6181,6 +6181,7 @@ name|TreeSet
 operator|.
 name|class
 expr_stmt|;
+comment|//NOPMD
 block|}
 elseif|else
 if|if
@@ -6201,6 +6202,7 @@ name|HashSet
 operator|.
 name|class
 expr_stmt|;
+comment|//NOPMD
 block|}
 elseif|else
 if|if
@@ -6221,6 +6223,7 @@ name|ArrayList
 operator|.
 name|class
 expr_stmt|;
+comment|//NOPMD
 block|}
 return|return
 name|type
@@ -7496,7 +7499,7 @@ empty_stmt|;
 end_empty_stmt
 
 begin_expr_stmt
-unit|}              return
+unit|}             return
 operator|(
 name|ThreadLocalProxy
 argument_list|<
@@ -7543,7 +7546,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          private
+unit|}      private
 specifier|static
 name|boolean
 name|canSeeAllClasses

@@ -12043,10 +12043,7 @@ if|if
 condition|(
 name|type
 operator|.
-name|toLowerCase
-argument_list|()
-operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|clsName
 argument_list|)

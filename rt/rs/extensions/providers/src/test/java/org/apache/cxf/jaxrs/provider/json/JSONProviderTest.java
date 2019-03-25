@@ -10240,6 +10240,7 @@ name|class
 argument_list|,
 name|type
 argument_list|,
+comment|//NOPMD
 operator|new
 name|Annotation
 index|[

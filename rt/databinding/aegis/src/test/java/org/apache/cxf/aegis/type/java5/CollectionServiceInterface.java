@@ -171,6 +171,7 @@ argument_list|>
 name|strings
 parameter_list|)
 function_decl|;
+comment|//NOPMD
 name|String
 name|takeStack
 parameter_list|(
@@ -191,6 +192,7 @@ argument_list|>
 name|strings
 parameter_list|)
 function_decl|;
+comment|//NOPMD
 comment|//CHECKSTYLE:ON
 name|void
 name|method1

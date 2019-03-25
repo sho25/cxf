@@ -298,6 +298,7 @@ argument_list|>
 name|strings
 parameter_list|)
 block|{
+comment|//NOPMD
 return|return
 name|Integer
 operator|.
@@ -321,6 +322,7 @@ argument_list|>
 name|strings
 parameter_list|)
 block|{
+comment|//NOPMD
 return|return
 name|strings
 operator|.

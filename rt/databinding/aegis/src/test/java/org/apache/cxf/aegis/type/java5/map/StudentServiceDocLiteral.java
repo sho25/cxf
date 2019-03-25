@@ -139,6 +139,7 @@ argument_list|>
 name|myComplexData
 parameter_list|)
 function_decl|;
+comment|//NOPMD
 block|}
 end_interface
 

@@ -3924,6 +3924,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|EasyMock
 operator|.
 name|expectLastCall

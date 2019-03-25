@@ -9212,6 +9212,7 @@ operator|.
 name|class
 block|}
 decl_stmt|;
+comment|//NOPMD
 name|Method
 name|m
 init|=

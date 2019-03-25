@@ -2051,6 +2051,7 @@ argument_list|>
 name|map
 parameter_list|)
 block|{
+comment|//NOPMD
 comment|// complete
 block|}
 comment|//  CHECKSTYLE:ON

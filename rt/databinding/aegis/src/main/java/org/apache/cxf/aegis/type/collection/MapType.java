@@ -747,6 +747,7 @@ name|class
 argument_list|)
 condition|)
 block|{
+comment|//NOPMD
 name|map
 operator|=
 operator|new

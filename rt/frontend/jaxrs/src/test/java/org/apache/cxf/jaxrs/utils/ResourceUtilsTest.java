@@ -552,6 +552,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|ur
 operator|.
 name|setPath
@@ -706,6 +707,7 @@ name|class
 block|}
 argument_list|)
 decl_stmt|;
+comment|//NOPMD
 name|OperationResourceInfo
 name|ori
 init|=

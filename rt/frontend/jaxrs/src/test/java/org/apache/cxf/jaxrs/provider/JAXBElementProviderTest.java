@@ -7728,6 +7728,7 @@ name|class
 argument_list|,
 name|type
 argument_list|,
+comment|//NOPMD
 operator|new
 name|Annotation
 index|[
@@ -11442,7 +11443,7 @@ name|result
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11468,7 +11469,7 @@ name|output
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11481,7 +11482,7 @@ name|writer
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11494,7 +11495,7 @@ name|handler
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11507,7 +11508,7 @@ name|node
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11520,7 +11521,7 @@ name|writer
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|marshal
@@ -11533,7 +11534,7 @@ name|writer
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -11546,7 +11547,7 @@ parameter_list|(
 name|XmlAdapter
 name|adapter
 parameter_list|)
-block|{              }
+block|{          }
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -11570,7 +11571,7 @@ parameter_list|,
 name|A
 name|adapter
 parameter_list|)
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|setAttachmentMarshaller
@@ -11578,7 +11579,7 @@ parameter_list|(
 name|AttachmentMarshaller
 name|am
 parameter_list|)
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|setEventHandler
@@ -11588,7 +11589,7 @@ name|handler
 parameter_list|)
 throws|throws
 name|JAXBException
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|setListener
@@ -11596,7 +11597,7 @@ parameter_list|(
 name|Listener
 name|listener
 parameter_list|)
-block|{              }
+block|{          }
 specifier|public
 name|void
 name|setProperty
@@ -11627,7 +11628,7 @@ parameter_list|(
 name|Schema
 name|schema
 parameter_list|)
-block|{              }
+block|{          }
 block|}
 annotation|@
 name|XmlRootElement

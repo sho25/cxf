@@ -594,6 +594,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|assertEquals
 argument_list|(
 name|ArrayList
@@ -610,6 +611,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|assertEquals
 argument_list|(
 name|HashSet
@@ -626,6 +628,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 name|assertEquals
 argument_list|(
 name|TreeSet
@@ -642,6 +645,7 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 block|}
 annotation|@
 name|Test
@@ -1379,6 +1383,7 @@ name|ExchangeImpl
 argument_list|()
 argument_list|)
 decl_stmt|;
+comment|//NOPMD
 name|assertEquals
 argument_list|(
 name|String
