@@ -881,6 +881,13 @@ argument_list|,
 name|securityProperties
 argument_list|)
 expr_stmt|;
+name|securityProperties
+operator|.
+name|setSkipDocumentEvents
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 return|return
 name|securityProperties
 return|;
