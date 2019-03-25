@@ -1158,7 +1158,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"rs.security.signature.key.id"
+literal|"rs.security.http.signature.key.id"
 argument_list|,
 literal|"alice-key-id"
 argument_list|)
@@ -1557,7 +1557,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"rs.security.signature.key.id"
+literal|"rs.security.http.signature.key.id"
 argument_list|,
 literal|"alice-key-id"
 argument_list|)

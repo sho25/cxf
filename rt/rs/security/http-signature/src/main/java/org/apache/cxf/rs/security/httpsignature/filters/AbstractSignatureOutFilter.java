@@ -731,7 +731,7 @@ name|getContextualProperty
 argument_list|(
 name|HTTPSignatureConstants
 operator|.
-name|RSSEC_SIGNATURE_KEY_ID
+name|RSSEC_HTTP_SIGNATURE_KEY_ID
 argument_list|)
 decl_stmt|;
 if|if
@@ -749,7 +749,7 @@ name|getProperty
 argument_list|(
 name|HTTPSignatureConstants
 operator|.
-name|RSSEC_SIGNATURE_KEY_ID
+name|RSSEC_HTTP_SIGNATURE_KEY_ID
 argument_list|)
 expr_stmt|;
 if|if

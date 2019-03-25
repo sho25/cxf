@@ -54,9 +54,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_KEY_ID
+name|RSSEC_HTTP_SIGNATURE_KEY_ID
 init|=
-literal|"rs.security.signature.key.id"
+literal|"rs.security.http.signature.key.id"
 decl_stmt|;
 specifier|private
 name|HTTPSignatureConstants
