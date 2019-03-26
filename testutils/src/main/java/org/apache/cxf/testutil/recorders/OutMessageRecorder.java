@@ -410,7 +410,7 @@ argument_list|()
 decl_stmt|;
 synchronized|synchronized
 init|(
-name|outbound
+name|this
 init|)
 block|{
 name|outbound
