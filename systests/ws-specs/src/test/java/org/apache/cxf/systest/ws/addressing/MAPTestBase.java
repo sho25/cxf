@@ -1572,9 +1572,7 @@ comment|// expect two MAPs instances versioned with 200408, i.e. for both
 comment|// the partial and full responses
 name|mapVerifier
 operator|.
-name|expectedExposedAs
-operator|.
-name|add
+name|addToExpectedExposedAs
 argument_list|(
 name|Names200408
 operator|.
@@ -1583,9 +1581,7 @@ argument_list|)
 expr_stmt|;
 name|mapVerifier
 operator|.
-name|expectedExposedAs
-operator|.
-name|add
+name|addToExpectedExposedAs
 argument_list|(
 name|Names200408
 operator|.
