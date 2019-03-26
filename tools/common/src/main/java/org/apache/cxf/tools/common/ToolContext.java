@@ -716,7 +716,7 @@ block|{
 return|return
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 operator|(
 name|String
@@ -728,9 +728,6 @@ argument_list|,
 name|defaultValue
 argument_list|)
 argument_list|)
-operator|.
-name|booleanValue
-argument_list|()
 return|;
 block|}
 specifier|public

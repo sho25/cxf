@@ -831,16 +831,13 @@ literal|3
 argument_list|,
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|detailEntry
 operator|.
 name|getTextContent
 argument_list|()
 argument_list|)
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|detailEntry

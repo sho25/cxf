@@ -1734,9 +1734,9 @@ control|)
 block|{
 name|assertTrue
 argument_list|(
-name|Long
+name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 operator|(
 operator|(
@@ -1753,9 +1753,6 @@ operator|.
 name|getDataFromValue
 argument_list|()
 argument_list|)
-operator|.
-name|intValue
-argument_list|()
 operator|==
 name|data
 index|[
@@ -2524,7 +2521,7 @@ name|assertTrue
 argument_list|(
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 operator|(
 operator|(
@@ -2541,9 +2538,6 @@ operator|.
 name|getDataFromValue
 argument_list|()
 argument_list|)
-operator|.
-name|intValue
-argument_list|()
 operator|==
 name|member1
 argument_list|)
@@ -2572,7 +2566,7 @@ name|assertTrue
 argument_list|(
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 operator|(
 operator|(
@@ -2589,9 +2583,6 @@ operator|.
 name|getDataFromValue
 argument_list|()
 argument_list|)
-operator|.
-name|booleanValue
-argument_list|()
 operator|==
 name|member3
 argument_list|)
@@ -2954,7 +2945,7 @@ name|assertTrue
 argument_list|(
 name|Short
 operator|.
-name|valueOf
+name|parseShort
 argument_list|(
 operator|(
 operator|(
@@ -2971,9 +2962,6 @@ operator|.
 name|getDataFromValue
 argument_list|()
 argument_list|)
-operator|.
-name|shortValue
-argument_list|()
 operator|==
 name|code
 argument_list|)

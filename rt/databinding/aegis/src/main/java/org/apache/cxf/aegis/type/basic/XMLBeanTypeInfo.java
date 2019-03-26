@@ -697,13 +697,10 @@ name|setNillable
 argument_list|(
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 name|nillableVal
 argument_list|)
-operator|.
-name|booleanValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

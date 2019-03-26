@@ -3023,6 +3023,7 @@ name|x
 operator|++
 control|)
 block|{
+comment|//NOPMD
 name|v2
 index|[
 name|x

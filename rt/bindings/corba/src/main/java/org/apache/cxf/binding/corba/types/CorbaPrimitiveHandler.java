@@ -1094,6 +1094,7 @@ operator|.
 name|byteValue
 argument_list|()
 expr_stmt|;
+comment|//NOPMD
 break|break;
 case|case
 name|TCKind

@@ -1337,13 +1337,10 @@ block|}
 return|return
 name|Boolean
 operator|.
-name|valueOf
+name|parseBoolean
 argument_list|(
 name|value
 argument_list|)
-operator|.
-name|booleanValue
-argument_list|()
 return|;
 block|}
 specifier|private
@@ -4430,9 +4427,6 @@ name|outputPartsMap
 operator|.
 name|remove
 argument_list|(
-operator|(
-name|Object
-operator|)
 name|outputUnlistedParts
 operator|.
 name|get
