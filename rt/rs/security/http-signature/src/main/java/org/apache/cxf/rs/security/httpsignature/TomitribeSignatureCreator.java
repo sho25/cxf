@@ -139,11 +139,6 @@ name|keyId
 decl_stmt|;
 specifier|private
 specifier|final
-name|boolean
-name|includeRequestTarget
-decl_stmt|;
-specifier|private
-specifier|final
 name|List
 argument_list|<
 name|String
@@ -171,8 +166,6 @@ name|privateKey
 argument_list|,
 name|keyId
 argument_list|,
-literal|true
-argument_list|,
 name|Collections
 operator|.
 name|emptyList
@@ -191,9 +184,6 @@ name|privateKey
 parameter_list|,
 name|String
 name|keyId
-parameter_list|,
-name|boolean
-name|includeRequestTarget
 parameter_list|,
 name|List
 argument_list|<
@@ -219,12 +209,6 @@ operator|.
 name|keyId
 operator|=
 name|keyId
-expr_stmt|;
-name|this
-operator|.
-name|includeRequestTarget
-operator|=
-name|includeRequestTarget
 expr_stmt|;
 name|this
 operator|.
@@ -282,7 +266,8 @@ name|headers
 init|=
 literal|null
 decl_stmt|;
-comment|// If we have explicit headers to sign then use these. Otherwise sign all headers
+comment|// If we have explicit headers to sign then use these.
+comment|// Otherwise sign all headers including "(request-target)"
 if|if
 condition|(
 name|headersToSign
@@ -316,6 +301,13 @@ name|toList
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|headers
+operator|.
+name|add
+argument_list|(
+literal|"(request-target)"
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -339,19 +331,6 @@ name|Collectors
 operator|.
 name|toList
 argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-if|if
-condition|(
-name|includeRequestTarget
-condition|)
-block|{
-name|headers
-operator|.
-name|add
-argument_list|(
-literal|"(request-target)"
 argument_list|)
 expr_stmt|;
 block|}
