@@ -620,10 +620,7 @@ throw|throw
 operator|new
 name|InvalidDataToVerifySignatureException
 argument_list|(
-name|e
-operator|.
-name|getMessage
-argument_list|()
+literal|"Error validating the signature"
 argument_list|,
 name|e
 argument_list|)

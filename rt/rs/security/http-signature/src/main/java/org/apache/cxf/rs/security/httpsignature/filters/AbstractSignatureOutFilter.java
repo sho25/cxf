@@ -133,18 +133,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|BadRequestException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|core
 operator|.
 name|MultivaluedMap
@@ -458,8 +446,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|BadRequestException
+name|SignatureException
 argument_list|(
+literal|"Error creating signature"
+argument_list|,
 name|ex
 argument_list|)
 throw|;

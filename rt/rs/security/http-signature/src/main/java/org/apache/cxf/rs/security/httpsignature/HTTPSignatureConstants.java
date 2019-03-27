@@ -49,7 +49,15 @@ name|HTTPSignatureConstants
 extends|extends
 name|RSSecurityConstants
 block|{
-comment|/**      * The signature key id. This is a required configuration option.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REQUEST_TARGET
+init|=
+literal|"(request-target)"
+decl_stmt|;
+comment|/**      * The signature key id. This is a required configuration option on the outbound side.      */
 specifier|public
 specifier|static
 specifier|final
@@ -66,6 +74,15 @@ name|String
 name|RSSEC_HTTP_SIGNATURE_OUT_HEADERS
 init|=
 literal|"rs.security.http.signature.out.headers"
+decl_stmt|;
+comment|/**      * This is a list of String values which correspond to the list of HTTP headers that must be signed      * in the inbound request. By default, a client request must sign "(request-target)".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_HTTP_SIGNATURE_IN_HEADERS
+init|=
+literal|"rs.security.http.signature.in.headers"
 decl_stmt|;
 specifier|private
 name|HTTPSignatureConstants

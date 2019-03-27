@@ -153,7 +153,7 @@ name|ClassLoaderUtils
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"keys/alice.jks"
+literal|"keys/bob.jks"
 argument_list|,
 name|PrivateKeyProvider
 operator|.
@@ -174,7 +174,7 @@ name|keyStore
 operator|.
 name|getKey
 argument_list|(
-literal|"alice"
+literal|"bob"
 argument_list|,
 literal|"password"
 operator|.

@@ -113,6 +113,26 @@ name|Provider
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|httpsignature
+operator|.
+name|exception
+operator|.
+name|SignatureException
+import|;
+end_import
+
 begin_comment
 comment|/**  * RS CXF client Filter which extracts signature data from the context and sends it to the message verifier  */
 end_comment
@@ -171,6 +191,26 @@ argument_list|,
 literal|""
 argument_list|)
 expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|void
+name|handleException
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|SignatureException
+argument_list|(
+literal|"Error verifying signature"
+argument_list|,
+name|ex
+argument_list|)
+throw|;
 block|}
 block|}
 end_class
