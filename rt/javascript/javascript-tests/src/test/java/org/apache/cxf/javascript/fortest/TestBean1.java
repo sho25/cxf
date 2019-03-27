@@ -760,8 +760,11 @@ name|builder
 operator|.
 name|append
 argument_list|(
-literal|" "
-operator|+
+literal|' '
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|enumeration
 argument_list|)
 expr_stmt|;

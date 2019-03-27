@@ -119,6 +119,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|test
+operator|.
+name|TestUtilities
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|testutil
 operator|.
 name|common
@@ -520,7 +534,7 @@ block|}
 comment|// This should fail as the client uses Basic256 + the server uses Basic128
 if|if
 condition|(
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()

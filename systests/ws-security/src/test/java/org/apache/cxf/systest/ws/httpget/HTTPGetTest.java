@@ -173,6 +173,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|test
+operator|.
+name|TestUtilities
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|testutil
 operator|.
 name|common
@@ -371,7 +385,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -522,7 +536,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -653,7 +667,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -880,7 +894,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()

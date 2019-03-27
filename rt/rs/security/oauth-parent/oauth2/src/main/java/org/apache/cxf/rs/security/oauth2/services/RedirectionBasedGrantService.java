@@ -1636,8 +1636,11 @@ name|perm
 operator|.
 name|getPermission
 argument_list|()
-operator|+
-literal|" "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|' '
 argument_list|)
 expr_stmt|;
 block|}

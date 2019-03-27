@@ -119,6 +119,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|test
+operator|.
+name|TestUtilities
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|testutil
 operator|.
 name|common
@@ -520,7 +534,7 @@ block|}
 comment|// This should fail as the client uses Basic256 + the server uses Basic128
 if|if
 condition|(
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -637,7 +651,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -975,7 +989,7 @@ block|}
 comment|// This should fail as the client uses AES-256 and the server uses AES-128
 if|if
 condition|(
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -1175,7 +1189,7 @@ expr_stmt|;
 comment|// This should fail as the client uses uses RSA-SHA256 + the server uses RSA-SHA1
 if|if
 condition|(
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
@@ -1504,7 +1518,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()

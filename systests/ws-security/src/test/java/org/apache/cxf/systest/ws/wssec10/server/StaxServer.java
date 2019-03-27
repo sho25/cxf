@@ -69,13 +69,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
+name|test
 operator|.
-name|ws
-operator|.
-name|common
-operator|.
-name|SecurityTestUtil
+name|TestUtilities
 import|;
 end_import
 
@@ -142,7 +138,7 @@ static|static
 block|{
 name|unrestrictedPoliciesInstalled
 operator|=
-name|SecurityTestUtil
+name|TestUtilities
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
