@@ -288,10 +288,8 @@ literal|true
 argument_list|)
 decl_stmt|;
 specifier|private
-specifier|static
-specifier|final
 name|SimpleDateFormat
-name|DATE_FMT_822
+name|dateFormat
 init|=
 operator|new
 name|SimpleDateFormat
@@ -327,7 +325,7 @@ argument_list|(
 name|ETAG_OLD
 argument_list|)
 expr_stmt|;
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|setTimeZone
 argument_list|(
@@ -411,7 +409,7 @@ name|HttpHeaders
 operator|.
 name|IF_MODIFIED_SINCE
 argument_list|,
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|format
 argument_list|(
@@ -560,7 +558,7 @@ name|HttpHeaders
 operator|.
 name|IF_MODIFIED_SINCE
 argument_list|,
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|format
 argument_list|(
@@ -611,7 +609,7 @@ name|HttpHeaders
 operator|.
 name|IF_MODIFIED_SINCE
 argument_list|,
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|format
 argument_list|(
@@ -676,7 +674,7 @@ name|HttpHeaders
 operator|.
 name|IF_MODIFIED_SINCE
 argument_list|,
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|format
 argument_list|(
@@ -753,7 +751,7 @@ name|HttpHeaders
 operator|.
 name|IF_MODIFIED_SINCE
 argument_list|,
-name|DATE_FMT_822
+name|dateFormat
 operator|.
 name|format
 argument_list|(

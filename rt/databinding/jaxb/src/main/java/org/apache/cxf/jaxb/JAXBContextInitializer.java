@@ -3411,6 +3411,7 @@ operator|.
 name|getClass
 argument_list|()
 argument_list|)
+comment|//NOPMD
 operator|.
 name|newInstance
 argument_list|(
