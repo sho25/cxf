@@ -4174,7 +4174,12 @@ name|getValue
 argument_list|(
 literal|"//ns2:DoubleItResponse/doubledNumber"
 argument_list|,
+name|DOMUtils
+operator|.
+name|getDomElement
+argument_list|(
 name|nd
+argument_list|)
 argument_list|,
 name|XPathConstants
 operator|.
