@@ -1116,9 +1116,6 @@ specifier|private
 name|String
 name|checkDefaultBinding
 parameter_list|(
-name|AssertionInfoMap
-name|aim
-parameter_list|,
 name|String
 name|action
 parameter_list|,
@@ -2515,8 +2512,6 @@ name|action
 operator|=
 name|checkDefaultBinding
 argument_list|(
-name|aim
-argument_list|,
 name|action
 argument_list|,
 name|message
@@ -2586,10 +2581,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|algorithmSuites
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|algorithmSuites
 operator|.

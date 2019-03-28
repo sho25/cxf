@@ -3622,8 +3622,6 @@ condition|)
 block|{
 name|setupEncryptedKey
 argument_list|(
-name|recToken
-argument_list|,
 name|encrToken
 argument_list|)
 expr_stmt|;
@@ -4040,8 +4038,6 @@ block|{
 comment|// Set up the encrypted key to use
 name|setupEncryptedKey
 argument_list|(
-name|wrapper
-argument_list|,
 name|sigToken
 argument_list|)
 expr_stmt|;
@@ -4734,9 +4730,6 @@ specifier|private
 name|void
 name|setupEncryptedKey
 parameter_list|(
-name|AbstractTokenWrapper
-name|wrapper
-parameter_list|,
 name|AbstractToken
 name|token
 parameter_list|)
@@ -4874,8 +4867,6 @@ condition|)
 block|{
 name|createEncryptedKey
 argument_list|(
-name|wrapper
-argument_list|,
 name|token
 argument_list|)
 expr_stmt|;
@@ -4896,8 +4887,6 @@ else|else
 block|{
 name|createEncryptedKey
 argument_list|(
-name|wrapper
-argument_list|,
 name|token
 argument_list|)
 expr_stmt|;
@@ -4907,9 +4896,6 @@ specifier|private
 name|void
 name|createEncryptedKey
 parameter_list|(
-name|AbstractTokenWrapper
-name|wrapper
-parameter_list|,
 name|AbstractToken
 name|token
 parameter_list|)

@@ -12117,8 +12117,6 @@ name|token
 argument_list|,
 name|sigParts
 argument_list|,
-name|isTokenProtection
-argument_list|,
 name|isSigProtect
 argument_list|)
 expr_stmt|;
@@ -12297,8 +12295,6 @@ argument_list|,
 name|secToken
 argument_list|,
 name|sigParts
-argument_list|,
-name|isTokenProtection
 argument_list|,
 name|isSigProtect
 argument_list|)
@@ -12827,9 +12823,6 @@ argument_list|<
 name|WSEncryptionPart
 argument_list|>
 name|sigParts
-parameter_list|,
-name|boolean
-name|isTokenProtection
 parameter_list|,
 name|boolean
 name|isSigProtect

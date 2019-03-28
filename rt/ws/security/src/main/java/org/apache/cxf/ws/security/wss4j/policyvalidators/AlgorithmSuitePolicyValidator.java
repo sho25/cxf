@@ -552,9 +552,6 @@ block|}
 elseif|else
 if|if
 condition|(
-operator|!
-name|valid
-operator|&&
 name|ai
 operator|.
 name|isAsserted

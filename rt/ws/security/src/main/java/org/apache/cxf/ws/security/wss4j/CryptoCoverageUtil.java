@@ -493,8 +493,6 @@ name|matchElement
 argument_list|(
 name|refs
 argument_list|,
-name|type
-argument_list|,
 name|scope
 argument_list|,
 name|soapBody
@@ -862,8 +860,6 @@ name|matchElement
 argument_list|(
 name|refs
 argument_list|,
-name|type
-argument_list|,
 name|scope
 argument_list|,
 name|el
@@ -1230,8 +1226,6 @@ name|matchElement
 argument_list|(
 name|refs
 argument_list|,
-name|type
-argument_list|,
 name|scope
 argument_list|,
 name|el
@@ -1288,9 +1282,6 @@ argument_list|<
 name|WSDataRef
 argument_list|>
 name|refs
-parameter_list|,
-name|CoverageType
-name|type
 parameter_list|,
 name|CoverageScope
 name|scope

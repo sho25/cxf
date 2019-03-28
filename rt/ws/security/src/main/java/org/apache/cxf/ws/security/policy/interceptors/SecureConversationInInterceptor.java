@@ -2204,8 +2204,6 @@ name|requestEl
 argument_list|,
 name|exchange
 argument_list|,
-name|binaryExchange
-argument_list|,
 name|writer
 argument_list|,
 name|prefix
@@ -2249,8 +2247,6 @@ name|requestEl
 argument_list|,
 name|exchange
 argument_list|,
-name|binaryExchange
-argument_list|,
 name|writer
 argument_list|,
 name|prefix
@@ -2273,9 +2269,6 @@ name|requestEl
 parameter_list|,
 name|Exchange
 name|exchange
-parameter_list|,
-name|Element
-name|binaryExchange
 parameter_list|,
 name|W3CDOMStreamWriter
 name|writer

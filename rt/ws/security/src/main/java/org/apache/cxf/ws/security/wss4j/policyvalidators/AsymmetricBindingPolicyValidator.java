@@ -505,8 +505,6 @@ operator|.
 name|getInitiatorToken
 argument_list|()
 argument_list|,
-name|binding
-argument_list|,
 name|ai
 argument_list|,
 name|aim
@@ -537,8 +535,6 @@ name|binding
 operator|.
 name|getInitiatorSignatureToken
 argument_list|()
-argument_list|,
-name|binding
 argument_list|,
 name|ai
 argument_list|,
@@ -571,8 +567,6 @@ operator|.
 name|getInitiatorEncryptionToken
 argument_list|()
 argument_list|,
-name|binding
-argument_list|,
 name|ai
 argument_list|,
 name|aim
@@ -603,8 +597,6 @@ name|binding
 operator|.
 name|getRecipientToken
 argument_list|()
-argument_list|,
-name|binding
 argument_list|,
 name|ai
 argument_list|,
@@ -637,8 +629,6 @@ operator|.
 name|getRecipientSignatureToken
 argument_list|()
 argument_list|,
-name|binding
-argument_list|,
 name|ai
 argument_list|,
 name|aim
@@ -669,8 +659,6 @@ name|binding
 operator|.
 name|getRecipientEncryptionToken
 argument_list|()
-argument_list|,
-name|binding
 argument_list|,
 name|ai
 argument_list|,
@@ -694,9 +682,6 @@ name|checkInitiatorTokens
 parameter_list|(
 name|AbstractTokenWrapper
 name|wrapper
-parameter_list|,
-name|AsymmetricBinding
-name|binding
 parameter_list|,
 name|AssertionInfo
 name|ai
@@ -939,9 +924,6 @@ name|checkRecipientTokens
 parameter_list|(
 name|AbstractTokenWrapper
 name|wrapper
-parameter_list|,
-name|AsymmetricBinding
-name|binding
 parameter_list|,
 name|AssertionInfo
 name|ai

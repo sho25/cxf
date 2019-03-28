@@ -507,12 +507,10 @@ name|key
 operator|==
 literal|null
 operator|||
-literal|""
-operator|.
-name|equals
-argument_list|(
 name|key
-argument_list|)
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|key

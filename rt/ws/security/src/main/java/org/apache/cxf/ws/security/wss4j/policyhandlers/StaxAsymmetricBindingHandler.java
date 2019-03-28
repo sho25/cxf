@@ -1454,8 +1454,6 @@ argument_list|(
 name|encToken
 argument_list|,
 name|enc
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 name|putCustomTokenAfterSignature
@@ -1912,8 +1910,6 @@ argument_list|(
 name|wrapper
 argument_list|,
 name|encrParts
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -2100,9 +2096,6 @@ argument_list|<
 name|SecurePart
 argument_list|>
 name|encrParts
-parameter_list|,
-name|boolean
-name|externalRef
 parameter_list|)
 throws|throws
 name|SOAPException

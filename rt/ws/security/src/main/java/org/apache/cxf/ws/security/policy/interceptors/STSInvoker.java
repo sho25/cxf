@@ -1295,10 +1295,9 @@ argument_list|(
 name|el
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|uri
-init|=
-literal|""
 decl_stmt|;
 if|if
 condition|(

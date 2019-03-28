@@ -1476,11 +1476,7 @@ block|{
 name|tokenId
 operator|=
 name|setupEncryptedKey
-argument_list|(
-name|encryptionWrapper
-argument_list|,
-name|encryptionToken
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 else|else
@@ -1760,8 +1756,6 @@ argument_list|(
 name|encryptionWrapper
 argument_list|,
 name|encrParts
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1851,8 +1845,6 @@ name|sigAbstractTokenWrapper
 argument_list|,
 name|sigToken
 argument_list|,
-name|tok
-argument_list|,
 name|sigParts
 argument_list|)
 expr_stmt|;
@@ -1869,8 +1861,6 @@ argument_list|(
 name|sigAbstractTokenWrapper
 argument_list|,
 name|sigToken
-argument_list|,
-name|tok
 argument_list|,
 name|sigParts
 argument_list|)
@@ -2181,11 +2171,7 @@ block|{
 name|sigTokId
 operator|=
 name|setupEncryptedKey
-argument_list|(
-name|sigAbstractTokenWrapper
-argument_list|,
-name|sigToken
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 else|else
@@ -2410,8 +2396,6 @@ name|sigAbstractTokenWrapper
 argument_list|,
 name|sigToken
 argument_list|,
-name|sigTok
-argument_list|,
 name|sigs
 argument_list|)
 expr_stmt|;
@@ -2545,8 +2529,6 @@ argument_list|(
 name|encrAbstractTokenWrapper
 argument_list|,
 name|enc
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 name|putCustomTokenAfterSignature
@@ -2580,9 +2562,6 @@ argument_list|<
 name|SecurePart
 argument_list|>
 name|encrParts
-parameter_list|,
-name|boolean
-name|externalRef
 parameter_list|)
 throws|throws
 name|SOAPException
@@ -3191,9 +3170,6 @@ parameter_list|,
 name|AbstractToken
 name|policyToken
 parameter_list|,
-name|SecurityToken
-name|tok
-parameter_list|,
 name|List
 argument_list|<
 name|SecurePart
@@ -3724,13 +3700,7 @@ block|}
 specifier|private
 name|String
 name|setupEncryptedKey
-parameter_list|(
-name|AbstractTokenWrapper
-name|wrapper
-parameter_list|,
-name|AbstractToken
-name|sigToken
-parameter_list|)
+parameter_list|()
 throws|throws
 name|WSSecurityException
 block|{

@@ -2881,8 +2881,6 @@ name|secTok
 argument_list|,
 name|token
 argument_list|,
-name|wrapper
-argument_list|,
 name|sigParts
 argument_list|)
 return|;
@@ -3189,9 +3187,6 @@ name|secTok
 parameter_list|,
 name|AbstractToken
 name|token
-parameter_list|,
-name|SupportingTokens
-name|wrapper
 parameter_list|,
 name|List
 argument_list|<

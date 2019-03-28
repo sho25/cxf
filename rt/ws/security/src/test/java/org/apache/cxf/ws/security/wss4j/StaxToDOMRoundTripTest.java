@@ -2672,17 +2672,6 @@ name|ConfigurationConstants
 operator|.
 name|ENC_SYM_ALGO
 argument_list|,
-literal|"http://www.w3.org/2001/04/xmlenc#tripledes-cbc"
-argument_list|)
-expr_stmt|;
-name|outConfig
-operator|.
-name|put
-argument_list|(
-name|ConfigurationConstants
-operator|.
-name|ENC_SYM_ALGO
-argument_list|,
 name|XMLSecurityConstants
 operator|.
 name|NS_XENC_AES128

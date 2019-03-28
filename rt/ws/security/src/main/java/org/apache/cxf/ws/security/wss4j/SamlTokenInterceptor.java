@@ -1398,8 +1398,6 @@ name|setSigVerCrypto
 argument_list|(
 name|getCrypto
 argument_list|(
-literal|null
-argument_list|,
 name|SecurityConstants
 operator|.
 name|SIGNATURE_CRYPTO
@@ -2023,8 +2021,6 @@ name|crypto
 operator|=
 name|getCrypto
 argument_list|(
-name|token
-argument_list|,
 name|SecurityConstants
 operator|.
 name|SIGNATURE_CRYPTO
@@ -2072,9 +2068,6 @@ specifier|private
 name|Crypto
 name|getCrypto
 parameter_list|(
-name|SamlToken
-name|samlToken
-parameter_list|,
 name|String
 name|cryptoKey
 parameter_list|,

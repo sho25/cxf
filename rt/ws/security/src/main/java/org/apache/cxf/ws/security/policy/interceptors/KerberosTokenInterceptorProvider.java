@@ -1389,8 +1389,6 @@ argument_list|)
 argument_list|,
 name|message
 argument_list|,
-name|aim
-argument_list|,
 name|ais
 argument_list|)
 expr_stmt|;
@@ -1445,9 +1443,6 @@ name|rResult
 parameter_list|,
 name|Message
 name|message
-parameter_list|,
-name|AssertionInfoMap
-name|aim
 parameter_list|,
 name|Collection
 argument_list|<

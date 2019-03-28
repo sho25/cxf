@@ -569,13 +569,6 @@ name|aim
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|tok
-operator|!=
-literal|null
-condition|)
-block|{
 for|for
 control|(
 name|AssertionInfo
@@ -641,7 +634,6 @@ argument_list|(
 name|tok
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
