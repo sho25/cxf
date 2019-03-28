@@ -6892,7 +6892,9 @@ name|sb
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|100500
+argument_list|)
 decl_stmt|;
 name|sb
 operator|.
@@ -7096,7 +7098,9 @@ name|sb
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|64
+argument_list|)
 decl_stmt|;
 name|sb
 operator|.

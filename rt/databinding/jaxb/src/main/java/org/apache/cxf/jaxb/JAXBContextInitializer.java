@@ -3693,6 +3693,11 @@ init|=
 operator|new
 name|StringBuilder
 argument_list|(
+literal|32
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"("
 argument_list|)
 decl_stmt|;

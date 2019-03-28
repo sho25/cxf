@@ -276,6 +276,11 @@ init|=
 operator|new
 name|StringBuilder
 argument_list|(
+literal|64
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|this
 operator|.
 name|getClass

@@ -198,7 +198,9 @@ name|builder
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|128
+argument_list|)
 decl_stmt|;
 name|builder
 operator|.

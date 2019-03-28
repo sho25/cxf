@@ -552,7 +552,9 @@ name|builder
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|64
+argument_list|)
 decl_stmt|;
 name|builder
 operator|.

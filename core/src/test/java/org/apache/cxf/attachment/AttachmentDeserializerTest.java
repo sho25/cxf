@@ -2104,7 +2104,9 @@ name|buf
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|512
+argument_list|)
 decl_stmt|;
 name|buf
 operator|.

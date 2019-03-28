@@ -901,6 +901,11 @@ init|=
 operator|new
 name|StringBuilder
 argument_list|(
+literal|128
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"Constructing automatic work queue with:\n"
 argument_list|)
 operator|.

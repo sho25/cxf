@@ -2545,7 +2545,9 @@ name|sbMain
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|64
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -2630,7 +2632,9 @@ name|sbGrammars
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|32
+argument_list|)
 decl_stmt|;
 name|sbGrammars
 operator|.
@@ -2644,7 +2648,9 @@ name|sbResources
 init|=
 operator|new
 name|StringBuilder
-argument_list|()
+argument_list|(
+literal|64
+argument_list|)
 decl_stmt|;
 name|sbResources
 operator|.
