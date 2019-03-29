@@ -1795,10 +1795,9 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|boolean
 name|local
-init|=
-literal|false
 decl_stmt|;
 if|if
 condition|(

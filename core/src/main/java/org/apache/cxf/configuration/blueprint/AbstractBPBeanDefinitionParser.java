@@ -936,11 +936,6 @@ init|=
 name|t
 decl_stmt|;
 name|String
-name|ns
-init|=
-literal|null
-decl_stmt|;
-name|String
 name|pre
 init|=
 literal|null
@@ -986,17 +981,6 @@ literal|"Namespace bracket '{' must having a closing bracket '}'."
 argument_list|)
 throw|;
 block|}
-name|ns
-operator|=
-name|t1
-operator|.
-name|substring
-argument_list|(
-literal|1
-argument_list|,
-name|i
-argument_list|)
-expr_stmt|;
 name|t1
 operator|=
 name|t1
@@ -1009,6 +993,10 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
+name|String
+name|ns
+decl_stmt|;
 name|int
 name|colIdx
 init|=
@@ -1329,6 +1317,7 @@ block|}
 return|return
 name|setBus
 return|;
+comment|// 'setBus' is always false
 block|}
 specifier|protected
 name|void

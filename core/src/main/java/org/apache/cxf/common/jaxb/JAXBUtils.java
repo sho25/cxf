@@ -1292,15 +1292,6 @@ argument_list|,
 literal|"javax.xml.namespace.QName"
 argument_list|)
 expr_stmt|;
-name|BUILTIN_DATATYPES_MAP
-operator|.
-name|put
-argument_list|(
-literal|"string"
-argument_list|,
-literal|"java.lang.String"
-argument_list|)
-expr_stmt|;
 name|HOLDER_TYPES_MAP
 operator|=
 operator|new
@@ -2543,11 +2534,6 @@ return|;
 block|}
 comment|// algorithm will not change an XML name that is already a legal and
 comment|// conventional (!) Java class, method, or constant identifier
-name|boolean
-name|legalIdentifier
-init|=
-literal|false
-decl_stmt|;
 name|StringBuilder
 name|buf
 init|=
@@ -2562,8 +2548,9 @@ name|hasUnderscore
 init|=
 literal|false
 decl_stmt|;
+name|boolean
 name|legalIdentifier
-operator|=
+init|=
 name|Character
 operator|.
 name|isJavaIdentifierStart
@@ -2575,7 +2562,7 @@ argument_list|(
 literal|0
 argument_list|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 for|for
 control|(
 name|int
@@ -3183,10 +3170,9 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|boolean
 name|result
-init|=
-literal|false
 decl_stmt|;
 if|if
 condition|(

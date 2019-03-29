@@ -838,6 +838,7 @@ literal|0
 operator|)
 operator|&&
 name|max
+operator|++
 operator|<
 literal|10
 condition|)

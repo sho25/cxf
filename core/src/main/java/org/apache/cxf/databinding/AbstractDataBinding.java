@@ -943,13 +943,6 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|e
-operator|=
-operator|(
-name|Element
-operator|)
-name|n
-expr_stmt|;
 name|String
 name|loc
 init|=

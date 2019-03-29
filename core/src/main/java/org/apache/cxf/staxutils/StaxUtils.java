@@ -10390,7 +10390,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 operator|!
 name|StringUtils
 operator|.
@@ -10400,11 +10399,6 @@ name|prefix
 argument_list|)
 operator|&&
 name|ns
-operator|==
-literal|null
-operator|)
-operator|||
-name|localName
 operator|==
 literal|null
 condition|)

@@ -2276,9 +2276,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|ByteArrayInputStream
-name|inputStream
-decl_stmt|;
 name|String
 name|contentType
 init|=
@@ -2289,11 +2286,9 @@ name|data
 init|=
 literal|"--abc123\r\n\r\n<Document></Document>\r\n\r\n"
 decl_stmt|;
-name|Message
-name|message
-decl_stmt|;
+name|ByteArrayInputStream
 name|inputStream
-operator|=
+init|=
 operator|new
 name|ByteArrayInputStream
 argument_list|(
@@ -2302,9 +2297,10 @@ operator|.
 name|getBytes
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+name|Message
 name|message
-operator|=
+init|=
 operator|new
 name|XMLMessage
 argument_list|(
@@ -2312,7 +2308,7 @@ operator|new
 name|MessageImpl
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|message
 operator|.
 name|put
@@ -2390,6 +2386,10 @@ operator|.
 name|initializeAttachments
 argument_list|()
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|0
+argument_list|,
 name|message
 operator|.
 name|getAttachments
@@ -2397,6 +2397,7 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
+argument_list|)
 expr_stmt|;
 name|inputStream
 operator|.

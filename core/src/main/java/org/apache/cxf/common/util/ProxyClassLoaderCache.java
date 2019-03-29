@@ -226,6 +226,7 @@ argument_list|(
 name|proxyInterface
 argument_list|)
 return|;
+comment|// Parameter 'proxyInterface' is not used inside method body
 block|}
 block|}
 decl_stmt|;

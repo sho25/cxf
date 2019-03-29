@@ -1256,13 +1256,9 @@ comment|//UUID.randomUUID() will produce.  Thus, use a faster
 comment|//pseudo-random thing
 name|long
 name|leastSigBits
-init|=
-literal|0
 decl_stmt|;
 name|long
 name|mostSigBits
-init|=
-literal|0
 decl_stmt|;
 synchronized|synchronized
 init|(

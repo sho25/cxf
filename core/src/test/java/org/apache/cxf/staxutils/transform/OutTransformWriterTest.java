@@ -1966,8 +1966,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2097,8 +2095,6 @@ argument_list|,
 name|dropElements
 argument_list|,
 name|transformAttributes
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2142,8 +2138,6 @@ argument_list|,
 literal|"../resources/greetMeReq.xml"
 argument_list|,
 name|transformElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -2199,8 +2193,6 @@ argument_list|,
 literal|null
 argument_list|,
 name|transformAttributes
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2250,8 +2242,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2297,8 +2287,6 @@ argument_list|,
 literal|null
 argument_list|,
 name|appendElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -2374,8 +2362,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2447,8 +2433,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2494,8 +2478,6 @@ argument_list|,
 literal|null
 argument_list|,
 name|appendElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -2549,8 +2531,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2600,8 +2580,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2647,8 +2625,6 @@ argument_list|,
 literal|null
 argument_list|,
 name|appendElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -2778,8 +2754,6 @@ argument_list|,
 name|dropElements
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2829,8 +2803,6 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -2874,8 +2846,6 @@ argument_list|,
 literal|"../resources/multiNS.xml"
 argument_list|,
 name|transformElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -3053,8 +3023,6 @@ argument_list|,
 literal|"../resources/greetMeWSAReq.xml"
 argument_list|,
 name|transformElements
-argument_list|,
-literal|null
 argument_list|,
 literal|null
 argument_list|,

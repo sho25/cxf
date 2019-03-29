@@ -47,7 +47,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertFalse
+name|assertNotEquals
 import|;
 end_import
 
@@ -107,21 +107,18 @@ name|void
 name|testNotEquals
 parameter_list|()
 block|{
-name|assertFalse
+name|assertNotEquals
 argument_list|(
 operator|new
 name|SimplePrincipal
 argument_list|(
 literal|"barry"
 argument_list|)
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 operator|new
 name|SimplePrincipal
 argument_list|(
 literal|"john"
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

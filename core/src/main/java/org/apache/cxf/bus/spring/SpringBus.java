@@ -473,9 +473,6 @@ condition|(
 name|ac
 operator|!=
 literal|null
-operator|&&
-operator|!
-name|doIt
 condition|)
 block|{
 if|if

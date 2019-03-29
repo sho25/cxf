@@ -2157,10 +2157,6 @@ condition|(
 name|ns
 operator|==
 literal|null
-operator|||
-name|localName
-operator|==
-literal|null
 condition|)
 block|{
 throw|throw

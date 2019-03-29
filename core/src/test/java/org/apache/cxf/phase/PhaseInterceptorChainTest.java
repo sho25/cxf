@@ -2857,6 +2857,10 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
 name|message
 operator|.
 name|getContextualProperty
@@ -2868,11 +2872,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-expr_stmt|;
-name|EasyMock
-operator|.
-name|expectLastCall
-argument_list|()
+argument_list|)
 operator|.
 name|andReturn
 argument_list|(
@@ -2933,6 +2933,10 @@ condition|)
 block|{
 comment|//default logging should also be invoked
 comment|//not too beautiful way to verify that defaultLogging was invoked.
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
 name|message
 operator|.
 name|get
@@ -2941,11 +2945,7 @@ name|FaultMode
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
-name|EasyMock
-operator|.
-name|expectLastCall
-argument_list|()
+argument_list|)
 operator|.
 name|andReturn
 argument_list|(
@@ -2959,6 +2959,10 @@ block|}
 block|}
 else|else
 block|{
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
 name|message
 operator|.
 name|getContextualProperty
@@ -2970,11 +2974,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-expr_stmt|;
-name|EasyMock
-operator|.
-name|expectLastCall
-argument_list|()
+argument_list|)
 operator|.
 name|andReturn
 argument_list|(

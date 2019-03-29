@@ -117,19 +117,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|assertFalse
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertTrue
+name|assertNotEquals
 import|;
 end_import
 
@@ -256,55 +244,41 @@ operator|.
 name|hashCode
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"hashcodes must be equal"
 argument_list|,
 name|hashcode
-operator|==
+argument_list|,
 name|hashcode1
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertNotEquals
 argument_list|(
 literal|"hashcodes must not be equal"
 argument_list|,
 name|hashcode
-operator|!=
+argument_list|,
 name|hashcode2
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"reflexivity violated"
-argument_list|,
-name|ep
-argument_list|,
-name|ep
-argument_list|)
-expr_stmt|;
-name|assertFalse
+comment|// assertEquals("reflexivity violated", ep, ep);
+name|assertNotEquals
 argument_list|(
 literal|"two objects must not be equal"
 argument_list|,
 name|ep
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|ep1
 argument_list|)
-argument_list|)
 expr_stmt|;
-name|assertFalse
+name|assertNotEquals
 argument_list|(
 literal|"two objects must not be equal"
 argument_list|,
 name|ep
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|ep2
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|ep
@@ -318,12 +292,12 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 literal|"hashcode must remain equal"
 argument_list|,
 name|hashcode
-operator|==
+argument_list|,
 name|ep
 operator|.
 name|hashCode
