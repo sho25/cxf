@@ -252,7 +252,6 @@ operator|.
 name|AUTHENTICATION
 argument_list|)
 specifier|public
-specifier|final
 class|class
 name|VerifyDigestInterceptor
 implements|implements

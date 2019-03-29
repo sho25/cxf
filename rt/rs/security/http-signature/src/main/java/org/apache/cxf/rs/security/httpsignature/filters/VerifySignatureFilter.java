@@ -128,7 +128,6 @@ operator|.
 name|AUTHENTICATION
 argument_list|)
 specifier|public
-specifier|final
 class|class
 name|VerifySignatureFilter
 extends|extends
