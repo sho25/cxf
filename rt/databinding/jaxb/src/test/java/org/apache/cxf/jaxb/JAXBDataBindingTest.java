@@ -2007,6 +2007,8 @@ name|AssertionError
 name|er
 parameter_list|)
 block|{
+name|assertTrue
+argument_list|(
 name|er
 operator|.
 name|getMessage
@@ -2015,6 +2017,7 @@ operator|.
 name|contains
 argument_list|(
 literal|"Failed to map namespace"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

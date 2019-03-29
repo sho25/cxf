@@ -4535,6 +4535,7 @@ argument_list|>
 argument_list|>
 name|jaxbTypes
 parameter_list|,
+comment|//NOPMD
 name|ElementQNameResolver
 name|qnameResolver
 parameter_list|,

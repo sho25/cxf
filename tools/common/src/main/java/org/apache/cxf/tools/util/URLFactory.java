@@ -368,11 +368,7 @@ name|Exception
 name|ignored
 parameter_list|)
 block|{
-name|ignored
-operator|.
-name|getMessage
-argument_list|()
-expr_stmt|;
+comment|// ignore
 block|}
 block|}
 return|return

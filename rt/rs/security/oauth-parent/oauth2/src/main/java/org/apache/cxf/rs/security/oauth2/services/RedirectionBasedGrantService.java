@@ -2298,10 +2298,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|param
-operator|!=
-literal|null
-operator|&&
 name|OAuthConstants
 operator|.
 name|AUTHORIZATION_DECISION_ALLOW

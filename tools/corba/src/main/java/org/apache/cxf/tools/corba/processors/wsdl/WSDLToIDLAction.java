@@ -3923,6 +3923,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+comment|//NOPMD
 name|String
 name|msgStr
 init|=

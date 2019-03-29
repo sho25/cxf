@@ -834,6 +834,7 @@ name|Description
 argument_list|(
 literal|"book id"
 argument_list|)
+comment|//NOPMD
 annotation|@
 name|PathParam
 argument_list|(

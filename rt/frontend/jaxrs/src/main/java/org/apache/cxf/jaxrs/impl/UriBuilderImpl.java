@@ -1658,6 +1658,7 @@ parameter_list|(
 name|URITemplate
 name|templ
 parameter_list|,
+comment|//NOPMD
 name|Map
 argument_list|<
 name|String

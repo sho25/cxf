@@ -1082,10 +1082,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|ct
-operator|!=
-literal|null
-operator|&&
 name|MediaType
 operator|.
 name|APPLICATION_FORM_URLENCODED

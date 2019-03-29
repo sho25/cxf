@@ -337,7 +337,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|httpAcceptType
+name|mediaType
 operator|!=
 literal|null
 operator|&&

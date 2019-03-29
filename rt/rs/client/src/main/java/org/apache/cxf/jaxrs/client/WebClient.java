@@ -4802,6 +4802,7 @@ parameter_list|(
 name|String
 name|httpMethod
 parameter_list|,
+comment|//NOPMD
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -4985,6 +4986,7 @@ parameter_list|(
 name|String
 name|httpMethod
 parameter_list|,
+comment|//NOPMD
 name|MultivaluedMap
 argument_list|<
 name|String
