@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|mpopenapi
+name|microprofile
+operator|.
+name|openapi
 package|;
 end_package
 
