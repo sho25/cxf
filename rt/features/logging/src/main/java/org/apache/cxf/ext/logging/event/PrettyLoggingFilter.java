@@ -77,6 +77,20 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|ctc
+operator|.
+name|wstx
+operator|.
+name|exc
+operator|.
+name|WstxLazyException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -348,7 +362,9 @@ block|}
 catch|catch
 parameter_list|(
 name|XMLStreamException
-name|xse
+decl||
+name|WstxLazyException
+name|e
 parameter_list|)
 block|{
 if|if
@@ -366,7 +382,7 @@ name|debug
 argument_list|(
 literal|"Error while pretty printing cxf message, returning raw message."
 argument_list|,
-name|xse
+name|e
 argument_list|)
 expr_stmt|;
 return|return
