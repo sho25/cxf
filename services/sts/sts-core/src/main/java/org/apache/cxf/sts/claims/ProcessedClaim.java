@@ -489,6 +489,7 @@ name|ProcessedClaim
 name|clone
 parameter_list|()
 block|{
+comment|//NOPMD
 name|super
 operator|.
 name|clone

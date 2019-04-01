@@ -1215,6 +1215,7 @@ name|ResponseBuilder
 name|clone
 parameter_list|()
 block|{
+comment|//NOPMD
 return|return
 operator|new
 name|ResponseBuilderImpl

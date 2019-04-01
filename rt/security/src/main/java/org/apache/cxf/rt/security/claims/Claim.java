@@ -495,6 +495,7 @@ name|Claim
 name|clone
 parameter_list|()
 block|{
+comment|//NOPMD
 try|try
 block|{
 name|super

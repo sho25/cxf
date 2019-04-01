@@ -2626,6 +2626,7 @@ name|UriBuilder
 name|clone
 parameter_list|()
 block|{
+comment|//NOPMD
 name|UriBuilderImpl
 name|builder
 init|=
