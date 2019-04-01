@@ -223,7 +223,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * If truncation happens in the middle of an html entity, com.ctc.wstx.exc.WstxLazyException can be thrown.      * This test ensures that WstxLazyException is properly handled (ignored) just like the javax.xml.stream.XMLStreamException.      * See CXF-8008.      */
+comment|/**      * If truncation happens in the middle of an html entity, com.ctc.wstx.exc.WstxLazyException can be thrown.      * This test ensures that WstxLazyException is properly handled (ignored) just like the XMLStreamException.      * See CXF-8008.      */
 annotation|@
 name|Test
 specifier|public
