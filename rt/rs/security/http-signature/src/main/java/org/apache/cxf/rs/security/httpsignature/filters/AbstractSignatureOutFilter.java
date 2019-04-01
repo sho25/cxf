@@ -575,6 +575,9 @@ name|o
 operator|.
 name|toString
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 operator|.
 name|collect
