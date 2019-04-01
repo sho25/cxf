@@ -916,7 +916,7 @@ specifier|protected
 name|BuildContext
 name|buildContext
 decl_stmt|;
-comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      */
+comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is not set to<code>false</code>.      */
 annotation|@
 name|Parameter
 argument_list|(
