@@ -456,6 +456,8 @@ operator|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|keyPair
 operator|.
 name|getPrivate
