@@ -845,6 +845,8 @@ block|}
 name|String
 name|id
 init|=
+literal|"_"
+operator|+
 name|UUID
 operator|.
 name|randomUUID
