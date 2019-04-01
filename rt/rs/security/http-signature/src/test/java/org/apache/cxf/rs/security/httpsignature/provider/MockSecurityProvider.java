@@ -68,6 +68,8 @@ name|MockSecurityProvider
 implements|implements
 name|SecurityProvider
 block|{
+annotation|@
+name|Override
 specifier|public
 name|Provider
 name|getProvider

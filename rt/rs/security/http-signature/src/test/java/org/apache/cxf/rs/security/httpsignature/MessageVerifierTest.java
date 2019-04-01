@@ -924,7 +924,7 @@ name|replaceFirst
 argument_list|(
 literal|",signature"
 argument_list|,
-literal|"signature"
+literal|",signature2"
 argument_list|)
 expr_stmt|;
 name|headers
