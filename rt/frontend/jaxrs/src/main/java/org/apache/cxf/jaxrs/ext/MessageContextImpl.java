@@ -2123,11 +2123,6 @@ name|emptyList
 argument_list|()
 expr_stmt|;
 block|}
-name|childAttachments
-operator|.
-name|size
-argument_list|()
-expr_stmt|;
 for|for
 control|(
 name|org

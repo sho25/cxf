@@ -353,8 +353,6 @@ return|return
 name|isSupported
 argument_list|(
 name|type
-argument_list|,
-name|mt
 argument_list|)
 return|;
 block|}
@@ -577,12 +575,11 @@ return|return
 name|isSupported
 argument_list|(
 name|type
-argument_list|,
-name|mt
 argument_list|)
 return|;
 block|}
 specifier|private
+specifier|static
 name|boolean
 name|isSupported
 parameter_list|(
@@ -591,9 +588,6 @@ argument_list|<
 name|?
 argument_list|>
 name|type
-parameter_list|,
-name|MediaType
-name|mt
 parameter_list|)
 block|{
 return|return

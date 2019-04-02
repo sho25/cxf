@@ -936,8 +936,6 @@ name|headerName
 argument_list|,
 name|toListOfStrings
 argument_list|(
-name|headerName
-argument_list|,
 name|entry
 operator|.
 name|getValue
@@ -978,8 +976,6 @@ name|getHeaderString
 argument_list|(
 name|toListOfStrings
 argument_list|(
-name|header
-argument_list|,
 name|methodValues
 argument_list|)
 argument_list|)
@@ -993,9 +989,6 @@ name|String
 argument_list|>
 name|toListOfStrings
 parameter_list|(
-name|String
-name|headerName
-parameter_list|,
 name|List
 argument_list|<
 name|Object

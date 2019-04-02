@@ -490,6 +490,7 @@ argument_list|()
 return|;
 block|}
 specifier|private
+specifier|static
 name|String
 name|removeQuotesIfNeeded
 parameter_list|(

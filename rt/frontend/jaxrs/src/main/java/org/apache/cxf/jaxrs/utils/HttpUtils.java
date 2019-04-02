@@ -3163,12 +3163,6 @@ parameter_list|)
 block|{
 return|return
 name|endpointAddress
-operator|==
-literal|null
-condition|?
-literal|"/"
-else|:
-name|endpointAddress
 return|;
 block|}
 block|}
@@ -3531,8 +3525,6 @@ name|path
 operator|.
 name|substring
 argument_list|(
-name|ind
-operator|+
 name|address
 operator|.
 name|length

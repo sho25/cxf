@@ -5490,7 +5490,6 @@ else|:
 operator|-
 literal|1
 expr_stmt|;
-block|}
 name|uri
 operator|=
 name|uri
@@ -5500,6 +5499,7 @@ argument_list|(
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|String

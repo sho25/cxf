@@ -568,9 +568,7 @@ argument_list|>
 name|proxies
 init|=
 name|getConstructorProxyMap
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|proxies
 operator|.
@@ -1222,9 +1220,7 @@ condition|)
 block|{
 return|return
 name|getConstructorProxyMap
-argument_list|(
-literal|false
-argument_list|)
+argument_list|()
 operator|.
 name|get
 argument_list|(
@@ -1263,10 +1259,7 @@ argument_list|>
 argument_list|>
 argument_list|>
 name|getConstructorProxyMap
-parameter_list|(
-name|boolean
-name|create
-parameter_list|)
+parameter_list|()
 block|{
 name|Object
 name|property
@@ -2028,9 +2021,7 @@ expr_stmt|;
 name|clearProxies
 argument_list|(
 name|getConstructorProxyMap
-argument_list|(
-literal|false
-argument_list|)
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

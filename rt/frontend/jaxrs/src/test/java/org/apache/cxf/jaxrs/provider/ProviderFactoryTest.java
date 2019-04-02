@@ -3266,6 +3266,10 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
 name|endpoint
 operator|.
 name|get
@@ -3277,11 +3281,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-expr_stmt|;
-name|EasyMock
-operator|.
-name|expectLastCall
-argument_list|()
+argument_list|)
 operator|.
 name|andReturn
 argument_list|(

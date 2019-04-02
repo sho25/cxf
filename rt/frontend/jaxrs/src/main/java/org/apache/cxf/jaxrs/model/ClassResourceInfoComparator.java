@@ -141,8 +141,6 @@ parameter_list|)
 block|{
 name|int
 name|result
-init|=
-literal|0
 decl_stmt|;
 if|if
 condition|(

@@ -1335,7 +1335,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|value
+name|s
 argument_list|,
 name|value
 argument_list|)
