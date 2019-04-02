@@ -109,6 +109,26 @@ name|ClassLoaderUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|httpsignature
+operator|.
+name|provider
+operator|.
+name|PrivateKeyProvider
+import|;
+end_import
+
 begin_comment
 comment|/**  * Just a test-class to provide a static method to easily load a PrivateKey in spring config.  */
 end_comment
@@ -117,10 +137,12 @@ begin_class
 specifier|public
 specifier|final
 class|class
+name|PrivateKeyProviderTestHelper
+implements|implements
 name|PrivateKeyProvider
 block|{
 specifier|private
-name|PrivateKeyProvider
+name|PrivateKeyProviderTestHelper
 parameter_list|()
 block|{
 comment|// complete
@@ -155,7 +177,7 @@ name|getResourceAsStream
 argument_list|(
 literal|"keys/bob.jks"
 argument_list|,
-name|PrivateKeyProvider
+name|PrivateKeyProviderTestHelper
 operator|.
 name|class
 argument_list|)
@@ -206,6 +228,21 @@ return|return
 literal|null
 return|;
 block|}
+block|}
+annotation|@
+name|Override
+specifier|public
+name|PrivateKey
+name|getKey
+parameter_list|(
+name|String
+name|keyId
+parameter_list|)
+block|{
+return|return
+name|loadPrivateKey
+argument_list|()
+return|;
 block|}
 block|}
 end_class
