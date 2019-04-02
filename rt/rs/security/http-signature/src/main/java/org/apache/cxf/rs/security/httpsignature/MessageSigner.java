@@ -140,6 +140,7 @@ name|String
 name|digestAlgorithmName
 decl_stmt|;
 specifier|private
+specifier|final
 name|SignatureCreator
 name|signatureCreator
 decl_stmt|;
