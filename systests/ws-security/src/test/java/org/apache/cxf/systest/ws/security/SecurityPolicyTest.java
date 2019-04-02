@@ -2100,16 +2100,21 @@ literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|5
 argument_list|)
+argument_list|)
 expr_stmt|;
 comment|// TODO See WSS-464
 comment|// SecurityTestUtil.enableStreaming(pt);
-comment|// pt.doubleIt(5);
+comment|// assertEquals(10, pt.doubleIt(5));
 operator|(
 operator|(
 name|java
@@ -2214,11 +2219,16 @@ literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|5
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -2229,11 +2239,16 @@ argument_list|(
 name|pt
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|5
+argument_list|)
 argument_list|)
 expr_stmt|;
 operator|(
@@ -2340,11 +2355,16 @@ literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|5
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -2355,11 +2375,16 @@ argument_list|(
 name|pt
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|5
+argument_list|)
 argument_list|)
 expr_stmt|;
 operator|(
@@ -2504,11 +2529,16 @@ literal|"pwd"
 argument_list|)
 expr_stmt|;
 comment|// DOM
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Streaming
@@ -2519,11 +2549,16 @@ argument_list|(
 name|pt
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
 name|pt
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
 argument_list|)
 expr_stmt|;
 operator|(

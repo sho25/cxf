@@ -1372,7 +1372,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//REVISIT may provide an option to add other headers
-comment|//          boolean addHeaders = MessageUtils.isTrue(outMessage.getContextualProperty(Headers.ADD_HEADERS_PROPERTY));
+comment|//          boolean addHeaders = PropertyUtils.isTrue(outMessage.getContextualProperty(Headers.ADD_HEADERS_PROPERTY));
 block|}
 annotation|@
 name|Override

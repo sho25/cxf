@@ -509,7 +509,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-comment|// if the fault's content is invalid and fautlCode is not found, blame the receiver
+comment|// if the fault's content is invalid and faultCode is not found, blame the receiver
 if|if
 condition|(
 name|faultCode
