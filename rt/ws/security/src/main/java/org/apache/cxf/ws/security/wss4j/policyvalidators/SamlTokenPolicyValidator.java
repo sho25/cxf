@@ -633,6 +633,13 @@ continue|continue;
 block|}
 if|if
 condition|(
+name|parameters
+operator|.
+name|getSoapBody
+argument_list|()
+operator|==
+literal|null
+operator|||
 operator|!
 name|DOMSAMLUtil
 operator|.

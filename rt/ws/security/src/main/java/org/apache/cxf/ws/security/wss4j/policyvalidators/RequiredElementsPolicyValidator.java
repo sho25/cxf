@@ -466,6 +466,27 @@ argument_list|(
 name|header
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|header
+operator|==
+literal|null
+condition|)
+block|{
+name|ai
+operator|.
+name|setNotAsserted
+argument_list|(
+literal|"No header element matching XPath "
+operator|+
+name|expression
+operator|+
+literal|" found."
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 try|try
 block|{
 name|list
@@ -531,6 +552,7 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

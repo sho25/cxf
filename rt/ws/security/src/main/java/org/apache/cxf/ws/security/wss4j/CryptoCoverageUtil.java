@@ -1290,6 +1290,17 @@ name|Element
 name|el
 parameter_list|)
 block|{
+if|if
+condition|(
+name|el
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 specifier|final
 name|boolean
 name|content
