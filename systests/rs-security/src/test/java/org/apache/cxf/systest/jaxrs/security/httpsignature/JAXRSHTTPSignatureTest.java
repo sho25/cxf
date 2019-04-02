@@ -521,8 +521,6 @@ specifier|static
 name|void
 name|startServers
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|assertTrue
 argument_list|(
@@ -628,6 +626,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -821,6 +821,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -931,8 +933,6 @@ specifier|public
 name|void
 name|testHttpSignatureProperties
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -1088,8 +1088,6 @@ specifier|public
 name|void
 name|testHttpSignatureOutProperties
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -1245,8 +1243,6 @@ specifier|public
 name|void
 name|testHttpSignaturePropertiesPasswordProvider
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -1535,6 +1531,8 @@ literal|"rsa-sha512"
 argument_list|,
 literal|"SHA-256"
 argument_list|,
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -1732,6 +1730,8 @@ literal|"rsa-sha512"
 argument_list|,
 literal|"SHA-256"
 argument_list|,
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -1842,8 +1842,6 @@ specifier|public
 name|void
 name|testHttpSignatureSignaturePropertiesRsaSha512
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -2127,6 +2125,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -2365,6 +2365,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -2520,8 +2522,6 @@ specifier|public
 name|void
 name|testHttpSignatureResponseProperties
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -2803,6 +2803,8 @@ literal|"rsa-sha512"
 argument_list|,
 literal|"SHA-256"
 argument_list|,
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -3013,6 +3015,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -3459,6 +3463,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyid
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -3678,6 +3684,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -3889,6 +3897,8 @@ literal|"rsa-sha512"
 argument_list|,
 literal|"SHA-256"
 argument_list|,
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -3977,8 +3987,6 @@ specifier|public
 name|void
 name|testNoHttpSignature
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -4151,6 +4159,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -4329,6 +4339,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -4507,6 +4519,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -4685,6 +4699,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -4863,6 +4879,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -4992,6 +5010,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|keyPair
 operator|.
 name|getPrivate
@@ -5179,6 +5199,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"alice-key-id"
@@ -5352,6 +5374,8 @@ init|=
 operator|new
 name|MessageSigner
 argument_list|(
+name|keyId
+lambda|->
 name|privateKey
 argument_list|,
 literal|"unknown-key-id"
@@ -5440,8 +5464,6 @@ specifier|public
 name|void
 name|testPropertiesWrongSignatureVerification
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|URL
 name|busFile
@@ -6056,12 +6078,9 @@ argument_list|()
 operator|.
 name|map
 argument_list|(
-name|o
-lambda|->
-name|o
-operator|.
+name|Object
+operator|::
 name|toString
-argument_list|()
 argument_list|)
 operator|.
 name|collect
