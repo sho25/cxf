@@ -1184,7 +1184,7 @@ name|keyProviders
 operator|.
 name|get
 argument_list|(
-literal|0
+name|i
 argument_list|)
 argument_list|,
 name|ctProvider

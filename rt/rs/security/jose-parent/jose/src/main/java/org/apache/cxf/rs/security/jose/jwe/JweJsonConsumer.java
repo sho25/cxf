@@ -358,8 +358,6 @@ name|jweDecryptionInput
 init|=
 name|getJweDecryptionInput
 argument_list|(
-name|jwe
-argument_list|,
 name|entry
 argument_list|)
 decl_stmt|;
@@ -391,9 +389,6 @@ specifier|private
 name|JweDecryptionInput
 name|getJweDecryptionInput
 parameter_list|(
-name|JweDecryptionProvider
-name|jwe
-parameter_list|,
 name|JweJsonEncryptionEntry
 name|entry
 parameter_list|)

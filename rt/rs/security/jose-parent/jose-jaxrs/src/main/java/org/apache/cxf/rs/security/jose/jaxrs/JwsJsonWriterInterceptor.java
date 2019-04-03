@@ -780,7 +780,9 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-name|encodePayload
+name|base64Stream
+operator|!=
+literal|null
 condition|)
 block|{
 name|base64Stream

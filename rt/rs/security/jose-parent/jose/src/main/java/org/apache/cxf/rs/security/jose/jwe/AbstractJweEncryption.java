@@ -1328,15 +1328,9 @@ operator|.
 name|aad
 operator|=
 name|jweInput
-operator|!=
-literal|null
-condition|?
-name|jweInput
 operator|.
 name|getAad
 argument_list|()
-else|:
-literal|null
 expr_stmt|;
 name|state
 operator|.
