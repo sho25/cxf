@@ -761,6 +761,10 @@ condition|(
 name|c
 operator|==
 literal|null
+operator|&&
+name|resourceOwnerSubject
+operator|!=
+literal|null
 condition|)
 block|{
 return|return
@@ -793,6 +797,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|c
+operator|!=
+literal|null
+operator|&&
 name|resourceOwnerSubject
 operator|==
 literal|null
