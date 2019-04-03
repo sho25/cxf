@@ -611,6 +611,17 @@ name|String
 name|key
 parameter_list|)
 block|{
+if|if
+condition|(
+name|msgContext
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|Object
 name|obj
 init|=

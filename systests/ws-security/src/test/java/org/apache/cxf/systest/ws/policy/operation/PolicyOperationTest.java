@@ -542,7 +542,7 @@ literal|50
 argument_list|,
 name|port
 operator|.
-name|doubleIt
+name|doubleIt2
 argument_list|(
 literal|25
 argument_list|)
