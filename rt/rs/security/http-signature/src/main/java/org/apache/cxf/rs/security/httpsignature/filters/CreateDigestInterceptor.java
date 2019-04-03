@@ -342,6 +342,11 @@ name|digest
 argument_list|)
 expr_stmt|;
 block|}
+name|context
+operator|.
+name|proceed
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 end_class
