@@ -27,7 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|PrivateKey
+name|Key
 import|;
 end_import
 
@@ -36,12 +36,10 @@ annotation|@
 name|FunctionalInterface
 specifier|public
 interface|interface
-name|PrivateKeyProvider
-extends|extends
 name|KeyProvider
 block|{
-comment|/**      * @param keyId is used as lookup to find the correct configured private key for this keyId      *              The keyId is sent in the message together with the signature      * @throws IllegalArgumentException if it can't provide a private key based on keyId      * @return the private key (which is never {@code null})      */
-name|PrivateKey
+comment|/**      * Resolve a Key based on the keyId      * @param keyId in question, not null or empty.      * @return a Key, never null.      */
+name|Key
 name|getKey
 parameter_list|(
 name|String

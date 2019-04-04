@@ -203,7 +203,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PublicKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -347,8 +347,8 @@ parameter_list|,
 name|AlgorithmProvider
 name|algorithmProvider
 parameter_list|,
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|SecurityProvider
 name|securityProvider
@@ -424,7 +424,7 @@ block|}
 name|Key
 name|key
 init|=
-name|publicKeyProvider
+name|keyProvider
 operator|.
 name|getKey
 argument_list|(
