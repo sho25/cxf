@@ -17,11 +17,24 @@ name|util
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Proxy
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
 name|ClassUnwrapper
 block|{
+comment|/**      * Return a real class for the instance, possibly a proxy.      * @param o instance to get real class for      * @return real class for the instance      */
 name|Class
 argument_list|<
 name|?
@@ -32,6 +45,46 @@ name|Object
 name|o
 parameter_list|)
 function_decl|;
+comment|/**      * Return a real class for the class, possibly a proxy class.      * @param clazz class to get real class for      * @return real class for the class      */
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|getRealClassFromClass
+parameter_list|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|clazz
+parameter_list|)
+function_decl|;
+comment|/**      * Return a real class for the instance, possibly a proxy.      * @param o instance to get real class for      * @return real class for the instance      */
+specifier|default
+name|Object
+name|getRealObject
+parameter_list|(
+name|Object
+name|o
+parameter_list|)
+block|{
+return|return
+operator|(
+name|o
+operator|instanceof
+name|Proxy
+operator|)
+condition|?
+name|Proxy
+operator|.
+name|getInvocationHandler
+argument_list|(
+name|o
+argument_list|)
+else|:
+name|o
+return|;
+block|}
 block|}
 end_interface
 
