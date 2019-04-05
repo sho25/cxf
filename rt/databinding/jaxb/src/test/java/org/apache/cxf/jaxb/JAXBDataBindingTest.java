@@ -2018,6 +2018,16 @@ name|contains
 argument_list|(
 literal|"Failed to map namespace"
 argument_list|)
+operator|||
+name|er
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"Internal needs ASM"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
