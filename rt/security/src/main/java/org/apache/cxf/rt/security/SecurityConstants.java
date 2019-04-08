@@ -78,7 +78,7 @@ name|USERNAME
 init|=
 literal|"security.username"
 decl_stmt|;
-comment|/**      * The user's password when a {@link CALLBACK_HANDLER} is not defined.      */
+comment|/**      * The user's password when a {@link CALLBACK_HANDLER} is not defined. This is only used for the password      * in a WS-Security UsernameToken.      */
 specifier|public
 specifier|static
 specifier|final
