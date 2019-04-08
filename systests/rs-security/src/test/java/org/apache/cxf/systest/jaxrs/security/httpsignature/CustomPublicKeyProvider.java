@@ -115,7 +115,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PublicKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -124,7 +124,7 @@ specifier|public
 class|class
 name|CustomPublicKeyProvider
 implements|implements
-name|PublicKeyProvider
+name|KeyProvider
 block|{
 annotation|@
 name|Override

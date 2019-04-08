@@ -34,6 +34,8 @@ end_import
 begin_interface
 annotation|@
 name|FunctionalInterface
+annotation|@
+name|Deprecated
 specifier|public
 interface|interface
 name|PublicKeyProvider

@@ -173,7 +173,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PublicKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -262,8 +262,8 @@ name|AlgorithmProvider
 name|algorithmProvider
 decl_stmt|;
 specifier|private
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 decl_stmt|;
 specifier|private
 name|SecurityProvider
@@ -277,13 +277,13 @@ decl_stmt|;
 specifier|public
 name|MessageVerifier
 parameter_list|(
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKeyProvider
+name|keyProvider
 argument_list|,
 name|Collections
 operator|.
@@ -295,8 +295,8 @@ block|}
 specifier|public
 name|MessageVerifier
 parameter_list|(
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|List
 argument_list|<
@@ -307,7 +307,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 lambda|->
@@ -333,8 +333,8 @@ block|}
 specifier|public
 name|MessageVerifier
 parameter_list|(
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|SecurityProvider
 name|securityProvider
@@ -345,7 +345,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKeyProvider
+name|keyProvider
 argument_list|,
 name|securityProvider
 argument_list|,
@@ -361,8 +361,8 @@ block|}
 specifier|public
 name|MessageVerifier
 parameter_list|(
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|SecurityProvider
 name|securityProvider
@@ -377,9 +377,9 @@ argument_list|>
 name|requiredHeaders
 parameter_list|)
 block|{
-name|setPublicKeyProvider
+name|setkeyProvider
 argument_list|(
-name|publicKeyProvider
+name|keyProvider
 argument_list|)
 expr_stmt|;
 name|setSecurityProvider
@@ -406,21 +406,21 @@ block|}
 specifier|public
 specifier|final
 name|void
-name|setPublicKeyProvider
+name|setkeyProvider
 parameter_list|(
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|provider
 parameter_list|)
 block|{
 name|this
 operator|.
-name|publicKeyProvider
+name|keyProvider
 operator|=
 name|Objects
 operator|.
 name|requireNonNull
 argument_list|(
-name|publicKeyProvider
+name|provider
 argument_list|,
 literal|"public key provider cannot be null"
 argument_list|)
@@ -526,7 +526,7 @@ name|messageHeaders
 argument_list|,
 name|algorithmProvider
 argument_list|,
-name|publicKeyProvider
+name|keyProvider
 argument_list|,
 name|securityProvider
 argument_list|,
