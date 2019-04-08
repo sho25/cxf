@@ -129,7 +129,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PrivateKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -195,8 +195,8 @@ name|signatureAlgorithmName
 decl_stmt|;
 specifier|private
 specifier|final
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 decl_stmt|;
 specifier|private
 specifier|final
@@ -217,8 +217,8 @@ parameter_list|(
 name|String
 name|signatureAlgorithmName
 parameter_list|,
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -228,7 +228,7 @@ name|this
 argument_list|(
 name|signatureAlgorithmName
 argument_list|,
-name|privateKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 argument_list|,
@@ -245,8 +245,8 @@ parameter_list|(
 name|String
 name|signatureAlgorithmName
 parameter_list|,
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -266,9 +266,9 @@ name|signatureAlgorithmName
 expr_stmt|;
 name|this
 operator|.
-name|privateKeyProvider
+name|keyProvider
 operator|=
-name|privateKeyProvider
+name|keyProvider
 expr_stmt|;
 name|this
 operator|.
@@ -475,7 +475,7 @@ name|signatures
 operator|.
 name|Signer
 argument_list|(
-name|privateKeyProvider
+name|keyProvider
 operator|.
 name|getKey
 argument_list|(

@@ -125,7 +125,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PrivateKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -139,7 +139,7 @@ specifier|final
 class|class
 name|PrivateKeyProviderTestHelper
 implements|implements
-name|PrivateKeyProvider
+name|KeyProvider
 block|{
 specifier|private
 name|PrivateKeyProviderTestHelper

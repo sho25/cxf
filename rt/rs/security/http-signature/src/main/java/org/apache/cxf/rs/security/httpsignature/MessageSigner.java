@@ -85,7 +85,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PrivateKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -153,8 +153,8 @@ parameter_list|,
 name|String
 name|digestAlgorithmName
 parameter_list|,
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -166,7 +166,7 @@ name|signatureAlgorithmName
 argument_list|,
 name|digestAlgorithmName
 argument_list|,
-name|privateKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 argument_list|,
@@ -186,8 +186,8 @@ parameter_list|,
 name|String
 name|digestAlgorithmName
 parameter_list|,
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -228,7 +228,7 @@ name|Objects
 operator|.
 name|requireNonNull
 argument_list|(
-name|privateKeyProvider
+name|keyProvider
 argument_list|)
 argument_list|,
 name|Objects
@@ -245,8 +245,8 @@ block|}
 specifier|public
 name|MessageSigner
 parameter_list|(
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -254,7 +254,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|privateKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 argument_list|,
@@ -268,8 +268,8 @@ block|}
 specifier|public
 name|MessageSigner
 parameter_list|(
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|String
 name|keyId
@@ -291,7 +291,7 @@ name|DefaultSignatureConstants
 operator|.
 name|DIGEST_ALGORITHM
 argument_list|,
-name|privateKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 argument_list|,

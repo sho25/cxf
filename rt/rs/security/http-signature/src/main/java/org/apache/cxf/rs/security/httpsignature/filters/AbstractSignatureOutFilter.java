@@ -259,7 +259,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PrivateKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -695,8 +695,8 @@ operator|.
 name|getCurrentMessage
 argument_list|()
 decl_stmt|;
-name|PrivateKeyProvider
-name|privateKeyProvider
+name|KeyProvider
+name|keyProvider
 init|=
 name|keyId
 lambda|->
@@ -838,7 +838,7 @@ name|DefaultSignatureConstants
 operator|.
 name|DIGEST_ALGORITHM
 argument_list|,
-name|privateKeyProvider
+name|keyProvider
 argument_list|,
 name|keyId
 argument_list|,
