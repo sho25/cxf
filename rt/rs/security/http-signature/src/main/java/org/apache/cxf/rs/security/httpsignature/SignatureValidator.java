@@ -75,7 +75,7 @@ name|httpsignature
 operator|.
 name|provider
 operator|.
-name|PublicKeyProvider
+name|KeyProvider
 import|;
 end_import
 
@@ -121,8 +121,8 @@ parameter_list|,
 name|AlgorithmProvider
 name|algorithmProvider
 parameter_list|,
-name|PublicKeyProvider
-name|publicKeyProvider
+name|KeyProvider
+name|keyProvider
 parameter_list|,
 name|SecurityProvider
 name|securityProvider

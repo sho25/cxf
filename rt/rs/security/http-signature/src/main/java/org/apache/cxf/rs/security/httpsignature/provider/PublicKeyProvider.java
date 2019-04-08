@@ -37,6 +37,8 @@ name|FunctionalInterface
 specifier|public
 interface|interface
 name|PublicKeyProvider
+extends|extends
+name|KeyProvider
 block|{
 comment|/**      * @param keyId is used as lookup to find the correct configured public key for this keyId      *              The keyId is sent in the message together with the signature      * @throws IllegalArgumentException if it can't provide a public key based on keyId      * @return the public key (which is never {@code null})      */
 name|PublicKey
