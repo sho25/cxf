@@ -96,6 +96,15 @@ name|SIGNATURE_USERNAME
 init|=
 literal|"security.signature.username"
 decl_stmt|;
+comment|/**      * The user's password for signature when a {@link CALLBACK_HANDLER} is not defined.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNATURE_PASSWORD
+init|=
+literal|"security.signature.password"
+decl_stmt|;
 comment|/**      * The user's name for encryption. It is used as the alias name in the keystore to get the user's public      * key for encryption. If this is not defined, then {@link USERNAME} is used instead. If      * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link ENCRYPT_PROPERTIES}. If that's also not set, and the keystore only contains a single key,      * that key will be used.      *      * For the WS-Security web service provider, the "useReqSigCert" keyword can be used to accept (encrypt to)      * any client whose public key is in the service's truststore (defined in {@link ENCRYPT_PROPERTIES}).      */
 specifier|public
 specifier|static
