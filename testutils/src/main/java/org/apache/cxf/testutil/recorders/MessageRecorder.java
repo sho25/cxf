@@ -107,11 +107,6 @@ operator|<=
 name|timeout
 condition|)
 block|{
-synchronized|synchronized
-init|(
-name|outRecorder
-init|)
-block|{
 name|nOut
 operator|=
 name|outRecorder
@@ -122,12 +117,6 @@ operator|.
 name|size
 argument_list|()
 expr_stmt|;
-block|}
-synchronized|synchronized
-init|(
-name|inRecorder
-init|)
-block|{
 name|nIn
 operator|=
 name|inRecorder
@@ -138,7 +127,6 @@ operator|.
 name|size
 argument_list|()
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|nIn
@@ -158,7 +146,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|100
+literal|100L
 argument_list|)
 expr_stmt|;
 block|}
@@ -253,8 +241,6 @@ name|String
 argument_list|(
 name|b
 argument_list|)
-operator|+
-literal|"\n"
 argument_list|)
 expr_stmt|;
 name|System
@@ -263,7 +249,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"----------------\n"
+literal|"----------------"
 argument_list|)
 expr_stmt|;
 block|}
@@ -346,8 +332,6 @@ name|String
 argument_list|(
 name|b
 argument_list|)
-operator|+
-literal|"\n"
 argument_list|)
 expr_stmt|;
 name|System
@@ -356,18 +340,11 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"----------------\n"
+literal|"----------------"
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-if|if
-condition|(
-name|nExpectedIn
-operator|>
-name|nIn
-condition|)
-block|{
 name|assertEquals
 argument_list|(
 literal|"Did not receive expected number of inbound messages"
@@ -377,14 +354,6 @@ argument_list|,
 name|nIn
 argument_list|)
 expr_stmt|;
-block|}
-if|if
-condition|(
-name|nExpectedOut
-operator|>
-name|nOut
-condition|)
-block|{
 name|assertEquals
 argument_list|(
 literal|"Did not send expected number of outbound messages"
@@ -394,7 +363,6 @@ argument_list|,
 name|nOut
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 end_class

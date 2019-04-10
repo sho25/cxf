@@ -189,10 +189,6 @@ name|Phase
 import|;
 end_import
 
-begin_comment
-comment|/**  *  */
-end_comment
-
 begin_class
 specifier|public
 class|class
@@ -219,12 +215,18 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|byte
 index|[]
 argument_list|>
 name|outbound
+init|=
+operator|new
+name|CopyOnWriteArrayList
+argument_list|<>
+argument_list|()
 decl_stmt|;
 specifier|public
 name|OutMessageRecorder
@@ -236,13 +238,6 @@ name|Phase
 operator|.
 name|PREPARE_SEND
 argument_list|)
-expr_stmt|;
-name|outbound
-operator|=
-operator|new
-name|CopyOnWriteArrayList
-argument_list|<>
-argument_list|()
 expr_stmt|;
 name|addAfter
 argument_list|(
@@ -399,28 +394,16 @@ block|{
 comment|// bytes were already copied after flush
 try|try
 block|{
-name|byte
-index|[]
-name|bytes
-init|=
-name|cos
-operator|.
-name|getBytes
-argument_list|()
-decl_stmt|;
-synchronized|synchronized
-init|(
-name|this
-init|)
-block|{
 name|outbound
 operator|.
 name|add
 argument_list|(
-name|bytes
+name|cos
+operator|.
+name|getBytes
+argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
