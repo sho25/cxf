@@ -328,7 +328,7 @@ name|getPersistenceUnitName
 parameter_list|()
 block|{
 return|return
-literal|"testUnitHibernate"
+literal|"test-hibernate-cxf-rt-rs-security-sso-oidc"
 return|;
 block|}
 annotation|@

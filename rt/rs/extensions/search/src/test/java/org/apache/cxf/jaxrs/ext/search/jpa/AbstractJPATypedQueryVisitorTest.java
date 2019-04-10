@@ -412,7 +412,7 @@ name|Persistence
 operator|.
 name|createEntityManagerFactory
 argument_list|(
-literal|"testUnitHibernate"
+literal|"test-hibernate-cxf-rt-rs-extension-search"
 argument_list|)
 expr_stmt|;
 name|em
