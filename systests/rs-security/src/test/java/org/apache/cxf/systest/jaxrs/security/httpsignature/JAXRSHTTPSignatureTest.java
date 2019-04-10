@@ -4677,6 +4677,9 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
+operator|(
+name|Object
+operator|)
 name|digestFilter
 argument_list|,
 name|signatureFilter
