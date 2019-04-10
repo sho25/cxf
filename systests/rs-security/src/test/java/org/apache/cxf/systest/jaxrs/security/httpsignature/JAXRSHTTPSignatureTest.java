@@ -609,6 +609,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -4343,6 +4353,8 @@ block|}
 comment|// TODO The Digest is not being signed yet
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testHttpSignatureDigest
@@ -4458,7 +4470,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/httpsig/bookstore/books"
+literal|"/httpsigdigest/bookstore/books"
 decl_stmt|;
 name|WebClient
 name|client
@@ -7683,15 +7695,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|boolean
-name|isChangeDigestValue
-parameter_list|()
-block|{
-return|return
-name|changeDigestValue
-return|;
-block|}
-specifier|public
 name|void
 name|setChangeDigestValue
 parameter_list|(
@@ -7705,15 +7708,6 @@ name|changeDigestValue
 operator|=
 name|changeDigestValue
 expr_stmt|;
-block|}
-specifier|public
-name|boolean
-name|isEmptyDigestValue
-parameter_list|()
-block|{
-return|return
-name|emptyDigestValue
-return|;
 block|}
 specifier|public
 name|void
