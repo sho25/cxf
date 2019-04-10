@@ -174,12 +174,13 @@ name|boolean
 name|useIso8859
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|userAndPass
 init|=
 name|userName
 operator|+
-literal|":"
+literal|':'
 operator|+
 name|passwd
 decl_stmt|;

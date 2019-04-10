@@ -137,22 +137,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
-operator|.
-name|util
-operator|.
-name|Base64Utility
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|configuration
 operator|.
 name|security
@@ -290,6 +274,24 @@ operator|.
 name|HTTPConduit
 operator|.
 name|WrappedOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|http
+operator|.
+name|auth
+operator|.
+name|DefaultBasicAuthSupplier
 import|;
 end_import
 
@@ -921,16 +923,13 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected Authorization Token"
 argument_list|,
-literal|"Basic "
-operator|+
-name|Base64Utility
+name|DefaultBasicAuthSupplier
 operator|.
-name|encode
+name|getBasicAuthHeader
 argument_list|(
-literal|"testUser:password"
-operator|.
-name|getBytes
-argument_list|()
+literal|"testUser"
+argument_list|,
+literal|"password"
 argument_list|)
 argument_list|,
 name|headers
@@ -1079,16 +1078,13 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected Authorization Token"
 argument_list|,
-literal|"Basic "
-operator|+
-name|Base64Utility
+name|DefaultBasicAuthSupplier
 operator|.
-name|encode
+name|getBasicAuthHeader
 argument_list|(
-literal|"Satan:hell"
-operator|.
-name|getBytes
-argument_list|()
+literal|"Satan"
+argument_list|,
+literal|"hell"
 argument_list|)
 argument_list|,
 name|headers
@@ -1273,16 +1269,13 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected Authorization Token"
 argument_list|,
-literal|"Basic "
-operator|+
-name|Base64Utility
+name|DefaultBasicAuthSupplier
 operator|.
-name|encode
+name|getBasicAuthHeader
 argument_list|(
-literal|"Hello:world"
-operator|.
-name|getBytes
-argument_list|()
+literal|"Hello"
+argument_list|,
+literal|"world"
 argument_list|)
 argument_list|,
 name|headers
@@ -1550,11 +1543,6 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 throw|throw
 name|ex
 throw|;
