@@ -206,9 +206,7 @@ argument_list|(
 literal|"<Test xmlns=\"http://example.org/types\"><argument>foobar</argument></Test>"
 operator|.
 name|getBytes
-argument_list|(
-literal|"utf-8"
-argument_list|)
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|DocumentBuilderFactory
@@ -340,9 +338,7 @@ argument_list|(
 literal|"<t:Test xmlns:t=\"http://example.org/types\">gorilla</t:Test>"
 operator|.
 name|getBytes
-argument_list|(
-literal|"utf-8"
-argument_list|)
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Document

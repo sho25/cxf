@@ -689,8 +689,6 @@ name|entity
 operator|.
 name|getContent
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -3295,8 +3293,6 @@ name|entity
 operator|.
 name|getContent
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -3426,8 +3422,6 @@ name|entity
 operator|.
 name|getContent
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -3557,8 +3551,6 @@ name|entity
 operator|.
 name|getContent
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|assertEquals

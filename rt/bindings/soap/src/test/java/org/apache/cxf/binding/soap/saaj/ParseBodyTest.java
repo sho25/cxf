@@ -361,9 +361,7 @@ argument_list|(
 name|data
 operator|.
 name|getBytes
-argument_list|(
-literal|"utf-8"
-argument_list|)
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;

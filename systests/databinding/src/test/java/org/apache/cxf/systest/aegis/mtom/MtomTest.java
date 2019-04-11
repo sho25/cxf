@@ -634,8 +634,6 @@ argument_list|()
 operator|.
 name|getInputStream
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|Assert
@@ -694,8 +692,6 @@ argument_list|()
 operator|.
 name|getInputStream
 argument_list|()
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|Assert
@@ -953,8 +949,6 @@ operator|.
 name|toString
 argument_list|(
 name|data
-argument_list|,
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 name|Assert

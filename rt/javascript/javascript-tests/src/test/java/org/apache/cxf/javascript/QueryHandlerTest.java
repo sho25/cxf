@@ -79,18 +79,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|nio
-operator|.
-name|charset
-operator|.
-name|Charset
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|logging
@@ -209,6 +197,20 @@ end_import
 
 begin_import
 import|import static
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+operator|.
+name|UTF_8
+import|;
+end_import
+
+begin_import
+import|import static
 name|org
 operator|.
 name|junit
@@ -254,19 +256,6 @@ name|QueryHandlerTest
 extends|extends
 name|AbstractCXFSpringTest
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|Charset
-name|UTF8
-init|=
-name|Charset
-operator|.
-name|forName
-argument_list|(
-literal|"utf-8"
-argument_list|)
-decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -438,7 +427,7 @@ name|InputStreamReader
 argument_list|(
 name|jsStream
 argument_list|,
-name|UTF8
+name|UTF_8
 argument_list|)
 decl_stmt|;
 name|BufferedReader

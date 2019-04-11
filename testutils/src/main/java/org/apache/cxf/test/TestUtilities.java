@@ -99,18 +99,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|nio
-operator|.
-name|charset
-operator|.
-name|Charset
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|HashMap
@@ -495,6 +483,20 @@ name|ServiceWSDLBuilder
 import|;
 end_import
 
+begin_import
+import|import static
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+operator|.
+name|UTF_8
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class provides unit test support for tests that look at generated WSDL  * contents, as well as some test methods for invoking services.  */
 end_comment
@@ -504,19 +506,6 @@ specifier|public
 class|class
 name|TestUtilities
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|Charset
-name|UTF8
-init|=
-name|Charset
-operator|.
-name|forName
-argument_list|(
-literal|"utf-8"
-argument_list|)
-decl_stmt|;
 specifier|private
 specifier|static
 name|String
@@ -1399,7 +1388,7 @@ argument_list|(
 name|resource
 argument_list|)
 argument_list|,
-name|UTF8
+name|UTF_8
 argument_list|)
 return|;
 block|}

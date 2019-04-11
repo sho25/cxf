@@ -297,6 +297,20 @@ name|IOUtils
 import|;
 end_import
 
+begin_import
+import|import static
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+operator|.
+name|UTF_8
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -2851,7 +2865,7 @@ name|OutputStreamWriter
 argument_list|(
 name|out
 argument_list|,
-literal|"utf-8"
+name|UTF_8
 argument_list|)
 block|{
 specifier|public
@@ -2960,7 +2974,7 @@ name|InputStreamReader
 argument_list|(
 name|in
 argument_list|,
-literal|"utf-8"
+name|UTF_8
 argument_list|)
 return|;
 block|}

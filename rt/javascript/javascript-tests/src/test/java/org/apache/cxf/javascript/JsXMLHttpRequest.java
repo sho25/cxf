@@ -491,6 +491,20 @@ name|ScriptableObject
 import|;
 end_import
 
+begin_import
+import|import static
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+operator|.
+name|UTF_8
+import|;
+end_import
+
 begin_comment
 comment|/**  * Implementation of XMLHttpRequest for Rhino. This might be given knowledge of  * CXF 'local' URLs if the author is feeling frisky.  */
 end_comment
@@ -523,18 +537,6 @@ argument_list|(
 name|JsXMLHttpRequest
 operator|.
 name|class
-argument_list|)
-decl_stmt|;
-specifier|private
-specifier|static
-name|Charset
-name|utf8
-init|=
-name|Charset
-operator|.
-name|forName
-argument_list|(
-literal|"utf-8"
 argument_list|)
 decl_stmt|;
 specifier|private
@@ -2333,7 +2335,7 @@ block|{
 name|ByteBuffer
 name|bb
 init|=
-name|utf8
+name|UTF_8
 operator|.
 name|encode
 argument_list|(
