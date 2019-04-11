@@ -61,18 +61,6 @@ name|Before
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|fail
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -92,8 +80,6 @@ name|setUp
 parameter_list|()
 throws|throws
 name|Exception
-block|{
-try|try
 block|{
 name|emFactory
 operator|=
@@ -130,24 +116,6 @@ name|provider
 argument_list|)
 expr_stmt|;
 block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-name|fail
-argument_list|(
-literal|"Exception during JPA EntityManager creation."
-argument_list|)
-expr_stmt|;
-block|}
-block|}
 specifier|protected
 name|String
 name|getPersistenceUnitName
@@ -166,8 +134,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-try|try
-block|{
 name|super
 operator|.
 name|tearDown
@@ -183,19 +149,6 @@ block|{
 name|emFactory
 operator|.
 name|close
-argument_list|()
-expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|Throwable
-name|ex
-parameter_list|)
-block|{
-name|ex
-operator|.
-name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
