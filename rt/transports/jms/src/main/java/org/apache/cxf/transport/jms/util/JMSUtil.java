@@ -799,6 +799,11 @@ name|nextElement
 argument_list|()
 expr_stmt|;
 block|}
+name|browser
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 return|return
 name|actualNum
 return|;
