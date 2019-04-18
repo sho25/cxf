@@ -2461,8 +2461,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|obj
 operator|.
 name|getClass
@@ -2494,12 +2493,7 @@ argument_list|()
 operator|>
 literal|0
 operator|)
-condition|)
-block|{
-return|return
-literal|true
 return|;
-block|}
 block|}
 block|}
 return|return
