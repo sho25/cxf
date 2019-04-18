@@ -1453,6 +1453,10 @@ condition|(
 name|header
 operator|==
 literal|null
+operator|&&
+name|outMessage
+operator|!=
+literal|null
 condition|)
 block|{
 name|header
