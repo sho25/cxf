@@ -811,7 +811,7 @@ argument_list|)
 decl_stmt|;
 name|resourceOpened
 operator|.
-name|addElement
+name|add
 argument_list|(
 name|ins
 argument_list|)

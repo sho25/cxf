@@ -41,7 +41,17 @@ name|java
 operator|.
 name|util
 operator|.
-name|Stack
+name|ArrayDeque
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Deque
 import|;
 end_import
 
@@ -79,14 +89,15 @@ name|String
 name|lastestImportUri
 decl_stmt|;
 specifier|protected
-name|Stack
+specifier|final
+name|Deque
 argument_list|<
 name|InputStream
 argument_list|>
 name|resourceOpened
 init|=
 operator|new
-name|Stack
+name|ArrayDeque
 argument_list|<>
 argument_list|()
 decl_stmt|;
@@ -210,7 +221,7 @@ argument_list|()
 decl_stmt|;
 name|resourceOpened
 operator|.
-name|addElement
+name|add
 argument_list|(
 name|in
 argument_list|)

@@ -186,8 +186,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|value
-operator|=
+return|return
 name|URLEncoder
 operator|.
 name|encode
@@ -196,7 +195,7 @@ name|value
 argument_list|,
 name|enc
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 catch|catch
 parameter_list|(
@@ -212,9 +211,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-return|return
-name|value
-return|;
 block|}
 comment|/**      * Decodes using URLDecoder - use when queries or form post values are decoded      * @param value value to decode      * @param enc encoding      */
 specifier|public

@@ -27,6 +27,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|ArrayDeque
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|ArrayList
 import|;
 end_import
@@ -38,6 +48,16 @@ operator|.
 name|util
 operator|.
 name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Deque
 import|;
 end_import
 
@@ -78,16 +98,6 @@ operator|.
 name|util
 operator|.
 name|Set
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Stack
 import|;
 end_import
 
@@ -394,7 +404,8 @@ argument_list|>
 name|cq
 decl_stmt|;
 specifier|private
-name|Stack
+specifier|final
+name|Deque
 argument_list|<
 name|List
 argument_list|<
@@ -404,7 +415,7 @@ argument_list|>
 name|predStack
 init|=
 operator|new
-name|Stack
+name|ArrayDeque
 argument_list|<>
 argument_list|()
 decl_stmt|;

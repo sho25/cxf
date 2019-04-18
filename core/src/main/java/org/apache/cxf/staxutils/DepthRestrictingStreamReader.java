@@ -21,7 +21,17 @@ name|java
 operator|.
 name|util
 operator|.
-name|Stack
+name|ArrayDeque
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Deque
 import|;
 end_import
 
@@ -69,14 +79,15 @@ name|int
 name|totalElementCount
 decl_stmt|;
 specifier|private
-name|Stack
+specifier|final
+name|Deque
 argument_list|<
 name|Integer
 argument_list|>
 name|stack
 init|=
 operator|new
-name|Stack
+name|ArrayDeque
 argument_list|<>
 argument_list|()
 decl_stmt|;
@@ -224,7 +235,7 @@ condition|(
 operator|!
 name|stack
 operator|.
-name|empty
+name|isEmpty
 argument_list|()
 condition|)
 block|{

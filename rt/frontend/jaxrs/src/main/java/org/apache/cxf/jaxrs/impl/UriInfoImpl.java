@@ -950,9 +950,14 @@ argument_list|>
 name|resources
 init|=
 operator|new
-name|LinkedList
+name|ArrayList
 argument_list|<>
+argument_list|(
+name|stack
+operator|.
+name|size
 argument_list|()
+argument_list|)
 decl_stmt|;
 for|for
 control|(
