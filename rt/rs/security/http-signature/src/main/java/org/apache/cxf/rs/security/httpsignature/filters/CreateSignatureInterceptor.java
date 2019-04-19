@@ -270,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS WriterInterceptor which adds digests of the body.  */
+comment|/**  * RS WriterInterceptor which adds digests of the body and signing of headers.  */
 end_comment
 
 begin_class
@@ -285,7 +285,7 @@ name|HEADER_DECORATOR
 argument_list|)
 specifier|public
 class|class
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 extends|extends
 name|AbstractSignatureOutFilter
 implements|implements
@@ -311,7 +311,7 @@ name|UriInfo
 name|uriInfo
 decl_stmt|;
 specifier|public
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 parameter_list|()
 block|{
 name|this
@@ -323,7 +323,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 parameter_list|(
 name|String
 name|digestAlgorithmName

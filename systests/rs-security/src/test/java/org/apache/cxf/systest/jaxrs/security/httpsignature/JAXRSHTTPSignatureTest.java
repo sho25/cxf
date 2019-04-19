@@ -477,7 +477,7 @@ name|httpsignature
 operator|.
 name|filters
 operator|.
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 import|;
 end_import
 
@@ -4192,11 +4192,11 @@ argument_list|(
 literal|"client.xml"
 argument_list|)
 decl_stmt|;
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 name|digestFilter
 init|=
 operator|new
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 argument_list|()
 decl_stmt|;
 name|String
@@ -4312,11 +4312,11 @@ argument_list|(
 literal|"client.xml"
 argument_list|)
 decl_stmt|;
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 name|digestFilter
 init|=
 operator|new
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 argument_list|(
 literal|"SHA-512"
 argument_list|)
@@ -4434,11 +4434,11 @@ argument_list|(
 literal|"client.xml"
 argument_list|)
 decl_stmt|;
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 name|digestFilter
 init|=
 operator|new
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 argument_list|()
 decl_stmt|;
 name|VerifyDigestInterceptor
@@ -4648,11 +4648,11 @@ argument_list|(
 name|messageSigner
 argument_list|)
 expr_stmt|;
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 name|digestFilter
 init|=
 operator|new
-name|CreateDigestInterceptor
+name|CreateSignatureInterceptor
 argument_list|()
 decl_stmt|;
 name|String
