@@ -448,6 +448,9 @@ argument_list|()
 argument_list|,
 name|uriInfo
 operator|.
+name|getRequestUri
+argument_list|()
+operator|.
 name|getPath
 argument_list|()
 argument_list|,
