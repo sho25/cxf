@@ -477,7 +477,7 @@ name|httpsignature
 operator|.
 name|filters
 operator|.
-name|CreateSignatureInterceptor
+name|CreateSignatureClientFilter
 import|;
 end_import
 
@@ -497,7 +497,7 @@ name|httpsignature
 operator|.
 name|filters
 operator|.
-name|CreateSignatureClientFilter
+name|CreateSignatureInterceptor
 import|;
 end_import
 
