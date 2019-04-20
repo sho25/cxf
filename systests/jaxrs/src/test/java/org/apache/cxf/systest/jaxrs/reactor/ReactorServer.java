@@ -342,6 +342,15 @@ name|JacksonJsonProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|sf2
+operator|.
+name|setProvider
+argument_list|(
+operator|new
+name|IllegalArgumentExceptionMapper
+argument_list|()
+argument_list|)
+expr_stmt|;
 operator|new
 name|ReactorCustomizer
 argument_list|()
