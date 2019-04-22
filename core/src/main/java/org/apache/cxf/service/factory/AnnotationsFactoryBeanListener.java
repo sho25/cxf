@@ -1736,10 +1736,9 @@ operator|.
 name|beanClass
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Object
 name|obj
-init|=
-literal|null
 decl_stmt|;
 name|String
 index|[]
@@ -1926,6 +1925,9 @@ block|{
 return|return
 name|cls
 operator|.
+name|getConstructor
+argument_list|()
+operator|.
 name|newInstance
 argument_list|()
 return|;
@@ -2028,6 +2030,9 @@ argument_list|(
 name|annotation
 operator|.
 name|value
+argument_list|()
+operator|.
+name|getConstructor
 argument_list|()
 operator|.
 name|newInstance

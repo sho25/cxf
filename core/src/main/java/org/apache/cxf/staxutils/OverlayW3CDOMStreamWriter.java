@@ -391,8 +391,6 @@ argument_list|()
 decl_stmt|;
 name|Node
 name|nd2
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(
@@ -600,8 +598,6 @@ argument_list|()
 decl_stmt|;
 name|Node
 name|nd2
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(
@@ -823,8 +819,6 @@ argument_list|()
 decl_stmt|;
 name|Node
 name|nd2
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

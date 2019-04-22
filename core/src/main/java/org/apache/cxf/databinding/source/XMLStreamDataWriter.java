@@ -415,11 +415,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|XMLStreamReader
-name|reader
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|obj
@@ -505,8 +500,9 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|XMLStreamReader
 name|reader
-operator|=
+init|=
 name|StaxUtils
 operator|.
 name|createXMLStreamReader
@@ -516,7 +512,7 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|StaxUtils
 operator|.
 name|copy

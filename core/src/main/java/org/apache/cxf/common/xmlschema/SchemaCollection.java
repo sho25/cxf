@@ -1778,10 +1778,9 @@ range|:
 name|list
 control|)
 block|{
+specifier|final
 name|QName
 name|ref
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

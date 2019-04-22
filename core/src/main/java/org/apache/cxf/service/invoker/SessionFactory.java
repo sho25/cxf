@@ -178,8 +178,6 @@ argument_list|()
 decl_stmt|;
 name|Object
 name|o
-init|=
-literal|null
 decl_stmt|;
 synchronized|synchronized
 init|(

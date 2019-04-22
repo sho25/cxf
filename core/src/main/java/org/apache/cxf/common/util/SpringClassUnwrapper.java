@@ -96,7 +96,7 @@ block|{
 name|SpringClassUnwrapper
 parameter_list|()
 throws|throws
-name|Exception
+name|ClassNotFoundException
 block|{
 name|Class
 operator|.

@@ -340,9 +340,9 @@ name|this
 operator|.
 name|wildCardId
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
-literal|"\\*"
+literal|"*"
 argument_list|,
 literal|""
 argument_list|)
@@ -357,9 +357,9 @@ name|mh
 operator|.
 name|wildCardId
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
-literal|"\\*"
+literal|"*"
 argument_list|,
 literal|""
 argument_list|)

@@ -722,7 +722,7 @@ name|lock
 operator|.
 name|wait
 argument_list|(
-literal|20
+literal|20L
 argument_list|)
 expr_stmt|;
 block|}

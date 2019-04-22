@@ -481,10 +481,9 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|bop
-operator|=
+return|return
 name|unwrappedOp
-expr_stmt|;
+return|;
 block|}
 return|return
 name|bop

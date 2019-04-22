@@ -964,8 +964,6 @@ argument_list|()
 decl_stmt|;
 name|Object
 name|e
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

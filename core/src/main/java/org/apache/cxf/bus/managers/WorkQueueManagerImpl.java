@@ -778,7 +778,7 @@ try|try
 block|{
 name|wait
 argument_list|(
-literal|100
+literal|100L
 argument_list|)
 expr_stmt|;
 block|}

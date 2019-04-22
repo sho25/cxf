@@ -904,8 +904,6 @@ return|return;
 block|}
 name|Object
 name|resource
-init|=
-literal|null
 decl_stmt|;
 comment|// first find a setter that matches this resource
 name|Method
@@ -1765,15 +1763,13 @@ argument_list|()
 operator|==
 literal|null
 operator|||
-literal|""
-operator|.
-name|equals
-argument_list|(
 name|res
 operator|.
 name|name
 argument_list|()
-argument_list|)
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|String
@@ -1819,7 +1815,7 @@ operator|.
 name|getCanonicalName
 argument_list|()
 operator|+
-literal|"/"
+literal|'/'
 operator|+
 name|name
 return|;

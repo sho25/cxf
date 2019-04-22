@@ -249,10 +249,9 @@ operator|.
 name|getSecurityManager
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ProxyClassLoader
 name|ret
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

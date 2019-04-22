@@ -1004,10 +1004,7 @@ name|i
 operator|--
 expr_stmt|;
 comment|//for 10
-name|value
-operator|=
-literal|13
-expr_stmt|;
+comment|//                value = 13;
 block|}
 else|else
 block|{
@@ -1020,13 +1017,7 @@ expr_stmt|;
 name|i
 operator|++
 expr_stmt|;
-name|value
-operator|=
-name|boundary
-index|[
-literal|0
-index|]
-expr_stmt|;
+comment|//                value = boundary[0];
 block|}
 block|}
 return|return

@@ -207,13 +207,6 @@ name|ParserContext
 name|parserContext
 parameter_list|)
 block|{
-name|element
-operator|=
-name|transformElement
-argument_list|(
-name|element
-argument_list|)
-expr_stmt|;
 return|return
 operator|(
 name|AbstractBeanDefinition
@@ -225,7 +218,10 @@ argument_list|()
 operator|.
 name|parseCustomElement
 argument_list|(
+name|transformElement
+argument_list|(
 name|element
+argument_list|)
 argument_list|)
 return|;
 block|}

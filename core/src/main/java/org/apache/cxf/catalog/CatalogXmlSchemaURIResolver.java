@@ -299,10 +299,9 @@ name|e
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|InputSource
 name|in
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

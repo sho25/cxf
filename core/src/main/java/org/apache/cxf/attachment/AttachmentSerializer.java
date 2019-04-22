@@ -1678,11 +1678,6 @@ name|total
 init|=
 literal|0
 decl_stmt|;
-name|int
-name|left
-init|=
-literal|0
-decl_stmt|;
 while|while
 condition|(
 operator|-
@@ -1707,12 +1702,13 @@ argument_list|)
 throw|;
 block|}
 comment|//make sure n is divisible by 3
+name|int
 name|left
-operator|=
+init|=
 name|n
 operator|%
 literal|3
-expr_stmt|;
+decl_stmt|;
 name|n
 operator|-=
 name|left

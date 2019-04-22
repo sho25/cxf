@@ -178,7 +178,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
+name|Exception
 name|e
 parameter_list|)
 block|{
@@ -201,7 +201,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
+name|Exception
 name|e
 parameter_list|)
 block|{
@@ -528,8 +528,6 @@ extends|extends
 name|Principal
 argument_list|>
 name|members
-init|=
-literal|null
 decl_stmt|;
 try|try
 block|{

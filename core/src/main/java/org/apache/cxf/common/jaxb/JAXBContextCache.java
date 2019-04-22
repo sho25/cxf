@@ -1259,10 +1259,6 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
-name|cachedContextAndSchemasInternal
-operator|=
-literal|null
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -2276,7 +2272,7 @@ name|loader
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"/"
+literal|'/'
 operator|+
 name|pkg
 operator|.
@@ -2321,7 +2317,7 @@ condition|)
 block|{
 name|pkg
 operator|+=
-literal|"."
+literal|'.'
 expr_stmt|;
 block|}
 name|String

@@ -603,10 +603,9 @@ name|toString
 argument_list|()
 return|;
 block|}
+specifier|final
 name|String
 name|f
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

@@ -651,9 +651,7 @@ name|InterruptedException
 name|e
 parameter_list|)
 block|{
-name|IOException
-name|ioe
-init|=
+throw|throw
 operator|new
 name|IOException
 argument_list|(
@@ -661,17 +659,9 @@ name|e
 operator|.
 name|getMessage
 argument_list|()
-argument_list|)
-decl_stmt|;
-name|ioe
-operator|.
-name|initCause
-argument_list|(
+argument_list|,
 name|e
 argument_list|)
-expr_stmt|;
-throw|throw
-name|ioe
 throw|;
 block|}
 comment|// Create a BufferedImage so we can write it out later

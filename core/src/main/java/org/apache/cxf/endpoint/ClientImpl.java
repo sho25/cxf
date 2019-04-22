@@ -2835,16 +2835,6 @@ argument_list|()
 decl_stmt|;
 comment|// Make sure INVOCATION CONTEXT, REQUEST_CONTEXT and RESPONSE_CONTEXT are present
 comment|// on message
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-name|reqContext
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|context
@@ -2860,8 +2850,14 @@ argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|reqContext
-operator|=
+init|=
 name|CastUtils
 operator|.
 name|cast
@@ -2881,7 +2877,7 @@ argument_list|(
 name|REQUEST_CONTEXT
 argument_list|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|resContext
 operator|=
 name|CastUtils
@@ -3134,14 +3130,6 @@ literal|null
 condition|)
 block|{
 comment|// handle the right response
-name|List
-argument_list|<
-name|Object
-argument_list|>
-name|resList
-init|=
-literal|null
-decl_stmt|;
 name|Message
 name|inMsg
 init|=
@@ -3171,8 +3159,12 @@ name|currentThread
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|List
+argument_list|<
+name|Object
+argument_list|>
 name|resList
-operator|=
+init|=
 name|CastUtils
 operator|.
 name|cast
@@ -3186,7 +3178,7 @@ operator|.
 name|class
 argument_list|)
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|Object
 index|[]
 name|result

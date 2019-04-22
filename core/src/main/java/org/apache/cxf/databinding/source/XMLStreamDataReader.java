@@ -1330,8 +1330,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|input
-operator|=
+return|return
 operator|new
 name|FragmentStreamReader
 argument_list|(
@@ -1428,7 +1427,7 @@ block|}
 block|}
 block|}
 block|}
-expr_stmt|;
+return|;
 block|}
 return|return
 name|input
@@ -1454,10 +1453,9 @@ argument_list|(
 name|input
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Element
 name|rootElement
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

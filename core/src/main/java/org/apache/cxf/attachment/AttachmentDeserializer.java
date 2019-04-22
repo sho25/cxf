@@ -2083,10 +2083,9 @@ argument_list|(
 literal|":"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
-init|=
-literal|null
 decl_stmt|;
 name|String
 name|value

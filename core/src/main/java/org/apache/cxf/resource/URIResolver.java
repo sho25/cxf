@@ -789,28 +789,21 @@ name|IOException
 throws|,
 name|MalformedURLException
 block|{
-try|try
-block|{
-name|URI
-name|relative
-decl_stmt|;
+comment|// It is possible that spaces have been encoded.  We should decode them first.
 name|String
-name|orig
+name|fileStr
 init|=
 name|uriStr
-decl_stmt|;
-comment|// It is possible that spaces have been encoded.  We should decode them first.
-name|uriStr
-operator|=
-name|uriStr
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
 literal|"%20"
 argument_list|,
 literal|" "
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+try|try
+block|{
 specifier|final
 name|File
 name|uriFileTemp
@@ -818,7 +811,7 @@ init|=
 operator|new
 name|File
 argument_list|(
-name|uriStr
+name|fileStr
 argument_list|)
 decl_stmt|;
 name|File
@@ -883,7 +876,7 @@ name|URLDecoder
 operator|.
 name|decode
 argument_list|(
-name|orig
+name|uriStr
 argument_list|,
 literal|"ASCII"
 argument_list|)
@@ -940,6 +933,10 @@ block|{
 comment|//ignore
 block|}
 block|}
+specifier|final
+name|URI
+name|relative
+decl_stmt|;
 if|if
 condition|(
 operator|!
@@ -962,7 +959,7 @@ name|URI
 argument_list|(
 name|uriStr
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
 literal|" "
 argument_list|,
@@ -1328,21 +1325,21 @@ else|else
 block|{
 name|tryClasspath
 argument_list|(
-name|uriStr
+name|fileStr
 operator|.
 name|startsWith
 argument_list|(
 literal|"file:"
 argument_list|)
 condition|?
-name|uriStr
+name|fileStr
 operator|.
 name|substring
 argument_list|(
 literal|5
 argument_list|)
 else|:
-name|uriStr
+name|fileStr
 argument_list|)
 expr_stmt|;
 block|}
@@ -1377,7 +1374,7 @@ name|tryClasspath
 argument_list|(
 name|baseUriStr
 operator|+
-name|uriStr
+name|fileStr
 argument_list|)
 expr_stmt|;
 block|}
@@ -1499,7 +1496,7 @@ name|RuntimeException
 argument_list|(
 literal|"File was deleted! "
 operator|+
-name|uriStr
+name|fileStr
 argument_list|,
 name|e
 argument_list|)
@@ -1526,7 +1523,7 @@ condition|)
 block|{
 name|tryClasspath
 argument_list|(
-name|uriStr
+name|fileStr
 argument_list|)
 expr_stmt|;
 block|}

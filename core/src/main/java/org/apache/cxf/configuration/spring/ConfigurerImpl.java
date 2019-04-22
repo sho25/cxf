@@ -522,9 +522,9 @@ name|this
 operator|.
 name|wildCardId
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
-literal|"\\*"
+literal|"*"
 argument_list|,
 literal|""
 argument_list|)
@@ -539,9 +539,9 @@ name|mh
 operator|.
 name|wildCardId
 operator|.
-name|replaceAll
+name|replace
 argument_list|(
-literal|"\\*"
+literal|"*"
 argument_list|,
 literal|""
 argument_list|)
@@ -898,7 +898,6 @@ argument_list|(
 name|beanInstance
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 literal|null
@@ -907,6 +906,7 @@ name|bn
 condition|)
 block|{
 return|return;
+block|}
 block|}
 if|if
 condition|(
@@ -944,12 +944,10 @@ block|{
 if|if
 condition|(
 operator|!
-literal|""
-operator|.
-name|equals
-argument_list|(
 name|beanName
-argument_list|)
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 return|return

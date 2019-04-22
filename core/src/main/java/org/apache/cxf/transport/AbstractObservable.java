@@ -318,10 +318,9 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
+specifier|final
 name|EndpointReferenceType
 name|ref
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

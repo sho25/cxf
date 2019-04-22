@@ -103,11 +103,6 @@ name|ClassLoader
 name|loader
 parameter_list|)
 block|{
-name|Bundle
-name|bundle
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|loader
@@ -126,6 +121,10 @@ name|getContextClassLoader
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
+name|Bundle
+name|bundle
+decl_stmt|;
 if|if
 condition|(
 name|loader
