@@ -249,8 +249,6 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -289,8 +287,6 @@ parameter_list|,
 name|String
 name|refreshTokenKey
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -334,8 +330,6 @@ parameter_list|,
 name|boolean
 name|storeJwtTokenKeyOnly
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|super
 argument_list|(

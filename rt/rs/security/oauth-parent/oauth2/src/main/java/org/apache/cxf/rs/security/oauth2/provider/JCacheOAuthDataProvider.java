@@ -392,8 +392,6 @@ decl_stmt|;
 specifier|public
 name|JCacheOAuthDataProvider
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -407,8 +405,6 @@ parameter_list|(
 name|boolean
 name|storeJwtTokenKeyOnly
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -434,8 +430,6 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -459,8 +453,6 @@ parameter_list|,
 name|boolean
 name|storeJwtTokenKeyOnly
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -496,8 +488,6 @@ parameter_list|,
 name|String
 name|refreshTokenCacheKey
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
@@ -536,8 +526,6 @@ parameter_list|,
 name|boolean
 name|storeJwtTokenKeyOnly
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 name|cacheManager
 operator|=
@@ -1659,8 +1647,6 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|)
-throws|throws
-name|Exception
 block|{
 if|if
 condition|(
