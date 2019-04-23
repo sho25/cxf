@@ -84,6 +84,15 @@ name|RSSEC_HTTP_SIGNATURE_IN_HEADERS
 init|=
 literal|"rs.security.http.signature.in.headers"
 decl_stmt|;
+comment|/**      * The signature digest algorithm to use. The default algorithm if not specified is "SHA-256".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_HTTP_SIGNATURE_DIGEST_ALGORITHM
+init|=
+literal|"rs.security.http.signature.digest.algorithm"
+decl_stmt|;
 specifier|private
 name|HTTPSignatureConstants
 parameter_list|()

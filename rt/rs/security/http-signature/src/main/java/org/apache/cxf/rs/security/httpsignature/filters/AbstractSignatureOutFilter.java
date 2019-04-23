@@ -834,10 +834,6 @@ name|MessageSigner
 argument_list|(
 name|signatureAlgorithm
 argument_list|,
-name|DefaultSignatureConstants
-operator|.
-name|DIGEST_ALGORITHM
-argument_list|,
 name|keyProvider
 argument_list|,
 name|keyId
