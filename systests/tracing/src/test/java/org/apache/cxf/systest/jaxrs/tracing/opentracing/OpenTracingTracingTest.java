@@ -738,8 +738,13 @@ name|OpenTracingClientProvider
 name|openTracingClientProvider
 decl_stmt|;
 specifier|private
+specifier|final
 name|Random
 name|random
+init|=
+operator|new
+name|Random
+argument_list|()
 decl_stmt|;
 annotation|@
 name|Ignore
@@ -1001,12 +1006,6 @@ name|OpenTracingClientProvider
 argument_list|(
 name|tracer
 argument_list|)
-expr_stmt|;
-name|random
-operator|=
-operator|new
-name|Random
-argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -1568,8 +1567,10 @@ literal|2
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertThat
+name|assertEquals
 argument_list|(
+literal|"Processing books"
+argument_list|,
 name|TestSender
 operator|.
 name|getAllSpans
@@ -1582,15 +1583,12 @@ argument_list|)
 operator|.
 name|getOperationName
 argument_list|()
-argument_list|,
-name|equalTo
-argument_list|(
-literal|"Processing books"
-argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertThat
+name|assertEquals
 argument_list|(
+literal|"GET /bookstore/books/async"
+argument_list|,
 name|TestSender
 operator|.
 name|getAllSpans
@@ -1603,11 +1601,6 @@ argument_list|)
 operator|.
 name|getOperationName
 argument_list|()
-argument_list|,
-name|equalTo
-argument_list|(
-literal|"GET /bookstore/books/async"
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertThat
@@ -2284,8 +2277,18 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|assertThat
+name|assertEquals
 argument_list|(
+name|TestSender
+operator|.
+name|getAllSpans
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+argument_list|,
+literal|12
+argument_list|,
 name|TestSender
 operator|.
 name|getAllSpans
@@ -2293,11 +2296,6 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-name|equalTo
-argument_list|(
-literal|12
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|IntStream
@@ -2466,8 +2464,18 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertThat
+name|assertEquals
 argument_list|(
+name|TestSender
+operator|.
+name|getAllSpans
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+argument_list|,
+literal|3
+argument_list|,
 name|TestSender
 operator|.
 name|getAllSpans
@@ -2475,11 +2483,6 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-name|equalTo
-argument_list|(
-literal|3
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertThat
@@ -3298,7 +3301,7 @@ name|future
 operator|.
 name|get
 argument_list|(
-literal|1
+literal|1L
 argument_list|,
 name|TimeUnit
 operator|.
