@@ -75,7 +75,7 @@ name|RSSEC_HTTP_SIGNATURE_OUT_HEADERS
 init|=
 literal|"rs.security.http.signature.out.headers"
 decl_stmt|;
-comment|/**      * This is a list of String values which correspond to the list of HTTP headers that must be signed      * in the inbound request. By default, a client request must sign "(request-target)".      */
+comment|/**      * This is a list of String values which correspond to the list of HTTP headers that must be signed      * in the inbound request. By default, a client request must sign "(request-target)". In addition,      * both a client request and service response must sign "digest", unless it is a GET request.      */
 specifier|public
 specifier|static
 specifier|final
@@ -84,7 +84,7 @@ name|RSSEC_HTTP_SIGNATURE_IN_HEADERS
 init|=
 literal|"rs.security.http.signature.in.headers"
 decl_stmt|;
-comment|/**      * The signature digest algorithm to use. The default algorithm if not specified is "SHA-256".      */
+comment|/**      * The digest algorithm to use when digesting the payload. The default algorithm if not specified is "SHA-256".      */
 specifier|public
 specifier|static
 specifier|final

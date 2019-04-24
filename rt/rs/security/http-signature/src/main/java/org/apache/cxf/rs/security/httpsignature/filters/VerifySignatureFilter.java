@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|ByteArrayInputStream
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|annotation
@@ -98,7 +108,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RS CXF container Filter which extracts signature data from the context and sends it to the message verifier  */
+comment|/**  * RS CXF container Filter which verifies the Digest header, and then extracts signature data from the context  * and sends it to the message verifier  */
 end_comment
 
 begin_class
@@ -119,14 +129,6 @@ name|AbstractSignatureInFilter
 implements|implements
 name|ContainerRequestFilter
 block|{
-specifier|public
-name|VerifySignatureFilter
-parameter_list|()
-block|{
-name|super
-argument_list|()
-expr_stmt|;
-block|}
 annotation|@
 name|Override
 specifier|public
@@ -137,6 +139,42 @@ name|ContainerRequestContext
 name|requestCtx
 parameter_list|)
 block|{
+name|byte
+index|[]
+name|messageBody
+init|=
+name|verifyDigest
+argument_list|(
+name|requestCtx
+operator|.
+name|getHeaders
+argument_list|()
+argument_list|,
+name|requestCtx
+operator|.
+name|getEntityStream
+argument_list|()
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|messageBody
+operator|!=
+literal|null
+condition|)
+block|{
+name|requestCtx
+operator|.
+name|setEntityStream
+argument_list|(
+operator|new
+name|ByteArrayInputStream
+argument_list|(
+name|messageBody
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 name|verifySignature
 argument_list|(
 name|requestCtx
