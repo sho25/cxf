@@ -815,9 +815,9 @@ name|signature
 operator|.
 name|replaceFirst
 argument_list|(
-literal|"signature=\"[\\w][\\w]"
+literal|"signature=\"[\\w]{10}"
 argument_list|,
-literal|"signature=\"AA"
+literal|"signature=\"AAAAAAAAAA"
 argument_list|)
 expr_stmt|;
 name|headers
