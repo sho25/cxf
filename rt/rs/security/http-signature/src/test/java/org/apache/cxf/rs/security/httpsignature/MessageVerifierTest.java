@@ -815,7 +815,7 @@ name|signature
 operator|.
 name|replaceFirst
 argument_list|(
-literal|"signature=\"[\\w]{10}"
+literal|"signature=\".{10}"
 argument_list|,
 literal|"signature=\"AAAAAAAAAA"
 argument_list|)
