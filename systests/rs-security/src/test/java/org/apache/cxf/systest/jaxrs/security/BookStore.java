@@ -241,6 +241,31 @@ name|id
 argument_list|)
 return|;
 block|}
+annotation|@
+name|POST
+annotation|@
+name|Path
+argument_list|(
+literal|"/booksnoresp"
+argument_list|)
+annotation|@
+name|Produces
+argument_list|(
+literal|"application/xml"
+argument_list|)
+annotation|@
+name|Consumes
+argument_list|(
+literal|"application/xml"
+argument_list|)
+specifier|public
+name|void
+name|addBookNoResponse
+parameter_list|(
+name|Book
+name|book
+parameter_list|)
+block|{     }
 block|}
 end_class
 
