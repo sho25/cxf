@@ -333,7 +333,7 @@ init|=
 literal|null
 decl_stmt|;
 comment|// If we have explicit headers to sign then use these.
-comment|// Otherwise sign all headers including "(request-target)" (if on an inbound service request)
+comment|// Otherwise sign all headers including "(request-target)" (if on an outbound service request)
 if|if
 condition|(
 name|headersToSign

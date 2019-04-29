@@ -132,6 +132,12 @@ name|method
 parameter_list|,
 name|String
 name|uri
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|requiredHeaders
 parameter_list|)
 function_decl|;
 block|}
