@@ -177,7 +177,6 @@ operator|new
 name|AtomicLong
 argument_list|()
 decl_stmt|;
-empty_stmt|;
 specifier|private
 specifier|final
 name|AtomicLong
@@ -187,7 +186,6 @@ operator|new
 name|AtomicLong
 argument_list|()
 decl_stmt|;
-empty_stmt|;
 specifier|private
 name|boolean
 name|enabled

@@ -98,7 +98,6 @@ name|THREAD_SAFE_CLIENT_PROP
 argument_list|)
 argument_list|)
 decl_stmt|;
-empty_stmt|;
 name|Integer
 name|THREAD_SAFE_CLIENT_STATE_CLEANUP_PERIOD
 init|=

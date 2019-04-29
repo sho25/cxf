@@ -1388,7 +1388,6 @@ argument_list|,
 literal|""
 argument_list|)
 decl_stmt|;
-empty_stmt|;
 annotation|@
 name|Test
 specifier|public

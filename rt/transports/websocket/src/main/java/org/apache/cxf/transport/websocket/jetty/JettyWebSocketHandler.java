@@ -139,7 +139,6 @@ specifier|private
 name|WebSocketServerFactory
 name|webSocketFactory
 decl_stmt|;
-empty_stmt|;
 name|JettyWebSocketHandler
 parameter_list|(
 name|JettyHTTPDestination

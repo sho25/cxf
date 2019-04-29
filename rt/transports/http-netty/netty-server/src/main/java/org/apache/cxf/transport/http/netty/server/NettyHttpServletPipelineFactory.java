@@ -440,7 +440,6 @@ operator|.
 name|INSTANCE
 argument_list|)
 decl_stmt|;
-empty_stmt|;
 specifier|private
 specifier|final
 name|HttpSessionWatchdog
