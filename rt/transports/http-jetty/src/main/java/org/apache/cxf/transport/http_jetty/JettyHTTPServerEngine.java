@@ -3703,6 +3703,14 @@ name|getCertAlias
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// TODO Once we switch to use SslContextFactory.Server instead, we can get rid of this line
+name|con
+operator|.
+name|setEndpointIdentificationAlgorithm
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 specifier|static
@@ -4858,6 +4866,13 @@ block|{
 if|if
 condition|(
 name|contexts
+operator|!=
+literal|null
+operator|&&
+name|contexts
+operator|.
+name|getHandlers
+argument_list|()
 operator|!=
 literal|null
 condition|)
