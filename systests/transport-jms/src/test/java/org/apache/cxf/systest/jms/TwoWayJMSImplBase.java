@@ -292,6 +292,32 @@ name|trim
 argument_list|()
 expr_stmt|;
 block|}
+name|addToReply
+argument_list|(
+literal|"Test_Prop"
+argument_list|,
+literal|"some return value "
+operator|+
+name|me
+argument_list|)
+expr_stmt|;
+return|return
+literal|"Hello "
+operator|+
+name|me
+return|;
+block|}
+specifier|private
+name|void
+name|addToReply
+parameter_list|(
+name|String
+name|key
+parameter_list|,
+name|String
+name|value
+parameter_list|)
+block|{
 name|MessageContext
 name|mc
 init|=
@@ -319,18 +345,11 @@ name|responseHeaders
 operator|.
 name|putProperty
 argument_list|(
-literal|"Test_Prop"
+name|key
 argument_list|,
-literal|"some return value "
-operator|+
-name|me
+name|value
 argument_list|)
 expr_stmt|;
-return|return
-literal|"Hello "
-operator|+
-name|me
-return|;
 block|}
 specifier|public
 name|String

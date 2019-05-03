@@ -15,7 +15,7 @@ name|systest
 operator|.
 name|jms
 operator|.
-name|security
+name|action
 package|;
 end_package
 
@@ -51,7 +51,7 @@ name|WebService
 argument_list|(
 name|serviceName
 operator|=
-literal|"HelloWorldService"
+literal|"HelloWorldServiceSoapAction"
 argument_list|,
 name|portName
 operator|=
@@ -59,7 +59,7 @@ literal|"HelloWorldPort"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.cxf.hello_world_jms.HelloWorldPortType"
+literal|"org.apache.cxf.hello_world_jms.HelloWorldSoapActionPortType"
 argument_list|,
 name|targetNamespace
 operator|=
@@ -71,10 +71,20 @@ literal|"testutils/jms_test.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|SecurityGreeterImplTwoWayJMS
+name|SoapActionGreeterImplTwoWayJMS
 extends|extends
 name|TwoWayJMSImplBase
-block|{  }
+block|{
+specifier|public
+name|String
+name|sayHi2
+parameter_list|()
+block|{
+return|return
+literal|"Bonjour2"
+return|;
+block|}
+block|}
 end_class
 
 end_unit
