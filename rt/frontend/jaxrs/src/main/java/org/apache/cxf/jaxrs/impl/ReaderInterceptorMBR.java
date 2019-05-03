@@ -240,6 +240,21 @@ name|Message
 name|m
 parameter_list|)
 block|{
+if|if
+condition|(
+literal|null
+operator|==
+name|m
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Message not allowed to be null"
+argument_list|)
+throw|;
+block|}
 name|this
 operator|.
 name|reader
