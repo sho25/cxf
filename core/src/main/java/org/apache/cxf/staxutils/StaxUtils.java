@@ -185,9 +185,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|concurrent
-operator|.
-name|ArrayBlockingQueue
+name|Queue
 import|;
 end_import
 
@@ -199,7 +197,7 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|BlockingQueue
+name|ArrayBlockingQueue
 import|;
 end_import
 
@@ -1003,7 +1001,7 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
-name|BlockingQueue
+name|Queue
 argument_list|<
 name|XMLInputFactory
 argument_list|>
@@ -1018,7 +1016,7 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
-name|BlockingQueue
+name|Queue
 argument_list|<
 name|XMLOutputFactory
 argument_list|>
@@ -4062,7 +4060,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually.       *      * @param reader      * @param writer      * @throws XMLStreamException      */
+comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually.      *      * @param reader      * @param writer      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void
