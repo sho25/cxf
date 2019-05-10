@@ -25,16 +25,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|time
-operator|.
-name|Instant
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Collections
