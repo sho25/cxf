@@ -224,8 +224,6 @@ decl_stmt|;
 specifier|protected
 name|JCacheCodeDataProvider
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 name|this
 argument_list|(
