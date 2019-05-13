@@ -45,7 +45,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
+name|Collections
 import|;
 end_import
 
@@ -307,19 +307,16 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|Collections
+operator|.
+name|addAll
+argument_list|(
 name|processedClaim
 operator|.
 name|getValues
 argument_list|()
-operator|.
-name|addAll
-argument_list|(
-name|Arrays
-operator|.
-name|asList
-argument_list|(
+argument_list|,
 name|values
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

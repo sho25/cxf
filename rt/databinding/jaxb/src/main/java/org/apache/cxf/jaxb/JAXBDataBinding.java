@@ -1657,11 +1657,6 @@ operator|=
 operator|new
 name|LinkedHashSet
 argument_list|<>
-argument_list|()
-expr_stmt|;
-name|contextClasses
-operator|.
-name|addAll
 argument_list|(
 name|Arrays
 operator|.

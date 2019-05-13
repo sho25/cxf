@@ -23,7 +23,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
+name|Collections
 import|;
 end_import
 
@@ -614,19 +614,16 @@ index|]
 operator|=
 name|a1
 expr_stmt|;
+name|Collections
+operator|.
+name|addAll
+argument_list|(
 name|r
 operator|.
 name|getAny
 argument_list|()
-operator|.
-name|addAll
-argument_list|(
-name|Arrays
-operator|.
-name|asList
-argument_list|(
+argument_list|,
 name|objects
-argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
