@@ -249,7 +249,7 @@ name|SAML_ROLE_ATTRIBUTENAME
 init|=
 literal|"security.saml-role-attributename"
 decl_stmt|;
-comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of      * the certificate used for signature validation, after trust verification of the certificate      * chain associated with the certificate.      */
+comment|/**      * A String of regular expressions (separated by the value specified for CERT_CONSTRAINTS_SEPARATOR)      * which will be applied to the subject DN of the certificate used for signature validation, after trust      * verification of the certificate chain associated with the certificate.      */
 specifier|public
 specifier|static
 specifier|final
@@ -257,6 +257,15 @@ name|String
 name|SUBJECT_CERT_CONSTRAINTS
 init|=
 literal|"security.subject.cert.constraints"
+decl_stmt|;
+comment|/**      * The separator that is used to parse certificate constraints configured in the SUBJECT_CERT_CONSTRAINTS      * tag. By default it is a comma - ",".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CERT_CONSTRAINTS_SEPARATOR
+init|=
+literal|"security.cert.constraints.separator"
 decl_stmt|;
 comment|//
 comment|// STS Client Configuration tags
