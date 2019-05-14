@@ -224,16 +224,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|request
 operator|.
 name|getQueryKeyBinding
 argument_list|()
-operator|)
 operator|!=
 literal|null
 operator|&&
-operator|(
 name|request
 operator|.
 name|getQueryKeyBinding
@@ -243,7 +240,6 @@ name|getKeyInfo
 argument_list|()
 operator|!=
 literal|null
-operator|)
 condition|)
 block|{
 name|List
