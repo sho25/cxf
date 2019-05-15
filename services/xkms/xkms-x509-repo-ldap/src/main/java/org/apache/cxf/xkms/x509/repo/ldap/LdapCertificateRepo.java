@@ -1260,6 +1260,13 @@ parameter_list|)
 block|{
 comment|// Not found
 block|}
+if|if
+condition|(
+name|cert
+operator|==
+literal|null
+condition|)
+block|{
 comment|// Try to find certificate by search for uid attribute
 try|try
 block|{
@@ -1278,6 +1285,7 @@ name|e
 parameter_list|)
 block|{
 comment|// Not found
+block|}
 block|}
 return|return
 name|cert
@@ -1324,6 +1332,13 @@ parameter_list|)
 block|{
 comment|// Not found
 block|}
+if|if
+condition|(
+name|cert
+operator|==
+literal|null
+condition|)
+block|{
 comment|// Try to find certificate by search for uid attribute
 try|try
 block|{
@@ -1357,6 +1372,7 @@ name|e
 parameter_list|)
 block|{
 comment|// Not found
+block|}
 block|}
 return|return
 name|cert
