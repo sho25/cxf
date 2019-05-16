@@ -533,7 +533,7 @@ if|if
 condition|(
 name|JavaUtils
 operator|.
-name|isJava11Compatible
+name|isJava9Compatible
 argument_list|()
 condition|)
 block|{
@@ -592,10 +592,6 @@ argument_list|)
 expr_stmt|;
 name|initClient
 argument_list|(
-name|AbstractTypeTestClient5
-operator|.
-name|class
-argument_list|,
 name|SERVICE_NAME
 argument_list|,
 name|PORT_NAME

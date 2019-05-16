@@ -466,12 +466,6 @@ specifier|static
 name|void
 name|initClient
 parameter_list|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|clz
-parameter_list|,
 name|QName
 name|serviceName
 parameter_list|,
@@ -487,7 +481,9 @@ block|{
 name|URL
 name|wsdlLocation
 init|=
-name|clz
+name|AbstractTypeTestClient
+operator|.
+name|class
 operator|.
 name|getResource
 argument_list|(
