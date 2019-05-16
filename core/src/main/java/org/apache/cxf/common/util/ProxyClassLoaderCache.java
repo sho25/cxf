@@ -371,10 +371,10 @@ name|FINE
 argument_list|,
 literal|"interface's classloader for new created ProxyClassLoader is "
 operator|+
-name|currentInterface
-operator|.
 name|getClassLoader
-argument_list|()
+argument_list|(
+name|currentInterface
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
