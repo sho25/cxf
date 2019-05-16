@@ -90,10 +90,6 @@ name|TransformServer
 extends|extends
 name|AbstractBusTestServerBase
 block|{
-specifier|public
-name|TransformServer
-parameter_list|()
-block|{      }
 specifier|protected
 name|void
 name|run
@@ -135,25 +131,6 @@ argument_list|(
 name|busLocal
 argument_list|)
 expr_stmt|;
-try|try
-block|{
-operator|new
-name|TransformServer
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 block|}
 end_class

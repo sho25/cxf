@@ -297,7 +297,7 @@ literal|"http://apache.org/type_test/doc"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/type_test/type_test_doclit_soap.wsdl"
+literal|"wsdl/type_test/type_test_doclit_soap.wsdl"
 argument_list|)
 specifier|public
 class|class

@@ -163,7 +163,7 @@ literal|"org.apache.intfault.Greeter"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/hello_world_fault.wsdl"
+literal|"wsdl/hello_world_fault.wsdl"
 argument_list|)
 specifier|public
 class|class

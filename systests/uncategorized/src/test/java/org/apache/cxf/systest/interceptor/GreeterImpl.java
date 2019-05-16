@@ -67,7 +67,7 @@ literal|"http://cxf.apache.org/greeter_control"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/greeter_control.wsdl"
+literal|"wsdl/greeter_control.wsdl"
 argument_list|)
 specifier|public
 class|class

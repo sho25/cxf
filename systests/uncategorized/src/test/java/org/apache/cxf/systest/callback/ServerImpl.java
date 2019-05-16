@@ -233,7 +233,7 @@ literal|"org.apache.callback.ServerPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/basic_callback_test.wsdl"
+literal|"wsdl/basic_callback_test.wsdl"
 argument_list|)
 specifier|public
 class|class

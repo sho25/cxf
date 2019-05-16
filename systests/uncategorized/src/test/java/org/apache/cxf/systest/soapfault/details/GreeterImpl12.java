@@ -125,7 +125,7 @@ literal|"org.apache.hello_world_soap12_http.Greeter"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/hello_world_soap12.wsdl"
+literal|"wsdl/hello_world_soap12.wsdl"
 argument_list|)
 specifier|public
 class|class

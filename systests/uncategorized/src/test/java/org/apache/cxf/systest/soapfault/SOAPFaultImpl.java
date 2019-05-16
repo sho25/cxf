@@ -84,11 +84,7 @@ name|HandlerChain
 argument_list|(
 name|file
 operator|=
-literal|"./handlers.xml"
-argument_list|,
-name|name
-operator|=
-literal|"TestHandlerChain"
+literal|"handlers.xml"
 argument_list|)
 specifier|public
 class|class

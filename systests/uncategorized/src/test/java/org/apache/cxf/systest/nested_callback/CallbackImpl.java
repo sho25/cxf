@@ -55,7 +55,7 @@ literal|"http://apache.org/nested_callback"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/nested_callback.wsdl"
+literal|"wsdl/nested_callback.wsdl"
 argument_list|)
 specifier|public
 class|class

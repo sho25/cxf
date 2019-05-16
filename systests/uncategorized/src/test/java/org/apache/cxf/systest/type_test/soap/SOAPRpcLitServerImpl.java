@@ -217,7 +217,7 @@ literal|"http://apache.org/type_test/rpc"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/type_test/type_test_rpclit_soap.wsdl"
+literal|"wsdl/type_test/type_test_rpclit_soap.wsdl"
 argument_list|)
 class|class
 name|SOAPTypeTestImpl

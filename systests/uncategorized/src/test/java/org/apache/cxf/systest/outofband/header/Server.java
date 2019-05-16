@@ -561,7 +561,7 @@ literal|"http://apache.org/hello_world_doc_lit_bare"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/doc_lit_bare.wsdl"
+literal|"wsdl/doc_lit_bare.wsdl"
 argument_list|)
 annotation|@
 name|EndpointProperty

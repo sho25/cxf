@@ -271,7 +271,7 @@ literal|"http://apache.org/type_test/xml"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/type_test/type_test_xml.wsdl"
+literal|"wsdl/type_test/type_test_xml.wsdl"
 argument_list|)
 annotation|@
 name|javax

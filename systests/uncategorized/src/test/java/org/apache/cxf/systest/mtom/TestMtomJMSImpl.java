@@ -101,7 +101,7 @@ literal|"org.apache.cxf.mime.TestMtom"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/mtom_xop.wsdl"
+literal|"wsdl/mtom_xop.wsdl"
 argument_list|)
 specifier|public
 class|class

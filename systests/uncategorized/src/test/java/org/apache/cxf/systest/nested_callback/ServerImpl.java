@@ -253,7 +253,7 @@ literal|"org.apache.nested_callback.ServerPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/nested_callback.wsdl"
+literal|"wsdl/nested_callback.wsdl"
 argument_list|)
 specifier|public
 class|class

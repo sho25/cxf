@@ -237,7 +237,7 @@ expr_stmt|;
 name|String
 name|wsdlLocation
 init|=
-literal|"testutils/factory_pattern.wsdl"
+literal|"wsdl/factory_pattern.wsdl"
 decl_stmt|;
 name|String
 name|bindingId
