@@ -173,27 +173,29 @@ argument_list|>
 name|proxyInterface
 parameter_list|)
 block|{
+if|if
+condition|(
 name|LOG
 operator|.
-name|log
+name|isLoggable
 argument_list|(
 name|Level
 operator|.
 name|FINE
-argument_list|,
-literal|"can't find ProxyClassLoader from ClassValue Cache, "
-operator|+
-literal|"will create a new one"
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"can't find ProxyClassLoader from ClassValue Cache, will create a new one"
 argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|log
+name|fine
 argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|,
 literal|"interface for new created ProxyClassLoader is "
 operator|+
 name|proxyInterface
@@ -204,12 +206,8 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|log
+name|fine
 argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|,
 literal|"interface's classloader for new created ProxyClassLoader is "
 operator|+
 name|ClassLoaderUtils
@@ -220,6 +218,7 @@ name|proxyInterface
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|createProxyClassLoader
 argument_list|(
@@ -345,14 +344,22 @@ name|currentInterface
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
 name|LOG
 operator|.
-name|log
+name|isLoggable
 argument_list|(
 name|Level
 operator|.
 name|FINE
-argument_list|,
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
 literal|"interface for new created ProxyClassLoader is "
 operator|+
 name|currentInterface
@@ -363,12 +370,8 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|log
+name|fine
 argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|,
 literal|"interface's classloader for new created ProxyClassLoader is "
 operator|+
 name|getClassLoader
@@ -377,6 +380,7 @@ name|currentInterface
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|ret
@@ -432,31 +436,32 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
 name|LOG
 operator|.
-name|log
+name|isLoggable
 argument_list|(
 name|Level
 operator|.
 name|FINE
-argument_list|,
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
 literal|"the interface we are checking is "
 operator|+
-name|currentInterface
-operator|.
-name|getName
-argument_list|()
+name|ifName
 argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|log
+name|fine
 argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|,
-literal|"the interface' classloader we are checking is "
+literal|"the interface's classloader we are checking is "
 operator|+
 name|getClassLoader
 argument_list|(
@@ -464,6 +469,7 @@ name|currentInterface
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 operator|!
@@ -484,24 +490,30 @@ argument_list|)
 condition|)
 block|{
 comment|// cache and retrieve customer interface
+if|if
+condition|(
 name|LOG
 operator|.
-name|log
+name|isLoggable
 argument_list|(
 name|Level
 operator|.
 name|FINE
-argument_list|,
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
 literal|"the customer interface is "
 operator|+
-name|currentInterface
-operator|.
-name|getName
-argument_list|()
+name|ifName
 operator|+
 literal|". Will try to fetch it from Cache"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|backend
 operator|.
@@ -512,17 +524,23 @@ argument_list|)
 return|;
 block|}
 block|}
+if|if
+condition|(
 name|LOG
 operator|.
-name|log
+name|isLoggable
 argument_list|(
 name|Level
 operator|.
 name|FINE
-argument_list|,
-literal|"Non of interfaces are customer interface, "
-operator|+
-literal|"retrive the last interface as key:"
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Non of interfaces are customer interface, retrive the last interface as key:"
 operator|+
 name|proxyInterfaces
 index|[
@@ -537,6 +555,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|//the last interface is the variable type
 return|return
 name|backend
