@@ -1278,6 +1278,7 @@ name|ClientState
 name|state
 decl_stmt|;
 specifier|private
+specifier|final
 name|AtomicBoolean
 name|closed
 init|=
@@ -2169,10 +2170,6 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-name|closed
-operator|=
-literal|null
-expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -5687,7 +5684,7 @@ index|]
 argument_list|)
 return|;
 block|}
-specifier|protected
+specifier|public
 name|ClientConfiguration
 name|getConfiguration
 parameter_list|()
@@ -6214,7 +6211,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|checkClosed
 parameter_list|()

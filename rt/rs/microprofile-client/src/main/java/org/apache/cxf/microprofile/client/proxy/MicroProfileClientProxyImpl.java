@@ -2800,6 +2800,9 @@ parameter_list|)
 throws|throws
 name|Throwable
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|objectInstance
 operator|=
 name|o

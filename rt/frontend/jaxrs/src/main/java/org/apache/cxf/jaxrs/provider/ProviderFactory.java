@@ -5235,6 +5235,7 @@ name|messageWriters
 argument_list|)
 return|;
 block|}
+specifier|public
 name|List
 argument_list|<
 name|ProviderInfo
