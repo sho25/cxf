@@ -444,6 +444,14 @@ parameter_list|)
 block|{
 comment|//ignore
 block|}
+catch|catch
+parameter_list|(
+name|IllegalArgumentException
+name|e
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 try|try
 block|{
 name|URL
@@ -529,6 +537,8 @@ parameter_list|(
 name|MalformedURLException
 decl||
 name|URISyntaxException
+decl||
+name|IllegalArgumentException
 name|e1
 parameter_list|)
 block|{
