@@ -489,6 +489,16 @@ name|io
 operator|.
 name|opentracing
 operator|.
+name|Span
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|opentracing
+operator|.
 name|Tracer
 import|;
 end_import
@@ -2422,9 +2432,8 @@ argument_list|,
 name|openTracingClientProvider
 argument_list|)
 decl_stmt|;
-try|try
-init|(
-name|Scope
+specifier|final
+name|Span
 name|span
 init|=
 name|tracer
@@ -2434,9 +2443,22 @@ argument_list|(
 literal|"test span"
 argument_list|)
 operator|.
-name|startActive
+name|start
+argument_list|()
+decl_stmt|;
+try|try
+init|(
+name|Scope
+name|scope
+init|=
+name|tracer
+operator|.
+name|scopeManager
+argument_list|()
+operator|.
+name|activate
 argument_list|(
-literal|true
+name|span
 argument_list|)
 init|)
 block|{
@@ -2620,6 +2642,14 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+finally|finally
+block|{
+name|span
+operator|.
+name|finish
+argument_list|()
+expr_stmt|;
+block|}
 comment|// Await till flush happens, usually every second
 name|await
 argument_list|()
@@ -2726,10 +2756,9 @@ argument_list|,
 name|openTracingClientProvider
 argument_list|)
 decl_stmt|;
-try|try
-init|(
-name|Scope
-name|scope
+specifier|final
+name|Span
+name|span
 init|=
 name|tracer
 operator|.
@@ -2738,9 +2767,22 @@ argument_list|(
 literal|"test span"
 argument_list|)
 operator|.
-name|startActive
+name|start
+argument_list|()
+decl_stmt|;
+try|try
+init|(
+name|Scope
+name|scope
+init|=
+name|tracer
+operator|.
+name|scopeManager
+argument_list|()
+operator|.
+name|activate
 argument_list|(
-literal|true
+name|span
 argument_list|)
 init|)
 block|{
@@ -2801,10 +2843,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-name|scope
-operator|.
 name|span
-argument_list|()
 operator|.
 name|context
 argument_list|()
@@ -2960,6 +2999,14 @@ name|empty
 argument_list|()
 argument_list|)
 argument_list|)
+expr_stmt|;
+block|}
+finally|finally
+block|{
+name|span
+operator|.
+name|finish
+argument_list|()
 expr_stmt|;
 block|}
 comment|// Await till flush happens, usually every second
@@ -3344,8 +3391,14 @@ name|random
 operator|.
 name|nextLong
 argument_list|()
+comment|/* traceId hi */
 argument_list|,
-comment|/* traceId */
+name|random
+operator|.
+name|nextLong
+argument_list|()
+comment|/* traceId lo */
+argument_list|,
 name|random
 operator|.
 name|nextLong

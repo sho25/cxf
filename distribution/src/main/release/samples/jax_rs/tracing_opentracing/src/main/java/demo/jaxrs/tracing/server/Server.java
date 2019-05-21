@@ -315,7 +315,7 @@ argument_list|()
 decl_stmt|;
 name|GlobalTracer
 operator|.
-name|register
+name|registerIfAbsent
 argument_list|(
 name|tracer
 argument_list|)
