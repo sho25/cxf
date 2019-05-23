@@ -546,6 +546,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+try|try
+block|{
 name|ret
 operator|=
 name|rr
@@ -557,6 +559,53 @@ argument_list|,
 name|type
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RuntimeException
+name|ex
+parameter_list|)
+block|{
+comment|//ResourceResolver.resolve method expected to
+comment|//return an instance of the resource or null if the
+comment|//resource cannot be resolved. So we just catch
+comment|//Unchecked exceptions during resolving resource and log it.
+comment|//So other ResourceResolver get chance to be used
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"run into exception when using"
+operator|+
+name|rr
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 block|}
 if|if
 condition|(
