@@ -1190,6 +1190,15 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|bus
+operator|.
+name|setProperty
+argument_list|(
+literal|"openapi.service.description.available"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
