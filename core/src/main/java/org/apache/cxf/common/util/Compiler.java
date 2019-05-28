@@ -545,7 +545,7 @@ argument_list|)
 return|;
 block|}
 return|return
-literal|""
+name|javaClasspath
 return|;
 block|}
 specifier|protected
