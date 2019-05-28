@@ -527,7 +527,6 @@ name|tok
 argument_list|)
 expr_stmt|;
 block|}
-block|}
 return|return
 name|String
 operator|.
@@ -539,6 +538,10 @@ name|pathSeparator
 argument_list|,
 name|correctedEntries
 argument_list|)
+return|;
+block|}
+return|return
+literal|""
 return|;
 block|}
 specifier|protected
