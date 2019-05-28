@@ -507,6 +507,7 @@ argument_list|(
 literal|".*\\s+.*"
 argument_list|)
 condition|)
+block|{
 name|correctedEntries
 operator|.
 name|add
@@ -518,7 +519,9 @@ operator|+
 literal|"\""
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|correctedEntries
 operator|.
 name|add
@@ -526,6 +529,7 @@ argument_list|(
 name|tok
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|String
