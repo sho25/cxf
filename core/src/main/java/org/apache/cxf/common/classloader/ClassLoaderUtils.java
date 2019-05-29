@@ -425,11 +425,16 @@ argument_list|>
 name|callingClass
 parameter_list|)
 block|{
-name|URL
-name|url
+name|ClassLoader
+name|contextClassLoader
 init|=
 name|getContextClassLoader
 argument_list|()
+decl_stmt|;
+name|URL
+name|url
+init|=
+name|contextClassLoader
 operator|.
 name|getResource
 argument_list|(
@@ -453,8 +458,7 @@ block|{
 comment|//certain classloaders need it without the leading /
 name|url
 operator|=
-name|getContextClassLoader
-argument_list|()
+name|contextClassLoader
 operator|.
 name|getResource
 argument_list|(
