@@ -2233,7 +2233,9 @@ name|compiler
 argument_list|)
 expr_stmt|;
 name|applySchemaCompilerOptions
-argument_list|()
+argument_list|(
+name|compiler
+argument_list|)
 expr_stmt|;
 name|S2JJAXBModel
 name|intermediateModel
@@ -2858,7 +2860,10 @@ block|}
 specifier|protected
 name|void
 name|applySchemaCompilerOptions
-parameter_list|()
+parameter_list|(
+name|SchemaCompiler
+name|compiler
+parameter_list|)
 block|{
 if|if
 condition|(
