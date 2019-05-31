@@ -2232,6 +2232,9 @@ argument_list|,
 name|compiler
 argument_list|)
 expr_stmt|;
+name|applySchemaCompilerOptions
+argument_list|()
+expr_stmt|;
 name|S2JJAXBModel
 name|intermediateModel
 init|=
@@ -2840,9 +2843,7 @@ name|SchemaCompiler
 name|createSchemaCompiler
 parameter_list|()
 block|{
-name|SchemaCompiler
-name|compiler
-init|=
+return|return
 name|JAXBUtils
 operator|.
 name|createSchemaCompilerWithDefaultAllocator
@@ -2852,7 +2853,13 @@ name|HashSet
 argument_list|<>
 argument_list|()
 argument_list|)
-decl_stmt|;
+return|;
+block|}
+specifier|protected
+name|void
+name|applySchemaCompilerOptions
+parameter_list|()
+block|{
 if|if
 condition|(
 name|schemaCompilerOptions
@@ -2877,9 +2884,6 @@ name|schemaCompilerOptions
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-name|compiler
-return|;
 block|}
 specifier|private
 name|void
