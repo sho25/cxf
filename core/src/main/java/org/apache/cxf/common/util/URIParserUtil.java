@@ -871,7 +871,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * This is a custom implementation for doing what URI.relativize(URI uri) should be      * doing but is not actually doing when URI roots do not fully match.      * See http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6226081      *      * @param base              The base URI      * @param toBeRelativized   The URI to be realivized      * @return                  The string value of the URI you'd expect to get as result      *                          of calling baseURI.relativize(toBeRelativizedURI).      *                          null is returned if the parameters are null or are not      *                          both absolute or not absolute.      * @throws URISyntaxException      */
+comment|/**      * This is a custom implementation for doing what URI.relativize(URI uri) should be      * doing but is not actually doing when URI roots do not fully match.      * See http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6226081      *      * @param baseURI              The base URI      * @param toBeRelativizedURI   The URI to be relativized      * @return                  The string value of the URI you'd expect to get as result      *                          of calling baseURI.relativize(toBeRelativizedURI).      *                          null is returned if the parameters are null or are not      *                          both absolute or not absolute.      * @throws URISyntaxException      */
 specifier|public
 specifier|static
 name|String

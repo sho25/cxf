@@ -124,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * {@link InputStream} implementation that reads a character stream from a {@link Reader}  * and transforms it to a byte stream using a specified charset encoding. The stream  * is transformed using a {@link CharsetEncoder} object, guaranteeing that all charset  * encodings supported by the JRE are handled correctly. In particular for charsets such as  * UTF-16, the implementation ensures that one and only one byte order marker  * is produced.  *<p>  * Since in general it is not possible to predict the number of characters to be read from the  * {@link Reader} to satisfy a read request on the {@link ReaderInputStream}, all reads from  * the {@link Reader} are buffered. There is therefore no well defined correlation  * between the current position of the {@link Reader} and that of the {@link ReaderInputStream}.  * This also implies that in general there is no need to wrap the underlying {@link Reader}  * in a {@link java.io.BufferedReader}.  *<p>  * {@link ReaderInputStream} implements the inverse transformation of {@link java.io.InputStreamReader};  * in the following example, reading from<tt>in2</tt> would return the same byte  * sequence as reading from<tt>in</tt> (provided that the initial byte sequence is legal  * with respect to the charset encoding):  *<pre>  * InputStream in = ...  * Charset cs = ...  * InputStreamReader reader = new InputStreamReader(in, cs);  * ReaderInputStream in2 = new ReaderInputStream(reader, cs);</pre>  * {@link ReaderInputStream} implements the same transformation as {@link java.io.OutputStreamWriter},  * except that the control flow is reversed: both classes transform a character stream  * into a byte stream, but {@link java.io.OutputStreamWriter} pushes data to the underlying stream,  * while {@link ReaderInputStream} pulls it from the underlying stream.  *<p>  * Note that while there are use cases where there is no alternative to using  * this class, very often the need to use this class is an indication of a flaw  * in the design of the code. This class is typically used in situations where an existing  * API only accepts an {@link InputStream}, but where the most natural way to produce the data  * is as a character stream, i.e. by providing a {@link Reader} instance. An example of a situation  * where this problem may appear is when implementing the {@link javax.activation.DataSource}  * interface from the Java Activation Framework.  *<p>  * Given the fact that the {@link Reader} class doesn't provide any way to predict whether the next  * read operation will block or not, it is not possible to provide a meaningful  * implementation of the {@link InputStream#available()} method. A call to this method  * will always return 0. Also, this class doesn't support {@link InputStream#mark(int)}.  *<p>  * Instances of {@link ReaderInputStream} are not thread safe.  *   * @see org.apache.commons.io.output.WriterOutputStream  *   * @since 2.0  */
+comment|/**  * {@link InputStream} implementation that reads a character stream from a {@link Reader}  * and transforms it to a byte stream using a specified charset encoding. The stream  * is transformed using a {@link CharsetEncoder} object, guaranteeing that all charset  * encodings supported by the JRE are handled correctly. In particular for charsets such as  * UTF-16, the implementation ensures that one and only one byte order marker  * is produced.  *<p>  * Since in general it is not possible to predict the number of characters to be read from the  * {@link Reader} to satisfy a read request on the {@link ReaderInputStream}, all reads from  * the {@link Reader} are buffered. There is therefore no well defined correlation  * between the current position of the {@link Reader} and that of the {@link ReaderInputStream}.  * This also implies that in general there is no need to wrap the underlying {@link Reader}  * in a {@link java.io.BufferedReader}.  *<p>  * {@link ReaderInputStream} implements the inverse transformation of {@link java.io.InputStreamReader};  * in the following example, reading from<tt>in2</tt> would return the same byte  * sequence as reading from<tt>in</tt> (provided that the initial byte sequence is legal  * with respect to the charset encoding):  *<pre>  * InputStream in = ...  * Charset cs = ...  * InputStreamReader reader = new InputStreamReader(in, cs);  * ReaderInputStream in2 = new ReaderInputStream(reader, cs);</pre>  * {@link ReaderInputStream} implements the same transformation as {@link java.io.OutputStreamWriter},  * except that the control flow is reversed: both classes transform a character stream  * into a byte stream, but {@link java.io.OutputStreamWriter} pushes data to the underlying stream,  * while {@link ReaderInputStream} pulls it from the underlying stream.  *<p>  * Note that while there are use cases where there is no alternative to using  * this class, very often the need to use this class is an indication of a flaw  * in the design of the code. This class is typically used in situations where an existing  * API only accepts an {@link InputStream}, but where the most natural way to produce the data  * is as a character stream, i.e. by providing a {@link Reader} instance. An example of a situation  * where this problem may appear is when implementing the {@link javax.activation.DataSource}  * interface from the Java Activation Framework.  *<p>  * Given the fact that the {@link Reader} class doesn't provide any way to predict whether the next  * read operation will block or not, it is not possible to provide a meaningful  * implementation of the {@link InputStream#available()} method. A call to this method  * will always return 0. Also, this class doesn't support {@link InputStream#mark(int)}.  *<p>  * Instances of {@link ReaderInputStream} are not thread safe.  *  * @since 2.0  */
 end_comment
 
 begin_class
@@ -172,7 +172,7 @@ specifier|private
 name|boolean
 name|endOfInput
 decl_stmt|;
-comment|/**      * Construct a new {@link ReaderInputStream}.      *       * @param reader the target {@link Reader}      * @param encoder the charset encoder      * @since 2.1      */
+comment|/**      * Construct a new {@link ReaderInputStream}.      *      * @param reader the target {@link Reader}      * @param encoder the charset encoder      * @since 2.1      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -193,7 +193,7 @@ name|DEFAULT_BUFFER_SIZE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream}.      *       * @param reader the target {@link Reader}      * @param encoder the charset encoder      * @param bufferSize the size of the input buffer in number of characters      * @since 2.1      */
+comment|/**      * Construct a new {@link ReaderInputStream}.      *      * @param reader the target {@link Reader}      * @param encoder the charset encoder      * @param bufferSize the size of the input buffer in number of characters      * @since 2.1      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -266,7 +266,7 @@ name|flip
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream}.      *       * @param reader the target {@link Reader}      * @param charset the charset encoding      * @param bufferSize the size of the input buffer in number of characters      */
+comment|/**      * Construct a new {@link ReaderInputStream}.      *      * @param reader the target {@link Reader}      * @param charset the charset encoding      * @param bufferSize the size of the input buffer in number of characters      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -307,7 +307,7 @@ name|bufferSize
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream} with a default input buffer size of      * 1024 characters.      *       * @param reader the target {@link Reader}      * @param charset the charset encoding      */
+comment|/**      * Construct a new {@link ReaderInputStream} with a default input buffer size of      * 1024 characters.      *      * @param reader the target {@link Reader}      * @param charset the charset encoding      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -328,7 +328,7 @@ name|DEFAULT_BUFFER_SIZE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream}.      *       * @param reader the target {@link Reader}      * @param charsetName the name of the charset encoding      * @param bufferSize the size of the input buffer in number of characters      */
+comment|/**      * Construct a new {@link ReaderInputStream}.      *      * @param reader the target {@link Reader}      * @param charsetName the name of the charset encoding      * @param bufferSize the size of the input buffer in number of characters      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -357,7 +357,7 @@ name|bufferSize
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream} with a default input buffer size of      * 1024 characters.      *       * @param reader the target {@link Reader}      * @param charsetName the name of the charset encoding      */
+comment|/**      * Construct a new {@link ReaderInputStream} with a default input buffer size of      * 1024 characters.      *      * @param reader the target {@link Reader}      * @param charsetName the name of the charset encoding      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -378,7 +378,7 @@ name|DEFAULT_BUFFER_SIZE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct a new {@link ReaderInputStream} that uses the default character encoding      * with a default input buffer size of 1024 characters.      *       * @param reader the target {@link Reader}      */
+comment|/**      * Construct a new {@link ReaderInputStream} that uses the default character encoding      * with a default input buffer size of 1024 characters.      *      * @param reader the target {@link Reader}      */
 specifier|public
 name|ReaderInputStream
 parameter_list|(
@@ -397,7 +397,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Fills the internal char buffer from the reader.      *       * @throws IOException      *             If an I/O error occurs      */
+comment|/**      * Fills the internal char buffer from the reader.      *      * @throws IOException      *             If an I/O error occurs      */
 specifier|private
 name|void
 name|fillBuffer
@@ -533,7 +533,7 @@ name|flip
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Read the specified number of bytes into an array.      *       * @param b the byte array to read into      * @param off the offset to start reading bytes into      * @param len the number of bytes to read      * @return the number of bytes read or<code>-1</code>      *         if the end of the stream has been reached      * @throws IOException if an I/O error occurs      */
+comment|/**      * Read the specified number of bytes into an array.      *      * @param b the byte array to read into      * @param off the offset to start reading bytes into      * @param len the number of bytes to read      * @return the number of bytes read or<code>-1</code>      *         if the end of the stream has been reached      * @throws IOException if an I/O error occurs      */
 annotation|@
 name|Override
 specifier|public
@@ -713,7 +713,7 @@ else|:
 name|read
 return|;
 block|}
-comment|/**      * Read the specified number of bytes into an array.      *       * @param b the byte array to read into      * @return the number of bytes read or<code>-1</code>      *         if the end of the stream has been reached      * @throws IOException if an I/O error occurs      */
+comment|/**      * Read the specified number of bytes into an array.      *      * @param b the byte array to read into      * @return the number of bytes read or<code>-1</code>      *         if the end of the stream has been reached      * @throws IOException if an I/O error occurs      */
 annotation|@
 name|Override
 specifier|public

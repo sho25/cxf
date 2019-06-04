@@ -1064,7 +1064,7 @@ return|return
 name|emptyDocument
 return|;
 block|}
-comment|/**      * Returns a static Document that should always be "empty".  It's useful as a factory for      * for creating Elements and other nodes that will be traversed later and don't need to      * be attached into a document      * @return      */
+comment|/**      * Returns a static Document that should always be "empty".  It's useful as a factory for      * for creating Elements and other nodes that will be traversed later and don't need to      * be attached into a document      * @return an empty document      */
 specifier|public
 specifier|static
 name|Document
@@ -3884,7 +3884,7 @@ return|return
 name|node
 return|;
 block|}
-comment|/**      * Try to get the DOM DocumentFragment from the SAAJ DocumentFragment with JAVA9 afterwards      * @param DocumentFragment The original documentFragment we need check      * @return The DOM DocumentFragment      */
+comment|/**      * Try to get the DOM DocumentFragment from the SAAJ DocumentFragment with JAVA9 afterwards      * @param fragment The original documentFragment we need to check      * @return The DOM DocumentFragment      */
 specifier|public
 specifier|static
 name|DocumentFragment
