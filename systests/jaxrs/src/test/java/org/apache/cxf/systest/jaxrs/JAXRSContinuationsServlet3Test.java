@@ -676,6 +676,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 parameter_list|<
 name|T
 parameter_list|>
@@ -719,6 +720,7 @@ argument_list|)
 return|;
 block|}
 specifier|private
+specifier|static
 name|Future
 argument_list|<
 name|Response
@@ -745,6 +747,7 @@ argument_list|()
 return|;
 block|}
 specifier|private
+specifier|static
 name|AsyncInvoker
 name|createAsyncInvoker
 parameter_list|(
