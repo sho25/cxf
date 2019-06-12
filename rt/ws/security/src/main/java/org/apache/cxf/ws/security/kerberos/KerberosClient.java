@@ -584,6 +584,11 @@ name|bst
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|bst
+operator|.
+name|addWSUNamespace
+argument_list|()
+expr_stmt|;
 name|SecurityToken
 name|token
 init|=
