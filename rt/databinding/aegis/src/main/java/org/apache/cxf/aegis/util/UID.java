@@ -21,9 +21,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|security
 operator|.
-name|Random
+name|SecureRandom
 import|;
 end_import
 
@@ -40,17 +40,12 @@ name|counter
 decl_stmt|;
 specifier|private
 specifier|static
-name|Random
+name|SecureRandom
 name|random
 init|=
 operator|new
-name|Random
-argument_list|(
-name|System
-operator|.
-name|currentTimeMillis
+name|SecureRandom
 argument_list|()
-argument_list|)
 decl_stmt|;
 specifier|private
 name|UID

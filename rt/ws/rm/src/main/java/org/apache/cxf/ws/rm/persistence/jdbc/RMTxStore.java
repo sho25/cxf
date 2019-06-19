@@ -5213,6 +5213,9 @@ condition|)
 block|{
 return|return;
 block|}
+comment|// schemaName has been verified at setSchemaName(String)
+try|try
+init|(
 name|Statement
 name|stmt
 init|=
@@ -5220,9 +5223,7 @@ name|connection
 operator|.
 name|createStatement
 argument_list|()
-decl_stmt|;
-comment|// schemaName has been verified at setSchemaName(String)
-try|try
+init|)
 block|{
 name|stmt
 operator|.
@@ -5247,21 +5248,14 @@ parameter_list|)
 block|{
 comment|// assume it is already created or no authorization is provided (create one manually)
 block|}
-finally|finally
-block|{
+name|Statement
 name|stmt
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
-name|stmt
-operator|=
+init|=
 name|connection
 operator|.
 name|createStatement
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|SQLException
 name|ex0
 init|=

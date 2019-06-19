@@ -4395,7 +4395,12 @@ name|incept
 operator|instanceof
 name|PhaseInterceptor
 operator|&&
-operator|(
+name|Phase
+operator|.
+name|MARSHAL
+operator|.
+name|equals
+argument_list|(
 operator|(
 operator|(
 name|PhaseInterceptor
@@ -4408,11 +4413,7 @@ operator|)
 operator|.
 name|getPhase
 argument_list|()
-operator|==
-name|Phase
-operator|.
-name|MARSHAL
-operator|)
+argument_list|)
 condition|)
 block|{
 comment|// remove any interceptors from the marshal phase
