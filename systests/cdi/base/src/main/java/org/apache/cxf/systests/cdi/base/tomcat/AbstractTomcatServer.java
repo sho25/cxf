@@ -43,6 +43,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|file
+operator|.
+name|Files
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -296,7 +308,7 @@ specifier|final
 name|File
 name|base
 init|=
-name|File
+name|Files
 operator|.
 name|createTempFile
 argument_list|(
@@ -304,6 +316,9 @@ literal|"tmp-"
 argument_list|,
 literal|""
 argument_list|)
+operator|.
+name|toFile
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
