@@ -412,7 +412,7 @@ specifier|final
 name|String
 name|DEFAULT_KEYSTORE_TYPE
 init|=
-literal|"PKCS12"
+literal|"JKS"
 decl_stmt|;
 specifier|private
 specifier|static
