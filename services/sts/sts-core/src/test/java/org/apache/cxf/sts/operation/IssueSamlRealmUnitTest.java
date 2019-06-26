@@ -1080,7 +1080,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"A-Issuer"
+literal|"Issuer=\"A-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1090,7 +1090,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"B-Issuer"
+literal|"Issuer=\"B-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1100,7 +1100,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"STS"
+literal|"Issuer=\"STS\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1523,7 +1523,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"A-Issuer"
+literal|"Issuer=\"A-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1533,7 +1533,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"B-Issuer"
+literal|"Issuer=\"B-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1543,7 +1543,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"STS"
+literal|"Issuer=\"STS\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1966,7 +1966,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"A-Issuer"
+literal|"Issuer=\"A-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1976,7 +1976,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"B-Issuer"
+literal|"Issuer=\"B-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1986,7 +1986,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"STS"
+literal|"Issuer=\"STS\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2485,7 +2485,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"A-Issuer"
+literal|"Issuer=\"A-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2495,7 +2495,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"B-Issuer"
+literal|"Issuer=\"B-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2505,7 +2505,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"STS"
+literal|"Issuer=\"STS\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2985,7 +2985,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"A-Issuer"
+literal|"Issuer=\"A-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2995,7 +2995,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"B-Issuer"
+literal|"Issuer=\"B-Issuer\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3005,7 +3005,7 @@ name|tokenString
 operator|.
 name|contains
 argument_list|(
-literal|"STS"
+literal|"Issuer=\"STS\""
 argument_list|)
 argument_list|)
 expr_stmt|;
