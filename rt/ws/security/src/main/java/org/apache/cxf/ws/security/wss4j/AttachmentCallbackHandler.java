@@ -153,11 +153,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|binding
+name|message
 operator|.
-name|soap
-operator|.
-name|SoapMessage
+name|Attachment
 import|;
 end_import
 
@@ -171,7 +169,7 @@ name|cxf
 operator|.
 name|message
 operator|.
-name|Attachment
+name|Message
 import|;
 end_import
 
@@ -236,21 +234,21 @@ name|CallbackHandler
 block|{
 specifier|private
 specifier|final
-name|SoapMessage
-name|soapMessage
+name|Message
+name|message
 decl_stmt|;
 specifier|public
 name|AttachmentCallbackHandler
 parameter_list|(
-name|SoapMessage
-name|soapMessage
+name|Message
+name|message
 parameter_list|)
 block|{
 name|this
 operator|.
-name|soapMessage
+name|message
 operator|=
-name|soapMessage
+name|message
 expr_stmt|;
 block|}
 annotation|@
@@ -374,7 +372,7 @@ name|callback
 decl_stmt|;
 if|if
 condition|(
-name|soapMessage
+name|message
 operator|.
 name|getAttachments
 argument_list|()
@@ -382,7 +380,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|soapMessage
+name|message
 operator|.
 name|setAttachments
 argument_list|(
@@ -410,7 +408,7 @@ name|Attachment
 argument_list|>
 name|attachments
 init|=
-name|soapMessage
+name|message
 operator|.
 name|getAttachments
 argument_list|()
@@ -571,7 +569,7 @@ name|Attachment
 argument_list|>
 name|attachments
 init|=
-name|soapMessage
+name|message
 operator|.
 name|getAttachments
 argument_list|()
@@ -718,7 +716,7 @@ name|Attachment
 argument_list|>
 name|attachments
 init|=
-name|soapMessage
+name|message
 operator|.
 name|getAttachments
 argument_list|()
