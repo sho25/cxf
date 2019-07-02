@@ -704,7 +704,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No crypto instance of properties file configured for signature"
 argument_list|)
@@ -735,7 +735,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No user configured for signature"
 argument_list|)
@@ -766,7 +766,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No CallbackHandler configured to supply a password for signature"
 argument_list|)

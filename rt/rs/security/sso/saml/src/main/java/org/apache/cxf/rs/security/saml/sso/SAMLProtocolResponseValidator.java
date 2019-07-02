@@ -830,7 +830,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Either the SAML Response Status or StatusCode is null"
 argument_list|)
@@ -871,7 +871,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Status code of "
 operator|+
@@ -946,7 +946,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Response IssueInstant not met"
 argument_list|)
@@ -980,7 +980,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Version of "
 operator|+
@@ -1200,7 +1200,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Either the SAML Response Status or StatusCode is null"
 argument_list|)
@@ -1249,7 +1249,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Status code of "
 operator|+
@@ -1324,7 +1324,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Response IssueInstant not met"
 argument_list|)
@@ -1358,7 +1358,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"SAML Version of "
 operator|+
@@ -1805,7 +1805,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No KeyInfo supplied in the SAMLResponse signature"
 argument_list|)
@@ -2139,7 +2139,7 @@ else|else
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Can't get X509Certificate or PublicKey to verify signature"
 argument_list|)
@@ -2443,7 +2443,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No KeyInfo supplied in the SAMLResponse assertion signature"
 argument_list|)
@@ -2701,7 +2701,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"X509Certificate cannot be retrieved from EncryptedKey element"
 argument_list|)
@@ -2762,7 +2762,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"CipherValue element is not available"
 argument_list|)
@@ -2790,7 +2790,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A CallbackHandler must be configured to decrypt encrypted Assertions"
 argument_list|)
@@ -3454,7 +3454,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"EncryptionMethod element is not available"
 argument_list|)

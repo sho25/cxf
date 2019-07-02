@@ -250,7 +250,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A required subject confirmation method was not present"
 argument_list|)
@@ -280,7 +280,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A standard subject confirmation method was not present"
 argument_list|)
@@ -348,7 +348,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"There is no Subject KeyInfo to match the holder-of-key subject conf method"
 argument_list|)
@@ -376,7 +376,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A holder-of-key assertion must be signed"
 argument_list|)
@@ -466,7 +466,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A Bearer Assertion was not signed"
 argument_list|)
@@ -530,7 +530,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A required subject confirmation method was not present"
 argument_list|)
@@ -562,7 +562,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"A standard subject confirmation method was not present"
 argument_list|)

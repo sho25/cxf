@@ -702,7 +702,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Cannot load signature properties using: "
 operator|+
@@ -733,7 +733,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Error in loading the signature Crypto object: "
 operator|+
@@ -788,7 +788,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Cannot load CallbackHandler using: "
 operator|+

@@ -326,7 +326,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The Response must contain at least one Assertion"
 argument_list|)
@@ -379,7 +379,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The Response must contain a destination that matches the assertion consumer URL"
 argument_list|)
@@ -411,7 +411,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The Response must be signed!"
 argument_list|)
@@ -485,7 +485,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Assertion Issuer must not be null"
 argument_list|)
@@ -532,7 +532,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The enclosed assertions in the SAML Response must be signed"
 argument_list|)
@@ -717,7 +717,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The Response did not contain any Authentication Statement that matched "
 operator|+
@@ -903,7 +903,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Issuer value: "
 operator|+
@@ -957,7 +957,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Issuer format is not null and does not equal: "
 operator|+
@@ -1142,7 +1142,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Subject Confirmation Data of a Bearer Subject Confirmation is null"
 argument_list|)
@@ -1187,7 +1187,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Recipient "
 operator|+
@@ -1233,7 +1233,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Subject Conf Data does not contain NotOnOrAfter or it has expired"
 argument_list|)
@@ -1330,7 +1330,7 @@ else|else
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Replay attack with token id: "
 operator|+
@@ -1380,7 +1380,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Subject Conf Data address "
 operator|+
@@ -1423,7 +1423,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The Subject Conf Data must not contain a NotBefore timestamp"
 argument_list|)
@@ -1463,7 +1463,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"The InResponseTo String does match the original request id "
 operator|+
@@ -1501,7 +1501,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"No InResponseTo String is allowed for the unsolicted case"
 argument_list|)
@@ -1550,7 +1550,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Conditions are null"
 argument_list|)
@@ -1593,7 +1593,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Assertion does not contain unique subject provider identifier "
 operator|+
