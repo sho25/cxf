@@ -33,9 +33,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|security
 operator|.
-name|Arrays
+name|MessageDigest
 import|;
 end_import
 
@@ -982,9 +982,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|Arrays
+name|MessageDigest
 operator|.
-name|equals
+name|isEqual
 argument_list|(
 name|secretToMatch
 argument_list|,
@@ -1175,9 +1175,9 @@ name|keyObject
 operator|instanceof
 name|SecretKey
 operator|&&
-name|Arrays
+name|MessageDigest
 operator|.
-name|equals
+name|isEqual
 argument_list|(
 name|secretToMatch
 argument_list|,
