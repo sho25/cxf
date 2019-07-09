@@ -418,7 +418,7 @@ specifier|protected
 name|boolean
 name|perfTestOnly
 decl_stmt|;
-specifier|public
+specifier|protected
 name|void
 name|setPerformanceTestOnly
 parameter_list|()

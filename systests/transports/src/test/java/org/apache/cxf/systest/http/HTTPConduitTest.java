@@ -698,7 +698,7 @@ block|}
 block|}
 comment|//methods that a subclass can override to inject a Proxy into the flow
 comment|//and assert the proxy was appropriately called
-specifier|public
+specifier|protected
 name|void
 name|configureProxy
 parameter_list|(
@@ -706,12 +706,12 @@ name|Client
 name|c
 parameter_list|)
 block|{     }
-specifier|public
+specifier|protected
 name|void
 name|resetProxyCount
 parameter_list|()
 block|{     }
-specifier|public
+specifier|protected
 name|void
 name|assertProxyRequestCount
 parameter_list|(

@@ -847,7 +847,7 @@ specifier|private
 name|DestinationFactoryManager
 name|destinationFactoryManager
 decl_stmt|;
-specifier|public
+specifier|protected
 name|void
 name|setUpBasic
 parameter_list|()

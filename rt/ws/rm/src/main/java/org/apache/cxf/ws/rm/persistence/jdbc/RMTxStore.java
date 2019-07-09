@@ -4149,6 +4149,8 @@ name|stmt
 init|=
 literal|null
 decl_stmt|;
+try|try
+init|(
 name|CachedOutputStream
 name|cos
 init|=
@@ -4156,7 +4158,8 @@ name|msg
 operator|.
 name|getContent
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|InputStream
 name|msgin
 init|=
@@ -4308,12 +4311,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-name|cos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-comment|// needed to clean-up tmp file folder
+block|}
 block|}
 block|}
 comment|/**      * this method is only useful when keepConnection is set to true      */

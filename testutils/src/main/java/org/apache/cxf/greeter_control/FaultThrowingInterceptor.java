@@ -190,7 +190,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-specifier|synchronized
 name|void
 name|handleMessage
 parameter_list|(
@@ -215,6 +214,15 @@ block|}
 name|String
 name|msg
 init|=
+literal|null
+decl_stmt|;
+synchronized|synchronized
+init|(
+name|MESSAGE_FORMAT
+init|)
+block|{
+name|msg
+operator|=
 name|MESSAGE_FORMAT
 operator|.
 name|format
@@ -227,7 +235,8 @@ name|getPhase
 argument_list|()
 block|}
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 name|LOG
 operator|.
 name|fine

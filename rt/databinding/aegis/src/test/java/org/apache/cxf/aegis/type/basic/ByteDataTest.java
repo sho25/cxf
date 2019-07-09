@@ -93,6 +93,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Before
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -104,6 +114,8 @@ name|ByteDataTest
 extends|extends
 name|AbstractAegisTest
 block|{
+annotation|@
+name|Before
 specifier|public
 name|void
 name|setUp

@@ -970,6 +970,7 @@ name|verifyRecovery
 argument_list|()
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|startClient
 parameter_list|()
@@ -1101,6 +1102,7 @@ name|in
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|populateStore
 parameter_list|()
@@ -1333,6 +1335,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|verifyStorePopulation
 parameter_list|()
@@ -1501,6 +1504,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|stopClient
 parameter_list|()
@@ -1514,6 +1518,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|populateStoreAfterRestart
 parameter_list|()
@@ -1713,6 +1718,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|protected
 name|void
 name|recover
 parameter_list|()
@@ -1735,6 +1741,7 @@ literal|"Recovered messages should have been resent by now."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|verifyRecovery
 parameter_list|()

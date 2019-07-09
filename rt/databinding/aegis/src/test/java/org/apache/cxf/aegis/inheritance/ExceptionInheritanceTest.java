@@ -239,6 +239,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Before
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -287,6 +297,8 @@ name|Object
 argument_list|>
 name|props
 decl_stmt|;
+annotation|@
+name|Before
 specifier|public
 name|void
 name|setUp

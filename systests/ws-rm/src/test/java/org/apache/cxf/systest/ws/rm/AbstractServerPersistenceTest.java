@@ -1640,6 +1640,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|protected
 name|void
 name|verifyRetransmissionQueue
 parameter_list|()

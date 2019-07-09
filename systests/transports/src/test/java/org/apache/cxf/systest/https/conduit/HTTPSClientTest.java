@@ -363,7 +363,7 @@ name|resetPortMap
 argument_list|()
 expr_stmt|;
 block|}
-specifier|public
+specifier|protected
 name|void
 name|startServers
 parameter_list|()
@@ -387,7 +387,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
+specifier|protected
 name|void
 name|stopServers
 parameter_list|()

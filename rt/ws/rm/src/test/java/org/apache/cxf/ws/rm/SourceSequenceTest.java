@@ -371,6 +371,7 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
+specifier|protected
 name|void
 name|setUpSource
 parameter_list|()
