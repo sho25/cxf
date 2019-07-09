@@ -179,6 +179,11 @@ return|;
 block|}
 try|try
 block|{
+synchronized|synchronized
+init|(
+name|format
+init|)
+block|{
 return|return
 name|format
 operator|.
@@ -190,6 +195,7 @@ name|trim
 argument_list|()
 argument_list|)
 return|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -229,6 +235,11 @@ name|Context
 name|context
 parameter_list|)
 block|{
+synchronized|synchronized
+init|(
+name|format
+init|)
+block|{
 name|writer
 operator|.
 name|writeValue
@@ -241,6 +252,7 @@ name|object
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

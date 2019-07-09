@@ -212,6 +212,11 @@ return|;
 block|}
 try|try
 block|{
+synchronized|synchronized
+init|(
+name|format
+init|)
+block|{
 return|return
 operator|(
 operator|(
@@ -231,6 +236,7 @@ operator|.
 name|getTime
 argument_list|()
 return|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -288,6 +294,11 @@ operator|)
 name|object
 argument_list|)
 expr_stmt|;
+synchronized|synchronized
+init|(
+name|format
+init|)
+block|{
 name|writer
 operator|.
 name|writeValue
@@ -300,6 +311,7 @@ name|c
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class
