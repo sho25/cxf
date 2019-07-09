@@ -90,7 +90,7 @@ specifier|private
 name|String
 name|serviceCertUIDTemplate
 init|=
-literal|"cn=%s"
+literal|"uid=%s"
 decl_stmt|;
 specifier|private
 name|String
