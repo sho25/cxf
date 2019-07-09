@@ -1646,6 +1646,14 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|assertTrue
+argument_list|(
+name|customHeaderInterceptor
+operator|.
+name|isEmpty
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|WebClient
 operator|.
 name|getConfig
