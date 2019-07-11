@@ -145,25 +145,7 @@ name|codec
 operator|.
 name|http
 operator|.
-name|HttpHeaders
-import|;
-end_import
-
-begin_import
-import|import
-name|io
-operator|.
-name|netty
-operator|.
-name|handler
-operator|.
-name|codec
-operator|.
-name|http
-operator|.
-name|HttpHeaders
-operator|.
-name|Names
+name|HttpHeaderNames
 import|;
 end_import
 
@@ -391,13 +373,14 @@ name|sessionRequestedByCookie
 condition|)
 block|{
 comment|// setup the Cookie for session
-name|HttpHeaders
-operator|.
-name|addHeader
-argument_list|(
 name|response
-argument_list|,
-name|Names
+operator|.
+name|headers
+argument_list|()
+operator|.
+name|set
+argument_list|(
+name|HttpHeaderNames
 operator|.
 name|SET_COOKIE
 argument_list|,

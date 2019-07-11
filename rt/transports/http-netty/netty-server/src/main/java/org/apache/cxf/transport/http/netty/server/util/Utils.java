@@ -229,9 +229,7 @@ name|codec
 operator|.
 name|http
 operator|.
-name|HttpHeaders
-operator|.
-name|Names
+name|HttpHeaderNames
 operator|.
 name|COOKIE
 import|;

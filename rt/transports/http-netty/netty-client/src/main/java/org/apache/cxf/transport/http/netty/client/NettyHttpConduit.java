@@ -2665,7 +2665,7 @@ return|return
 name|getHttpResponse
 argument_list|()
 operator|.
-name|getStatus
+name|status
 argument_list|()
 operator|.
 name|code
@@ -2685,7 +2685,7 @@ return|return
 name|getHttpResponse
 argument_list|()
 operator|.
-name|getStatus
+name|status
 argument_list|()
 operator|.
 name|reasonPhrase

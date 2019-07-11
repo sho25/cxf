@@ -349,7 +349,7 @@ name|codec
 operator|.
 name|http
 operator|.
-name|HttpHeaders
+name|HttpHeaderNames
 import|;
 end_import
 
@@ -365,9 +365,7 @@ name|codec
 operator|.
 name|http
 operator|.
-name|HttpHeaders
-operator|.
-name|Names
+name|HttpHeaderValues
 import|;
 end_import
 
@@ -416,6 +414,22 @@ operator|.
 name|http
 operator|.
 name|HttpResponseStatus
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|netty
+operator|.
+name|handler
+operator|.
+name|codec
+operator|.
+name|http
+operator|.
+name|HttpUtil
 import|;
 end_import
 
@@ -717,7 +731,7 @@ name|msg
 decl_stmt|;
 if|if
 condition|(
-name|HttpHeaders
+name|HttpUtil
 operator|.
 name|is100ContinueExpected
 argument_list|(
@@ -753,7 +767,7 @@ name|getNettyHttpHandler
 argument_list|(
 name|request
 operator|.
-name|getUri
+name|uri
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -792,7 +806,7 @@ name|LOG
 argument_list|,
 name|request
 operator|.
-name|getUri
+name|uri
 argument_list|()
 argument_list|)
 argument_list|)
@@ -911,7 +925,7 @@ expr_stmt|;
 name|boolean
 name|keepAlive
 init|=
-name|HttpHeaders
+name|HttpUtil
 operator|.
 name|isKeepAlive
 argument_list|(
@@ -931,7 +945,7 @@ argument_list|()
 operator|.
 name|set
 argument_list|(
-name|Names
+name|HttpHeaderNames
 operator|.
 name|CONTENT_LENGTH
 argument_list|,
@@ -954,13 +968,11 @@ argument_list|()
 operator|.
 name|set
 argument_list|(
-name|Names
+name|HttpHeaderNames
 operator|.
 name|CONNECTION
 argument_list|,
-name|HttpHeaders
-operator|.
-name|Values
+name|HttpHeaderValues
 operator|.
 name|KEEP_ALIVE
 argument_list|)
@@ -1149,7 +1161,7 @@ argument_list|()
 operator|.
 name|set
 argument_list|(
-name|Names
+name|HttpHeaderNames
 operator|.
 name|CONTENT_TYPE
 argument_list|,
