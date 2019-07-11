@@ -247,20 +247,6 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|Fault
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
 name|Interceptor
 import|;
 end_import
@@ -1456,8 +1442,6 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-throws|throws
-name|Fault
 block|{         }
 specifier|public
 name|void
@@ -1466,8 +1450,6 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-throws|throws
-name|Fault
 block|{         }
 block|}
 specifier|static

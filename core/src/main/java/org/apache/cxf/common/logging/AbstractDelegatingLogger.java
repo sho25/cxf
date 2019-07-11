@@ -1545,8 +1545,6 @@ parameter_list|(
 name|Level
 name|newLevel
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 throw|throw
 operator|new
@@ -1609,8 +1607,6 @@ parameter_list|(
 name|Handler
 name|handler
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 if|if
 condition|(
@@ -1641,8 +1637,6 @@ parameter_list|(
 name|Handler
 name|handler
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 if|if
 condition|(

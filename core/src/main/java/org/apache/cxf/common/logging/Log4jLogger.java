@@ -527,8 +527,6 @@ parameter_list|(
 name|Level
 name|newLevel
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 name|log
 operator|.
@@ -551,8 +549,6 @@ parameter_list|(
 name|Handler
 name|handler
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 name|log
 operator|.
@@ -574,8 +570,6 @@ parameter_list|(
 name|Handler
 name|handler
 parameter_list|)
-throws|throws
-name|SecurityException
 block|{
 name|log
 operator|.

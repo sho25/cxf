@@ -274,8 +274,6 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-throws|throws
-name|Fault
 block|{
 try|try
 block|{

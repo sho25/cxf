@@ -357,10 +357,8 @@ name|Object
 name|getProperty
 parameter_list|(
 name|String
-name|arg0
+name|name
 parameter_list|)
-throws|throws
-name|IllegalArgumentException
 block|{
 comment|//nothing
 return|return

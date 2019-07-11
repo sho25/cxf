@@ -97,18 +97,6 @@ name|org
 operator|.
 name|springframework
 operator|.
-name|beans
-operator|.
-name|BeansException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
 name|context
 operator|.
 name|ApplicationContext
@@ -242,8 +230,6 @@ parameter_list|(
 name|ApplicationContext
 name|applicationContext
 parameter_list|)
-throws|throws
-name|BeansException
 block|{
 name|ctx
 operator|=

@@ -334,8 +334,6 @@ parameter_list|,
 name|Resource
 name|resource
 parameter_list|)
-throws|throws
-name|BeanDefinitionStoreException
 block|{
 comment|// sadly, the Spring class we are extending has the critical function
 comment|// getValidationModeForResource
@@ -451,8 +449,6 @@ specifier|final
 name|EncodedResource
 name|encodedResource
 parameter_list|)
-throws|throws
-name|BeanDefinitionStoreException
 block|{
 if|if
 condition|(

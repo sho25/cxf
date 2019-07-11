@@ -227,18 +227,6 @@ name|springframework
 operator|.
 name|beans
 operator|.
-name|BeansException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|beans
-operator|.
 name|PropertyValue
 import|;
 end_import
@@ -1235,8 +1223,6 @@ parameter_list|(
 name|ApplicationContext
 name|applicationContext
 parameter_list|)
-throws|throws
-name|BeansException
 block|{
 if|if
 condition|(

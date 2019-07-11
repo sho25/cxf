@@ -684,26 +684,21 @@ operator|!=
 name|className
 condition|)
 block|{
+specifier|final
 name|String
-name|orig
+name|name
 init|=
-name|n
-decl_stmt|;
-if|if
-condition|(
 name|n
 operator|.
 name|charAt
 argument_list|(
 literal|0
 argument_list|)
-operator|==
+operator|!=
 literal|'*'
-condition|)
-block|{
-comment|//old wildcard
+condition|?
 name|n
-operator|=
+else|:
 literal|"."
 operator|+
 name|n
@@ -714,8 +709,8 @@ literal|"\\."
 argument_list|,
 literal|"\\."
 argument_list|)
-expr_stmt|;
-block|}
+decl_stmt|;
+comment|//old wildcard
 try|try
 block|{
 name|Matcher
@@ -725,7 +720,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-name|n
+name|name
 argument_list|)
 operator|.
 name|matcher
@@ -776,7 +771,7 @@ init|=
 operator|new
 name|MatcherHolder
 argument_list|(
-name|orig
+name|n
 argument_list|,
 name|matcher
 argument_list|)

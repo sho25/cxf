@@ -236,7 +236,7 @@ name|void
 name|testLoad
 parameter_list|()
 throws|throws
-name|ExtensionException
+name|Exception
 block|{
 name|Extension
 name|e

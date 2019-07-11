@@ -343,20 +343,6 @@ name|beans
 operator|.
 name|factory
 operator|.
-name|BeanDefinitionStoreException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|beans
-operator|.
-name|factory
-operator|.
 name|config
 operator|.
 name|BeanDefinition
@@ -1211,8 +1197,6 @@ parameter_list|,
 name|ParserContext
 name|ctx
 parameter_list|)
-throws|throws
-name|BeanDefinitionStoreException
 block|{
 comment|// REVISIT: use getAttributeNS instead
 name|String

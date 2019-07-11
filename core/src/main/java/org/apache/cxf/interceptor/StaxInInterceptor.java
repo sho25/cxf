@@ -963,6 +963,7 @@ name|INSTANCE
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @throws Fault      */
 specifier|public
 specifier|static
 name|XMLInputFactory
@@ -971,8 +972,6 @@ parameter_list|(
 name|Message
 name|m
 parameter_list|)
-throws|throws
-name|Fault
 block|{
 name|Object
 name|o

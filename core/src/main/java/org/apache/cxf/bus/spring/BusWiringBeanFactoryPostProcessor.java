@@ -123,18 +123,6 @@ name|springframework
 operator|.
 name|beans
 operator|.
-name|BeansException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|beans
-operator|.
 name|factory
 operator|.
 name|config
@@ -554,8 +542,6 @@ parameter_list|(
 name|ConfigurableListableBeanFactory
 name|factory
 parameter_list|)
-throws|throws
-name|BeansException
 block|{
 name|Object
 name|inject

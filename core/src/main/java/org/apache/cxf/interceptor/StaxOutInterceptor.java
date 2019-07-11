@@ -900,6 +900,7 @@ return|return
 name|encoding
 return|;
 block|}
+comment|/**      * @throws Fault      */
 specifier|public
 specifier|static
 name|XMLOutputFactory
@@ -908,8 +909,6 @@ parameter_list|(
 name|Message
 name|m
 parameter_list|)
-throws|throws
-name|Fault
 block|{
 name|Object
 name|o

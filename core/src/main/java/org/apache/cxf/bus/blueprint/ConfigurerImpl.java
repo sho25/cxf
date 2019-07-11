@@ -504,26 +504,21 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|String
-name|orig
+name|cid
 init|=
-name|s
-decl_stmt|;
-if|if
-condition|(
 name|s
 operator|.
 name|charAt
 argument_list|(
 literal|0
 argument_list|)
-operator|==
+operator|!=
 literal|'*'
-condition|)
-block|{
-comment|//old wildcard
+condition|?
 name|s
-operator|=
+else|:
 literal|"."
 operator|+
 name|s
@@ -534,8 +529,8 @@ literal|"\\."
 argument_list|,
 literal|"\\."
 argument_list|)
-expr_stmt|;
-block|}
+decl_stmt|;
+comment|//old wildcard
 name|Matcher
 name|matcher
 init|=
@@ -543,7 +538,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-name|s
+name|cid
 argument_list|)
 operator|.
 name|matcher
@@ -600,7 +595,7 @@ init|=
 operator|new
 name|MatcherHolder
 argument_list|(
-name|orig
+name|s
 argument_list|,
 name|matcher
 argument_list|)

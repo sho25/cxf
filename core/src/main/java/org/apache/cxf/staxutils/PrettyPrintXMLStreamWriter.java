@@ -299,10 +299,6 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|java
-operator|.
-name|lang
-operator|.
 name|Object
 name|getProperty
 parameter_list|(
@@ -313,8 +309,6 @@ operator|.
 name|String
 name|name
 parameter_list|)
-throws|throws
-name|IllegalArgumentException
 block|{
 return|return
 name|baseWriter
