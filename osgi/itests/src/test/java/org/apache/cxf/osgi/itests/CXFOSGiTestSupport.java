@@ -369,7 +369,7 @@ name|getArtifactVersion
 argument_list|(
 literal|"org.apache.karaf"
 argument_list|,
-literal|"apache-karaf-minimal"
+literal|"apache-karaf"
 argument_list|)
 return|;
 block|}
@@ -400,7 +400,7 @@ argument_list|)
 operator|.
 name|artifactId
 argument_list|(
-literal|"apache-karaf-minimal"
+literal|"apache-karaf"
 argument_list|)
 operator|.
 name|version
