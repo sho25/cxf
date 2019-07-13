@@ -606,7 +606,7 @@ name|reporter
 operator|.
 name|printError
 argument_list|(
-literal|"Usage: -dumpJavaDocFile theFileToDumpJavaDocForLatarUse..."
+literal|"Usage: -dumpJavaDocFile theFileToDumpJavaDocForLaterUse..."
 argument_list|)
 expr_stmt|;
 block|}

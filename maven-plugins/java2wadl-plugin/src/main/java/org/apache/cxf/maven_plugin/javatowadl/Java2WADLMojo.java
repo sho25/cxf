@@ -1024,11 +1024,6 @@ name|separator
 argument_list|)
 expr_stmt|;
 block|}
-name|BufferedWriter
-name|writer
-init|=
-literal|null
-decl_stmt|;
 try|try
 block|{
 name|FileUtils
@@ -1045,9 +1040,11 @@ name|getParentFile
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*File wadlFile = new File(outputFile);             if (!wadlFile.exists()) {                 wadlFile.createNewFile();             }*/
+try|try
+init|(
+name|BufferedWriter
 name|writer
-operator|=
+init|=
 operator|new
 name|BufferedWriter
 argument_list|(
@@ -1057,7 +1054,8 @@ argument_list|(
 name|outputFile
 argument_list|)
 argument_list|)
-expr_stmt|;
+init|)
+block|{
 name|writer
 operator|.
 name|write
@@ -1066,42 +1064,6 @@ name|wadl
 argument_list|)
 expr_stmt|;
 block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|MojoExecutionException
-argument_list|(
-name|e
-operator|.
-name|getMessage
-argument_list|()
-argument_list|,
-name|e
-argument_list|)
-throw|;
-block|}
-finally|finally
-block|{
-try|try
-block|{
-if|if
-condition|(
-name|writer
-operator|!=
-literal|null
-condition|)
-block|{
-name|writer
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1121,7 +1083,6 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
-block|}
 block|}
 comment|// Attach the generated wadl file to the artifacts that get deployed
 comment|// with the enclosing project
