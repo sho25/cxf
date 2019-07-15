@@ -191,6 +191,35 @@ return|return
 name|state
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+literal|"OAuthError[error='"
+operator|+
+name|error
+operator|+
+literal|'\''
+operator|+
+literal|", errorDescription='"
+operator|+
+name|errorDescription
+operator|+
+literal|'\''
+operator|+
+literal|", errorUri='"
+operator|+
+name|errorUri
+operator|+
+literal|'\''
+operator|+
+literal|']'
+return|;
+block|}
 block|}
 end_class
 
