@@ -217,12 +217,6 @@ name|errorUri
 operator|+
 literal|'\''
 operator|+
-literal|", state='"
-operator|+
-name|state
-operator|+
-literal|'\''
-operator|+
 literal|']'
 return|;
 block|}
