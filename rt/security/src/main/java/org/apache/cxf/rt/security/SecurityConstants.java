@@ -414,6 +414,15 @@ name|STS_TOKEN_CACHER_IMPL
 init|=
 literal|"security.sts.token.cacher.impl"
 decl_stmt|;
+comment|/**      * Check that we are not invoking on the STS using its own IssuedToken policy - in which case we      * will end up with a recursive loop. This check might be a problem in the unlikely scenario that the      * remote endpoint has the same service / port QName as the STS, so this configuration flag allows to      * disable this check for that scenario. The default is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_CHECK_FOR_RECURSIVE_CALL
+init|=
+literal|"security.sts.check.for.recursive.call"
+decl_stmt|;
 comment|/**      * This property contains a comma separated String corresponding to a list of audience restriction URIs.      * The default value for this property contains the request URL and the Service QName. If the      * AUDIENCE_RESTRICTION_VALIDATION property is "true", and if a received SAML Token contains audience      * restriction URIs, then one of them must match one of the values specified in this property.      */
 specifier|public
 specifier|static
@@ -521,6 +530,8 @@ block|,
 name|STS_TOKEN_CACHER_IMPL
 block|,
 name|AUDIENCE_RESTRICTIONS
+block|,
+name|STS_CHECK_FOR_RECURSIVE_CALL
 block|}
 argument_list|)
 argument_list|)
