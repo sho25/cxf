@@ -844,6 +844,9 @@ name|NamingStrategy
 operator|.
 name|Http
 argument_list|()
+argument_list|,
+literal|null
+comment|/* default JsonReaderFactory */
 argument_list|)
 decl_stmt|;
 specifier|final

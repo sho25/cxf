@@ -197,7 +197,7 @@ name|factory
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://localhost:9000/sample"
+literal|"http://localhost:9000/"
 argument_list|)
 expr_stmt|;
 name|factory
