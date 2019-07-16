@@ -4724,6 +4724,7 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+comment|//NOPMD
 if|if
 condition|(
 name|key

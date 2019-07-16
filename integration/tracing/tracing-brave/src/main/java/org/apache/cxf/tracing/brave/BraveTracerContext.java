@@ -263,6 +263,7 @@ expr_stmt|;
 block|}
 try|try
 block|{
+comment|//NOPMD
 return|return
 name|traceable
 operator|.

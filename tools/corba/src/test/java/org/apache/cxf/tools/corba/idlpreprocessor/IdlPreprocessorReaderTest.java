@@ -718,6 +718,8 @@ operator|.
 name|openStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|LineNumberReader
 name|rReader
 init|=
@@ -732,8 +734,7 @@ argument_list|,
 literal|"ISO-8859-1"
 argument_list|)
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 name|boolean
 name|eof
@@ -796,14 +797,6 @@ operator|!
 name|eof
 condition|)
 do|;
-block|}
-finally|finally
-block|{
-name|rReader
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 specifier|private

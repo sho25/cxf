@@ -147,7 +147,7 @@ name|FILTER_CLASS_PROPERTY
 init|=
 literal|"filter.class"
 decl_stmt|;
-comment|/**      * Read the Swagger-specific properties from the property file (to seamlessly      * support the migration from older Swagger features).      * @param location property file location      * @param bus bus instance      * @return the properties if available       */
+comment|/**      * Read the Swagger-specific properties from the property file (to seamlessly      * support the migration from older Swagger features).      * @param location property file location      * @param bus bus instance      * @return the properties if available      */
 specifier|default
 name|Properties
 name|getSwaggerProperties
@@ -159,6 +159,13 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
+name|Properties
+name|props
+init|=
+literal|null
+decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -173,12 +180,8 @@ argument_list|()
 argument_list|,
 name|bus
 argument_list|)
-decl_stmt|;
-name|Properties
-name|props
-init|=
-literal|null
-decl_stmt|;
+init|)
+block|{
 if|if
 condition|(
 name|is
@@ -192,8 +195,6 @@ operator|new
 name|Properties
 argument_list|()
 expr_stmt|;
-try|try
-block|{
 name|props
 operator|.
 name|load
@@ -202,26 +203,6 @@ name|is
 argument_list|)
 expr_stmt|;
 block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ex
-parameter_list|)
-block|{
-name|props
-operator|=
-literal|null
-expr_stmt|;
-block|}
-finally|finally
-block|{
-try|try
-block|{
-name|is
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -229,9 +210,11 @@ name|IOException
 name|ignore
 parameter_list|)
 block|{
+name|props
+operator|=
+literal|null
+expr_stmt|;
 comment|// ignore
-block|}
-block|}
 block|}
 return|return
 name|props

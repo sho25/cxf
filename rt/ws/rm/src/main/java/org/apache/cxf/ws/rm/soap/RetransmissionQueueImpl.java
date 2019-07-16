@@ -3849,6 +3849,7 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+comment|//NOPMD
 comment|// initialize copied interceptor chain for message
 name|PhaseInterceptorChain
 name|retransmitChain

@@ -342,6 +342,7 @@ argument_list|)
 decl_stmt|;
 try|try
 block|{
+comment|//NOPMD
 name|obj
 operator|=
 name|getContext

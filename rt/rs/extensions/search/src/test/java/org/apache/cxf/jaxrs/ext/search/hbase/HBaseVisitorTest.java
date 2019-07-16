@@ -448,6 +448,8 @@ argument_list|(
 name|filter
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|ResultScanner
 name|rs
 init|=
@@ -457,8 +459,7 @@ name|getScanner
 argument_list|(
 name|scan
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 name|int
 name|count
@@ -529,14 +530,6 @@ literal|1
 argument_list|,
 name|count
 argument_list|)
-expr_stmt|;
-block|}
-finally|finally
-block|{
-name|rs
-operator|.
-name|close
-argument_list|()
 expr_stmt|;
 block|}
 block|}
