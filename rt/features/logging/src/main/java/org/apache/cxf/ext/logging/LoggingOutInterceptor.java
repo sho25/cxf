@@ -493,7 +493,7 @@ name|CacheAndWriteOutputStream
 name|newOut
 init|=
 operator|new
-name|CacheAndWriteOutputStream
+name|LoggingOutputStream
 argument_list|(
 name|os
 argument_list|)
