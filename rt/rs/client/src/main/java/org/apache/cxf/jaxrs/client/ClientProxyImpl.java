@@ -6902,6 +6902,8 @@ name|newJaxrsClientCallback
 argument_list|(
 name|asyncCallback
 argument_list|,
+name|outMessage
+argument_list|,
 name|ori
 operator|.
 name|getMethodToInvoke
@@ -6957,6 +6959,9 @@ argument_list|<
 name|Object
 argument_list|>
 name|asyncCallback
+parameter_list|,
+name|Message
+name|outMessage
 parameter_list|,
 name|Class
 argument_list|<
