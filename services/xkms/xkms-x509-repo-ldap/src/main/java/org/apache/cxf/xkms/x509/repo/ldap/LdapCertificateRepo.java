@@ -558,7 +558,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|protected
 name|List
 argument_list|<
 name|X509Certificate
@@ -713,7 +713,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|List
 argument_list|<
 name|X509CRL
@@ -870,7 +870,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|saveCertificate
 parameter_list|(
@@ -1098,7 +1098,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|addConstantAttributes
 parameter_list|(
@@ -1465,7 +1465,7 @@ return|return
 name|cert
 return|;
 block|}
-specifier|private
+specifier|protected
 name|String
 name|getDnForIdentifier
 parameter_list|(
@@ -1508,7 +1508,7 @@ operator|+
 name|rootDN
 return|;
 block|}
-specifier|private
+specifier|protected
 name|X509Certificate
 name|getCertificateForDn
 parameter_list|(
@@ -1540,7 +1540,7 @@ name|attr
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|protected
 name|X509Certificate
 name|getCertificateForUIDAttr
 parameter_list|(
@@ -1678,7 +1678,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|X509Certificate
 name|getCert
 parameter_list|(
