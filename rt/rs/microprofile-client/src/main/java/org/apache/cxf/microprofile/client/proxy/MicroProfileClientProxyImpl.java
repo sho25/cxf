@@ -1251,6 +1251,9 @@ name|Object
 argument_list|>
 name|asyncCallback
 parameter_list|,
+name|Message
+name|outMessage
+parameter_list|,
 name|Class
 argument_list|<
 name|?
@@ -1269,6 +1272,8 @@ name|Object
 argument_list|>
 argument_list|(
 name|asyncCallback
+argument_list|,
+name|outMessage
 argument_list|,
 name|responseClass
 argument_list|,

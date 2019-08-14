@@ -215,7 +215,7 @@ name|ADD_INCLUSIVE_PREFIXES
 init|=
 literal|"ws-security.add.inclusive.prefixes"
 decl_stmt|;
-comment|/**      * Whether to disable the enforcement of the WS-SecurityPolicy 'RequireClientCertificate' policy.       * Default is "false". Some servers may not do client certificate verification at the start of the SSL       * handshake, and therefore the client certs may not be available to the WS-Security layer for policy       * verification at that time.      */
+comment|/**      * Whether to disable the enforcement of the WS-SecurityPolicy 'RequireClientCertificate' policy.      * Default is "false". Some servers may not do client certificate verification at the start of the SSL      * handshake, and therefore the client certs may not be available to the WS-Security layer for policy      * verification at that time.      */
 specifier|public
 specifier|static
 specifier|final
@@ -223,6 +223,15 @@ name|String
 name|DISABLE_REQ_CLIENT_CERT_CHECK
 init|=
 literal|"ws-security.disable.require.client.cert.check"
+decl_stmt|;
+comment|/**      * Whether to search for and expand xop:Include Elements for encryption and signature (on the outbound      * side) or for signature verification (on the inbound side). This ensures that the actual bytes are signed,      * and not just the reference. The default is "true" if MTOM is enabled, false otherwise.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|EXPAND_XOP_INCLUDE
+init|=
+literal|"ws-security.expand.xop.include"
 decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
@@ -677,6 +686,8 @@ block|,
 name|SECURITY_TOKEN_LIFETIME
 block|,
 name|DISABLE_REQ_CLIENT_CERT_CHECK
+block|,
+name|EXPAND_XOP_INCLUDE
 block|}
 argument_list|)
 argument_list|)

@@ -387,7 +387,7 @@ name|props
 operator|.
 name|put
 argument_list|(
-literal|"resource.loader"
+literal|"resource.loaders"
 argument_list|,
 literal|"class"
 argument_list|)
@@ -396,7 +396,7 @@ name|props
 operator|.
 name|put
 argument_list|(
-literal|"class.resource.loader.class"
+literal|"resource.loader.class.class"
 argument_list|,
 name|clzName
 argument_list|)

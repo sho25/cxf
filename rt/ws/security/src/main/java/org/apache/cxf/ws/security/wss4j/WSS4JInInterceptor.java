@@ -1011,8 +1011,8 @@ name|ignoreActions
 decl_stmt|;
 comment|/**      *      */
 specifier|private
-name|WSSecurityEngine
-name|secEngineOverride
+name|WSSConfig
+name|defaultConfig
 decl_stmt|;
 specifier|public
 name|WSS4JInInterceptor
@@ -1387,18 +1387,9 @@ expr_stmt|;
 block|}
 block|}
 block|}
-name|secEngineOverride
+name|defaultConfig
 operator|=
-operator|new
-name|WSSecurityEngine
-argument_list|()
-expr_stmt|;
-name|secEngineOverride
-operator|.
-name|setWssConfig
-argument_list|(
 name|config
-argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Setting this value to true means that WSS4J does not compare the "actions" that were processed against      * the list of actions that were configured. It also means that CXF/WSS4J does not throw an error if no actions      * were specified. Setting this to true could be a potential security risk, as there is then no guarantee that      * the message contains the desired security token.      */
@@ -4203,7 +4194,7 @@ return|return
 name|cbHandler
 return|;
 block|}
-comment|/**      * @return      the WSSecurityEngine in use by this interceptor.      *              This engine is defined to be the secEngineOverride      *              instance, if defined in this class (and supplied through      *              construction); otherwise, it is taken to be the default      *              WSSecEngine instance (currently defined in the WSHandler      *              base class).      */
+comment|/**      * @return      the WSSecurityEngine in use by this interceptor.      */
 specifier|protected
 name|WSSecurityEngine
 name|getSecurityEngine
@@ -4214,13 +4205,27 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|secEngineOverride
+name|defaultConfig
 operator|!=
 literal|null
 condition|)
 block|{
+name|WSSecurityEngine
+name|engine
+init|=
+operator|new
+name|WSSecurityEngine
+argument_list|()
+decl_stmt|;
+name|engine
+operator|.
+name|setWssConfig
+argument_list|(
+name|defaultConfig
+argument_list|)
+expr_stmt|;
 return|return
-name|secEngineOverride
+name|engine
 return|;
 block|}
 if|if

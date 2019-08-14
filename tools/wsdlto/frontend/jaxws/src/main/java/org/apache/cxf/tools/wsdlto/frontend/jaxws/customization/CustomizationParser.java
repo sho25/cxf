@@ -1019,6 +1019,7 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+comment|//NOPMD
 name|reader
 operator|=
 name|StaxUtils

@@ -1814,6 +1814,7 @@ try|try
 block|{
 try|try
 block|{
+comment|// NOPMD
 name|JAXRSUtils
 operator|.
 name|writeMessageBody

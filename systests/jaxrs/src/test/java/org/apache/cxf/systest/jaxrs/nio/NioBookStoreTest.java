@@ -272,7 +272,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-specifier|final
+try|try
+init|(
 name|Response
 name|response
 init|=
@@ -287,8 +288,7 @@ argument_list|)
 operator|.
 name|get
 argument_list|()
-decl_stmt|;
-try|try
+init|)
 block|{
 name|assertEquals
 argument_list|(
@@ -329,14 +329,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-finally|finally
-block|{
-name|response
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 annotation|@
 name|Test
@@ -347,7 +339,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-specifier|final
+try|try
+init|(
 name|Response
 name|response
 init|=
@@ -362,8 +355,7 @@ argument_list|)
 operator|.
 name|get
 argument_list|()
-decl_stmt|;
-try|try
+init|)
 block|{
 name|assertEquals
 argument_list|(
@@ -404,14 +396,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-finally|finally
-block|{
-name|response
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 annotation|@
 name|Test
@@ -422,7 +406,8 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
-specifier|final
+try|try
+init|(
 name|Response
 name|response
 init|=
@@ -457,8 +442,7 @@ literal|"/files/books.txt"
 argument_list|)
 argument_list|)
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 name|assertEquals
 argument_list|(
@@ -486,14 +470,6 @@ argument_list|(
 literal|"Book Store uploaded: 10355 bytes"
 argument_list|)
 argument_list|)
-expr_stmt|;
-block|}
-finally|finally
-block|{
-name|response
-operator|.
-name|close
-argument_list|()
 expr_stmt|;
 block|}
 block|}

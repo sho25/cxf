@@ -2531,6 +2531,8 @@ argument_list|(
 literal|null
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|ClassPathXmlApplicationContext
 name|ctx
 init|=
@@ -2544,8 +2546,7 @@ block|{
 literal|"/org/apache/cxf/systest/jms/JMSClients.xml"
 block|}
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 name|String
 name|wsdlString2
@@ -2793,11 +2794,6 @@ block|}
 block|}
 finally|finally
 block|{
-name|ctx
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus

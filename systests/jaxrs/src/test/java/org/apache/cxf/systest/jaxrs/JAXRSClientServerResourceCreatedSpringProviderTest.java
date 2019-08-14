@@ -2117,6 +2117,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|Socket
 name|s
 init|=
@@ -2132,7 +2134,8 @@ argument_list|(
 name|PORT
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copyAndCloseInput
@@ -2162,8 +2165,6 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
-try|try
-block|{
 name|assertTrue
 argument_list|(
 literal|"Wrong status returned"
@@ -2181,14 +2182,6 @@ argument_list|(
 literal|"open"
 argument_list|)
 argument_list|)
-expr_stmt|;
-block|}
-finally|finally
-block|{
-name|s
-operator|.
-name|close
-argument_list|()
 expr_stmt|;
 block|}
 block|}

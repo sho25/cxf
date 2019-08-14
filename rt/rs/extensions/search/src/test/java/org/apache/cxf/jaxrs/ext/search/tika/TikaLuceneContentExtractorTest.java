@@ -1695,6 +1695,8 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+try|try
+init|(
 name|IndexReader
 name|reader
 init|=
@@ -1704,7 +1706,8 @@ name|open
 argument_list|(
 name|directory
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|IndexSearcher
 name|searcher
 init|=
@@ -1714,8 +1717,6 @@ argument_list|(
 name|reader
 argument_list|)
 decl_stmt|;
-try|try
-block|{
 name|LuceneQueryVisitor
 argument_list|<
 name|SearchBean
@@ -1778,14 +1779,6 @@ expr_stmt|;
 return|return
 name|hits
 return|;
-block|}
-finally|finally
-block|{
-name|reader
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 annotation|@

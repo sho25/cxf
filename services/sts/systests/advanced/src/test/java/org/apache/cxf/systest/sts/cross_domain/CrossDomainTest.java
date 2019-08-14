@@ -425,23 +425,14 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
-comment|// In this test, a CXF client checks to see that the location defined on its STSClient is different
-comment|// from that configured in the Issuer of the IssuedToken policy supplied in the WSDL of the
-comment|// service provider. It obtains a SAML Token from the configured STS first, and then sends it in
-comment|// the security header to the second STS. The returned token is then sent to the service provider.
-comment|// This illustrates cross-domain SSO: https://issues.apache.org/jira/browse/CXF-3520
+comment|// In this test, the CXF client has two STSClients configured. The "default" STSClient config points to
+comment|// STS "b". This STS has an IssuedToken policy that requires a token from STS "a".
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testCrossDomain
@@ -449,6 +440,14 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+operator|!
+name|portFree
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -622,7 +621,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"cxf-client.xml"
+literal|"cxf-client-mex.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
