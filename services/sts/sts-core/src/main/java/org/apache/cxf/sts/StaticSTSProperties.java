@@ -849,23 +849,6 @@ operator|=
 name|signatureCrypto
 expr_stmt|;
 block|}
-comment|/**      * Set the String corresponding to the signature Properties class      * @param signaturePropertiesFile the String corresponding to the signature properties file      */
-annotation|@
-name|Deprecated
-specifier|public
-name|void
-name|setSignaturePropertiesFile
-parameter_list|(
-name|String
-name|signaturePropertiesFile
-parameter_list|)
-block|{
-name|setSignatureCryptoProperties
-argument_list|(
-name|signaturePropertiesFile
-argument_list|)
-expr_stmt|;
-block|}
 comment|/**      * Set the Object corresponding to the signature Properties class. It can be a String      * corresponding to a filename, a Properties object, or a URL.      * @param signatureCryptoProperties the object corresponding to the signature properties      */
 specifier|public
 name|void
@@ -987,23 +970,6 @@ operator|.
 name|encryptionCrypto
 operator|=
 name|encryptionCrypto
-expr_stmt|;
-block|}
-comment|/**      * Set the String corresponding to the encryption Properties class      * @param signaturePropertiesFile the String corresponding to the encryption properties file      */
-annotation|@
-name|Deprecated
-specifier|public
-name|void
-name|setEncryptionPropertiesFile
-parameter_list|(
-name|String
-name|encryptionPropertiesFile
-parameter_list|)
-block|{
-name|setEncryptionCryptoProperties
-argument_list|(
-name|encryptionPropertiesFile
-argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Set the Object corresponding to the encryption Properties class. It can be a String      * corresponding to a filename, a Properties object, or a URL.      * @param encryptionCryptoProperties the object corresponding to the encryption properties      */

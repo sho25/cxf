@@ -858,7 +858,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|samlRealms
 init|=
@@ -879,7 +879,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 name|samlRealm
 init|=
 operator|new
@@ -895,7 +895,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 argument_list|()
 decl_stmt|;
 name|samlRealm
@@ -929,7 +929,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 argument_list|()
 expr_stmt|;
 name|samlRealm
