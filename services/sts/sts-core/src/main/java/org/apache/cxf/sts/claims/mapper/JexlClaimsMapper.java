@@ -101,7 +101,21 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|jexl2
+name|jexl3
+operator|.
+name|JexlBuilder
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|jexl3
 operator|.
 name|JexlContext
 import|;
@@ -115,7 +129,7 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|jexl2
+name|jexl3
 operator|.
 name|JexlEngine
 import|;
@@ -129,9 +143,9 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|jexl2
+name|jexl3
 operator|.
-name|MapContext
+name|JexlScript
 import|;
 end_import
 
@@ -143,9 +157,9 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|jexl2
+name|jexl3
 operator|.
-name|Script
+name|MapContext
 import|;
 end_import
 
@@ -254,13 +268,9 @@ decl_stmt|;
 specifier|private
 name|JexlEngine
 name|jexlEngine
-init|=
-operator|new
-name|JexlEngine
-argument_list|()
 decl_stmt|;
 specifier|private
-name|Script
+name|JexlScript
 name|script
 decl_stmt|;
 specifier|public
@@ -269,13 +279,6 @@ parameter_list|()
 block|{
 comment|// jexl.setCache(512);
 comment|// jexl.setLenient(false);
-name|jexlEngine
-operator|.
-name|setSilent
-argument_list|(
-literal|false
-argument_list|)
-expr_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -310,11 +313,23 @@ name|LOG
 argument_list|)
 expr_stmt|;
 name|jexlEngine
+operator|=
+operator|new
+name|JexlBuilder
+argument_list|()
 operator|.
-name|setFunctions
+name|silent
+argument_list|(
+literal|false
+argument_list|)
+operator|.
+name|namespaces
 argument_list|(
 name|functions
 argument_list|)
+operator|.
+name|create
+argument_list|()
 expr_stmt|;
 block|}
 specifier|public
@@ -414,7 +429,7 @@ argument_list|,
 name|parameters
 argument_list|)
 expr_stmt|;
-name|Script
+name|JexlScript
 name|s
 init|=
 name|getScript
@@ -455,7 +470,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|Script
+name|JexlScript
 name|getScript
 parameter_list|()
 block|{
@@ -468,7 +483,7 @@ specifier|final
 name|void
 name|setScript
 parameter_list|(
-name|Script
+name|JexlScript
 name|script
 parameter_list|)
 block|{
