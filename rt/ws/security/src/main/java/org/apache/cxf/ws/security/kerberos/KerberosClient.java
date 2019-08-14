@@ -75,18 +75,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|Bus
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|common
 operator|.
 name|logging
@@ -327,15 +315,6 @@ specifier|private
 name|boolean
 name|useDelegatedCredential
 decl_stmt|;
-annotation|@
-name|Deprecated
-specifier|public
-name|KerberosClient
-parameter_list|(
-name|Bus
-name|b
-parameter_list|)
-block|{     }
 specifier|public
 name|KerberosClient
 parameter_list|()
@@ -373,32 +352,6 @@ operator|.
 name|contextName
 operator|=
 name|contextName
-expr_stmt|;
-block|}
-comment|/**      * @deprecated      * Get the JAAS Login module name to use.      * @return the JAAS Login module name to use      */
-specifier|public
-name|String
-name|getJaasLoginModuleName
-parameter_list|()
-block|{
-return|return
-name|contextName
-return|;
-block|}
-comment|/**      * @deprecated      * Set the JAAS Login module name to use.      * @param jaasLoginModuleName the JAAS Login module name to use      */
-specifier|public
-name|void
-name|setJaasLoginModuleName
-parameter_list|(
-name|String
-name|jaasLoginModuleName
-parameter_list|)
-block|{
-name|this
-operator|.
-name|contextName
-operator|=
-name|jaasLoginModuleName
 expr_stmt|;
 block|}
 comment|/**      * Get the CallbackHandler to use with the LoginContext      * @return the CallbackHandler to use with the LoginContext      */
