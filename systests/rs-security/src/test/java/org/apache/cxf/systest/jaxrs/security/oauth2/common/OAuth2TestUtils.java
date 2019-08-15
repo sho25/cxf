@@ -1143,7 +1143,7 @@ name|client
 argument_list|,
 name|code
 argument_list|,
-literal|"consumer-id"
+name|consumerId
 argument_list|,
 name|audience
 argument_list|,
