@@ -695,6 +695,9 @@ condition|(
 operator|!
 name|algorithmPolicy
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|getAsymmetricSignature
 argument_list|()
 operator|.
@@ -705,6 +708,9 @@ argument_list|)
 operator|&&
 operator|!
 name|algorithmPolicy
+operator|.
+name|getAlgorithmSuiteType
+argument_list|()
 operator|.
 name|getSymmetricSignature
 argument_list|()

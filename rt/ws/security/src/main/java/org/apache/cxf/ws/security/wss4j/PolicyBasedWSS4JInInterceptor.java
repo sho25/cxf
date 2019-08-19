@@ -3169,6 +3169,9 @@ condition|)
 block|{
 name|algSuite
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|setAsymmetricSignature
 argument_list|(
 name|asymSignatureAlgorithm
@@ -3183,6 +3186,9 @@ literal|null
 condition|)
 block|{
 name|algSuite
+operator|.
+name|getAlgorithmSuiteType
+argument_list|()
 operator|.
 name|setSymmetricSignature
 argument_list|(
