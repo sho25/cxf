@@ -133,8 +133,6 @@ begin_class
 specifier|public
 class|class
 name|AssociatedManagedConnectionFactoryImplTest
-extends|extends
-name|ManagedConnectionFactoryImplTest
 block|{
 annotation|@
 name|Test
