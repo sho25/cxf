@@ -2172,6 +2172,9 @@ block|{
 operator|new
 name|UriBuilderImpl
 argument_list|(
+operator|(
+name|URI
+operator|)
 literal|null
 argument_list|)
 expr_stmt|;

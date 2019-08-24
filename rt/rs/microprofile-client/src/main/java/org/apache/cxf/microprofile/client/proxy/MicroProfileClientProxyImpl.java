@@ -846,6 +846,11 @@ operator|new
 name|LocalClientState
 argument_list|(
 name|baseURI
+argument_list|,
+name|configuration
+operator|.
+name|getProperties
+argument_list|()
 argument_list|)
 argument_list|,
 name|loader
