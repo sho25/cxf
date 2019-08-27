@@ -1884,9 +1884,7 @@ argument_list|(
 operator|-
 literal|50
 argument_list|,
-parameter_list|(
 name|res
-parameter_list|)
 lambda|->
 block|{
 try|try
@@ -1910,7 +1908,8 @@ argument_list|()
 condition|)
 block|{
 comment|// Sleep long enough so that the workqueue will fill up and then
-comment|// handleResponseOnWorkqueue will fail for the calls from both responseReceived and consumeContent
+comment|// handleResponseOnWorkqueue will fail for the calls from both
+comment|// responseReceived and consumeContent
 name|Thread
 operator|.
 name|sleep
