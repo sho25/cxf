@@ -3630,7 +3630,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-name|void
+name|boolean
 name|retrySetHttpResponse
 parameter_list|(
 name|HttpResponse
@@ -3639,10 +3639,6 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|httpResponse
-operator|==
-literal|null
-operator|&&
 name|isAsync
 condition|)
 block|{
@@ -3652,6 +3648,10 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
+return|return
+operator|!
+name|isAsync
+return|;
 block|}
 specifier|protected
 specifier|synchronized
