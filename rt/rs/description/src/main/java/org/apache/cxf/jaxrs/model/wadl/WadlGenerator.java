@@ -4040,14 +4040,12 @@ argument_list|<
 name|?
 argument_list|>
 argument_list|>
-name|extraClasses
+name|extra
 init|=
 operator|new
 name|LinkedList
 argument_list|<>
 argument_list|(
-name|this
-operator|.
 name|extraClasses
 argument_list|)
 decl_stmt|;
@@ -4162,7 +4160,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|extraClasses
+name|extra
 operator|.
 name|addAll
 argument_list|(
@@ -4180,7 +4178,7 @@ name|?
 argument_list|>
 name|cls
 range|:
-name|extraClasses
+name|extra
 control|)
 block|{
 name|resourceTypes
