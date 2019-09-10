@@ -3187,9 +3187,9 @@ operator|.
 name|setupProviders
 argument_list|()
 argument_list|,
-literal|"alice"
+literal|"consumer-id"
 argument_list|,
-literal|"security"
+literal|"this-is-a-secret"
 argument_list|,
 name|busFile
 operator|.
@@ -3371,9 +3371,9 @@ operator|.
 name|setupProviders
 argument_list|()
 argument_list|,
-literal|"alice"
+literal|"consumer-id"
 argument_list|,
-literal|"security"
+literal|"this-is-a-secret"
 argument_list|,
 name|busFile
 operator|.
