@@ -1482,7 +1482,7 @@ name|query
 argument_list|(
 literal|"redirect_uri"
 argument_list|,
-literal|"http://www.blah.bad.apache.org"
+literal|"http://www.blah.apache.org"
 argument_list|)
 expr_stmt|;
 name|client
@@ -1512,7 +1512,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|400
+literal|303
 argument_list|,
 name|response
 operator|.
