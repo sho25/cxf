@@ -1144,6 +1144,11 @@ argument_list|,
 name|limit
 argument_list|)
 expr_stmt|;
+name|writer
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
