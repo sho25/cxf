@@ -293,6 +293,22 @@ name|WebClient
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|ExceptionUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * SSE Event Source implementation   */
 end_comment
@@ -1016,12 +1032,18 @@ argument_list|()
 expr_stmt|;
 comment|// A client can be told to stop reconnecting using the HTTP 204 No Content
 comment|// response code. In this case, we should give up.
-if|if
-condition|(
+specifier|final
+name|int
+name|status
+init|=
 name|response
 operator|.
 name|getStatus
 argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|status
 operator|==
 literal|204
 condition|)
@@ -1055,6 +1077,43 @@ name|close
 argument_list|()
 expr_stmt|;
 return|return;
+block|}
+comment|// Convert unsuccessful responses to instances of WebApplicationException
+if|if
+condition|(
+name|status
+operator|!=
+literal|304
+operator|&&
+name|status
+operator|>=
+literal|300
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SSE connection to "
+operator|+
+name|target
+operator|.
+name|getUri
+argument_list|()
+operator|+
+literal|" returns "
+operator|+
+name|status
+argument_list|)
+expr_stmt|;
+throw|throw
+name|ExceptionUtils
+operator|.
+name|toWebApplicationException
+argument_list|(
+name|response
+argument_list|)
+throw|;
 block|}
 comment|// Should not happen but if close() was called from another thread, we could
 comment|// end up there.
