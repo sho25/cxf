@@ -23,16 +23,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|ByteArrayInputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|File
 import|;
 end_import
@@ -1056,8 +1046,8 @@ parameter_list|,
 name|KeyStore
 name|ks
 parameter_list|,
-name|ByteArrayInputStream
-name|bin
+name|InputStream
+name|is
 parameter_list|,
 name|String
 name|keyStoreLocation
@@ -1081,7 +1071,7 @@ name|ks
 operator|.
 name|load
 argument_list|(
-name|bin
+name|is
 argument_list|,
 name|keyStorePassword
 operator|.
