@@ -2206,7 +2206,7 @@ argument_list|)
 throw|;
 block|}
 try|try
-block|{
+init|(
 name|InputStream
 name|is
 init|=
@@ -2218,7 +2218,8 @@ name|keyStoreLoc
 argument_list|,
 name|bus
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 return|return
 name|CryptoUtils
 operator|.
