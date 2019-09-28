@@ -480,6 +480,19 @@ name|RECEIVE_TIMEOUT
 init|=
 literal|"javax.xml.ws.client.receiveTimeout"
 decl_stmt|;
+comment|/**      * Boolean property to indicate whether application-defined StAX-factories (stored as contextual property in the      * message) are thread-safe. If set to {@code true}, CXF doesn't synchronize accesses to the factories.      */
+name|String
+name|THREAD_SAFE_STAX_FACTORIES
+init|=
+name|Message
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|".THREAD_SAFE_STAX_FACTORIES"
+decl_stmt|;
 name|String
 name|getId
 parameter_list|()
