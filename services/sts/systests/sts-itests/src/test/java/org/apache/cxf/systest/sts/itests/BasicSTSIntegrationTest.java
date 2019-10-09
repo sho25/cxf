@@ -361,7 +361,7 @@ name|getProperty
 argument_list|(
 literal|"karaf.version"
 argument_list|,
-literal|"4.2.5"
+literal|"4.2.7"
 argument_list|)
 decl_stmt|;
 name|String
@@ -501,11 +501,6 @@ block|,
 name|copy
 argument_list|(
 literal|"clientstore.jks"
-argument_list|)
-block|,
-name|copy
-argument_list|(
-literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 block|,
 name|editConfigurationFilePut
@@ -776,11 +771,6 @@ block|,
 name|copy
 argument_list|(
 literal|"clientstore.jks"
-argument_list|)
-block|,
-name|copy
-argument_list|(
-literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 block|,
 name|editConfigurationFilePut

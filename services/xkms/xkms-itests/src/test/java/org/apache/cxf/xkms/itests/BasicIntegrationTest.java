@@ -495,7 +495,7 @@ name|getProperty
 argument_list|(
 literal|"karaf.version"
 argument_list|,
-literal|"4.2.5"
+literal|"4.2.7"
 argument_list|)
 decl_stmt|;
 name|String
@@ -650,11 +650,6 @@ block|,
 name|copy
 argument_list|(
 literal|"data/xkms/certificates/http___localhost_8080_services_TestService.cer"
-argument_list|)
-block|,
-name|copy
-argument_list|(
-literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 block|,
 comment|// editConfigurationFilePut("etc/org.ops4j.pax.url.mvn.cfg",
@@ -973,11 +968,6 @@ block|,
 name|copy
 argument_list|(
 literal|"data/xkms/certificates/http___localhost_8080_services_TestService.cer"
-argument_list|)
-block|,
-name|copy
-argument_list|(
-literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 block|,
 comment|// editConfigurationFilePut("etc/org.ops4j.pax.url.mvn.cfg",
