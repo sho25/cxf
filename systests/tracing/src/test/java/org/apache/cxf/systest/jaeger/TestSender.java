@@ -23,7 +23,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|ArrayList
 import|;
 end_import
 
@@ -33,9 +33,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|concurrent
-operator|.
-name|CopyOnWriteArrayList
+name|List
 import|;
 end_import
 
@@ -106,9 +104,11 @@ argument_list|>
 name|SPANS
 init|=
 operator|new
-name|CopyOnWriteArrayList
+name|ArrayList
 argument_list|<>
-argument_list|()
+argument_list|(
+literal|12
+argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
@@ -200,6 +200,11 @@ name|SPANS
 operator|.
 name|clear
 argument_list|()
+expr_stmt|;
+name|setSynchro
+argument_list|(
+literal|null
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
