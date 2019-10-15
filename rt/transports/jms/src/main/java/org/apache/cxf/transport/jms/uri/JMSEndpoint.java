@@ -984,9 +984,12 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|jmsVariant
-operator|==
 name|JNDI_TOPIC
+operator|.
+name|equals
+argument_list|(
+name|jmsVariant
+argument_list|)
 condition|)
 block|{
 name|requestUri
