@@ -422,14 +422,14 @@ name|properties
 operator|.
 name|setSignatureUser
 argument_list|(
-literal|"serverx509v1"
+literal|"morpit"
 argument_list|)
 expr_stmt|;
 name|properties
 operator|.
 name|setEncryptionUser
 argument_list|(
-literal|"clientx509v1"
+literal|"bethal"
 argument_list|)
 expr_stmt|;
 name|properties
