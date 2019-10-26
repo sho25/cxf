@@ -857,6 +857,7 @@ argument_list|(
 name|transportId
 argument_list|)
 expr_stmt|;
+comment|//EndpointInfo ei = new EndpointInfo(service.getServiceInfos().get(0), transportId);
 name|EndpointInfo
 name|ei
 init|=
