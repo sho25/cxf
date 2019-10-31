@@ -683,6 +683,26 @@ operator|.
 name|CREATED_LN
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|createdElem
+operator|==
+literal|null
+condition|)
+block|{
+comment|// The spec says that if there is no Created Element in the Lifetime, then take the current time
+name|this
+operator|.
+name|created
+operator|=
+name|Instant
+operator|.
+name|now
+argument_list|()
+expr_stmt|;
+block|}
+else|else
+block|{
 name|this
 operator|.
 name|created
@@ -702,6 +722,7 @@ operator|.
 name|toInstant
 argument_list|()
 expr_stmt|;
+block|}
 name|Element
 name|expiresElem
 init|=
@@ -720,6 +741,13 @@ operator|.
 name|EXPIRES_LN
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|expiresElem
+operator|!=
+literal|null
+condition|)
+block|{
 name|this
 operator|.
 name|expires
@@ -739,6 +767,7 @@ operator|.
 name|toInstant
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
