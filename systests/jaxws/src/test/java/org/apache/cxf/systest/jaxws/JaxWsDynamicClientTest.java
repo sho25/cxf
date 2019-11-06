@@ -304,7 +304,7 @@ argument_list|)
 decl_stmt|;
 specifier|private
 name|String
-name|md5
+name|digest
 parameter_list|(
 name|byte
 index|[]
@@ -322,7 +322,7 @@ name|MessageDigest
 operator|.
 name|getInstance
 argument_list|(
-literal|"MD5"
+literal|"SHA-256"
 argument_list|)
 expr_stmt|;
 block|}
@@ -555,7 +555,7 @@ index|]
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|md5
+name|digest
 argument_list|(
 name|bucketOfBytes
 argument_list|)
@@ -605,7 +605,7 @@ index|]
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|md5
+name|digest
 argument_list|(
 name|bucketOfBytes
 argument_list|)
