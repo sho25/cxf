@@ -633,6 +633,10 @@ name|validAssertion
 operator|=
 name|assertion
 expr_stmt|;
+name|sessionNotOnOrAfter
+operator|=
+literal|null
+expr_stmt|;
 comment|// Store Session NotOnOrAfter
 for|for
 control|(
