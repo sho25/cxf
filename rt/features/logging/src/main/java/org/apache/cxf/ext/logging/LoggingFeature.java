@@ -420,15 +420,6 @@ name|mediaTypes
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Provider
-argument_list|(
-name|value
-operator|=
-name|Type
-operator|.
-name|Feature
-argument_list|)
 specifier|public
 specifier|static
 class|class
