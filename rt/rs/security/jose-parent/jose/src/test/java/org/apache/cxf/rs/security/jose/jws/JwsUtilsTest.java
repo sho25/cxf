@@ -620,6 +620,8 @@ name|createMessage
 argument_list|()
 argument_list|,
 name|p
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -804,6 +806,8 @@ name|createMessage
 argument_list|()
 argument_list|,
 name|p
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|assertEquals
