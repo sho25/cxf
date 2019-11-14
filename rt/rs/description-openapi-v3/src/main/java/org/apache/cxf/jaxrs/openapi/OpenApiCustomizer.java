@@ -89,6 +89,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Optional
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -394,16 +404,6 @@ operator|.
 name|tags
 operator|.
 name|Tag
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Optional
 import|;
 end_import
 
@@ -759,6 +759,9 @@ argument_list|)
 expr_stmt|;
 name|tag
 operator|.
+name|get
+argument_list|()
+operator|.
 name|setName
 argument_list|(
 name|cri
@@ -785,6 +788,9 @@ literal|null
 condition|)
 block|{
 name|tag
+operator|.
+name|get
+argument_list|()
 operator|.
 name|setDescription
 argument_list|(
@@ -980,7 +986,25 @@ name|parameters
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|operation
+operator|.
+name|getParameters
+argument_list|()
+operator|.
+name|size
+argument_list|()
+operator|==
+name|ori
+operator|.
+name|getParameters
+argument_list|()
+operator|.
+name|size
+argument_list|()
+condition|)
 block|{
 for|for
 control|(
@@ -1048,6 +1072,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 name|addParameters
 argument_list|(
 name|operation
@@ -1056,7 +1081,6 @@ name|getParameters
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 name|customizeResponses
 argument_list|(
 name|operation
