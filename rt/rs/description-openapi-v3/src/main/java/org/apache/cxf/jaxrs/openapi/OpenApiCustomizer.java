@@ -93,6 +93,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Optional
 import|;
 end_import
@@ -404,16 +414,6 @@ operator|.
 name|tags
 operator|.
 name|Tag
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Objects
 import|;
 end_import
 
@@ -996,8 +996,6 @@ name|parameters
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
 for|for
 control|(
 name|int
@@ -1162,7 +1160,6 @@ argument_list|(
 name|javadoc
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 name|addParameters
