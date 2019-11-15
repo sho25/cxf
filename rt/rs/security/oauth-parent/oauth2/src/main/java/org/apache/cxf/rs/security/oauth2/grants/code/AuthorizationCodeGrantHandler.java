@@ -391,10 +391,6 @@ condition|)
 block|{
 if|if
 condition|(
-name|expectedRedirectUri
-operator|==
-literal|null
-operator|||
 operator|!
 name|providedRedirectUri
 operator|.
