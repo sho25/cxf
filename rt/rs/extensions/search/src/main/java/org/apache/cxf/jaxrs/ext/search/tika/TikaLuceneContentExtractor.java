@@ -421,7 +421,7 @@ operator|=
 name|documentMetadata
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param validateMediaType enabled or disable media type validation      * @param documentMetadata documentMetadata      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parsers parsers instancethis.contentFieldName      * @param documentMetadata documentMetadata      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(

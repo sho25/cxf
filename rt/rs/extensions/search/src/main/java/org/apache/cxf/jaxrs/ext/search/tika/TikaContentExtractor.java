@@ -622,7 +622,7 @@ name|context
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream with a media type hint      * type of content.      * @param in input stream to extract the metadata from      * @param handler custom ContentHandler      * @param mt JAX-RS MediaType of the stream content      * @param context custom context      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream with a media type hint      * type of content.      * @param in input stream to extract the metadata from      * @param handler custom ContentHandler      * @param mtHint JAX-RS MediaType of the stream content      * @param context custom context      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
