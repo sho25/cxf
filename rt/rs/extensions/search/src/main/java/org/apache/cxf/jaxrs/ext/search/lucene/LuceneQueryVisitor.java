@@ -1814,10 +1814,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|min
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|minInclusive
 condition|)
@@ -1861,10 +1857,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|max
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|maxInclusive
 condition|)
@@ -1961,10 +1953,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|min
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|minInclusive
 condition|)
@@ -1977,7 +1965,7 @@ name|addExact
 argument_list|(
 name|min
 argument_list|,
-literal|1
+literal|1L
 argument_list|)
 expr_stmt|;
 block|}
@@ -2008,10 +1996,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|max
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|maxInclusive
 condition|)
@@ -2025,7 +2009,7 @@ argument_list|(
 name|max
 argument_list|,
 operator|-
-literal|1
+literal|1L
 argument_list|)
 expr_stmt|;
 block|}
@@ -2108,10 +2092,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|min
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|minInclusive
 condition|)
@@ -2153,10 +2133,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|max
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|maxInclusive
 condition|)
@@ -2250,10 +2226,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|min
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|minInclusive
 condition|)
@@ -2295,10 +2267,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|max
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|maxInclusive
 condition|)
