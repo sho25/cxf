@@ -324,11 +324,10 @@ decl_stmt|;
 name|String
 name|paramValue
 init|=
-name|sepIndex
-operator|==
-operator|-
-literal|1
-operator|||
+literal|null
+decl_stmt|;
+if|if
+condition|(
 name|sepIndex
 operator|==
 name|theToken
@@ -337,9 +336,24 @@ name|length
 argument_list|()
 operator|-
 literal|1
-condition|?
-literal|null
-else|:
+condition|)
+block|{
+name|paramValue
+operator|=
+literal|""
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|sepIndex
+operator|!=
+operator|-
+literal|1
+condition|)
+block|{
+name|paramValue
+operator|=
 name|theToken
 operator|.
 name|substring
@@ -348,7 +362,8 @@ name|sepIndex
 operator|+
 literal|1
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|paramValue
@@ -1007,7 +1022,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/**      * Return true iff the string contains special characters that need to be      * quoted.      *      * @param value      * @return boolean      */
+comment|/**      * Return true if the string contains special characters that need to be      * quoted.      *      * @param value      * @return boolean      */
 specifier|static
 name|boolean
 name|needsQuote
