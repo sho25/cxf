@@ -565,9 +565,7 @@ name|hmacAlgoJava
 init|=
 name|AesCbcContentEncryptionAlgorithm
 operator|.
-name|AES_HMAC_MAP
-operator|.
-name|get
+name|getHMACAlgorithm
 argument_list|(
 name|algoJwt
 argument_list|)
