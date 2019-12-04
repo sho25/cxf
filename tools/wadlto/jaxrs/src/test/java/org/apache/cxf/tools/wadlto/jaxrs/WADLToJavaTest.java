@@ -226,6 +226,10 @@ literal|"-tMap"
 block|,
 literal|"{http://www.w3.org/2001/XMLSchema}date=java.util.List..String"
 block|,
+literal|"-tMap"
+block|,
+literal|"{http://www.w3.org/2001/XMLSchema}base64Binary=byte[]"
+block|,
 literal|"-async getName,delete"
 block|,
 literal|"-inheritResourceParams first"
