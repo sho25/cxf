@@ -155,7 +155,7 @@ name|cxf
 operator|.
 name|maven_plugin
 operator|.
-name|AbstractCodegenMoho
+name|AbstractCodegenMojo
 import|;
 end_import
 
@@ -355,7 +355,7 @@ specifier|public
 class|class
 name|WSDL2JavaScriptMojo
 extends|extends
-name|AbstractCodegenMoho
+name|AbstractCodegenMojo
 block|{
 annotation|@
 name|Parameter

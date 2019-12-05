@@ -671,7 +671,7 @@ begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractCodegenMoho
+name|AbstractCodegenMojo
 extends|extends
 name|AbstractMojo
 block|{
@@ -975,7 +975,7 @@ name|RepositorySystem
 name|repositorySystem
 decl_stmt|;
 specifier|public
-name|AbstractCodegenMoho
+name|AbstractCodegenMojo
 parameter_list|()
 block|{
 name|super
@@ -3360,8 +3360,6 @@ name|getDirectory
 argument_list|()
 argument_list|)
 expr_stmt|;
-try|try
-block|{
 name|cmd
 operator|.
 name|setExecutable
@@ -3373,34 +3371,6 @@ name|getAbsolutePath
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-name|getLog
-argument_list|()
-operator|.
-name|debug
-argument_list|(
-name|e
-argument_list|)
-expr_stmt|;
-throw|throw
-operator|new
-name|MojoExecutionException
-argument_list|(
-name|e
-operator|.
-name|getMessage
-argument_list|()
-argument_list|,
-name|e
-argument_list|)
-throw|;
-block|}
 name|cmd
 operator|.
 name|createArg
@@ -4433,7 +4403,7 @@ name|File
 name|getJavaExecutable
 parameter_list|()
 throws|throws
-name|IOException
+name|MojoExecutionException
 block|{
 if|if
 condition|(
@@ -4568,7 +4538,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|IOException
+name|MojoExecutionException
 argument_list|(
 literal|"The java executable '"
 operator|+
@@ -4576,7 +4546,7 @@ name|javaExe
 operator|+
 literal|"' doesn't exist or is not a file."
 operator|+
-literal|"Verify the<javaExecutable/> parameter or toolchain configuration."
+literal|" Verify the<javaExecutable/> parameter or toolchain configuration."
 argument_list|)
 throw|;
 block|}
