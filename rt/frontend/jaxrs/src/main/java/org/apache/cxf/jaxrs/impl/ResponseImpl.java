@@ -551,7 +551,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|",(?=\\<|$)"
+literal|",\\s*(?=\\<|$)"
 argument_list|)
 decl_stmt|;
 specifier|private
