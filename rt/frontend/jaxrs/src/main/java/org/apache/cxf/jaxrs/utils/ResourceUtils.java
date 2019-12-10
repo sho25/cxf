@@ -6803,7 +6803,10 @@ argument_list|)
 expr_stmt|;
 name|bean
 operator|.
-name|setFeatures
+name|getFeatures
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|features
 argument_list|)
