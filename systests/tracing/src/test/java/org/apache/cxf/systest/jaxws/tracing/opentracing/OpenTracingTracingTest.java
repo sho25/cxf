@@ -25,6 +25,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|time
+operator|.
+name|Duration
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Collections
@@ -302,16 +312,6 @@ operator|.
 name|internal
 operator|.
 name|TextMapInjectAdapter
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|awaitility
-operator|.
-name|Duration
 import|;
 end_import
 
@@ -1420,7 +1420,10 @@ name|atMost
 argument_list|(
 name|Duration
 operator|.
-name|ONE_SECOND
+name|ofSeconds
+argument_list|(
+literal|1L
+argument_list|)
 argument_list|)
 operator|.
 name|until
