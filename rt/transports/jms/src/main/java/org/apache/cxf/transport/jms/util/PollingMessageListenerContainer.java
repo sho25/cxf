@@ -1010,6 +1010,10 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
+name|running
+operator|=
+literal|false
+expr_stmt|;
 name|JMSException
 name|wrapped
 decl_stmt|;
@@ -1051,6 +1055,15 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|this
+operator|.
+name|exceptionListener
+operator|!=
+literal|null
+condition|)
+block|{
 name|this
 operator|.
 name|exceptionListener
@@ -1060,6 +1073,7 @@ argument_list|(
 name|wrapped
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|boolean
