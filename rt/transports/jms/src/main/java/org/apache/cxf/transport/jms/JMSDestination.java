@@ -795,7 +795,12 @@ operator|new
 name|ExceptionListener
 argument_list|()
 block|{
+specifier|private
+name|boolean
+name|restartTriggered
+decl_stmt|;
 specifier|public
+specifier|synchronized
 name|void
 name|onException
 parameter_list|(
@@ -807,6 +812,9 @@ if|if
 condition|(
 operator|!
 name|shutdown
+operator|&&
+operator|!
+name|restartTriggered
 condition|)
 block|{
 name|LOG
@@ -822,8 +830,33 @@ argument_list|,
 name|exception
 argument_list|)
 expr_stmt|;
+operator|new
+name|Thread
+argument_list|(
+operator|new
+name|Runnable
+argument_list|()
+block|{
+annotation|@
+name|Override
+specifier|public
+name|void
+name|run
+parameter_list|()
+block|{
 name|restartConnection
 argument_list|()
+expr_stmt|;
+block|}
+block|}
+argument_list|)
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
+name|restartTriggered
+operator|=
+literal|true
 expr_stmt|;
 block|}
 block|}
@@ -1074,6 +1107,7 @@ expr_stmt|;
 block|}
 block|}
 specifier|protected
+specifier|synchronized
 name|void
 name|restartConnection
 parameter_list|()
@@ -1272,7 +1306,7 @@ name|deactivate
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Convert JMS message received by ListenerThread to CXF message and inform incomingObserver that a      * message was received. The observer will call the service and then send the response CXF message by      * using the BackChannelConduit      *      * @param message      * @throws IOException      */
+comment|/**      * Convert JMS message received by ListenerThread to CXF message and inform incomingObserver that a      * message was received. The observer will call the service and then send the response CXF message by      * using the BackChannelConduit      *      */
 specifier|public
 name|void
 name|onMessage

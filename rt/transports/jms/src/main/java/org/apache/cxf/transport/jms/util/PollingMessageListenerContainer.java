@@ -790,6 +790,9 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
+name|safeRollBack
+argument_list|()
+expr_stmt|;
 name|handleException
 argument_list|(
 name|e
@@ -1007,10 +1010,6 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
-name|running
-operator|=
-literal|false
-expr_stmt|;
 name|JMSException
 name|wrapped
 decl_stmt|;
@@ -1180,7 +1179,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Shuttting down "
+literal|"Shutting down "
 operator|+
 name|this
 operator|.
@@ -1191,14 +1190,6 @@ name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-name|running
-condition|)
-block|{
-return|return;
-block|}
 name|running
 operator|=
 literal|false
