@@ -119,6 +119,8 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|BufferedReader
 name|reader
 init|=
@@ -131,7 +133,8 @@ argument_list|(
 name|file
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|String
 name|line
 init|=
@@ -229,11 +232,7 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
-name|reader
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 block|}
 end_class
