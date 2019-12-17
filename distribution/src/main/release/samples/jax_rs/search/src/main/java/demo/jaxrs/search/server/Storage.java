@@ -182,12 +182,6 @@ name|folder
 operator|.
 name|canWrite
 argument_list|()
-operator|||
-operator|!
-name|folder
-operator|.
-name|canWrite
-argument_list|()
 condition|)
 block|{
 throw|throw
