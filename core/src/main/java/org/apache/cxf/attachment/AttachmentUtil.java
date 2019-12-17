@@ -1231,8 +1231,7 @@ name|incrementAndGet
 argument_list|()
 argument_list|)
 operator|+
-literal|"%40"
-comment|// '@'
+literal|'@'
 operator|+
 name|URLEncoder
 operator|.
