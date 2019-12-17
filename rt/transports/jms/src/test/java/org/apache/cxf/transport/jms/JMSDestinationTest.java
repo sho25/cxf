@@ -703,6 +703,10 @@ name|FaultyConnectionFactory
 implements|implements
 name|ConnectionFactory
 block|{
+specifier|final
+name|AtomicInteger
+name|latch
+decl_stmt|;
 specifier|private
 specifier|final
 name|ConnectionFactory
@@ -717,11 +721,6 @@ argument_list|,
 name|Connection
 argument_list|>
 name|wrapper
-decl_stmt|;
-specifier|private
-specifier|final
-name|AtomicInteger
-name|latch
 decl_stmt|;
 specifier|private
 name|FaultyConnectionFactory
@@ -2925,7 +2924,7 @@ init|=
 operator|new
 name|AtomicInteger
 argument_list|(
-literal|1
+literal|5
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2945,7 +2944,7 @@ argument_list|(
 name|c
 argument_list|)
 block|{
-block|@Override                 public Session createSession(boolean transacted
+block|@Override             public Session createSession(boolean transacted
 decl_stmt|,
 name|int
 name|acknowledgeMode
@@ -2953,11 +2952,26 @@ decl_stmt|)
 throws|throws
 name|JMSException
 block|{
-comment|// Fail only once
-decl_stmt|if (latch.getAndDecrement(
-block|)
-function|== 0
-block|)
+comment|// Fail five times, starting with on successful call
+name|final
+name|int
+name|latchValue
+operator|=
+name|latch
+operator|.
+name|getAndDecrement
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|latchValue
+operator|>=
+literal|0
+operator|&&
+name|latchValue
+operator|<
+literal|5
+condition|)
 block|{
 throw|throw
 operator|new
@@ -2967,9 +2981,6 @@ literal|"createSession() failed (simulated)"
 argument_list|)
 throw|;
 block|}
-end_class
-
-begin_else
 else|else
 block|{
 return|return
@@ -2983,12 +2994,30 @@ name|acknowledgeMode
 argument_list|)
 return|;
 block|}
-end_else
+block|}
+block|}
+end_class
 
 begin_empty_stmt
-unit|}             }
 empty_stmt|;
 end_empty_stmt
+
+begin_decl_stmt
+specifier|final
+name|FaultyConnectionFactory
+name|faultyConnectionFactory
+init|=
+operator|new
+name|FaultyConnectionFactory
+argument_list|(
+name|cf
+argument_list|,
+name|connection
+argument_list|,
+literal|0
+argument_list|)
+decl_stmt|;
+end_decl_stmt
 
 begin_decl_stmt
 specifier|final
@@ -3020,15 +3049,7 @@ name|cf
 parameter_list|)
 block|{
 return|return
-operator|new
-name|FaultyConnectionFactory
-argument_list|(
-name|cf
-argument_list|,
-name|connection
-argument_list|,
-literal|0
-argument_list|)
+name|faultyConnectionFactory
 return|;
 block|}
 block|}
@@ -3047,23 +3068,39 @@ decl_stmt|;
 end_decl_stmt
 
 begin_decl_stmt
-name|JMSDestination
-name|destination
+name|JMSConfiguration
+name|jmsConfig
 init|=
-name|setupJMSDestination
+name|JMSConfigFactory
+operator|.
+name|createFromEndpointInfo
 argument_list|(
+name|bus
+argument_list|,
 name|ei
 argument_list|,
-name|wrapper
+literal|null
 argument_list|)
 decl_stmt|;
 end_decl_stmt
 
 begin_expr_stmt
-name|destination
+name|jmsConfig
 operator|.
-name|getJmsConfig
-argument_list|()
+name|setConnectionFactory
+argument_list|(
+name|wrapper
+operator|.
+name|apply
+argument_list|(
+name|cf
+argument_list|)
+argument_list|)
+expr_stmt|;
+end_expr_stmt
+
+begin_expr_stmt
+name|jmsConfig
 operator|.
 name|setRetryInterval
 argument_list|(
@@ -3071,6 +3108,32 @@ literal|1000
 argument_list|)
 expr_stmt|;
 end_expr_stmt
+
+begin_expr_stmt
+name|jmsConfig
+operator|.
+name|setConcurrentConsumers
+argument_list|(
+literal|10
+argument_list|)
+expr_stmt|;
+end_expr_stmt
+
+begin_decl_stmt
+name|JMSDestination
+name|destination
+init|=
+operator|new
+name|JMSDestination
+argument_list|(
+name|bus
+argument_list|,
+name|ei
+argument_list|,
+name|jmsConfig
+argument_list|)
+decl_stmt|;
+end_decl_stmt
 
 begin_expr_stmt
 name|destination
@@ -3151,6 +3214,26 @@ name|destination
 operator|.
 name|shutdown
 argument_list|()
+expr_stmt|;
+end_expr_stmt
+
+begin_expr_stmt
+name|assertEquals
+argument_list|(
+literal|"Only two createConnection() calls allowed because "
+operator|+
+literal|"restartConnection() should be called only once."
+argument_list|,
+operator|-
+literal|2
+argument_list|,
+name|faultyConnectionFactory
+operator|.
+name|latch
+operator|.
+name|get
+argument_list|()
+argument_list|)
 expr_stmt|;
 end_expr_stmt
 
