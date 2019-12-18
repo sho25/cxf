@@ -588,7 +588,6 @@ operator|(
 name|o
 operator|instanceof
 name|Attachment
-operator|)
 operator|&&
 name|attachments
 operator|.
@@ -604,6 +603,7 @@ operator|.
 name|getId
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|b
