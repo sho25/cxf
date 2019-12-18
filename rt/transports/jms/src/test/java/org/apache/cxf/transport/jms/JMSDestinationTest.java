@@ -703,6 +703,7 @@ name|FaultyConnectionFactory
 implements|implements
 name|ConnectionFactory
 block|{
+specifier|private
 specifier|final
 name|AtomicInteger
 name|latch
@@ -2955,7 +2956,7 @@ block|{
 comment|// Fail five times, starting with on successful call
 name|final
 name|int
-name|latchValue
+name|value
 operator|=
 name|latch
 operator|.
@@ -2964,11 +2965,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|latchValue
+name|value
 operator|>=
 literal|0
 operator|&&
-name|latchValue
+name|value
 operator|<
 literal|5
 condition|)
@@ -3220,9 +3221,9 @@ end_expr_stmt
 begin_expr_stmt
 name|assertEquals
 argument_list|(
-literal|"Only two createConnection() calls allowed because "
+literal|"Only two createConnection() calls allowed because restartConnection() should be "
 operator|+
-literal|"restartConnection() should be called only once."
+literal|"called only once."
 argument_list|,
 operator|-
 literal|2
