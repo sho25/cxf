@@ -4423,7 +4423,7 @@ literal|0
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|outputPartsMap
+name|outputParts
 operator|.
 name|remove
 argument_list|(

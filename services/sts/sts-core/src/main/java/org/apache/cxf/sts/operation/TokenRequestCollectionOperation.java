@@ -602,7 +602,7 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"All RequestSecurityTokenCollection elements do not share the same"
+literal|"All RequestSecurityTokenCollection elements do not share the same "
 operator|+
 literal|"RequestType"
 argument_list|)

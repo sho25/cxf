@@ -3150,10 +3150,6 @@ operator|||
 name|encrToken
 operator|instanceof
 name|SecurityContextToken
-operator|||
-name|encrToken
-operator|instanceof
-name|SecureConversationToken
 condition|)
 block|{
 name|properties
@@ -3631,10 +3627,6 @@ operator|||
 name|policyToken
 operator|instanceof
 name|SecurityContextToken
-operator|||
-name|policyToken
-operator|instanceof
-name|SecureConversationToken
 operator|||
 name|policyToken
 operator|instanceof
