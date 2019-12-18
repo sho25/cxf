@@ -724,6 +724,17 @@ argument_list|>
 name|wrapper
 decl_stmt|;
 specifier|private
+specifier|final
+name|AtomicInteger
+name|connectionsCreated
+init|=
+operator|new
+name|AtomicInteger
+argument_list|(
+literal|0
+argument_list|)
+decl_stmt|;
+specifier|private
 name|FaultyConnectionFactory
 parameter_list|(
 name|ConnectionFactory
@@ -805,6 +816,11 @@ operator|<=
 literal|0
 condition|)
 block|{
+name|connectionsCreated
+operator|.
+name|incrementAndGet
+argument_list|()
+expr_stmt|;
 return|return
 name|wrapper
 operator|.
@@ -2900,6 +2916,11 @@ argument_list|()
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -2908,6 +2929,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|EndpointInfo
 name|ei
 init|=
@@ -2920,7 +2942,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|AtomicInteger
-name|latch
+name|sessionsToFail
 init|=
 operator|new
 name|AtomicInteger
@@ -2958,7 +2980,7 @@ name|final
 name|int
 name|value
 operator|=
-name|latch
+name|sessionsToFail
 operator|.
 name|getAndDecrement
 argument_list|()
@@ -3225,12 +3247,11 @@ literal|"Only two createConnection() calls allowed because restartConnection() s
 operator|+
 literal|"called only once."
 argument_list|,
-operator|-
 literal|2
 argument_list|,
 name|faultyConnectionFactory
 operator|.
-name|latch
+name|connectionsCreated
 operator|.
 name|get
 argument_list|()
