@@ -954,9 +954,7 @@ operator|&&
 operator|!
 name|KeyAlgorithm
 operator|.
-name|DIRECT
-operator|.
-name|equals
+name|isDirect
 argument_list|(
 name|encryptor
 operator|.
