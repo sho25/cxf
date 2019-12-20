@@ -785,6 +785,8 @@ name|address
 operator|.
 name|length
 argument_list|()
+operator|-
+literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -1143,6 +1145,11 @@ argument_list|()
 argument_list|,
 name|limit
 argument_list|)
+expr_stmt|;
+name|writer
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch

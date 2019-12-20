@@ -259,14 +259,17 @@ init|=
 literal|128
 decl_stmt|;
 specifier|private
+specifier|final
 name|ContentEncryptionProvider
 name|contentEncryptionAlgo
 decl_stmt|;
 specifier|private
+specifier|final
 name|KeyEncryptionProvider
 name|keyEncryptionAlgo
 decl_stmt|;
 specifier|private
+specifier|final
 name|JsonMapObjectReaderWriter
 name|writer
 init|=

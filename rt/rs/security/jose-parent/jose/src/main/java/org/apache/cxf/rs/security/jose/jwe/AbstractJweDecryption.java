@@ -253,10 +253,12 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|KeyDecryptionProvider
 name|keyDecryptionAlgo
 decl_stmt|;
 specifier|private
+specifier|final
 name|ContentDecryptionProvider
 name|contentDecryptionAlgo
 decl_stmt|;

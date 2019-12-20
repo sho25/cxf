@@ -559,6 +559,14 @@ name|CFG_SUPPRESS_GENERATED_DATE_OPTION
 init|=
 literal|"suppress-generated-date"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_MAX_EXTENSION_STACK_DEPTH
+init|=
+literal|"maxExtensionStackDepth"
+decl_stmt|;
 comment|//Internal Flag to generate
 specifier|public
 specifier|static

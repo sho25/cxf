@@ -103,6 +103,7 @@ extends|extends
 name|JweDecryption
 block|{
 specifier|private
+specifier|final
 name|String
 name|supportedAlgo
 decl_stmt|;

@@ -2320,14 +2320,6 @@ block|}
 if|if
 condition|(
 operator|!
-name|requestedScope
-operator|.
-name|containsAll
-argument_list|(
-name|approvedScope
-argument_list|)
-operator|||
-operator|!
 name|OAuthUtils
 operator|.
 name|validateScopes

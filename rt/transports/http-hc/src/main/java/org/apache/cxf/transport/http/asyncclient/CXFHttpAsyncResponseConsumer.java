@@ -288,13 +288,17 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+comment|// Only consume content when the work was accepted by the work queue
+if|if
+condition|(
 name|outstream
 operator|.
 name|retrySetHttpResponse
 argument_list|(
 name|response
 argument_list|)
-expr_stmt|;
+condition|)
+block|{
 name|buf
 operator|.
 name|consumeContent
@@ -304,6 +308,7 @@ argument_list|,
 name|ioc
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Override

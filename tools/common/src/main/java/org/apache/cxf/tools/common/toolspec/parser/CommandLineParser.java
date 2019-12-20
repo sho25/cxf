@@ -543,9 +543,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"No schema known- call to acceptSc"
-operator|+
-literal|"hema() must be made and must succeed"
+literal|"No schema known- call to acceptSchema() must be made and must succeed"
 argument_list|)
 throw|;
 block|}

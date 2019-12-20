@@ -57,6 +57,7 @@ init|=
 literal|4118589816228511524L
 decl_stmt|;
 specifier|private
+specifier|final
 name|Error
 name|status
 decl_stmt|;

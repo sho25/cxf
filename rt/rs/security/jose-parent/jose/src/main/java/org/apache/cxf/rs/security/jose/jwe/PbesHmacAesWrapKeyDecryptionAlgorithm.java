@@ -105,11 +105,13 @@ implements|implements
 name|KeyDecryptionProvider
 block|{
 specifier|private
+specifier|final
 name|byte
 index|[]
 name|password
 decl_stmt|;
 specifier|private
+specifier|final
 name|KeyAlgorithm
 name|algo
 decl_stmt|;

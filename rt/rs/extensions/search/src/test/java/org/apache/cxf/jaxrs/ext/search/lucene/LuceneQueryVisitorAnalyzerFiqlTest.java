@@ -101,18 +101,6 @@ name|Test
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|Assert
-operator|.
-name|assertNull
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -132,26 +120,6 @@ block|{
 name|doTestTextContentMatchWithAnalyzer
 argument_list|(
 literal|"ct==tEXt"
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testTextContentMatchStopWord
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|assertNull
-argument_list|(
-literal|"No query should be returned for stop words"
-argument_list|,
-name|createTermQueryWithAnalyzer
-argument_list|(
-literal|"ct==the"
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

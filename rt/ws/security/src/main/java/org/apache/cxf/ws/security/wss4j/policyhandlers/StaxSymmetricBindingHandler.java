@@ -974,6 +974,9 @@ operator|.
 name|getAlgorithmSuite
 argument_list|()
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|setAsymmetricSignature
 argument_list|(
 name|asymSignatureAlgorithm
@@ -1013,6 +1016,9 @@ block|{
 name|sbinding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|setSymmetricSignature
@@ -3144,10 +3150,6 @@ operator|||
 name|encrToken
 operator|instanceof
 name|SecurityContextToken
-operator|||
-name|encrToken
-operator|instanceof
-name|SecureConversationToken
 condition|)
 block|{
 name|properties
@@ -3628,10 +3630,6 @@ name|SecurityContextToken
 operator|||
 name|policyToken
 operator|instanceof
-name|SecureConversationToken
-operator|||
-name|policyToken
-operator|instanceof
 name|SpnegoContextToken
 condition|)
 block|{
@@ -3689,6 +3687,9 @@ argument_list|(
 name|sbinding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|getSymmetricSignature

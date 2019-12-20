@@ -37,9 +37,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|tools
 operator|.
-name|FileUtils
+name|common
+operator|.
+name|ProcessorTestBase
 import|;
 end_import
 
@@ -55,7 +57,7 @@ name|tools
 operator|.
 name|common
 operator|.
-name|ProcessorTestBase
+name|TestFileUtils
 import|;
 end_import
 
@@ -374,7 +376,7 @@ expr_stmt|;
 name|String
 name|seiContent
 init|=
-name|FileUtils
+name|TestFileUtils
 operator|.
 name|getStringFromFile
 argument_list|(
@@ -385,13 +387,10 @@ name|assertTrue
 argument_list|(
 name|seiContent
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"java.util.Date"
 argument_list|)
-operator|!=
-operator|-
-literal|1
 argument_list|)
 expr_stmt|;
 block|}

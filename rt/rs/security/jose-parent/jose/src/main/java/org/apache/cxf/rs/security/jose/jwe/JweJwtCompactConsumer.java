@@ -139,10 +139,12 @@ class|class
 name|JweJwtCompactConsumer
 block|{
 specifier|private
+specifier|final
 name|JweCompactConsumer
 name|jweConsumer
 decl_stmt|;
 specifier|private
+specifier|final
 name|JweHeaders
 name|headers
 decl_stmt|;

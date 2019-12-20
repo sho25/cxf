@@ -85,6 +85,8 @@ name|weld
 operator|.
 name|environment
 operator|.
+name|servlet
+operator|.
 name|Container
 import|;
 end_import

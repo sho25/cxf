@@ -2170,6 +2170,13 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|bean
+operator|.
+name|setProperties
+argument_list|(
+name|configProps
+argument_list|)
+expr_stmt|;
 name|Boolean
 name|threadSafe
 init|=

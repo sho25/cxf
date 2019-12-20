@@ -1130,8 +1130,12 @@ block|{
 comment|// Not yet available
 name|Assert
 operator|.
-name|assertNull
+name|assertEquals
 argument_list|(
+name|SERVICE_URI
+operator|+
+literal|"/test1"
+argument_list|,
 name|responseOut
 operator|.
 name|getAddress
@@ -1229,8 +1233,12 @@ block|{
 comment|// Not yet available
 name|Assert
 operator|.
-name|assertNull
+name|assertEquals
 argument_list|(
+name|SERVICE_URI
+operator|+
+literal|"/test1"
+argument_list|,
 name|responseIn
 operator|.
 name|getAddress

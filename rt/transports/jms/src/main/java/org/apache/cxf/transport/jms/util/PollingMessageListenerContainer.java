@@ -790,6 +790,9 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
+name|safeRollBack
+argument_list|()
+expr_stmt|;
 name|handleException
 argument_list|(
 name|e
@@ -1052,6 +1055,15 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|this
+operator|.
+name|exceptionListener
+operator|!=
+literal|null
+condition|)
+block|{
 name|this
 operator|.
 name|exceptionListener
@@ -1061,6 +1073,7 @@ argument_list|(
 name|wrapped
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|boolean
@@ -1180,7 +1193,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Shuttting down "
+literal|"Shutting down "
 operator|+
 name|this
 operator|.
@@ -1191,14 +1204,6 @@ name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-name|running
-condition|)
-block|{
-return|return;
-block|}
 name|running
 operator|=
 literal|false

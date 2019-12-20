@@ -65,7 +65,7 @@ name|String
 name|key
 parameter_list|,
 specifier|final
-name|String
+name|Object
 name|value
 parameter_list|)
 block|{
@@ -93,7 +93,7 @@ name|String
 name|key
 parameter_list|,
 specifier|final
-name|String
+name|Object
 name|value
 parameter_list|)
 block|{

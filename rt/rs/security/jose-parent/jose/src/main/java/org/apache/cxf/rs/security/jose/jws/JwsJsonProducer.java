@@ -260,14 +260,17 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|boolean
 name|supportFlattened
 decl_stmt|;
 specifier|private
+specifier|final
 name|boolean
 name|supportDetached
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|plainPayload
 decl_stmt|;
@@ -276,6 +279,7 @@ name|String
 name|encodedPayload
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|JwsJsonSignatureEntry
@@ -288,6 +292,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JsonMapObjectReaderWriter
 name|writer
 init|=

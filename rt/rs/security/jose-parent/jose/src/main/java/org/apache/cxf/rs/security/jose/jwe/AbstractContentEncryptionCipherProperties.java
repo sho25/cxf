@@ -131,12 +131,14 @@ init|=
 literal|128
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|authTagLen
 init|=
 name|DEFAULT_AUTH_TAG_LENGTH
 decl_stmt|;
 specifier|private
+specifier|final
 name|ContentAlgorithm
 name|algo
 decl_stmt|;

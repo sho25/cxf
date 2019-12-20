@@ -105,10 +105,12 @@ implements|implements
 name|JsonObject
 block|{
 specifier|private
+specifier|final
 name|JweHeaders
 name|unprotectedHeader
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|encodedEncryptedKey
 decl_stmt|;

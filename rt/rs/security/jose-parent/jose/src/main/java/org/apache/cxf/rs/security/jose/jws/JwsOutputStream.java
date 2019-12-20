@@ -89,10 +89,12 @@ name|boolean
 name|flushed
 decl_stmt|;
 specifier|private
+specifier|final
 name|JwsSignature
 name|signature
 decl_stmt|;
 specifier|private
+specifier|final
 name|boolean
 name|writeSignature
 decl_stmt|;

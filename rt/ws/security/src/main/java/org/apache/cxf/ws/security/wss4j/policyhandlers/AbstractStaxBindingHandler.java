@@ -3482,6 +3482,9 @@ operator|.
 name|getAlgorithmSuite
 argument_list|()
 operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|getSymmetricSignature
 argument_list|()
 argument_list|)
@@ -3496,6 +3499,9 @@ argument_list|(
 name|binding
 operator|.
 name|getAlgorithmSuite
+argument_list|()
+operator|.
+name|getAlgorithmSuiteType
 argument_list|()
 operator|.
 name|getAsymmetricSignature

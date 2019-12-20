@@ -482,7 +482,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|SchemaValidator
+name|WSDL11Validator
 operator|.
 name|class
 argument_list|)

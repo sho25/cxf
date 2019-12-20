@@ -1978,7 +1978,7 @@ block|{
 return|return
 name|generateRandomTokenKey
 argument_list|(
-literal|16
+literal|32
 argument_list|)
 return|;
 block|}

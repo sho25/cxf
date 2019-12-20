@@ -76,7 +76,7 @@ specifier|public
 class|class
 name|JAXRSClientServerWebSocketNoAtmosphereTest
 extends|extends
-name|JAXRSClientServerWebSocketTest
+name|AbstractJAXRSClientServerWebSocketTest
 block|{
 specifier|private
 specifier|static
@@ -138,7 +138,13 @@ name|void
 name|cleanup
 parameter_list|()
 block|{
-comment|//System.clearProperty("org.apache.cxf.transport.websocket.atmosphere.disabled");
+name|System
+operator|.
+name|clearProperty
+argument_list|(
+literal|"org.apache.cxf.transport.websocket.atmosphere.disabled"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 name|String

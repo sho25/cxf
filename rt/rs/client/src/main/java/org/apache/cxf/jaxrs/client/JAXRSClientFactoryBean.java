@@ -891,6 +891,9 @@ name|WebClient
 argument_list|(
 name|getAddress
 argument_list|()
+argument_list|,
+name|getProperties
+argument_list|()
 argument_list|)
 else|:
 operator|new
@@ -1036,6 +1039,9 @@ name|getAddress
 argument_list|()
 argument_list|,
 name|timeToKeepState
+argument_list|,
+name|getProperties
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1066,6 +1072,9 @@ argument_list|,
 name|headers
 argument_list|,
 literal|null
+argument_list|,
+name|getProperties
+argument_list|()
 argument_list|)
 else|:
 name|initialState
@@ -1574,6 +1583,9 @@ name|isRoot
 argument_list|,
 name|inheritHeaders
 argument_list|,
+name|getProperties
+argument_list|()
+argument_list|,
 name|varValues
 argument_list|)
 return|;
@@ -1593,6 +1605,9 @@ argument_list|,
 name|isRoot
 argument_list|,
 name|inheritHeaders
+argument_list|,
+name|getProperties
+argument_list|()
 argument_list|,
 name|varValues
 argument_list|)

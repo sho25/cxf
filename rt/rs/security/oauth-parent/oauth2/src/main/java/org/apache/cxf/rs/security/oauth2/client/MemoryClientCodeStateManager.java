@@ -275,7 +275,7 @@ name|CryptoUtils
 operator|.
 name|generateSecureRandomBytes
 argument_list|(
-literal|16
+literal|32
 argument_list|)
 argument_list|)
 decl_stmt|;

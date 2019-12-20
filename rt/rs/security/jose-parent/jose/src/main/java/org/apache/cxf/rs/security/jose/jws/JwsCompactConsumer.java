@@ -212,14 +212,17 @@ name|JsonMapObjectReaderWriter
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|encodedSequence
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|encodedSignature
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|headersJson
 decl_stmt|;

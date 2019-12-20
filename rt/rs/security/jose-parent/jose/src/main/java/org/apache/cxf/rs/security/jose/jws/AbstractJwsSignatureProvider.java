@@ -93,6 +93,7 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|SignatureAlgorithm
 name|algorithm
 decl_stmt|;

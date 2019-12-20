@@ -85,7 +85,9 @@ name|weld
 operator|.
 name|environment
 operator|.
-name|Container
+name|jetty
+operator|.
+name|JettyContainer
 import|;
 end_import
 
@@ -99,9 +101,9 @@ name|weld
 operator|.
 name|environment
 operator|.
-name|jetty
+name|servlet
 operator|.
-name|JettyContainer
+name|Container
 import|;
 end_import
 

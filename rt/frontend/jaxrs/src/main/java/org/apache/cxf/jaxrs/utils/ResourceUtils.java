@@ -33,6 +33,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|InputStream
 import|;
 end_import
@@ -4090,7 +4100,7 @@ name|Bus
 name|bus
 parameter_list|)
 throws|throws
-name|Exception
+name|IOException
 block|{
 name|URL
 name|url
@@ -4130,7 +4140,7 @@ name|Bus
 name|bus
 parameter_list|)
 throws|throws
-name|Exception
+name|IOException
 block|{
 name|URL
 name|url
@@ -4457,7 +4467,7 @@ name|Bus
 name|bus
 parameter_list|)
 throws|throws
-name|Exception
+name|IOException
 block|{
 name|Properties
 name|props
@@ -6793,7 +6803,10 @@ argument_list|)
 expr_stmt|;
 name|bean
 operator|.
-name|setFeatures
+name|getFeatures
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|features
 argument_list|)

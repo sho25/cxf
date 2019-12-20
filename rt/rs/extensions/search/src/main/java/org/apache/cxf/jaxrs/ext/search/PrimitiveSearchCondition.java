@@ -912,6 +912,22 @@ argument_list|(
 literal|1
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|rval
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|SearchParseException
+argument_list|(
+literal|"A single wildcard is not a valid search condition"
+argument_list|)
+throw|;
+block|}
 block|}
 if|if
 condition|(

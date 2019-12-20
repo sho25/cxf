@@ -39,10 +39,12 @@ class|class
 name|JweDecryptionOutput
 block|{
 specifier|private
+specifier|final
 name|JweHeaders
 name|headers
 decl_stmt|;
 specifier|private
+specifier|final
 name|byte
 index|[]
 name|content

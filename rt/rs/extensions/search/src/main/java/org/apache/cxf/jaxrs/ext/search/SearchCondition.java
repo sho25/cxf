@@ -40,15 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|//CHECKSTYLE:OFF
-end_comment
-
-begin_comment
-comment|/**  * Can be used to build plain or complex/composite search conditions.  *<p>  * Google Collections<a href="http://google-collections.googlecode.com/svn/trunk/javadoc/com/google/common/base/Predicate.html">Predicate</a>  * might've been used instead, but it is a too generic and its apply method is not quite needed here  *</p>  *  * @param<T> Type of the object which will be checked by SearchCondition instance  *  */
-end_comment
-
-begin_comment
-comment|//CHECKSTYLE:ON
+comment|/**  * Can be used to build plain or complex/composite search conditions.  *<p>  * Google Collections Predicate might've been used instead, but it is too  * generic and its apply method is not quite needed here  *</p>  *  * @param<T> Type of the object which will be checked by SearchCondition instance  *  */
 end_comment
 
 begin_interface

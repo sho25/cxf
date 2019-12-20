@@ -262,17 +262,6 @@ name|getForce
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Provider
-argument_list|(
-name|value
-operator|=
-name|Provider
-operator|.
-name|Type
-operator|.
-name|Feature
-argument_list|)
 specifier|public
 specifier|static
 class|class

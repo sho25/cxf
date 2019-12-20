@@ -392,13 +392,6 @@ name|prettyLogging
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Provider
-argument_list|(
-name|Type
-operator|.
-name|Feature
-argument_list|)
 specifier|public
 specifier|static
 class|class

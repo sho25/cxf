@@ -538,6 +538,9 @@ argument_list|,
 name|nestedPolicy
 argument_list|)
 expr_stmt|;
+name|getAlgorithmSuiteType
+argument_list|()
+operator|.
 name|setAsymmetricSignature
 argument_list|(
 literal|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"

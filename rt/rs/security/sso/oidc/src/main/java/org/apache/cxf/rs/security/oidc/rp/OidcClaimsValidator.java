@@ -659,11 +659,7 @@ name|ex
 argument_list|)
 throw|;
 block|}
-if|if
-condition|(
-name|strictTimeValidation
-condition|)
-block|{
+comment|// Validate nbf - but don't require it to be present
 try|try
 block|{
 name|JwtUtils
@@ -675,7 +671,7 @@ argument_list|,
 name|getClockOffset
 argument_list|()
 argument_list|,
-name|strictTimeValidation
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -694,7 +690,6 @@ argument_list|,
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

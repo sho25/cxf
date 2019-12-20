@@ -137,7 +137,7 @@ name|NoBodyPartsSEI
 block|{
 specifier|private
 name|String
-name|md5
+name|digest
 parameter_list|(
 name|byte
 index|[]
@@ -153,7 +153,7 @@ name|MessageDigest
 operator|.
 name|getInstance
 argument_list|(
-literal|"MD5"
+literal|"SHA-256"
 argument_list|)
 decl_stmt|;
 name|algorithm
@@ -255,7 +255,7 @@ name|r
 operator|.
 name|setStatus
 argument_list|(
-name|md5
+name|digest
 argument_list|(
 name|mimeAttachment
 operator|.

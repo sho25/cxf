@@ -778,7 +778,7 @@ argument_list|(
 name|builder
 argument_list|)
 operator|.
-name|data
+name|appendData
 argument_list|(
 name|line
 operator|.

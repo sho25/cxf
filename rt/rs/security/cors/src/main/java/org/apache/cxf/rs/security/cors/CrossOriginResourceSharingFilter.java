@@ -1808,9 +1808,12 @@ name|op
 operator|==
 literal|null
 operator|||
-name|op
-operator|==
 name|PREFLIGHT_FAILED
+operator|.
+name|equals
+argument_list|(
+name|op
+argument_list|)
 condition|)
 block|{
 return|return;

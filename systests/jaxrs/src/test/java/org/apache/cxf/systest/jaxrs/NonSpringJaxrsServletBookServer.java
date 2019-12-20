@@ -178,7 +178,7 @@ operator|new
 name|CXFNonSpringJaxrsServlet
 argument_list|(
 operator|new
-name|BookStore
+name|BookStoreOpenAPI
 argument_list|()
 argument_list|)
 argument_list|)

@@ -1320,27 +1320,12 @@ block|{
 comment|// If a redirect URI is empty then the code will be returned out of band,
 comment|// typically will be returned directly to a human user
 return|return
-operator|(
 name|c
 operator|.
 name|isConfidential
 argument_list|()
 operator|&&
 name|canSupportEmptyRedirectForPrivateClients
-operator|||
-name|canSupportPublicClient
-argument_list|(
-name|c
-argument_list|)
-operator|)
-operator|&&
-name|c
-operator|.
-name|getRedirectUris
-argument_list|()
-operator|.
-name|isEmpty
-argument_list|()
 return|;
 block|}
 specifier|public
