@@ -219,10 +219,12 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|final
 name|KeyAlgorithm
 name|keyAlgo
 decl_stmt|;
 specifier|private
+specifier|final
 name|EcdhHelper
 name|helper
 decl_stmt|;

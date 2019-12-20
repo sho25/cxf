@@ -141,11 +141,13 @@ extends|extends
 name|AbstractJwsSignatureProvider
 block|{
 specifier|private
+specifier|final
 name|byte
 index|[]
 name|key
 decl_stmt|;
 specifier|private
+specifier|final
 name|AlgorithmParameterSpec
 name|hmacSpec
 decl_stmt|;
@@ -216,6 +218,10 @@ name|super
 argument_list|(
 name|algo
 argument_list|)
+expr_stmt|;
+name|hmacSpec
+operator|=
+literal|null
 expr_stmt|;
 try|try
 block|{

@@ -83,10 +83,12 @@ class|class
 name|JweCompactProducer
 block|{
 specifier|private
+specifier|final
 name|JweHeaders
 name|headers
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|data
 decl_stmt|;

@@ -141,10 +141,12 @@ implements|implements
 name|KeyDecryptionProvider
 block|{
 specifier|private
+specifier|final
 name|ECPrivateKey
 name|key
 decl_stmt|;
 specifier|private
+specifier|final
 name|KeyAlgorithm
 name|algo
 decl_stmt|;

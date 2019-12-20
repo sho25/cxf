@@ -139,14 +139,17 @@ extends|extends
 name|AbstractJwsSignatureProvider
 block|{
 specifier|private
+specifier|final
 name|PrivateKey
 name|key
 decl_stmt|;
 specifier|private
+specifier|final
 name|SecureRandom
 name|random
 decl_stmt|;
 specifier|private
+specifier|final
 name|AlgorithmParameterSpec
 name|signatureSpec
 decl_stmt|;

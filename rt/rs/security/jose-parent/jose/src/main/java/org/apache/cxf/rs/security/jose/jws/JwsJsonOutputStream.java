@@ -151,6 +151,7 @@ name|boolean
 name|flushed
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -158,6 +159,7 @@ argument_list|>
 name|protectedHeaders
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|JwsSignature
@@ -165,6 +167,7 @@ argument_list|>
 name|signatures
 decl_stmt|;
 specifier|private
+specifier|final
 name|ExecutorService
 name|executor
 decl_stmt|;

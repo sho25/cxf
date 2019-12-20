@@ -170,6 +170,7 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|JweDecryptionInput
 name|jweDecryptionInput
 decl_stmt|;

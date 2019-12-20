@@ -121,6 +121,7 @@ extends|extends
 name|DirectKeyDecryptionAlgorithm
 block|{
 specifier|private
+specifier|final
 name|ECPrivateKey
 name|privateKey
 decl_stmt|;

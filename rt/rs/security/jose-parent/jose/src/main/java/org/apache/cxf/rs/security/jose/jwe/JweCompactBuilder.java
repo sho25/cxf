@@ -97,14 +97,17 @@ class|class
 name|JweCompactBuilder
 block|{
 specifier|private
+specifier|final
 name|StringBuilder
 name|jweContentBuilder
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|encodedEncryptedContent
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|encodedAuthTag
 decl_stmt|;

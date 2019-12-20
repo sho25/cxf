@@ -61,6 +61,7 @@ extends|extends
 name|AesGcmContentEncryptionAlgorithm
 block|{
 specifier|private
+specifier|final
 name|EcdhHelper
 name|helper
 decl_stmt|;

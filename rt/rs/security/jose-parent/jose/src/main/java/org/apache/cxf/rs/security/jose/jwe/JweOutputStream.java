@@ -138,14 +138,17 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|Cipher
 name|encryptingCipher
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|blockSize
 decl_stmt|;
 specifier|private
+specifier|final
 name|AuthenticationTagProducer
 name|authTagProducer
 decl_stmt|;

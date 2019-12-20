@@ -170,14 +170,17 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
 name|Key
 name|cekDecryptionKey
 decl_stmt|;
 specifier|private
+specifier|final
 name|boolean
 name|unwrap
 decl_stmt|;
 specifier|private
+specifier|final
 name|KeyAlgorithm
 name|supportedAlgo
 decl_stmt|;
