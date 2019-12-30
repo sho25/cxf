@@ -798,9 +798,6 @@ block|{
 return|return
 operator|new
 name|StringBuilder
-argument_list|()
-operator|.
-name|append
 argument_list|(
 literal|"[OperationInfo: "
 argument_list|)

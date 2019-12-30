@@ -131,7 +131,7 @@ block|{
 return|return
 name|version
 operator|+
-literal|"."
+literal|'.'
 operator|+
 name|this
 operator|.
