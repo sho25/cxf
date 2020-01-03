@@ -564,7 +564,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Create a JMS of the appropriate type populated with the given payload.      *      * @param payload the message payload, expected to be either of type String or byte[] depending on payload      *            type      * @param session the JMS session      * @param replyTo the ReplyTo destination if any      * @return a JMS of the appropriate type populated with the given payload      */
+comment|/**      * Create a JMS of the appropriate type populated with the given payload.      *      * @param payload the message payload, expected to be either of type String or byte[] depending on payload      *            type      * @param session the JMS session      * @param messageType the JMS message type      * @return a JMS of the appropriate type populated with the given payload      */
 specifier|public
 specifier|static
 name|Message

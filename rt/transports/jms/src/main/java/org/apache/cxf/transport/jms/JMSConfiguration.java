@@ -1234,7 +1234,7 @@ return|return
 name|factory
 return|;
 block|}
-comment|/**      * Retrieve connection factory from JNDI      *      * @param jmsConfig      * @param jndiConfig      * @return      */
+comment|/**      * Retrieve connection factory from JNDI      *      * @return the connection factory from JNDI      */
 specifier|private
 name|ConnectionFactory
 name|getConnectionFactoryFromJndi

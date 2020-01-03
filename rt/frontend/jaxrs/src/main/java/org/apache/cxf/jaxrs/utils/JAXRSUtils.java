@@ -10490,7 +10490,7 @@ name|doIntersect
 argument_list|()
 return|;
 block|}
-comment|/**      * intersect two mime types      *      * @param mimeTypesA      * @param mimeTypesB      * @return return a list of intersected mime types      */
+comment|/**      * intersect two mime types      *      * @param requiredMediaTypes      * @param userMediaTypes      * @param addRequiredParamsIfPossible      * @return return a list of intersected mime types      */
 specifier|public
 specifier|static
 name|List

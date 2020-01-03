@@ -493,7 +493,7 @@ name|AbstractApplicationContext
 name|wac
 parameter_list|)
 block|{
-comment|/**          * The change in the way application listeners are maintained during the context refresh           * since Spring Framework 5.1.5 (https://github.com/spring-projects/spring-framework/issues/22325). The          * CXF adds listener **after** the context has been refreshed, not much control we have over it, but          * it does matter now: the listeners registered after the context refresh disappear when           * context is refreshed. The ugly hack here, to stay in the loop, is to add CXF servlet          * to "earlyApplicationListeners" set, only than it will be kept between refreshes.          */
+comment|/**          * The change in the way application listeners are maintained during the context refresh          * since Spring Framework 5.1.5 (https://github.com/spring-projects/spring-framework/issues/22325). The          * CXF adds listener **after** the context has been refreshed, not much control we have over it, but          * it does matter now: the listeners registered after the context refresh disappear when          * context is refreshed. The ugly hack here, to stay in the loop, is to add CXF servlet          * to "earlyApplicationListeners" set, only than it will be kept between refreshes.          */
 try|try
 block|{
 specifier|final
@@ -637,7 +637,7 @@ block|{
 comment|//ignore.
 block|}
 block|}
-comment|/**      * Try to create a spring application context from the config location.      * Will first try to resolve the location using the servlet context.      * If that does not work then the location is given as is to spring      *      * @param ctx      * @param sc      * @param configLocation      * @return      */
+comment|/**      * Try to create a spring application context from the config location.      * Will first try to resolve the location using the servlet context.      * If that does not work then the location is given as is to spring      *      * @param ctx      * @param servletConfig      * @param location      * @return      */
 specifier|private
 name|ApplicationContext
 name|createSpringContext

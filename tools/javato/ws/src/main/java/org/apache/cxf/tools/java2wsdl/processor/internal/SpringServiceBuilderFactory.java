@@ -352,7 +352,7 @@ name|String
 name|databindingNameToBeanName
 parameter_list|(
 name|String
-name|dbName
+name|databindingName
 parameter_list|)
 block|{
 return|return
@@ -360,7 +360,7 @@ name|StringUtils
 operator|.
 name|capitalize
 argument_list|(
-name|dbName
+name|databindingName
 operator|.
 name|toLowerCase
 argument_list|()
@@ -540,7 +540,7 @@ operator|+
 literal|"ServiceBuilderBean"
 return|;
 block|}
-comment|/**      * This is factored out to permit use in a unit test.      *      * @param bus      * @return      */
+comment|/**      * This is factored out to permit use in a unit test.      *      * @param additionalFilePathnames      * @return      */
 specifier|public
 specifier|static
 name|ApplicationContext
