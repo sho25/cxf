@@ -33,16 +33,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Comparator
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|List
 import|;
 end_import
@@ -138,11 +128,6 @@ specifier|public
 specifier|abstract
 class|class
 name|OperationResourceInfoComparatorBase
-implements|implements
-name|Comparator
-argument_list|<
-name|OperationResourceInfo
-argument_list|>
 block|{
 specifier|private
 specifier|static
@@ -160,7 +145,6 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|protected
-specifier|static
 name|int
 name|compare
 parameter_list|(
@@ -199,7 +183,6 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-specifier|static
 name|int
 name|compare
 parameter_list|(
@@ -249,7 +232,6 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-specifier|static
 name|int
 name|compare
 parameter_list|(
