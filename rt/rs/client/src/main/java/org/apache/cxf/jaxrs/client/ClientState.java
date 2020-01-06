@@ -160,7 +160,7 @@ name|String
 argument_list|,
 name|String
 argument_list|>
-name|map
+name|templates
 parameter_list|)
 function_decl|;
 comment|/**      * Gets the templates map      * @return templates      */
@@ -202,7 +202,7 @@ argument_list|>
 name|templates
 parameter_list|)
 function_decl|;
-comment|/**      * The factory method for creating a new state.      * Example, proxy and WebClient.fromClient will use this method when creating      * subresource proxies and new web clients respectively to ensure thet stay      * thread-local if needed      * @param baseURI baseURI      * @param headers request headers, can be null      * @param templates initial templates map, can be null      * @param additional properties, could be null      * @return client state      */
+comment|/**      * The factory method for creating a new state.      * Example, proxy and WebClient.fromClient will use this method when creating      * subresource proxies and new web clients respectively to ensure thet stay      * thread-local if needed      * @param baseURI baseURI      * @param headers request headers, can be null      * @param templates initial templates map, can be null      * @param properties additional properties, could be null      * @return client state      */
 specifier|default
 name|ClientState
 name|newState

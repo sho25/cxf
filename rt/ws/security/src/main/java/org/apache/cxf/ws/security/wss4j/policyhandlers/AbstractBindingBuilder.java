@@ -7463,7 +7463,7 @@ name|String
 name|addWsuIdToElement
 parameter_list|(
 name|Element
-name|elem
+name|element
 parameter_list|)
 block|{
 name|String
@@ -7473,7 +7473,7 @@ comment|//first try to get the Id attr
 name|Attr
 name|idAttr
 init|=
-name|elem
+name|element
 operator|.
 name|getAttributeNodeNS
 argument_list|(
@@ -7492,7 +7492,7 @@ block|{
 comment|//then try the wsu:Id value
 name|idAttr
 operator|=
-name|elem
+name|element
 operator|.
 name|getAttributeNodeNS
 argument_list|(
@@ -7533,7 +7533,7 @@ name|createId
 argument_list|(
 literal|"_"
 argument_list|,
-name|elem
+name|element
 argument_list|)
 expr_stmt|;
 name|String
@@ -7545,7 +7545,7 @@ try|try
 block|{
 name|pfx
 operator|=
-name|elem
+name|element
 operator|.
 name|lookupPrefix
 argument_list|(
@@ -7567,7 +7567,7 @@ name|DOMUtils
 operator|.
 name|getPrefixRecursive
 argument_list|(
-name|elem
+name|element
 argument_list|,
 name|PolicyConstants
 operator|.
@@ -7622,7 +7622,7 @@ try|try
 block|{
 name|ns
 operator|=
-name|elem
+name|element
 operator|.
 name|lookupNamespaceURI
 argument_list|(
@@ -7642,7 +7642,7 @@ name|DOMUtils
 operator|.
 name|getNamespace
 argument_list|(
-name|elem
+name|element
 argument_list|,
 name|pfx
 argument_list|)
@@ -7676,7 +7676,7 @@ condition|)
 block|{
 name|idAttr
 operator|=
-name|elem
+name|element
 operator|.
 name|getOwnerDocument
 argument_list|()
@@ -7701,7 +7701,7 @@ operator|.
 name|WSU_NAMESPACE_URI
 argument_list|)
 expr_stmt|;
-name|elem
+name|element
 operator|.
 name|setAttributeNodeNS
 argument_list|(
@@ -7711,7 +7711,7 @@ expr_stmt|;
 block|}
 name|idAttr
 operator|=
-name|elem
+name|element
 operator|.
 name|getOwnerDocument
 argument_list|()
@@ -7734,7 +7734,7 @@ argument_list|(
 name|id
 argument_list|)
 expr_stmt|;
-name|elem
+name|element
 operator|.
 name|setAttributeNodeNS
 argument_list|(

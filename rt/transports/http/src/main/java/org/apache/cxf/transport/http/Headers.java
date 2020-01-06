@@ -1688,7 +1688,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * This procedure logs the PROTOCOL_HEADERS from the      * Message at the specified logging level.      *      * @param logger     The Logger to log to.      * @param level   The Logging Level.      * @param headers The Message protocol headers.      */
+comment|/**      * This procedure logs the PROTOCOL_HEADERS from the      * Message at the specified logging level.      *      * @param logger     The Logger to log to.      * @param level   The Logging Level.      * @param headersMap The Message protocol headers.      * @param logSensitiveHeaders whether to log sensitive headers      */
 specifier|static
 name|void
 name|logProtocolHeaders
@@ -2343,7 +2343,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Copy the request headers into the message.      *      * @param message the current message      * @param headers the current set of headers      */
+comment|/**      * Copy the request headers into the message.      *      * @param req the current servlet request      */
 specifier|protected
 name|void
 name|copyFromRequest
@@ -2795,7 +2795,7 @@ name|header
 argument_list|)
 return|;
 block|}
-comment|/**      * Copy the response headers into the response.      *      * @param message the current message      * @param headers the current set of headers      */
+comment|/**      * Copy the response headers into the response.      *      * @param response the current ServletResponse      */
 specifier|protected
 name|void
 name|copyToResponse

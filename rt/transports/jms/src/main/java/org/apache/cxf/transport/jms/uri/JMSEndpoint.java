@@ -388,7 +388,7 @@ name|endpointUri
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param endpointUri      * @param target      */
+comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param endpointInfo      * @param target      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
@@ -422,12 +422,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param ei      * @param endpointUri      */
+comment|/**      * @param endpointInfo      * @param endpointUri      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
 name|EndpointInfo
-name|ei
+name|endpointInfo
 parameter_list|,
 name|String
 name|endpointUri
@@ -443,7 +443,7 @@ name|QUEUE
 expr_stmt|;
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 condition|)
@@ -454,7 +454,7 @@ name|retrieveWSDLInformation
 argument_list|(
 name|this
 argument_list|,
-name|ei
+name|endpointInfo
 argument_list|)
 expr_stmt|;
 block|}
@@ -552,14 +552,14 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 condition|)
 block|{
 name|getJaxWsJmsProps
 argument_list|(
-name|ei
+name|endpointInfo
 operator|.
 name|getProperties
 argument_list|()
@@ -570,11 +570,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 operator|&&
-name|ei
+name|endpointInfo
 operator|.
 name|getBinding
 argument_list|()
@@ -584,7 +584,7 @@ condition|)
 block|{
 name|getJaxWsJmsProps
 argument_list|(
-name|ei
+name|endpointInfo
 operator|.
 name|getBinding
 argument_list|()

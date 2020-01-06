@@ -372,7 +372,7 @@ operator|=
 name|permission
 expr_stmt|;
 block|}
-comment|/**      * Indicates if this permission has been allocated by default or not.      * Authorization View handlers may use this property to optimize the way the user selects the      * scopes.      * For example, assume that read', 'add' and 'update' scopes are supported and the      * 'read' scope is always allocated. This can be presented at the UI level as follows:      * the read-only check-box control will represent a 'read' scope and a user will be able to      * optionally select 'add' and/or 'update' scopes, in addition to the default 'read' one.      * @param isDefault true if the permission has been allocated by default      */
+comment|/**      * Indicates if this permission has been allocated by default or not.      * Authorization View handlers may use this property to optimize the way the user selects the      * scopes.      * For example, assume that read', 'add' and 'update' scopes are supported and the      * 'read' scope is always allocated. This can be presented at the UI level as follows:      * the read-only check-box control will represent a 'read' scope and a user will be able to      * optionally select 'add' and/or 'update' scopes, in addition to the default 'read' one.      * @param value true if the permission has been allocated by default      */
 specifier|public
 name|void
 name|setDefaultPermission

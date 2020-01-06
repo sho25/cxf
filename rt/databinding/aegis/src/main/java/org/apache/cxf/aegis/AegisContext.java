@@ -637,7 +637,7 @@ return|return
 name|creator
 return|;
 block|}
-comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings for,      * say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.      *      * @param mappingNamespaceURI URI to select mappings based on the encoding.      */
+comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings for,      * say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.      */
 specifier|public
 name|void
 name|initialize
@@ -1090,7 +1090,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Examine a list of override classes, and register all of them.      *      * @param tm type manager for this binding      * @param classes list of class names      */
+comment|/**      * Examine a list of override classes, and register all of them.      */
 specifier|private
 name|void
 name|processRootTypes
@@ -1572,7 +1572,7 @@ return|return
 name|configuration
 return|;
 block|}
-comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *      * @param configuration The configuration to set.      */
+comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *      * @param newConfiguration The configuration to set.      */
 specifier|public
 name|void
 name|setTypeCreationOptions

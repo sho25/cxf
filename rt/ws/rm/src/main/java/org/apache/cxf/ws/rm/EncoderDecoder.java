@@ -412,7 +412,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Builds an element containing WS-RM headers. This adds the appropriate WS-RM namespace declaration to the element,      * and then adds any WS-RM headers set in the supplied properties as child elements.      *      * @param rmps      * @param qname constructed element name      * @return element (<code>null</code> if none)      */
+comment|/**      * Builds an element containing WS-RM headers. This adds the appropriate WS-RM namespace declaration to the element,      * and then adds any WS-RM headers set in the supplied properties as child elements.      *      * @param rmps      * @param headers the list of headers      */
 specifier|public
 name|void
 name|buildHeaders
@@ -494,7 +494,7 @@ name|headers
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Builds an element containing a WS-RM Fault. This adds the appropriate WS-RM namespace declaration to      * the element, and then adds the Fault as a child element.      *      * @param sf      * @param qname constructed element name      * @return element      */
+comment|/**      * Builds an element containing a WS-RM Fault. This adds the appropriate WS-RM namespace declaration to      * the element, and then adds the Fault as a child element.      *      * @param sf      * @return Header fault      */
 specifier|public
 name|Header
 name|buildHeaderFault
@@ -538,7 +538,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Build all required headers, using the correct protocol variation.      *      * @param seq      * @param acks      * @param reqs      * @param last      * @param header      * @param marshaller      * @throws JAXBException      */
+comment|/**      * Build all required headers, using the correct protocol variation.      *      * @param seq      * @param acks      * @param reqs      * @param last      * @param headers      * @throws JAXBException      */
 specifier|protected
 specifier|abstract
 name|void
@@ -571,7 +571,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Build a header fault, using the correct protocol variation.      *      * @param sf      * @return the object marshallable with the JAXContext       */
+comment|/**      * Build a header fault, using the correct protocol variation.      *      * @param sf      * @return the object marshallable with the JAXContext      */
 specifier|protected
 specifier|abstract
 name|Object

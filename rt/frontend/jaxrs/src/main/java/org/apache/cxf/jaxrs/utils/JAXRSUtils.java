@@ -9202,7 +9202,7 @@ name|m
 argument_list|)
 return|;
 block|}
-comment|/**      * Retrieve map of query parameters from the passed in message      * @param message      * @return a Map of query parameters.      */
+comment|/**      * Retrieve map of query parameters from the passed in message      * @return a Map of query parameters.      */
 specifier|public
 specifier|static
 name|MultivaluedMap

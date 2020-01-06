@@ -2536,7 +2536,7 @@ name|isRefParamAttr
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *      * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param value the value to encode      * @param name the QName for the header      * @param clz the class      * @param header the SOAP header element      * @param JAXBContext the JAXB context to use      */
+comment|/**      * Encode message in exposed version.      *      * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param message the SoapMessage      * @param value the value to encode      * @param name the QName for the header      * @param clz the class      * @param JAXBContext the JAXB context to use      */
 specifier|private
 parameter_list|<
 name|T
@@ -2646,7 +2646,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the SOAP message      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
+comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the SOAP message      * @return the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
 specifier|public
 name|AddressingProperties
 name|unmarshalMAPs
@@ -3537,7 +3537,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Decodes a MAP from a exposed version.      *      * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param marshaller the JAXB marshaller to use      * @return the decoded value      */
+comment|/**      * Decodes a MAP from a exposed version.      *      * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param unmarshaller the JAXB unmarshaller to use      * @return the decoded value      */
 specifier|public
 parameter_list|<
 name|T
@@ -3727,7 +3727,7 @@ return|return
 name|text
 return|;
 block|}
-comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the messsage      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
+comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the messsage      * @return the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
 specifier|private
 name|AddressingProperties
 name|decode
@@ -3745,7 +3745,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Encodes an MAP as a SOAP header.      *      * @param message the message to store the headers on      * @param value the value to encode      * @param qname the QName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
+comment|/**      * Encodes an MAP as a SOAP header.      *      * @param message the message to store the headers on      * @param value the value to encode      * @param qname the QName for the header      * @param clz the class      * @param ctx the JAXBContent      * @param mustUnderstand      */
 specifier|protected
 parameter_list|<
 name|T
@@ -3828,7 +3828,7 @@ name|h
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Decodes a MAP from a SOAP header.      *      * @param clz the class      * @param headerElement the SOAP header element      * @param marshaller the JAXB marshaller to use      * @return the decoded value      */
+comment|/**      * Decodes a MAP from a SOAP header.      *      * @param clz the class      * @param headerElement the SOAP header element      * @param unmarshaller the JAXB unmarshaller to use      * @return the decoded value      */
 specifier|protected
 parameter_list|<
 name|T
@@ -3956,7 +3956,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Propogate action to SOAPAction header      *      * @param action the Action property      * @param message the SOAP message      */
+comment|/**      * Propagate action to SOAPAction header      *      * @param action the Action property      * @param message the SOAP message      */
 specifier|private
 name|void
 name|propogateAction
@@ -4158,7 +4158,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create a SoapFault.      *      * @param localName the fault local name      * @param prefix the fault prefix      * @param namespace the fault namespace      * @param reason the fault reason      * @return a new SoapFault      */
+comment|/**      * Create a SoapFault.      *      * @param localName the fault local name      * @param namespace the fault namespace      * @param reason the fault reason      * @return a new SoapFault      */
 specifier|private
 name|SoapFault
 name|createSOAPFaut

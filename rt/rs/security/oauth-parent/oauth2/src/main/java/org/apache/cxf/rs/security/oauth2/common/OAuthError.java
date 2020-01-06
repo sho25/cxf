@@ -155,7 +155,7 @@ operator|=
 name|errorUri
 expr_stmt|;
 block|}
-comment|/**      * Gets the optional link to the page      * describing the error in detail      * @param errorUri error page URI      */
+comment|/**      * Gets the optional link to the page      * describing the error in detail      */
 specifier|public
 name|String
 name|getErrorUri

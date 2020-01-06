@@ -2201,7 +2201,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Accepts a new resend candidate.      *      * @param ctx the message context.      * @return ResendCandidate      */
+comment|/**      * Accepts a new resend candidate.      *      * @param message the message object.      * @return ResendCandidate      */
 specifier|protected
 name|ResendCandidate
 name|cacheUnacknowledged
@@ -2539,7 +2539,7 @@ specifier|private
 name|boolean
 name|includeAckRequested
 decl_stmt|;
-comment|/**          * @param ctx message context for the unacked message          */
+comment|/**          * @param m the unacked message          */
 specifier|protected
 name|ResendCandidate
 parameter_list|(
@@ -3433,7 +3433,7 @@ specifier|public
 interface|interface
 name|Resender
 block|{
-comment|/**          * Resend mechanics.          *          * @param message          * @param if a AckRequest should be included          */
+comment|/**          * Resend mechanics.          *          * @param message          * @param requestAcknowledge if a AckRequest should be included          */
 name|void
 name|resend
 parameter_list|(
