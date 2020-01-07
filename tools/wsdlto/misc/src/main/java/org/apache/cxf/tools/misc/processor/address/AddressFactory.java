@@ -105,11 +105,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
-operator|.
 name|common
 operator|.
-name|ToolException
+name|util
+operator|.
+name|StringUtils
 import|;
 end_import
 
@@ -123,9 +123,9 @@ name|cxf
 operator|.
 name|tools
 operator|.
-name|util
+name|common
 operator|.
-name|NameUtil
+name|ToolException
 import|;
 end_import
 
@@ -252,7 +252,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|NameUtil
+name|StringUtils
 operator|.
 name|capitalize
 argument_list|(

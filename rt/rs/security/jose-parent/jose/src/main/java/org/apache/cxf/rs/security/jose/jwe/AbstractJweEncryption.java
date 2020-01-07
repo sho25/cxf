@@ -1201,6 +1201,12 @@ argument_list|,
 name|theCek
 argument_list|)
 expr_stmt|;
+name|state
+operator|.
+name|theHeaders
+operator|=
+name|theHeaders
+expr_stmt|;
 if|if
 condition|(
 name|jweInput
@@ -1313,12 +1319,6 @@ operator|.
 name|theIv
 operator|=
 name|theIv
-expr_stmt|;
-name|state
-operator|.
-name|theHeaders
-operator|=
-name|theHeaders
 expr_stmt|;
 name|state
 operator|.

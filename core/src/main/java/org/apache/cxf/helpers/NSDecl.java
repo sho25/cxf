@@ -123,7 +123,7 @@ block|{
 return|return
 name|prefix
 operator|+
-literal|":"
+literal|':'
 operator|+
 name|uri
 return|;

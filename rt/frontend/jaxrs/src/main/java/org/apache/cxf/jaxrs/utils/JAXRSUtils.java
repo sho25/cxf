@@ -5709,6 +5709,70 @@ name|i
 operator|++
 control|)
 block|{
+if|if
+condition|(
+operator|!
+name|paraList1
+index|[
+name|i
+index|]
+operator|.
+name|equals
+argument_list|(
+name|paraList2
+index|[
+name|i
+index|]
+argument_list|)
+condition|)
+block|{
+comment|// Handling the case when bridge / synthetic methods may be taken
+comment|// into account (f.e. when service implements generic interfaces or
+comment|// extends the generic classes).
+if|if
+condition|(
+name|paraList1
+index|[
+name|i
+index|]
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|paraList2
+index|[
+name|i
+index|]
+argument_list|)
+condition|)
+block|{
+return|return
+literal|1
+return|;
+block|}
+elseif|else
+if|if
+condition|(
+name|paraList2
+index|[
+name|i
+index|]
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|paraList1
+index|[
+name|i
+index|]
+argument_list|)
+condition|)
+block|{
+return|return
+operator|-
+literal|1
+return|;
+block|}
+else|else
+block|{
 name|int
 name|result
 init|=
@@ -5741,6 +5805,8 @@ block|{
 return|return
 name|result
 return|;
+block|}
+block|}
 block|}
 block|}
 return|return
@@ -9136,7 +9202,7 @@ name|m
 argument_list|)
 return|;
 block|}
-comment|/**      * Retrieve map of query parameters from the passed in message      * @param message      * @return a Map of query parameters.      */
+comment|/**      * Retrieve map of query parameters from the passed in message      * @return a Map of query parameters.      */
 specifier|public
 specifier|static
 name|MultivaluedMap
@@ -10424,7 +10490,7 @@ name|doIntersect
 argument_list|()
 return|;
 block|}
-comment|/**      * intersect two mime types      *      * @param mimeTypesA      * @param mimeTypesB      * @return return a list of intersected mime types      */
+comment|/**      * intersect two mime types      *      * @param requiredMediaTypes      * @param userMediaTypes      * @param addRequiredParamsIfPossible      * @return return a list of intersected mime types      */
 specifier|public
 specifier|static
 name|List

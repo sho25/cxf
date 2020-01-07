@@ -4976,7 +4976,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/**      * Builds param string for query part or matrix part of URI.      *      * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @param fromEncoded if true then values will be decoded      * @return stringified params.      */
+comment|/**      * Builds param string for query part or matrix part of URI.      *      * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @return stringified params.      */
 specifier|private
 name|String
 name|buildParams

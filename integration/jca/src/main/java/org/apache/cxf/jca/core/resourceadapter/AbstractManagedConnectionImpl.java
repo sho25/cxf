@@ -842,7 +842,7 @@ operator|.
 name|getName
 argument_list|()
 operator|+
-literal|":"
+literal|':'
 operator|+
 name|hashCode
 argument_list|()

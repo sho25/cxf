@@ -642,7 +642,7 @@ name|id
 operator|=
 name|s
 operator|+
-literal|"-"
+literal|'-'
 operator|+
 name|DEFAULT_BUS_ID
 operator|+

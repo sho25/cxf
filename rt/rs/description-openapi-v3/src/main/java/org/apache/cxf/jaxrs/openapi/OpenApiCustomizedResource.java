@@ -57,6 +57,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|Path
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|PathParam
 import|;
 end_import
@@ -70,6 +82,20 @@ operator|.
 name|rs
 operator|.
 name|Produces
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|Application
 import|;
 end_import
 
@@ -173,7 +199,7 @@ name|integration
 operator|.
 name|resources
 operator|.
-name|OpenApiResource
+name|BaseOpenApiResource
 import|;
 end_import
 
@@ -278,11 +304,16 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|Path
+argument_list|(
+literal|"/openapi.{type:json|yaml}"
+argument_list|)
 specifier|public
 class|class
 name|OpenApiCustomizedResource
 extends|extends
-name|OpenApiResource
+name|BaseOpenApiResource
 block|{
 specifier|private
 specifier|final
@@ -328,6 +359,11 @@ specifier|public
 name|Response
 name|getOpenApi
 parameter_list|(
+annotation|@
+name|Context
+name|Application
+name|app
+parameter_list|,
 annotation|@
 name|Context
 name|ServletConfig
@@ -675,6 +711,10 @@ operator|.
 name|getOpenApi
 argument_list|(
 name|headers
+argument_list|,
+name|config
+argument_list|,
+name|app
 argument_list|,
 name|uriInfo
 argument_list|,

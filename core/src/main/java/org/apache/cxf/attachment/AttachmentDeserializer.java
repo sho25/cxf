@@ -1465,11 +1465,11 @@ name|boolean
 name|readTillFirstBoundary
 parameter_list|(
 name|PushbackInputStream
-name|pbs
+name|pushbackInStream
 parameter_list|,
 name|byte
 index|[]
-name|bp
+name|boundary
 parameter_list|)
 throws|throws
 name|IOException
@@ -1480,12 +1480,12 @@ comment|// and available always returns 0.
 name|int
 name|value
 init|=
-name|pbs
+name|pushbackInStream
 operator|.
 name|read
 argument_list|()
 decl_stmt|;
-name|pbs
+name|pushbackInStream
 operator|.
 name|unread
 argument_list|(
@@ -1502,7 +1502,7 @@ condition|)
 block|{
 name|value
 operator|=
-name|pbs
+name|pushbackInStream
 operator|.
 name|read
 argument_list|()
@@ -1514,7 +1514,7 @@ name|byte
 operator|)
 name|value
 operator|==
-name|bp
+name|boundary
 index|[
 literal|0
 index|]
@@ -1535,7 +1535,7 @@ operator|&&
 operator|(
 name|boundaryIndex
 operator|<
-name|bp
+name|boundary
 operator|.
 name|length
 operator|)
@@ -1546,7 +1546,7 @@ name|byte
 operator|)
 name|value
 operator|==
-name|bp
+name|boundary
 index|[
 name|boundaryIndex
 index|]
@@ -1555,7 +1555,7 @@ condition|)
 block|{
 name|value
 operator|=
-name|pbs
+name|pushbackInStream
 operator|.
 name|read
 argument_list|()
@@ -1584,7 +1584,7 @@ if|if
 condition|(
 name|boundaryIndex
 operator|==
-name|bp
+name|boundary
 operator|.
 name|length
 condition|)
@@ -1597,7 +1597,7 @@ operator|==
 literal|13
 condition|)
 block|{
-name|pbs
+name|pushbackInStream
 operator|.
 name|read
 argument_list|()

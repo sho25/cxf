@@ -1944,7 +1944,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|OpenApiResource
+name|BaseOpenApiResource
 name|createOpenApiResource
 parameter_list|()
 block|{
@@ -4306,7 +4306,7 @@ argument_list|()
 return|;
 block|}
 specifier|private
-name|OpenApiResource
+name|BaseOpenApiResource
 name|createOpenApiResource
 parameter_list|()
 block|{

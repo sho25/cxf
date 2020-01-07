@@ -372,7 +372,7 @@ specifier|final
 name|String
 name|filterIssuerSerialTemplate
 decl_stmt|;
-comment|/**      *      * @param ldapSearch      * @param rootDN rootDN of the LDAP tree      * @param trustedAuthorityFilter      * @param intermediateFilter      * @param attrName      */
+comment|/**      *      * @param ldapSearch      * @param ldapConfig      * @param rootDN rootDN of the LDAP tree      */
 specifier|public
 name|LdapCertificateRepo
 parameter_list|(

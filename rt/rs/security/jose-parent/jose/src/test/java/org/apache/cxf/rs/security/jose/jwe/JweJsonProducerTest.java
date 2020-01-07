@@ -475,7 +475,7 @@ literal|"\"recipients\":"
 operator|+
 literal|"["
 operator|+
-literal|"{}"
+literal|"{\"header\":{\"alg\":\"dir\"}}"
 operator|+
 literal|"],"
 operator|+
@@ -495,6 +495,8 @@ init|=
 literal|"{"
 operator|+
 literal|"\"protected\":\"eyJlbmMiOiJBMTI4R0NNIn0\","
+operator|+
+literal|"\"header\":{\"alg\":\"dir\"},"
 operator|+
 literal|"\"iv\":\"48V1_ALb6US04U3b\","
 operator|+
@@ -654,7 +656,7 @@ literal|"\"recipients\":"
 operator|+
 literal|"["
 operator|+
-literal|"{}"
+literal|"{\"header\":{\"alg\":\"dir\"}}"
 operator|+
 literal|"],"
 operator|+

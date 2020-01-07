@@ -103,6 +103,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|StringUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|databinding
 operator|.
 name|DataBinding
@@ -184,22 +200,6 @@ operator|.
 name|processor
 operator|.
 name|FrontendFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tools
-operator|.
-name|util
-operator|.
-name|NameUtil
 import|;
 end_import
 
@@ -352,15 +352,15 @@ name|String
 name|databindingNameToBeanName
 parameter_list|(
 name|String
-name|dbName
+name|databindingName
 parameter_list|)
 block|{
 return|return
-name|NameUtil
+name|StringUtils
 operator|.
 name|capitalize
 argument_list|(
-name|dbName
+name|databindingName
 operator|.
 name|toLowerCase
 argument_list|()
@@ -540,7 +540,7 @@ operator|+
 literal|"ServiceBuilderBean"
 return|;
 block|}
-comment|/**      * This is factored out to permit use in a unit test.      *      * @param bus      * @return      */
+comment|/**      * This is factored out to permit use in a unit test.      *      * @param additionalFilePathnames      * @return      */
 specifier|public
 specifier|static
 name|ApplicationContext

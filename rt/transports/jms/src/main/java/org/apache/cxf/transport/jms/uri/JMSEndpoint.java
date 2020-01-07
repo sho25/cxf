@@ -372,7 +372,7 @@ specifier|private
 name|boolean
 name|ignoreTimeoutException
 decl_stmt|;
-comment|/**      * @param uri      * @param subject      */
+comment|/**      * @param endpointUri      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
@@ -388,7 +388,7 @@ name|endpointUri
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param target      */
+comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param endpointInfo      * @param target      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
@@ -422,12 +422,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param uri      * @param subject      */
+comment|/**      * @param endpointInfo      * @param endpointUri      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
 name|EndpointInfo
-name|ei
+name|endpointInfo
 parameter_list|,
 name|String
 name|endpointUri
@@ -443,7 +443,7 @@ name|QUEUE
 expr_stmt|;
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 condition|)
@@ -454,7 +454,7 @@ name|retrieveWSDLInformation
 argument_list|(
 name|this
 argument_list|,
-name|ei
+name|endpointInfo
 argument_list|)
 expr_stmt|;
 block|}
@@ -552,14 +552,14 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 condition|)
 block|{
 name|getJaxWsJmsProps
 argument_list|(
-name|ei
+name|endpointInfo
 operator|.
 name|getProperties
 argument_list|()
@@ -570,11 +570,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|ei
+name|endpointInfo
 operator|!=
 literal|null
 operator|&&
-name|ei
+name|endpointInfo
 operator|.
 name|getBinding
 argument_list|()
@@ -584,7 +584,7 @@ condition|)
 block|{
 name|getJaxWsJmsProps
 argument_list|(
-name|ei
+name|endpointInfo
 operator|.
 name|getBinding
 argument_list|()
@@ -772,6 +772,7 @@ throw|;
 block|}
 block|}
 specifier|private
+specifier|static
 name|String
 name|getPropSetterName
 parameter_list|(
@@ -779,40 +780,18 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|String
-name|first
-init|=
-name|name
-operator|.
-name|substring
-argument_list|(
-literal|0
-argument_list|,
-literal|1
-argument_list|)
-decl_stmt|;
-name|String
-name|rest
-init|=
-name|name
-operator|.
-name|substring
-argument_list|(
-literal|1
-argument_list|)
-decl_stmt|;
 return|return
 literal|"set"
 operator|+
-name|first
+name|StringUtils
 operator|.
-name|toUpperCase
-argument_list|()
-operator|+
-name|rest
+name|capitalize
+argument_list|(
+name|name
+argument_list|)
 return|;
 block|}
-comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the      * jndiParameters else in the parameters      *      * @param endpoint      * @param params      */
+comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the      * jndiParameters else in the parameters      *      * @param params      */
 specifier|private
 name|void
 name|configureProperties
@@ -1169,7 +1148,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param targetserviceParameterName      * @return      */
+comment|/**      * @param key      * @return      */
 specifier|public
 name|String
 name|getParameter
