@@ -266,7 +266,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Select one of the alternate addresses for a retried invocation.      *      * @param a List of alternate addresses if available      * @return the selected address      */
+comment|/**      * Select one of the alternate addresses for a retried invocation.      *      * @param alternates a List of alternate addresses if available      * @return the selected address      */
 specifier|public
 name|String
 name|selectAlternateAddress
@@ -367,7 +367,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Select one of the alternate endpoints for a retried invocation.      *      * @param a List of alternate endpoints if available      * @return the selected endpoint      */
+comment|/**      * Select one of the alternate endpoints for a retried invocation.      *      * @param alternates a List of alternate endpoints if available      * @return the selected endpoint      */
 specifier|public
 name|Endpoint
 name|selectAlternateEndpoint

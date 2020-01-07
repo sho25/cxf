@@ -68,7 +68,7 @@ specifier|public
 interface|interface
 name|ResourceOwnerLoginHandler
 block|{
-comment|/**      * Create a {@link UserSubject} for the name and password parameters, or return null if the name and password      * are invalid.      * @param client using the resource owner grant      * @param resource owner name      * @param resource owner password      * @return A {@link UserSubject} representing the user, or null.      */
+comment|/**      * Create a {@link UserSubject} for the name and password parameters, or return null if the name and password      * are invalid.      * @param client using the resource owner grant      * @param name owner name      * @param password owner password      * @return A {@link UserSubject} representing the user, or null.      */
 name|UserSubject
 name|createSubject
 parameter_list|(

@@ -1353,7 +1353,7 @@ name|bus
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlURL the URL to load      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlUrl the URL to load      * @return a new Client loaded using the wsdlUrl parameter      */
 specifier|public
 name|Client
 name|createClient
@@ -1412,7 +1412,7 @@ name|bindingFiles
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlURL the URL to load      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlUrl the URL to load      * @return a new Client loaded using the wsdlUrl parameter      */
 specifier|public
 name|Client
 name|createClient

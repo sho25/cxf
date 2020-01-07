@@ -327,7 +327,7 @@ operator|=
 name|mapCodec
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *      * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
+comment|/**      * Encode message in exposed version.      *      * @param message The message to be encoded      * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param marshaller the JAXB context to use      * @param mustUnderstand whether mustUnderstand is true      */
 specifier|public
 parameter_list|<
 name|T

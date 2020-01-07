@@ -201,7 +201,7 @@ parameter_list|()
 block|{
 comment|//utility class
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param element      * @param namespaceURI namespace      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      */
 specifier|public
 specifier|static
 name|String
@@ -315,7 +315,7 @@ name|prefixes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param writer target writer.      * @param namespaceURI namespace      * @param declare whether to declare to the stream.      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|String

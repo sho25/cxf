@@ -2944,7 +2944,7 @@ return|return
 name|soi
 return|;
 block|}
-comment|/**      * Get action from attributes on MessageInfo      *      * @param bindingOpInfo the current BindingOperationInfo      * @param msgInfo the current MessageInfo      * @return the action if set      */
+comment|/**      * Get action from attributes on MessageInfo      *      * @param msgInfo the current MessageInfo      * @return the action if set      */
 specifier|private
 specifier|static
 name|String
@@ -3156,7 +3156,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Get the Executor for this invocation.      * @param endpoint      * @return      */
+comment|/**      * Get the Executor for this invocation.      * @param message the current Message      * @return the executor for this invocation      */
 specifier|private
 specifier|static
 name|Executor

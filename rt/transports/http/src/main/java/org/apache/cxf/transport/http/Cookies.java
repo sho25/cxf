@@ -215,7 +215,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Given a list of current cookies and a new Set-Cookie: request, construct      * a new set of current cookies and return it.      * @param current Set of previously set cookies      * @param header Text of a Set-Cookie: header      * @return New set of cookies      */
+comment|/**      * Given a list of current cookies and a new Set-Cookie: request, construct      * a new set of current cookies and return it.      * @param headers Text of the Set-Cookie: headers      * @return New set of cookies      */
 specifier|private
 name|void
 name|handleSetCookie

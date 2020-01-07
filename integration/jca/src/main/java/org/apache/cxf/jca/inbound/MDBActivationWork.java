@@ -502,7 +502,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @param endpoint      * @param classLoader      */
+comment|/**      * @param invoker      * @param classLoader      */
 specifier|private
 name|void
 name|activate
@@ -1173,7 +1173,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * @param str      * @return      */
 specifier|private
 name|List
 argument_list|<
