@@ -144,7 +144,7 @@ return|return
 name|tokenId
 return|;
 block|}
-comment|/**      * Set the attached TokenReference      * @param attachtedReference the attached TokenReference      */
+comment|/**      * Set the attached TokenReference      * @param attachedReference the attached TokenReference      */
 specifier|public
 name|void
 name|setAttachedReference
@@ -170,7 +170,7 @@ return|return
 name|attachedReference
 return|;
 block|}
-comment|/**      * Set the unattached TokenReference      * @param unAttachedReference  Set the unattached TokenReference      */
+comment|/**      * Set the unattached TokenReference      * @param unattachedReference  Set the unattached TokenReference      */
 specifier|public
 name|void
 name|setUnattachedReference

@@ -2536,7 +2536,7 @@ name|isRefParamAttr
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *      * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param message the SoapMessage      * @param value the value to encode      * @param name the QName for the header      * @param clz the class      * @param JAXBContext the JAXB context to use      */
+comment|/**      * Encode message in exposed version.      *      * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param message the SoapMessage      * @param value the value to encode      * @param name the QName for the header      * @param clz the class      * @param context the JAXB context to use      */
 specifier|private
 parameter_list|<
 name|T

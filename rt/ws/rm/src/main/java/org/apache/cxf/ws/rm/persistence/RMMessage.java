@@ -111,7 +111,7 @@ return|return
 name|messageNumber
 return|;
 block|}
-comment|/**      * Sets the message number of the message within its sequence.      * @param messageNumber the message number      */
+comment|/**      * Sets the message number of the message within its sequence.      * @param mn the message number      */
 specifier|public
 name|void
 name|setMessageNumber
@@ -125,7 +125,7 @@ operator|=
 name|mn
 expr_stmt|;
 block|}
-comment|/**      * Sets the message content using the CachedOutputStream.class.      * @param in      */
+comment|/**      * Sets the message content using the CachedOutputStream.class.      * @param cos      */
 specifier|public
 name|void
 name|setContent

@@ -94,7 +94,6 @@ specifier|private
 name|boolean
 name|isClosed
 decl_stmt|;
-comment|/**      * @param source      */
 name|DelegatingInputStream
 parameter_list|(
 name|InputStream

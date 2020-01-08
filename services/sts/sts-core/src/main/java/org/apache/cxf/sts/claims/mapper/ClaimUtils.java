@@ -527,7 +527,7 @@ return|return
 name|mappedProcessedClaims
 return|;
 block|}
-comment|/**      * Mapping all values from the given claim according to the provided map. Input claims will not be      * modified. Result claim will be a clone of the provided claims just with different (mapped) claim      * values.      *      * @param processedClaim Claim providing values to be mapped      * @param map Map of old:new mapping values      * @param keepUnmapped if set to false only values contained in the map will be returned. If set to true,      *            values not contained in the map will also remain in the returned claim.      * @return Returns the provided claim with mapped values      */
+comment|/**      * Mapping all values from the given claim according to the provided map. Input claims will not be      * modified. Result claim will be a clone of the provided claims just with different (mapped) claim      * values.      *      * @param processedClaim Claim providing values to be mapped      * @param mapping Map of old:new mapping values      * @param keepUnmapped if set to false only values contained in the map will be returned. If set to true,      *            values not contained in the map will also remain in the returned claim.      * @return Returns the provided claim with mapped values      */
 specifier|public
 name|ProcessedClaim
 name|mapValues
@@ -1009,7 +1009,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * All claims within the provided collection will be updated in the following manner: If no original      * issuer is set, the issuer in the provided claims will be set as original issuer. If an original issuer      * was already set before, the original issuer will not be updated. All claims will be updated to have the      * provided issuer name be set as the claim issuer.      *      * @param processedClaims Collection of claims to be updated      * @param issuerName Issuer to be set for all claims within the collection      * @return Returns a new claim collection with clones of updated claims      */
+comment|/**      * All claims within the provided collection will be updated in the following manner: If no original      * issuer is set, the issuer in the provided claims will be set as original issuer. If an original issuer      * was already set before, the original issuer will not be updated. All claims will be updated to have the      * provided issuer name be set as the claim issuer.      *      * @param processedClaims Collection of claims to be updated      * @param newIssuer Issuer to be set for all claims within the collection      * @return Returns a new claim collection with clones of updated claims      */
 specifier|public
 name|ProcessedClaimCollection
 name|updateIssuer

@@ -223,7 +223,7 @@ operator|=
 name|mapName
 expr_stmt|;
 block|}
-comment|/**      * Get the Hazelcast instance      * If null, return Default instance      * @param hzInstance Hazelcast instance      */
+comment|/**      * Get the Hazelcast instance      * @return Hazelcast instance      */
 specifier|public
 name|HazelcastInstance
 name|getHazelcastInstance
@@ -248,7 +248,7 @@ return|return
 name|hazelcastInstance
 return|;
 block|}
-comment|/**      * Set the Hazelcast instance, otherwise default instance used      * If you configure Hazelcast instance in spring, you must inject the instance here.      * @param hzInstance Hazelcast instance      */
+comment|/**      * Set the Hazelcast instance, otherwise default instance used      * If you configure Hazelcast instance in spring, you must inject the instance here.      * @param hazelcastInstance Hazelcast instance      */
 specifier|public
 name|void
 name|setHazelcastInstance

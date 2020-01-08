@@ -433,7 +433,7 @@ return|return
 name|expires
 return|;
 block|}
-comment|/**      * Returns true if this sequence was constructed from an offer for an      * inbound sequence includes in the CreateSequenceRequest in response to      * which the sequence with the specified identifier was created.      *      * @param id the sequence identifier      * @return true if the sequence was constructed from an offer.      */
+comment|/**      * Returns true if this sequence was constructed from an offer for an      * inbound sequence includes in the CreateSequenceRequest in response to      * which the sequence with the specified identifier was created.      *      * @param sid the sequence identifier      * @return true if the sequence was constructed from an offer.      */
 specifier|public
 name|boolean
 name|offeredBy
@@ -620,20 +620,20 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Used by the RM source to cache received acknowledgements for this      * sequence.      *      * @param acknowledgement an acknowledgement for this sequence      */
+comment|/**      * Used by the RM source to cache received acknowledgements for this      * sequence.      *      * @param ack an acknowledgement for this sequence      */
 specifier|public
 name|void
 name|setAcknowledged
 parameter_list|(
 name|SequenceAcknowledgement
-name|a
+name|ack
 parameter_list|)
 throws|throws
 name|RMException
 block|{
 name|acknowledgement
 operator|=
-name|a
+name|ack
 expr_stmt|;
 name|source
 operator|.

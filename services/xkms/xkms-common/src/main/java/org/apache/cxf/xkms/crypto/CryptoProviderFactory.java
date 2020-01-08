@@ -76,7 +76,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Create without fallback crypto      *      * @param cryptoProperties      * @return xkms crypto      */
+comment|/**      * Create without fallback crypto      *      * @return xkms crypto      */
 name|Crypto
 name|create
 parameter_list|()
@@ -89,7 +89,7 @@ name|Crypto
 name|fallbackCrypto
 parameter_list|)
 function_decl|;
-comment|/**      * Create with overridden keystoreProperties to create default Crypto      *      * @param xkmsClient      * @param keystoreProperties      * @return      */
+comment|/**      * Create with overridden keystoreProperties to create default Crypto      *      * @param keystoreProperties      * @return      */
 name|Crypto
 name|create
 parameter_list|(

@@ -5277,7 +5277,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Use for injection of entityProviders      * @param entityProviders the entityProviders to set      */
+comment|/**      * Use for injection of entityProviders      * @param userProviders the userProviders to set      */
 specifier|public
 name|void
 name|setUserProviders

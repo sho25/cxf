@@ -1664,7 +1664,7 @@ operator|=
 name|futureTimeToLive
 expr_stmt|;
 block|}
-comment|/**      * Set the default lifetime in seconds for issued JWT tokens      * @param default lifetime in seconds      */
+comment|/**      * Set the default lifetime in seconds for issued JWT tokens      * @param lifetime default lifetime in seconds      */
 specifier|public
 name|void
 name|setLifetime
@@ -1690,7 +1690,7 @@ return|return
 name|lifetime
 return|;
 block|}
-comment|/**      * Set the maximum lifetime in seconds for issued JWT tokens      * @param maximum lifetime in seconds      */
+comment|/**      * Set the maximum lifetime in seconds for issued JWT tokens      * @param maxLifetime maximum lifetime in seconds      */
 specifier|public
 name|void
 name|setMaxLifetime

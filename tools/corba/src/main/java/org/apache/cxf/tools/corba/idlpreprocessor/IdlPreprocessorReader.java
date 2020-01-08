@@ -185,7 +185,7 @@ specifier|private
 name|String
 name|pragmaPrefix
 decl_stmt|;
-comment|/**      * Creates a new IncludeReader.      *      * @param startURL      * @param startLocation      * @param includeResolver      * @param defineState      * @throws IOException      */
+comment|/**      * Creates a new IncludeReader.      *      * @param startURL      * @param startLocation      * @param resolver      * @param state      * @throws IOException      */
 specifier|public
 name|IdlPreprocessorReader
 parameter_list|(

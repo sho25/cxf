@@ -1158,7 +1158,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Sets the XPath expressions to check for, clearing all previously      * set expressions.      *      * @param xPaths the XPath expressions to check for      */
+comment|/**      * Sets the XPath expressions to check for, clearing all previously      * set expressions.      *      * @param xpaths the XPath expressions to check for      */
 specifier|public
 specifier|final
 name|void
@@ -1196,7 +1196,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Adds the XPath expressions to check for, adding to any previously      * set expressions.      *      * @param xPaths the XPath expressions to check for      */
+comment|/**      * Adds the XPath expressions to check for, adding to any previously      * set expressions.      *      * @param xpaths the XPath expressions to check for      */
 specifier|public
 specifier|final
 name|void
