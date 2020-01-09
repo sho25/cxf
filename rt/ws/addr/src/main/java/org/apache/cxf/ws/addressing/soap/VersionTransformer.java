@@ -773,7 +773,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Decodes a MAP from a exposed version.      *      * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param marshaller the JAXB marshaller to use      * @return the decoded value      */
+comment|/**      * Decodes a MAP from a exposed version.      *      * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param unmarshaller the JAXB unmarshaller to use      * @return the decoded value      */
 specifier|public
 parameter_list|<
 name|T

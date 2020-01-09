@@ -172,7 +172,7 @@ name|void
 name|close
 parameter_list|()
 function_decl|;
-comment|/**      * As per<a href="http://www.w3.org/TR/xmlschema-1/#xsi_type">2.6.1</a> in      * XML Schema Part 1: "An element information item in an instance may,      * however, explicitly assert its type using the attribute      *<code>xsi:type</code>."      *      * @param type the QName of the type being referenced.      */
+comment|/**      * As per<a href="http://www.w3.org/TR/xmlschema-1/#xsi_type">2.6.1</a> in      * XML Schema Part 1: "An element information item in an instance may,      * however, explicitly assert its type using the attribute      *<code>xsi:type</code>."      *      * @param qn the QName of the type being referenced.      */
 name|void
 name|writeXsiType
 parameter_list|(

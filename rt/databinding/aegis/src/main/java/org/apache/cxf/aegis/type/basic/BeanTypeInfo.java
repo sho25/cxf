@@ -402,7 +402,7 @@ name|initializeProperties
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Create a BeanTypeInfo class.      *      * @param typeClass      * @param defaultNamespace      * @param initiallize If true attempt default property/xml mappings.      */
+comment|/**      * Create a BeanTypeInfo class.      *      * @param typeClass      * @param defaultNamespace      * @param initialize If true attempt default property/xml mappings.      */
 specifier|public
 name|BeanTypeInfo
 parameter_list|(

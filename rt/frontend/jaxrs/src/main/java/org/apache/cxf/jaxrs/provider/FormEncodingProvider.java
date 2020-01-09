@@ -955,7 +955,7 @@ name|params
 argument_list|)
 return|;
 block|}
-comment|/**      * Retrieve map of parameters from the passed in message      *      * @param message      * @return a Map of parameters.      */
+comment|/**      * Retrieve map of parameters from the passed in message      */
 specifier|protected
 name|void
 name|populateMap

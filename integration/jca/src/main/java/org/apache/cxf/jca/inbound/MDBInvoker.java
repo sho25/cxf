@@ -162,7 +162,7 @@ specifier|final
 name|MessageEndpointFactory
 name|endpointFactory
 decl_stmt|;
-comment|/**      * @param messageEndpoint      */
+comment|/**      * @param factory      */
 specifier|public
 name|MDBInvoker
 parameter_list|(

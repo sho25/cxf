@@ -34,7 +34,7 @@ specifier|public
 interface|interface
 name|CXFConnectionFactory
 block|{
-comment|/**      *  Creates a client proxy based on the connection parameter object.      * @param param,      * @return A proxy object that implements both the given<code>iface</code>      *         and the {@link Connection} interface. It represents the Web      *         service associated with the specified service.      * @throws ResourceException      */
+comment|/**      *  Creates a client proxy based on the connection parameter object.      * @param param      * @return A proxy object that implements both the given<code>iface</code>      *         and the {@link Connection} interface. It represents the Web      *         service associated with the specified service.      * @throws ResourceException      */
 name|Object
 name|getConnection
 parameter_list|(

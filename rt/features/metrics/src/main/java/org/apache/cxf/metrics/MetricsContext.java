@@ -46,7 +46,7 @@ name|Exchange
 name|m
 parameter_list|)
 function_decl|;
-comment|/**      * Called when the invocation is complete.      *      * @param timeInNS      * @param inSize      * @param outSize      * @param fm      */
+comment|/**      * Called when the invocation is complete.      *      * @param timeInNS      * @param inSize      * @param outSize      * @param exchange      */
 name|void
 name|stop
 parameter_list|(
@@ -60,7 +60,7 @@ name|long
 name|outSize
 parameter_list|,
 name|Exchange
-name|m
+name|exchange
 parameter_list|)
 function_decl|;
 block|}

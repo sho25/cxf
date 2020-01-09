@@ -129,7 +129,6 @@ specifier|private
 name|String
 name|targetJndiName
 decl_stmt|;
-comment|/**      * @param messageEndpoint      */
 specifier|public
 name|DispatchMDBInvoker
 parameter_list|(

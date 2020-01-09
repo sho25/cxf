@@ -248,7 +248,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param id allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId
@@ -258,14 +258,14 @@ operator|.
 name|lang
 operator|.
 name|String
-name|v
+name|id
 parameter_list|)
 block|{
 name|this
 operator|.
 name|id
 operator|=
-name|v
+name|id
 expr_stmt|;
 block|}
 block|}

@@ -659,7 +659,7 @@ name|subCode
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the SubCode list for the Fault Code.      *      * @param subCode The SubCode element list as detailed by the SOAP 1.2 spec.      */
+comment|/**      * Sets the SubCode list for the Fault Code.      *      * @param subCodes The SubCode element list as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|void
 name|setSubCodes
