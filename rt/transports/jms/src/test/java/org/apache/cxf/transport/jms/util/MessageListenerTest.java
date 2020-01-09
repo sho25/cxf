@@ -969,7 +969,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|1000L
+literal|3500L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -993,7 +993,7 @@ name|dest
 argument_list|,
 literal|0
 argument_list|,
-literal|2000L
+literal|3500L
 argument_list|)
 expr_stmt|;
 name|sendMessage
@@ -1017,7 +1017,7 @@ name|dlq
 argument_list|,
 literal|1
 argument_list|,
-literal|2500L
+literal|3500L
 argument_list|)
 expr_stmt|;
 block|}
