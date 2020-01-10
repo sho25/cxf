@@ -152,7 +152,7 @@ argument_list|>
 name|getCodeGrants
 parameter_list|(
 name|Client
-name|c
+name|client
 parameter_list|,
 name|UserSubject
 name|subject

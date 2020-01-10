@@ -311,7 +311,7 @@ return|return
 name|alreadyAuthorizedPermissions
 return|;
 block|}
-comment|/**      * Set the list of scopes already approved by a user      * @param permissions the list of approved scopes      */
+comment|/**      * Set the list of scopes already approved by a user      * @param perms the list of approved scopes      */
 specifier|public
 name|void
 name|setAlreadyAuthorizedPermissions

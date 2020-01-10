@@ -1327,7 +1327,7 @@ operator|=
 name|invoker
 expr_stmt|;
 block|}
-comment|/**      * Specifies the location of the WSDL defining the service interface      * used by the factory to create services. Typically, the WSDL      * location is specified as a URL.      *      * @param locaiton the URL of the WSDL defining the service interface      */
+comment|/**      * Specifies the location of the WSDL defining the service interface      * used by the factory to create services. Typically, the WSDL      * location is specified as a URL.      *      * @param location the URL of the WSDL defining the service interface      */
 specifier|public
 name|void
 name|setWsdlLocation

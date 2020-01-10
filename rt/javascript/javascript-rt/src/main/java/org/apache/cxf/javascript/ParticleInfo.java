@@ -577,7 +577,7 @@ return|return
 name|elementInfo
 return|;
 block|}
-comment|/**      * Fill in an ElementInfo for an element or xs:any from a sequence.      *      * @param sequenceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @return      */
+comment|/**      * Fill in an ElementInfo for an element or xs:any from a sequence.      *      * @param sequenceObject      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @param contextName      * @return      */
 specifier|public
 specifier|static
 name|ParticleInfo

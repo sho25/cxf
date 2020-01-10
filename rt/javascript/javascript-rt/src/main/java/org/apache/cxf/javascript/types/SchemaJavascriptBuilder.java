@@ -2140,7 +2140,7 @@ argument_list|()
 decl_stmt|;
 comment|// work in progress.
 block|}
-comment|/**      * Build the serialization code for a complex type. At the top level, this operates on single items, so it      * does not pay attention to minOccurs and maxOccurs. However, as it works through the sequence, it      * manages optional elements and arrays.      *      * @param type      * @param elementPrefix      * @param bodyNamespaceURIs      * @return      */
+comment|/**      * Build the serialization code for a complex type. At the top level, this operates on single items, so it      * does not pay attention to minOccurs and maxOccurs. However, as it works through the sequence, it      * manages optional elements and arrays.      *      * @param type      * @param elementPrefix      * @param bodyUtils      * @return      */
 specifier|protected
 name|void
 name|complexTypeSerializerBody

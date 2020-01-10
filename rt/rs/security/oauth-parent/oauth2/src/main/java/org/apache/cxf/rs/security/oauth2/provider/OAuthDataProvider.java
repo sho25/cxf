@@ -265,7 +265,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Revokes a refresh or access token      * @param token token identifier      * @param tokenTypeHint can be access_token or refresh_token or null      * @throws OAuthServiceException      */
+comment|/**      * Revokes a refresh or access token      * @param client the client      * @param tokenId token identifier      * @param tokenTypeHint can be access_token or refresh_token or null      * @throws OAuthServiceException      */
 name|void
 name|revokeToken
 parameter_list|(

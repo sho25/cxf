@@ -3572,7 +3572,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Collect information about the parts of an unwrapped message.      * @param parts      * @param elements      */
+comment|/**      * Collect information about the parts of an unwrapped message.      * @param message      * @param elements      */
 specifier|private
 name|void
 name|getElementsForParts

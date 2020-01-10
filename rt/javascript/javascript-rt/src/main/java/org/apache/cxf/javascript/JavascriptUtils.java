@@ -2595,7 +2595,7 @@ name|endBlock
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Generate code to serialize an xs:any. There is too much duplicate code      * with the element serializer; fix that some day.      *      * @param elementInfo      * @param schemaCollection      */
+comment|/**      * Generate code to serialize an xs:any. There is too much duplicate code      * with the element serializer; fix that some day.      *      * @param itemInfo      * @param prefix      * @param schemaCollection      */
 specifier|public
 name|void
 name|generateCodeToSerializeAny

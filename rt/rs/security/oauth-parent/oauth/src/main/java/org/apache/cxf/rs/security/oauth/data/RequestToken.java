@@ -110,7 +110,7 @@ name|issuedAt
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the token verifier      * @param oauthVerifier      */
+comment|/**      * Sets the token verifier      * @param verifier      */
 specifier|public
 name|void
 name|setVerifier

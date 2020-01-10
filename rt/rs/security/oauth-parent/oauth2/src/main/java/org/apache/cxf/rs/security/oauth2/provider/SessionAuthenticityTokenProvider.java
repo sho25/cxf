@@ -160,7 +160,7 @@ name|UserSubject
 name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Expand the session token      *      * @param mc the {@link MessageContext} of this request      * @param sessionToken the token      * @param subject authenticated end user      * @return the expanded token or null      */
+comment|/**      * Expand the session token      *      * @param messageContext the {@link MessageContext} of this request      * @param sessionToken the token      * @param subject authenticated end user      * @return the expanded token or null      */
 name|OAuthRedirectionState
 name|getSessionState
 parameter_list|(

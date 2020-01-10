@@ -559,7 +559,7 @@ name|ttl
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add the given identifier to the cache.      * @param identifier The identifier to be added      * @param timeToLive The length of time to cache the Identifier in seconds      */
+comment|/**      * Add the given identifier to the cache.      * @param id The identifier to be added      * @param timeToLive The length of time to cache the Identifier in seconds      */
 specifier|public
 name|void
 name|putId

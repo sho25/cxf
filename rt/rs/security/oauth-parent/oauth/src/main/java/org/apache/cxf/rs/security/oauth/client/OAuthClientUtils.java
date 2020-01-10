@@ -806,7 +806,7 @@ name|parameters
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates OAuth Authorization header      * @param consumer Consumer bean containing the consumer key and secret      * @param token Access token representation      * @param method HTTP method      * @param requestURI request URI      * @return the header value      */
+comment|/**      * Creates OAuth Authorization header      * @param consumer Consumer bean containing the consumer key and secret      * @param accessToken Access token representation      * @param method HTTP method      * @param requestURI request URI      * @return the header value      */
 specifier|public
 specifier|static
 name|String

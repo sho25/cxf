@@ -313,7 +313,7 @@ return|return
 name|LOG
 return|;
 block|}
-comment|/**      * This is called by handlers for servicing requests      *      * @param context      * @param req      * @param resp      * @throws IOException      */
+comment|/**      * This is called by handlers for servicing requests      *      * @param req      * @param resp      * @throws IOException      */
 specifier|protected
 name|void
 name|doService

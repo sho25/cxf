@@ -117,7 +117,7 @@ operator|=
 name|permission
 expr_stmt|;
 block|}
-comment|/**      * Indicates that this permission has been allocated by default.      * Authorization View handlers may use this property in order to restrict      * the list of scopes which may be refused to non-default scopes only      * @param isDefault      */
+comment|/**      * Indicates that this permission has been allocated by default.      * Authorization View handlers may use this property in order to restrict      * the list of scopes which may be refused to non-default scopes only      * @param value      */
 specifier|public
 name|void
 name|setDefault
