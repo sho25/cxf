@@ -329,7 +329,6 @@ name|jmsEndpoint
 argument_list|)
 return|;
 block|}
-comment|/**      * @param bus      * @param endpointInfo      * @return      */
 specifier|public
 specifier|static
 name|JMSConfiguration

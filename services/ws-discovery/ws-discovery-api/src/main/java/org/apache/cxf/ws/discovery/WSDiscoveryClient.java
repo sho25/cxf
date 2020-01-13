@@ -1003,7 +1003,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * WS-Discovery will use SOAP 1.2 by default.  This allows forcing the use of SOAP 1.1.      * @param do11      */
+comment|/**      * WS-Discovery will use SOAP 1.2 by default.  This allows forcing the use of SOAP 1.1.      */
 specifier|public
 name|void
 name|setSoapVersion11

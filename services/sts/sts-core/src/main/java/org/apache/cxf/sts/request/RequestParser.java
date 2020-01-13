@@ -3953,7 +3953,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Parse an Entropy object      * @param entropy an Entropy object      * @param stsProperties A STSPropertiesMBean object used to decrypt an EncryptedKey      */
+comment|/**      * Parse an Entropy object      * @param entropyType an EntropyType object      * @param stsProperties A STSPropertiesMBean object used to decrypt an EncryptedKey      */
 end_comment
 
 begin_function

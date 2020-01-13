@@ -1309,7 +1309,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the Executor for this invocation.      * @param endpoint      * @return      */
+comment|/**      * Get the Executor for this invocation.      * @param message      * @return      */
 specifier|private
 specifier|static
 name|Executor

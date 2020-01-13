@@ -802,7 +802,7 @@ return|return
 name|mtomEnabled
 return|;
 block|}
-comment|/**      * Enable or disable mtom with WS-Security. MTOM is disabled if we are signing or      * encrypting the message Body, as otherwise attachments would not get encrypted      * or be part of the signature.      * @param mtomEnabled      */
+comment|/**      * Enable or disable mtom with WS-Security. MTOM is disabled if we are signing or      * encrypting the message Body, as otherwise attachments would not get encrypted      * or be part of the signature.      * @param allowMTOM      */
 specifier|public
 name|void
 name|setAllowMTOM

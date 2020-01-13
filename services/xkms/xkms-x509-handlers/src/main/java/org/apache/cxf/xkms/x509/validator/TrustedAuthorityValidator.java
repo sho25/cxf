@@ -415,7 +415,7 @@ operator|=
 name|certRepo
 expr_stmt|;
 block|}
-comment|/**      * Checks if a certificate is signed by a trusted authority.      *      * @param x509Certificate to check      * @return the validity state of the certificate      */
+comment|/**      * Checks if a certificate chain is signed by a trusted authority.      *      * @param certificates to check      * @return the validity state of the certificate      */
 name|boolean
 name|isCertificateChainValid
 parameter_list|(

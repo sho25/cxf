@@ -1694,7 +1694,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Accepts a new resend candidate.      *      * @param ctx the message context.      * @return ResendCandidate      */
+comment|/**      * Accepts a new resend candidate.      *      * @param message the message.      * @return ResendCandidate      */
 specifier|protected
 name|RedeliverCandidate
 name|cacheUndelivered

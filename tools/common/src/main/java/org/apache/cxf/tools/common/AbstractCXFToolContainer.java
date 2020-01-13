@@ -1292,7 +1292,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**      * get all parameters in a map      * @param stringArrayKeys, contains keys, whose value should be string array      */
+comment|/**      * get all parameters in a map      * @param stringArrayKeys contains keys, whose value should be string array      */
 specifier|protected
 name|Map
 argument_list|<

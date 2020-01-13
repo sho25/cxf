@@ -81,7 +81,7 @@ name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
 name|URI
-name|url
+name|uri
 parameter_list|,
 name|Message
 name|message

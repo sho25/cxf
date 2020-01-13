@@ -116,7 +116,7 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param msg      * @param t      */
+comment|/**      * @param log      * @param msg      * @param params      */
 specifier|public
 name|TrustException
 parameter_list|(

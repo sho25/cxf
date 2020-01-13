@@ -1010,7 +1010,7 @@ specifier|private
 name|AtomicInteger
 name|acknowledgementSequence
 decl_stmt|;
-comment|/**      * Constructor.      *      * @param m      * @param ae      * @param pv      */
+comment|/**      * Constructor.      *      * @param m      * @param ae      */
 specifier|public
 name|RMEndpoint
 parameter_list|(

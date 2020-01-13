@@ -524,7 +524,7 @@ specifier|private
 name|boolean
 name|configFinalized
 decl_stmt|;
-comment|/**      * Constructor      *      * @param b  the associated Bus      * @param registry the associated destinationRegistry      * @param ei the endpoint info of the destination      * @param serverEngineFactory the serverEngineFactory which could be used to create ServerEngine      * @throws java.io.IOException      */
+comment|/**      * Constructor      *      * @param bus  the associated Bus      * @param registry the associated destinationRegistry      * @param ei the endpoint info of the destination      * @param serverEngineFactory the serverEngineFactory which could be used to create ServerEngine      * @throws java.io.IOException      */
 specifier|public
 name|JettyHTTPDestination
 parameter_list|(

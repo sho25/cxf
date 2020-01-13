@@ -1847,7 +1847,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param jmsMessage      * @param messageProperties      */
 specifier|public
 name|void
 name|writeTo

@@ -310,7 +310,7 @@ specifier|private
 name|RMPolicyUtilities
 parameter_list|()
 block|{     }
-comment|/**      * Returns an RMAssertion that is compatible with the default value and all RMAssertions pertaining to the      * message (can never be null).      *      * @param rma the default value (non-<code>null</code>)      * @param message the message      * @return the compatible RMAssertion      */
+comment|/**      * Returns an RMAssertion that is compatible with the default value and all RMAssertions pertaining to the      * message (can never be null).      *      * @param defaultValue the default value (non-<code>null</code>)      * @param message the message      * @return the compatible RMAssertion      */
 specifier|public
 specifier|static
 name|RMConfiguration

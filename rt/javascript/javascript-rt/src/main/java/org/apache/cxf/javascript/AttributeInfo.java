@@ -347,7 +347,7 @@ return|return
 name|attributeInfo
 return|;
 block|}
-comment|/**      * Fill in an AttributeInfo for an attribute or anyAttribute from a sequence.      *      * @param sequesequenceObjectnceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @param contextName      * @return      */
+comment|/**      * Fill in an AttributeInfo for an attribute or anyAttribute from a sequence.      *      * @param sequenceObject      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @param contextName      * @return      */
 specifier|public
 specifier|static
 name|AttributeInfo

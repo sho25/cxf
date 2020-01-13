@@ -336,7 +336,7 @@ name|isOutbound
 argument_list|)
 return|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      *            requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      *            requestor      */
 specifier|public
 specifier|static
 name|void

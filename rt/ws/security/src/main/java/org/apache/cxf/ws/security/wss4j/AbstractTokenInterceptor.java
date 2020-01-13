@@ -538,7 +538,6 @@ literal|"Security"
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|/**      * @param p      */
 specifier|public
 name|AbstractTokenInterceptor
 parameter_list|()
