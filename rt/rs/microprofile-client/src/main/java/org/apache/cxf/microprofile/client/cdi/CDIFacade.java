@@ -181,7 +181,10 @@ name|T
 parameter_list|>
 name|Optional
 argument_list|<
+name|Instance
+argument_list|<
 name|T
+argument_list|>
 argument_list|>
 name|getInstanceFromCDI
 parameter_list|(
@@ -218,7 +221,10 @@ name|T
 parameter_list|>
 name|Optional
 argument_list|<
+name|Instance
+argument_list|<
 name|T
+argument_list|>
 argument_list|>
 name|getInstanceFromCDI
 parameter_list|(
@@ -270,10 +276,8 @@ block|{
 return|return
 name|Optional
 operator|.
-name|ofNullable
-argument_list|(
-literal|null
-argument_list|)
+name|empty
+argument_list|()
 return|;
 block|}
 name|T
