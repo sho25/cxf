@@ -463,6 +463,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Byte
@@ -494,6 +495,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Short
@@ -525,6 +527,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Long
@@ -556,6 +559,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Float
@@ -587,6 +591,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Double
@@ -618,6 +623,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|Boolean
@@ -649,8 +655,10 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
+operator|(
 name|Character
 operator|.
 name|TYPE
@@ -668,6 +676,11 @@ name|equals
 argument_list|(
 name|type
 argument_list|)
+operator|)
+operator|&&
+name|value
+operator|!=
+literal|null
 condition|)
 block|{
 name|ret

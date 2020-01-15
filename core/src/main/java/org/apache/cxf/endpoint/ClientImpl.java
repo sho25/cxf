@@ -3299,6 +3299,13 @@ block|}
 finally|finally
 block|{
 comment|//ensure ResponseContext has HTTP RESPONSE CODE
+if|if
+condition|(
+literal|null
+operator|!=
+name|exchange
+condition|)
+block|{
 name|Integer
 name|responseCode
 init|=
@@ -3349,6 +3356,7 @@ argument_list|(
 name|resContext
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|origLoader

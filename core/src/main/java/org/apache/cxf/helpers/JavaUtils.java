@@ -233,10 +233,6 @@ block|{
 name|isJava8Before161
 operator|=
 name|version
-operator|!=
-literal|null
-operator|&&
-name|version
 operator|.
 name|startsWith
 argument_list|(

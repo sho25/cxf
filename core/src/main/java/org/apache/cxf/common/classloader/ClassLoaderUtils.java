@@ -611,12 +611,6 @@ operator|)
 operator|&&
 operator|(
 name|resourceName
-operator|!=
-literal|null
-operator|)
-operator|&&
-operator|(
-name|resourceName
 operator|.
 name|charAt
 argument_list|(
@@ -974,12 +968,6 @@ name|ret
 operator|.
 name|isEmpty
 argument_list|()
-operator|&&
-operator|(
-name|resourceName
-operator|!=
-literal|null
-operator|)
 operator|&&
 operator|(
 name|resourceName

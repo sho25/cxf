@@ -597,10 +597,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|name
-operator|!=
-literal|null
-operator|&&
 literal|"xmlns"
 operator|.
 name|equals
