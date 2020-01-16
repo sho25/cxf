@@ -178,6 +178,21 @@ argument_list|(
 name|propertyName
 argument_list|)
 decl_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"getValue("
+operator|+
+name|propertyName
+operator|+
+literal|") = "
+operator|+
+name|value
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|value
