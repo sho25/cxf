@@ -308,6 +308,18 @@ specifier|public
 class|class
 name|CXFOSGiTestSupport
 block|{
+comment|// Adding apache snapshots as cxf trunk may contain snapshot dependencies
+comment|// https://blog.sonatype.com/central-repository-moving-to-https
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|REPOS
+init|=
+literal|"https://repo1.maven.org/maven2@id=central,"
+operator|+
+literal|"http://repository.apache.org/content/groups/snapshots-group@id=apache@snapshots@noreleases"
+decl_stmt|;
 annotation|@
 name|Inject
 specifier|protected
@@ -555,6 +567,15 @@ operator|.
 name|value
 argument_list|(
 literal|"true"
+argument_list|)
+argument_list|,
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.repositories"
+argument_list|,
+name|REPOS
 argument_list|)
 argument_list|,
 name|when
@@ -816,6 +837,15 @@ operator|.
 name|value
 argument_list|(
 literal|"true"
+argument_list|)
+argument_list|,
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.repositories"
+argument_list|,
+name|REPOS
 argument_list|)
 argument_list|,
 name|when

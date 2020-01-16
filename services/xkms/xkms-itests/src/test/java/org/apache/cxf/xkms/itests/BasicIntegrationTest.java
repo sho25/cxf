@@ -440,8 +440,17 @@ class|class
 name|BasicIntegrationTest
 block|{
 comment|// Adding apache snapshots as cxf trunk may contain snapshot dependencies
-comment|//private static final String REPOS = "http://repo1.maven.org/maven2@id=central, "
-comment|//    + "http://repository.apache.org/content/groups/snapshots-group@snapshots@noreleases@id=apache-snapshots ";
+comment|// https://blog.sonatype.com/central-repository-moving-to-https
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|REPOS
+init|=
+literal|"https://repo1.maven.org/maven2@id=central,"
+operator|+
+literal|"http://repository.apache.org/content/groups/snapshots-group@id=apache@snapshots@noreleases"
+decl_stmt|;
 annotation|@
 name|Inject
 specifier|protected
@@ -652,8 +661,15 @@ argument_list|(
 literal|"data/xkms/certificates/http___localhost_8080_services_TestService.cer"
 argument_list|)
 block|,
-comment|// editConfigurationFilePut("etc/org.ops4j.pax.url.mvn.cfg",
-comment|// "org.ops4j.pax.url.mvn.repositories", REPOS),
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.repositories"
+argument_list|,
+name|REPOS
+argument_list|)
+block|,
 name|editConfigurationFilePut
 argument_list|(
 literal|"etc/org.ops4j.pax.web.cfg"
@@ -970,8 +986,15 @@ argument_list|(
 literal|"data/xkms/certificates/http___localhost_8080_services_TestService.cer"
 argument_list|)
 block|,
-comment|// editConfigurationFilePut("etc/org.ops4j.pax.url.mvn.cfg",
-comment|// "org.ops4j.pax.url.mvn.repositories", REPOS),
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.repositories"
+argument_list|,
+name|REPOS
+argument_list|)
+block|,
 name|editConfigurationFilePut
 argument_list|(
 literal|"etc/org.ops4j.pax.web.cfg"
