@@ -717,15 +717,9 @@ name|OperationInfo
 name|oi
 init|=
 name|mi
-operator|!=
-literal|null
-condition|?
-name|mi
 operator|.
 name|getOperation
 argument_list|()
-else|:
-literal|null
 decl_stmt|;
 return|return
 name|oi

@@ -5172,10 +5172,6 @@ argument_list|(
 name|clazz
 argument_list|)
 operator|&&
-name|part
-operator|!=
-literal|null
-operator|&&
 name|Boolean
 operator|.
 name|TRUE
@@ -5233,10 +5229,6 @@ name|clazz
 operator|.
 name|isArray
 argument_list|()
-operator|&&
-name|part
-operator|!=
-literal|null
 operator|&&
 name|part
 operator|.
@@ -5551,10 +5543,6 @@ operator|.
 name|class
 operator|==
 name|clazz
-operator|&&
-name|part
-operator|!=
-literal|null
 operator|&&
 name|part
 operator|.

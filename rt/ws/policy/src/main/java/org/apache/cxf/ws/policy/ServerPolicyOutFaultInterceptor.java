@@ -744,10 +744,6 @@ block|}
 comment|// insert assertions of the chosen alternative into the message
 if|if
 condition|(
-literal|null
-operator|!=
-name|assertions
-operator|&&
 operator|!
 name|assertions
 operator|.

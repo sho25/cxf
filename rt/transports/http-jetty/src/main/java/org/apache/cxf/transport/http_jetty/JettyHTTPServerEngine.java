@@ -3837,6 +3837,7 @@ name|finer
 argument_list|(
 literal|"connector.host: "
 operator|+
+operator|(
 name|h
 operator|==
 literal|null
@@ -3848,6 +3849,7 @@ operator|+
 name|h
 operator|+
 literal|"\""
+operator|)
 argument_list|)
 expr_stmt|;
 name|LOG

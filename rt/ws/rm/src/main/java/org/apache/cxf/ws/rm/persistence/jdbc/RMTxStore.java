@@ -4843,10 +4843,6 @@ condition|(
 name|connection
 operator|==
 literal|null
-operator|&&
-name|con
-operator|!=
-literal|null
 condition|)
 block|{
 name|con

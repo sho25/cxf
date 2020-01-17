@@ -708,11 +708,6 @@ name|wrappedObject
 operator|==
 literal|null
 operator|||
-operator|(
-name|wrapperClass
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|wrapperClass
 operator|.
@@ -720,7 +715,6 @@ name|isInstance
 argument_list|(
 name|wrappedObject
 argument_list|)
-operator|)
 condition|)
 block|{
 return|return;

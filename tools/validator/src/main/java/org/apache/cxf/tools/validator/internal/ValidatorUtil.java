@@ -1068,10 +1068,6 @@ decl_stmt|;
 if|if
 condition|(
 name|file
-operator|!=
-literal|null
-operator|&&
-name|file
 operator|.
 name|exists
 argument_list|()
@@ -1115,10 +1111,6 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|file
-operator|!=
-literal|null
-operator|&&
 name|file
 operator|.
 name|exists

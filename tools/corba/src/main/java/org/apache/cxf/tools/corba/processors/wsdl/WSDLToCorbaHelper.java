@@ -3276,13 +3276,6 @@ block|}
 block|}
 if|if
 condition|(
-operator|(
-name|struct
-operator|!=
-literal|null
-operator|)
-operator|&&
-operator|(
 name|struct
 operator|.
 name|getMember
@@ -3290,7 +3283,6 @@ argument_list|()
 operator|.
 name|isEmpty
 argument_list|()
-operator|)
 condition|)
 block|{
 name|String

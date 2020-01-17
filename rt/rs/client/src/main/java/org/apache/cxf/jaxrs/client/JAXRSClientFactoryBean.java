@@ -1880,12 +1880,6 @@ specifier|final
 name|String
 name|encodeClientParametersList
 init|=
-name|theProperties
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
 operator|(
 name|String
 operator|)

@@ -777,10 +777,6 @@ block|}
 comment|// insert assertions of endpoint's fault vocabulary into message
 if|if
 condition|(
-literal|null
-operator|!=
-name|assertions
-operator|&&
 operator|!
 name|assertions
 operator|.

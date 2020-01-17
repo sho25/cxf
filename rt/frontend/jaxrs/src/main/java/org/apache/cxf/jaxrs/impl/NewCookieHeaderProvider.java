@@ -980,12 +980,6 @@ return|;
 block|}
 return|return
 name|value
-operator|==
-literal|null
-condition|?
-literal|""
-else|:
-name|value
 return|;
 block|}
 specifier|static

@@ -4767,10 +4767,6 @@ name|isOneway
 operator|&&
 operator|(
 name|replyTo
-operator|==
-literal|null
-operator|||
-name|replyTo
 operator|.
 name|getAddress
 argument_list|()
