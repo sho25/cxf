@@ -333,7 +333,7 @@ name|MatcherHolder
 name|mh
 parameter_list|)
 block|{
-name|Integer
+name|int
 name|literalCharsLen1
 init|=
 name|this
@@ -350,7 +350,7 @@ operator|.
 name|length
 argument_list|()
 decl_stmt|;
-name|Integer
+name|int
 name|literalCharsLen2
 init|=
 name|mh
@@ -369,10 +369,12 @@ argument_list|()
 decl_stmt|;
 comment|// The expression with more literal characters should end up on the top of the list
 return|return
-name|literalCharsLen1
+name|Integer
 operator|.
-name|compareTo
+name|compare
 argument_list|(
+name|literalCharsLen1
+argument_list|,
 name|literalCharsLen2
 argument_list|)
 operator|*

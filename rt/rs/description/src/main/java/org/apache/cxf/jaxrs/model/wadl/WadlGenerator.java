@@ -9115,7 +9115,7 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|Integer
+name|int
 name|paramLen1
 init|=
 name|op1
@@ -9128,7 +9128,7 @@ argument_list|()
 operator|.
 name|length
 decl_stmt|;
-name|Integer
+name|int
 name|paramLen2
 init|=
 name|op2
@@ -9143,10 +9143,12 @@ name|length
 decl_stmt|;
 name|result
 operator|=
-name|paramLen1
+name|Integer
 operator|.
-name|compareTo
+name|compare
 argument_list|(
+name|paramLen1
+argument_list|,
 name|paramLen2
 argument_list|)
 operator|*

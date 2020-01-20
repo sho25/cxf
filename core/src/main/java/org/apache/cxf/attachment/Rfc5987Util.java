@@ -518,7 +518,7 @@ literal|"%"
 argument_list|)
 condition|)
 block|{
-name|Integer
+name|int
 name|value
 init|=
 name|Integer

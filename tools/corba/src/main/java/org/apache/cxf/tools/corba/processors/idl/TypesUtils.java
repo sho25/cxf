@@ -382,7 +382,7 @@ name|anonSchemaType
 init|=
 literal|null
 decl_stmt|;
-name|Integer
+name|int
 name|id
 init|=
 literal|0
@@ -415,10 +415,12 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|id
+name|Integer
 operator|.
 name|toString
-argument_list|()
+argument_list|(
+name|id
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|name

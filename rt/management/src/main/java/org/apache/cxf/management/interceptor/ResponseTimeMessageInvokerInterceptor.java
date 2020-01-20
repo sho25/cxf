@@ -153,7 +153,7 @@ operator|.
 name|getExchange
 argument_list|()
 decl_stmt|;
-name|Boolean
+name|boolean
 name|forceDisabled
 init|=
 name|Boolean
@@ -213,7 +213,7 @@ operator|.
 name|getExchange
 argument_list|()
 decl_stmt|;
-name|Boolean
+name|boolean
 name|forceDisabled
 init|=
 name|Boolean

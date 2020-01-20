@@ -149,7 +149,7 @@ name|getExchange
 argument_list|()
 decl_stmt|;
 comment|//if serviceCounter is disabled , all responseTimeInterceptors will be skipped
-name|Boolean
+name|boolean
 name|forceDisabled
 init|=
 name|Boolean

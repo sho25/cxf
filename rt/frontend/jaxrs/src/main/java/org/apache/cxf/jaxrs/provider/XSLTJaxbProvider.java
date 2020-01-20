@@ -3386,8 +3386,6 @@ name|URL
 name|urlStream
 parameter_list|)
 block|{
-try|try
-block|{
 if|if
 condition|(
 name|urlStream
@@ -3399,6 +3397,8 @@ return|return
 literal|null
 return|;
 block|}
+try|try
+init|(
 name|Reader
 name|r
 init|=
@@ -3418,7 +3418,8 @@ operator|.
 name|UTF_8
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Source
 name|source
 init|=

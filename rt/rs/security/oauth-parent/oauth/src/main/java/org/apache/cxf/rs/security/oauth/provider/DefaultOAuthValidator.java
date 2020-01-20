@@ -180,7 +180,7 @@ name|TOKEN_REJECTED
 argument_list|)
 throw|;
 block|}
-name|Long
+name|long
 name|issuedAt
 init|=
 name|token
@@ -188,7 +188,7 @@ operator|.
 name|getIssuedAt
 argument_list|()
 decl_stmt|;
-name|Long
+name|long
 name|lifetime
 init|=
 name|token
@@ -214,7 +214,7 @@ operator|.
 name|currentTimeMillis
 argument_list|()
 operator|/
-literal|1000
+literal|1000L
 operator|)
 operator|)
 condition|)

@@ -737,7 +737,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Long
+name|long
 name|authTime
 init|=
 name|Long
