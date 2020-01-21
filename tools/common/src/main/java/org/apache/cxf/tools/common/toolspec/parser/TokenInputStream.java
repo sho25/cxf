@@ -315,7 +315,7 @@ block|}
 if|if
 condition|(
 name|position
-operator|>
+operator|>=
 name|tokens
 operator|.
 name|length

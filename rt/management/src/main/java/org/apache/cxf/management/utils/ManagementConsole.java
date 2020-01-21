@@ -841,18 +841,13 @@ name|result
 init|=
 literal|false
 decl_stmt|;
-name|int
-name|i
-decl_stmt|;
-name|String
-name|arg
-decl_stmt|;
 try|try
 block|{
 for|for
 control|(
+name|int
 name|i
-operator|=
+init|=
 literal|0
 init|;
 name|i
@@ -865,13 +860,14 @@ name|i
 operator|++
 control|)
 block|{
+name|String
 name|arg
-operator|=
+init|=
 name|args
 index|[
 name|i
 index|]
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 literal|"--port"
@@ -897,8 +893,8 @@ operator|++
 name|i
 index|]
 expr_stmt|;
-continue|continue;
 block|}
+elseif|else
 if|if
 condition|(
 literal|"--service"
@@ -924,8 +920,8 @@ operator|++
 name|i
 index|]
 expr_stmt|;
-continue|continue;
 block|}
+elseif|else
 if|if
 condition|(
 literal|"--jmx"
@@ -951,8 +947,8 @@ operator|++
 name|i
 index|]
 expr_stmt|;
-continue|continue;
 block|}
+elseif|else
 if|if
 condition|(
 literal|"--operation"
@@ -983,7 +979,6 @@ name|result
 operator|=
 literal|true
 expr_stmt|;
-continue|continue;
 block|}
 block|}
 block|}
@@ -993,7 +988,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|// can't paraser the argument rightly
+comment|// can't parse the argument rightly
 return|return
 literal|false
 return|;
