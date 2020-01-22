@@ -193,6 +193,14 @@ name|WRITE_ATTACHMENTS
 init|=
 literal|"write.attachments"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ATTACHMENT_OUT_CHECKED
+init|=
+literal|"attachment.out.checked"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -236,6 +244,46 @@ name|Message
 name|message
 parameter_list|)
 block|{
+comment|//avoid AttachmentOutInterceptor invoked twice on the
+comment|//same message
+if|if
+condition|(
+name|message
+operator|.
+name|get
+argument_list|(
+name|ATTACHMENT_OUT_CHECKED
+argument_list|)
+operator|!=
+literal|null
+operator|&&
+operator|(
+name|boolean
+operator|)
+name|message
+operator|.
+name|get
+argument_list|(
+name|ATTACHMENT_OUT_CHECKED
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
+else|else
+block|{
+name|message
+operator|.
+name|put
+argument_list|(
+name|ATTACHMENT_OUT_CHECKED
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Make it possible to step into this process in spite of Eclipse
 comment|// by declaring the Object.
 name|boolean
