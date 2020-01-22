@@ -963,6 +963,7 @@ name|AhcWebSocketConduitRequest
 name|entity
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|Response
 name|response
 decl_stmt|;
