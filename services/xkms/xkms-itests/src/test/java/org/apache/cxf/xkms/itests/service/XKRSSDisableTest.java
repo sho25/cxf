@@ -207,7 +207,7 @@ name|pax
 operator|.
 name|exam
 operator|.
-name|CoreOptions
+name|Option
 import|;
 end_import
 
@@ -221,7 +221,7 @@ name|pax
 operator|.
 name|exam
 operator|.
-name|Option
+name|OptionUtils
 import|;
 end_import
 
@@ -284,20 +284,15 @@ name|getConfig
 parameter_list|()
 block|{
 return|return
-operator|new
-name|Option
-index|[]
-block|{
-name|CoreOptions
+name|OptionUtils
 operator|.
-name|composite
+name|combine
 argument_list|(
 name|super
 operator|.
 name|getConfig
 argument_list|()
-argument_list|)
-block|,
+argument_list|,
 name|editConfigurationFilePut
 argument_list|(
 literal|"etc/org.apache.cxf.xkms.cfg"
@@ -306,7 +301,7 @@ literal|"xkms.enableXKRSS"
 argument_list|,
 literal|"false"
 argument_list|)
-block|}
+argument_list|)
 return|;
 block|}
 annotation|@
