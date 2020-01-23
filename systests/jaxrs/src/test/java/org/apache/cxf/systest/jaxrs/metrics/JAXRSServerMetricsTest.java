@@ -1052,7 +1052,7 @@ argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|operationContext
 argument_list|)
@@ -1234,7 +1234,7 @@ argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|operationContext
 argument_list|)
@@ -1407,7 +1407,7 @@ argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|operationContext
 argument_list|)
@@ -1581,7 +1581,7 @@ argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|operationContext
 argument_list|)
@@ -1702,14 +1702,14 @@ argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|resourceContext
 argument_list|)
 expr_stmt|;
 name|Mockito
 operator|.
-name|verifyZeroInteractions
+name|verifyNoInteractions
 argument_list|(
 name|operationContext
 argument_list|)
