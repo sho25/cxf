@@ -7744,7 +7744,7 @@ name|enumClass
 operator|.
 name|getMethod
 argument_list|(
-literal|"toString"
+literal|"name"
 argument_list|,
 operator|new
 name|Class

@@ -904,6 +904,14 @@ parameter_list|,
 annotation|@
 name|QueryParam
 argument_list|(
+literal|"orderstatus"
+argument_list|)
+name|BookOrderEnum
+name|status
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
 literal|"a"
 argument_list|)
 name|List
