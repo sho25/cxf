@@ -546,7 +546,7 @@ argument_list|()
 operator|.
 name|ignoreRemoteShell
 argument_list|()
-block|,          }
+block|,         }
 decl_stmt|;
 if|if
 condition|(
