@@ -762,6 +762,16 @@ argument_list|,
 literal|"-interface"
 argument_list|)
 expr_stmt|;
+name|addIfNotNull
+argument_list|(
+name|list
+argument_list|,
+name|getRx
+argument_list|()
+argument_list|,
+literal|"-rx"
+argument_list|)
+expr_stmt|;
 name|addList
 argument_list|(
 name|list

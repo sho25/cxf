@@ -325,6 +325,15 @@ name|CFG_SUSPENDED_ASYNC
 init|=
 literal|"async"
 decl_stmt|;
+comment|// JAX-RS 2.1 Reactive Extensions
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_RX
+init|=
+literal|"rx"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
