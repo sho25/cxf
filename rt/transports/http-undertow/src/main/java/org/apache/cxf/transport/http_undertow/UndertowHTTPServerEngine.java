@@ -41,16 +41,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|security
-operator|.
-name|GeneralSecurityException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -2052,10 +2042,6 @@ specifier|public
 name|void
 name|finalizeConfig
 parameter_list|()
-throws|throws
-name|GeneralSecurityException
-throws|,
-name|IOException
 block|{
 name|retrieveListenerFactory
 argument_list|()

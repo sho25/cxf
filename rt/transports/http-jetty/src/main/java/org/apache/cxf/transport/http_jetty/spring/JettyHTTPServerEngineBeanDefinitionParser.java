@@ -1948,10 +1948,6 @@ specifier|public
 name|void
 name|finalizeConfig
 parameter_list|()
-throws|throws
-name|GeneralSecurityException
-throws|,
-name|IOException
 block|{
 if|if
 condition|(

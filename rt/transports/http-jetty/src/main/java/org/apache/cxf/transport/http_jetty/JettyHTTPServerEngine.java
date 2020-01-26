@@ -43,6 +43,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|UncheckedIOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|Writer
 import|;
 end_import
@@ -66,16 +76,6 @@ operator|.
 name|net
 operator|.
 name|URL
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|GeneralSecurityException
 import|;
 end_import
 
@@ -4727,10 +4727,6 @@ specifier|public
 name|void
 name|finalizeConfig
 parameter_list|()
-throws|throws
-name|GeneralSecurityException
-throws|,
-name|IOException
 block|{
 name|retrieveListenerFactory
 argument_list|()
@@ -4749,10 +4745,6 @@ specifier|private
 name|void
 name|checkConnectorPort
 parameter_list|()
-throws|throws
-name|IOException
-block|{
-try|try
 block|{
 if|if
 condition|(
@@ -4783,6 +4775,9 @@ condition|)
 block|{
 throw|throw
 operator|new
+name|UncheckedIOException
+argument_list|(
+operator|new
 name|IOException
 argument_list|(
 literal|"Error: Connector port "
@@ -4795,27 +4790,9 @@ literal|" with the server engine port "
 operator|+
 name|port
 argument_list|)
+argument_list|)
 throw|;
 block|}
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ioe
-parameter_list|)
-block|{
-throw|throw
-name|ioe
-throw|;
-block|}
-catch|catch
-parameter_list|(
-name|Throwable
-name|t
-parameter_list|)
-block|{
-comment|//ignore...
 block|}
 block|}
 comment|/**      * This method is called by the ServerEngine Factory to destroy the      * listener.      *      */
