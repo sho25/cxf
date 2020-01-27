@@ -941,6 +941,15 @@ argument_list|(
 name|config
 argument_list|)
 expr_stmt|;
+name|reqData
+operator|.
+name|setEncryptionSerializer
+argument_list|(
+operator|new
+name|StaxSerializer
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|/*                  * Setup any custom actions first by processing the input properties                  * and reconfiguring the WSSConfig with the user defined properties.                  */
 name|this
 operator|.
