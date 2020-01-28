@@ -461,6 +461,22 @@ name|WSSecurityUtil
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|c14n
+operator|.
+name|InvalidCanonicalizerException
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -1460,6 +1476,8 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+name|InvalidCanonicalizerException
+decl||
 name|WSSecurityException
 name|e
 parameter_list|)
