@@ -339,10 +339,6 @@ specifier|protected
 name|MavenUrlReference
 name|cxfUrl
 decl_stmt|;
-specifier|protected
-name|MavenUrlReference
-name|amqUrl
-decl_stmt|;
 comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *      * @return      */
 specifier|protected
 name|Option
@@ -377,34 +373,6 @@ name|classifier
 argument_list|(
 literal|"features"
 argument_list|)
-expr_stmt|;
-name|amqUrl
-operator|=
-name|maven
-argument_list|()
-operator|.
-name|groupId
-argument_list|(
-literal|"org.apache.activemq"
-argument_list|)
-operator|.
-name|artifactId
-argument_list|(
-literal|"activemq-karaf"
-argument_list|)
-operator|.
-name|type
-argument_list|(
-literal|"xml"
-argument_list|)
-operator|.
-name|classifier
-argument_list|(
-literal|"features"
-argument_list|)
-operator|.
-name|versionAsInProject
-argument_list|()
 expr_stmt|;
 name|String
 name|localRepo
@@ -450,7 +418,7 @@ argument_list|)
 operator|.
 name|artifactId
 argument_list|(
-literal|"apache-karaf"
+literal|"apache-karaf-minimal"
 argument_list|)
 operator|.
 name|versionAsInProject
@@ -460,11 +428,6 @@ name|type
 argument_list|(
 literal|"tar.gz"
 argument_list|)
-argument_list|)
-operator|.
-name|name
-argument_list|(
-literal|"Apache Karaf"
 argument_list|)
 operator|.
 name|useDeployFolder
@@ -575,7 +538,7 @@ name|getArtifactVersion
 argument_list|(
 literal|"org.apache.karaf"
 argument_list|,
-literal|"apache-karaf"
+literal|"apache-karaf-minimal"
 argument_list|)
 decl_stmt|;
 return|return

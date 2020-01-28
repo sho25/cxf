@@ -576,7 +576,7 @@ argument_list|)
 operator|.
 name|artifactId
 argument_list|(
-literal|"apache-karaf"
+literal|"apache-karaf-minimal"
 argument_list|)
 operator|.
 name|versionAsInProject
@@ -593,7 +593,7 @@ argument_list|(
 operator|new
 name|File
 argument_list|(
-literal|"target/paxexam/unpack/"
+literal|"target/paxexam/"
 argument_list|)
 argument_list|)
 operator|.
@@ -730,7 +730,7 @@ name|getArtifactVersion
 argument_list|(
 literal|"org.apache.karaf"
 argument_list|,
-literal|"apache-karaf"
+literal|"apache-karaf-minimal"
 argument_list|)
 decl_stmt|;
 return|return
