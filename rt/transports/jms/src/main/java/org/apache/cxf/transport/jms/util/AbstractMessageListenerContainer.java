@@ -239,6 +239,7 @@ name|String
 name|messageSelector
 decl_stmt|;
 specifier|protected
+specifier|volatile
 name|boolean
 name|running
 decl_stmt|;

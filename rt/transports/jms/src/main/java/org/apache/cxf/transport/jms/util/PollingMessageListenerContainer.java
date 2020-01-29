@@ -449,7 +449,6 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|session
@@ -463,6 +462,7 @@ operator|.
 name|commit
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
