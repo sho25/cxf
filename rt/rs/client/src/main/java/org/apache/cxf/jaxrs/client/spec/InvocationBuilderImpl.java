@@ -1484,6 +1484,26 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+comment|// If value is null then all current headers of the same name should be removed
+if|if
+condition|(
+name|value
+operator|==
+literal|null
+condition|)
+block|{
+name|webClient
+operator|.
+name|replaceHeader
+argument_list|(
+name|name
+argument_list|,
+name|value
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|webClient
 operator|.
 name|header
@@ -1493,6 +1513,7 @@ argument_list|,
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Override
