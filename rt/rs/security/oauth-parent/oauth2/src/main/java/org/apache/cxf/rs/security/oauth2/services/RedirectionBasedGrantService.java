@@ -1011,13 +1011,12 @@ operator|.
 name|SCOPE
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|String
 argument_list|>
 name|requestedScope
-init|=
-literal|null
 decl_stmt|;
 name|List
 argument_list|<
