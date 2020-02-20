@@ -1788,11 +1788,21 @@ block|}
 block|}
 block|}
 decl_stmt|;
-name|ChannelFuture
-name|channelFuture
+synchronized|synchronized
+init|(
+name|entity
+init|)
+block|{
+name|Channel
+name|syncChannel
 init|=
 name|getChannel
 argument_list|()
+decl_stmt|;
+name|ChannelFuture
+name|channelFuture
+init|=
+name|syncChannel
 operator|.
 name|write
 argument_list|(
@@ -1811,6 +1821,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 expr_stmt|;
@@ -2060,6 +2071,13 @@ name|cause
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+synchronized|synchronized
+init|(
+name|entity
+init|)
+block|{
+comment|//ensure entity is write in main thread
 block|}
 block|}
 block|}
