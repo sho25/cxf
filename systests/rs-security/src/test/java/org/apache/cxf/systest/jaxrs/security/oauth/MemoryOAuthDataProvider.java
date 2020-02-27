@@ -924,13 +924,9 @@ parameter_list|()
 throws|throws
 name|OAuthServiceException
 block|{
-name|String
-name|token
-decl_stmt|;
 try|try
 block|{
-name|token
-operator|=
+return|return
 name|tokenGenerator
 operator|.
 name|generate
@@ -950,7 +946,7 @@ operator|.
 name|UTF_8
 argument_list|)
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 catch|catch
 parameter_list|(
@@ -971,9 +967,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-return|return
-name|token
-return|;
 block|}
 specifier|public
 name|void
