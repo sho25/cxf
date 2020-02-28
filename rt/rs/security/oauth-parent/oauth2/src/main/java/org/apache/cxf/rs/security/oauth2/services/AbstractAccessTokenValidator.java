@@ -656,11 +656,6 @@ argument_list|>
 name|extraProps
 parameter_list|)
 block|{
-name|AccessTokenValidation
-name|accessTokenV
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|dataProvider
@@ -684,6 +679,11 @@ literal|null
 argument_list|)
 throw|;
 block|}
+name|AccessTokenValidation
+name|accessTokenV
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|maxValidationDataCacheSize

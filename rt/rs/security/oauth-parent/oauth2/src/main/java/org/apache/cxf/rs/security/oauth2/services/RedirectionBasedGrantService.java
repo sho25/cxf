@@ -1018,13 +1018,12 @@ name|String
 argument_list|>
 name|requestedScope
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|OAuthPermission
 argument_list|>
 name|requestedPermissions
-init|=
-literal|null
 decl_stmt|;
 try|try
 block|{
@@ -2480,11 +2479,6 @@ argument_list|>
 name|params
 parameter_list|)
 block|{
-name|UserSubject
-name|subject
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|subjectCreator
@@ -2492,8 +2486,9 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|UserSubject
 name|subject
-operator|=
+init|=
 name|subjectCreator
 operator|.
 name|createUserSubject
@@ -2503,7 +2498,7 @@ argument_list|()
 argument_list|,
 name|params
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|subject

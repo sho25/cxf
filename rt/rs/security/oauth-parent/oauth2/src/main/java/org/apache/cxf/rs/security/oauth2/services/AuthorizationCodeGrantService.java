@@ -618,10 +618,9 @@ parameter_list|)
 block|{
 comment|// in this flow the code is still created, the preauthorized token
 comment|// will be retrieved by the authorization code grant handler
+specifier|final
 name|ServerAuthorizationCodeGrant
 name|grant
-init|=
-literal|null
 decl_stmt|;
 try|try
 block|{

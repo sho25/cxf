@@ -427,10 +427,9 @@ operator|.
 name|HAWK_TOKEN_ALGORITHM
 argument_list|)
 decl_stmt|;
+specifier|final
 name|HttpRequestProperties
 name|httpProps
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

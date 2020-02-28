@@ -463,10 +463,9 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|UriBuilder
 name|redirectBuilder
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

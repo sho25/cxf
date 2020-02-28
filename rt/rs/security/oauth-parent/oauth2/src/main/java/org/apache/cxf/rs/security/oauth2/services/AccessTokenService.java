@@ -684,10 +684,9 @@ argument_list|)
 return|;
 block|}
 comment|// Create the access token
+specifier|final
 name|ServerAccessToken
 name|serverToken
-init|=
-literal|null
 decl_stmt|;
 try|try
 block|{

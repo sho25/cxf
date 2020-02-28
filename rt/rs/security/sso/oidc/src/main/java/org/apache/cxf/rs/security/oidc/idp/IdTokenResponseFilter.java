@@ -792,10 +792,9 @@ argument_list|(
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|final
 name|SignatureAlgorithm
 name|sigAlgo
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

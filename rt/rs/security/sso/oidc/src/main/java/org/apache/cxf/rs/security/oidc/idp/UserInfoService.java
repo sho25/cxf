@@ -594,10 +594,9 @@ name|build
 argument_list|()
 return|;
 block|}
+specifier|final
 name|Object
 name|responseEntity
-init|=
-literal|null
 decl_stmt|;
 comment|// UserInfo may be returned in a clear form as JSON
 if|if

@@ -292,6 +292,7 @@ name|EntityManager
 name|em
 parameter_list|)
 block|{
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -299,8 +300,6 @@ argument_list|,
 name|Object
 argument_list|>
 name|options
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(

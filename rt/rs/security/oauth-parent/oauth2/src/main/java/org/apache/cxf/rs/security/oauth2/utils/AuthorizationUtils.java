@@ -213,10 +213,9 @@ name|String
 name|basicAuthData
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|authDecoded
-init|=
-literal|null
 decl_stmt|;
 try|try
 block|{
