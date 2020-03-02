@@ -997,6 +997,16 @@ name|getRegisteredAt
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|response
+operator|.
+name|setGrantTypes
+argument_list|(
+name|client
+operator|.
+name|getAllowedGrantTypes
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|UriBuilder
 name|ub
 init|=
