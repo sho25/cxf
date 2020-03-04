@@ -1396,15 +1396,8 @@ name|Bus
 name|bus
 parameter_list|)
 throws|throws
-name|Exception
+name|IOException
 block|{
-name|Properties
-name|props
-init|=
-operator|new
-name|Properties
-argument_list|()
-decl_stmt|;
 try|try
 init|(
 name|InputStream
@@ -1437,6 +1430,13 @@ literal|" could not be read"
 argument_list|)
 throw|;
 block|}
+name|Properties
+name|props
+init|=
+operator|new
+name|Properties
+argument_list|()
+decl_stmt|;
 name|props
 operator|.
 name|load
@@ -1444,10 +1444,10 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|props
 return|;
+block|}
 block|}
 comment|//
 comment|//<End> Copied from JAX-RS RT FRONTEND ResourceUtils
