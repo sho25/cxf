@@ -188,6 +188,14 @@ operator|.
 name|algo
 operator|=
 name|algo
+operator|!=
+literal|null
+condition|?
+name|algo
+else|:
+name|KeyAlgorithm
+operator|.
+name|ECDH_ES_A128KW
 expr_stmt|;
 block|}
 annotation|@
@@ -223,9 +231,7 @@ name|AesWrapKeyDecryptionAlgorithm
 argument_list|(
 name|derivedKey
 argument_list|,
-name|KeyAlgorithm
-operator|.
-name|ECDH_ES_A128KW
+name|algo
 argument_list|)
 block|{
 specifier|protected
