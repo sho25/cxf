@@ -25,6 +25,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -166,6 +176,16 @@ name|getKeys
 argument_list|()
 control|)
 block|{
+name|Objects
+operator|.
+name|requireNonNull
+argument_list|(
+name|jwk
+operator|.
+name|getKeyId
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|JwsUtils
 operator|.

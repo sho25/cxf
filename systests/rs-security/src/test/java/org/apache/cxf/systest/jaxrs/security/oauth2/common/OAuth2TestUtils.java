@@ -2228,6 +2228,12 @@ argument_list|(
 name|tlsCP
 argument_list|)
 expr_stmt|;
+comment|// 5 mins for long debug session
+comment|//                org.apache.cxf.transports.http.configuration.HTTPClientPolicy httpClientPolicy =
+comment|//                    new org.apache.cxf.transports.http.configuration.HTTPClientPolicy();
+comment|//                httpClientPolicy.setConnectionTimeout(300000L);
+comment|//                httpClientPolicy.setReceiveTimeout(300000L);
+comment|//                c.setClient(httpClientPolicy);
 block|}
 block|}
 return|;
