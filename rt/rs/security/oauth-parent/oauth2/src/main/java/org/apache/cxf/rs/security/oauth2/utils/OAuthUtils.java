@@ -2908,7 +2908,7 @@ name|String
 operator|.
 name|join
 argument_list|(
-literal|", "
+literal|" "
 argument_list|,
 name|registeredScopes
 argument_list|)
