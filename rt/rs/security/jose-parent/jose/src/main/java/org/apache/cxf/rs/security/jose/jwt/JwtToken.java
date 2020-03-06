@@ -67,14 +67,17 @@ class|class
 name|JwtToken
 block|{
 specifier|private
+specifier|final
 name|JwsHeaders
 name|jwsHeaders
 decl_stmt|;
 specifier|private
+specifier|final
 name|JweHeaders
 name|jweHeaders
 decl_stmt|;
 specifier|private
+specifier|final
 name|JwtClaims
 name|claims
 decl_stmt|;

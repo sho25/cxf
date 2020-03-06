@@ -3531,10 +3531,9 @@ name|String
 name|algoProp
 parameter_list|)
 block|{
+specifier|final
 name|JsonWebKey
 name|jwk
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(
