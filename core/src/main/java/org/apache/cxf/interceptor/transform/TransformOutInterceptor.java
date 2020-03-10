@@ -69,20 +69,6 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|AbstractOutDatabindingInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
 name|StaxOutEndingInterceptor
 import|;
 end_import
@@ -170,6 +156,22 @@ operator|.
 name|transform
 operator|.
 name|TransformUtils
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|AbstractOutDatabindingInterceptor
+operator|.
+name|DISABLE_OUTPUTSTREAM_OPTIMIZATION
 import|;
 end_import
 
@@ -500,8 +502,6 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|AbstractOutDatabindingInterceptor
-operator|.
 name|DISABLE_OUTPUTSTREAM_OPTIMIZATION
 argument_list|)
 operator|==
@@ -512,8 +512,6 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|AbstractOutDatabindingInterceptor
-operator|.
 name|DISABLE_OUTPUTSTREAM_OPTIMIZATION
 argument_list|,
 name|Boolean
