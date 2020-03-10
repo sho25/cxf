@@ -1655,6 +1655,23 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|provider
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Continuation not supported. "
+operator|+
+literal|"Please ensure that all servlets and servlet filters support async operations"
+argument_list|)
+throw|;
+block|}
 name|cont
 operator|=
 name|provider
