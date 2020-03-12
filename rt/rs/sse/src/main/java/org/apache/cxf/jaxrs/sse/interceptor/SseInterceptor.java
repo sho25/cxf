@@ -115,6 +115,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|sse
+operator|.
+name|SseEventSink
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -339,6 +353,23 @@ name|Message
 name|message
 parameter_list|)
 block|{
+comment|// Not an SSE invocation, skipping it in favor of normal processing
+if|if
+condition|(
+name|message
+operator|.
+name|get
+argument_list|(
+name|SseEventSink
+operator|.
+name|class
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 if|if
 condition|(
 operator|!

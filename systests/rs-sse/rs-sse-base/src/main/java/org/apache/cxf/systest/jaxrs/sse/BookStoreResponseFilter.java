@@ -182,6 +182,7 @@ name|IOException
 block|{
 if|if
 condition|(
+operator|!
 name|uriInfo
 operator|.
 name|getRequestUri
@@ -192,7 +193,7 @@ argument_list|()
 operator|.
 name|endsWith
 argument_list|(
-literal|"/filtered/sse"
+literal|"/filtered/stats"
 argument_list|)
 condition|)
 block|{
@@ -215,6 +216,20 @@ operator|.
 name|get
 argument_list|()
 return|;
+block|}
+specifier|public
+specifier|static
+name|void
+name|reset
+parameter_list|()
+block|{
+name|counter
+operator|.
+name|set
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
