@@ -2505,7 +2505,7 @@ name|System
 operator|.
 name|setProperty
 argument_list|(
-name|HTTP_PROXY_PORT
+name|HTTP_PROXY_PASSWORD
 argument_list|,
 name|authPassword
 argument_list|)
